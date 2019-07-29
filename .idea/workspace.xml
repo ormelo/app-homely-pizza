@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DefaultGradleProjectSettings">
+    <option name="isMigrated" value="true" />
+  </component>
+  <component name="GradleLocalSettings">
+    <option name="projectSyncType">
+      <map>
+        <entry key="$PROJECT_DIR$/../../../../../../source/sixt-dev/tmp1/api/com.sixt.api.v1.vehicle-damage" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../../../../../source/sixt-dev/tmp1/com.sixt.api.v1.vehicle-damage" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../../../../../source/sixt-dev/tmp1/com.sixt.service.salesboost-branch-vehicle-availability" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../../../../../source/sixt-dev/tmp1/com.sixt.service.vehicle-damage" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../../../../../source/sixt-dev/tmp1/gs-rest-service/complete" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../../../../../source/sixt-dev/tmp1/service/com.sixt.service.vehicle-damage" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../../../../../source/sixt-dev/tmp1/spring-boot-demo" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../../../../../source/sixt-dev/tmp1/update_service/com.sixt.service.vehicle-damage" value="PREVIEW" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="y" value="23" />
+    <option name="width" value="1920" />
+    <option name="height" value="1106" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>11</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

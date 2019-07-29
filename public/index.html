@@ -1,0 +1,821 @@
+    <!DOCTYPE html>
+<html lang="en">
+<link href="https://fonts.googleapis.com/css?family=Quicksand:300,400" rel="stylesheet">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">.pac-container{background-color:#fff;position:absolute!important;z-index:1000;border-radius:2px;border-top:1px solid #d9d9d9;font-family:Arial,sans-serif;box-shadow:0 2px 6px rgba(0,0,0,0.3);-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box;overflow:hidden}.pac-logo:after{content:"";padding:1px 1px 1px 0;height:16px;text-align:right;display:block;background-image:url(https://maps.gstatic.com/mapfiles/api-3/images/powered-by-google-on-white3.png);background-position:right;background-repeat:no-repeat;background-size:120px 14px}.hdpi.pac-logo:after{background-image:url(https://maps.gstatic.com/mapfiles/api-3/images/powered-by-google-on-white3_hdpi.png)}.pac-item{cursor:default;padding:0 4px;text-overflow:ellipsis;overflow:hidden;white-space:nowrap;line-height:30px;text-align:left;border-top:1px solid #e6e6e6;font-size:11px;color:#999}.pac-item:hover{background-color:#fafafa}.pac-item-selected,.pac-item-selected:hover{background-color:#ebf2fe}.pac-matched{font-weight:700}.pac-item-query{font-size:13px;padding-right:3px;color:#000}.pac-icon{width:15px;height:20px;margin-right:7px;margin-top:6px;display:inline-block;vertical-align:top;background-image:url(https://maps.gstatic.com/mapfiles/api-3/images/autocomplete-icons.png);background-size:34px}.hdpi .pac-icon{background-image:url(https://maps.gstatic.com/mapfiles/api-3/images/autocomplete-icons_hdpi.png)}.pac-icon-search{background-position:-1px -1px}.pac-item-selected .pac-icon-search{background-position:-18px -1px}.pac-icon-marker{background-position:-1px -161px}.pac-item-selected .pac-icon-marker{background-position:-18px -161px}.pac-placeholder{color:gray}
+</style><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}
+
+.logo {
+  margin-top: 15px;
+  width: 120px
+}
+
+@media (max-width: 599px){
+.logo {
+  margin-top: 15px;
+  width: 110px
+}
+}
+
+-webkit-text-size-adjust:none;
+-ms-text-size-adjust:none;
+-moz-text-size-adjust:none;
+text-size-adjust:none;
+
+</style>
+    <!-- Basic -->
+    <title>epigram - find something remarkworthy</title>
+
+    <!-- Define Charset -->
+    
+    <!-- Responsive Metatag -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="description" content="Trusted local recommendations based on community knowledge.">
+    <meta property="og:description" content="Best catering services for your party at affordable prices. We serve everything fresh & hot right infront of your home, thanks to our food trucks.">
+    <meta property="og:keywords" content="Birthday Party, Office party, Corporate events, Catering, Small Party, Caterers, Small Home Parties,  Caterers in bangalore, house parties">
+    <meta name="keywords" content="Birthday Party, Office party, Corporate events, Catering, Small Party, Caterers, Small Home Parties,  Caterers in bangalore, house parties">
+
+    
+    <link rel="stylesheet" href="./assets/bootstrap.min.css" media="screen">
+<link rel="stylesheet" href="./assets/font-awesome.min.css" type="text/css" media="screen">
+<link rel="stylesheet" href="./assets/jquery-ui.min.css">
+
+
+
+    <!-- Icon -->
+    
+    <!-- rs style -->
+    
+    <!-- Slick nav was changed -->
+    
+    <!-- Span CSS Styles  -->
+    <link rel="stylesheet" type="text/css" href="./assets/main.min.css">
+    
+
+    <!-- Responsive CSS Styles  -->
+    <link rel="stylesheet" type="text/css" href="./assets/responsive.min.css">
+    <!-- Css3 Transitions Styles  -->
+    <!--<link rel="stylesheet" type="text/css" href="/static/span-template/assets/css/animate.css" media="screen">-->
+    <!-- Selected Preset -->
+    <link rel="stylesheet" type="text/css" href="./assets/pink.css" media="screen">
+
+
+    
+    
+    
+    
+    
+    
+
+    <style type="text/css">
+        header {
+            z-index: 99;
+        }
+
+
+    </style>
+
+    
+    <style type="text/css">
+        html {
+            width: 100%;
+            overflow-x: hidden;
+        }
+      #contentContainer {
+        background-image: url('./assets/sbgl1.png');
+        background-repeat: repeat-x;
+        background-size: contain;
+      }
+      .desktop {
+        display: none;
+      }
+        .background {
+            background-repeat: no-repeat;
+            background-position: center;
+            background-image: url(./img/sbgmin12.png);
+            background-size: 30%;
+            background-position-y: 238px;
+        }
+
+        h1.big_title {
+            font-size: 42px;
+            line-height: 56px;
+            color: #000;
+        }
+
+        h3.small_title {
+            font-size: 20px;
+            line-height: 28px;
+            color: #666;
+            margin-top: 16px;
+        }
+
+        .panel-center {
+            text-align: left;
+            background-color: rgba(255, 255, 255, 0.3);
+            padding: 20px;
+            padding-bottom: 5px;
+            margin: 0 auto;
+            width: 100%;
+            border-radius: 4px;
+            box-shadow: 0px 0px 18px 3px rgba(136, 136, 136, 0.05);
+        }
+
+        .panel-center h1, .panel-center label {
+            color: #000;
+        }
+
+        header .navbar, header .navbar .slicknav_menu {
+            height: 75px;
+        }
+
+        .fa {
+            color: #f0515c;
+        }
+
+        #desc {
+        }
+
+        .img-table {
+            display: table;
+            margin-top: 20px;
+        }
+
+        @media (max-width: 768px){
+                #banner {
+                  display: none;
+                }
+                h1.big_title {
+                     margin-top: 16px;
+                     font-size: 24px;
+                    line-height: 30px;
+                }
+                h3.small_title {
+                  margin-top: 0px;
+                  font-size: 16px;
+                  line-height: 22px;
+                  color: #666;
+                  margin-top: 16px;
+               }
+               .background {
+                  background-image: none;
+                  background-size: cover;
+               }
+               .panel-center {
+                  margin-top: 20px;
+               }
+               .container {
+                padding-left: 20px;
+                padding-right: 20px;
+               }
+               .img-table {
+                    margin-top: 20px;
+                }
+            }
+            @media (min-width: 600px){
+                .mob-banner {
+                  display: none;
+                }
+                .desktop {
+                display: inline-block;
+               }
+               .mob-only {
+                display: none;
+               }
+            }
+           @media (min-width: 1025px){
+              .mob-banner {
+                  display: none;
+                }
+               .desktop {
+                display: inline-block;
+               }
+               .mob-only {
+                display: none;
+               }
+               .img-table {
+                    margin-top: 60px;
+                }
+            }
+
+
+        .img-div {
+            font-family: Quicksand;
+            display: block;
+            margin-top: 30px;
+            font-size: 17px;
+            width: 360px;
+            margin: 50px auto;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .img-banner {
+            width: 280px;
+            margin-top: 34px;
+        }
+
+        .numeric {
+            background: #03b1ae;
+            padding: 8px;
+            border-radius: 50%;
+            font-size: 20px;
+            color: #fff;
+            text-align: center;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+
+        .img-title {
+            font-size: 21px;
+            font-weight: bold;
+            color: #000;
+        }
+
+        table {
+            border: 1px solid;
+        }
+
+        th, td {
+            border: 1px solid;
+            padding: 5px;
+            text-align: center;
+        }
+
+        a.main-button,
+        input[type="submit"] {
+        }
+
+        @media (max-width: 768px){
+                #banner {
+                  display: none;
+                }
+                h1.big_title {
+                     font-size: 30px;
+                    line-height: 34px;
+                }
+                h3.small_title {
+                  font-size: 16px;
+                  line-height: 22px;
+                  color: #666;
+                  margin-top: 16px;
+               }
+               .background {
+                  background-image: none;
+                  background-size: cover;
+               }
+               .panel-center {
+                  margin-top: 20px;
+               }
+               .container {
+                padding-left: 20px;
+                padding-right: 20px;
+               }
+               .lg-only {
+                  display: none;
+               }
+               .img-div {
+                    display: block;
+                    margin-top: 0px;
+                    font-size: 17px;
+                    width: 360px;
+                    width: 100%;
+                }
+            }
+            @media (min-width: 600px){
+                .mob-banner, .lg-only {
+                  display: none;
+                }
+                .img-div {
+                    display: table-cell;
+                    vertical-align: middle;
+                    font-size: 18px;
+                    width: 560px;
+                }
+            }
+           @media (min-width: 1025px){
+              .mob-banner {
+                  display: none;
+                }
+               .lg-only {
+                  display: block;
+               }
+               .img-div {
+                    display: table-cell;
+                    vertical-align: middle;
+                    font-size: 18px;
+                    width: 760px;
+                }
+                .img-banner {
+                    width: 300px;
+                    margin-top: 34px;
+                }
+            }
+
+            p.chat{
+              max-width: 215px;
+              word-wrap: break-word;
+              margin-bottom: 12px;
+              line-height: 24px;
+              position:relative;
+                padding:10px 20px;
+              border-radius:25px;
+              margin: 0 auto;
+              margin-top: 20px;
+            }
+
+            p:before, p:after {
+                content:"";
+                    position:absolute;
+                bottom:-2px;
+                height:20px;
+              }
+
+            .from-me {
+                color:white;
+                background: linear-gradient(180deg, #87cdfa 0%, #5c9de5 80%, #5c9de5 100%);
+                align-self: flex-end;
+                margin-left: 10px;
+            }
+
+            .from-me:before {
+                    right:-7px;
+                    border-right:20px solid #62a4e7;
+                    border-bottom-left-radius: 16px 14px;
+                    -webkit-transform:translate(0, -2px);
+                            transform:translate(0, -2px);
+                }
+
+            .from-me:after {
+                    right:-56px;
+                    width:26px;
+                    background:white;
+                    border-bottom-left-radius: 10px;
+                    -webkit-transform:translate(-30px, -2px);
+                            transform:translate(-30px, -2px);
+                }
+            .from-them {
+                background:#E5E5EA;
+                color:black;
+                display: inline-block;
+                margin-left: 20px;
+            }
+            .from-them:before {
+                    left:-7px;
+                    border-left:20px solid #E5E5EA;
+                    border-bottom-right-radius: 16px 14px;
+                    -webkit-transform:translate(0, -2px);
+                            transform:translate(0, -2px);
+                }
+            .from-them:after {
+                    left:4px;
+                    width:26px;
+                    background:white;
+                    border-bottom-right-radius: 10px;
+                    -webkit-transform:translate(-30px, -2px);
+                            transform:translate(-30px, -2px);
+                }
+            .avatar {
+              vertical-align: middle;
+              width: 50px;
+              height: 50px;
+              border-radius: 50%;
+              margin-right: 18px;
+            }
+            .conv {
+                margin: 0 auto;
+                margin-top:30px;
+                left: 0;
+                right: 0;
+                width: 300px;
+            }
+            .veristeps {
+                margin: 12px;
+            }
+            .veristeps li {
+                border-left: 2px solid #b6dffb;
+                line-height: 20px;
+                font-size: 16px;
+                padding: 0 2.5rem 2rem;
+                position: relative;
+                text-overflow: ellipsis;
+                width: 100%;
+            }
+            .veristeps li:before {
+                background: #fff;
+                border: 2px solid #0fafff;
+                border-radius: 100%;
+                content: "";
+                height: 20px;
+                left: 0;
+                margin-left: -10.5px;
+                position: absolute;
+                top: 0;
+                width: 20px;
+            }
+    </style>
+
+
+    
+    
+</head>
+<body>
+
+<!-- Full Body Container -->
+<div id="container">
+    <!-- Start Header Section -->
+    <!--<div class="hidden-header"> </div>-->
+    <header class="clearfix fixed-header">
+        
+            <!-- Start  Logo & Navigation  -->
+<div class="navbar navbar-default navbar-top">
+    <div class="container">
+        <div class="navbar-header">
+            <!-- Stat Toggle Nav Link For Mobiles -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <i class="fa fa-bars">
+                </i>
+            </button>
+            <!-- End Toggle Nav Link For Mobiles -->
+            <a class="navbar-brand " href="http://www.scoosh.in" style="height: 40px;">
+                <img alt="zaphow.com" class="logo" src="./img/logoe1.png" >
+            </a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right" style="top:10px;">
+                
+
+                <li><a class=" menu_home_link" style="cursor:pointer;padding-top: 10px; padding-bottom: 10px;">Home</a></li>
+                
+                <li>
+                    <a style="cursor:pointer;padding-right: 20px; padding-top: 10px; padding-bottom: 10px;" onClick="navTo('whyUs')">Why us&nbsp;&nbsp;</a>
+                </li>
+                <li>
+                </li>
+                
+                
+                    <li><a class=" menu_login_link" style="cursor:pointer; padding-top: 10px; padding-bottom: 10px;" onClick="navTo('menu')">Popular Menu</a></li>
+
+                
+            </ul>
+            <!-- End Navigation List -->
+        </div>
+    </div>
+</div>
+<!-- End Header Logo & Navigation -->
+
+        
+    </header>
+    <!-- End Header Section -->
+
+    
+<div id="contentContainer">
+    <!-- Start Content -->
+    <div id="content" class="background">
+        <div class="container">
+            <div class="row" style="min-height: 400px;">
+                <div class="col-sm-6 col-md-8" style="valign: middle&#39;; ">
+                    <h1 class="big_title" style="background: none;font-weight: normal;letter-spacing: 2px;">Make better <span id="rotatingTitleText">shopping</span> decisions</h1>
+                    <h3 id="desc" class="small_title" style="font-weight: normal;font-family: quicksand;margin-left:0px;">
+
+                        epigram uses social intelligence to suggest better options with <span style="color: #000; font-weight: bold">sound reasoning</span>.
+                    </h3>
+
+
+                    <h3 class="small_title" style="font-weight: normal;font-family: quicksand;margin-left:6px;">
+                    
+                    </h3>
+                    <img class="mob-banner" src="./img/sbgmin2.png" style="margin-top: 20px;margin-bottom: 20px;" />
+                </div>
+
+                <div class="col-sm-6 col-md-4">
+                     <div class="panel-center desktop">
+                        <h1 class="form_title" style="display: none"></h1>
+                        <form onSubmit="checkFields();" action="/search" method="get" class="landing_page" >
+    
+        
+    
+     
+    
+
+    
+        <!--<input type="text" name="mobile" placeholder="Mobile" class="form-control" id="id_mobile" value="" title="Mobile number" pattern="[\+\-\s0-9]{10-15}" required="required" dcvalue="" aria-required="true">-->
+        
+    
+
+  
+
+    
+
+    
+        <input type="text" id="q" name="q" placeholder="" class="form-control" id="id_location" value="best caterers in bangalore" dcvalue="" autocomplete="off" required="required">
+
+        
+    
+
+    
+    <div id="div_id_submit" class="form-group">
+        <div class="controls ">
+            <p style="color: #000; font-size: 9px; text-align: center"></p>
+            <input type="submit" class="submit form-control" id="id_submit" value="Find trusted providers" dcvalue="Submit">
+        </div>
+    </div>
+</form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+
+
+    <div id="content2">
+
+        <div class="container" >
+          <div class="row">
+          
+          </div>
+            <div class="row">
+    
+    <div class="row recent-projects" style="margin-top: 0px;margin-right: 16px;margin-left: 16px;">
+
+
+    
+    <div class="img-table">
+        <div class="img-div" style="text-align: left">
+           <br> <div><span class="img-title" style="line-height: 30px">What's an epigram?</span></div>
+            <br><div style="line-height: 22px;">An epigram is a <span style="color: #000; font-weight: bold;">rationale</span> or positive sentiment telling you why you should choose a service/product.<br><br>
+            For instance, 'accurate diagnosis' is an epigram for choosing a better doctor.
+            <br><br>
+
+        </div>
+
+    </div>
+
+        <div class="img-table" style="margin-top: -56px;">
+            <div class="img-div" style="text-align: left">
+                <br> <div><span class="img-title" style="line-height: 30px">Recent epigrams</span></div>
+                <br><div style="padding:20px"><img id="rotatingTitle" src="./img/epigrameg1.png"/>
+                <img id="rotatingTitle" src="./img/epigrameg2.png" style="display: none"/>
+                <img id="rotatingTitle" src="./img/epigrameg3.png" style="display: none"/>
+                <img id="rotatingTitle" src="./img/epigrameg4.png" style="display: none"/>
+            </div>
+
+            </div>
+
+        <div class="img-table" style="margin-top:-40px;">
+            <div class="img-div" style="text-align: left">
+                <div><span class="img-title" style="line-height: 30px">A leap from reviews/blogs</span></div>
+                <div style="line-height: 22px;"><br>Reviews often don't give you the full picture.</div>
+                <br><div style="line-height: 22px;">epigrams, besides being <span style="color:#000;font-weight:bold">short</span>, are highly <span style="color:#000;font-weight:bold">trustworthy</span>.
+                Behind each epigram is a multi-step verification process to eliminate fake opinions.<br><br>
+
+                <br> <div><img style="width: 270px;position:absolute;left: -24px;right:0;margin:auto;" src="img/trust.png"/></div><br><br>
+                <div style="margin-top:190px;">Each epigram is verified closely and screened by editors.</div></div>
+
+                <br>
+            </div>
+
+        </div>
+
+        <div class="img-table table-2" style="margin-top: -30px">
+            <div class="img-div">
+                <div><span class="img-title">Form opinions based on trust</span></div>
+                <br>
+                <div>While epigram relies on user opinions, it also curates and cross-verifies information across multiple sources upholding validity of every opinion. When in doubt, find recommendations on epigram.</div>
+                <br>
+                <div style="margin: 0 auto;left: 0;right: 0;width: 330px;margin-top:-20px;">
+                <img class="img-banner" src="./img/cfilters.jpg" style="width:300px" />
+                </div>
+            </div>
+
+        </div>
+
+    <div class="img-table">
+        <div class="img-div" style="margin-top:-24px;">
+            <div><span class="img-title">Few ways people use epigram </span></div>
+
+        </div>
+        <div class="img-div">
+            <ul class="veristeps" style="margin-top: -20px;">
+                <li><span>As a shopping researcher (try “best earphones for jogging”)</span></li>
+                <li><span>To find a genuine doctor (try “best eye doctors near me”)</span></li>
+                <li><span>As a stock market strategist (try “best stock picks in India in 2019”)</span></li>
+                <li><span>To discover new & interesting places in a city (try “offbeat places in Mangalore”)</span></li>
+                <li><span>Many more...</span></li>
+            </ul>
+        </div>
+    </div>
+    
+</div>
+
+
+ </p>
+                <br><br>
+
+
+                <div class="panel-center mob-only" style="position: fixed;bottom: 0px;background: linear-gradient(180deg, rgba(255, 255, 255, 0.05) 0%, rgb(232, 243, 250) 100%);left: 0px;">
+                    <h1 class="form_title" style="display: none"></h1>
+                    <form onsubmit="checkFields();" action="/search" method="get" class="landing_page" >
+
+
+
+
+
+
+
+                        <!--<input type="text" name="mobile" placeholder="Mobile" class="form-control" id="id_mobile" value="" title="Mobile number" pattern="[\+\-\s0-9]{10-15}" required="required" dcvalue="" aria-required="true">-->
+
+
+
+
+
+
+
+
+                        <input type="text" style="border: 1px solid;font-size: 16px;height: 40px;" id="q" name="q" placeholder="" class="form-control" value="best stock picks for 2019" dcvalue="trusted caterers in bangalore" autocomplete="off" required="required">
+
+
+
+
+
+                        <div id="div_id_submit" class="form-group">
+                            <div class="controls ">
+                                <p style="color: #000; font-size: 9px; text-align: center"></p>
+                                <input type="submit" class="submit form-control" id="id_submit" value="Get recommendations" dcvalue="Find trusted providers">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="controls ">
+                                <p style="color: #000; font-size: 9px; text-align: center"></p>
+                                <!--<span>Have something remarkworthy?</span><a href="#" style="margin-left: 10px; color:#447fc1; text-decoration: underline">Write an epigram</a>-->
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- End Service Icon -->
+        
+    </div>
+</div>
+
+            
+
+<div class="clear"></div>
+
+<div class="row">
+    <div class="project">
+        <style type="text/css">
+        .testimonials2 .item td.col1 {
+            vertical-align: top;
+            text-align: center;
+            width: 106px;
+            padding: 5px;
+        }
+
+        .testimonials2 .item td.col1 img {
+            width: 96px;
+        }
+
+        .testimonials2 .item td.col2 {
+            background: #f1f1f1;
+            padding: 5px;
+            text-align: justify;
+            text-justify: inter-word;
+            height: 120px;
+            font-size: 10px;
+        }
+
+
+
+
+        </style>
+
+        <div class="latest-posts testimonials2">
+            <h3 class="classic-title"><span></span></h3>
+
+            <div class="latest-posts-classic custom-carousel touch-carousel" data-appeared-items="2" style="opacity: 0;">
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</div>
+
+
+            
+
+        </div>
+    </div>
+
+
+
+    
+        <style type="text/css" id="footer_style">
+
+    footer a {
+        color: #eeeeee;
+        font-weight: 100;
+        font-size: 10pt;
+    }
+
+    footer a:hover {
+        color: white;
+    }
+
+    footer ul.grid li {
+        display: inline-block;
+        margin-right: 5px;
+        margin-bottom: 10px;
+        width: 150px;
+    }
+
+    footer ul.grid li i {
+        background-color: white;
+        color: #f1505b;
+        width: 35px;
+        height: 35px;
+        text-align: center;
+        font-size: 16px;
+        line-height: 34px;
+        margin-right: 3px;
+    }
+
+</style>
+
+
+    
+</div>
+<script src="./assets/jquery.min.js"></script>
+<script src="./assets/jquery-ui.min.js"></script>
+    
+
+    
+
+    
+
+<script>
+    function navTo(item) {
+      var scrollVal = 584;
+      switch(item) {
+        case 'whyUs': scrollVal = 584; break;
+        case 'menu': scrollVal = 1053; break;
+        default: scrollVal = 0; break;
+      }
+      $('html,body').animate({
+          scrollTop: scrollVal
+      }, 800);
+    }
+
+    function checkFields(e) {
+      var emailTxt = document.getElementById('email').value;
+      var emailMem = document.getElementById('members').value;
+      localStorage.setItem("num-members", emailMem);
+      localStorage.setItem("mobile", emailTxt);
+      if(emailTxt.trim() === '' || emailMem.trim() === '') {
+        e.preventDefault();
+        return false;
+      }
+    }
+
+    var changeInt = 0;
+var i=0,j=0;
+var text = ["./img/epigrameg1.png", "./img/epigrameg2.png", "./img/epigrameg3.png", "./img/epigrameg4.png"];
+
+var interval = setInterval(function() {
+    $("#rotatingTitle").fadeOut(400, function() {
+        $(this).attr('src',text[i]);
+    }).fadeIn(400);
+    i++;
+    if(i == text.length) {
+        i = 0;
+    }
+}, 2500);
+
+
+var k=0;
+var textArr = ["shopping", "travel", "trade", "everyday"];
+
+var interval = setInterval(function() {
+    $("#rotatingTitleText").fadeOut(400, function() {
+        $(this).text(textArr[k]);
+    }).fadeIn(400);
+    k++;
+    if(k == text.length) {
+        k = 0;
+    }
+}, 1800);
+
+
+
+</script>
+
+
+        
+
+</body></html>
