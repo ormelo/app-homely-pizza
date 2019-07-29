@@ -5,6 +5,9 @@
 # You can specify a custom docker image from Docker Hub as your build environment.
 image: node:10.15.3
 
+clone:
+  depth: full
+
 pipelines:
   default:
     - step:
