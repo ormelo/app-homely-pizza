@@ -1,0 +1,267 @@
+.answers-container{
+    overflow: auto;
+    white-space: nowrap;
+    height: 45px;
+}
+.question-answers-container{
+    padding-left: 20px;
+}
+.question-answers-container  .answer {
+          display: inline-block;
+          flex-direction: column;
+          justify-content: space-between;
+          align-items: center;
+          margin-top: 10px;
+          width: 100px;
+          text-align: center;
+          border: 1px solid #96d6ff;
+          margin-right: 11px;
+          border-radius: 15px;
+          
+}
+.question-answers-container  .answer:nth-child(1){
+    -webkit-animation: slide-in 1s;
+          -moz-animation: slide-in 1s;
+          -o-animation: slide-in 1s;
+          animation: slide-in 1s; /* Safari 4.0 - 8.0 */
+}
+.question-answers-container  .answer:nth-child(2){
+    -webkit-animation: slide-in 2s;
+          -moz-animation: slide-in 2s;
+          -o-animation: slide-in 2s;
+          animation: slide-in 2s; /* Safari 4.0 - 8.0 */
+}
+.question-answers-container  .answer:nth-child(3){
+    -webkit-animation: slide-in 2.5s;
+          -moz-animation: slide-in 2.5s;
+          -o-animation: slide-in  2.5s;
+          animation: slide-in  2.5s; /* Safari 4.0 - 8.0 */
+}
+.question-answers-container .question{
+    font-weight: bold;
+    font-family: quicksand;
+    margin-left: 0px;
+    font-size: 20px;
+    line-height: 28px;
+    margin-top: 16px;
+}
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes face-in {
+0%   {bottom: 0;opacity: 0;}
+100% {bottom: 100%;opacity: 1;}
+}
+
+@keyframes face-in {
+    0%   {bottom: 0;opacity: 0;}
+    100% {bottom: 100%;opacity: 1;}
+}
+.answer:hover{
+    background: blue;
+}   
+.answer:hover{
+background: #96d6ff;
+}
+  
+@-o-keyframes slide-in {
+0% {
+    transform: translateX(400px);
+    opacity: 0;
+}
+100% {
+    transform: translateX(0px);
+    opacity: 1;
+}
+}
+  
+@-moz-keyframes slide-in {
+0% {
+    transform: translateX(400px);
+    opacity: 0;
+}
+100% {
+    transform: translateX(0px);
+    opacity: 1;
+}
+}
+  
+@-webkit-keyframes slide-in {
+0% {
+    transform: translateX(400px);
+    opacity: 0;
+}
+100% {
+    transform: translateX(0px);
+    opacity: 1;
+}
+}
+  
+@keyframes slide-in {
+0% {
+    transform: translateX(400px);
+    opacity: 0;
+}
+100% {
+    transform: translateX(0px);
+    opacity: 1;
+}
+}
+
+.search-results-container .result-info{
+    font-weight: normal;
+    font-family: quicksand;
+    margin-left: 0px;
+    font-size: 20px;
+    line-height: 28px;
+    color: #666;
+}
+.search-results-container .results-list {
+    padding-left: 10px;
+}
+
+.text-container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+}
+.text-container .key-words{
+        background: #dcdbdb;
+        display: block;
+        text-align: center;
+        border-radius: 12px;
+        padding: 1px 5px;
+        margin-bottom: 10px;
+}
+.text-container .key-words:nth-child(1){font-size: 28px;}
+.text-container .key-words:nth-child(2){font-size: 24px; position: relative;
+        right: 30%;}
+.text-container .key-words:nth-child(3){font-size: 20px; position: relative;
+        left: 30%;}
+.text-container .key-words:nth-child(4){font-size: 16px; position: relative;
+        right: 30%;}
+.justify-content-end{
+    float: right;
+}
+
+/* .question-answers-container {
+    width:100%;
+    overflow:hidden;
+  } */
+  .question-answers-container .question{
+    animation: slide-down 3s;
+  }
+  
+  @keyframes slide-down {
+    from {
+     opacity: 0; 
+     margin-top: 30px;
+    }
+  
+    to {
+      opacity: 1;
+      margin-top: 0px;
+    }
+  }
+
+  .image-animation-conatiner{
+      position: relative;
+      margin-top: 10px;
+  }
+
+    
+  .image-animation-conatiner .main-image{
+    width: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+  .image-animation-conatiner .image1{
+    animation: slide-bottom-right 3s;
+    position: absolute;
+    bottom: 2%;
+    right: 5%;
+    width: 25%;
+    height: 35%;
+  }  
+
+  @keyframes slide-bottom-right {
+    from {
+     opacity: 0; 
+     bottom: 20%;
+     right: 20%;
+    }
+    to {
+      opacity: 1;
+      bottom: 2%;
+      right: 5%;
+    }
+  }
+
+  .image-animation-conatiner  .image2{
+    animation: slide-bottom-left 3s;
+    position: absolute;
+    bottom: 2%;
+    left:5%;
+    width: 25%;
+    height: 35%;
+  }
+  @keyframes slide-bottom-left {
+    from {
+     opacity: 0; 
+     bottom: 20%;
+     left: 20%;
+    }
+  
+    to {
+      opacity: 1;
+      bottom: 2%;
+      left:5%;
+    }
+  }
+
+  .image-animation-conatiner  .image3{
+    animation: slide-top-left 3s;
+    position: absolute;
+    top: 2%;
+    left: 5%;
+    width: 25%;
+    height: 35%;
+  }
+
+  @keyframes slide-top-left {
+    from {
+     opacity: 0; 
+     top: 20%;
+     left: 20%;
+    }
+  
+    to {
+      opacity: 1;
+      top: 2%;
+      left: 5%;
+    }
+  }
+
+  .image-animation-conatiner .image4{
+    animation: slide-top-right 3s;
+    position: absolute;
+    top: 2%;
+    right: 5%;
+    width: 25%;
+    height: 35%;
+  }
+  @keyframes slide-top-right {
+    from {
+     opacity: 0; 
+     top: 20%;
+     right: 20%;
+    }
+  
+    to {
+      opacity: 1;
+      top: 2%;
+      right: 5%;
+    }
+  }
