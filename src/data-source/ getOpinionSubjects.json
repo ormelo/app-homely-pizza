@@ -1,0 +1,85 @@
+{
+    "shortlistText": "60 places",
+    "results": [
+        {
+            "id": 43232364,
+            "title": "Panambur beach",
+            "sources": [
+                "travel triangle",
+                "holidayiq",
+                "wandertrails",
+                "holidify",
+                "thrillophilia"
+            ],
+            "opinionCount": 352,
+            "tags": [
+                {
+                    "name": "beautiful view",
+                    "rank": 1
+                },
+                {
+                    "name": "water sports",
+                    "rank": 2
+                },
+                {
+                    "name": "beach food center",
+                    "rank": 3
+                },
+                {
+                    "name": "cosy place",
+                    "rank": 4
+                }
+            ],
+            "images": {
+                "hero": "https://i.ibb.co/7zpvDvm/Screen-Shot-2019-08-02-at-1-31-26-PM.png",
+                "thumbnail1": "https://i.ibb.co/824Gy0f/621738-405099816216411-977210295-o-1.jpg",
+                "thumbnail2": "https://i.ibb.co/RPGzkN1/download-2.jpg",
+                "thumbnail3": "https://i.ibb.co/sCbdn0h/Screen-Shot-2019-08-02-at-1-35-49-PM.png"
+            },
+            "justifications": [
+                "mostlt know for its sunset view",
+                "most people liked the adventure sports",
+                "lowest fares for kids activities",
+                "famous for internation kite festival"
+            ]
+        },
+        {
+            "id": 6453436,
+            "title": "Butterfly Park",
+            "sources": [
+                "holidayiq"
+            ],
+            "opinionCount": 246,
+            "tags": [
+                {
+                    "name": "butterfly diversity",
+                    "rank": 1
+                },
+                {
+                    "name": "small but nice",
+                    "rank": 2
+                },
+                {
+                    "name": "local delicacies",
+                    "rank": 3
+                },
+                {
+                    "name": "lovely coffee",
+                    "rank": 4
+                }
+            ],
+            "images": {
+                "hero": "https://media-cdn.tripadvisor.com/media/photo-m/1280/14/c2/63/f4/southern-birdwing.jpg",
+                "thumbnail1": "https://media-cdn.tripadvisor.com/media/photo-o/0f/b1/ea/20/blue-mormon.jpg",
+                "thumbnail2": "https://media-cdn.tripadvisor.com/media/photo-w/0f/f7/ad/6f/img-20170721-135149-largejpg.jpg",
+                "thumbnail3": "https://media-cdn.tripadvisor.com/media/photo-o/0c/ff/8e/46/photo4jpg.jpg",
+                "thumbnail4": "https://media-cdn.tripadvisor.com/media/photo-o/0c/71/f7/41/clipper.jpg"
+            },
+            "justifications": [
+                "large diversity of species, some said they spotted more than 50",
+                "ample car parking",
+                "great eateris and simply great coffee in Mangalore"
+            ]
+        }
+    ]
+}
