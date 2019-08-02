@@ -1,5 +1,5 @@
-{
-    "shortlistText": "60 places",
+export const searchResults ={
+    "shortlistText": "160 places",
     "results": [
         {
             "id": 43232364,
@@ -83,3 +83,70 @@
         }
     ]
 }
+
+export const questions ={
+    "results": [
+      {
+        "id":"123123",
+        "question": "What type of place are you looking for?",
+        "responses": [
+          {
+            "id": 4552355,
+            "title": "calm & serene",
+            "type": "button"
+          },
+          {
+            "id": 4552355,
+            "title": "kid friendly",
+            "type": "button"
+          },
+          {
+            "id": 4552355,
+            "title": "shopping places",
+            "type": "button"
+          }
+        ]
+      },
+      {
+        "id":"123124",
+        "question": "Do you like places with eateries?",
+        "responses": [
+          {
+            "id": 4552355,
+            "title": "yes",
+            "type": "button"
+          },
+          {
+            "id": 4552355,
+            "title": "no",
+            "type": "button"
+          }
+        ]
+      },
+      {
+        "question": "How far from your locality?",
+        "responses": [
+          {
+            "id": 4552355,
+            "title": "< 5 km",
+            "type": "button"
+          },
+          {
+            "id": 4552355,
+            "title": "< 15 km",
+            "type": "button"
+          },
+          {
+            "id": 4552355,
+            "title": "< 30 km",
+            "type": "button"
+          },
+          {
+            "id": 4552355,
+            "title": "skip",
+            "type": "button"
+          }
+        ]
+      }
+    ]
+  }

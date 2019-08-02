@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { render } from 'react-dom';
 import DetailView from './detailView.jsx';
 import { BrowserRouter as Router, Route, Link, withRouter } from 'react-router-dom';
+import { END_POINTS } from '../../common/constant';
+import { searchResults, questions } from '../../data-source/mockData';
 class QuestionAnswer extends Component {
     render() {
         return (
@@ -16,7 +18,7 @@ class QuestionAnswer extends Component {
                         <div className="answers-container">
                             {this.props.answers.map((answer) => {
                                 return (<div className={this.props.selectedAns ? "answer" : "answer active-ans"} onClick={() => this.props.onSelect(answer)}>
-                                    <span className="ans-text" >{answer}</span>
+                                    <span className="ans-text" >{answer.title}</span>
                                 </div>)
                             })}
                         </div>
@@ -61,30 +63,80 @@ export class ResultsList extends React.Component {
 
     constructor() {
         super();
+        this.state = {
+            resultList: [],
+            searchKey: '',
+            questionList: [],
+            shortlistText: 0,
+            activeQuestionIndex: 0,
+            searchRequestPayLoad: {
+                "query": "",
+                "questions": []
+            }
+        }
+        this.getSearchResults = this.getSearchResults.bind(this);
+        this.onQuestionSelect = this.onQuestionSelect.bind(this);
     }
 
     componentDidMount() {
         document.querySelector('.loading').style.display = 'none';
+        this.setState({
+            resultList: searchResults.results,
+            questionList: questions.results,
+            shortlistText: searchResults.shortlistText
+        })
     }
 
+    onQuestionSelect(answer) {
+        let { activeQuestionIndex, questionList, searchRequestPayLoad } = this.state;
+        searchRequestPayLoad.questions.push({
+            id: questionList[activeQuestionIndex].id,
+            responseId: answer.id
+        })
+        this.setState({
+            activeQuestionIndex: questionList.length > activeQuestionIndex++  ? activeQuestionIndex++ : activeQuestionIndex,
+            searchRequestPayLoad: searchRequestPayLoad
+        })
+    }
+
+    getSearchResults() {
+        fetch(END_POINTS.SEARCH, {
+            method: "POST",
+            body: data
+        })
+            .then(function (res) { return res.json(); })
+            .then(function (data) { alert(JSON.stringify(data)) })
+    }
+
+    getQuestionList() {
+        fetch(END_POINTS.GET_QUESTIONS, {
+            method: "GET"
+        })
+            .then(function (res) { return res.json(); })
+            .then(function (data) { alert(JSON.stringify(data)) })
+    }
 
     render() {
+        const { questionList, activeQuestionIndex, shortlistText, resultList } = this.state;
         return (<div class="search-results-container">
-            <QuestionAnswer question="Do you like IT ?" answers={['Yes', 'No', 'Not Sure']} />
+            {questionList && questionList.length > 0 &&
+                <QuestionAnswer question={questionList[activeQuestionIndex].question} answers={questionList[activeQuestionIndex].responses} onSelect={this.onQuestionSelect} />}
             <div className="row">
                 <div className="col-md-12 d-flex justify-content-end">
-                    <span className="result-info">"60" results short listed</span>
+                    <span className="result-info">"{shortlistText}" results short listed</span>
                 </div>
             </div>
             <div className="row">
-               {[1,2,3].map(()=>{
-                  return( <div className="col-sm-12 col-md-4">
-                   <div className="results-list">
-                       <h3><Link to="/search/details"> #1 Pannambur Beach</Link></h3>
-                       <span>from <spam className="bt">travel triangle</spam>  and 5 other</span>
-                       <ImageThumbnail />
-                   </div>
-               </div>)})} 
+                {resultList.map((resultItem, index) => {
+                    return (<div className="col-sm-12 col-md-4">
+                        <div className="results-list">
+                            <h3><Link to="/search/details"> #{index + 1} {resultItem.title}</Link></h3>
+                            {resultItem.sources && resultItem.sources.length > 0
+                                && <span>from <spam className="bt">{resultItem.sources[0]}</spam>  and {resultItem.sources.length} other</span>}
+                            <ImageThumbnail />
+                        </div>
+                    </div>)
+                })}
             </div>
         </div>
         )
