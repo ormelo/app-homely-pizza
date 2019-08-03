@@ -5,7 +5,18 @@ import { BrowserRouter as Router, Route, Link, withRouter } from 'react-router-d
 import { END_POINTS } from '../../common/constant';
 import { searchResults, questions } from '../../data-source/mockData';
 class QuestionAnswer extends Component {
+
+    isSelected(selectedAns, answer) {
+        if (selectedAns && selectedAns.length === 0) {
+            return false;
+        }
+         const found = (selectedAns || []).find((selectedAnswer) => selectedAnswer.responseId === answer.id);
+
+         return found ? true : false;
+    }
+
     render() {
+
         return (
             <div className={`question-answers-container ${this.props.className}`}>
                 <div className="row pr-2">
@@ -17,7 +28,8 @@ class QuestionAnswer extends Component {
                     <div className="col-md-12 pb-2">
                         <div className="answers-container">
                             {this.props.answers.map((answer) => {
-                                return (<div className={this.props.selectedAns ? "answer" : "answer active-ans"} onClick={() => this.props.onSelect(answer)}>
+                                return (<div className={ true ? "answer" : "answer active-ans"}
+                                    onClick={() => this.props.onSelect(answer)}>
                                     <span className="ans-text" >{answer.title}</span>
                                 </div>)
                             })}
@@ -93,10 +105,13 @@ export class ResultsList extends React.Component {
             id: questionList[activeQuestionIndex].id,
             responseId: answer.id
         })
-        this.setState({
-            activeQuestionIndex: questionList.length > activeQuestionIndex++  ? activeQuestionIndex++ : activeQuestionIndex,
-            searchRequestPayLoad: searchRequestPayLoad
-        })
+        let nextIndex = activeQuestionIndex + 1;
+        if (questionList.length > nextIndex) {
+            this.setState({
+                activeQuestionIndex: nextIndex,
+                searchRequestPayLoad: searchRequestPayLoad
+            })
+        }
     }
 
     getSearchResults() {
@@ -117,10 +132,10 @@ export class ResultsList extends React.Component {
     }
 
     render() {
-        const { questionList, activeQuestionIndex, shortlistText, resultList } = this.state;
+        const { questionList, activeQuestionIndex, shortlistText, resultList, searchRequestPayLoad = [] } = this.state;
         return (<div class="search-results-container">
             {questionList && questionList.length > 0 &&
-                <QuestionAnswer question={questionList[activeQuestionIndex].question} answers={questionList[activeQuestionIndex].responses} onSelect={this.onQuestionSelect} />}
+                <QuestionAnswer selectedAns={searchRequestPayLoad.questions || []} question={questionList[activeQuestionIndex].question} answers={questionList[activeQuestionIndex].responses} onSelect={this.onQuestionSelect} />}
             <div className="row">
                 <div className="col-md-12 d-flex justify-content-end">
                     <span className="result-info">"{shortlistText}" results short listed</span>

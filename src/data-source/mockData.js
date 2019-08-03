@@ -91,17 +91,17 @@ export const questions ={
         "question": "What type of place are you looking for?",
         "responses": [
           {
-            "id": 4552355,
+            "id": 34,
             "title": "calm & serene",
             "type": "button"
           },
           {
-            "id": 4552355,
+            "id": 45,
             "title": "kid friendly",
             "type": "button"
           },
           {
-            "id": 4552355,
+            "id": 56,
             "title": "shopping places",
             "type": "button"
           }
@@ -112,12 +112,12 @@ export const questions ={
         "question": "Do you like places with eateries?",
         "responses": [
           {
-            "id": 4552355,
+            "id": 2,
             "title": "yes",
             "type": "button"
           },
           {
-            "id": 4552355,
+            "id": 3,
             "title": "no",
             "type": "button"
           }
@@ -127,22 +127,22 @@ export const questions ={
         "question": "How far from your locality?",
         "responses": [
           {
-            "id": 4552355,
+            "id": 12,
             "title": "< 5 km",
             "type": "button"
           },
           {
-            "id": 4552355,
+            "id": 13,
             "title": "< 15 km",
             "type": "button"
           },
           {
-            "id": 4552355,
+            "id": 14,
             "title": "< 30 km",
             "type": "button"
           },
           {
-            "id": 4552355,
+            "id": 15,
             "title": "skip",
             "type": "button"
           }
