@@ -286,3 +286,110 @@
       right: 5%;
     }
   }
+  /* details view */
+  .details-header {
+      position: relative;
+      height: 250px;
+  }
+
+  .details-header .banner-image{
+
+    width: 100%
+  }
+  .details-header .details-title{
+    position: absolute;
+    top: 2px;
+    left: 26px;
+    font-size: 20px;
+  }
+
+  .details-header .sentiments{
+    position: absolute;
+    bottom: 20px;
+    font-size: 20px;
+    left: 20px;
+  }
+
+  .sentiments .sentiment{
+    display: inline-block;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    padding: 3px 9px;
+    text-align: center;
+    border: 1px solid #96d6ff;
+    margin-right: 11px;
+    border-radius: 15px;
+    background: white;
+
+  }
+  .go-back{
+    padding: 13px 15px;
+    font-size: 17px;
+    cursor: pointer;
+  }
+  .details-view-container .title{
+    font-size: 23px;
+  }
+  .details-view-container .speciality{
+    border: 1px solid;
+    height: 30px;
+    display: inline-block;
+    border-right: 0px;
+    padding: 5px 10px;
+    border-radius: 13px;
+  }
+.details-view-container .opinion{
+    font-size: 16px;
+    padding: 10px;
+  }
+.details-view-container .opinion_created_at{
+    color: gray;
+    padding-left: 12px;
+  }
+  .call-to-action{
+    position: fixed;
+    bottom: 0;
+  }
+
+
+
+/* The Modal (background) */
+.custom-modal {
+    display: block; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content */
+  .custom-modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }

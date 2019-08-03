@@ -82,13 +82,22 @@ export class ResultsList extends React.Component {
             shortlistText: 0,
             activeQuestionIndex: 0,
             searchRequestPayLoad: {
-                "query": "",
+                "query": this.getSearchQuery(),
                 "questions": []
             }
         }
         this.getSearchResults = this.getSearchResults.bind(this);
         this.onQuestionSelect = this.onQuestionSelect.bind(this);
     }
+
+    getSearchQuery(){
+        let searchQuery = window.location.search;
+        if(typeof searchQuery === 'string'){
+            return searchQuery.replace('?q=','').split('+').join(' ');
+        }
+        return ''
+    }
+
 
     componentDidMount() {
         document.querySelector('.loading').style.display = 'none';
@@ -145,7 +154,7 @@ export class ResultsList extends React.Component {
                 {resultList.map((resultItem, index) => {
                     return (<div className="col-sm-12 col-md-4">
                         <div className="results-list">
-                            <h3><Link to="/search/details"> #{index + 1} {resultItem.title}</Link></h3>
+                            <h3><Link to={`/search/details/${searchRequestPayLoad.query}`}> #{index + 1} {resultItem.title}</Link></h3>
                             {resultItem.sources && resultItem.sources.length > 0
                                 && <span>from <spam className="bt">{resultItem.sources[0]}</spam>  and {resultItem.sources.length} other</span>}
                             <ImageThumbnail />
@@ -166,7 +175,7 @@ render(<Router>
         <Route path="/search" render={() => (
             <div className="results">
                 <Route exact path="/search" component={ResultsList} />
-                <Route exact path="/search/details" component={QuizWithRouter} />
+                <Route exact path="/search/details/:searchQuery" component={QuizWithRouter} />
             </div>)} />
     </div>
 </Router>, document.getElementById('containerWiz'));
