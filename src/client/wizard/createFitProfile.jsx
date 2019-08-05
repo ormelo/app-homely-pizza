@@ -54,10 +54,10 @@ class ImageThumbnail extends Component {
                     <div className="col-md-12">
                         <div className="image-animation-conatiner ">
                             {images.hero && <img src={images.hero} className="main-image" />}
-                            {images.thumbnail1 && <img src={images.thumbnail1} className="image1" />}
-                            {images.thumbnail2 && <img src={images.thumbnail2} className="image2" />}
-                            {images.thumbnail3 && <img src={images.thumbnail3} className="image3" />}
-                            {images.thumbnail4 && <img src={images.thumbnail4} className="image4" />}
+                            {images.thumbnail1 && <div className="image1" style={{ backgroundImage: `url(${images.thumbnail1})`,backgroundPosition:'center' }}></div> }
+                            {images.thumbnail2 && <div className="image2" style={{ backgroundImage: `url(${images.thumbnail2})`,backgroundPosition:'center' }}></div> }
+                            {images.thumbnail3 && <div className="image3" style={{ backgroundImage: `url(${images.thumbnail3})`,backgroundPosition:'center' }}></div> }
+                            {images.thumbnail4 && <div className="image4" style={{ backgroundImage: `url(${images.thumbnail4})`,backgroundPosition:'center' }}></div> }
                             <div className="text-container">
                                 {tags && tags.map((tag) => {
                                     return <span className="key-words" key={tag.rank}>{tag.name}</span>
