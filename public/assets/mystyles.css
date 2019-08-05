@@ -153,6 +153,7 @@
         border-radius: 8px;
         padding: 1px 12px;
         margin-bottom: 10px;
+        font-weight: bold;
         width: max-content;
 }
 .text-container .key-words:nth-child(1){font-size: 28px;}
@@ -193,7 +194,8 @@
 
   .image-animation-conatiner{
       position: relative;
-      margin-top: 10px;
+      margin-top: 70px;
+      margin-bottom: 90px;
   }
 
     
