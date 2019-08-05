@@ -216,6 +216,10 @@
     position: absolute !important;
     background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(212, 212, 213, 0.37) 97%);
   }
+  @-webkit-keyframes slide {
+      from { background-position: 0 0; }
+      to { background-position: -100px 0; }
+  }
 
     
   .image-animation-conatiner .main-image{
@@ -226,6 +230,8 @@
     left: 0;
     border-radius: 4px;
     -webkit-border-radius: 4px;
+    -webkit-animation: slide 10s linear;
+    -webkit-animation-timing-function: ease;
 }
 
   .image-animation-conatiner .image1{

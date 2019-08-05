@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2100fea9-fa34-466f-9140-289133e88515" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/public/assets/mystyles.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/mystyles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/search.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/search.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -42,11 +44,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/search.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="313">
-              <caret line="1492" column="16" selection-start-line="1492" selection-start-column="16" selection-end-line="1492" selection-end-column="16" />
+            <state relative-caret-position="556">
+              <caret line="1507" column="16" selection-start-line="1507" selection-start-column="16" selection-end-line="1507" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/public/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="14" column="11" selection-start-line="14" selection-start-column="11" selection-end-line="14" selection-end-column="11" />
             </state>
           </provider>
         </entry>
@@ -54,8 +65,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/assets/mystyles.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="780">
-              <caret line="53" column="34" selection-start-line="53" selection-start-column="34" selection-end-line="53" selection-end-column="34" />
+            <state relative-caret-position="116">
+              <caret line="202" column="3" lean-forward="true" selection-start-line="202" selection-start-column="3" selection-end-line="202" selection-end-column="3" />
             </state>
           </provider>
         </entry>
@@ -64,18 +75,12 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>containerW</find>
-      <find>questiona</find>
-      <find>.resul</find>
-      <find>.results</find>
-      <find>.bt</find>
       <find>results-list</find>
       <find>body</find>
       <find>result-info</find>
       <find>.result-info</find>
       <find>question-answers-container</find>
       <find>.key0</find>
-      <find>logo</find>
       <find>.logo</find>
       <find>ImageThumbnail</find>
       <find>.image-animation-conatiner</find>
@@ -88,10 +93,18 @@
       <find>.image2</find>
       <find>animation-delay:</find>
       <find>.main-im</find>
-      <find>backgroundIm</find>
       <find>(max-width: 599px)</find>
       <find>anse</find>
+      <find>make bett</find>
+      <find>104</find>
       <find>answer</find>
+      <find>epigram makes</find>
+      <find>backgroundIm</find>
+      <find>.main-image</find>
+      <find>slide</find>
+      <find>slide 10</find>
+      <find>logo</find>
+      <find>logo-img</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -103,6 +116,7 @@
         <option value="$PROJECT_DIR$/src/client/wizard/createFitProfile.jsx" />
         <option value="$PROJECT_DIR$/public/assets/mystyles.css" />
         <option value="$PROJECT_DIR$/public/search.html" />
+        <option value="$PROJECT_DIR$/public/index.html" />
       </list>
     </option>
   </component>
@@ -135,6 +149,12 @@
               <item name="epigram-web" type="462c0819:PsiDirectoryNode" />
               <item name="public" type="462c0819:PsiDirectoryNode" />
               <item name="assets" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="epigram-web" type="b2602c69:ProjectViewProjectNode" />
+              <item name="epigram-web" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="img" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="epigram-web" type="b2602c69:ProjectViewProjectNode" />
@@ -246,15 +266,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/assets/mystyles.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="780">
-          <caret line="53" column="34" selection-start-line="53" selection-start-column="34" selection-end-line="53" selection-end-column="34" />
+        <state relative-caret-position="116">
+          <caret line="202" column="3" lean-forward="true" selection-start-line="202" selection-start-column="3" selection-end-line="202" selection-end-column="3" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/search.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="313">
-          <caret line="1492" column="16" selection-start-line="1492" selection-start-column="16" selection-end-line="1492" selection-end-column="16" />
+        <state relative-caret-position="556">
+          <caret line="1507" column="16" selection-start-line="1507" selection-start-column="16" selection-end-line="1507" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="11" selection-start-line="14" selection-start-column="11" selection-end-line="14" selection-end-column="11" />
         </state>
       </provider>
     </entry>
