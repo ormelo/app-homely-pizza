@@ -204,6 +204,7 @@
     
   .image-animation-conatiner .main-image{
     width: 100%;
+    height: 180px;
     position: relative;
     top: 0;
     left: 0;
