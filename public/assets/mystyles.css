@@ -330,6 +330,9 @@
     background: white;
 
   }
+  .sentiments .active-sentiment{
+      background: #96d6ff
+  }
   .go-back{
     padding: 13px 15px;
     font-size: 17px;

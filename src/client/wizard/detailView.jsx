@@ -11,7 +11,7 @@ class DetailView extends Component {
             searchQuery: '',
             details: {},
             selectedSentiment: {},
-            openModal: false
+            activeSentiment:'',
         }
     }
 
@@ -40,7 +40,7 @@ class DetailView extends Component {
                         <img src={'../../img/sample_img.jpeg'} className="banner-image" />
                         <div className="details-title"> {details.title}</div>
                         <div className="sentiments">
-                            {details.sentiments && Object.keys(details.sentiments).map((key) => <div className="sentiment">{key}</div>)}
+                            {details.sentiments && Object.keys(details.sentiments).map((key) => <div className= {selectedSentiment=== key ? "active-sentiment sentiment" : "sentiment"} onClick={()=>this.setState({selectedSentiment:key})}>{key}</div>)}
                         </div>
                     </div>
                 </div>
@@ -61,7 +61,6 @@ class DetailView extends Component {
                     {details.callToAction && details.callToAction.type === 'tel' && <button title={details.callToAction.number} className="btn btn-primary"> {details.callToAction.label}</button>}
                 </div>
             </div>
-            {openModal && <ModalView />}
         </div>)
     }
 }
