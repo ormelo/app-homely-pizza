@@ -10,9 +10,9 @@ class QuestionAnswer extends Component {
         if (selectedAns && selectedAns.length === 0) {
             return false;
         }
-         const found = (selectedAns || []).find((selectedAnswer) => selectedAnswer.responseId === answer.id);
+        const found = (selectedAns || []).find((selectedAnswer) => selectedAnswer.responseId === answer.id);
 
-         return found ? true : false;
+        return found ? true : false;
     }
 
     render() {
@@ -28,7 +28,7 @@ class QuestionAnswer extends Component {
                     <div className="col-md-12 pb-2">
                         <div className="answers-container">
                             {this.props.answers.map((answer) => {
-                                return (<div className={ true ? "answer" : "answer active-ans"}
+                                return (<div className={true ? "answer" : "answer active-ans"}
                                     onClick={() => this.props.onSelect(answer)}>
                                     <span className="ans-text" >{answer.title}</span>
                                 </div>)
@@ -46,21 +46,22 @@ class QuestionAnswer extends Component {
 class ImageThumbnail extends Component {
 
     render() {
+        const { resultItem } = this.props;
+        const { images = [], tags = [] } = resultItem;
         return (
             <div>
                 <div className="row">
                     <div className="col-md-12">
                         <div className="image-animation-conatiner ">
-                            <img src='../img/download.jpeg' className="main-image" />
-                            <img src='../img/sample_img.jpeg' className="image1" />
-                            <img src='../img/sample_img.jpeg' className="image2" />
-                            <img src='../img/sample_img.jpeg' className="image3" />
-                            <img src='../img/sample_img.jpeg' className="image4" />
+                            {images.hero && <img src={images.hero} className="main-image" />}
+                            {images.length > 0 && <img src={images.hero} className="image1" />}
+                            {images.length > 1 && <img src={images.hero} className="image2" />}
+                            {images.length > 2 && <img src={images.hero} className="image3" />}
+                            {images.length > 3 && <img src={images.hero} className="image4" />}
                             <div className="text-container">
-                                <span className="key-words">Beautiful view</span><i class="fa fa-question-circle-o" aria-hidden="true"></i>
-                                <span className="key-words">water sports</span>
-                                <span className="key-words">Beach fast Food Center</span>
-                                <span className="key-words">cosy place</span>
+                                {tags && tags.map((tag) => {
+                                    return <span className="key-words" key={tag.rank}>{tag.name}</span>
+                                })}
                             </div>
                         </div>
                     </div>
@@ -90,10 +91,10 @@ export class ResultsList extends React.Component {
         this.onQuestionSelect = this.onQuestionSelect.bind(this);
     }
 
-    getSearchQuery(){
+    getSearchQuery() {
         let searchQuery = window.location.search;
-        if(typeof searchQuery === 'string'){
-            return searchQuery.replace('?q=','').split('+').join(' ');
+        if (typeof searchQuery === 'string') {
+            return searchQuery.replace('?q=', '').split('+').join(' ');
         }
         return ''
     }
@@ -157,7 +158,7 @@ export class ResultsList extends React.Component {
                             <h3><Link to={`/search/details/${searchRequestPayLoad.query}`}> #{index + 1} {resultItem.title}</Link></h3>
                             {resultItem.sources && resultItem.sources.length > 0
                                 && <span>from <spam className="bt">{resultItem.sources[0]}</spam>  and {resultItem.sources.length} other</span>}
-                            <ImageThumbnail />
+                            <ImageThumbnail resultItem={resultItem} />
                         </div>
                     </div>)
                 })}
