@@ -28,7 +28,7 @@ class QuestionAnswer extends Component {
                     <div className="col-md-12 pb-2">
                         <div className="answers-container">
                             {this.props.answers.map((answer) => {
-                                return (<div className={true ? "answer" : "answer active-ans"}
+                                return (<div key={Math.random()} className={true ? "answer" : "answer active-ans"}
                                     onClick={() => this.props.onSelect(answer)}>
                                     <span className="ans-text" >{answer.title}</span>
                                 </div>)
@@ -53,7 +53,9 @@ class ImageThumbnail extends Component {
                 <div className="row">
                     <div className="col-md-12">
                         <div className="image-animation-conatiner ">
-                            {images.hero && <img src={images.hero} className="main-image" />}
+                            {/* {images.hero && <img src={images.hero} className="main-image" />} */}
+
+                            {images.hero && <div className="main-image" style={{ backgroundImage: `url(${images.hero})` }}></div> }
                             {images.thumbnail1 && <div className="image1" style={{ backgroundImage: `url(${images.thumbnail1})`,backgroundPosition:'center' }}></div> }
                             {images.thumbnail2 && <div className="image2" style={{ backgroundImage: `url(${images.thumbnail2})`,backgroundPosition:'center' }}></div> }
                             {images.thumbnail3 && <div className="image3" style={{ backgroundImage: `url(${images.thumbnail3})`,backgroundPosition:'center' }}></div> }
