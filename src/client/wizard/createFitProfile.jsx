@@ -54,10 +54,10 @@ class ImageThumbnail extends Component {
                     <div className="col-md-12">
                         <div className="image-animation-conatiner ">
                             {images.hero && <img src={images.hero} className="main-image" />}
-                            {images.length > 0 && <img src={images.hero} className="image1" />}
-                            {images.length > 1 && <img src={images.hero} className="image2" />}
-                            {images.length > 2 && <img src={images.hero} className="image3" />}
-                            {images.length > 3 && <img src={images.hero} className="image4" />}
+                            {images.thumbnail1 && <img src={images.thumbnail1} className="image1" />}
+                            {images.thumbnail2 && <img src={images.thumbnail2} className="image2" />}
+                            {images.thumbnail3 && <img src={images.thumbnail3} className="image3" />}
+                            {images.thumbnail4 && <img src={images.thumbnail4} className="image4" />}
                             <div className="text-container">
                                 {tags && tags.map((tag) => {
                                     return <span className="key-words" key={tag.rank}>{tag.name}</span>
