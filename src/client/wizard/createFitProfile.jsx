@@ -46,7 +46,7 @@ class QuestionAnswer extends Component {
 class ImageThumbnail extends Component {
 
     render() {
-        const { resultItem } = this.props;
+        const { resultItem, index } = this.props;
         const { images = [], tags = [] } = resultItem;
         return (
             <div>
@@ -58,10 +58,10 @@ class ImageThumbnail extends Component {
                             {images.hero && <div><div className="main-image" style={{ backgroundImage: `url(${images.hero})`,backgroundSize:'cover' }}></div>
                              <div className="main-image bg"></div></div>
                              }
-                            {images.thumbnail1 && <div className="image1" style={{ backgroundImage: `url(${images.thumbnail1})`,backgroundSize:'cover' }}></div> }
-                            {images.thumbnail2 && <div className="image2" style={{ backgroundImage: `url(${images.thumbnail2})`,backgroundSize:'cover' }}></div> }
-                            {images.thumbnail3 && <div className="image3" style={{ backgroundImage: `url(${images.thumbnail3})`,backgroundSize:'cover' }}></div> }
-                            {images.thumbnail4 && <div className="image4" style={{ backgroundImage: `url(${images.thumbnail4})`,backgroundSize:'cover' }}></div> }
+                            {images.thumbnail1 && <div id={`i${index}1`} style={{ backgroundImage: `url(${images.thumbnail1})`,backgroundSize:'cover' }}></div> }
+                            {images.thumbnail2 && <div id={`i${index}2`} style={{ backgroundImage: `url(${images.thumbnail2})`,backgroundSize:'cover' }}></div> }
+                            {images.thumbnail3 && <div id={`i${index}3`} style={{ backgroundImage: `url(${images.thumbnail3})`,backgroundSize:'cover' }}></div> }
+                            {images.thumbnail4 && <div id={`i${index}4`} style={{ backgroundImage: `url(${images.thumbnail4})`,backgroundSize:'cover' }}></div> }
                             <div className="text-container">
                                 {tags && tags.map((tag) => {
                                     return <span className="key-words" key={tag.rank}>{tag.name}</span>
@@ -162,7 +162,7 @@ export class ResultsList extends React.Component {
                             <h3><Link to={`/search/details/${searchRequestPayLoad.query}`}> #{index + 1} {resultItem.title}</Link></h3>
                             {resultItem.sources && resultItem.sources.length > 0
                                 && <span>from <spam className="bt">{resultItem.sources[0]}</spam>  and {resultItem.sources.length} other</span>}
-                            <ImageThumbnail resultItem={resultItem} />
+                            <ImageThumbnail resultItem={resultItem} index={index} />
                         </div>
                     </div>)
                 })}
