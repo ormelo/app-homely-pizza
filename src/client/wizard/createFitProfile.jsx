@@ -44,7 +44,26 @@ class QuestionAnswer extends Component {
 
 
 class ImageThumbnail extends Component {
+    handleScroll() {
+        var observer = new IntersectionObserver(function(entries) {
+                	if(entries[0].isIntersecting === true) {
+                	    console.log('Element is fully visible in screen', entries[0].target.id);
+                	    var elemId = entries[0].target.id
+                	    elemId = 'i'+elemId.substr(elemId.indexOf(elemId)+elemId.length-1,elemId.length);
+                        console.log('elemId:', elemId);
+                        document.getElementById(elemId+'1').classList.add('image1');
+                        document.getElementById(elemId+'2').classList.add('image2');
+                        document.getElementById(elemId+'3').classList.add('image3');
+                	}
 
+                }, { threshold: [1] });
+
+                observer.observe(document.querySelector(`#img-container-${this.props.index}`));
+    }
+    componentDidMount() {
+        this.handleScroll = this.handleScroll.bind(this);
+         window.addEventListener('scroll', this.handleScroll);
+    }
     render() {
         const { resultItem, index } = this.props;
         const { images = [], tags = [] } = resultItem;
@@ -52,7 +71,7 @@ class ImageThumbnail extends Component {
             <div>
                 <div className="row">
                     <div className="col-md-12">
-                        <div className="image-animation-conatiner ">
+                        <div id={`img-container-${index}`} className="image-animation-conatiner ">
                             {/* {images.hero && <img src={images.hero} className="main-image" />} */}
 
                             {images.hero && <div><div className="main-image" style={{ backgroundImage: `url(${images.hero})`,backgroundSize:'cover' }}></div>
