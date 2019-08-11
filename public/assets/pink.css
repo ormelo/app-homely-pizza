@@ -1,4 +1,4 @@
-/*You can add your won color also */
+    /*You can add your won color also */
 a {
   color: #f1505b;
 }
@@ -23,13 +23,12 @@ textarea:focus {
 }
 a.main-button,
 input[type="submit"] {
-  background: linear-gradient(180deg, #87cdfa 0%, #5c9de5 80%, #5c9de5 100%);
-    border: 0;
-    letter-spacing: 1px;
-    text-transform: none;
-    height: 46px;
-    font-size: 16px;
-    font-weight: bold;
+      background: linear-gradient(180deg, #4085e3 0%, #1a69d4 80%, #1a69d4 100%);
+      border: 0;
+      letter-spacing: 1px;
+      text-transform: none;
+      height: 46px;
+      font-size: 16px;
 }
 .slicknav_btn {
   border-color: #f1505b;

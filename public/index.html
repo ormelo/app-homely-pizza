@@ -5,14 +5,16 @@
 </style><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}
 
 .logo {
-  margin-top: 15px;
-  width: 120px
+  margin-top: 10px;
+  margin-left: -5px;
+  width: 131px;
 }
 
 @media (max-width: 599px){
 .logo {
-  margin-top: 15px;
-  width: 130px
+  margin-top: 7px;
+  margin-left: -5px;
+  width: 131px;
 }
 }
 
@@ -82,14 +84,28 @@ text-size-adjust:none;
             width: 100%;
             overflow-x: hidden;
         }
-      #contentContainer {
-        background-image: url('./assets/sbgl1.png');
-        background-repeat: repeat-x;
-        background-size: contain;
-      }
       .desktop {
         display: none;
       }
+      .hero-text {
+        box-shadow: 0px 0px 7px 1px rgba(0, 0, 0, 0.15);
+        padding: 8px 16px 20px;
+        border-radius: 6px;
+        z-index: 9999999999;
+        position: relative;
+        background: #fff;
+        margin: -4px;
+        margin-top: -46px;
+       }
+       .theme-label{
+        font-size:26px;color:#000;font-weight:bold;
+        margin-left: 4px;
+       }
+       h3.small_title.theme {
+            color: #0959c5;
+            font-weight: normal;
+            text-decoration: underline;
+        }
         .background {
             background-repeat: no-repeat;
             background-position: center;
@@ -173,6 +189,7 @@ text-size-adjust:none;
                }
                .img-table {
                     margin-top: 20px;
+                    width: 100%;sss
                 }
             }
             @media (min-width: 600px){
@@ -254,14 +271,14 @@ text-size-adjust:none;
                   display: none;
                 }
                 h1.big_title {
-                     font-size: 30px;
+                     font-size: 24px;
                     line-height: 34px;
                 }
                 h3.small_title {
                   font-size: 16px;
                   line-height: 22px;
                   color: #666;
-                  margin-top: 16px;
+                  margin-top: 10px;
                }
                .background {
                   background-image: none;
@@ -431,7 +448,7 @@ text-size-adjust:none;
     <header class="clearfix fixed-header">
         
             <!-- Start  Logo & Navigation  -->
-<div class="navbar navbar-default navbar-top">
+<div class="navbar navbar-default navbar-top" style="background: #1a69d4; min-height: 77px;">
     <div class="container">
         <div class="navbar-header">
             <!-- Stat Toggle Nav Link For Mobiles -->
@@ -441,7 +458,7 @@ text-size-adjust:none;
             </button>
             <!-- End Toggle Nav Link For Mobiles -->
             <a class="navbar-brand " href="http://www.scoosh.in" style="height: 40px;">
-                <img alt="zaphow.com" class="logo" src="./img/elogo2.png" >
+                <img alt="zaphow.com" class="logo" src="./img/logo.png" >
             </a>
         </div>
         <div class="navbar-collapse collapse">
@@ -477,18 +494,21 @@ text-size-adjust:none;
     <div id="content" class="background">
         <div class="container">
             <div class="row" style="min-height: 400px;">
-                <div class="col-sm-6 col-md-8" style="valign: middle&#39;; ">
-                    <h1 class="big_title" style="background: none;font-weight: normal;">Authentic <span id="rotatingTitleTextZ">social</span> recommendations</h1>
-                    <h3 id="desc" class="small_title" style="font-weight: normal;font-family: quicksand;margin-left:0px;">
+                <div class="col-sm-6 col-md-8" style="padding-left: 13px;padding-right: 13px; ">
+                    <div class="hero-text">
+                        <h1 class="big_title" style="background: none;font-weight: normal;">Social recommendations worth gold</h1>
+                        <h3 id="desc" class="small_title" style="font-weight: normal;font-family: quicksand;margin-left:0px;">
 
-                        epigram makes sense of social opinions to provide authentic recommendations.
+                            epigram saves you time & money by recommending what's cheapest & best.
+                        </h3>
+
+
+
+                    </div>
+                    <h3 id="rotatingTitleText" class="small_title" style="font-size:20px;font-family:quicksand;margin-left:15px;margin-top:40px;border-left:4px solid  #5b88d6;padding-left:10px;width:260px;">
+                        Safe long drive options in Bangalore?
                     </h3>
-
-
-                    <h3 class="small_title" style="font-weight: normal;font-family: quicksand;margin-left:6px;">
-                    
-                    </h3>
-                    <img class="mob-banner" src="./img/sbgmin2.png" style="margin-top: 20px;margin-bottom: 20px;" />
+                    <img class="mob-banner" src="./img/sbgmin2.png" style="top: 237px;margin-bottom: 20px;margin: 0 auto;left: 10px;right: 0;width: 87%;position: absolute;" />
                 </div>
 
                 <div class="col-sm-6 col-md-4">
@@ -532,7 +552,7 @@ text-size-adjust:none;
   </div>
 
 
-    <div id="content2">
+    <div id="content2" style="margin-top: -10px;">
 
         <div class="container" >
           <div class="row">
@@ -546,69 +566,31 @@ text-size-adjust:none;
     
     <div class="img-table">
         <div class="img-div" style="text-align: left">
-           <br> <div><span class="img-title" style="line-height: 30px">What's an epigram?</span></div>
-            <br><div style="line-height: 22px;">An epigram is a <span style="color: #000; font-weight: bold;">rationale</span> or positive sentiment telling you why you should choose a service/product.<br><br>
-            For instance, 'accurate diagnosis' is an epigram for choosing a better doctor.
+           <br> <div style="margin-bottom: 32px;"><div class="img-title hero-text" style="line-height: 30px;z-index:0;padding-bottom: 11px; ">Popular themes</div></div>
+            <div style="line-height: 22px;">
+                <div class="theme-label">Travel & Adventure</div>
+                <h3 class="small_title theme" style="font-size:20px;font-family:quicksand;margin-left:15px;margin-top:40px;border-left:4px solid  #5b88d6;padding-left:10px;width:260px;">
+                    Safe long drive options in Bangalore?
+                </h3>
+                <h3 class="small_title theme" style="font-size:20px;font-family:quicksand;margin-left:15px;margin-top:40px;border-left:4px solid  #5b88d6;padding-left:10px;width:260px;">
+                    Best places for pilot training in Bangalore?
+                </h3>
             <br><br>
 
+                <div style="line-height: 22px;">
+                    <div class="theme-label">Shopping</div>
+                    <h3 class="small_title theme" style="font-size:20px;font-family:quicksand;margin-left:15px;margin-top:40px;border-left:4px solid  #5b88d6;padding-left:10px;width:260px;">
+                        Affordable & best noise cancellation headphones?
+                    </h3>
+                    <h3 class="small_title theme" style="font-size:20px;font-family:quicksand;margin-left:15px;margin-top:40px;border-left:4px solid  #5b88d6;padding-left:10px;width:260px;">
+                        Affordable organic stores near mea?
+                    </h3>
+                    <br>
+
         </div>
 
     </div>
 
-        <div class="img-table" style="margin-top: -56px;">
-            <div class="img-div" style="text-align: left">
-                <br> <div><span class="img-title" style="line-height: 30px">Recent epigrams</span></div>
-                <br><div style="padding:20px"><img id="rotatingTitle" src="./img/epigrameg1.png"/>
-                <img id="rotatingTitle" src="./img/epigrameg2.png" style="display: none"/>
-                <img id="rotatingTitle" src="./img/epigrameg3.png" style="display: none"/>
-                <img id="rotatingTitle" src="./img/epigrameg4.png" style="display: none"/>
-            </div>
-
-            </div>
-
-        <div class="img-table" style="margin-top:-40px;">
-            <div class="img-div" style="text-align: left">
-                <div><span class="img-title" style="line-height: 30px">A leap from reviews/blogs</span></div>
-                <div style="line-height: 22px;"><br>Reviews often don't give you the full picture.</div>
-                <br><div style="line-height: 22px;">epigrams, besides being <span style="color:#000;font-weight:bold">short</span>, are highly <span style="color:#000;font-weight:bold">trustworthy</span>.
-                Behind each epigram is a multi-step verification process to eliminate fake opinions.<br><br>
-
-                <br> <div><img style="width: 270px;position:absolute;left: -24px;right:0;margin:auto;" src="img/trust.png"/></div><br><br>
-                <div style="margin-top:190px;">Each epigram is verified closely and screened by editors.</div></div>
-
-                <br>
-            </div>
-
-        </div>
-
-        <div class="img-table table-2" style="margin-top: -30px">
-            <div class="img-div">
-                <div><span class="img-title">Form opinions based on trust</span></div>
-                <br>
-                <div>While epigram relies on user opinions, it also curates and cross-verifies information across multiple sources upholding validity of every opinion. When in doubt, find recommendations on epigram.</div>
-                <br>
-                <div style="margin: 0 auto;left: 0;right: 0;width: 330px;margin-top:-20px;">
-                <img class="img-banner" src="./img/cfilters.jpg" style="width:300px" />
-                </div>
-            </div>
-
-        </div>
-
-    <div class="img-table">
-        <div class="img-div" style="margin-top:-24px;">
-            <div><span class="img-title">Few ways people use epigram </span></div>
-
-        </div>
-        <div class="img-div">
-            <ul class="veristeps" style="margin-top: -20px;">
-                <li><span>As a shopping researcher (try “best earphones for jogging”)</span></li>
-                <li><span>To find a genuine doctor (try “best eye doctors near me”)</span></li>
-                <li><span>As a stock market strategist (try “best stock picks in India in 2019”)</span></li>
-                <li><span>To discover new & interesting places in a city (try “offbeat places in Mangalore”)</span></li>
-                <li><span>Many more...</span></li>
-            </ul>
-        </div>
-    </div>
     
 </div>
 
@@ -636,7 +618,7 @@ text-size-adjust:none;
 
 
 
-                        <input type="text" style="border: 1px solid;font-size: 16px;height: 40px;" id="q" name="q" placeholder="" class="form-control" value="best stock picks for 2019" dcvalue="trusted caterers in bangalore" autocomplete="off" required="required">
+                        <input type="text" style="border: 1px solid;font-size: 16px;height: 40px;" id="q" name="q" placeholder="" class="form-control" value="best jewelry store in bangalore?" dcvalue="best jewelry store in bangalore?" autocomplete="off" required="required">
 
 
 
@@ -802,7 +784,7 @@ var interval = setInterval(function() {
 
 
 var k=0;
-var textArr = ["shopping", "travel", "doctor", "financial"];
+var textArr = ["Safe long drive options in Bangalore?", "Best places for flight training in Bangalore?", "Affordable noice cancellation headphones?", "Affordable organic stores near me?"];
 
 var interval = setInterval(function() {
     $("#rotatingTitleText").fadeOut(400, function() {
@@ -812,7 +794,7 @@ var interval = setInterval(function() {
     if(k == text.length) {
         k = 0;
     }
-}, 1000);
+}, 2000);
 
 
 
