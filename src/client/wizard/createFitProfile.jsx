@@ -104,6 +104,7 @@ export class ResultsList extends React.Component {
             searchKey: '',
             questionList: [],
             shortlistText: 0,
+            shortlistCount: 0,
             activeQuestionIndex: 0,
             searchRequestPayLoad: {
                 "query": this.getSearchQuery(),
@@ -128,7 +129,8 @@ export class ResultsList extends React.Component {
         this.setState({
             resultList: searchResults.results,
             questionList: questions.results,
-            shortlistText: searchResults.shortlistText
+            shortlistText: searchResults.shortlistText,
+            shortlistCount: searchResults.shortlistCount
         })
     }
 
@@ -165,22 +167,22 @@ export class ResultsList extends React.Component {
     }
 
     render() {
-        const { questionList, activeQuestionIndex, shortlistText, resultList, searchRequestPayLoad = [] } = this.state;
+        const { questionList, activeQuestionIndex, shortlistCount, shortlistText, resultList, searchRequestPayLoad = [] } = this.state;
         return (<div class="search-results-container">
             {questionList && questionList.length > 0 &&
                 <QuestionAnswer selectedAns={searchRequestPayLoad.questions || []} question={questionList[activeQuestionIndex].question} answers={questionList[activeQuestionIndex].responses} onSelect={this.onQuestionSelect} />}
             <div className="row">
                 <div className="col-md-12 d-flex justify-content-end">
-                    <span className="result-info">"{shortlistText}" results short listed</span>
+                    <span className="result-info">{shortlistCount}<span style={{fontWeight: 'normal', fontSize: '14px', color: '#a9a9a9'}}>{shortlistText}</span></span>
                 </div>
+                <hr className="line-shade" />
             </div>
             <div className="row">
                 {resultList.map((resultItem, index) => {
                     return (<div className="col-sm-12 col-md-4">
                         <div className="results-list">
-                            <h3><Link to={`/search/details/${searchRequestPayLoad.query}`}> #{index + 1} {resultItem.title}</Link></h3>
-                            {resultItem.sources && resultItem.sources.length > 0
-                                && <span>from <spam className="bt">{resultItem.sources[0]}</spam>  and {resultItem.sources.length} other</span>}
+                            <h3><Link to={`/search/details/${searchRequestPayLoad.query}`}>{resultItem.title}</Link></h3>
+
                             <ImageThumbnail resultItem={resultItem} index={index} />
                         </div>
                     </div>)

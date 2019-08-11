@@ -1,5 +1,6 @@
 export const searchResults ={
-    "shortlistText": "160 places",
+    "shortlistCount": 20,
+    "shortlistText": " jewellers shortlisted for you.",
     "results": [
         {
             "id": 43232364,
