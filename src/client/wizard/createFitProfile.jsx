@@ -3,7 +3,7 @@ import { render } from 'react-dom';
 import DetailView from './detailView.jsx';
 import { BrowserRouter as Router, Route, Link, withRouter } from 'react-router-dom';
 import { END_POINTS } from '../../common/constant';
-import { searchResults, questions } from '../../data-source/mockData';
+import { searchResults, questions } from '../../data-source/mockDataQnA';
 class QuestionAnswer extends Component {
 
     isSelected(selectedAns, answer) {
@@ -127,11 +127,17 @@ export class ResultsList extends React.Component {
     componentDidMount() {
         document.querySelector('.loading').style.display = 'none';
         this.setState({
+            resultType: searchResults.resultType,
             resultList: searchResults.results,
             questionList: questions.results,
             shortlistText: searchResults.shortlistText,
             shortlistCount: searchResults.shortlistCount
         })
+    }
+
+    expandResults(index) {
+       document.getElementById('res'+index).classList.add('expanded');
+       document.getElementById('res-shade-'+index).classList.add('hidden');
     }
 
     onQuestionSelect(answer) {
@@ -167,7 +173,7 @@ export class ResultsList extends React.Component {
     }
 
     render() {
-        const { questionList, activeQuestionIndex, shortlistCount, shortlistText, resultList, searchRequestPayLoad = [] } = this.state;
+        const { questionList, activeQuestionIndex, shortlistCount, shortlistText, resultList, searchRequestPayLoad = [], resultType } = this.state;
         return (<div class="search-results-container">
             {questionList && questionList.length > 0 &&
                 <QuestionAnswer selectedAns={searchRequestPayLoad.questions || []} question={questionList[activeQuestionIndex].question} answers={questionList[activeQuestionIndex].responses} onSelect={this.onQuestionSelect} />}
@@ -180,14 +186,76 @@ export class ResultsList extends React.Component {
             <div className="row">
                 {resultList.map((resultItem, index) => {
                     return (<div className="col-sm-12 col-md-4">
-                        <div className="results-list">
-                            <h3><Link to={`/search/details/${searchRequestPayLoad.query}`}>{resultItem.title}</Link></h3>
+                        <div id={`res${index}`} className="results-list">
+                            <h3><Link to={`/search/details/${searchRequestPayLoad.query}`}>{resultItem.title}</Link><span className="sub-title">{resultItem.subTitle}</span></h3>
 
-                            <ImageThumbnail resultItem={resultItem} index={index} />
+                                <ul className="qna">
+                                {resultType != 'travel' &&
+                                    resultItem.qna.map((qnaItem, index) => {
+                                        return (<li>
+                                                <input id={`qna${index}${resultItem.title.replace(/ /g,'')}`} type="radio" name="list" />
+                                                <label htmlFor={`qna${index}${resultItem.title.replace(/ /g,'')}`}>{qnaItem.question}</label><span className="qna-arrow"></span>
+                                                <div className="qna-res">
+                                                {
+                                                (qnaItem.question.indexOf('What people liked') >= 0 || qnaItem.question.indexOf('What people disliked') >= 0) &&
+                                                qnaItem.responses && qnaItem.responses.length > 0 && qnaItem.responses.map((qnaResponse, index) => {
+                                                        return (<div>
+                                                            <br/>
+                                                            <p>
+                                                            <div><b>{qnaResponse.topic.charAt(0).toUpperCase() + qnaResponse.topic.slice(1)}</b></div>
+                                                            {
+
+                                                                qnaResponse.opinions && qnaResponse.opinions.length > 0
+                                                                    && qnaResponse.opinions.map((opinion, indexOpinion) => {
+                                                                    return (
+                                                                        <div>
+                                                                            <br/>
+                                                                            <div className="quoted-text">
+                                                                                   {opinion.text.content}
+                                                                            </div>
+                                                                            <br/>
+                                                                        </div>
+                                                                    )
+                                                                })
+                                                            }
+                                                            </p>
+                                                        </div>)
+                                                })}
+
+
+
+                                                {
+                                                (qnaItem.question.indexOf('What people disliked') >= 0) &&
+                                                qnaItem.responses && qnaItem.responses.length == 0 ? <div className="qna-res"><br/><p><div className="quoted-text">No specific dislikes for {resultItem.title}.</div></p></div> : null}
+
+
+
+                                                {
+                                                qnaItem.question.indexOf('What people said') >= 0 &&
+                                                qnaItem.responses && qnaItem.responses.length > 0 && qnaItem.responses.map((qnaResponse, index) => {
+                                                        return (<div className="qna-res">
+                                                            <p>
+                                                            <br/>
+                                                            <div className="quoted-text">{qnaResponse.text.content}</div>
+
+                                                            </p>
+                                                        </div>)
+                                                })}
+                                                <br/>
+
+                                                </div>
+
+                                        </li>);
+                                    })
+                                }
+                                </ul>
                         </div>
+                        <div id={`res-shade-${index}`} className="result-shade" onClick={(e)=>{this.expandResults(index);}}/>
+                        <hr className="line-shade top"/>
                     </div>)
                 })}
             </div>
+
         </div>
         )
     }

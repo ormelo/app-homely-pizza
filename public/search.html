@@ -131,10 +131,106 @@ text-size-adjust:none;
         border-top: 1px solid #d1dcf0 !important;
         position: absolute;
        }
+       .line-shade.top {
+            width: 100vh;
+            left: -10px;
+            margin-top: 6px;
+       }
        h3.small_title.theme {
             color: #0959c5;
             font-weight: normal;
             text-decoration: underline;
+        }
+        ul.qna li input {
+          display: none;
+        }
+        ul.qna li input:not(:checked) ~ div {
+          max-height: 0px;
+          transition-delay: 0s;
+        }
+        ul.qna li input:not(:checked) ~ span {
+          top: 18px;
+          -webkit-transform: rotate(-225deg);
+                  transform: rotate(-225deg);
+        }
+        ul.qna li input:checked ~ span {
+          opacity: 1;
+        }
+
+        ul.qna {
+          list-style: none;
+          margin: 0px;
+          padding: 0px;
+          margin-top: 12px;
+          //border-left: 1px solid rgba(245, 245, 245, 0.1);
+          //border-right: 1px solid rgba(245, 245, 245, 0.1);
+        }
+        ul.qna li {
+          margin-bottom: 2px;
+          position: relative;
+          padding: 0;
+          width: 100%;
+        }
+        ul.qna li:last-child {
+          margin-bottom: 0;
+          border-bottom: 1px solid rgba(245, 245, 245, 0.1);
+        }
+
+        ul.qna li label {
+          display: block;
+          border: 1px solid #dfdfdf;
+          border-radius: 6px;
+          font-family: Quicksand;
+          padding: 10px 20px 10px 10px;
+          background: rgba(245, 245, 245, 0.1);
+          cursor: pointer;
+          font-size: 1.1em;
+          font-weight: 500;
+          letter-spacing: 0.05em;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          max-width: calc(100vw - 38px);
+        }
+        label:hover ~ span {
+          opacity: 1;
+        }
+
+        div.qna-res {
+          max-height: 300px;
+          overflow: scroll;
+          transition: max-height 500ms ease;
+          transition-delay: 0ms;
+        }
+
+        .qna-res p {
+          padding: 0px 4px 0px 6px;
+          opacity: 1;
+          text-align: left;
+          color: #4a4a4a;
+        }
+
+        .quoted-text {
+            border-left: 3px solid rgb(241, 241, 241);
+            padding-left: 12px;
+        }
+
+        .qna-arrow {
+          display: block;
+          position: absolute;
+          top: 19px;
+          right: 10px;
+          width: 7px;
+          height: 7px;
+          border-top: 2px solid #666;
+          border-right: 2px solid #666;
+          -webkit-transform: rotate(-45deg);
+                  transform: rotate(-45deg);
+          transition: -webkit-transform 500ms ease;
+          transition: transform 500ms ease;
+          transition: transform 500ms ease, -webkit-transform 500ms ease;
+          opacity: 0.3;
+          z-index: -1;
         }
         .background {
             background-repeat: no-repeat;
