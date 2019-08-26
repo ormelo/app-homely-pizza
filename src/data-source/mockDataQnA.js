@@ -1,6 +1,6 @@
 export const searchResults = {
 "shortlistCount": 20,
-"shortlistText": " jewellers shortlisted for you.",
+"shortlistText": " jewellers sorted by customer satisfaction",
 "resultType": "jewelry",
 "results": [
  {

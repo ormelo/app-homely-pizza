@@ -119,7 +119,7 @@ text-size-adjust:none;
             height: 69px;
             width: 100%;
             background: linear-gradient(180deg, #3a6fb7b8 0%, #9bbfef29 80%, #ffffff 100%);
-            z-index: -1;
+            z-index: 0;
        }
        .line-shade {
         display: block;
@@ -198,7 +198,6 @@ text-size-adjust:none;
 
         div.qna-res {
           max-height: 300px;
-          overflow: scroll;
           transition: max-height 500ms ease;
           transition-delay: 0ms;
         }
@@ -208,11 +207,13 @@ text-size-adjust:none;
           opacity: 1;
           text-align: left;
           color: #4a4a4a;
+          margin-top: 6px;
         }
 
         .quoted-text {
             border-left: 3px solid rgb(241, 241, 241);
             padding-left: 12px;
+            margin-top: 10px;
         }
 
         .qna-arrow {
@@ -835,6 +836,7 @@ ul li{
     border-radius: 6px;
     position: absolute;
     top: 32px;
+    z-index: 1;
 }
 h1 {
   font-family: 'Ubuntu', sans-serif;
@@ -2315,7 +2317,17 @@ p img.right { float: right; margin-left: 1em; }
 </head>
 <body>
 
-<div class="logo"><img class="logo-img" src="../img/logosm.png" />
+<div class="one" id="visible-block">
+    <div class="overlay"></div>
+    <div class="middle" id="visible">
+        <div class="overlay2"></div>
+        <div id="modalc" class="two">
+            ewfwfqw fdsfasd dsfsdfa dsfasdfa dfas dfas sdfadsf dfsafadsf
+        </div>
+    </div>
+</div>
+
+<div class="logo"><img class="logo-img" src="../img/logosm.png" /></div>
     <textarea type="text" id="q" name="q" placeholder="" class="form-control" autocomplete="off" required="required">Which is the best jewelry store in Bangalore</textarea>
     <img class="icon-edit" src="./img/edit.png"/>
     <i class="loading"></i>

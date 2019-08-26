@@ -113,6 +113,8 @@ export class ResultsList extends React.Component {
         }
         this.getSearchResults = this.getSearchResults.bind(this);
         this.onQuestionSelect = this.onQuestionSelect.bind(this);
+        this.openDetailModal = this.openDetailModal.bind(this);
+        this.closeDetailModal = this.closeDetailModal.bind(this);
     }
 
     getSearchQuery() {
@@ -123,8 +125,44 @@ export class ResultsList extends React.Component {
         return ''
     }
 
+    handleScroll() {
+            if(typeof window.clickedResultElemId != 'undefined') {
+                //console.log('diff: ', document.querySelector('#'+clickedResultElemId).getClientRects()[0].y);
+                //console.log('pageYOffset: ', window.pageYOffset);
+
+                /*var resultNum = window.clickedResultIndex;
+                var offsetTopVal = (window.clickedResultIndex + 1) * 270;
+                var diff = document.querySelector('#'+clickedResultElemId).getClientRects()[0].y;
+
+                var compare = pageYOffset+650;
+                console.log('compare: '+compare+', offsetTopVal: '+offsetTopVal);
+                if(offsetTopVal - compare <= 100 && offsetTopVal - compare >= -400) {
+                    console.log('show sticky');
+                } else {
+                    console.log('hide sticky');
+                }*/
+                if(typeof clickedResultElemId != 'undefined' && document.getElementById(clickedResultElemId).getClientRects()[0].top >= 400) {
+                                console.log('show sticky bar for '+clickedResultElemId);
+                              }
+            }
+            /*var observer = new IntersectionObserver(function(entries) {
+                    	if(entries[0].isIntersecting === true) {
+                    	    console.log('Element is fully visible in screen', entries[0].target.id);
+                    	    //var elemId = entries[0].target.id
+                    	    //elemId = 'i'+elemId.substr(elemId.indexOf(elemId)+elemId.length-1,elemId.length);
+                            //console.log('elemId:', elemId);
+                    	}
+
+                    }, { threshold: [1] });
+                    if(typeof window.clickedResultElemId != 'undefined') {
+                        observer.observe(document.querySelector('#'+window.clickedResultElemId+' h3'));
+                    }*/
+        }
+
 
     componentDidMount() {
+        this.handleScroll = this.handleScroll.bind(this);
+        //window.addEventListener('scroll', this.handleScroll);
         document.querySelector('.loading').style.display = 'none';
         this.setState({
             resultType: searchResults.resultType,
@@ -136,8 +174,20 @@ export class ResultsList extends React.Component {
     }
 
     expandResults(index) {
-       document.getElementById('res'+index).classList.add('expanded');
+       document.querySelectorAll('.results-list').forEach(function(elem){ elem.classList.remove('expanded');});
+       if(location.href.indexOf('#')==-1){
+            window.originalUrl = location.href;
+       }
+       //location.href = window.originalUrl + '#res-shade-'+index;
+       setTimeout(function(){document.getElementById('res'+this.i).classList.add('expanded');}.bind({i:index}),1000);
        document.getElementById('res-shade-'+index).classList.add('hidden');
+       document.querySelector('#'+'res'+index+' ul.qna li:first-child input').checked = true;
+
+
+       window.clickedResultElemId = 'res'+index;
+       window.clickedResultIndex = index+1;
+       this.openDetailModal();
+       window.scrollTo(0, 0);
     }
 
     onQuestionSelect(answer) {
@@ -171,6 +221,15 @@ export class ResultsList extends React.Component {
             .then(function (res) { return res.json(); })
             .then(function (data) { alert(JSON.stringify(data)) })
     }
+    openDetailModal() {
+      document.getElementById('visible').style.top = "0";
+      document.getElementById('visible-block').style.top = "0";
+      document.getElementById('modalc').innerHTML = document.getElementById(clickedResultElemId).innerHTML;
+    }
+    closeDetailModal() {
+      document.getElementById('visible').style.top = "-100%";
+      document.getElementById('visible-block').style.top = "-100%";
+    }
 
     render() {
         const { questionList, activeQuestionIndex, shortlistCount, shortlistText, resultList, searchRequestPayLoad = [], resultType } = this.state;
@@ -200,7 +259,6 @@ export class ResultsList extends React.Component {
                                                 (qnaItem.question.indexOf('What people liked') >= 0 || qnaItem.question.indexOf('What people disliked') >= 0) &&
                                                 qnaItem.responses && qnaItem.responses.length > 0 && qnaItem.responses.map((qnaResponse, index) => {
                                                         return (<div>
-                                                            <br/>
                                                             <p>
                                                             <div><b>{qnaResponse.topic.charAt(0).toUpperCase() + qnaResponse.topic.slice(1)}</b></div>
                                                             {
@@ -209,7 +267,6 @@ export class ResultsList extends React.Component {
                                                                     && qnaResponse.opinions.map((opinion, indexOpinion) => {
                                                                     return (
                                                                         <div>
-                                                                            <br/>
                                                                             <div className="quoted-text">
                                                                                    {opinion.text.content}
                                                                             </div>
@@ -226,7 +283,7 @@ export class ResultsList extends React.Component {
 
                                                 {
                                                 (qnaItem.question.indexOf('What people disliked') >= 0) &&
-                                                qnaItem.responses && qnaItem.responses.length == 0 ? <div className="qna-res"><br/><p><div className="quoted-text">No specific dislikes for {resultItem.title}.</div></p></div> : null}
+                                                qnaItem.responses && qnaItem.responses.length == 0 ? <div className="qna-res"><p><div className="quoted-text">No specific dislikes for {resultItem.title}.</div></p></div> : null}
 
 
 
@@ -235,7 +292,6 @@ export class ResultsList extends React.Component {
                                                 qnaItem.responses && qnaItem.responses.length > 0 && qnaItem.responses.map((qnaResponse, index) => {
                                                         return (<div className="qna-res">
                                                             <p>
-                                                            <br/>
                                                             <div className="quoted-text">{qnaResponse.text.content}</div>
 
                                                             </p>
@@ -249,6 +305,8 @@ export class ResultsList extends React.Component {
                                     })
                                 }
                                 </ul>
+
+
                         </div>
                         <div id={`res-shade-${index}`} className="result-shade" onClick={(e)=>{this.expandResults(index);}}/>
                         <hr className="line-shade top"/>

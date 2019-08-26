@@ -1,3 +1,57 @@
+.one {
+  position: fixed;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: all .1s ease-in-out;
+  -moz-transition: all .1s ease-in-out;
+  -webkit-transition: all .1s ease-in-out;
+  -ms-transition: all .1s ease-in-out;
+  z-index: 9999;
+}
+
+.overlay {
+  background: rgba(0, 0, 0, 0.01);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.overlay2 {
+  background: rgba(0, 0, 0, 0.01);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.middle {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  top: -100%;
+  transition: all .5s ease-in-out;
+  -moz-transition: all .5s ease-in-out;
+  -webkit-transition: all .5s ease-in-out;
+  -ms-transition: all .5s ease-in-out;
+}
+
+.two {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  padding: 20px;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  overflow-y: scroll;
+}
+
 .answers-container{
     overflow: auto;
     white-space: nowrap;
@@ -5,6 +59,8 @@
 }
 .question-answers-container {
     margin-top: 10px;
+    opacity: 0;
+    max-height: 40px;
 }
 .question-answers-container  .answer {
     display: inline-block;
@@ -234,7 +290,7 @@
     bottom: -5px;
     background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgb(255, 255, 255) 100%);
     left: 0px;
-    min-height: 220px;
+    min-height: 270px;
     width: 100%;
   }
   .result-shade hidden {
