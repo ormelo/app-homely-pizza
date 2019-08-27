@@ -147,14 +147,25 @@ export class ResultsList extends React.Component {
                 if(!this.checkVisible('heading'+(nextClickIndex-1)) && !this.checkVisible('res'+nextClickIndex) && !this.checkVisible('heading'+nextClickIndex)) {
                     document.getElementById('stickyHeader').innerHTML = document.getElementById('heading'+(nextClickIndex-1)).innerHTML;
                     document.getElementById('stickyHeader').style.display='inline';
+                    document.getElementById('stickyFooter').style.display='inline';
                 } else {
                     document.getElementById('stickyHeader').style.display='none';
+                    var subjectName = '';
+                    if(document.getElementById('heading'+(clickedResultIndex-1)).children[0].innerHTML.split(' ').length > 1) {
+                        subjectName = document.getElementById('heading'+(clickedResultIndex-1)).children[0].innerHTML.split(' ')[0] + ' ' + document.getElementById('heading'+(clickedResultIndex-1)).children[0].innerHTML.split(' ')[1]
+                    } else {
+                        subjectName = document.getElementById('heading'+(clickedResultIndex-1)).children[0].innerHTML.split(' ')[0];
+                    }
+                    document.getElementById('id_submit').value = 'Offers from '+subjectName;
+                        + document.getElementById('heading'+(clickedResultIndex-1)).children[0].innerHTML.split(' ')[1];
+                    document.getElementById('stickyFooter').style.display='none';
                 }
 
                 if (document.documentElement.scrollTop < 200 ||
                     document.getElementById(window.clickedResultElemId).getClientRects()[0].top > 600 ||
                     document.getElementById(window.clickedResultElemId).getClientRects()[0].top < -900) {
                     document.getElementById('stickyHeader').style.display='none';
+                    document.getElementById('stickyFooter').style.display='none';
                 }
 
 
@@ -261,6 +272,15 @@ export class ResultsList extends React.Component {
                 <hr className="line-shade" />
             </div>
             <div id="stickyHeader">
+            </div>
+            <div id="stickyFooter" className="sticky-footer">
+                <form action="/search" method="get" className="landing_page">
+                 <div id="div_id_submit" className="form-group">
+                        <div className="controls">
+                            <input type="submit" class="submit form-control" id="id_submit" value="Explore offers" />
+                        </div>
+                    </div>
+                </form>
             </div>
             <div className="row">
                 {resultList.map((resultItem, index) => {
