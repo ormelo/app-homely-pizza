@@ -113,8 +113,6 @@ export class ResultsList extends React.Component {
         }
         this.getSearchResults = this.getSearchResults.bind(this);
         this.onQuestionSelect = this.onQuestionSelect.bind(this);
-        this.openDetailModal = this.openDetailModal.bind(this);
-        this.closeDetailModal = this.closeDetailModal.bind(this);
     }
 
     getSearchQuery() {
@@ -125,10 +123,27 @@ export class ResultsList extends React.Component {
         return ''
     }
 
+    checkVisible(elmId) {
+      var rect = document.getElementById(elmId).getBoundingClientRect();
+      var viewHeight = Math.max(document.documentElement.clientHeight, window.innerHeight);
+      return !(rect.bottom < 0 || rect.top - viewHeight >= 0);
+    }
+
     handleScroll() {
             if(typeof window.clickedResultElemId != 'undefined') {
                 //console.log('diff: ', document.querySelector('#'+clickedResultElemId).getClientRects()[0].y);
                 //console.log('pageYOffset: ', window.pageYOffset);
+
+                var nextClickIndex = window.clickedResultIndex;
+                if(!this.checkVisible('heading'+(nextClickIndex-1)) && !this.checkVisible('res'+nextClickIndex) && !this.checkVisible('heading'+nextClickIndex)) {
+                    console.log('show bar');
+                    document.getElementById('stickyHeader').innerHTML = document.getElementById('heading'+(nextClickIndex-1)).innerHTML;
+                    document.getElementById('stickyHeader').style.display='inline';
+                } else {
+                    console.log('hide bar');
+                    document.getElementById('stickyHeader').style.display='none';
+                }
+
 
                 /*var resultNum = window.clickedResultIndex;
                 var offsetTopVal = (window.clickedResultIndex + 1) * 270;
@@ -141,9 +156,7 @@ export class ResultsList extends React.Component {
                 } else {
                     console.log('hide sticky');
                 }*/
-                if(typeof clickedResultElemId != 'undefined' && document.getElementById(clickedResultElemId).getClientRects()[0].top >= 400) {
-                                console.log('show sticky bar for '+clickedResultElemId);
-                              }
+
             }
             /*var observer = new IntersectionObserver(function(entries) {
                     	if(entries[0].isIntersecting === true) {
@@ -162,7 +175,7 @@ export class ResultsList extends React.Component {
 
     componentDidMount() {
         this.handleScroll = this.handleScroll.bind(this);
-        //window.addEventListener('scroll', this.handleScroll);
+        window.addEventListener('scroll', this.handleScroll);
         document.querySelector('.loading').style.display = 'none';
         this.setState({
             resultType: searchResults.resultType,
@@ -186,8 +199,8 @@ export class ResultsList extends React.Component {
 
        window.clickedResultElemId = 'res'+index;
        window.clickedResultIndex = index+1;
-       this.openDetailModal();
-       window.scrollTo(0, 0);
+
+
     }
 
     onQuestionSelect(answer) {
@@ -221,15 +234,6 @@ export class ResultsList extends React.Component {
             .then(function (res) { return res.json(); })
             .then(function (data) { alert(JSON.stringify(data)) })
     }
-    openDetailModal() {
-      document.getElementById('visible').style.top = "0";
-      document.getElementById('visible-block').style.top = "0";
-      document.getElementById('modalc').innerHTML = document.getElementById(clickedResultElemId).innerHTML;
-    }
-    closeDetailModal() {
-      document.getElementById('visible').style.top = "-100%";
-      document.getElementById('visible-block').style.top = "-100%";
-    }
 
     render() {
         const { questionList, activeQuestionIndex, shortlistCount, shortlistText, resultList, searchRequestPayLoad = [], resultType } = this.state;
@@ -242,11 +246,13 @@ export class ResultsList extends React.Component {
                 </div>
                 <hr className="line-shade" />
             </div>
+            <div id="stickyHeader">
+            </div>
             <div className="row">
                 {resultList.map((resultItem, index) => {
                     return (<div className="col-sm-12 col-md-4">
                         <div id={`res${index}`} className="results-list">
-                            <h3><Link to={`/search/details/${searchRequestPayLoad.query}`}>{resultItem.title}</Link><span className="sub-title">{resultItem.subTitle}</span></h3>
+                            <h3 id={`heading${index}`} ><Link to={`/search/details/${searchRequestPayLoad.query}`}>{resultItem.title}</Link><span className="sub-title">{resultItem.subTitle}</span></h3>
 
                                 <ul className="qna">
                                 {resultType != 'travel' &&
@@ -306,7 +312,15 @@ export class ResultsList extends React.Component {
                                 }
                                 </ul>
 
-
+                                <div className="one" id="visible-block">
+                                  <div className="overlay"></div>
+                                  <div className="middle" id="visible">
+                                    <div className="overlay2" onclick="rrr()"></div>
+                                    <div className="two">
+                                      ewfwfqw fdsfasd dsfsdfa dsfasdfa dfas dfas sdfadsf dfsafadsf
+                                    </div>
+                                  </div>
+                                </div>
                         </div>
                         <div id={`res-shade-${index}`} className="result-shade" onClick={(e)=>{this.expandResults(index);}}/>
                         <hr className="line-shade top"/>
