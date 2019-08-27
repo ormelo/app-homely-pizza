@@ -217,7 +217,7 @@ export class ResultsList extends React.Component {
             window.originalUrl = location.href;
        }
        //location.href = window.originalUrl + '#res-shade-'+index;
-       setTimeout(function(){document.getElementById('res'+this.i).classList.add('expanded');}.bind({i:index}),1000);
+       setTimeout(function(){document.getElementById('res'+this.i).classList.add('expanded');}.bind({i:index}),200);
        document.getElementById('res-shade-'+index).classList.add('hidden');
        document.querySelector('#'+'res'+index+' ul.qna li:first-child input').checked = true;
 
