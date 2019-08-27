@@ -126,7 +126,14 @@ export class ResultsList extends React.Component {
     checkVisible(elmId) {
       var rect = document.getElementById(elmId).getBoundingClientRect();
       var viewHeight = Math.max(document.documentElement.clientHeight, window.innerHeight);
-      return !(rect.bottom < 0 || rect.top - viewHeight >= 0);
+      return !(rect.bottom < 44 || rect.top - viewHeight >= 0);
+    }
+
+    isScrollingDown() {
+        var st = window.pageYOffset || document.documentElement.scrollTop;
+        var isDown = st > window.lastScrollTop;
+        window.lastScrollTop = st <= 0 ? 0 : st;
+        return isDown;
     }
 
     handleScroll() {
@@ -135,12 +142,18 @@ export class ResultsList extends React.Component {
                 //console.log('pageYOffset: ', window.pageYOffset);
 
                 var nextClickIndex = window.clickedResultIndex;
+                var scrollingDown = true;
+
                 if(!this.checkVisible('heading'+(nextClickIndex-1)) && !this.checkVisible('res'+nextClickIndex) && !this.checkVisible('heading'+nextClickIndex)) {
-                    console.log('show bar');
                     document.getElementById('stickyHeader').innerHTML = document.getElementById('heading'+(nextClickIndex-1)).innerHTML;
                     document.getElementById('stickyHeader').style.display='inline';
                 } else {
-                    console.log('hide bar');
+                    document.getElementById('stickyHeader').style.display='none';
+                }
+
+                if (document.documentElement.scrollTop < 200 ||
+                    document.getElementById(window.clickedResultElemId).getClientRects()[0].top > 600 ||
+                    document.getElementById(window.clickedResultElemId).getClientRects()[0].top < -900) {
                     document.getElementById('stickyHeader').style.display='none';
                 }
 
@@ -175,6 +188,7 @@ export class ResultsList extends React.Component {
 
     componentDidMount() {
         this.handleScroll = this.handleScroll.bind(this);
+        window.lastScrollTop = 0;
         window.addEventListener('scroll', this.handleScroll);
         document.querySelector('.loading').style.display = 'none';
         this.setState({
