@@ -136,6 +136,10 @@ export class ResultsList extends React.Component {
         return isDown;
     }
 
+    hasShowInterest() {
+        return window.positiveOpinionClickCount[clickedResultElemId] >= 1;
+    }
+
     handleScroll() {
             if(typeof window.clickedResultElemId != 'undefined') {
                 //console.log('diff: ', document.querySelector('#'+clickedResultElemId).getClientRects()[0].y);
@@ -147,7 +151,9 @@ export class ResultsList extends React.Component {
                 if(!this.checkVisible('heading'+(nextClickIndex-1)) && !this.checkVisible('res'+nextClickIndex) && !this.checkVisible('heading'+nextClickIndex)) {
                     document.getElementById('stickyHeader').innerHTML = document.getElementById('heading'+(nextClickIndex-1)).innerHTML;
                     document.getElementById('stickyHeader').style.display='inline';
-                    document.getElementById('stickyFooter').style.display='inline';
+                    if(this.hasShowInterest()) {
+                        document.getElementById('stickyFooter').style.display='inline';
+                    }
                 } else {
                     document.getElementById('stickyHeader').style.display='none';
                     var subjectName = '';
@@ -200,8 +206,10 @@ export class ResultsList extends React.Component {
     componentDidMount() {
         this.handleScroll = this.handleScroll.bind(this);
         window.lastScrollTop = 0;
+        window.positiveOpinionClickCount = new Array();
         window.addEventListener('scroll', this.handleScroll);
         document.querySelector('.loading').style.display = 'none';
+        this.opinionClick = this.opinionClick.bind(this);
         this.setState({
             resultType: searchResults.resultType,
             resultList: searchResults.results,
@@ -209,6 +217,11 @@ export class ResultsList extends React.Component {
             shortlistText: searchResults.shortlistText,
             shortlistCount: searchResults.shortlistCount
         })
+    }
+
+    opinionClick() {
+        window.positiveOpinionClickCount[clickedResultElemId] = window.positiveOpinionClickCount[clickedResultElemId] + 1;
+        this.handleScroll();
     }
 
     expandResults(index) {
@@ -224,6 +237,7 @@ export class ResultsList extends React.Component {
 
        window.clickedResultElemId = 'res'+index;
        window.clickedResultIndex = index+1;
+       window.positiveOpinionClickCount[clickedResultElemId] = 0;
 
 
     }
@@ -291,9 +305,13 @@ export class ResultsList extends React.Component {
                                 <ul className="qna">
                                 {resultType != 'travel' &&
                                     resultItem.qna.map((qnaItem, index) => {
-                                        return (<li>
+                                        return (
+                                                <div>
+                                                {index == 4 && <div className="verdict"><div className="title">Overall verdict</div><div className="detail">{resultItem.verdict}</div></div>}
+
+                                                <li>
                                                 <input id={`qna${index}${resultItem.title.replace(/ /g,'')}`} type="radio" name="list" />
-                                                <label htmlFor={`qna${index}${resultItem.title.replace(/ /g,'')}`}>{qnaItem.question}</label><span className="qna-arrow"></span>
+                                                <label htmlFor={`qna${index}${resultItem.title.replace(/ /g,'')}`} onClick={this.opinionClick}>{qnaItem.question}</label><span className="qna-arrow"></span>
                                                 <div className="qna-res">
                                                 {
                                                 (qnaItem.question.indexOf('What people liked') >= 0 || qnaItem.question.indexOf('What people disliked') >= 0) &&
@@ -341,10 +359,11 @@ export class ResultsList extends React.Component {
 
                                                 </div>
 
-                                        </li>);
+                                        </li></div>);
                                     })
                                 }
                                 </ul>
+                                <div className="secondary-btn">{resultItem.title.split(' ').length > 1 ? 'Offers from ' + resultItem.title.split(' ')[0] + ' ' + resultItem.title.split(' ')[1] : 'Offers from ' + resultItem.title.split(' ')[0]}</div>
 
                                 <div className="one" id="visible-block">
                                   <div className="overlay"></div>

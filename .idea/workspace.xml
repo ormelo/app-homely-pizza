@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2100fea9-fa34-466f-9140-289133e88515" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/public/search.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/search.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/wiz.bundle.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/wiz.bundle.min.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/client/wizard/createFitProfile.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/wizard/createFitProfile.jsx" afterDir="false" />
     </list>
@@ -19,8 +20,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/client/wizard/createFitProfile.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-18">
-              <caret line="219" column="112" selection-start-line="219" selection-start-column="112" selection-end-line="219" selection-end-column="112" />
+            <state relative-caret-position="332">
+              <caret line="361" column="51" selection-start-line="361" selection-start-column="51" selection-end-line="361" selection-end-column="51" />
             </state>
           </provider>
         </entry>
@@ -28,8 +29,13 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/data-source/mockDataQnA.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="14" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="14" />
+            <state relative-caret-position="210">
+              <caret line="919" column="11" selection-start-line="919" selection-start-column="4" selection-end-line="919" selection-end-column="11" />
+              <folding>
+                <element signature="e#0#461668#0" />
+                <element signature="e#0#461668#0" />
+                <element signature="e#0#461668#0" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -46,8 +52,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/search.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="427">
-              <caret line="268" column="20" selection-start-line="268" selection-start-column="20" selection-end-line="268" selection-end-column="20" />
+            <state relative-caret-position="569">
+              <caret line="284" column="12" selection-start-line="284" selection-start-column="12" selection-end-line="284" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -134,12 +140,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>closeDetailModal</find>
-      <find>openDetailModal</find>
-      <find>expandResults</find>
-      <find>closeDe</find>
-      <find>question-answers-container</find>
-      <find>scroll</find>
       <find>blue-g</find>
       <find>ewfwfqw</find>
       <find>openDe</find>
@@ -152,7 +152,6 @@
       <find>.question-answers-container</find>
       <find>blue</find>
       <find>checkVisible</find>
-      <find>handleScroll</find>
       <find>handleSc</find>
       <find>qna</find>
       <find>lastScrollTop</find>
@@ -163,6 +162,13 @@
       <find>sticky-footer</find>
       <find>blue-</find>
       <find>stickyHeader</find>
+      <find>positiveOpinionClickCount</find>
+      <find>onQuestionSe</find>
+      <find>window.positiveOpinionClickCount</find>
+      <find>posi</find>
+      <find>handleScroll</find>
+      <find>shortlisted</find>
+      <find>.split(' ')</find>
       <find>qna-arrow</find>
     </findStrings>
   </component>
@@ -349,13 +355,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/data-source/mockDataQnA.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="14" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/assets/mystyles.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="215">
@@ -402,17 +401,29 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/data-source/mockDataQnA.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="919" column="11" selection-start-line="919" selection-start-column="4" selection-end-line="919" selection-end-column="11" />
+          <folding>
+            <element signature="e#0#461668#0" />
+            <element signature="e#0#461668#0" />
+            <element signature="e#0#461668#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/public/search.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="427">
-          <caret line="268" column="20" selection-start-line="268" selection-start-column="20" selection-end-line="268" selection-end-column="20" />
+        <state relative-caret-position="569">
+          <caret line="284" column="12" selection-start-line="284" selection-start-column="12" selection-end-line="284" selection-end-column="12" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/client/wizard/createFitProfile.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-18">
-          <caret line="219" column="112" selection-start-line="219" selection-start-column="112" selection-end-line="219" selection-end-column="112" />
+        <state relative-caret-position="332">
+          <caret line="361" column="51" selection-start-line="361" selection-start-column="51" selection-end-line="361" selection-end-column="51" />
         </state>
       </provider>
     </entry>
