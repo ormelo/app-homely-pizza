@@ -148,6 +148,7 @@ export class ResultsList extends React.Component {
                 var nextClickIndex = window.clickedResultIndex;
                 var scrollingDown = true;
 
+
                 if(!this.checkVisible('heading'+(nextClickIndex-1)) && !this.checkVisible('res'+nextClickIndex) && !this.checkVisible('heading'+nextClickIndex)) {
                     document.getElementById('stickyHeader').innerHTML = document.getElementById('heading'+(nextClickIndex-1)).innerHTML;
                     document.getElementById('stickyHeader').style.display='inline';
@@ -167,9 +168,13 @@ export class ResultsList extends React.Component {
                     document.getElementById('stickyFooter').style.display='none';
                 }
 
+                console.log('Cond 1: ', document.documentElement.scrollTop < 200);
+                console.log('Cond 2: ', document.getElementById(window.clickedResultElemId).getClientRects()[0].top > 600);
+                console.log('Cond 3: ', document.getElementById(window.clickedResultElemId).getClientRects()[0].top < -2000);
+
                 if (document.documentElement.scrollTop < 200 ||
                     document.getElementById(window.clickedResultElemId).getClientRects()[0].top > 600 ||
-                    document.getElementById(window.clickedResultElemId).getClientRects()[0].top < -900) {
+                    document.getElementById(window.clickedResultElemId).getClientRects()[0].top < -2000) {
                     document.getElementById('stickyHeader').style.display='none';
                     document.getElementById('stickyFooter').style.display='none';
                 }
@@ -357,12 +362,14 @@ export class ResultsList extends React.Component {
                                                 })}
                                                 <br/>
 
+
                                                 </div>
 
                                         </li></div>);
                                     })
                                 }
                                 </ul>
+
                                 <div className="secondary-btn">{resultItem.title.split(' ').length > 1 ? 'Offers from ' + resultItem.title.split(' ')[0] + ' ' + resultItem.title.split(' ')[1] : 'Offers from ' + resultItem.title.split(' ')[0]}</div>
 
                                 <div className="one" id="visible-block">
