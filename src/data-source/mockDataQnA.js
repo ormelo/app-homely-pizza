@@ -197,7 +197,7 @@ export const searchResults = {
        ]
      },
      {
-       "name": "designs",
+           "name": "designs",
        "sentiment": "positive",
        "weightedScore": 1.0499999999999998,
        "salience": 0.052396722,
@@ -946,7 +946,7 @@ export const searchResults = {
        ]
      },
      {
-       "name": "collections",
+           "name": "collections",
        "sentiment": "positive",
        "weightedScore": 1.35,
        "salience": 0.239061,
@@ -1324,7 +1324,7 @@ export const searchResults = {
        ]
      },
      {
-       "name": "suggestion",
+           "name": "suggestion",
        "sentiment": "positive",
        "weightedScore": 0,
        "salience": 0.033039905,
@@ -2063,7 +2063,7 @@ export const searchResults = {
        ]
      },
      {
-       "name": "jewelry",
+           "name": "jewelry",
        "sentiment": "positive",
        "weightedScore": 1.2000000000000002,
        "salience": 0.10086616,
