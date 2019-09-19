@@ -67,6 +67,10 @@ var pages = [];
       pages.search = data;
     });
 
+    fs.readFile("public/guide.html", "utf8", function(err, data) {
+          pages.guide = data;
+        });
+
   fs.readFile("public/products.html", "utf8", function(err, data) {
     pages.products = data;
   });
@@ -791,7 +795,7 @@ app.post('/submitGetQuote', function(req, res) {
 });
 
 app.get("/search", function(request, response) {
-  response.sendFile(path.resolve(__dirname, 'public', 'search.html'));
+  response.sendFile(path.resolve(__dirname, 'public', 'guide.html'));
 });
 
 app.post('/submitMealType', function(req, res) {

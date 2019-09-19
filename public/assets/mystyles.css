@@ -56,9 +56,13 @@
     height: 45px;
 }
 .question-answers-container {
-    margin-top: 24px;
-    opacity: 0;
+    margin-top: 42px;
+    opacity: 1;
     max-height: 40px;
+    position: fixed;
+    bottom: 100px;
+    background: #fff;
+    z-index: 1;
 }
 .question-answers-container  .answer {
     display: inline-block;
@@ -233,7 +237,7 @@
   } */
 
   .question-answers-container {
-    overflow: hidden;
+    //overflow: hidden;
   }
   .question-answers-container .question{
     animation: slide-down 0.6s;

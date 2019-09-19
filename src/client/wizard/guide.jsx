@@ -95,6 +95,75 @@ class ImageThumbnail extends Component {
 }
 
 
+class Guide extends React.Component {
+
+    constructor() {
+        super();
+        this.state = {
+        };
+    }
+
+    componentDidMount() {
+        window.addEventListener('scroll', this.handleScroll);
+    }
+
+    handleScroll() {
+        if(window.scrollY == 0) {
+            document.querySelector('.logo').style.borderBottom = '0px solid';
+        } else {
+            document.querySelector('.logo').style.borderBottom = '1px solid #eeeeee';
+        }
+        window.removeEventListener('scroll', this.handleScroll);
+    }
+
+    render() {
+            const { resultList } = this.state;
+            return (<div>
+
+            <div className="header">Picking the best gold jeweller in Bangalore - comparison & buying guide</div>
+                <div className="main">
+                    <div>
+                        <img src="./img/guide-m.jpg" style={{top: '170px'}}/>
+                        <img className="main-icons" src="./img/jewel_icons.png" style={{width: '140px'}}/>
+                        <img className="main-icons" src="./img/icon_bag.png" style={{top: '260px', width: '94px'}}/>
+                    </div>
+                    <div className="overview">Results from analyzing 1856 opinions from more than 12 authentic sources.</div>
+                    <hr className="line" />
+                    <hr className="line thick" />
+                    <div className="section">
+                        <div className="numeral">01</div>
+                        <div className="post-heading">
+                            <div className="title"><span className="uline">Things to consider</span> when buying gold jewellery</div>
+                            <div className="info">
+                                <div className="sub-heading">Cost per gram</div>
+                                <div className="para">
+                                    The first thing you need to do before you buy gold is find out its current price per gram.<br/><br/>
+                                    Remember that gold prices can vary at different showrooms. This is because they come from different associations of gold .
+                                </div>
+                                <br/>
+                                <div className="sub-heading">Purity</div>
+                                <div className="para">
+                                    Gold is available in different levels of purity, and this can affect gold price.
+                                    <br/><br/>
+                                    For instance, 22k gold is 91.6% gold as it contains 22 parts gold and 2 parts of other metal. Likewise, 18k gold  18 parts of gold while other metals make up the other 6 parts.
+                                </div>
+                                <br/>
+                                <div className="sub-heading">Genuine Certification</div>
+                                <div className="para">
+                                    Gold that does not carry certification by BIS (Bureau of Indian Standard) may not be the real deal. According to The Quint, less than one in every three pieces of jewelry sold in India for quality and purity i.e., hallmarked.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>);
+
+    }
+}
+
+
 export class ResultsList extends React.Component {
 
     constructor() {
@@ -400,7 +469,7 @@ render(<Router>
     <div>
         <Route path="/search" render={() => (
             <div className="results">
-                    <Route exact path="/search" component={ResultsList} />
+                    <Route exact path="/search" component={Guide} />
                 <Route exact path="/search/details/:searchQuery" component={QuizWithRouter} />
             </div>)} />
     </div>
