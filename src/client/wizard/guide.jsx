@@ -155,6 +155,30 @@ class Guide extends React.Component {
                             </div>
                         </div>
                     </div>
+                    <br/>
+                    <div className="section">
+                        <div className="numeral">02</div>
+                        <div className="post-heading">
+                            <div className="title">What <span className="uline">other satisfied customers</span> considered:</div>
+                            <div className="info">
+                                <div className="sub-heading">Making Charges</div>
+                                <div className="para">
+                                    The first thing you need to do before you buy gold is find out its current price per gram.<br/><br/>
+                                </div>
+                                <br/>
+                                <div className="sub-heading">Collections</div>
+                                <div className="para">
+                                    Gold is available in different levels of purity, and this can affect gold price.
+                                    <br/>
+                                </div>
+                                <br/>
+                                <div className="sub-heading">Designs</div>
+                                <div className="para">
+                                    Gold that does not carry certification by BIS (Bureau of Indian Standard) may not be the real deal. According to The Quint, less than one in every three pieces of jewelry sold in India for quality and purity i.e., hallmarked.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
 
