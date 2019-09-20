@@ -200,7 +200,7 @@ class Guide extends React.Component {
                                 <div style={{fontSize: '12px', color: '#ababab'}}><a style={{color:'#646262'}} href="https://www.google.com/maps/contrib/108943788022614341397/reviews?hl=en-IN&sa=X&ved=2ahUKEwjlhqKL3t7kAhUJ4nMBHeT6BZsQvvQBegQIARAo">Suresh</a>, few months ago on <img className="logo-img" src="./img/google_logo.png"/></div>
                                 <hr class="line"/>
                             </div>
-                            <div className="para" style={{marginTop: '0px'}}>Now that you've researched the best way to pick the right jeweller, find out which jeweller is right for you.</div>
+                            <div className="para" style={{marginTop: '0px'}}>Now that you've researched the essential aspects to pick the right jeweller, find out which jeweller is right for you.</div>
                             <br/><br/>
                             <div className="scroll-arrow">
                                 <span/><span/><span/>
