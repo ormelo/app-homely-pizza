@@ -100,12 +100,54 @@ class Guide extends React.Component {
     constructor() {
         super();
         this.state = {
+            questionList: questions.results,
+            activeQuestionIndex: 0,
+            searchRequestPayLoad: {
+                "query": this.getSearchQuery(),
+                "questions": []
+            },
+            displayQuestions: false
         };
+        this.onQuestionSelect = this.onQuestionSelect.bind(this);
+        this.handleRecommenderClick = this.handleRecommenderClick.bind(this);
     }
 
     componentDidMount() {
         window.addEventListener('scroll', this.handleScroll);
+        window.onRecommenderClick = this.handleRecommenderClick;
     }
+
+    handleRecommenderClick() {
+        document.querySelector('#id_submit').style.visibility = 'hidden';
+        document.querySelector('.recommender-body').style.visibility = 'hidden';
+        this.setState({displayQuestions: true});
+    }
+
+    getSearchQuery() {
+            let searchQuery = window.location.search;
+            if (typeof searchQuery === 'string') {
+                return searchQuery.replace('?q=', '').split('+').join(' ');
+            }
+            return ''
+        }
+
+    onQuestionSelect(answer) {
+            let { activeQuestionIndex, questionList, searchRequestPayLoad } = this.state;
+            searchRequestPayLoad.questions.push({
+                id: questionList[activeQuestionIndex].id,
+                responseId: answer.id
+            })
+            let nextIndex = activeQuestionIndex + 1;
+            if (questionList.length > nextIndex) {
+                this.setState({
+                    activeQuestionIndex: nextIndex,
+                    searchRequestPayLoad: searchRequestPayLoad
+                })
+            }
+            if(activeQuestionIndex == 3) {
+
+            }
+        }
 
     handleScroll() {
         if(window.scrollY == 0) {
@@ -124,7 +166,7 @@ class Guide extends React.Component {
     }
 
     render() {
-            const { resultList } = this.state;
+            const { questionList, activeQuestionIndex, searchRequestPayLoad = [], displayQuestions } = this.state;
             return (<div>
 
             <div className="header">Picking the best gold jeweller in Bangalore - comparison & buying guide</div>
@@ -210,6 +252,10 @@ class Guide extends React.Component {
                         </div>
                     </div>
                 </div>
+
+
+                {displayQuestions && questionList && questionList.length > 0 &&
+                 <QuestionAnswer selectedAns={searchRequestPayLoad.questions || []} question={questionList[activeQuestionIndex].question} answers={questionList[activeQuestionIndex].responses} onSelect={this.onQuestionSelect} />}
 
 
             </div>);

@@ -2,8 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2100fea9-fa34-466f-9140-289133e88515" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/mystyles.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/mystyles.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/guide.bundle.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/guide.bundle.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/guide.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/guide.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/wiz.bundle.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/wiz.bundle.min.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/client/wizard/guide.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/wizard/guide.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data-source/mockDataQnA.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data-source/mockDataQnA.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,18 +22,19 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/guide.html">
+        <entry file="file://$PROJECT_DIR$/src/data-source/mockDataQnA.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="303">
-              <caret line="1771" column="21" lean-forward="true" selection-start-line="1771" selection-start-column="21" selection-end-line="1771" selection-end-column="21" />
-              <folding>
-                <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="649">
+              <caret line="15160" column="7" lean-forward="true" selection-start-line="15160" selection-start-column="7" selection-end-line="15160" selection-end-column="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/data-source/mockData.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="2" column="23" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -67,11 +73,36 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/assets/mystyles.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="196">
+              <caret line="80" column="40" selection-start-line="80" selection-start-column="40" selection-end-line="80" selection-end-column="40" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/client/wizard/guide.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="650">
-              <caret line="200" column="98" selection-start-line="200" selection-start-column="98" selection-end-line="200" selection-end-column="98" />
+            <state relative-caret-position="636">
+              <caret line="147" column="16" selection-start-line="147" selection-start-column="16" selection-end-line="147" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/guide.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="243">
+              <caret line="2029" column="69" selection-start-line="2029" selection-start-column="69" selection-end-line="2029" selection-end-column="69" />
+              <folding>
+                <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -80,7 +111,7 @@
         <entry file="file://$PROJECT_DIR$/src/client/wizard/createFitProfile.jsx">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="310">
-              <caret line="285" column="222" selection-start-line="285" selection-start-column="206" selection-end-line="285" selection-end-column="222" />
+              <caret line="109" column="44" selection-start-line="109" selection-start-column="30" selection-end-line="109" selection-end-column="44" />
             </state>
           </provider>
         </entry>
@@ -89,36 +120,36 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>guide-m</find>
-      <find>.main</find>
-      <find>sub-heading</find>
-      <find>.logo</find>
-      <find>logos.jp</find>
-      <find>this.handleScroll = this.handleScroll.bind(this);</find>
-      <find>handleScroll</find>
-      <find>question</find>
-      <find>QuestionAnswer</find>
-      <find>Guide</find>
-      <find>Guide</find>
-      <find>getQuestionList</find>
-      <find>questionList</find>
-      <find>searchRequestPayLoad</find>
-      <find>what other</find>
       <find>satu</find>
       <find>considered</find>
       <find>.sub-h</find>
       <find>MAKINF C</find>
       <find>satura</find>
       <find>handleS</find>
-      <find>onQuestionSelect</find>
       <find>recomm</find>
       <find>ease</find>
-      <find>guide</find>
       <find>.header</find>
       <find>.recom</find>
-      <find>.logo .logo-img</find>
-      <find>.logo-img</find>
       <find>.logo .logo-img {</find>
+      <find>.logo .logo-img</find>
+      <find>onQuestionSelect</find>
+      <find>QuestionAnswer</find>
+      <find>searchRequestPayLoad</find>
+      <find>questionList: questions.results</find>
+      <find>questionList</find>
+      <find>selectedAns</find>
+      <find>activeQuestionIndex</find>
+      <find>question</find>
+      <find>recommend</find>
+      <find>getSearchQuery</find>
+      <find>.logo-img</find>
+      <find>.question</find>
+      <find>.question-answers-container</find>
+      <find>guide</find>
+      <find>onRecommenderClick</find>
+      <find>.answer</find>
+      <find>guide</find>
+      <find>questions</find>
     </findStrings>
     <replaceStrings>
       <replace>./img/anim1/</replace>
@@ -132,16 +163,16 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/data-source/mockData.js" />
-        <option value="$PROJECT_DIR$/src/data-source/mockDataQnA.js" />
         <option value="$PROJECT_DIR$/public/assets/main.min.css" />
         <option value="$PROJECT_DIR$/public/assets/pink.css" />
         <option value="$PROJECT_DIR$/public/index.html" />
         <option value="$PROJECT_DIR$/src/client/wizard/createFitProfile.jsx" />
         <option value="$PROJECT_DIR$/webpack.config.js" />
         <option value="$PROJECT_DIR$/index.js" />
-        <option value="$PROJECT_DIR$/public/assets/mystyles.css" />
         <option value="$PROJECT_DIR$/public/search.html" />
+        <option value="$PROJECT_DIR$/src/data-source/mockDataQnA.js" />
         <option value="$PROJECT_DIR$/public/guide.html" />
+        <option value="$PROJECT_DIR$/public/assets/mystyles.css" />
         <option value="$PROJECT_DIR$/src/client/wizard/guide.jsx" />
       </list>
     </option>
@@ -164,6 +195,17 @@
             <path>
               <item name="epigram-web" type="b2602c69:ProjectViewProjectNode" />
               <item name="epigram-web" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="epigram-web" type="b2602c69:ProjectViewProjectNode" />
+              <item name="epigram-web" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="epigram-web" type="b2602c69:ProjectViewProjectNode" />
+              <item name="epigram-web" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="epigram-web" type="b2602c69:ProjectViewProjectNode" />
@@ -274,13 +316,6 @@
     <entry file="file://$PROJECT_DIR$/public/icon512.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/data-source/mockData.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="23" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -325,22 +360,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/data-source/mockDataQnA.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-8102">
-          <caret line="426" column="30" selection-start-line="426" selection-start-column="21" selection-end-line="426" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/client/wizard/modalView.jsx">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/mystyles.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="316">
-          <caret line="58" column="21" lean-forward="true" selection-start-line="58" selection-start-column="21" selection-end-line="58" selection-end-column="21" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/webpack.config.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -366,7 +387,7 @@
     <entry file="file://$PROJECT_DIR$/src/client/wizard/createFitProfile.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="310">
-          <caret line="285" column="222" selection-start-line="285" selection-start-column="206" selection-end-line="285" selection-end-column="222" />
+          <caret line="109" column="44" selection-start-line="109" selection-start-column="30" selection-end-line="109" selection-end-column="44" />
         </state>
       </provider>
     </entry>
@@ -402,13 +423,19 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/data-source/mockData.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="23" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/public/guide.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="303">
-          <caret line="1771" column="21" lean-forward="true" selection-start-line="1771" selection-start-column="21" selection-end-line="1771" selection-end-column="21" />
+        <state relative-caret-position="243">
+          <caret line="2029" column="69" selection-start-line="2029" selection-start-column="69" selection-end-line="2029" selection-end-column="69" />
           <folding>
             <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#img#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -417,10 +444,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/mystyles.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="80" column="40" selection-start-line="80" selection-start-column="40" selection-end-line="80" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/data-source/mockDataQnA.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="649">
+          <caret line="15160" column="7" lean-forward="true" selection-start-line="15160" selection-start-column="7" selection-end-line="15160" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/client/wizard/guide.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="650">
-          <caret line="200" column="98" selection-start-line="200" selection-start-column="98" selection-end-line="200" selection-end-column="98" />
+        <state relative-caret-position="636">
+          <caret line="147" column="16" selection-start-line="147" selection-start-column="16" selection-end-line="147" selection-end-column="16" />
         </state>
       </provider>
     </entry>

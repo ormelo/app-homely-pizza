@@ -15067,28 +15067,28 @@ export const questions = {
     "results": [
      {
        "questionId": 2,
-       "question": "Sort jewellers based on lowest making charges?",
+       "question": "What describes your jewellery style?",
        "responses": [
          {
            "id": 7,
-           "title": "Yes",
+           "title": "High-fashion",
            "type": "Button"
          },
          {
            "id": 8,
-           "title": "No",
+           "title": "Modern",
            "type": "Button"
          },
          {
            "id": 9,
-           "title": "Skip",
+           "title": "Traditional",
            "type": "Button"
          }
        ]
      },
      {
        "questionId": 1,
-       "question": "What type of jewelry are you looking for?",
+       "question": "What product are you considering to shop?",
        "responses": [
          {
            "id": 1,
@@ -15124,25 +15124,41 @@ export const questions = {
      },
      {
        "questionId": 3,
-       "question": "Filter out jewellers based on history of consumer complaints?",
+       "question": "Which category are you looking at?",
        "responses": [
          {
            "id": 10,
-           "title": "Yes",
+           "title": "Gold",
            "type": "Button"
          },
          {
            "id": 11,
-           "title": "No",
+           "title": "Platinum",
            "type": "Button"
          },
          {
            "id": 12,
-           "title": "Skip",
+           "title": "Silver",
            "type": "Button"
          }
        ]
-     }
+     },
+     {
+        "questionId": 4,
+        "question": "Do you wish to add 'low making charges' as shortlisting criteria?",
+        "responses": [
+          {
+            "id": 13,
+            "title": "Yes",
+            "type": "Button"
+          },
+          {
+            "id": 14,
+            "title": "No",
+            "type": "Button"
+          }
+        ]
+      }
     ]
    }
 
