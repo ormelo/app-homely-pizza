@@ -104,11 +104,16 @@ class Picks extends React.Component {
         };
         console.log('picks: ', picks);
         this.handleRecommenderClick = this.handleRecommenderClick.bind(this);
+        this.redirect = this.redirect.bind(this);
     }
 
     componentDidMount() {
         window.addEventListener('scroll', this.handleScroll);
         window.onRecommenderClick = this.handleRecommenderClick;
+    }
+
+    redirect(link) {
+        location.href = link;
     }
 
     handleRecommenderClick() {
@@ -148,10 +153,30 @@ class Picks extends React.Component {
                             {index == 0 ? <div className="badge"><img src="./img/trending.png"/><span>Trending</span></div> : null}
                             <div className="section-top">
                                 <div className="left"><div className="card light"><img src={item.mainImage}/></div></div>
-                                <div className="right"><div className="usp">Unique selling points:</div></div>
+                                <div className="right"><div className="usp-title">Unique selling points:</div>
+                                    <div className="usp">
+                                    {item.usp && item.usp.map((uspItem, uspIndex) => {
+                                        let commaStr = "";
+                                        commaStr = uspIndex > 0 & uspIndex < item.usp.length ? ", " : "";
+
+                                        if(uspItem.special) {
+
+                                         return <span><span>{commaStr}</span><span className="uline">{uspItem.name}</span></span>
+
+                                         } else {
+
+                                         return <span><span>{commaStr}</span><span>{ uspItem.name}</span></span>
+
+                                         }
+                                    })
+                                    }
+                                    </div>
+                                </div>
                             </div>
                             <hr className="line dashed"/>
                             <div className="section-bottom">
+                                <div className="rec-title">Recommended for:</div>
+                                <input type="submit" className="submit form-control" value="Learn more" onClick={(e)=>{this.redirect(item.link)}} />
                             </div>
                         </div>)
                         })

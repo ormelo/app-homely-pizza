@@ -2,11 +2,14 @@
 export const picks = {"results":[
      {
         "name": "Melorra",
-        "mainImage": "./img/picks/main/melorra.png"
+        "mainImage": "./img/picks/main/melorra.png",
+        "usp":[{"name":"Elegant design", "special": false}, {"name":"Low making charges", "special": true}, {"name":"Easy return", "special": false}],
+        "link": "https://www.melorra.com/jewellery/?utm_source=gc&utm_medium=gpc032&utm_campaign=whatsapp"
      },
      {
          "name": "CaratLane",
-         "mainImage": "./img/picks/main/caratlane.png"
+         "mainImage": "./img/picks/main/caratlane.png",
+         "usp":[{"name":"Elegant design", "special": false}, {"name":"Low making charges", "special": true}, {"name":"Easy return", "special": false}]
       }
     ]};
 
