@@ -17,11 +17,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/guide.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="318">
-              <caret line="1679" column="46" selection-start-line="1679" selection-start-column="46" selection-end-line="1679" selection-end-column="46" />
+            <state relative-caret-position="303">
+              <caret line="1771" column="21" lean-forward="true" selection-start-line="1771" selection-start-column="21" selection-end-line="1771" selection-end-column="21" />
+              <folding>
+                <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -29,7 +37,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="312">
+            <state relative-caret-position="570">
               <caret line="29" column="1" selection-start-line="29" selection-start-column="1" selection-end-line="29" selection-end-column="1" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -60,11 +68,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/client/wizard/guide.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="633">
-              <caret line="171" column="41" selection-start-line="171" selection-start-column="41" selection-end-line="171" selection-end-column="41" />
+            <state relative-caret-position="350">
+              <caret line="202" column="177" selection-start-line="202" selection-start-column="177" selection-end-line="202" selection-end-column="177" />
             </state>
           </provider>
         </entry>
@@ -82,27 +90,13 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>&lt;tit</find>
-      <find>guide</find>
-      <find>.min.j</find>
-      <find>loading</find>
-      <find>.loading</find>
-      <find>hello</find>
-      <find>.logo .logo-img</find>
-      <find>heighr</find>
-      <find>min-heigh</find>
-      <find>height:</find>
-      <find>.uline</find>
       <find>guide-m</find>
       <find>.main</find>
       <find>sub-heading</find>
       <find>.logo</find>
       <find>logos.jp</find>
-      <find>handleS</find>
       <find>this.handleScroll = this.handleScroll.bind(this);</find>
       <find>handleScroll</find>
-      <find>guide</find>
-      <find>.header</find>
       <find>question</find>
       <find>QuestionAnswer</find>
       <find>Guide</find>
@@ -110,8 +104,22 @@
       <find>getQuestionList</find>
       <find>questionList</find>
       <find>searchRequestPayLoad</find>
-      <find>onQuestionSelect</find>
+      <find>what other</find>
       <find>satu</find>
+      <find>considered</find>
+      <find>.sub-h</find>
+      <find>MAKINF C</find>
+      <find>satura</find>
+      <find>handleS</find>
+      <find>onQuestionSelect</find>
+      <find>recomm</find>
+      <find>ease</find>
+      <find>guide</find>
+      <find>.header</find>
+      <find>.recom</find>
+      <find>.logo .logo-img</find>
+      <find>.logo-img</find>
+      <find>.logo .logo-img {</find>
     </findStrings>
     <replaceStrings>
       <replace>./img/anim1/</replace>
@@ -134,8 +142,8 @@
         <option value="$PROJECT_DIR$/index.js" />
         <option value="$PROJECT_DIR$/public/assets/mystyles.css" />
         <option value="$PROJECT_DIR$/public/search.html" />
-        <option value="$PROJECT_DIR$/public/guide.html" />
         <option value="$PROJECT_DIR$/src/client/wizard/guide.jsx" />
+        <option value="$PROJECT_DIR$/public/guide.html" />
       </list>
     </option>
   </component>
@@ -356,9 +364,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/wizard/createFitProfile.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="310">
+          <caret line="285" column="222" selection-start-line="285" selection-start-column="206" selection-end-line="285" selection-end-column="222" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/wizard/guide.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="202" column="177" selection-start-line="202" selection-start-column="177" selection-end-line="202" selection-end-column="177" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/public/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
+        <state relative-caret-position="570">
           <caret line="29" column="1" selection-start-line="29" selection-start-column="1" selection-end-line="29" selection-end-column="1" />
           <folding>
             <element signature="n#style#0;n#div#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -388,24 +410,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/client/wizard/createFitProfile.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="310">
-          <caret line="285" column="222" selection-start-line="285" selection-start-column="206" selection-end-line="285" selection-end-column="222" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/guide.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="318">
-          <caret line="1679" column="46" selection-start-line="1679" selection-start-column="46" selection-end-line="1679" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/client/wizard/guide.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="633">
-          <caret line="171" column="41" selection-start-line="171" selection-start-column="41" selection-end-line="171" selection-end-column="41" />
+        <state relative-caret-position="303">
+          <caret line="1771" column="21" lean-forward="true" selection-start-line="1771" selection-start-column="21" selection-end-line="1771" selection-end-column="21" />
+          <folding>
+            <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

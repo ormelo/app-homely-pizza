@@ -49,13 +49,77 @@
 .para {
     font-size: 16px;
     margin-top: 20px;
+    display: inline-table;
 }
 
 .sub-heading {
-    color: #e07a6d;
+    color: #ec493d;
     font-size: 18px;
     font-weight: bold;
     margin-top: 20px;
+}
+
+.quote {
+    display: table-cell;
+}
+
+.quote-text {
+    display: table-cell;
+    width: 230px;
+    vertical-align: middle;
+    padding-left: 11px;
+}
+
+.para .quote img {
+    width: 68px;
+}
+
+.logo-img {
+    display: inline-block;
+    width: 72px;
+    margin-top: -4px;
+}
+
+.quote-text {
+    display: table-cell;
+    width: 230px;
+    vertical-align: middle;
+    padding-left: 11px;
+}
+
+.scroll-arrow{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.scroll-arrow span{
+    display: block;
+    width: 18px;
+    height: 18px;
+    border-bottom: 5px solid #a6a4a4;
+    border-right: 5px solid #a6a4a4;
+    transform: rotate(45deg);
+    margin: -2px;
+    animation: animate 2s infinite;
+}
+.scroll-arrow span:nth-child(2){
+    animation-delay: -0.2s;
+}
+.scroll-arrow span:nth-child(3){
+    animation-delay: -0.4s;
+}
+@keyframes animate {
+    0%{
+        opacity: 0;
+        transform: rotate(45deg) translate(-20px,-20px);
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        transform: rotate(45deg) translate(20px,20px);
+    }
 }
 
 .uline {
@@ -1681,13 +1745,33 @@ p img.right { float: right; margin-left: 1em; }
         background-color: rgba(255,255,255,0.7);
         //border-bottom: 1px solid #eeeeee;
     }
+    .recommender {
+        opacity: 0;
+        width: 100%;
+        min-height: 0px;
+        margin: 0 auto;
+        top: 0px;
+        position: fixed;
+        z-index: 1;
+        left: 0px;
+        max-height: 90px;
+        -webkit-backdrop-filter: saturate(180%) blur(8px);
+        backdrop-filter: saturate(180%) blur(8px);
+        background-color: rgba(255,255,255,0.7);
+        //border-bottom: 1px solid #eeeeee;
+        border-top: 1px solid #eeeeee;
+        position: fixed;
+        bottom: 0px;
+        top: auto;
+        transition: all 0.8s linear;
+    }
     .logo img {
         width: 40px;
         margin-top: -3px;
     }
     .logo .logo-img {
         width: 30px;
-        margin-left: 14px;
+        margin-left: 3px;
         margin-top: 22px;
     }
     .headline {
@@ -1942,6 +2026,13 @@ p img.right { float: right; margin-left: 1em; }
 <body>
 
 <div class="logo"><img class="logo-img" src="../img/logos.png" /></div>
+<div class="logo recommender" style="opacity: 0; min-height: 220px;">
+    <img class="logo-img" src="../img/logos.png" style="margin-top:14px">
+    <div style="font-size: 16px;margin-top: 12px;display: table;">
+        <img src="../img/icon_j.png" style="margin-top: 13px;float: left;width: 50px;display: table-cell;vertical-align: middle;width: 42%;margin-left: 49px;">
+        <div style="display: table-cell;vertical-align: middle;width: 72%;padding-right: 75px;padding-top: 10px;">Which is the best jewellery store for me?</div></div>
+    <input type="submit" class="submit form-control" id="id_submit" value="Recommend Now" style="bottom: -43px;margin: 0 auto;position: relative;" dcvalue="Recommend Now">
+</div>
 <div>
 
     <i class="loading"></i>
