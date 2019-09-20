@@ -148,7 +148,7 @@ class Picks extends React.Component {
                             {index == 0 ? <div className="badge"><img src="./img/trending.png"/><span>Trending</span></div> : null}
                             <div className="section-top">
                                 <div className="left"><div className="card light"><img src={item.mainImage}/></div></div>
-                                <div className="right"><div className="title">{item.name}</div><div className="usp">Unique selling points:</div></div>
+                                <div className="right"><div className="usp">Unique selling points:</div></div>
                             </div>
                             <hr className="line dashed"/>
                             <div className="section-bottom">
