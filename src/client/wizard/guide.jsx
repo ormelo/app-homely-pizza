@@ -163,6 +163,7 @@ class Guide extends React.Component {
                         </div>
                     </div>
                     <br/>
+                    <hr className="line"/><hr className="line thick"/>
                     <div className="section">
                         <div className="numeral">02</div>
                         <div className="post-heading">
@@ -176,7 +177,7 @@ class Guide extends React.Component {
                                     </div><br/>
                                 </div>
                                 <br/>
-                                <div style={{fontSize: '12px', color: '#ababab'}}><a style={{color:'#646262'}} href="https://www.google.com/maps/contrib/104264312657591042552/reviews/@12.9557065,77.7144749,17z/data=!3m1!4b1!4m3!8m2!3m1!1e1?hl=en-IN">Bala Vinayagam</a>, few months ago on <img className="logo-img" src="./img/google_logo.png"/></div>
+                                <div style={{fontSize: '12px', color: '#ababab', marginTop: '14px'}}><a style={{color:'#646262'}} href="https://www.google.com/maps/contrib/104264312657591042552/reviews/@12.9557065,77.7144749,17z/data=!3m1!4b1!4m3!8m2!3m1!1e1?hl=en-IN">Bala Vinayagam</a>, few months ago on <img className="logo-img" src="./img/google_logo.png"/></div>
                                 <hr class="line"/>
                                 <div className="sub-heading">Collections</div>
                                 <div className="para">
@@ -187,7 +188,7 @@ class Guide extends React.Component {
                                     <br/>
                                 </div>
                                 <br/>
-                                <div style={{fontSize: '12px', color: '#ababab'}}><a style={{color:'#646262'}}  href="https://www.google.com/maps/contrib/103591546070092898488/reviews?hl=en-IN&sa=X&ved=2ahUKEwjFiYO23N7kAhUL73MBHaLdA9gQvvQBegQIARAg">Spoorti gandhad</a>, few months ago on <img className="logo-img" src="./img/google_logo.png"/></div>
+                                <div style={{fontSize: '12px', color: '#ababab', marginTop: '14px'}}><a style={{color:'#646262'}}  href="https://www.google.com/maps/contrib/103591546070092898488/reviews?hl=en-IN&sa=X&ved=2ahUKEwjFiYO23N7kAhUL73MBHaLdA9gQvvQBegQIARAg">Spoorti gandhad</a>, few months ago on <img className="logo-img" src="./img/google_logo.png"/></div>
                                 <hr class="line"/>
                                 <div className="sub-heading">Designs</div>
                                 <div className="para">
@@ -197,7 +198,7 @@ class Guide extends React.Component {
                                         </div><br/>
                                     <br/>
                                 </div>
-                                <div style={{fontSize: '12px', color: '#ababab'}}><a style={{color:'#646262'}} href="https://www.google.com/maps/contrib/108943788022614341397/reviews?hl=en-IN&sa=X&ved=2ahUKEwjlhqKL3t7kAhUJ4nMBHeT6BZsQvvQBegQIARAo">Suresh</a>, few months ago on <img className="logo-img" src="./img/google_logo.png"/></div>
+                                <div style={{fontSize: '12px', color: '#ababab', marginTop: '14px'}}><a style={{color:'#646262'}} href="https://www.google.com/maps/contrib/108943788022614341397/reviews?hl=en-IN&sa=X&ved=2ahUKEwjlhqKL3t7kAhUJ4nMBHeT6BZsQvvQBegQIARAo">Suresh</a>, few months ago on <img className="logo-img" src="./img/google_logo.png"/></div>
                                 <hr class="line"/>
                             </div>
                             <div className="para" style={{marginTop: '0px'}}>Now that you've researched the essential aspects to pick the right jeweller, find out the most authentic & trusted jeweller for you.</div>

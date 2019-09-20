@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2100fea9-fa34-466f-9140-289133e88515" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/public/guide.bundle.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/guide.bundle.min.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/client/wizard/guide.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/wizard/guide.jsx" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -69,8 +70,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/client/wizard/guide.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="350">
-              <caret line="202" column="203" selection-start-line="202" selection-start-column="203" selection-end-line="202" selection-end-column="203" />
+            <state relative-caret-position="650">
+              <caret line="200" column="98" selection-start-line="200" selection-start-column="98" selection-end-line="200" selection-end-column="98" />
             </state>
           </provider>
         </entry>
@@ -418,8 +419,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/client/wizard/guide.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="202" column="203" selection-start-line="202" selection-start-column="203" selection-end-line="202" selection-end-column="203" />
+        <state relative-caret-position="650">
+          <caret line="200" column="98" selection-start-line="200" selection-start-column="98" selection-end-line="200" selection-end-column="98" />
         </state>
       </provider>
     </entry>
