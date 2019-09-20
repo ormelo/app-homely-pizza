@@ -70,7 +70,7 @@
         <entry file="file://$PROJECT_DIR$/src/client/wizard/guide.jsx">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="350">
-              <caret line="202" column="177" selection-start-line="202" selection-start-column="163" selection-end-line="202" selection-end-column="177" />
+              <caret line="202" column="203" selection-start-line="202" selection-start-column="203" selection-end-line="202" selection-end-column="203" />
             </state>
           </provider>
         </entry>
@@ -419,7 +419,7 @@
     <entry file="file://$PROJECT_DIR$/src/client/wizard/guide.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="350">
-          <caret line="202" column="177" selection-start-line="202" selection-start-column="163" selection-end-line="202" selection-end-column="177" />
+          <caret line="202" column="203" selection-start-line="202" selection-start-column="203" selection-end-line="202" selection-end-column="203" />
         </state>
       </provider>
     </entry>
