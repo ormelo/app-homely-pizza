@@ -3,7 +3,7 @@ import { render } from 'react-dom';
 import DetailView from './detailView.jsx';
 import { BrowserRouter as Router, Route, Link, withRouter } from 'react-router-dom';
 import { END_POINTS } from '../../common/constant';
-import { searchResults, questions } from '../../data-source/mockDataQnA';
+import { picks } from '../../data-source/mockDataPicks';
 class QuestionAnswer extends Component {
 
     isSelected(selectedAns, answer) {
@@ -95,20 +95,14 @@ class ImageThumbnail extends Component {
 }
 
 
-class Guide extends React.Component {
+class Picks extends React.Component {
 
     constructor() {
         super();
         this.state = {
-            questionList: questions.results,
-            activeQuestionIndex: 0,
-            searchRequestPayLoad: {
-                "query": this.getSearchQuery(),
-                "questions": []
-            },
-            displayQuestions: false
+            picks: picks
         };
-        this.onQuestionSelect = this.onQuestionSelect.bind(this);
+        console.log('picks: ', picks);
         this.handleRecommenderClick = this.handleRecommenderClick.bind(this);
     }
 
@@ -122,32 +116,6 @@ class Guide extends React.Component {
         document.querySelector('.recommender-body').style.visibility = 'hidden';
         this.setState({displayQuestions: true});
     }
-
-    getSearchQuery() {
-            let searchQuery = window.location.search;
-            if (typeof searchQuery === 'string') {
-                return searchQuery.replace('?q=', '').split('+').join(' ');
-            }
-            return ''
-        }
-
-    onQuestionSelect(answer) {
-            let { activeQuestionIndex, questionList, searchRequestPayLoad } = this.state;
-            searchRequestPayLoad.questions.push({
-                id: questionList[activeQuestionIndex].id,
-                responseId: answer.id
-            })
-            let nextIndex = activeQuestionIndex + 1;
-            if (questionList.length > nextIndex) {
-                this.setState({
-                    activeQuestionIndex: nextIndex,
-                    searchRequestPayLoad: searchRequestPayLoad
-                })
-            }
-            if(activeQuestionIndex == 3) {
-                window.location.href = "/recommended-picks";
-            }
-        }
 
     handleScroll() {
         if(window.scrollY == 0) {
@@ -166,96 +134,30 @@ class Guide extends React.Component {
     }
 
     render() {
-            const { questionList, activeQuestionIndex, searchRequestPayLoad = [], displayQuestions } = this.state;
+            const {  } = this.state;
             return (<div>
-
-            <div className="header">Picking the best gold jeweller in Bangalore - comparison & buying guide</div>
+            <img className="main-icons" src="./img/jewel_icons.png" style={{width: '140px'}}/>
+            <div className="header">Authentic picks for you</div>
+            <hr className="line" />
+            <hr className="line thick" />
                 <div className="main">
-                    <div>
-                        <img src="./img/guide-m.jpg" style={{top: '170px'}}/>
-                        <img className="main-icons" src="./img/jewel_icons.png" style={{width: '140px'}}/>
-                        <img className="main-icons" src="./img/icon_bag.png" style={{top: '260px', width: '94px'}}/>
-                    </div>
-                    <div className="overview">Results from analyzing 1856 opinions from more than 12 authentic sources.</div>
-                    <hr className="line" />
-                    <hr className="line thick" />
                     <div className="section">
-                        <div className="numeral">01</div>
-                        <div className="post-heading">
-                            <div className="title"><span className="uline">Things to consider</span> when buying gold jewellery</div>
-                            <div className="info">
-                                <div className="sub-heading">Cost per gram</div>
-                                <div className="para">
-                                    The first thing you need to do before you buy gold is find out its current price per gram.<br/><br/>
-                                    Remember that gold prices can vary at different showrooms. This is because they come from different associations of gold .
-                                </div>
-                                <br/>
-                                <div className="sub-heading">Purity</div>
-                                <div className="para">
-                                    Gold is available in different levels of purity, and this can affect gold price.
-                                    <br/><br/>
-                                    For instance, 22k gold is 91.6% gold as it contains 22 parts gold and 2 parts of other metal. Likewise, 18k gold  18 parts of gold while other metals make up the other 6 parts.
-                                </div>
-                                <br/>
-                                <div className="sub-heading">Genuine Certification</div>
-                                <div className="para">
-                                    Gold that does not carry certification by BIS (Bureau of Indian Standard) may not be the real deal.
-                                </div>
+                    {picks && picks.results.map((item, index) => {
+                        return (<div className="card">
+                            <div className="numeral">{index < 10 ? `0${index+1}` : index}</div>
+                            {index == 0 ? <div className="badge"><img src="./img/trending.png"/><span>Trending</span></div> : null}
+                            <div className="section-top">
+                                <div className="left"><div className="card light"><img src={item.mainImage}/></div></div>
+                                <div className="right"><div className="title">{item.name}</div><div className="usp">Unique selling points:</div></div>
                             </div>
-                        </div>
-                    </div>
-                    <br/>
-                    <hr className="line"/><hr className="line thick"/>
-                    <div className="section">
-                        <div className="numeral">02</div>
-                        <div className="post-heading">
-                            <div className="title"><span className="uline">Unique selling points</span> that customers considered:</div>
-                            <div className="info">
-                                <div className="sub-heading">Making Charges</div>
-                                <div className="para">
-                                    <div className="quote"><img src="./img/quote.png"/></div>
-                                    <div className="quote-text"><span className="uline">Making charge</span> is very high. Never believe in their chit if you terminate then you have to pay them 10%.. no Worth for your money. All corporate system. Don't waste you Money here.
-
-                                    </div><br/>
-                                </div>
-                                <br/>
-                                <div style={{fontSize: '12px', color: '#ababab', marginTop: '14px'}}><a style={{color:'#646262'}} href="https://www.google.com/maps/contrib/104264312657591042552/reviews/@12.9557065,77.7144749,17z/data=!3m1!4b1!4m3!8m2!3m1!1e1?hl=en-IN">Bala Vinayagam</a>, few months ago on <img className="logo-img" src="./img/google_logo.png"/></div>
-                                <hr class="line"/>
-                                <div className="sub-heading">Collections</div>
-                                <div className="para">
-                                    <div className="quote"><img style={{width: '34px'}} src="./img/quote.png"/></div>
-                                                                        <div className="quote-text">Nice <span className="uline">collections</span>. Name it and it's there. Good offers also.
-
-                                                                        </div><br/>
-                                    <br/>
-                                </div>
-                                <br/>
-                                <div style={{fontSize: '12px', color: '#ababab', marginTop: '14px'}}><a style={{color:'#646262'}}  href="https://www.google.com/maps/contrib/103591546070092898488/reviews?hl=en-IN&sa=X&ved=2ahUKEwjFiYO23N7kAhUL73MBHaLdA9gQvvQBegQIARAg">Spoorti gandhad</a>, few months ago on <img className="logo-img" src="./img/google_logo.png"/></div>
-                                <hr class="line"/>
-                                <div className="sub-heading">Designs</div>
-                                <div className="para">
-                                    <div className="quote"><img style={{width: '44px'}} src="./img/quote.png"/></div>
-                                        <div className="quote-text">Many new <span className="uline">designs and styles</span> available so different weights and price. Certified purity of gold is guaranteed.
-
-                                        </div><br/>
-                                    <br/>
-                                </div>
-                                <div style={{fontSize: '12px', color: '#ababab', marginTop: '14px'}}><a style={{color:'#646262'}} href="https://www.google.com/maps/contrib/108943788022614341397/reviews?hl=en-IN&sa=X&ved=2ahUKEwjlhqKL3t7kAhUJ4nMBHeT6BZsQvvQBegQIARAo">Suresh</a>, few months ago on <img className="logo-img" src="./img/google_logo.png"/></div>
-                                <hr class="line"/>
+                            <hr className="line dashed"/>
+                            <div className="section-bottom">
                             </div>
-                            <div className="para" style={{marginTop: '0px'}}>Now that you've researched the essential aspects to pick the right jeweller, find out the most authentic & trusted jeweller for you.</div>
-                            <br/><br/>
-                            <div className="scroll-arrow">
-                                <span/><span/><span/>
-                            </div>
-                            <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-                        </div>
+                        </div>)
+                        })
+                     }
                     </div>
                 </div>
-
-
-                {displayQuestions && questionList && questionList.length > 0 &&
-                 <QuestionAnswer selectedAns={searchRequestPayLoad.questions || []} question={questionList[activeQuestionIndex].question} answers={questionList[activeQuestionIndex].responses} onSelect={this.onQuestionSelect} />}
 
 
             </div>);
@@ -567,10 +469,10 @@ var QuizWithRouter = withRouter(DetailView)
 
 render(<Router>
     <div>
-        <Route path="/search" render={() => (
+        <Route path="/recommended-picks" render={() => (
             <div className="results">
-                    <Route exact path="/search" component={Guide} />
-                <Route exact path="/recommended" component={QuizWithRouter} />
+                    <Route exact path="/recommended-picks" component={Picks} />
+                <Route exact path="/search/details/:searchQuery" component={QuizWithRouter} />
             </div>)} />
     </div>
 </Router>, document.getElementById('containerWiz'));

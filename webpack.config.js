@@ -8,7 +8,8 @@ var UglifyJSPlugin = require('uglifyjs-webpack-plugin')
 var config = {
   entry: {
     wiz: WIZ_DIR + '/createFitProfile.jsx',
-    guide: WIZ_DIR + '/guide.jsx'
+    guide: WIZ_DIR + '/guide.jsx',
+    picks: WIZ_DIR + '/picks.jsx'
   },
   output: {
     path: BUILD_DIR,

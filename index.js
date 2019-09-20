@@ -71,6 +71,10 @@ var pages = [];
           pages.guide = data;
         });
 
+    fs.readFile("public/picks.html", "utf8", function(err, data) {
+              pages.picks = data;
+            });
+
   fs.readFile("public/products.html", "utf8", function(err, data) {
     pages.products = data;
   });
@@ -796,6 +800,10 @@ app.post('/submitGetQuote', function(req, res) {
 
 app.get("/search", function(request, response) {
   response.sendFile(path.resolve(__dirname, 'public', 'guide.html'));
+});
+
+app.get("/recommended-picks", function(request, response) {
+  response.sendFile(path.resolve(__dirname, 'public', 'picks.html'));
 });
 
 app.post('/submitMealType', function(req, res) {
