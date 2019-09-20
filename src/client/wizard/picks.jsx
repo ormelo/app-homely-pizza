@@ -127,13 +127,6 @@ class Picks extends React.Component {
             document.querySelector('.logo').style.borderBottom = '0px solid';
         } else {
             document.querySelector('.logo').style.borderBottom = '1px solid #eeeeee';
-            if(window.scrollY >= 600) {
-                document.querySelector('.recommender').style.opacity = '1';
-                document.querySelector('.logo').style.display = 'none';
-                document.querySelector('.recommender').style.minHeight = '220px';
-            } else {
-                document.querySelector('.logo').style.display = 'block';
-            }
         }
         window.removeEventListener('scroll', this.handleScroll);
     }
@@ -176,7 +169,14 @@ class Picks extends React.Component {
                             <hr className="line dashed"/>
                             <div className="section-bottom">
                                 <div className="rec-title">Recommended for:</div>
-                                <input type="submit" className="submit form-control" value="Learn more" onClick={(e)=>{this.redirect(item.link)}} />
+                                <div className="rec-main">
+                                {item.opinionDrivers && item.opinionDrivers.map((opinionDriver, driverIndex) => {
+                                                        return (<span className={driverIndex == 0 ? 'grey-tag active': 'grey-tag'}>{opinionDriver.name}
+                                                                </span>);
+                                                })
+                                }
+                                </div>
+                                <input type="submit" className="submit form-control" style={{marginTop: '156px'}} value="Learn more" onClick={(e)=>{this.redirect(item.link)}} />
                             </div>
                         </div>)
                         })

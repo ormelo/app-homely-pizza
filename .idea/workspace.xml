@@ -54,20 +54,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/picks.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="438">
-              <caret line="993" column="21" selection-start-line="993" selection-start-column="21" selection-end-line="993" selection-end-column="21" />
+            <state relative-caret-position="543">
+              <caret line="1000" column="22" selection-start-line="1000" selection-start-column="22" selection-end-line="1000" selection-end-column="22" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/client/wizard/picks.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="717">
-              <caret line="167" column="111" selection-start-line="167" selection-start-column="111" selection-end-line="167" selection-end-column="111" />
+            <state relative-caret-position="542">
+              <caret line="173" column="129" selection-start-line="173" selection-start-column="129" selection-end-line="173" selection-end-column="129" />
             </state>
           </provider>
         </entry>
@@ -75,8 +75,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/data-source/mockDataPicks.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="150" selection-start-line="11" selection-start-column="150" selection-end-line="11" selection-end-column="150" />
+            <state relative-caret-position="315">
+              <caret line="21" column="42" selection-start-line="21" selection-start-column="28" selection-end-line="21" selection-end-column="42" />
             </state>
           </provider>
         </entry>
@@ -84,8 +84,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/assets/pink.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="465">
-              <caret line="31" column="54" selection-start-line="25" selection-start-column="6" selection-end-line="31" selection-end-column="54" />
+            <state relative-caret-position="375">
+              <caret line="25" column="82" lean-forward="true" selection-start-line="25" selection-start-column="6" selection-end-line="25" selection-end-column="82" />
             </state>
           </provider>
         </entry>
@@ -94,9 +94,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>.question-answers-container</find>
-      <find>route</find>
-      <find>push</find>
       <find>onRecommenderClick</find>
       <find>/searc</find>
       <find>guide</find>
@@ -116,14 +113,17 @@
       <find>picks</find>
       <find>.nume</find>
       <find>.card {</find>
-      <find>01</find>
       <find>.answer</find>
       <find>.badge</find>
       <find>.card</find>
       <find>.map</find>
       <find>.section-b</find>
-      <find>redirect</find>
+      <find>.tag</find>
       <find>special</find>
+      <find>.section-</find>
+      <find>01</find>
+      <find>redirect</find>
+      <find>recommend</find>
     </findStrings>
     <replaceStrings>
       <replace>./img/anim1/</replace>
@@ -148,9 +148,9 @@
         <option value="$PROJECT_DIR$/webpack.config.js" />
         <option value="$PROJECT_DIR$/index.js" />
         <option value="$PROJECT_DIR$/src/client/wizard/guide.jsx" />
-        <option value="$PROJECT_DIR$/public/picks.html" />
         <option value="$PROJECT_DIR$/src/data-source/mockDataPicks.js" />
         <option value="$PROJECT_DIR$/src/client/wizard/picks.jsx" />
+        <option value="$PROJECT_DIR$/public/picks.html" />
       </list>
     </option>
   </component>
@@ -421,13 +421,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/client/wizard/guide.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="310">
-          <caret line="182" column="57" selection-start-line="182" selection-start-column="24" selection-end-line="182" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/assets/mystyles.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="196">
@@ -435,31 +428,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/pink.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="31" column="54" selection-start-line="25" selection-start-column="6" selection-end-line="31" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/picks.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="438">
-          <caret line="993" column="21" selection-start-line="993" selection-start-column="21" selection-end-line="993" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/data-source/mockDataPicks.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="150" selection-start-line="11" selection-start-column="150" selection-end-line="11" selection-end-column="150" />
+        <state relative-caret-position="315">
+          <caret line="21" column="42" selection-start-line="21" selection-start-column="28" selection-end-line="21" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/pink.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" column="82" lean-forward="true" selection-start-line="25" selection-start-column="6" selection-end-line="25" selection-end-column="82" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/wizard/guide.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="310">
+          <caret line="182" column="57" selection-start-line="182" selection-start-column="24" selection-end-line="182" selection-end-column="57" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/client/wizard/picks.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="717">
-          <caret line="167" column="111" selection-start-line="167" selection-start-column="111" selection-end-line="167" selection-end-column="111" />
+        <state relative-caret-position="542">
+          <caret line="173" column="129" selection-start-line="173" selection-start-column="129" selection-end-line="173" selection-end-column="129" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/picks.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="543">
+          <caret line="1000" column="22" selection-start-line="1000" selection-start-column="22" selection-end-line="1000" selection-end-column="22" />
         </state>
       </provider>
     </entry>

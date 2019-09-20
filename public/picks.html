@@ -982,6 +982,24 @@ ul li{
     height: 1px;
     border-bottom: 1px solid #e4eff9;
 }
+.grey-tag {
+    background: #eeeeee;
+    min-height: 28px;
+    padding: 8px;
+    border-radius: 18px;
+    padding-left: 14px;
+    padding-right: 14px;
+    padding-bottom: 9px;
+    margin-right: 8px;
+}
+.grey-tag.active {
+    background: linear-gradient(180deg,  #dbdbdb 0%, #b7b7b7 100%); !important;
+    color: #fff;
+    -webkit-box-shadow: 0px 0px 17px 0px rgba(0,0,0,0.13);
+    -moz-box-shadow: 0px 0px 17px 0px rgba(0,0,0,0.13);
+    box-shadow: 0px 0px 17px 0px rgba(0,0,0,0.13);
+    font-weight: bold;
+}
 .section-top {
     min-height: 95px;
     display: table;
@@ -992,6 +1010,9 @@ ul li{
 .section-bottom .rec-title {
     font-size: 16px;
     font-weight:bold;
+}
+.rec-main {
+    margin-top:14px;
 }
 .usp-title {
     font-size: 16px;
@@ -2101,13 +2122,7 @@ p img.right { float: right; margin-left: 1em; }
 <body>
 
 <div class="logo"><img class="logo-img" src="../img/logos.png" /></div>
-<div class="logo recommender" style="opacity: 0; min-height: 220px;">
-    <img class="logo-img" src="../img/logos.png" style="margin-top:20px">
-    <div class="recommender-body" style="font-size: 16px;margin-top: 12px;display: table;">
-        <img src="../img/icon_j.png" style="margin-top: 13px;float: left;width: 50px;display: table-cell;vertical-align: middle;width: 42%;margin-left: 49px;">
-        <div style="display: table-cell;vertical-align: middle;width: 72%;padding-right: 75px;padding-top: 10px;">Which is the best jewellery store for me?</div></div>
-    <input type="submit" class="submit form-control" id="id_submit" value="Recommend Now" style="bottom: -43px;margin: 0 auto;position: relative;" onclick="onRecommenderClick()">
-</div>
+
 <div>
 
     <i class="loading"></i>

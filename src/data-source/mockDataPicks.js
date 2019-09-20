@@ -1,17 +1,98 @@
 
-export const picks = {"results":[
-     {
-        "name": "Melorra",
-        "mainImage": "./img/picks/main/melorra.png",
-        "usp":[{"name":"Elegant design", "special": false}, {"name":"Low making charges", "special": true}, {"name":"Easy return", "special": false}],
-        "link": "https://www.melorra.com/jewellery/?utm_source=gc&utm_medium=gpc032&utm_campaign=whatsapp"
-     },
-     {
-         "name": "CaratLane",
-         "mainImage": "./img/picks/main/caratlane.png",
-         "usp":[{"name":"Elegant design", "special": false}, {"name":"Low making charges", "special": true}, {"name":"Easy return", "special": false}]
-      }
-    ]};
+export const picks = {
+                       "results": [
+                         {
+                           "name": "Melorra",
+                           "mainImage": "./img/picks/main/melorra.png",
+                           "usp": [
+                             {
+                               "name": "Elegant design",
+                               "special": false
+                             },
+                             {
+                               "name": "Low making charges",
+                               "special": true
+                             },
+                             {
+                               "name": "Easy return",
+                               "special": false
+                             }
+                           ],
+                           "link": "https://www.melorra.com/jewellery/?utm_source=gc&utm_medium=gpc032&utm_campaign=whatsapp",
+                           "opinionDrivers": [
+                             {
+                               "name": "Making charges",
+                               "opinions": [
+                                 {
+                                   "type": "text",
+                                   "text": "Low making charges, great customer service",
+                                   "sourceImg": "./img/google_logo.png",
+                                   "userName": "Prateek",
+                                   "timeText": "Few weeks ago on"
+                                 }
+                               ]
+                             },
+                             {
+                               "name": "Collections",
+                               "opinions": [
+                                 {
+                                   "type": "text",
+                                   "text": "Great collections",
+                                   "sourceImg": "./img/google_logo.png",
+                                   "userName": "Vinal",
+                                   "timeText": "Few months ago on"
+                                 }
+                               ]
+                             }
+                           ]
+                         },
+                         {
+                           "name": "CaratLane",
+                           "mainImage": "./img/picks/main/caratlane.png",
+                           "usp": [
+                             {
+                               "name": "Elegant design",
+                               "special": false
+                             },
+                             {
+                               "name": "Low making charges",
+                               "special": true
+                             },
+                             {
+                               "name": "Easy return",
+                               "special": false
+                             }
+                           ],
+                           "link": "#",
+                           "opinionDrivers": [
+                             {
+                               "name": "Offers",
+                               "opinions": [
+                                 {
+                                   "type": "text",
+                                   "text": "Low making charges, great customer service",
+                                   "sourceImg": "./img/google_logo.png",
+                                   "userName": "Prateek",
+                                   "timeText": "Few weeks ago on"
+                                 }
+                               ]
+                             },
+                             {
+                               "name": "Designs",
+                               "opinions": [
+                                 {
+                                   "type": "text",
+                                   "text": "Great collections",
+                                   "sourceImg": "./img/google_logo.png",
+                                   "userName": "Vinal",
+                                   "timeText": "Few months ago on"
+                                 }
+                               ]
+                             }
+                           ]
+                         }
+                       ]
+                     };
 
   export const detailView = {
     "title": "Panambur beach",
