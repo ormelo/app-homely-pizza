@@ -145,7 +145,7 @@ class Guide extends React.Component {
                 })
             }
             if(activeQuestionIndex == 3) {
-
+                window.location = "/";
             }
         }
 

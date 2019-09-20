@@ -15145,7 +15145,7 @@ export const questions = {
      },
      {
         "questionId": 4,
-        "question": "Do you wish to add 'low making charges' as shortlisting criteria?",
+        "question": "Add 'low making charges' as shortlisting criteria?",
         "responses": [
           {
             "id": 13,
