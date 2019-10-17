@@ -736,7 +736,7 @@ app.get('/fit-test', function(request, response) {
 });
 
 app.get("/", function(request, response) {
-  response.send(pages.index);
+  response.sendFile(path.resolve(__dirname, 'public', 'guide.html'));
 });
 
 app.get("/products", function(request, response) {
