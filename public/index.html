@@ -48,9 +48,46 @@
     margin-top: 30px;
     padding-left: 70px;
     text-align: center;
-    font-size: 16px;
+    font-size: 20px;
     padding-right: 70px;
-    color: #939393;
+    color: #000;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.scroll-arrow{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    margin-top: -62px;
+}
+.scroll-arrow span{
+    display: block;
+    width: 18px;
+    height: 18px;
+    border-bottom: 5px solid #a6a4a4;
+    border-right: 5px solid #a6a4a4;
+    transform: rotate(45deg);
+    margin: -2px;
+    animation: animate 2s infinite;
+}
+.scroll-arrow span:nth-child(2){
+    animation-delay: -0.2s;
+}
+.scroll-arrow span:nth-child(3){
+    animation-delay: -0.4s;
+}
+@keyframes animate {
+    0%{
+        opacity: 0;
+        transform: rotate(45deg) translate(-20px,-20px);
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        transform: rotate(45deg) translate(20px,20px);
+    }
 }
 
 .section {
@@ -107,40 +144,7 @@
     padding-left: 11px;
 }
 
-.scroll-arrow{
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%,-50%);
-}
-.scroll-arrow span{
-    display: block;
-    width: 18px;
-    height: 18px;
-    border-bottom: 5px solid #a6a4a4;
-    border-right: 5px solid #a6a4a4;
-    transform: rotate(45deg);
-    margin: -2px;
-    animation: animate 2s infinite;
-}
-.scroll-arrow span:nth-child(2){
-    animation-delay: -0.2s;
-}
-.scroll-arrow span:nth-child(3){
-    animation-delay: -0.4s;
-}
-@keyframes animate {
-    0%{
-        opacity: 0;
-        transform: rotate(45deg) translate(-20px,-20px);
-    }
-    50%{
-        opacity: 1;
-    }
-    100%{
-        opacity: 0;
-        transform: rotate(45deg) translate(20px,20px);
-    }
-}
+
 
 .uline {
     background-image: linear-gradient(transparent 0%, transparent 65%, #f7e3e1 65%, #ffd3cf 90%, transparent 90%, transparent);

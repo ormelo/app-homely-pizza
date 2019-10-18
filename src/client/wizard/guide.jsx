@@ -106,7 +106,7 @@ class Guide extends React.Component {
                 "query": this.getSearchQuery(),
                 "questions": []
             },
-            displayQuestions: false
+            displayQuestions: true
         };
         this.onQuestionSelect = this.onQuestionSelect.bind(this);
         this.handleRecommenderClick = this.handleRecommenderClick.bind(this);
@@ -175,6 +175,9 @@ class Guide extends React.Component {
 
                         <div className="header">Make some time for life<br/><div className="sub-head">Stint eases urban life by offloading stressful daily tasks</div></div>
                         <img className="curve" src="./img/images/curve.png"/>
+                        <div className="scroll-arrow">
+                            <span/><span/><span/>
+                        </div>
                     </div>
                     <div className="overview">What do you need to get done?</div>
                     <hr className="line" />
