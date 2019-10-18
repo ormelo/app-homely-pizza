@@ -169,7 +169,7 @@ class Guide extends React.Component {
             const { questionList, activeQuestionIndex, searchRequestPayLoad = [], displayQuestions } = this.state;
             return (<div>
 
-                <img src="./img/images/banner-meditate.jpg" style={{marginTop: '-21px'}}/>
+                <img src="./img/images/banner-meditate.jpg" style={{marginTop: '-27px'}}/>
                 <div className="main">
                     <div>
 
