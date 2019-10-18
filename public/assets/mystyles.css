@@ -55,8 +55,8 @@
     white-space: nowrap;
     height: 45px;
 }
-.question-answers-container { 
-    opacity: 1;
+.question-answers-container {
+    opacity: 0;
     max-height: 40px;
     position: absolute;
     z-index: 1;
