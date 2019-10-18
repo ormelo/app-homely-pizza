@@ -179,7 +179,7 @@ class Guide extends React.Component {
                             <span/><span/><span/>
                         </div>
                     </div>
-                    <div className="overview">What do you need to get done?</div>
+                    <div className="overview">What do you want to get done?</div>
                     <hr className="line" />
                     <div className="section">
 
