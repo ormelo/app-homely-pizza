@@ -169,17 +169,17 @@ class Guide extends React.Component {
             const { questionList, activeQuestionIndex, searchRequestPayLoad = [], displayQuestions } = this.state;
             return (<div>
 
-
+                <img src="./img/images/banner-meditate.jpg" style={{marginTop: '-21px'}}/>
                 <div className="main">
                     <div>
-                        <img src="./img/images/banner-meditate.jpg" style={{top: '0px'}}/>
+
                         <div className="header">Make some time for life<br/><div className="sub-head">Stint eases urban life by offloading stressful daily tasks</div></div>
                         <img className="curve" src="./img/images/curve.png"/>
                     </div>
                     <div className="overview">What do you need to get done?</div>
                     <hr className="line" />
                     <div className="section">
-                        
+
                         <div className="post-heading">
                             <div className="title"><span className="uline">Things to consider</span> when buying gold jewellery</div>
                             <div className="info">
