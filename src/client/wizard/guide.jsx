@@ -192,10 +192,25 @@ class Guide extends React.Component {
                     <hr className="line"/>
                                         <div className="section">
                                             <div className="post-heading">
-                                                <div className="title">Get back your precious time</div>
+                                                <div className="title">Your personal multi-tasker</div>
                                                 <div className="info">
                                                     <div className="para" style={{marginTop: '0px'}}>
                                                        <div>Stint ticks off variety of tasks on your to-do list to free up time for family & fun.
+
+                                                        </div><br/>
+                                                    </div>
+
+                                                    <hr class="line"/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className="section">
+                                            <div className="post-heading">
+                                                <div className="title">How it works</div>
+                                                <div className="info">
+                                                    <div className="para" style={{marginTop: '0px'}}>
+                                                       <div>Stint creates your to do list based on your personal needs.
+                                                       <br/><br/>For eg, if you want to hire a good interior designer, simply add a task & stint handles the rest.<br/><br/> Shortlisting service providers, finding the fair price, assessing quality & more.
 
                                                         </div><br/>
                                                     </div>
