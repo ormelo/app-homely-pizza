@@ -180,15 +180,32 @@ class Guide extends React.Component {
                         </div>
                     </div>
                     <div className="overview">What do you want to get done?</div>
-                    <hr className="line" />
+
                     <div className="section">
-                        <div className="post-heading">
+                        <div className="post-heading icon-container">
                             <img className="ic" src="./img/images/ic_home.png" style={{width: '72px'}} />
                             <img className="ic" src="./img/images/ic_events.png" style={{width: '72px'}} />
                             <img className="ic" src="./img/images/ic_local_enquiries.png" style={{width: '72px'}} />
                         </div>
                     </div>
                     <br/>
+                    <hr className="line"/>
+                                        <div className="section">
+                                            <div className="post-heading">
+                                                <div className="title">Get back your precious time</div>
+                                                <div className="info">
+                                                    <div className="para" style={{marginTop: '0px'}}>
+                                                       <div>Stint ticks off variety of tasks on your to-do list to free up time for family & fun.
+
+                                                        </div><br/>
+                                                    </div>
+
+                                                    <hr class="line"/>
+                                                </div>
+
+                                                <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><div style={{height: '400px'}}></div>
+                                            </div>
+                                        </div>
                 </div>
 
 
