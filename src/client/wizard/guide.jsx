@@ -169,7 +169,7 @@ class Guide extends React.Component {
             const { questionList, activeQuestionIndex, searchRequestPayLoad = [], displayQuestions } = this.state;
             return (<div>
 
-                <div className="banner"/>
+                <div className={`banner${Math.floor(Math.random() * 4) + 1}`}/>
                 <div className="main">
                     <div>
 
@@ -183,9 +183,9 @@ class Guide extends React.Component {
 
                     <div className="section">
                         <div className="post-heading icon-container">
-                            <img className="ic" src="./img/images/ic_home.png" style={{width: '72px'}} />
-                            <img className="ic" src="./img/images/ic_events.png" style={{width: '72px'}} />
-                            <img className="ic" src="./img/images/ic_local_enquiries.png" style={{width: '72px'}} />
+                            <img className="ic" src="./img/images/ic_homei.png" style={{width: '72px'}} />
+                            <img className="ic" src="./img/images/ic_eventsi.png" style={{width: '72px'}} />
+                            <img className="ic" src="./img/images/ic_local_enquiriesi.png" style={{width: '72px'}} />
                         </div>
                     </div>
                     <br/>
