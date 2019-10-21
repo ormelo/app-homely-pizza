@@ -195,7 +195,7 @@ class Guide extends React.Component {
                                                 <div className="title">Your personal multi-tasker</div>
                                                 <div className="info">
                                                     <div className="para" style={{marginTop: '0px'}}>
-                                                       <div>Stint ticks off variety of tasks on your to-do list to free up time for family & fun.
+                                                       <div className="main-desc">Stint ticks off variety of tasks on your to-do list to free up time for family & fun.
 
                                                         </div><br/>
                                                     </div>
@@ -207,13 +207,13 @@ class Guide extends React.Component {
                                         <div className="section no-padding">
                                             <div className="post-heading">
                                                 <div className="title">How it works</div>
-                                                <div className="info">
+                                                <div className="info" style={{marginTop: '12px'}}>
                                                     <br/><br/>
                                                     <div className="step1"/>
                                                     <img className="curve small" src="./img/images/curve.png"/>
                                                     <div className="para" style={{marginTop: '14px'}}>
                                                        <div className="title">Create your task list</div>
-                                                       <div className="desc" style={{marginTop: '20px'}}>Stint creates a personal task list for you based on your needs. Track everything you need to do in one place.</div>
+                                                       <div className="desc" style={{marginTop: '10px'}}>Stint creates a personal task list for you based on your needs. Track everything you need to do in one place.</div>
                                                     </div>
 
                                                 </div>
@@ -227,7 +227,7 @@ class Guide extends React.Component {
                                                         <div className="para" style={{marginTop: '14px'}}>
                                                             <div className="title"></div>
                                                            <div className="title">Qualified stintlers bid against your task</div>
-                                                           <div className="desc" style={{marginTop: '20px'}}>By letting service providers bid against your task, stint helps you get the best price.</div>
+                                                           <div className="desc" style={{marginTop: '10px'}}>By letting service providers bid against your task, stint helps you get the best price.</div>
                                                     </div>
                                                 </div>
                                              </div>
@@ -240,8 +240,8 @@ class Guide extends React.Component {
                                                          <div className="para" style={{marginTop: '14px'}}>
                                                              <div className="title"></div>
                                                             <div className="title">Compare & book quality work at fair price</div>
-                                                            <div className="desc" style={{marginTop: '20px'}}>Stint compares USP of each service provider and cautions you when their quote is above market.
-                                                            <br/><br/>Quotes from stintlers usually are 20% less than market average.</div><br/>
+                                                            <div className="desc" style={{marginTop: '16px'}}>Stint compares USP of each service provider and cautions you when their quote is above market.
+                                                            <br/><br/><span style={{fontWeight:'bold'}}>"Quotes from stintlers are usually 20% less than market average."</span></div><br/>
                                                      </div>
                                                  </div>
                                               </div>
