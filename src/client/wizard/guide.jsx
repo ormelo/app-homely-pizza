@@ -193,7 +193,7 @@ class Guide extends React.Component {
                                         <div className="section">
                                             <div className="post-heading">
                                                 <div className="title">Your personal multi-tasker</div>
-                                                <div className="info">
+                                                <div className="info" style={{marginTop: '10px'}}>
                                                     <div className="para" style={{marginTop: '0px'}}>
                                                        <div className="main-desc">Stint ticks off variety of tasks on your to-do list to free up time for family & fun.
 
@@ -210,6 +210,7 @@ class Guide extends React.Component {
                                                 <div className="info" style={{marginTop: '12px'}}>
                                                     <br/><br/>
                                                     <div className="step1"/>
+                                                    <img src="./img/images/ic_num_1.png" className="ic-num"/>
                                                     <img className="curve small" src="./img/images/curve.png"/>
                                                     <div className="para" style={{marginTop: '14px'}}>
                                                        <div className="title">Create your task list</div>
@@ -223,6 +224,7 @@ class Guide extends React.Component {
                                              <div className="post-heading">
                                                 <div className="info">
                                                     <div className="step2"/>
+                                                        <img src="./img/images/ic_num_2.png" className="ic-num"/>
                                                         <img className="curve small" src="./img/images/curve.png" style={{top: '180px'}}/>
                                                         <div className="para" style={{marginTop: '14px'}}>
                                                             <div className="title"></div>
@@ -236,6 +238,7 @@ class Guide extends React.Component {
                                               <div className="post-heading">
                                                  <div className="info">
                                                      <div className="step3"/>
+                                                         <img src="./img/images/ic_num_3.png" className="ic-num"/>
                                                          <img className="curve small" src="./img/images/curve.png" style={{top: '180px'}}/>
                                                          <div className="para" style={{marginTop: '14px'}}>
                                                              <div className="title"></div>
@@ -260,7 +263,7 @@ class Guide extends React.Component {
                                                               <br/>
 
 
-                                        <div className="desc" style={{textAlign: 'center'}}>Copyright © 2019 Stint.do</div><br/>
+                                        <div className="desc" style={{textAlign: 'center',fontSize: '14px'}}>Copyright © 2019 Stint.do</div><br/>
                 </div>
 
 
