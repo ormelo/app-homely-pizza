@@ -241,7 +241,7 @@ class Guide extends React.Component {
                                                              <div className="title"></div>
                                                             <div className="title">Compare & book quality work at fair price</div>
                                                             <div className="desc" style={{marginTop: '20px'}}>Stint compares USP of each service provider and cautions you when their quote is above market.
-                                                            <br/><br/>Quotes from stintlers usually cost 20% less than market average.</div><br/>
+                                                            <br/><br/>Quotes from stintlers usually are 20% less than market average.</div><br/>
                                                      </div>
                                                  </div>
                                               </div>

@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2100fea9-fa34-466f-9140-289133e88515" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/client/wizard/guide.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/wizard/guide.jsx" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -28,7 +27,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-534">
+            <state relative-caret-position="150">
               <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
               <folding>
                 <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -44,8 +43,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/client/wizard/guide.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="404">
-              <caret line="242" column="189" selection-start-line="242" selection-start-column="189" selection-end-line="242" selection-end-column="189" />
+            <state relative-caret-position="419">
+              <caret line="243" column="103" selection-start-line="243" selection-start-column="103" selection-end-line="243" selection-end-column="103" />
             </state>
           </provider>
         </entry>
@@ -108,7 +107,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>onRecommenderClick</find>
       <find>recommender-body</find>
       <find>displayQuestions</find>
       <find>picklor</find>
@@ -138,6 +136,7 @@
       <find>what do</find>
       <find>body</find>
       <find>body {</find>
+      <find>create y</find>
     </findStrings>
     <replaceStrings>
       <replace>./img/anim1/</replace>
@@ -429,7 +428,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-534">
+        <state relative-caret-position="150">
           <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
           <folding>
             <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -443,8 +442,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/client/wizard/guide.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="404">
-          <caret line="242" column="189" selection-start-line="242" selection-start-column="189" selection-end-line="242" selection-end-column="189" />
+        <state relative-caret-position="419">
+          <caret line="243" column="103" selection-start-line="243" selection-start-column="103" selection-end-line="243" selection-end-column="103" />
         </state>
       </provider>
     </entry>
