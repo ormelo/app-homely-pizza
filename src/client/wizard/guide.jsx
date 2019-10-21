@@ -214,7 +214,7 @@ class Guide extends React.Component {
                                                     <img className="curve small" src="./img/images/curve.png"/>
                                                     <div className="para" style={{marginTop: '14px'}}>
                                                        <div className="title">Create your task list</div>
-                                                       <div className="desc" style={{marginTop: '10px'}}>Stint creates a personal task list for you based on your needs. Track everything you need to do in one place.</div>
+                                                       <div className="desc" style={{marginTop: '10px'}}>Stint creates a personal task list for you based on your needs. Track everything you need in one place.</div>
                                                     </div>
 
                                                 </div>
