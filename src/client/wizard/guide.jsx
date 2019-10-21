@@ -249,7 +249,6 @@ class Guide extends React.Component {
                                               </div>
                                           </div>
 
-                                          <hr className="line"/>
                                           <div className="overview" style={{background: '#f7f7f7', paddingTop: '20px'}}>So what do you want to get done?</div>
 
                                                               <div className="section" style={{background: '#f7f7f7'}}>
