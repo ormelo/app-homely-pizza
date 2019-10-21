@@ -192,7 +192,7 @@ class Guide extends React.Component {
                     <hr className="line"/>
                                         <div className="section">
                                             <div className="post-heading">
-                                                <div className="title">Your personal multi-tasker</div>
+                                                <div className="title" style={{paddingLeft:'12px', paddingRight:'12px'}}>Your personal multi-tasker</div>
                                                 <div className="info" style={{marginTop: '10px'}}>
                                                     <div className="para" style={{marginTop: '0px'}}>
                                                        <div className="main-desc">Stint ticks off variety of tasks on your to-do list to free up time for family & fun.
@@ -228,7 +228,7 @@ class Guide extends React.Component {
                                                         <img className="curve small" src="./img/images/curve.png" style={{top: '180px'}}/>
                                                         <div className="para" style={{marginTop: '14px'}}>
                                                             <div className="title"></div>
-                                                           <div className="title">Qualified stintlers bid against your task</div>
+                                                           <div className="title">Qualified stintlers bid</div>
                                                            <div className="desc" style={{marginTop: '10px'}}>By letting service providers bid against your task, stint helps you get the best price.</div>
                                                     </div>
                                                 </div>
@@ -242,7 +242,7 @@ class Guide extends React.Component {
                                                          <img className="curve small" src="./img/images/curve.png" style={{top: '180px'}}/>
                                                          <div className="para" style={{marginTop: '14px'}}>
                                                              <div className="title"></div>
-                                                            <div className="title">Compare & book quality work at fair price</div>
+                                                            <div className="title">Compare & book</div>
                                                             <div className="desc" style={{marginTop: '16px'}}>Stint compares USP of each service provider and cautions you when their quote is above market.
                                                             <br/><br/><span style={{fontWeight:'bold'}}>"Quotes from stintlers are usually 20% less than market average."</span></div><br/>
                                                      </div>

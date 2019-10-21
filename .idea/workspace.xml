@@ -29,8 +29,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="603">
-              <caret line="120" column="12" selection-start-line="120" selection-start-column="12" selection-end-line="120" selection-end-column="12" />
+            <state relative-caret-position="453">
+              <caret line="272" column="5" selection-start-line="272" selection-start-column="5" selection-end-line="272" selection-end-column="5" />
               <folding>
                 <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -45,8 +45,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/client/wizard/guide.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="311">
-              <caret line="265" column="106" selection-start-line="265" selection-start-column="106" selection-end-line="265" selection-end-column="106" />
+            <state relative-caret-position="469">
+              <caret line="244" column="97" selection-start-line="244" selection-start-column="97" selection-end-line="244" selection-end-column="97" />
             </state>
           </provider>
         </entry>
@@ -109,7 +109,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>.overview</find>
       <find>banner-medi</find>
       <find>What do you want to get done?</find>
       <find>.header</find>
@@ -129,7 +128,6 @@
       <find>.bann</find>
       <find>.info</find>
       <find>bann</find>
-      <find>.post-</find>
       <find>.step1</find>
       <find>what do</find>
       <find>body</find>
@@ -139,6 +137,8 @@
       <find>Stint compares USP of each service provider and cautions you when their quote is above market.</find>
       <find>step1</find>
       <find>.desc</find>
+      <find>copyri</find>
+      <find>.post-</find>
     </findStrings>
     <replaceStrings>
       <replace>./img/anim1/</replace>
@@ -430,8 +430,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="603">
-          <caret line="120" column="12" selection-start-line="120" selection-start-column="12" selection-end-line="120" selection-end-column="12" />
+        <state relative-caret-position="453">
+          <caret line="272" column="5" selection-start-line="272" selection-start-column="5" selection-end-line="272" selection-end-column="5" />
           <folding>
             <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -444,8 +444,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/client/wizard/guide.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="311">
-          <caret line="265" column="106" selection-start-line="265" selection-start-column="106" selection-end-line="265" selection-end-column="106" />
+        <state relative-caret-position="469">
+          <caret line="244" column="97" selection-start-line="244" selection-start-column="97" selection-end-line="244" selection-end-column="97" />
         </state>
       </provider>
     </entry>
