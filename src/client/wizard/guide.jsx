@@ -213,7 +213,7 @@ class Guide extends React.Component {
                                                     <img className="curve small" src="./img/images/curve.png"/>
                                                     <div className="para" style={{marginTop: '14px'}}>
                                                        <div className="title">Create your task list</div>
-                                                       <div className="desc" style={{marginTop: '20px'}}>Stint creates a personal task list for you based on your needs to track everything you need to do in one place</div>
+                                                       <div className="desc" style={{marginTop: '20px'}}>Stint creates a personal task list for you based on your needs. Track everything you need to do in one place.</div>
                                                     </div>
 
                                                 </div>
@@ -227,8 +227,7 @@ class Guide extends React.Component {
                                                         <div className="para" style={{marginTop: '14px'}}>
                                                             <div className="title"></div>
                                                            <div className="title">Qualified stintlers bid against your task</div>
-                                                           <div className="desc" style={{marginTop: '20px'}}>Stint takes a radically different approach to getting things done through local services.
-                                                           <br/><br/>By letting service providers bid against your task, stint helps you get the best price.</div>
+                                                           <div className="desc" style={{marginTop: '20px'}}>By letting service providers bid against your task, stint helps you get the best price.</div>
                                                     </div>
                                                 </div>
                                              </div>
@@ -241,8 +240,7 @@ class Guide extends React.Component {
                                                          <div className="para" style={{marginTop: '14px'}}>
                                                              <div className="title"></div>
                                                             <div className="title">Compare & book quality work at fair price</div>
-                                                            <div className="desc" style={{marginTop: '20px'}}>Stint helps you compare how much each task would cost you based on the USP provided by each service provider.
-                                                            It also cautions you when they quote you a price that’s above market.
+                                                            <div className="desc" style={{marginTop: '20px'}}>Stint compares USP of each service provider and cautions you when their quote is above market.
                                                             <br/><br/>Quotes from stintlers usually cost 20% less than market average.</div><br/>
                                                      </div>
                                                  </div>
