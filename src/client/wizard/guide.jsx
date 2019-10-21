@@ -150,7 +150,7 @@ class Guide extends React.Component {
         }
 
     handleScroll() {
-        if(window.scrollY == 0) {
+        /*if(window.scrollY == 0) {
             document.querySelector('.logo').style.borderBottom = '0px solid';
         } else {
             document.querySelector('.logo').style.borderBottom = '1px solid #eeeeee';
@@ -162,7 +162,7 @@ class Guide extends React.Component {
                 document.querySelector('.logo').style.display = 'block';
             }
         }
-        window.removeEventListener('scroll', this.handleScroll);
+        window.removeEventListener('scroll', this.handleScroll);*/
     }
 
     render() {
@@ -204,23 +204,66 @@ class Guide extends React.Component {
                                                 </div>
                                             </div>
                                         </div>
-                                        <div className="section">
+                                        <div className="section no-padding">
                                             <div className="post-heading">
                                                 <div className="title">How it works</div>
                                                 <div className="info">
-                                                    <div className="para" style={{marginTop: '0px'}}>
-                                                       <div>Stint creates your to do list based on your personal needs.
-                                                       <br/><br/>For eg, if you want to hire a good interior designer, simply add a task & stint handles the rest.<br/><br/> Shortlisting service providers, finding the fair price, assessing quality & more.
-
-                                                        </div><br/>
+                                                    <br/><br/>
+                                                    <div className="step1"/>
+                                                    <img className="curve small" src="./img/images/curve.png"/>
+                                                    <div className="para" style={{marginTop: '14px'}}>
+                                                       <div className="title">Create your task list</div>
+                                                       <div className="desc" style={{marginTop: '20px'}}>Stint creates a personal task list for you based on your needs to track everything you need to do in one place</div>
                                                     </div>
 
-                                                    <hr class="line"/>
                                                 </div>
-
-                                                <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><div style={{height: '400px'}}></div>
                                             </div>
                                         </div>
+                                        <div className="section no-padding" style={{marginTop: '40px'}}>
+                                             <div className="post-heading">
+                                                <div className="info">
+                                                    <div className="step2"/>
+                                                        <img className="curve small" src="./img/images/curve.png" style={{top: '180px'}}/>
+                                                        <div className="para" style={{marginTop: '14px'}}>
+                                                            <div className="title"></div>
+                                                           <div className="title">Qualified stintlers bid against your task</div>
+                                                           <div className="desc" style={{marginTop: '20px'}}>Stint takes a radically different approach to getting things done through local services.
+                                                           <br/><br/>By letting service providers bid against your task, stint helps you get the best price.</div>
+                                                    </div>
+                                                </div>
+                                             </div>
+                                         </div>
+                                         <div className="section no-padding" style={{marginTop: '40px'}}>
+                                              <div className="post-heading">
+                                                 <div className="info">
+                                                     <div className="step3"/>
+                                                         <img className="curve small" src="./img/images/curve.png" style={{top: '180px'}}/>
+                                                         <div className="para" style={{marginTop: '14px'}}>
+                                                             <div className="title"></div>
+                                                            <div className="title">Compare & book quality work at fair price</div>
+                                                            <div className="desc" style={{marginTop: '20px'}}>Stint helps you compare how much each task would cost you based on the USP provided by each service provider.
+                                                            It also cautions you when they quote you a price that’s above market.
+                                                            <br/><br/>Quotes from stintlers usually cost 20% less than market average.</div><br/>
+                                                     </div>
+                                                 </div>
+                                              </div>
+                                          </div>
+
+                                          <hr className="line"/>
+                                          <div className="overview" style={{background: '#f7f7f7', paddingTop: '20px'}}>So what do you want to get done?</div>
+
+                                                              <div className="section" style={{background: '#f7f7f7'}}>
+                                                                  <div className="post-heading icon-container">
+                                                                      <img className="ic" src="./img/images/ic_homei.png" style={{width: '72px'}} />
+                                                                      <img className="ic" src="./img/images/ic_eventsi.png" style={{width: '72px'}} />
+                                                                      <img className="ic" src="./img/images/ic_local_enquiriesi.png" style={{width: '72px'}} />
+                                                                  </div>
+                                                                  <br/>
+                                                              </div>
+                                                              <br/>
+
+
+                                        <div className="desc" style={{textAlign: 'center'}}>Copyright © 2019 Stint.do</div><br/>
                 </div>
 
 
