@@ -173,7 +173,7 @@ class Guide extends React.Component {
                 <div className="main">
                     <div>
 
-                        <div className="header">Make some time for life<br/><div className="sub-head">Stint eases urban life by offloading stressful daily tasks</div></div>
+                        <div className="header">Offload stressful daily tasks<br/><div className="sub-head">Stint eases urban life by offering proactive service</div></div>
                         <img className="curve" src="./img/images/curve.png"/>
                         <div className="scroll-arrow">
                             <span/><span/><span/>
@@ -214,7 +214,7 @@ class Guide extends React.Component {
                                                     <img className="curve small" src="./img/images/curve.png"/>
                                                     <div className="para" style={{marginTop: '14px'}}>
                                                        <div className="title">Create your task list</div>
-                                                       <div className="desc" style={{marginTop: '10px'}}>Stint creates a personal task list for you based on your needs. Track everything you need in one place.</div>
+                                                       <div className="desc" style={{marginTop: '10px'}}>Create your personal task list by answering quick questions.</div>
                                                     </div>
 
                                                 </div>
