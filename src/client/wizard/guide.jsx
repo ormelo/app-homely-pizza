@@ -254,7 +254,7 @@ class Guide extends React.Component {
 
                                                               <div className="section" style={{background: '#f7f7f7'}}>
                                                                   <div className="post-heading icon-container">
-                                                                      <img className="ic" src="./img/images/ic_homei.png" style={{width: '72px'}} />
+                                                                      <Link to="/home"><img className="ic" src="./img/images/ic_homei.png" style={{width: '72px'}} /></Link>
                                                                       <img className="ic" src="./img/images/ic_eventsi.png" style={{width: '72px'}} />
                                                                       <img className="ic" src="./img/images/ic_local_enquiriesi.png" style={{width: '72px'}} />
                                                                   </div>

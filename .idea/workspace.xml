@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2100fea9-fa34-466f-9140-289133e88515" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/public/guide.bundle.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/guide.bundle.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/picks.bundle.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/picks.bundle.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/wiz.bundle.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/wiz.bundle.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/wizard/createFitProfile.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/wizard/createFitProfile.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/wizard/detailView.jsx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/client/wizard/guide.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/wizard/guide.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/wizard/picks.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/wizard/picks.jsx" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -25,8 +18,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="723">
-              <caret line="114" column="1" selection-start-line="114" selection-start-column="1" selection-end-line="114" selection-end-column="1" />
+            <state relative-caret-position="288">
+              <caret line="85" lean-forward="true" selection-start-line="85" selection-end-line="85" />
               <folding>
                 <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -38,16 +31,16 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/client/wizard/guide.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="768">
-              <caret line="583" column="20" selection-start-line="583" selection-start-column="20" selection-end-line="583" selection-end-column="20" />
+            <state relative-caret-position="311">
+              <caret line="256" column="172" selection-start-line="256" selection-start-column="172" selection-end-line="256" selection-end-column="172" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/client/wizard/book.jsx">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="510">
@@ -176,11 +169,11 @@
         <option value="$PROJECT_DIR$/public/picks.html" />
         <option value="$PROJECT_DIR$/index.js" />
         <option value="$PROJECT_DIR$/public/assets/mystyles.css" />
-        <option value="$PROJECT_DIR$/src/client/wizard/guide.jsx" />
         <option value="$PROJECT_DIR$/src/client/wizard/createFitProfile.jsx" />
         <option value="$PROJECT_DIR$/src/client/wizard/picks.jsx" />
         <option value="$PROJECT_DIR$/public/index.html" />
         <option value="$PROJECT_DIR$/src/client/wizard/book.jsx" />
+        <option value="$PROJECT_DIR$/src/client/wizard/guide.jsx" />
       </list>
     </option>
   </component>
@@ -472,13 +465,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/client/wizard/guide.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="768">
-          <caret line="583" column="20" selection-start-line="583" selection-start-column="20" selection-end-line="583" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/client/wizard/createFitProfile.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="693">
@@ -486,10 +472,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/wizard/book.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="34" column="74" selection-start-line="34" selection-start-column="74" selection-end-line="34" selection-end-column="74" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/public/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="723">
-          <caret line="114" column="1" selection-start-line="114" selection-start-column="1" selection-end-line="114" selection-end-column="1" />
+        <state relative-caret-position="288">
+          <caret line="85" lean-forward="true" selection-start-line="85" selection-end-line="85" />
           <folding>
             <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -500,10 +493,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/client/wizard/book.jsx">
+    <entry file="file://$PROJECT_DIR$/src/client/wizard/guide.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="34" column="74" selection-start-line="34" selection-start-column="74" selection-end-line="34" selection-end-column="74" />
+        <state relative-caret-position="311">
+          <caret line="256" column="172" selection-start-line="256" selection-start-column="172" selection-end-line="256" selection-end-column="172" />
         </state>
       </provider>
     </entry>
