@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
-import DetailView from './detailView.jsx';
+import Book from './book.jsx';
 import { BrowserRouter as Router, Route, Link, withRouter } from 'react-router-dom';
 import { END_POINTS } from '../../common/constant';
 import { searchResults, questions } from '../../data-source/mockDataQnA';
@@ -394,7 +394,7 @@ export class ResultsList extends React.Component {
 
 }
 
-var QuizWithRouter = withRouter(DetailView)
+var QuizWithRouter = withRouter(Book)
 
 render(<Router>
     <div>

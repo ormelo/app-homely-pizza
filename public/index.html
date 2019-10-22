@@ -84,6 +84,36 @@ body {
     display: none;
 }
 
+.logo-heading{
+    margin-top: -30px;
+    padding-left: 14px;
+    text-align: center;
+    font-size: 22px;
+    padding-right: 50px;
+    color: #000;
+    font-family: 'Source Sans Pro', sans-serif;
+    opacity: 0;
+    transition: opacity .25s ease-in-out;
+   -moz-transition: opacity .25s ease-in-out;
+   -webkit-transition: opacity .25s ease-in-out;
+}
+
+.cssanimation, .cssanimation span {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+.cssanimation span { display: inline-block }
+
+.fadeInBottom { animation-name: fadeInBottom }
+@keyframes fadeInBottom {
+    from {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    to { opacity: 1 }
+}
+
 .icon-container {
     margin-top: 24px;
     text-align: center;
@@ -120,6 +150,17 @@ body {
 .ic-num {
     width: 42px;
     margin-top: -30px;
+}
+
+.copyright {
+    text-align: center;
+    font-size: 14px;
+    position: absolute;
+    bottom: 0px;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    margin-bottom: 15px;
 }
 
 .step1 {
@@ -2159,8 +2200,8 @@ p img.right { float: right; margin-left: 1em; }
 </head>
 <body>
 
-<div class="logo"><img class="logo-img" src="../img/images/logo.png" /></div>
-<div class="logo recommender" style="opacity: 0; min-height: 220px;">
+<div class="logo" id="logoWrapper"><img id="logo" class="logo-img" src="../img/images/logo.png" /><div id="logoHeading" class="logo-heading"></div></div>
+<div class="logo recommender" style="display: none; min-height: 220px;">
     <div class="recommender-body" style="font-size: 16px;margin-top: 12px;display: table;">
         <img src="../img/icon_j.png" style="margin-top: 13px;float: left;width: 50px;display: table-cell;vertical-align: middle;width: 42%;margin-left: 49px;">
         <div style="display: table-cell;vertical-align: middle;width: 72%;padding-right: 75px;padding-top: 10px;">Which is the best jewellery store for me?</div></div>

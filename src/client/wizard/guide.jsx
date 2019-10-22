@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
-import DetailView from './detailView.jsx';
+import Book from './book.jsx';
 import { BrowserRouter as Router, Route, Link, withRouter } from 'react-router-dom';
 import { END_POINTS } from '../../common/constant';
 import { searchResults, questions } from '../../data-source/mockDataQnA';
@@ -173,7 +173,7 @@ class Guide extends React.Component {
                 <div className="main">
                     <div>
 
-                        <div className="header">Offload stressful daily tasks<br/><div className="sub-head">Stint eases urban life by offering proactive service</div></div>
+                        <div className="header">Make some time for life<br/><div className="sub-head">Stint eases urban life through automated lifestyle services</div></div>
                         <img className="curve" src="./img/images/curve.png"/>
                         <div className="scroll-arrow">
                             <span/><span/><span/>
@@ -183,7 +183,7 @@ class Guide extends React.Component {
 
                     <div className="section">
                         <div className="post-heading icon-container">
-                            <img className="ic" src="./img/images/ic_homei.png" style={{width: '72px'}} />
+                            <Link to="/home"><img className="ic" src="./img/images/ic_homei.png" style={{width: '72px'}} /></Link>
                             <img className="ic" src="./img/images/ic_eventsi.png" style={{width: '72px'}} />
                             <img className="ic" src="./img/images/ic_local_enquiriesi.png" style={{width: '72px'}} />
                         </div>
@@ -242,7 +242,7 @@ class Guide extends React.Component {
                                                          <img className="curve small" src="./img/images/curve.png" style={{top: '180px'}}/>
                                                          <div className="para" style={{marginTop: '14px'}}>
                                                              <div className="title"></div>
-                                                            <div className="title">Compare & book</div>
+                                                            <div className="title">Book a stint </div>
                                                             <div className="desc" style={{marginTop: '16px'}}>Stint compares USP of each service provider and cautions you when their quote is above market.
                                                             <br/><br/><span style={{fontWeight:'bold'}}>"Quotes from stintlers are usually 20% less than market average!"</span></div><br/>
                                                      </div>
@@ -267,8 +267,8 @@ class Guide extends React.Component {
                 </div>
 
 
-                {displayQuestions && questionList && questionList.length > 0 &&
-                 <QuestionAnswer selectedAns={searchRequestPayLoad.questions || []} question={questionList[activeQuestionIndex].question} answers={questionList[activeQuestionIndex].responses} onSelect={this.onQuestionSelect} />}
+                {
+                false ? <QuestionAnswer selectedAns={searchRequestPayLoad.questions || []} question={questionList[activeQuestionIndex].question} answers={questionList[activeQuestionIndex].responses} onSelect={this.onQuestionSelect} /> : null}
 
 
             </div>);
@@ -576,14 +576,14 @@ export class ResultsList extends React.Component {
 
 }
 
-var QuizWithRouter = withRouter(DetailView)
+var QuizWithRouter = withRouter(Book)
 
 render(<Router>
     <div>
         <Route path="/" render={() => (
             <div className="results">
                     <Route exact path="/" component={Guide} />
-                <Route exact path="/recommended" component={QuizWithRouter} />
+                <Route exact path="/home" component={QuizWithRouter} />
             </div>)} />
     </div>
 </Router>, document.getElementById('containerWiz'));
