@@ -739,6 +739,10 @@ app.get("/", function(request, response) {
   response.sendFile(path.resolve(__dirname, 'public', 'guide.html'));
 });
 
+app.get("/home", function(request, response) {
+  response.redirect('/');
+});
+
 app.get("/products", function(request, response) {
   //Todo: comment above n uncomment below
   response.send(pages.products);

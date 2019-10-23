@@ -105,7 +105,7 @@ class Book extends Component {
     render() {
          const { questionList, activeQuestionIndex, searchRequestPayLoad = [], displayQuestions, showLoader } = this.state;
         return (<div>
-                    <div className="logo" id="logoWrapper">
+                    <div className="logo" id="logoWrapper" style={{top: '40px'}}>
                         <img id="logo" className="logo-img" style={{width: '40px'}} src="../img/images/logo_ic.png" />
                         <div id="logoHeading" className="logo-heading">Plan your home</div>
                     </div>

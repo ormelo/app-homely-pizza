@@ -2,7 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2100fea9-fa34-466f-9140-289133e88515" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/mystyles.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/mystyles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/guide.bundle.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/guide.bundle.min.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/picks.bundle.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/picks.bundle.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/wiz.bundle.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/wiz.bundle.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/wizard/book.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/wizard/book.jsx" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -27,17 +34,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/assets/mystyles.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="317">
-              <caret line="148" column="23" selection-start-line="148" selection-start-column="23" selection-end-line="148" selection-end-column="23" />
+            <state relative-caret-position="122">
+              <caret line="109" column="37" lean-forward="true" selection-start-line="109" selection-start-column="37" selection-end-line="109" selection-end-column="37" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="392">
-              <caret line="89" column="14" selection-start-line="89" selection-start-column="14" selection-end-line="89" selection-end-column="14" />
+            <state relative-caret-position="408">
+              <caret line="104" column="18" selection-start-line="104" selection-start-column="18" selection-end-line="104" selection-end-column="18" />
               <folding>
                 <element signature="n#style#0;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#script#0;n#body#0;n#html#0;n#!!top" />
@@ -58,17 +65,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/client/wizard/book.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="502">
-              <caret line="34" column="52" selection-start-line="34" selection-start-column="52" selection-end-line="34" selection-end-column="52" />
+            <state relative-caret-position="588">
+              <caret line="107" column="77" selection-start-line="107" selection-start-column="77" selection-end-line="107" selection-end-column="77" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="11070">
-              <caret line="738" column="69" selection-start-line="738" selection-start-column="69" selection-end-line="738" selection-end-column="69" />
+            <state relative-caret-position="151">
+              <caret line="742" column="22" selection-start-line="742" selection-start-column="22" selection-end-line="742" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -113,9 +120,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>searchRequestPayLoad</find>
-      <find>onQuestionSelect</find>
-      <find>logo</find>
       <find>.logo .logo-img</find>
       <find>.logo-he</find>
       <find>loading</find>
@@ -138,11 +142,14 @@
       <find>what desc</find>
       <find>showLoader</find>
       <find>QuestionAnswer</find>
-      <find>.question-answers-container .question</find>
       <find>.question-answers-container .answer</find>
-      <find>.loading</find>
       <find>.answer:hover</find>
+      <find>.loading</find>
       <find>activeQuestionIndex</find>
+      <find>c</find>
+      <find>.question-answers-container .question</find>
+      <find>.logo-</find>
+      <find>redirect</find>
     </findStrings>
     <replaceStrings>
       <replace>./img/anim1/</replace>
@@ -163,22 +170,22 @@
         <option value="$PROJECT_DIR$/webpack.config.js" />
         <option value="$PROJECT_DIR$/src/data-source/mockDataPicks.js" />
         <option value="$PROJECT_DIR$/public/picks.html" />
-        <option value="$PROJECT_DIR$/index.js" />
         <option value="$PROJECT_DIR$/src/client/wizard/createFitProfile.jsx" />
         <option value="$PROJECT_DIR$/src/client/wizard/picks.jsx" />
         <option value="$PROJECT_DIR$/src/client/wizard/guide.jsx" />
         <option value="$PROJECT_DIR$/src/data-source/mockDataQnA.js" />
-        <option value="$PROJECT_DIR$/public/assets/mystyles.css" />
         <option value="$PROJECT_DIR$/src/client/wizard/book.jsx" />
+        <option value="$PROJECT_DIR$/public/assets/mystyles.css" />
         <option value="$PROJECT_DIR$/public/index.html" />
+        <option value="$PROJECT_DIR$/index.js" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="486" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="186" />
     <option name="y" value="23" />
-    <option name="width" value="1434" />
-    <option name="height" value="1107" />
+    <option name="width" value="1734" />
+    <option name="height" value="1108" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -197,12 +204,6 @@
               <item name="epigram-web" type="b2602c69:ProjectViewProjectNode" />
               <item name="epigram-web" type="462c0819:PsiDirectoryNode" />
               <item name="public" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="epigram-web" type="b2602c69:ProjectViewProjectNode" />
-              <item name="epigram-web" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="epigram-web" type="b2602c69:ProjectViewProjectNode" />
@@ -276,10 +277,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1920" height="1108" extended-state="6" />
-    <editor active="true" />
+    <frame x="186" y="23" width="1734" height="1108" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1656017" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18380615" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
@@ -415,13 +415,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="11070">
-          <caret line="738" column="69" selection-start-line="738" selection-start-column="69" selection-end-line="738" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/picks.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="14715">
@@ -464,28 +457,35 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/mystyles.css">
+    <entry file="file://$PROJECT_DIR$/src/client/wizard/book.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="317">
-          <caret line="148" column="23" selection-start-line="148" selection-start-column="23" selection-end-line="148" selection-end-column="23" />
+        <state relative-caret-position="588">
+          <caret line="107" column="77" selection-start-line="107" selection-start-column="77" selection-end-line="107" selection-end-column="77" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/client/wizard/book.jsx">
+    <entry file="file://$PROJECT_DIR$/public/assets/mystyles.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="502">
-          <caret line="34" column="52" selection-start-line="34" selection-start-column="52" selection-end-line="34" selection-end-column="52" />
+        <state relative-caret-position="122">
+          <caret line="109" column="37" lean-forward="true" selection-start-line="109" selection-start-column="37" selection-end-line="109" selection-end-column="37" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="392">
-          <caret line="89" column="14" selection-start-line="89" selection-start-column="14" selection-end-line="89" selection-end-column="14" />
+        <state relative-caret-position="408">
+          <caret line="104" column="18" selection-start-line="104" selection-start-column="18" selection-end-line="104" selection-end-column="18" />
           <folding>
             <element signature="n#style#0;n#body#0;n#html#0;n#!!top" />
             <element signature="n#script#0;n#body#0;n#html#0;n#!!top" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="151">
+          <caret line="742" column="22" selection-start-line="742" selection-start-column="22" selection-end-line="742" selection-end-column="22" />
         </state>
       </provider>
     </entry>
