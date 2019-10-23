@@ -169,11 +169,18 @@ class Guide extends React.Component {
             const { questionList, activeQuestionIndex, searchRequestPayLoad = [], displayQuestions } = this.state;
             return (<div>
 
+            <div className="logo" id="logoWrapper">
+                <img id="logo" className="logo-img" src="../img/images/logo.png" />
+                <div id="logoHeading" className="logo-heading"></div>
+            </div>
+            <div><i className="loading"></i></div>
+
+
                 <div className={`banner${Math.floor(Math.random() * 4) + 1}`}/>
                 <div className="main">
                     <div>
 
-                        <div className="header">Make some time for life<br/><div className="sub-head">Stint eases urban life through automated lifestyle services</div></div>
+                        <div className="header">Make some time for life<br/><div className="sub-head">Stint eases urban life by offloading stressful local errands</div></div>
                         <img className="curve" src="./img/images/curve.png"/>
                         <div className="scroll-arrow">
                             <span/><span/><span/>

@@ -40,21 +40,21 @@ body {
 }
 
 .banner1 {
-    margin-top: -27px;
+    margin-top: 18px;
     height: 396px;
     background-image: url(./img/images/banner-meditate.jpeg);
     background-size: cover;
 }
 
 .banner2 {
-    margin-top: -27px;
+    margin-top: 18px;
     height: 396px;
     background-image: url(./img/images/banner-kayak.jpeg);
     background-size: cover;
 }
 
 .banner3 {
-    margin-top: -27px;
+    margin-top: 18px;
     height: 396px;
     background-image: url(./img/images/banner-pet.jpeg);
     background-size: cover;
@@ -62,7 +62,7 @@ body {
 }
 
 .banner4 {
-    margin-top: -27px;
+    margin-top: 18px;
     height: 396px;
     background-image: url(./img/images/banner-sit.jpeg);
     background-size: 192%;
@@ -73,7 +73,7 @@ body {
 .curve {
     width: 200px;
     margin: 0 auto;
-    top: 396px;
+    top: 391px;
     left: 0;
     right: 0;
     position: absolute;
@@ -84,7 +84,19 @@ body {
     display: none;
 }
 
+ul.wstep li {
+    background: #e4e4e4;
+    width: 68px;
+    padding: 3px;
+    margin-right: 4px;
+}
+
+ul.wstep li.active {
+    background: #4ecc9e;
+}
+
 .logo-heading{
+    opacity:0;
     margin-top: -30px;
     padding-left: 14px;
     text-align: center;
@@ -92,7 +104,6 @@ body {
     padding-right: 50px;
     color: #000;
     font-family: 'Source Sans Pro', sans-serif;
-    opacity: 0;
     transition: opacity .25s ease-in-out;
    -moz-transition: opacity .25s ease-in-out;
    -webkit-transition: opacity .25s ease-in-out;
@@ -1198,7 +1209,7 @@ ul li{
     margin-top: 45%;
     -webkit-animation: rotation 1s infinite linear;
     animation: rotation 1s infinite linear;
-    border: 1px solid #0badff;
+    border: 1px solid #03d39c;
     border-radius: 50%;
     border-top-color: rgba(195, 208, 228, 0.7);
     height: 50px;
@@ -2199,71 +2210,15 @@ p img.right { float: right; margin-left: 1em; }
     
 </head>
 <body>
-
-<div class="logo" id="logoWrapper"><img id="logo" class="logo-img" src="../img/images/logo.png" /><div id="logoHeading" class="logo-heading"></div></div>
-<div class="logo recommender" style="display: none; min-height: 220px;">
-    <div class="recommender-body" style="font-size: 16px;margin-top: 12px;display: table;">
-        <img src="../img/icon_j.png" style="margin-top: 13px;float: left;width: 50px;display: table-cell;vertical-align: middle;width: 42%;margin-left: 49px;">
-        <div style="display: table-cell;vertical-align: middle;width: 72%;padding-right: 75px;padding-top: 10px;">Which is the best jewellery store for me?</div></div>
-    <input type="submit" class="submit form-control" id="id_submit" value="Recommend Now" style="bottom: -43px;margin: 0 auto;position: relative;" onclick="onRecommenderClick()">
-</div>
-<div>
-
-    <i class="loading"></i>
-    <!-- Full Body Container -->
-
-
-
-    <div class="clear"></div>
-
-    <div class="row">
-        <div class="project">
-            <style type="text/css">
-        .testimonials2 .item td.col1 {
-            vertical-align: top;
-            text-align: center;
-            width: 106px;
-            padding: 5px;
-        }
-
-        .testimonials2 .item td.col1 img {
-            width: 96px;
-        }
-
-        .testimonials2 .item td.col2 {
-            background: #f1f1f1;
-            padding: 5px;
-            text-align: justify;
-            text-justify: inter-word;
-            height: 120px;
-            font-size: 10px;
-        }
-
-
-
-
-        </style>
-
-            <div class="latest-posts testimonials2">
-
-                <div class="latest-posts-classic custom-carousel touch-carousel" data-appeared-items="2" style="opacity: 0;">
-
-                </div>
-            </div>
-        </div>
-
-
-
-
-    </div>
-
-</div>
-
 <div id="containerWiz" class="container">
 
+
+
+
+
+
+
 </div>
-
-
 <style type="text/css" id="footer_style">
 
     footer a {
@@ -2298,7 +2253,6 @@ p img.right { float: right; margin-left: 1em; }
 
 
 
-</div>
 
 <script>
     function navTo(item) {
@@ -2428,5 +2382,4 @@ function startReactions(elem) {
 </script>
 
 <script src="./guide.bundle.min.js"></script>
-
 </body></html>

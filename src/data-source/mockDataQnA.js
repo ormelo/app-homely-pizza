@@ -15067,23 +15067,28 @@ export const questions = {
     "results": [
      {
        "questionId": 2,
-       "question": "What describes your jewellery style?",
+       "question": "What service would you like?",
        "responses": [
          {
            "id": 7,
-           "title": "High-fashion",
+           "title": "Interior design",
            "type": "Button"
          },
          {
            "id": 8,
-           "title": "Modern",
+           "title": "Home furnishing",
            "type": "Button"
          },
          {
            "id": 9,
-           "title": "Traditional",
+           "title": "Renovation",
            "type": "Button"
-         }
+         },
+         {
+            "id": 9,
+            "title": "Painting",
+            "type": "Button"
+          }
        ]
      },
      {
