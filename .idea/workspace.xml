@@ -2,14 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2100fea9-fa34-466f-9140-289133e88515" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/assets/mystyles.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/mystyles.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/guide.bundle.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/guide.bundle.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/picks.bundle.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/picks.bundle.min.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/wiz.bundle.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/wiz.bundle.min.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/client/wizard/book.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/wizard/book.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data-source/mockDataQnA.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data-source/mockDataQnA.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -25,17 +23,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/data-source/mockDataQnA.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="913">
-              <caret line="15088" column="30" selection-start-line="15088" selection-start-column="30" selection-end-line="15088" selection-end-column="30" />
+            <state relative-caret-position="787">
+              <caret line="15296" column="43" selection-start-line="15296" selection-start-column="43" selection-end-line="15296" selection-end-column="43" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/assets/mystyles.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="122">
-              <caret line="109" column="37" lean-forward="true" selection-start-line="109" selection-start-column="37" selection-end-line="109" selection-end-column="37" />
+            <state relative-caret-position="452">
+              <caret line="131" column="29" selection-start-line="131" selection-start-column="29" selection-end-line="131" selection-end-column="29" />
             </state>
           </provider>
         </entry>
@@ -65,16 +63,16 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/client/wizard/book.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="588">
-              <caret line="107" column="77" selection-start-line="107" selection-start-column="77" selection-end-line="107" selection-end-column="77" />
+            <state relative-caret-position="311">
+              <caret line="102" column="83" selection-start-line="102" selection-start-column="83" selection-end-line="102" selection-end-column="83" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="151">
+            <state relative-caret-position="221">
               <caret line="742" column="22" selection-start-line="742" selection-start-column="22" selection-end-line="742" selection-end-column="22" />
             </state>
           </provider>
@@ -120,9 +118,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>.logo .logo-img</find>
-      <find>.logo-he</find>
-      <find>loading</find>
       <find>ic_home</find>
       <find>ogo-heading</find>
       <find>logoHeading</find>
@@ -134,14 +129,11 @@
       <find>logo-</find>
       <find>Book</find>
       <find>&lt;QuestionAnswer</find>
-      <find>questions</find>
       <find>.question</find>
       <find>question0a</find>
       <find>logo-heading</find>
-      <find>questionList</find>
       <find>what desc</find>
       <find>showLoader</find>
-      <find>QuestionAnswer</find>
       <find>.question-answers-container .answer</find>
       <find>.answer:hover</find>
       <find>.loading</find>
@@ -150,6 +142,12 @@
       <find>.question-answers-container .question</find>
       <find>.logo-</find>
       <find>redirect</find>
+      <find>QuestionAnswer</find>
+      <find>questionList</find>
+      <find>titleCase</find>
+      <find>questions</find>
+      <find>selectedAns</find>
+      <find>activeq</find>
     </findStrings>
     <replaceStrings>
       <replace>./img/anim1/</replace>
@@ -173,15 +171,15 @@
         <option value="$PROJECT_DIR$/src/client/wizard/createFitProfile.jsx" />
         <option value="$PROJECT_DIR$/src/client/wizard/picks.jsx" />
         <option value="$PROJECT_DIR$/src/client/wizard/guide.jsx" />
-        <option value="$PROJECT_DIR$/src/data-source/mockDataQnA.js" />
-        <option value="$PROJECT_DIR$/src/client/wizard/book.jsx" />
-        <option value="$PROJECT_DIR$/public/assets/mystyles.css" />
         <option value="$PROJECT_DIR$/public/index.html" />
         <option value="$PROJECT_DIR$/index.js" />
+        <option value="$PROJECT_DIR$/src/client/wizard/book.jsx" />
+        <option value="$PROJECT_DIR$/src/data-source/mockDataQnA.js" />
+        <option value="$PROJECT_DIR$/public/assets/mystyles.css" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="186" />
     <option name="y" value="23" />
     <option name="width" value="1734" />
@@ -193,6 +191,7 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -233,7 +232,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -277,9 +275,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="186" y="23" width="1734" height="1108" extended-state="0" />
+    <frame x="0" y="23" width="1920" height="1108" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18380615" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16719915" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
@@ -443,6 +442,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="742" column="22" selection-start-line="742" selection-start-column="22" selection-end-line="742" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/client/wizard/guide.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="311">
@@ -450,24 +456,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/data-source/mockDataQnA.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="913">
-          <caret line="15088" column="30" selection-start-line="15088" selection-start-column="30" selection-end-line="15088" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/client/wizard/book.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="588">
-          <caret line="107" column="77" selection-start-line="107" selection-start-column="77" selection-end-line="107" selection-end-column="77" />
+        <state relative-caret-position="311">
+          <caret line="102" column="83" selection-start-line="102" selection-start-column="83" selection-end-line="102" selection-end-column="83" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/mystyles.css">
+    <entry file="file://$PROJECT_DIR$/src/data-source/mockDataQnA.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="122">
-          <caret line="109" column="37" lean-forward="true" selection-start-line="109" selection-start-column="37" selection-end-line="109" selection-end-column="37" />
+        <state relative-caret-position="787">
+          <caret line="15296" column="43" selection-start-line="15296" selection-start-column="43" selection-end-line="15296" selection-end-column="43" />
         </state>
       </provider>
     </entry>
@@ -482,10 +481,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.js">
+    <entry file="file://$PROJECT_DIR$/public/assets/mystyles.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="151">
-          <caret line="742" column="22" selection-start-line="742" selection-start-column="22" selection-end-line="742" selection-end-column="22" />
+        <state relative-caret-position="452">
+          <caret line="131" column="29" selection-start-line="131" selection-start-column="29" selection-end-line="131" selection-end-column="29" />
         </state>
       </provider>
     </entry>

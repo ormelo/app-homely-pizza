@@ -15090,82 +15090,218 @@ export const questions = {
             "type": "Button"
           }
        ]
-     },
-     {
-       "questionId": 1,
-       "question": "What product are you considering to shop?",
-       "responses": [
-         {
-           "id": 1,
-           "title": "Rings",
-           "type": "Button"
-         },
-         {
-           "id": 2,
-           "title": "Necklaces",
-           "type": "Button"
-         },
-         {
-           "id": 3,
-           "title": "Earrings",
-           "type": "Button"
-         },
-         {
-           "id": 4,
-           "title": "Pendants / Bracelets",
-           "type": "Button"
-         },
-         {
-           "id": 5,
-           "title": "Chains",
-           "type": "Button"
-         },
-         {
-           "id": 6,
-           "title": "Other",
-           "type": "Button"
-         }
-       ]
-     },
-     {
-       "questionId": 3,
-       "question": "Which category are you looking at?",
-       "responses": [
-         {
-           "id": 10,
-           "title": "Gold",
-           "type": "Button"
-         },
-         {
-           "id": 11,
-           "title": "Platinum",
-           "type": "Button"
-         },
-         {
-           "id": 12,
-           "title": "Silver",
-           "type": "Button"
-         }
-       ]
-     },
-     {
-        "questionId": 4,
-        "question": "Add 'low making charges' as shortlisting criteria?",
-        "responses": [
-          {
-            "id": 13,
-            "title": "Yes",
-            "type": "Button"
-          },
-          {
-            "id": 14,
-            "title": "No",
-            "type": "Button"
-          }
-        ]
-      }
+     }
     ]
    }
+
+   export const conditionalQuestions = {
+        "InteriorDesign": {
+       "results": [
+        {
+          "questionId": 2,
+          "question": "Choose your home type:   ",
+          "responses": [
+            {
+              "id": 7,
+              "title": "2 BHK",
+              "type": "Button"
+            },
+            {
+              "id": 8,
+              "title": "3 BHK",
+              "type": "Button"
+            },
+            {
+              "id": 9,
+              "title": "Villa",
+              "type": "Button"
+            },
+            {
+               "id": 9,
+               "title": "Duplex",
+               "type": "Button"
+             }
+          ]
+        },
+        {
+          "questionId": 1,
+          "question": "What do you plan to design?",
+          "responses": [
+            {
+              "id": 1,
+              "title": "Entire home",
+              "type": "Button"
+            },
+            {
+              "id": 2,
+              "title": "Modular kitchen only",
+              "type": "Button"
+            },
+            {
+              "id": 3,
+              "title": "Living room & bed room(s)",
+              "type": "Button"
+            }
+          ]
+        },
+        {
+          "questionId": 3,
+          "question": "What's your planned budget?",
+          "responses": [
+            {
+              "id": 10,
+              "title": "Below 1 Lakh",
+              "type": "Button"
+            },
+            {
+              "id": 11,
+              "title": "1 to 2 Lakhs",
+              "type": "Button"
+            },
+            {
+              "id": 12,
+              "title": "3 to 5 Lakhs",
+              "type": "Button"
+            },
+            {
+              "id": 14,
+              "title": "5+ Lakhs",
+              "type": "Button"
+            }
+          ]
+        },
+        {
+           "questionId": 4,
+           "question": "Which locality are you from?",
+           "responses": [
+             {
+               "id": 10,
+               "title": "East Bangalore (Whitefield & others)",
+               "type": "Button"
+             },
+             {
+               "id": 11,
+               "title": "South Bangalore (Jayanagar & others)",
+               "type": "Button"
+             },
+             {
+               "id": 12,
+               "title": "North Bangalore (Hebbal & others)",
+               "type": "Button"
+             },
+             {
+               "id": 14,
+               "title": "West Bangalore (Nagarbhavi & others)",
+               "type": "Button"
+             }
+           ]
+         }
+       ]
+       },
+       "HomeFurnishing": {
+              "results": [
+               {
+                 "questionId": 2,
+                 "question": "Choose your home type:   ",
+                 "responses": [
+                   {
+                     "id": 7,
+                     "title": "2 BHK",
+                     "type": "Button"
+                   },
+                   {
+                     "id": 8,
+                     "title": "3 BHK",
+                     "type": "Button"
+                   },
+                   {
+                     "id": 9,
+                     "title": "Villa",
+                     "type": "Button"
+                   },
+                   {
+                      "id": 9,
+                      "title": "Duplex",
+                      "type": "Button"
+                    }
+                 ]
+               },
+               {
+                 "questionId": 1,
+                 "question": "What do you plan to furnish?",
+                 "responses": [
+                   {
+                     "id": 1,
+                     "title": "Entire home",
+                     "type": "Button"
+                   },
+                   {
+                     "id": 2,
+                     "title": "Modular kitchen only",
+                     "type": "Button"
+                   },
+                   {
+                     "id": 3,
+                     "title": "Living room & bed room(s)",
+                     "type": "Button"
+                   }
+                 ]
+               },
+               {
+                 "questionId": 3,
+                 "question": "What's your planned budget?",
+                 "responses": [
+                   {
+                     "id": 10,
+                     "title": "Below 1 Lakh",
+                     "type": "Button"
+                   },
+                   {
+                     "id": 11,
+                     "title": "1 to 2 Lakhs",
+                     "type": "Button"
+                   },
+                   {
+                     "id": 12,
+                     "title": "3 to 5 Lakhs",
+                     "type": "Button"
+                   },
+                   {
+                     "id": 14,
+                     "title": "5+ Lakhs",
+                     "type": "Button"
+                   }
+                 ]
+               },
+               {
+                  "questionId": 4,
+                  "question": "Which furniture are you looking to purchase for you living room?",
+                  "responses": [
+                    {
+                      "id": 10,
+                      "title": "Sofa set",
+                      "type": "Button"
+                    },
+                    {
+                      "id": 11,
+                      "title": "Modular cupboards",
+                      "type": "Button"
+                    },
+                    {
+                      "id": 12,
+                      "title": "TV Set",
+                      "type": "Button"
+                    },
+                    {
+                      "id": 14,
+                      "title": "Living room decor",
+                      "type": "Button"
+                    }
+                  ]
+                }
+              ]
+              }
+      }
 
   export const detailView = {
     "title": "Panambur beach",

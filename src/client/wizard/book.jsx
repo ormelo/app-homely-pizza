@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { render } from 'react-dom';
 import { BrowserRouter as Router, Route, Link, withRouter } from 'react-router-dom';
 import { detailView } from '../../data-source/mockData';
-import { questions } from '../../data-source/mockDataQnA';
+import { questions, conditionalQuestions } from '../../data-source/mockDataQnA';
 import ModalView from './modalView.jsx';
 
 class QuestionAnswer extends Component {
@@ -55,8 +55,10 @@ class Book extends Component {
         super();
         this.state = {
             activeQuestionIndex: 0,
+            conditionalActiveQuestionIndex: 0,
             showLoader: false,
             questionList: questions.results,
+            conditionalQuestions: {results:[]},
             searchRequestPayLoad: {
                 "query": this.getSearchQuery(),
                 "questions": []
@@ -64,6 +66,7 @@ class Book extends Component {
             displayQuestions: true
         }
         this.onQuestionSelect = this.onQuestionSelect.bind(this);
+        this.onConditionalQuestionSelect = this.onConditionalQuestionSelect.bind(this);
     }
     componentWillUnmount() {
     }
@@ -84,6 +87,33 @@ class Book extends Component {
         }
         return ''
     }
+    titleCase(str) {
+       var splitStr = str.toLowerCase().split(' ');
+       for (var i = 0; i < splitStr.length; i++) {
+           // You do not need to check if i is larger than splitStr length, as your for does that for you
+           // Assign it back to the array
+           splitStr[i] = splitStr[i].charAt(0).toUpperCase() + splitStr[i].substring(1);
+       }
+       // Directly return the joined string
+       return splitStr.join(' ');
+    }
+    onConditionalQuestionSelect(answer) {
+         let { conditionalActiveQuestionIndex, conditionalQuestions, searchRequestPayLoad } = this.state;
+                searchRequestPayLoad.questions.push({
+                    id: conditionalQuestions.results[conditionalActiveQuestionIndex].id,
+                    responseId: answer.id
+                })
+                let nextIndex = conditionalActiveQuestionIndex + 1;
+                if (conditionalQuestions.results.length > nextIndex) {
+                    this.setState({
+                        conditionalActiveQuestionIndex: nextIndex,
+                        searchRequestPayLoad: searchRequestPayLoad
+                    })
+                }
+
+                let ans = answer.title;
+                console.log('conditional answer: ', ans);
+    }
     onQuestionSelect(answer) {
         let { activeQuestionIndex, questionList, searchRequestPayLoad } = this.state;
         searchRequestPayLoad.questions.push({
@@ -97,13 +127,20 @@ class Book extends Component {
                 searchRequestPayLoad: searchRequestPayLoad
             })
         }
+        debugger;
+
+        let ans = this.titleCase(answer.title).replace(/ /g,'');
+        console.log('answer: ', conditionalQuestions[ans]);
+        this.setState({conditionalQuestions: conditionalQuestions[ans]});
+        //if(answer.title == 'Interior'
+
         if(activeQuestionIndex == 3) {
             window.location.href = "/recommended-picks";
         }
     }
 
     render() {
-         const { questionList, activeQuestionIndex, searchRequestPayLoad = [], displayQuestions, showLoader } = this.state;
+         const { questionList, activeQuestionIndex, conditionalActiveQuestionIndex, searchRequestPayLoad = [], displayQuestions, showLoader, conditionalQuestions } = this.state;
         return (<div>
                     <div className="logo" id="logoWrapper" style={{top: '40px'}}>
                         <img id="logo" className="logo-img" style={{width: '40px'}} src="../img/images/logo_ic.png" />
@@ -112,9 +149,11 @@ class Book extends Component {
                     <div><i className="loading" style={{display: showLoader ? 'block' : 'none'}}></i></div>
                     <div className="main fadeInBottom">
 
-                        {questionList && questionList.length > 0 &&
+                        {conditionalQuestions && conditionalQuestions.results && conditionalQuestions.results.length <= 0 && questionList && questionList.length > 0 &&
                          <QuestionAnswer selectedAns={searchRequestPayLoad.questions || []} question={questionList[activeQuestionIndex].question} answers={questionList[activeQuestionIndex].responses} onSelect={this.onQuestionSelect} activeIndex={activeQuestionIndex+1} />}
 
+                        {conditionalQuestions && conditionalQuestions.results && conditionalQuestions.results.length > 0 &&
+                                                 <QuestionAnswer selectedAns={searchRequestPayLoad.questions || []} question={conditionalQuestions.results[conditionalActiveQuestionIndex].question} answers={conditionalQuestions.results[conditionalActiveQuestionIndex].responses} onSelect={this.onConditionalQuestionSelect} activeIndex={conditionalActiveQuestionIndex+1} />}
 
                     </div>
                 <div className="desc copyright" style={{textAlign: 'center',fontSize: '14px'}}>Copyright © 2019 Stint.do</div><br/>
