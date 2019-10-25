@@ -64,7 +64,7 @@
     left: 0;
     right: 0;
     width: 80%;
-    top: 124px;
+    top: 82px;
 }
 .question-answers-container .answer {
     display: inline-block;
@@ -74,10 +74,10 @@
     margin-top: 4px;
     padding: 4px 10px;
     text-align: center;
-    border: 1px solid #4ecc9e;
+    border: 1px solid #26cf96;
     margin-right: 11px;
     border-radius: 15px;
-    color: #2b9f74;
+    color: #17bc85;
     background: rgba(255, 255, 255, 0.8);
     font-size: 14px;
 }
@@ -147,7 +147,7 @@
     color: white;
 }   
 .answer:hover{
-    background: #4ecc9e;
+    background: #26cf96;
     color: #fff;
 }
   

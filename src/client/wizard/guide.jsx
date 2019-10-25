@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
 import Book from './book.jsx';
+import MyTasks from './mytasks.jsx';
 import { BrowserRouter as Router, Route, Link, withRouter } from 'react-router-dom';
 import { END_POINTS } from '../../common/constant';
 import { searchResults, questions } from '../../data-source/mockDataQnA';
@@ -583,7 +584,8 @@ export class ResultsList extends React.Component {
 
 }
 
-var QuizWithRouter = withRouter(Book)
+var QuizWithRouter = withRouter(Book);
+var MytasksWithRouter = withRouter(MyTasks);
 
 render(<Router>
     <div>
@@ -591,6 +593,7 @@ render(<Router>
             <div className="results">
                     <Route exact path="/" component={Guide} />
                 <Route exact path="/home" component={QuizWithRouter} />
+                <Route exact path="/mytasks" component={MytasksWithRouter} />
             </div>)} />
     </div>
 </Router>, document.getElementById('containerWiz'));

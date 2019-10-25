@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
-import { BrowserRouter as Router, Route, Link, withRouter } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Link, withRouter, useHistory } from 'react-router-dom';
 import { detailView } from '../../data-source/mockData';
 import { questions, conditionalQuestions } from '../../data-source/mockDataQnA';
 import ModalView from './modalView.jsx';
@@ -17,7 +17,6 @@ class QuestionAnswer extends Component {
     }
 
     render() {
-
         return (
             <div className={`question-answers-container ${this.props.className}`}>
                 <ul className="wstep">
@@ -37,7 +36,8 @@ class QuestionAnswer extends Component {
                             {this.props.answers.map((answer) => {
                                 return (<div key={Math.random()} className={true ? "answer" : "answer active-ans"}
                                     onClick={() => this.props.onSelect(answer)}>
-                                    <span className="ans-text" >{answer.title}</span>
+                                    {this.props.activeIndex == 4 ? <Link to="/mytasks" style={{color: '#17bc85'}}><span className="ans-text" >{answer.title}</span></Link>
+                                        : <span className="ans-text" >{answer.title}</span>}
                                 </div>)
                             })}
                         </div>
@@ -73,6 +73,8 @@ class Book extends Component {
     componentDidMount() {
         const { params } = this.props.match;
         setTimeout(function(){document.getElementById('logoHeading').style.opacity = '1';},0);
+        localStorage.removeItem('primary-task');
+        localStorage.removeItem('secondary-task');
         this.setState({
             searchQuery: params.searchQuery,
             details: detailView,
@@ -112,6 +114,13 @@ class Book extends Component {
                 }
 
                 let ans = answer.title;
+                let curVal = localStorage.getItem('secondary-task');
+                if(curVal == null) {
+                    localStorage.setItem('secondary-task', answer.title);
+                } else {
+                    localStorage.setItem('secondary-task', curVal + ',' + answer.title);
+                }
+
                 console.log('conditional answer: ', ans);
     }
     onQuestionSelect(answer) {
@@ -128,6 +137,7 @@ class Book extends Component {
             })
         }
         debugger;
+        localStorage.setItem('primary-task', answer.title);
 
         let ans = this.titleCase(answer.title).replace(/ /g,'');
         console.log('answer: ', conditionalQuestions[ans]);
@@ -142,7 +152,7 @@ class Book extends Component {
     render() {
          const { questionList, activeQuestionIndex, conditionalActiveQuestionIndex, searchRequestPayLoad = [], displayQuestions, showLoader, conditionalQuestions } = this.state;
         return (<div>
-                    <div className="logo" id="logoWrapper" style={{top: '40px'}}>
+                    <div className="logo" id="logoWrapper" style={{top: '0px'}}>
                         <img id="logo" className="logo-img" style={{width: '40px'}} src="../img/images/logo_ic.png" />
                         <div id="logoHeading" className="logo-heading">Plan your home</div>
                     </div>
