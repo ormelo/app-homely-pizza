@@ -743,6 +743,10 @@ app.get("/home", function(request, response) {
   response.redirect('/');
 });
 
+app.get("/mytasks", function(request, response) {
+  response.redirect('/');
+});
+
 app.get("/products", function(request, response) {
   //Todo: comment above n uncomment below
   response.send(pages.products);

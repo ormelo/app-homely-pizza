@@ -1,4 +1,4 @@
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">
@@ -92,7 +92,73 @@ ul.wstep li {
 }
 
 ul.wstep li.active {
-    background: #4ecc9e;
+    background: #26cf96;
+}
+
+.line-tasks {
+    border-top: 1px solid #eee;
+    width: calc(100% - 40px);
+    margin: 0 auto;
+    margin-top: 81px;
+}
+
+.alert-msg {
+    padding-left: 27px;
+    padding-right: 27px;
+    margin: 0 auto;
+    margin-top: 20px;
+    display: table;
+}
+
+.alert-icon {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.alert-icon img  { width: 60px; }
+
+.alert-message {
+    display: table-cell;
+    vertical-align: middle;
+    padding-left: 15px;
+}
+
+.a-title {
+    font-size: 14px;
+    color: #000;
+}
+
+.a-desc { color: #a0a0a0; }
+
+.shake {
+	display:inline-block
+}
+.shake {
+	display:block;
+	position:relative;
+}
+.shake.inline {
+	display:inline-block
+}
+@-webkit-keyframes spaceboots {
+	0% { -webkit-transform: translate(2px, 1px) rotate(0deg); }
+	10% { -webkit-transform: translate(-1px, -2px) rotate(-1deg); }
+	20% { -webkit-transform: translate(-3px, 0px) rotate(1deg); }
+	30% { -webkit-transform: translate(0px, 2px) rotate(0deg); }
+	40% { -webkit-transform: translate(1px, -1px) rotate(1deg); }
+	50% { -webkit-transform: translate(-1px, 2px) rotate(-1deg); }
+	60% { -webkit-transform: translate(-3px, 1px) rotate(0deg); }
+	70% { -webkit-transform: translate(2px, 1px) rotate(-1deg); }
+	80% { -webkit-transform: translate(-1px, -1px) rotate(1deg); }
+	90% { -webkit-transform: translate(2px, 2px) rotate(0deg); }
+	100% { -webkit-transform: translate(1px, -2px) rotate(-1deg); }
+}
+.shake {
+	-webkit-animation-name: spaceboots;
+	-webkit-animation-duration: 0.8s;
+	-webkit-transform-origin:50% 50%;
+	-webkit-animation-iteration-count: 1;
+	-webkit-animation-timing-function: linear;
 }
 
 .logo-heading{
@@ -386,32 +452,32 @@ text-size-adjust:none;
     <title>Stint - Your personal multitakser</title>
 
     <!-- Define Charset -->
-    
+
     <!-- Responsive Metatag -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    
+
     <meta name="description" content="Trusted local recommendations based on community knowledge.">
     <meta property="og:description" content="Best catering services for your party at affordable prices. We serve everything fresh & hot right infront of your home, thanks to our food trucks.">
     <meta property="og:keywords" content="Birthday Party, Office party, Corporate events, Catering, Small Party, Caterers, Small Home Parties,  Caterers in bangalore, house parties">
     <meta name="keywords" content="Birthday Party, Office party, Corporate events, Catering, Small Party, Caterers, Small Home Parties,  Caterers in bangalore, house parties">
 
-    
+
     <link rel="stylesheet" href="./assets/bootstrap.min.css" media="screen">
-<link rel="stylesheet" href="./assets/font-awesome.min.css" type="text/css" media="screen">
-<link rel="stylesheet" href="./assets/jquery-ui.min.css">
-<link rel="stylesheet" href="./assets/mystyles.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="./assets/font-awesome.min.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="./assets/jquery-ui.min.css">
+    <link rel="stylesheet" href="./assets/mystyles.css" type="text/css" media="screen">
 
 
 
     <!-- Icon -->
-    
+
     <!-- rs style -->
-    
+
     <!-- Slick nav was changed -->
-    
+
     <!-- Span CSS Styles  -->
     <link rel="stylesheet" type="text/css" href="./assets/main.min.css">
-    
+
 
     <!-- Responsive CSS Styles  -->
     <link rel="stylesheet" type="text/css" href="./assets/responsive.min.css">
@@ -421,12 +487,12 @@ text-size-adjust:none;
     <link rel="stylesheet" type="text/css" href="./assets/pink.css" media="screen">
 
 
-    
-    
-    
-    
-    
-    
+
+
+
+
+
+
 
     <style type="text/css">
         header {
@@ -436,7 +502,7 @@ text-size-adjust:none;
 
     </style>
 
-    
+
     <style type="text/css">
         html {
             width: 100%;
@@ -2206,8 +2272,8 @@ p img.right { float: right; margin-left: 1em; }
     <link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css"/>
     <link rel="stylesheet" href="./assets/mystyles.css" type="text/css" media="screen">
 
-    
-    
+
+
 </head>
 <body>
 <div id="containerWiz" class="container">
