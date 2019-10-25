@@ -38,8 +38,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="130" column="42" selection-start-line="130" selection-start-column="42" selection-end-line="130" selection-end-column="42" />
+            <state relative-caret-position="240">
+              <caret line="121" column="45" selection-start-line="121" selection-start-column="45" selection-end-line="121" selection-end-column="45" />
               <folding>
                 <element signature="n#style#0;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#script#0;n#body#0;n#html#0;n#!!top" />
@@ -82,8 +82,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/client/wizard/mytasks.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="30" column="70" selection-start-line="30" selection-start-column="70" selection-end-line="30" selection-end-column="70" />
+            <state relative-caret-position="525">
+              <caret line="38" column="34" selection-start-line="38" selection-start-column="34" selection-end-line="38" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -119,9 +119,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>c</find>
-      <find>.logo-</find>
-      <find>redirect</find>
       <find>questionList</find>
       <find>titleCase</find>
       <find>questions</find>
@@ -149,6 +146,9 @@
       <find>&lt;hr</find>
       <find>MyTasks</find>
       <find>.a-title</find>
+      <find>box-shadow</find>
+      <find>table</find>
+      <find>th, td</find>
     </findStrings>
     <replaceStrings>
       <replace>./img/anim1/</replace>
@@ -493,15 +493,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/client/wizard/mytasks.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="30" column="70" selection-start-line="30" selection-start-column="70" selection-end-line="30" selection-end-column="70" />
+        <state relative-caret-position="525">
+          <caret line="38" column="34" selection-start-line="38" selection-start-column="34" selection-end-line="38" selection-end-column="34" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="130" column="42" selection-start-line="130" selection-start-column="42" selection-end-line="130" selection-end-column="42" />
+        <state relative-caret-position="240">
+          <caret line="121" column="45" selection-start-line="121" selection-start-column="45" selection-end-line="121" selection-end-column="45" />
           <folding>
             <element signature="n#style#0;n#body#0;n#html#0;n#!!top" />
             <element signature="n#script#0;n#body#0;n#html#0;n#!!top" />

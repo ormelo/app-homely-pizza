@@ -95,6 +95,38 @@ ul.wstep li.active {
     background: #26cf96;
 }
 
+.tasks-table table {
+    background: #fff;
+    box-shadow: 0px 0px 24px 3px rgba(136, 136, 136, 0.2);
+    width: calc(100% - 40px);
+    margin: 0 auto;
+    margin-top: 40px;
+    border: none !important;
+    border-radius: 9px;
+}
+
+table, tr, td {
+    border-top: none;
+    border: none !important;
+}
+
+th, td {
+    padding: 5px !important;
+    text-align: center !important;
+    padding-left: 16px !important;
+    padding-right: 6px !important;
+    padding-top: 12px !important;
+}
+
+tr:not(:last-child) {
+    border-bottom: 1px solid #eee !important;
+}
+
+td:last-child {
+    padding-bottom: 10px !important;
+}
+
+
 .line-tasks {
     border-top: 1px solid #eee;
     width: calc(100% - 40px);
@@ -461,7 +493,7 @@ text-size-adjust:none;
     <meta property="og:keywords" content="Birthday Party, Office party, Corporate events, Catering, Small Party, Caterers, Small Home Parties,  Caterers in bangalore, house parties">
     <meta name="keywords" content="Birthday Party, Office party, Corporate events, Catering, Small Party, Caterers, Small Home Parties,  Caterers in bangalore, house parties">
 
-    
+
     <link rel="stylesheet" href="./assets/bootstrap.min.css" media="screen">
 <link rel="stylesheet" href="./assets/font-awesome.min.css" type="text/css" media="screen">
 <link rel="stylesheet" href="./assets/jquery-ui.min.css">
@@ -879,12 +911,6 @@ text-size-adjust:none;
 
         table {
             border: 1px solid;
-        }
-
-        th, td {
-            border: 1px solid;
-            padding: 5px;
-            text-align: center;
         }
 
         a.main-button,

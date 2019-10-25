@@ -36,6 +36,28 @@ class MyTasks extends Component {
                             </div>
                         </div>
                         <div className="tasks-table">
+                            <table>
+                              <tr>
+                                <td>Started</td>
+                                <td>Shortlist interior designers near me<br/><div>Estimated to complete in few mins</div></td>
+                              </tr>
+                              <tr>
+                                <td>Up next</td>
+                                <td>Check reviews & customer references</td>
+                              </tr>
+                              <tr>
+                                <td>To follow</td>
+                                <td>Filter out fake agencies & companies with complaints</td>
+                              </tr>
+                              <tr>
+                                <td>To follow</td>
+                                <td>Get quotes & review with me</td>
+                              </tr>
+                              <tr>
+                                <td>Finish</td>
+                                <td>Finalize & start project</td>
+                              </tr>
+                            </table>
                         </div>
                     </div>
                 <div className="desc copyright" style={{textAlign: 'center',fontSize: '14px'}}>Copyright © 2019 Stint.do</div><br/>
