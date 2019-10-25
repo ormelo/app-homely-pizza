@@ -28,7 +28,7 @@ class MyTasks extends Component {
                             <div className="alert-icon"><img src="../img/images/ic_bell.png" className="shake"/></div>
                             <div className="alert-message">
                                 <div className="a-title">
-                                    Thank you for offloading your task to stint!
+                                    Thank you for offloading your task!
                                 </div>
                                 <div className="a-desc">
                                     {`Stint will now shortlist best ${localStorage.getItem('primary-task')}`} providers & notify you.
