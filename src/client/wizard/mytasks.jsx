@@ -31,31 +31,31 @@ class MyTasks extends Component {
                                     Thank you for offloading your task!
                                 </div>
                                 <div className="a-desc">
-                                    {`Stint will now shortlist best ${localStorage.getItem('primary-task')}`} providers & notify you.
+                                    {`Stint will now get quotes from best ${localStorage.getItem('primary-task')}`} providers & notify you.
                                 </div>
                             </div>
                         </div>
                         <div className="tasks-table">
                             <table>
                               <tr>
-                                <td>Started</td>
-                                <td>Shortlist interior designers near me<br/><div>Estimated to complete in few mins</div></td>
+                                <td><img className="icon-status" src="../img/images/ic_started.png"/></td>
+                                <td className="status-started">Shortlist interior designers near me<br/><div className="status-title">Estimated to complete in few mins</div></td>
                               </tr>
                               <tr>
-                                <td>Up next</td>
-                                <td>Check reviews & customer references</td>
+                                <td><img className="icon-status" src="../img/images/ic_upnext.png"/></td>
+                                <td className="status-notstarted">Check reviews & customer references</td>
                               </tr>
                               <tr>
-                                <td>To follow</td>
-                                <td>Filter out fake agencies & companies with complaints</td>
+                                <td><img className="icon-status" src="../img/images/ic_upnext.png"/></td>
+                                <td className="status-notstarted">Filter out fake agencies & companies with complaints</td>
                               </tr>
                               <tr>
-                                <td>To follow</td>
-                                <td>Get quotes & review with me</td>
+                                <td><img className="icon-status" src="../img/images/ic_upnext.png"/></td>
+                                <td className="status-notstarted">Get quotes & review with me</td>
                               </tr>
                               <tr>
-                                <td>Finish</td>
-                                <td>Finalize & start project</td>
+                                <td><img className="icon-status last" src="../img/images/ic_finish.png"/></td>
+                                <td className="status-notstarted">Finalize & start project</td>
                               </tr>
                             </table>
                         </div>
