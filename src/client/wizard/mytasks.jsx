@@ -13,6 +13,12 @@ class MyTasks extends Component {
     }
     componentDidMount() {
         setTimeout(function(){document.getElementById('logoHeading').style.opacity = '1';},50);
+         (function(d, t) {
+                                var g = d.createElement(t),
+                                s = d.getElementsByTagName(t)[0];
+                                g.src = "https://cdn.pushalert.co/integrate_330e438e9b44f62593c1ae84de8aa777.js";
+                                s.parentNode.insertBefore(g, s);
+                        }(document, "script"));
     }
 
     render() {
