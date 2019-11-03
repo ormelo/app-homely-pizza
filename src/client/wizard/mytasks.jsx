@@ -15,9 +15,9 @@ class MyTasks extends Component {
         setTimeout(function(){document.getElementById('logoHeading').style.opacity = '1';},50);
         var primaryTaskName = localStorage.getItem('primary-task');
         if(primaryTaskName == 'Interior design') {
-                (pushalertbyiw = window.pushalertbyiw || []).push(['trackEvent', 'task', 'interiorDesign', 'trigger', '1']); //trackEvent(eventCategory, eventAction, eventLabel, eventValue);
+                (pushalertbyiw = window.pushalertbyiw || []).push(['trackEvent', 'task', 'interiorDesign', 'trigger', 1]); //trackEvent(eventCategory, eventAction, eventLabel, eventValue);
         } else if(primaryTaskName == 'Event planning') {
-            (pushalertbyiw = window.pushalertbyiw || []).push(['trackEvent', 'task', 'eventPlanning', 'trigger', '1']); //trackEvent(eventCategory, eventAction, eventLabel, eventValue);
+            (pushalertbyiw = window.pushalertbyiw || []).push(['trackEvent', 'task', 'eventPlanning', 'trigger', 1]); //trackEvent(eventCategory, eventAction, eventLabel, eventValue);
         }
     }
 
