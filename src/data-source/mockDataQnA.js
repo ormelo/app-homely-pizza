@@ -15075,6 +15075,11 @@ export const questions = {
            "type": "Button"
          },
          {
+            "id": 4,
+            "title": "Event planning",
+            "type": "Button"
+          },
+         {
            "id": 8,
            "title": "Home furnishing",
            "type": "Button"
@@ -15095,6 +15100,104 @@ export const questions = {
    }
 
    export const conditionalQuestions = {
+    "EventPlanning": {
+          "results": [
+           {
+             "questionId": 2,
+             "question": "What event are you planning?",
+             "responses": [
+               {
+                 "id": 7,
+                 "title": "Wedding",
+                 "type": "Button"
+               },
+               {
+                 "id": 8,
+                 "title": "Birthday",
+                 "type": "Button"
+               },
+               {
+                 "id": 9,
+                 "title": "House warming",
+                 "type": "Button"
+               },
+               {
+                  "id": 9,
+                  "title": "Other",
+                  "type": "Button"
+                }
+             ]
+           },
+           {
+             "questionId": 1,
+             "question": "How many guests do you expect?",
+             "responses": [
+               {
+                 "id": 1,
+                 "title": "20+",
+                 "type": "Button"
+               },
+               {
+                 "id": 2,
+                 "title": "50+",
+                 "type": "Button"
+               },
+               {
+                 "id": 3,
+                 "title": "100+",
+                 "type": "Button"
+               },
+               {
+                "id": 4,
+                "title": "200+",
+                "type": "Button"
+              }
+             ]
+           },
+           {
+             "questionId": 3,
+             "question": "Do you want to offer food at your event?",
+             "responses": [
+               {
+                 "id": 10,
+                 "title": "Yes",
+                 "type": "Button"
+               },
+               {
+                 "id": 11,
+                 "title": "No",
+                 "type": "Button"
+               }
+             ]
+           },
+           {
+                      "questionId": 4,
+                      "question": "Which locality is the venue?",
+                      "responses": [
+                        {
+                          "id": 10,
+                          "title": "East Bangalore (Whitefield & others)",
+                          "type": "Button"
+                        },
+                        {
+                          "id": 11,
+                          "title": "South Bangalore (Jayanagar & others)",
+                          "type": "Button"
+                        },
+                        {
+                          "id": 12,
+                          "title": "North Bangalore (Hebbal & others)",
+                          "type": "Button"
+                        },
+                        {
+                          "id": 14,
+                          "title": "West Bangalore (Nagarbhavi & others)",
+                          "type": "Button"
+                        }
+                      ]
+                    }
+          ]
+          },
         "InteriorDesign": {
        "results": [
         {
