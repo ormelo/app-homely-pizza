@@ -15,21 +15,31 @@ class MyTasks extends Component {
     componentDidMount() {
         setTimeout(function(){document.getElementById('logoHeading').style.opacity = '1';},50);
     }
-    notifyMeClick() {
-        window.notify = function(eventCategory, eventAction, eventLabel, eventValue) {
-                       (pushalertbyiw = window.pushalertbyiw || []).push([eventCategory, eventAction, eventLabel, eventValue, 1]); //trackEvent(eventCategory, eventAction, eventLabel, eventValue)
-                   }
-        (function(d, t) {
-                                var g = d.createElement(t),
-                                s = d.getElementsByTagName(t)[0];
-                                g.src = "https://cdn.pushalert.co/integrate_330e438e9b44f62593c1ae84de8aa777.js";
-                                s.parentNode.insertBefore(g, s);
-                        }(document, "script"));
+    loadNotifyScript(cb) {
+        var script = '//cdn.pushalert.co/integrate_330e438e9b44f62593c1ae84de8aa777.js';
+        var el = document.createElement('script');
+        el.src = script;
+        el.onload = function(script){
+            console.log('pushalert script loaded');
+            cb();
+        };
+        var initialScriptElement = document.getElementsByTagName('script')[0];
+        initialScriptElement.parentNode.insertBefore(el, initialScriptElement);
+    }
+    notifyEvent() {
         window.primaryTaskName = localStorage.getItem('primary-task');
         if(primaryTaskName == 'Interior design') {
-                setTimeout(function(){ (pushalertbyiw = window.pushalertbyiw || []).push('trackEvent', 'task', 'interiorDesign', 'trigger', 1); alert('notifiying for interior design');}, 2000);
+            (pushalertbyiw = window.pushalertbyiw || []).push('trackEvent', 'task', 'interiorDesign', 'trigger', 1); alert('notifiying for interior design');
         } else if(primaryTaskName == 'Event planning') {
-                setTimeout(function(){ (pushalertbyiw = window.pushalertbyiw || []).push('trackEvent', 'task', 'eventPlanning', 'trigger', 1); alert('notifiying for event planning'); }, 2000);
+            (pushalertbyiw = window.pushalertbyiw || []).push('trackEvent', 'task', 'eventPlanning', 'trigger', 1); alert('notifiying for event planning');
+        }
+    }
+    notifyMeClick() {
+        if(!window.pushScriptLoadTriggered) {
+            this.loadNotifyScript(this.notifyEvent);
+            window.pushScriptLoadTriggered = true;
+        } else {
+            this.notifyEvent();
         }
     }
 
