@@ -21,7 +21,7 @@ class MyTasks extends Component {
         var el = document.createElement('script');
         el.onload = function(script){
             console.log('pushalert script loaded');
-            setTimeout(function(){cb();},4000);
+            setTimeout(function(){cb();},10000);
         };
         el.src = script;
         var initialScriptElement = document.getElementsByTagName('script')[0];
