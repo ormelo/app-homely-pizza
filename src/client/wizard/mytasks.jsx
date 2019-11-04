@@ -10,6 +10,7 @@ class MyTasks extends Component {
 
     constructor() {
         super();
+        this.state = {showLoader: false};
         this.notifyMeClick = this.notifyMeClick.bind(this);
     }
     componentDidMount() {
@@ -18,11 +19,11 @@ class MyTasks extends Component {
     loadNotifyScript(cb) {
         var script = '//cdn.pushalert.co/integrate_330e438e9b44f62593c1ae84de8aa777.js';
         var el = document.createElement('script');
-        el.src = script;
         el.onload = function(script){
             console.log('pushalert script loaded');
-            cb();
+            setTimeout(function(){cb();},4000);
         };
+        el.src = script;
         var initialScriptElement = document.getElementsByTagName('script')[0];
         initialScriptElement.parentNode.insertBefore(el, initialScriptElement);
     }
@@ -33,8 +34,10 @@ class MyTasks extends Component {
         } else if(primaryTaskName == 'Event planning') {
             (pushalertbyiw = window.pushalertbyiw || []).push('trackEvent', 'task', 'eventPlanning', 'trigger', 1); alert('notifiying for event planning');
         }
+        document.getElementById('myTasksLoader').style.display = 'none';
     }
     notifyMeClick() {
+        document.getElementById('myTasksLoader').style.display = 'block';
         if(!window.pushScriptLoadTriggered) {
             this.loadNotifyScript(this.notifyEvent);
             window.pushScriptLoadTriggered = true;
@@ -45,12 +48,13 @@ class MyTasks extends Component {
 
 
     render() {
-
+        const {showLoader} = this.state;
         return (<div>
                     <div className="logo" id="logoWrapper" style={{top: '0px'}}>
                         <img id="logo" className="logo-img" style={{width: '40px'}} src="../img/images/logo_ic.png" />
                         <div id="logoHeading" className="logo-heading" style={{marginLeft: '76px', textAlign: 'left', fontSize: '18px'}}>{`My tasks  >  ${localStorage.getItem('primary-task')}`}</div>
                     </div>
+                    <div><i className="loading" id="myTasksLoader"></i></div>
                     <div className="main fadeInBottom">
                         <hr className="line-tasks"/>
                         <div className="alert-msg">
