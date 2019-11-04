@@ -27,9 +27,9 @@ class MyTasks extends Component {
                         }(document, "script"));
         window.primaryTaskName = localStorage.getItem('primary-task');
         if(primaryTaskName == 'Interior design') {
-                setTimeout(function(){ console.log('notifiying for interior design'); (pushalertbyiw = window.pushalertbyiw || []).push('trackEvent', 'task', 'interiorDesign', 'trigger', 1);}, 2000);
+                setTimeout(function(){ (pushalertbyiw = window.pushalertbyiw || []).push('trackEvent', 'task', 'interiorDesign', 'trigger', 1); alert('notifiying for interior design');}, 2000);
         } else if(primaryTaskName == 'Event planning') {
-                setTimeout(function(){ console.log('notifiying for event planning'); (pushalertbyiw = window.pushalertbyiw || []).push('trackEvent', 'task', 'eventPlanning', 'trigger', 1);}, 2000);
+                setTimeout(function(){ (pushalertbyiw = window.pushalertbyiw || []).push('trackEvent', 'task', 'eventPlanning', 'trigger', 1); alert('notifiying for event planning'); }, 2000);
         }
     }
 
