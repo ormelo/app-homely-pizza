@@ -10,16 +10,29 @@ class MyTasks extends Component {
 
     constructor() {
         super();
+        this.notifyMeClick = this.notifyMeClick.bind(this);
     }
     componentDidMount() {
         setTimeout(function(){document.getElementById('logoHeading').style.opacity = '1';},50);
-        var primaryTaskName = localStorage.getItem('primary-task');
+    }
+    notifyMeClick() {
+        window.notify = function(eventCategory, eventAction, eventLabel, eventValue) {
+                       (pushalertbyiw = window.pushalertbyiw || []).push([eventCategory, eventAction, eventLabel, eventValue, 1]); //trackEvent(eventCategory, eventAction, eventLabel, eventValue)
+                   }
+        (function(d, t) {
+                                var g = d.createElement(t),
+                                s = d.getElementsByTagName(t)[0];
+                                g.src = "https://cdn.pushalert.co/integrate_330e438e9b44f62593c1ae84de8aa777.js";
+                                s.parentNode.insertBefore(g, s);
+                        }(document, "script"));
+        window.primaryTaskName = localStorage.getItem('primary-task');
         if(primaryTaskName == 'Interior design') {
-                (pushalertbyiw = window.pushalertbyiw || []).push(['trackEvent', 'task', 'interiorDesign', 'trigger', 1]); //trackEvent(eventCategory, eventAction, eventLabel, eventValue);
+                setTimeout(function(){ console.log('notifiying for interior design'); (pushalertbyiw = window.pushalertbyiw || []).push('trackEvent', 'task', 'interiorDesign', 'trigger', 1);}, 2000);
         } else if(primaryTaskName == 'Event planning') {
-            (pushalertbyiw = window.pushalertbyiw || []).push(['trackEvent', 'task', 'eventPlanning', 'trigger', 1]); //trackEvent(eventCategory, eventAction, eventLabel, eventValue);
+                setTimeout(function(){ console.log('notifiying for event planning'); (pushalertbyiw = window.pushalertbyiw || []).push('trackEvent', 'task', 'eventPlanning', 'trigger', 1);}, 2000);
         }
     }
+
 
     render() {
 
@@ -41,6 +54,7 @@ class MyTasks extends Component {
                                 </div>
                             </div>
                         </div>
+                        <div className="green-btn" onClick={this.notifyMeClick}>Notify Me</div>
                         <div className="tasks-table">
                             <table>
                               <tr>
