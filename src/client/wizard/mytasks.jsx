@@ -30,9 +30,9 @@ class MyTasks extends Component {
     notifyEvent() {
         window.primaryTaskName = localStorage.getItem('primary-task');
         if(primaryTaskName == 'Interior design') {
-            (pushalertbyiw = window.pushalertbyiw || []).push('trackEvent', 'task', 'interiorDesign', 'trigger', 1); alert('notifiying for interior design');
+            (pushalertbyiw = window.pushalertbyiw || []).push(['trackEvent', 'task', 'interiorDesign', 'trigger', 1]); alert('notifiying for interior design');
         } else if(primaryTaskName == 'Event planning') {
-            (pushalertbyiw = window.pushalertbyiw || []).push('trackEvent', 'task', 'eventPlanning', 'trigger', 1); alert('notifiying for event planning');
+            (pushalertbyiw = window.pushalertbyiw || []).push(['trackEvent', 'task', 'eventPlanning', 'trigger', 1]); alert('notifiying for event planning');
         }
         document.getElementById('myTasksLoader').style.display = 'none';
     }
