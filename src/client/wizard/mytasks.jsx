@@ -15,6 +15,7 @@ class MyTasks extends Component {
     }
     componentDidMount() {
         setTimeout(function(){document.getElementById('logoHeading').style.opacity = '1';},50);
+        setTimeout(function(){document.getElementById('iconArrow').style.opacity = '1';},500);
     }
     loadNotifyScript(cb) {
         var script = '//cdn.pushalert.co/integrate_330e438e9b44f62593c1ae84de8aa777.js';
@@ -37,10 +38,13 @@ class MyTasks extends Component {
         document.getElementById('myTasksLoader').style.display = 'none';
         document.getElementById('myTasksSuccess').style.display = 'block';
         document.getElementById('tasksTitle').innerHTML = 'You will get a push notification!';
+        document.getElementById('tasksTitle').style.color = '#0bba7f';
+        document.getElementById('tasksTitle').classList.add('shake');
     }
     notifyMeClick() {
         document.getElementById('myTasksLoader').style.display = 'block';
         document.getElementById('greenBtn').style.visibility = 'hidden';
+        document.getElementById('iconArrow').style.display = 'none';
         if(!window.pushScriptLoadTriggered) {
             this.loadNotifyScript(this.notifyEvent);
             window.pushScriptLoadTriggered = true;
@@ -73,6 +77,7 @@ class MyTasks extends Component {
                         </div>
                         <div id="greenBtn" className="green-btn" onClick={this.notifyMeClick}>Notify Me</div>
                         <img className="icon-tick" id="myTasksSuccess" src="../img/images/ic_tick.png"/>
+                        <img className="icon-arrow cssanimation" id="iconArrow" src="../img/images/ic_arrow.png"/>
                         <div className="tasks-table">
                             <table>
                               <tr>
