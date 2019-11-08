@@ -744,7 +744,7 @@ app.get("/home", function(request, response) {
 });
 
 app.get("/mytasks", function(request, response) {
-  response.redirect('/');
+  response.sendFile(path.resolve(__dirname, 'public', 'mytasks.html'));
 });
 
 app.get("/products", function(request, response) {

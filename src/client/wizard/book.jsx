@@ -153,7 +153,7 @@ class Book extends Component {
          const { questionList, activeQuestionIndex, conditionalActiveQuestionIndex, searchRequestPayLoad = [], displayQuestions, showLoader, conditionalQuestions } = this.state;
         return (<div>
                     <div className="logo" id="logoWrapper" style={{top: '0px'}}>
-                        <img id="logo" className="logo-img" style={{width: '40px'}} src="../img/images/logo_ic.png" />
+                        <Link to="/?navigatingBack=true"><img id="logo" className="logo-img" style={{width: '40px'}} src="../img/images/logo_ic.png" /></Link>
                         <div id="logoHeading" className="logo-heading">Plan your home</div>
                     </div>
                     <div><i className="loading" style={{display: showLoader ? 'block' : 'none'}}></i></div>

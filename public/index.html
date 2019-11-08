@@ -111,6 +111,35 @@ ul.wstep li.active {
     margin-top: 16px;
 }
 
+.right-btn {
+    width: 160px;
+    position: absolute;
+    top: 5px;
+    float: right;
+    right: 20px;
+}
+
+.left-task-btn {
+    margin: 0px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+.no-blink {
+    text-decoration: none !important;
+	-webkit-animation-name: none !important;
+}
+
+.icon-btn {
+    width: 17px !important;
+    margin-left: 0px;
+    margin-right: 7px;
+}
+
+#myTasksBtn{
+    display: none;
+}
+
 .tasks-table table {
     background: #fff;
     box-shadow: 0px 0px 24px 3px rgba(136, 136, 136, 0.2);
@@ -149,6 +178,15 @@ tr:not(:last-child) {
 }
 
 tr:first-child {
+    text-decoration: blink;
+	-webkit-animation-name: blinker;
+	-webkit-animation-duration: 1s;
+	-webkit-animation-iteration-count:infinite;
+	-webkit-animation-timing-function:ease-in-out;
+	-webkit-animation-direction: alternate;
+}
+
+.blink-text {
     text-decoration: blink;
 	-webkit-animation-name: blinker;
 	-webkit-animation-duration: 1s;

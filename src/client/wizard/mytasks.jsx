@@ -16,6 +16,74 @@ class MyTasks extends Component {
     componentDidMount() {
         setTimeout(function(){document.getElementById('logoHeading').style.opacity = '1';},50);
         setTimeout(function(){document.getElementById('iconArrow').style.opacity = '1';},500);
+        this.hideNotifySection();
+        this.setTimeElapsed();
+        window.tasksInterval =  setInterval(function(){this.setTimeElapsed()}.bind(this), 10000);
+    }
+    setTimeElapsed(){
+        let elapsed = localStorage.getItem('elapsed');
+        if(elapsed != null) {
+            elapsed = parseInt(localStorage.getItem('elapsed'),10);
+            let timeElapsed = new Date() - elapsed;
+            timeElapsed = timeElapsed / 1000;
+            timeElapsed = Math.round(timeElapsed/60);
+            console.log('timeElapsed: ', timeElapsed);
+            if(timeElapsed < 1) {//2
+               //do nothing
+            } else if(timeElapsed >= 1 && timeElapsed < 3) {//2
+                document.getElementById('tasksTable').firstElementChild.classList.add('no-blink');
+                document.getElementById('tasksTable').children[0].classList.add('no-blink');
+                document.getElementById('tasksTable').children[1].classList.add('blink-text');
+                document.getElementById('iconStatus1').src = '../img/images/ic_tick.png';
+                document.getElementById('iconStatus1').style.width = '30px';
+                document.getElementById('iconStatus2').src = '../img/images/ic_started.png';
+            } else if(timeElapsed >= 3 && timeElapsed < 4) {//3
+                document.getElementById('tasksTable').firstElementChild.classList.add('no-blink');
+                document.getElementById('tasksTable').children[0].classList.add('no-blink');
+                document.getElementById('tasksTable').children[1].classList.add('no-blink');
+                document.getElementById('tasksTable').children[2].classList.add('blink-text');
+                document.getElementById('iconStatus1').src = '../img/images/ic_tick.png';
+                document.getElementById('iconStatus1').style.width = '30px';
+                document.getElementById('iconStatus2').src = '../img/images/ic_tick.png';
+                document.getElementById('iconStatus2').style.width = '30px';
+                document.getElementById('iconStatus3').src = '../img/images/ic_started.png';
+            } else {//4 expand 4th row
+                console.log('in else');
+                document.getElementById('tasksTable').firstElementChild.classList.add('no-blink');
+                document.getElementById('tasksTable').children[0].classList.add('no-blink');
+                document.getElementById('tasksTable').children[1].classList.add('no-blink');
+                document.getElementById('tasksTable').children[2].classList.add('no-blink');
+                document.getElementById('iconStatus1').src = '../img/images/ic_tick.png';
+                document.getElementById('iconStatus1').style.width = '30px';
+                document.getElementById('iconStatus2').src = '../img/images/ic_tick.png';
+                document.getElementById('iconStatus2').style.width = '30px';
+                document.getElementById('iconStatus3').src = '../img/images/ic_tick.png';
+                document.getElementById('iconStatus3').style.width = '30px';
+                document.getElementById('iconStatus4').src = '../img/images/ic_started.png';
+                document.getElementById('tasksTable').children[2].classList.add('no-blink');
+
+                //clear interval
+                clearInterval(window.tasksInterval);
+                //show shortlists button
+                if(document.getElementById('viewShortlists') == null) {
+                    var btn = document.createElement('div');
+                    btn.id = 'viewShortlists';
+                    btn.classList.add('green-btn');
+                    btn.classList.add('left-task-btn');
+                    btn.innerHTML = 'View shortlists';
+                    document.getElementById('tasksTable').children[2].children[1].appendChild(btn);
+                }
+            }
+        }
+    }
+    hideNotifySection() {
+        if(localStorage.getItem('subsrcibed') != null) {
+            document.getElementById('notifyMsg').style.display = 'none';
+            document.getElementById('myTasksSuccess').style.display = 'none';
+            document.getElementById('iconArrow').style.display = 'none';
+            document.getElementById('greenBtn').style.display = 'none';
+            document.getElementById('tasksTable').style.marginTop = '20px';
+        }
     }
     loadNotifyScript(cb) {
         var script = '//cdn.pushalert.co/integrate_330e438e9b44f62593c1ae84de8aa777.js';
@@ -45,6 +113,8 @@ class MyTasks extends Component {
         document.getElementById('myTasksLoader').style.display = 'block';
         document.getElementById('greenBtn').style.visibility = 'hidden';
         document.getElementById('iconArrow').style.display = 'none';
+        localStorage.setItem('subsrcibed', 'true');
+        localStorage.setItem('elapsed', new Date().getTime());
         if(!window.pushScriptLoadTriggered) {
             this.loadNotifyScript(this.notifyEvent);
             window.pushScriptLoadTriggered = true;
@@ -58,13 +128,13 @@ class MyTasks extends Component {
         const {showLoader} = this.state;
         return (<div>
                     <div className="logo" id="logoWrapper" style={{top: '0px'}}>
-                        <img id="logo" className="logo-img" style={{width: '40px'}} src="../img/images/logo_ic.png" />
+                        <Link to="/?navigatingBack=true"><img id="logo" className="logo-img" style={{width: '40px'}} src="../img/images/logo_ic.png" /></Link>
                         <div id="logoHeading" className="logo-heading" style={{marginLeft: '76px', textAlign: 'left', fontSize: '18px'}}>{`My tasks  >  ${localStorage.getItem('primary-task')}`}</div>
                     </div>
                     <div><i className="loading" id="myTasksLoader" style={{top: '28px'}}></i></div>
                     <div className="main fadeInBottom">
                         <hr className="line-tasks"/>
-                        <div className="alert-msg">
+                        <div id="notifyMsg" className="alert-msg">
                             <div className="alert-icon"><img src="../img/images/ic_bell.png" className="shake"/></div>
                             <div className="alert-message">
                                 <div id="tasksTitle" className="a-title">
@@ -79,25 +149,25 @@ class MyTasks extends Component {
                         <img className="icon-tick" id="myTasksSuccess" src="../img/images/ic_tick.png"/>
                         <img className="icon-arrow cssanimation" id="iconArrow" src="../img/images/ic_arrow.png"/>
                         <div className="tasks-table">
-                            <table>
+                            <table id="tasksTable">
                               <tr>
-                                <td><img className="icon-status" src="../img/images/ic_started.png"/></td>
+                                <td><img id="iconStatus1" className="icon-status" src="../img/images/ic_started.png"/></td>
                                 <td className="status-started">Shortlist interior designers near me<br/><div className="status-title">Estimated to complete in few mins</div></td>
                               </tr>
                               <tr>
-                                <td><img className="icon-status" src="../img/images/ic_upnext.png"/></td>
+                                <td><img id="iconStatus2" className="icon-status" src="../img/images/ic_upnext.png"/></td>
                                 <td className="status-notstarted">Check reviews & customer references</td>
                               </tr>
                               <tr>
-                                <td><img className="icon-status" src="../img/images/ic_upnext.png"/></td>
+                                <td><img id="iconStatus3" className="icon-status" src="../img/images/ic_upnext.png"/></td>
                                 <td className="status-notstarted">Filter out fake agencies & companies with complaints</td>
                               </tr>
                               <tr>
-                                <td><img className="icon-status" src="../img/images/ic_upnext.png"/></td>
+                                <td><img id="iconStatus4" className="icon-status" src="../img/images/ic_upnext.png"/></td>
                                 <td className="status-notstarted">Get quotes & review with me</td>
                               </tr>
                               <tr>
-                                <td><img className="icon-status last" src="../img/images/ic_finish.png"/></td>
+                                <td><img id="iconStatus5" className="icon-status last" src="../img/images/ic_finish.png"/></td>
                                 <td className="status-notstarted">Finalize & start project</td>
                               </tr>
                             </table>

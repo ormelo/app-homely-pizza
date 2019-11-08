@@ -116,6 +116,19 @@ class Guide extends React.Component {
     componentDidMount() {
         window.addEventListener('scroll', this.handleScroll);
         window.onRecommenderClick = this.handleRecommenderClick;
+        this.showMyTasksBtn();
+    }
+
+    showMyTasksBtn() {
+        if(localStorage.getItem('primary-task') != null && localStorage.getItem('secondary-task') != null
+            && window.location.href.indexOf('navigatingBack=true') != -1
+            && document.getElementById('myTasksBtn') != null) {
+            document.getElementById('myTasksBtn').style.display = 'block';
+        } else if(localStorage.getItem('primary-task') != null && localStorage.getItem('secondary-task') != null
+              && window.location.href.indexOf('navigatingBack=true') == -1
+              && document.getElementById('myTasksBtn') != null) {
+            location.href = '/mytasks';
+        }
     }
 
     handleRecommenderClick() {
@@ -173,6 +186,7 @@ class Guide extends React.Component {
             <div className="logo" id="logoWrapper">
                 <img id="logo" className="logo-img" src="../img/images/logo.png" />
                 <div id="logoHeading" className="logo-heading"></div>
+                <Link to="/mytasks"><div id="myTasksBtn" className="green-btn right-btn"><img className="icon-btn" src="../img/images/ic_user.png" /><span>My Tasks</span></div></Link>
             </div>
             <div><i className="loading"></i></div>
 

@@ -42,8 +42,10 @@ body {
 .banner1 {
     margin-top: 18px;
     height: 396px;
-    background-image: url(./img/images/banner-meditate.jpeg);
-    background-size: cover;
+    background-image: url(./img/images/banner-sit.jpeg);
+    background-size: 192%;
+    background-position-x: -76px;
+    background-position-y: 18px;
 }
 
 .banner2 {
@@ -95,6 +97,89 @@ ul.wstep li.active {
     background: #26cf96;
 }
 
+.green-btn {
+    padding-left: 20px;
+    padding-right: 20px;
+    background: #26cf96;
+    text-align: center;
+    padding: 9px;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 6px;
+    width: 200px;
+    margin: 0 auto;
+    margin-top: 16px;
+}
+
+.right-btn {
+    width: 160px;
+    position: absolute;
+    top: 5px;
+    float: right;
+    right: 20px;
+}
+
+.icon-btn {
+    width: 17px !important;
+    margin-left: 0px;
+    margin-right: 4px;
+}
+
+#myTasksBtn{
+    display: none;
+}
+
+.tasks-table table {
+    background: #fff;
+    box-shadow: 0px 0px 24px 3px rgba(136, 136, 136, 0.2);
+    width: calc(100% - 40px);
+    margin: 0 auto;
+    margin-top: 40px;
+    border: none !important;
+    border-radius: 9px;
+}
+
+.tasks-table tr td {
+    text-align: left !important;
+    font-size: 14px;
+    color: #333;
+}
+
+.status-notstarted {
+    color: #9d9b9b !important;
+}
+
+table, tr, td {
+    border-top: none;
+    border: none !important;
+}
+
+th, td {
+    padding: 5px !important;
+    text-align: center !important;
+    padding-left: 16px !important;
+    padding-right: 7px !important;
+    padding-top: 12px !important;
+}
+
+tr:not(:last-child) {
+    border-bottom: 1px solid #eee !important;
+}
+
+tr:first-child {
+    text-decoration: blink;
+	-webkit-animation-name: blinker;
+	-webkit-animation-duration: 1s;
+	-webkit-animation-iteration-count:infinite;
+	-webkit-animation-timing-function:ease-in-out;
+	-webkit-animation-direction: alternate;
+}
+
+td:last-child {
+    padding-bottom: 10px !important;
+}
+
+
 .line-tasks {
     border-top: 1px solid #eee;
     width: calc(100% - 40px);
@@ -123,12 +208,63 @@ ul.wstep li.active {
     padding-left: 15px;
 }
 
+@-webkit-keyframes blinker {
+  from {opacity: 1.0;}
+  to {opacity: 0.0;}
+}
+.blink{
+	text-decoration: blink;
+	-webkit-animation-name: blinker;
+	-webkit-animation-duration: 1s;
+	-webkit-animation-iteration-count:infinite;
+	-webkit-animation-timing-function:ease-in-out;
+	-webkit-animation-direction: alternate;
+}
+
+.icon-tick {
+    width: 72px;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    position: absolute;
+    top: 176px;
+    display: none;
+}
+
+.icon-arrow {
+    width: 91px;
+    margin: 0 auto;
+    left: -136px;
+    right: 0;
+    position: absolute;
+    top: 122px;
+    opacity: 0;
+    transition: opacity .25s ease-in-out;
+   -moz-transition: opacity .25s ease-in-out;
+   -webkit-transition: opacity .25s ease-in-out;
+}
+
 .a-title {
-    font-size: 14px;
+    font-size: 17px;
     color: #000;
 }
 
-.a-desc { color: #a0a0a0; }
+.a-desc { color: #a0a0a0; margin-top: 3px; font-size: 14px; }
+
+.icon-status {
+    width: 50px;
+    padding-left: 2px;
+    padding-bottom: 6px;
+}
+
+.icon-status.last {
+    width: 29px;
+}
+
+.status-title {
+    font-size: 13px;
+    color: #bdbdbd;
+}
 
 .shake {
 	display:inline-block
@@ -879,12 +1015,6 @@ text-size-adjust:none;
 
         table {
             border: 1px solid;
-        }
-
-        th, td {
-            border: 1px solid;
-            padding: 5px;
-            text-align: center;
         }
 
         a.main-button,
@@ -2273,7 +2403,9 @@ p img.right { float: right; margin-left: 1em; }
     <link rel="stylesheet" href="./assets/mystyles.css" type="text/css" media="screen">
 
 
+    <!-- PushAlert -->
 
+    <!-- End PushAlert -->
 </head>
 <body>
 <div id="containerWiz" class="container">
