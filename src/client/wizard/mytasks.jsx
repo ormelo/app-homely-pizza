@@ -12,6 +12,7 @@ class MyTasks extends Component {
         super();
         this.state = {showLoader: false};
         this.notifyMeClick = this.notifyMeClick.bind(this);
+        this.cancelStint = this.cancelStint.bind(this);
     }
     componentDidMount() {
         setTimeout(function(){document.getElementById('logoHeading').style.opacity = '1';},50);
@@ -19,6 +20,13 @@ class MyTasks extends Component {
         this.hideNotifySection();
         this.setTimeElapsed();
         window.tasksInterval =  setInterval(function(){this.setTimeElapsed()}.bind(this), 10000);
+    }
+    cancelStint() {
+        localStorage.removeItem('primary-task');
+        localStorage.removeItem('secondary-task');
+        localStorage.removeItem('subsrcibed');
+        localStorage.removeItem('elapsed');
+        setTimeout("location.href='/'", 800);
     }
     setTimeElapsed(){
         let elapsed = localStorage.getItem('elapsed');
@@ -171,6 +179,7 @@ class MyTasks extends Component {
                                 <td className="status-notstarted">Finalize & start project</td>
                               </tr>
                             </table>
+                            <div className="green-btn cancel-stint-btn" onClick={this.cancelStint}>Cancel Stint</div>
                         </div>
                     </div>
                 <div className="desc copyright" style={{textAlign: 'center',fontSize: '14px'}}>Copyright © 2019 Stint.do</div><br/>
