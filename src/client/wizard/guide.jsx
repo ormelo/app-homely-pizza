@@ -610,7 +610,7 @@ render(<Router>
                     <Route exact path="/" component={Guide} />
                 <Route exact path="/home" component={QuizWithRouter} />
                 <Route exact path="/mytasks" component={MytasksWithRouter} />
-                <Route path="/shortlists" component={ShortlistsWithRouter} />
+                <Route path="/shortlists/:task/:loc/:zone" component={ShortlistsWithRouter} />
             </div>)} />
     </div>
 </Router>, document.getElementById('containerWiz'));

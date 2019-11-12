@@ -29,23 +29,24 @@ class MyTasks extends Component {
         setTimeout("location.href='/'", 800);
     }
     getShortlistsUrl() {
-        var baseUrl = '/shortlists';
+        var baseUrl = '/shortlists/';
         var primaryTaskName = localStorage.getItem('primary-task');
         var secondaryTaskName = localStorage.getItem('secondary-task');
         switch(primaryTaskName) {
-            case 'Interior design': baseUrl = baseUrl+'?task=interior&'; break;
-            case 'Event planning': baseUrl = baseUrl+'?task=events&'; break;
-            default: baseUrl = baseUrl+'?task=interior&'; break;
+            case 'Interior design': baseUrl = baseUrl + 'interior/'; break;
+            case 'Event planning': baseUrl = baseUrl + 'events/'; break;
+            default: baseUrl = baseUrl + 'interior/'; break;
         }
         var secondaryTaskNameArr = secondaryTaskName.split(',');
         var locName = secondaryTaskNameArr[secondaryTaskNameArr.length-1]
         switch(locName) {
-            case 'East Bangalore (Whitefield & others)': baseUrl = baseUrl+'loc=blr&zone=east'; break;
-            case 'South Bangalore (Jayanagar & others)': baseUrl = baseUrl+'loc=blr&zone=south'; break;
-            case 'North Bangalore (Hebbal & others)': baseUrl = baseUrl+'loc=blr&zone=north'; break;
-            case 'West Bangalore (Nagarbhavi & others)': baseUrl = baseUrl+'loc=blr&zone=west'; break;
-            default: baseUrl = baseUrl+'loc=blr&zone=east'; break;
+            case 'East Bangalore (Whitefield & others)': baseUrl = baseUrl+'blr/east'; break;
+            case 'South Bangalore (Jayanagar & others)': baseUrl = baseUrl+'blr/south'; break;
+            case 'North Bangalore (Hebbal & others)': baseUrl = baseUrl+'blr/north'; break;
+            case 'West Bangalore (Nagarbhavi & others)': baseUrl = baseUrl+'blr/west'; break;
+            default: baseUrl = baseUrl+'blr/east'; break;
         }
+        this.setState({shortlistsUrl: baseUrl});
         return baseUrl;
     }
     setTimeElapsed(){
@@ -93,7 +94,12 @@ class MyTasks extends Component {
                 //clear interval
                 clearInterval(window.tasksInterval);
                 //show shortlists button
-                if(document.getElementById('viewShortlists') == null) {
+
+                this.getShortlistsUrl();
+                if(!this.state.showShortlistsBtn) {
+                    this.setState({showShortlistsBtn: true});
+                }
+                /*if(document.getElementById('viewShortlists') == null) {
                     var anc = document.createElement('a');
                     anc.href=this.getShortlistsUrl();
 
@@ -104,7 +110,7 @@ class MyTasks extends Component {
                     btn.innerHTML = 'View shortlists';
                     anc.appendChild(btn);
                     document.getElementById('tasksTable').children[2].children[1].appendChild(anc);
-                }
+                }*/
             }
         }
     }
@@ -192,7 +198,9 @@ class MyTasks extends Component {
                               </tr>
                               <tr>
                                 <td><img id="iconStatus3" className="icon-status" src="../img/images/ic_upnext.png"/></td>
-                                <td className="status-notstarted">Filter out fake agencies & companies with complaints</td>
+                                <td className="status-notstarted">Filter out fake agencies & companies with complaints
+                                {this.state.showShortlistsBtn && <Link to={this.state.shortlistsUrl}><div className="green-btn left-task-btn">View shortlists</div></Link>}
+                                </td>
                               </tr>
                               <tr>
                                 <td><img id="iconStatus4" className="icon-status" src="../img/images/ic_upnext.png"/></td>

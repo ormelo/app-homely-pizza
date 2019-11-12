@@ -89,26 +89,26 @@ class Shortlists extends Component {
         const {showLoader} = this.state;
         return (<div>
                     <div className="logo" id="logoWrapper" style={{top: '0px', marginLeft: '-10px'}}>
-                        <img className="icon-back" src="../img/images/ic_back.png" onClick={()=>{history.back(-1);}} />
-                        <Link to="/?navigatingBack=true" style={{marginLeft: '34px'}}><img id="logo" className="logo-img" style={{width: '40px'}} src="../img/images/logo_ic.png" /></Link>
+                        <img className="icon-back" src="../../../img/images/ic_back.png" onClick={()=>{history.back(-1);}} />
+                        <Link to="/?navigatingBack=true" style={{marginLeft: '34px'}}><img id="logo" className="logo-img" style={{width: '40px'}} src="../../../img/images/logo_ic.png" /></Link>
                         <div id="logoHeading" className="logo-heading" style={{marginLeft: '108px', textAlign: 'left', fontSize: '18px'}}>{`Shortlists  >  ${localStorage.getItem('primary-task')}`}</div>
                     </div>
                     <div><i className="loading" id="myTasksLoader" style={{top: '28px'}}></i></div>
                     <div className="main fadeInBottom">
                         <hr className="line-tasks"/>
                         <div id="notifyMsg" className="alert-msg">
-                            <div className="alert-icon"><img src="../img/images/ic_24h.png" className="shake" style={{width: '44px'}}/></div>
+                            <div className="alert-icon"><img src="../../../img/images/ic_24h.png" className="shake" style={{width: '44px'}}/></div>
                             <div className="alert-message">
                                 <div id="tasksTitle" className="a-title" style={{fontSize: '16px'}}>
                                     Stint has shortlisted your matches
                                 </div>
                                 <div className="a-desc">
-                                    Give it upto <b style={{color: '#000'}}>24 hrs</b> to get the best quotes.
+                                    Give it upto <b style={{color: '#444444'}}>24 hrs</b> to get the best quotes.
                                 </div>
                             </div>
                         </div>
-                        <img className="icon-tick" id="myTasksSuccess" src="../img/images/ic_tick.png"/>
-                        <Paper style={{marginTop: '30px'}}>
+                        <img className="icon-tick" id="myTasksSuccess" src="../../../img/images/ic_tick.png"/>
+                        <Paper style={{marginTop: '14px'}}>
                               <Tabs
                                 value={this.state.value}
                                 onChange={this.handleTabChange}
@@ -123,23 +123,23 @@ class Shortlists extends Component {
                         <div className="tasks-table">
                             <table id="tasksTable">
                               <tr>
-                                <td><img id="iconStatus1" className="icon-status" src="../img/images/ic_started.png"/></td>
+                                <td><img id="iconStatus1" className="icon-status" src="../../../img/images/ic_started.png"/></td>
                                 <td className="status-started">Shortlist interior designers near me<br/><div className="status-title">Estimated to complete in few mins</div></td>
                               </tr>
                               <tr>
-                                <td><img id="iconStatus2" className="icon-status" src="../img/images/ic_upnext.png"/></td>
+                                <td><img id="iconStatus2" className="icon-status" src="../../../img/images/ic_upnext.png"/></td>
                                 <td className="status-notstarted">Check reviews & customer references</td>
                               </tr>
                               <tr>
-                                <td><img id="iconStatus3" className="icon-status" src="../img/images/ic_upnext.png"/></td>
+                                <td><img id="iconStatus3" className="icon-status" src="../../../img/images/ic_upnext.png"/></td>
                                 <td className="status-notstarted">Filter out fake agencies & companies with complaints</td>
                               </tr>
                               <tr>
-                                <td><img id="iconStatus4" className="icon-status" src="../img/images/ic_upnext.png"/></td>
+                                <td><img id="iconStatus4" className="icon-status" src="../../../img/images/ic_upnext.png"/></td>
                                 <td className="status-notstarted">Get quotes & review with me</td>
                               </tr>
                               <tr>
-                                <td><img id="iconStatus5" className="icon-status last" src="../img/images/ic_finish.png"/></td>
+                                <td><img id="iconStatus5" className="icon-status last" src="../../../img/images/ic_finish.png"/></td>
                                 <td className="status-notstarted">Finalize & start project</td>
                               </tr>
                             </table>
