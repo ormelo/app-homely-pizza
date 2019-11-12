@@ -1,10 +1,22 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
 import { BrowserRouter as Router, Route, Link, withRouter } from 'react-router-dom';
+import { makeStyles } from '@material-ui/core/styles';
+import Paper from '@material-ui/core/Paper';
+import Tabs from '@material-ui/core/Tabs';
+import Tab from '@material-ui/core/Tab';
+
 import { detailView } from '../../data-source/mockData';
 import { questions, conditionalQuestions } from '../../data-source/mockDataQnA';
 import ModalView from './modalView.jsx';
 import { useHistory } from "react-router-dom";
+
+const useStyles = makeStyles({
+  root: {
+    flexGrow: 1,
+  },
+});
+
 
 class Shortlists extends Component {
 
@@ -13,13 +25,18 @@ class Shortlists extends Component {
         this.state = {showLoader: false};
         this.notifyMeClick = this.notifyMeClick.bind(this);
         this.cancelStint = this.cancelStint.bind(this);
+        this.handleTabChange = this.handleTabChange.bind(this);
+        this.state = {
+            value: 0
+        };
     }
     componentDidMount() {
         setTimeout(function(){document.getElementById('logoHeading').style.opacity = '1';},50);
         setTimeout(function(){document.getElementById('iconArrow').style.opacity = '1';},500);
-        this.hideNotifySection();
-        this.setTimeElapsed();
-        window.tasksInterval =  setInterval(function(){this.setTimeElapsed()}.bind(this), 10000);
+    }
+    handleTabChange(event, newValue) {
+        console.log('neValue: ', newValue);
+        this.setState({value: newValue});
     }
     cancelStint() {
         localStorage.removeItem('primary-task');
@@ -28,71 +45,7 @@ class Shortlists extends Component {
         localStorage.removeItem('elapsed');
         setTimeout("location.href='/'", 800);
     }
-    setTimeElapsed(){
-        let elapsed = localStorage.getItem('elapsed');
-        if(elapsed != null) {
-            elapsed = parseInt(localStorage.getItem('elapsed'),10);
-            let timeElapsed = new Date() - elapsed;
-            timeElapsed = timeElapsed / 1000;
-            timeElapsed = Math.round(timeElapsed/60);
-            console.log('timeElapsed: ', timeElapsed);
-            if(timeElapsed < 1) {//2
-               //do nothing
-            } else if(timeElapsed >= 1 && timeElapsed < 3) {//2
-                document.getElementById('tasksTable').firstElementChild.classList.add('no-blink');
-                document.getElementById('tasksTable').children[0].classList.add('no-blink');
-                document.getElementById('tasksTable').children[1].classList.add('blink-text');
-                document.getElementById('iconStatus1').src = '../img/images/ic_tick.png';
-                document.getElementById('iconStatus1').style.width = '30px';
-                document.getElementById('iconStatus2').src = '../img/images/ic_started.png';
-            } else if(timeElapsed >= 3 && timeElapsed < 4) {//3
-                document.getElementById('tasksTable').firstElementChild.classList.add('no-blink');
-                document.getElementById('tasksTable').children[0].classList.add('no-blink');
-                document.getElementById('tasksTable').children[1].classList.add('no-blink');
-                document.getElementById('tasksTable').children[2].classList.add('blink-text');
-                document.getElementById('iconStatus1').src = '../img/images/ic_tick.png';
-                document.getElementById('iconStatus1').style.width = '30px';
-                document.getElementById('iconStatus2').src = '../img/images/ic_tick.png';
-                document.getElementById('iconStatus2').style.width = '30px';
-                document.getElementById('iconStatus3').src = '../img/images/ic_started.png';
-            } else {//4 expand 4th row
-                console.log('in else');
-                document.getElementById('tasksTable').firstElementChild.classList.add('no-blink');
-                document.getElementById('tasksTable').children[0].classList.add('no-blink');
-                document.getElementById('tasksTable').children[1].classList.add('no-blink');
-                document.getElementById('tasksTable').children[2].classList.add('no-blink');
-                document.getElementById('iconStatus1').src = '../img/images/ic_tick.png';
-                document.getElementById('iconStatus1').style.width = '30px';
-                document.getElementById('iconStatus2').src = '../img/images/ic_tick.png';
-                document.getElementById('iconStatus2').style.width = '30px';
-                document.getElementById('iconStatus3').src = '../img/images/ic_tick.png';
-                document.getElementById('iconStatus3').style.width = '30px';
-                document.getElementById('iconStatus4').src = '../img/images/ic_started.png';
-                document.getElementById('tasksTable').children[2].classList.add('no-blink');
 
-                //clear interval
-                clearInterval(window.tasksInterval);
-                //show shortlists button
-                if(document.getElementById('viewShortlists') == null) {
-                    var btn = document.createElement('div');
-                    btn.id = 'viewShortlists';
-                    btn.classList.add('green-btn');
-                    btn.classList.add('left-task-btn');
-                    btn.innerHTML = 'View shortlists';
-                    document.getElementById('tasksTable').children[2].children[1].appendChild(btn);
-                }
-            }
-        }
-    }
-    hideNotifySection() {
-        if(localStorage.getItem('subsrcibed') != null) {
-            document.getElementById('notifyMsg').style.display = 'none';
-            document.getElementById('myTasksSuccess').style.display = 'none';
-            document.getElementById('iconArrow').style.display = 'none';
-            document.getElementById('greenBtn').style.display = 'none';
-            document.getElementById('tasksTable').style.marginTop = '20px';
-        }
-    }
     loadNotifyScript(cb) {
         var script = '//cdn.pushalert.co/integrate_330e438e9b44f62593c1ae84de8aa777.js';
         var el = document.createElement('script');
@@ -135,27 +88,38 @@ class Shortlists extends Component {
     render() {
         const {showLoader} = this.state;
         return (<div>
-                    <div className="logo" id="logoWrapper" style={{top: '0px'}}>
-                        <Link to="/?navigatingBack=true"><img id="logo" className="logo-img" style={{width: '40px'}} src="../img/images/logo_ic.png" /></Link>
-                        <div id="logoHeading" className="logo-heading" style={{marginLeft: '76px', textAlign: 'left', fontSize: '18px'}}>{`Shortlists  >  ${localStorage.getItem('primary-task')}`}</div>
+                    <div className="logo" id="logoWrapper" style={{top: '0px', marginLeft: '-10px'}}>
+                        <img className="icon-back" src="../img/images/ic_back.png" onClick={()=>{history.back(-1);}} />
+                        <Link to="/?navigatingBack=true" style={{marginLeft: '34px'}}><img id="logo" className="logo-img" style={{width: '40px'}} src="../img/images/logo_ic.png" /></Link>
+                        <div id="logoHeading" className="logo-heading" style={{marginLeft: '108px', textAlign: 'left', fontSize: '18px'}}>{`Shortlists  >  ${localStorage.getItem('primary-task')}`}</div>
                     </div>
                     <div><i className="loading" id="myTasksLoader" style={{top: '28px'}}></i></div>
                     <div className="main fadeInBottom">
                         <hr className="line-tasks"/>
                         <div id="notifyMsg" className="alert-msg">
-                            <div className="alert-icon"><img src="../img/images/ic_bell.png" className="shake"/></div>
+                            <div className="alert-icon"><img src="../img/images/ic_24h.png" className="shake" style={{width: '44px'}}/></div>
                             <div className="alert-message">
-                                <div id="tasksTitle" className="a-title">
-                                    Thank you for offloading your task!
+                                <div id="tasksTitle" className="a-title" style={{fontSize: '16px'}}>
+                                    Stint has shortlisted your matches
                                 </div>
                                 <div className="a-desc">
-                                    {`Stint will now get quotes from best ${localStorage.getItem('primary-task')}`} providers & notify you.
+                                    Give it upto <b style={{color: '#000'}}>24 hrs</b> to get the best quotes.
                                 </div>
                             </div>
                         </div>
-                        <div id="greenBtn" className="green-btn" onClick={this.notifyMeClick}>Notify Me</div>
                         <img className="icon-tick" id="myTasksSuccess" src="../img/images/ic_tick.png"/>
-                        <img className="icon-arrow cssanimation" id="iconArrow" src="../img/images/ic_arrow.png"/>
+                        <Paper style={{marginTop: '30px'}}>
+                              <Tabs
+                                value={this.state.value}
+                                onChange={this.handleTabChange}
+                                indicatorColor="primary"
+                                textColor="primary"
+                                centered
+                              >
+                                <Tab label="Shortlists" />
+                                <Tab label="Rejects" />
+                              </Tabs>
+                            </Paper>
                         <div className="tasks-table">
                             <table id="tasksTable">
                               <tr>
