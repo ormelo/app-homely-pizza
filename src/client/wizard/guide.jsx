@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { render } from 'react-dom';
 import Book from './book.jsx';
 import MyTasks from './mytasks.jsx';
+import Shortlists from './shortlists.jsx';
 import { BrowserRouter as Router, Route, Link, withRouter } from 'react-router-dom';
 import { END_POINTS } from '../../common/constant';
 import { searchResults, questions } from '../../data-source/mockDataQnA';
@@ -600,6 +601,7 @@ export class ResultsList extends React.Component {
 
 var QuizWithRouter = withRouter(Book);
 var MytasksWithRouter = withRouter(MyTasks);
+var ShortlistsWithRouter = withRouter(Shortlists);
 
 render(<Router>
     <div>
@@ -608,6 +610,7 @@ render(<Router>
                     <Route exact path="/" component={Guide} />
                 <Route exact path="/home" component={QuizWithRouter} />
                 <Route exact path="/mytasks" component={MytasksWithRouter} />
+                <Route path="/shortlists" component={ShortlistsWithRouter} />
             </div>)} />
     </div>
 </Router>, document.getElementById('containerWiz'));

@@ -6,7 +6,7 @@ import { questions, conditionalQuestions } from '../../data-source/mockDataQnA';
 import ModalView from './modalView.jsx';
 import { useHistory } from "react-router-dom";
 
-class MyTasks extends Component {
+class Shortlists extends Component {
 
     constructor() {
         super();
@@ -27,26 +27,6 @@ class MyTasks extends Component {
         localStorage.removeItem('subsrcibed');
         localStorage.removeItem('elapsed');
         setTimeout("location.href='/'", 800);
-    }
-    getShortlistsUrl() {
-        var baseUrl = '/shortlists';
-        var primaryTaskName = localStorage.getItem('primary-task');
-        var secondaryTaskName = localStorage.getItem('secondary-task');
-        switch(primaryTaskName) {
-            case 'Interior design': baseUrl = baseUrl+'?task=interior&'; break;
-            case 'Event planning': baseUrl = baseUrl+'?task=events&'; break;
-            default: baseUrl = baseUrl+'?task=interior&'; break;
-        }
-        var secondaryTaskNameArr = secondaryTaskName.split(',');
-        var locName = secondaryTaskNameArr[secondaryTaskNameArr.length-1]
-        switch(locName) {
-            case 'East Bangalore (Whitefield & others)': baseUrl = baseUrl+'loc=blr&zone=east'; break;
-            case 'South Bangalore (Jayanagar & others)': baseUrl = baseUrl+'loc=blr&zone=south'; break;
-            case 'North Bangalore (Hebbal & others)': baseUrl = baseUrl+'loc=blr&zone=north'; break;
-            case 'West Bangalore (Nagarbhavi & others)': baseUrl = baseUrl+'loc=blr&zone=west'; break;
-            default: baseUrl = baseUrl+'loc=blr&zone=east'; break;
-        }
-        return baseUrl;
     }
     setTimeElapsed(){
         let elapsed = localStorage.getItem('elapsed');
@@ -94,16 +74,12 @@ class MyTasks extends Component {
                 clearInterval(window.tasksInterval);
                 //show shortlists button
                 if(document.getElementById('viewShortlists') == null) {
-                    var anc = document.createElement('a');
-                    anc.href=this.getShortlistsUrl();
-
                     var btn = document.createElement('div');
                     btn.id = 'viewShortlists';
                     btn.classList.add('green-btn');
                     btn.classList.add('left-task-btn');
                     btn.innerHTML = 'View shortlists';
-                    anc.appendChild(btn);
-                    document.getElementById('tasksTable').children[2].children[1].appendChild(anc);
+                    document.getElementById('tasksTable').children[2].children[1].appendChild(btn);
                 }
             }
         }
@@ -161,7 +137,7 @@ class MyTasks extends Component {
         return (<div>
                     <div className="logo" id="logoWrapper" style={{top: '0px'}}>
                         <Link to="/?navigatingBack=true"><img id="logo" className="logo-img" style={{width: '40px'}} src="../img/images/logo_ic.png" /></Link>
-                        <div id="logoHeading" className="logo-heading" style={{marginLeft: '76px', textAlign: 'left', fontSize: '18px'}}>{`My tasks  >  ${localStorage.getItem('primary-task')}`}</div>
+                        <div id="logoHeading" className="logo-heading" style={{marginLeft: '76px', textAlign: 'left', fontSize: '18px'}}>{`Shortlists  >  ${localStorage.getItem('primary-task')}`}</div>
                     </div>
                     <div><i className="loading" id="myTasksLoader" style={{top: '28px'}}></i></div>
                     <div className="main fadeInBottom">
@@ -211,4 +187,4 @@ class MyTasks extends Component {
     }
 }
 
-export default withRouter(MyTasks);
+export default withRouter(Shortlists);

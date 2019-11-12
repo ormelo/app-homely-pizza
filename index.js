@@ -747,6 +747,10 @@ app.get("/mytasks", function(request, response) {
   response.sendFile(path.resolve(__dirname, 'public', 'mytasks.html'));
 });
 
+app.get("/shortlists", function(request, response) {
+  response.sendFile(path.resolve(__dirname, 'public', 'shortlists.html'));
+});
+
 app.get("/products", function(request, response) {
   //Todo: comment above n uncomment below
   response.send(pages.products);
