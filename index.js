@@ -751,6 +751,12 @@ app.get("/shortlists/:task/:loc/:zone", function(request, response) {
   response.sendFile(path.resolve(__dirname, 'public', 'shortlists.html'));
 });
 
+app.get("/data/:task/:loc/:zone", function(request, response) {
+  const fs = require('fs');
+  let rawdata = fs.readFileSync('./src/data-source/'+request.params.task+'/'+request.params.loc+'/'+request.params.zone+'/mockDataQnA.json');
+  response.send(rawdata);
+});
+
 app.get("/products", function(request, response) {
   //Todo: comment above n uncomment below
   response.send(pages.products);

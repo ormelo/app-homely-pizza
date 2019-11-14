@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
+import axios from 'axios';
 import { BrowserRouter as Router, Route, Link, withRouter } from 'react-router-dom';
 import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
+import Typography from '@material-ui/core/Typography';
+import Box from '@material-ui/core/Box';
 
 import { detailView } from '../../data-source/mockData';
 import { questions, conditionalQuestions } from '../../data-source/mockDataQnA';
@@ -17,22 +20,70 @@ const useStyles = makeStyles({
   },
 });
 
+function TabPanel(props) {
+  const { children, value, index } = props;
+
+  return (
+    <Typography
+      component="div"
+      role="tabpanel"
+      hidden={value !== index}
+      id={`full-width-tabpanel-${index}`}
+      aria-labelledby={`full-width-tab-${index}`}
+    >
+      <Box p={3}>{children}</Box>
+    </Typography>
+  );
+}
+
+class Card extends Component {
+
+    constructor() {
+        super();
+        this.state = {};
+    }
+    componentDidMount() {
+    }
+
+    render() {
+        let {index} = this.props;
+        return (
+        <div className="card-container">
+            {index}
+        </div>)
+    }
+}
+
 
 class Shortlists extends Component {
 
     constructor() {
         super();
-        this.state = {showLoader: false};
         this.notifyMeClick = this.notifyMeClick.bind(this);
         this.cancelStint = this.cancelStint.bind(this);
         this.handleTabChange = this.handleTabChange.bind(this);
         this.state = {
-            value: 0
+            value: 0,
+            results: []
         };
     }
     componentDidMount() {
         setTimeout(function(){document.getElementById('logoHeading').style.opacity = '1';},50);
         setTimeout(function(){document.getElementById('iconArrow').style.opacity = '1';},500);
+        debugger;
+        this.fetchJson();
+    }
+    fetchJson() {
+        console.log('this.props.match: ', this.props.match);
+        let task = this.props.match.params.task;
+        let loc = this.props.match.params.loc;
+        let zone = this.props.match.params.zone;
+
+        axios.get(`/data/${task}/${loc}/${zone}`)
+          .then(function (response) {
+            console.log(response.data);
+            this.setState({results: response.data.results});
+          }.bind(this));
     }
     handleTabChange(event, newValue) {
         console.log('neValue: ', newValue);
@@ -86,7 +137,7 @@ class Shortlists extends Component {
 
 
     render() {
-        const {showLoader} = this.state;
+        const {showLoader, results} = this.state;
         return (<div>
                     <div className="logo" id="logoWrapper" style={{top: '0px', marginLeft: '-10px'}}>
                         <img className="icon-back" src="../../../img/images/ic_back.png" onClick={()=>{history.back(-1);}} />
@@ -119,6 +170,16 @@ class Shortlists extends Component {
                                 <Tab label="Shortlists" />
                                 <Tab label="Rejects" />
                               </Tabs>
+                              <TabPanel value={this.state.value} index={0}>
+                                    {results[0] && results[0].title}
+                                    {results && results.map((resultItem, index) => {
+                                        return (<Card index={index} />);
+                                    })}
+
+                              </TabPanel>
+                              <TabPanel value={this.state.value} index={1}>
+                                Item Two
+                              </TabPanel>
                             </Paper>
                         <div className="tasks-table">
                             <table id="tasksTable">
