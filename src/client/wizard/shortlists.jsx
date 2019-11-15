@@ -75,6 +75,10 @@ class Card extends Component {
             </div>
             <hr className="line"/>
             <div className="section-two">
+                <div className="top">
+                    <div className="title">How we know they're authentic:</div>
+
+                </div>
             </div>
         </div>)
     }
@@ -193,8 +197,8 @@ class Shortlists extends Component {
                                 textColor="primary"
                                 centered
                               >
-                                <Tab label="Shortlists" />
-                                <Tab label="Rejects" />
+                                <Tab label="&nbsp;&nbsp;&nbsp;Shortlists&nbsp;&nbsp;&nbsp;" />
+                                <Tab label="&nbsp;&nbsp;&nbsp;Rejects&nbsp;&nbsp;&nbsp;" />
                               </Tabs>
                               <TabPanel value={this.state.value} index={0}>
 
