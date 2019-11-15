@@ -92,13 +92,13 @@ class ReviewContainer extends Component {
 
                           activeOpinions && activeOpinions.map((opinion, index) => {
                             return (
-                                  <div className="opinion"><div className="author-detail"><b style={{color: '#4a4a4a'}}>{opinion.text.author}</b>, {opinion.text.createdAt} via <b style={{color: '#4a4a4a'}}>{opinion.text.reviewedAt}</b></div><div className="opinion-detail">{opinion.text.content}</div></div>
+                                  <div className="opinion"><div className="author-detail"><b style={{color: '#4a4a4a'}}>{opinion.text.author}</b><b style={{color: '#4a4a4a'}}>, {opinion.text.createdAt}</b> via <b style={{color: '#4a4a4a'}}>{opinion.text.reviewedAt}</b></div><div className="opinion-detail">{opinion.text.content}</div></div>
                           );
                           })
                      :
                           activeDefaultOpinions && activeDefaultOpinions.map((opinion, index) => {
                             return (
-                                  <div className="opinion"><div className="author-detail"><b style={{color: '#4a4a4a'}}>{opinion.text.author}</b>, {opinion.text.createdAt} via <b style={{color: '#4a4a4a'}}>{opinion.text.reviewedAt}</b></div><div className="opinion-detail">{opinion.text.content}</div></div>
+                                  <div className="opinion"><div className="author-detail"><b style={{color: '#4a4a4a'}}>{opinion.text.author}</b><b style={{color: '#4a4a4a'}}>, {opinion.text.createdAt}</b> via <b style={{color: '#4a4a4a'}}>{opinion.text.reviewedAt}</b></div><div className="opinion-detail">{opinion.text.content}</div></div>
                           );
                           })
 
