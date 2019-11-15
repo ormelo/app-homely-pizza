@@ -60,8 +60,12 @@ class Card extends Component {
                 <span className="title">{data.title}</span>
                 <div className="top">
                     <div className="top-left">
-                        <img src={data.images.primary} />
+                        <img className="blurred" src={data.images.primary} />
                         <div className="img-overlay" />
+                        <div className="icon-lock-small">
+                            <img src="../../../img/images/ic_lock.png"/>
+                        </div>
+                        <span className="lock-text">Photos to be visible after the quote</span>
                     </div>
                     <div className="top-right">
                         <div className="usp-title">Unique selling points</div>

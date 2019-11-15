@@ -48,11 +48,23 @@ body {
     line-height: 20px;
 }
 
+.lock-text {
+    position: absolute;
+    margin-top: -24px;
+    color: #fff;
+    font-size: 11px;
+    width: 100px;
+    text-align: center;
+    margin-left: 10px;
+    margin-top: -29px;
+    line-height: 13px;
+}
+
 .img-overlay{
     background: radial-gradient(circle, rgba(140,140,140,0.1) 0%, rgba(0,0,0,1) 100%);
     min-width: 118px;
     min-height: 83px;
-    z-index: 4;
+    z-index: 0;
     margin-top: -71px;
     margin-left: 0px;
     position: absolute;
@@ -94,7 +106,7 @@ body {
     padding: 14px;
 }
 
-.section-one .top-left img {
+.section-one .top-left img.blurred {
     border-radius: 6px;
     filter: blur(3px);
     -webkit-filter: blur(4px);
@@ -103,6 +115,13 @@ body {
     -ms-filter: blur(3px);
     margin: 0px 0px -10px -2px;
     margin-left: 1px;
+}
+
+.icon-lock-small {
+    position: absolute;
+    margin-top: -56px;
+    margin-left: 50px;
+    width: 21px;
 }
 
 .MuiTypography-body1 {
@@ -2294,7 +2313,9 @@ p img.right { float: right; margin-left: 1em; }
         left: 0px;
         max-height: 90px;
         background-color: #fff;
-        //border-bottom: 1px solid #eeeeee;
+        -webkit-backdrop-filter: saturate(180%) blur(8px);
+        backdrop-filter: saturate(180%) blur(8px);
+        background-color: rgba(255,255,255,0.7);
     }
     .recommender {
         opacity: 0;

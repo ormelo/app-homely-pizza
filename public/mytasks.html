@@ -2294,7 +2294,9 @@ p img.right { float: right; margin-left: 1em; }
         left: 0px;
         max-height: 90px;
         background-color: #fff;
-        //border-bottom: 1px solid #eeeeee;
+        -webkit-backdrop-filter: saturate(180%) blur(8px);
+        backdrop-filter: saturate(180%) blur(8px);
+        background-color: rgba(255,255,255,0.7);
     }
     .recommender {
         opacity: 0;
