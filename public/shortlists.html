@@ -19,6 +19,98 @@ body {
     margin-top: 40px;
     border: none !important;
     border-radius: 9px;
+    min-height: 340px;
+    padding: 0px 16px 0px 16px;
+}
+
+.section-one {
+    min-height: 132px;
+    padding-top: 8px;
+}
+
+.section-two {
+    min-height: 208px;
+}
+
+.section-one .index {
+    font-size: 36px;
+    font-family: 'Source Sans Pro';
+    color: #e6e6e6;
+}
+
+.section-one .title {
+    position: absolute;
+    margin-top: 8px;
+    font-size: 15px;
+    color: #666;
+    margin-left: 16px;
+    width: calc( 100% - 138px);
+    line-height: 20px;
+}
+
+.img-overlay{
+    background: radial-gradient(circle, rgba(140,140,140,0.1) 0%, rgba(0,0,0,1) 100%);
+    min-width: 118px;
+    min-height: 77px;
+    z-index: 4;
+    margin-top: -77px;
+    position: absolute;
+    border-radius: 4px;
+    opacity: 0;
+}
+
+.section-one .top {
+    display: table;
+    padding: 6px;
+}
+
+.section-one .top-left, .section-one .top-right  {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.section-one .top-left {
+    width: 116px;
+}
+
+.section-one .top-right .usp-title {
+    font-weight: bold;
+    font-size: 14px;
+    color: #666;
+}
+
+.section-one .top-right .usp-desc {
+    font-size: 13px;
+    color: #a1a1a1;
+}
+
+.section-one .top-right {
+    padding: 14px;
+}
+
+.section-one .top-left img {
+    border-radius: 6px;
+}
+
+.MuiTypography-body1 {
+    margin-top: -16px !important;
+    font-family: 'Source Sans Pro', sans-serif !important;
+}
+
+.MuiPaper-elevation1{
+    box-shadow: none !important;
+}
+
+.MuiTabs-centered {
+    border-bottom: 1px solid #e3e3e3;
+}
+
+.MuiTabs-root {
+    box-shadow: 0px 1px 0px 0px rgba(0,0,0,0.1) !important;
+}
+
+.MuiBox-root {
+    padding: 0px !important;
 }
 
 .logo {
@@ -598,7 +690,7 @@ td:last-child {
 }
 
 .line {
-    border-top: solid 1px #e4e4e;
+    border-top: dashed 1px #c2c2c2;
     margin-top: 14px;
 }
 

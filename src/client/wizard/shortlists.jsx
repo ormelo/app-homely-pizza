@@ -44,12 +44,34 @@ class Card extends Component {
     }
     componentDidMount() {
     }
+    appendZero(number) {
+        if (number > 0 && number < 10) {
+            return '0' + number;
+        }
+        return number;
+    }
 
     render() {
-        let {index} = this.props;
+        let {index, data} = this.props;
         return (
         <div className="card-container">
-            {index}
+            <div className="section-one">
+                <span className="index">{this.appendZero(index+1)}</span>
+                <span className="title">{data.title}</span>
+                <div className="top">
+                    <div className="top-left">
+                        <img src={data.images.primary} />
+                        <div className="img-overlay" />
+                    </div>
+                    <div className="top-right">
+                        <div className="usp-title">Unique selling points</div>
+                        <div className="usp-desc">{data.usp[0]}</div>
+                    </div>
+                </div>
+            </div>
+            <hr className="line"/>
+            <div className="section-two">
+            </div>
         </div>)
     }
 }
@@ -171,9 +193,9 @@ class Shortlists extends Component {
                                 <Tab label="Rejects" />
                               </Tabs>
                               <TabPanel value={this.state.value} index={0}>
-                                    {results[0] && results[0].title}
+
                                     {results && results.map((resultItem, index) => {
-                                        return (<Card index={index} />);
+                                        return (<Card index={index} data={resultItem} />);
                                     })}
 
                               </TabPanel>
@@ -181,33 +203,9 @@ class Shortlists extends Component {
                                 Item Two
                               </TabPanel>
                             </Paper>
-                        <div className="tasks-table">
-                            <table id="tasksTable">
-                              <tr>
-                                <td><img id="iconStatus1" className="icon-status" src="../../../img/images/ic_started.png"/></td>
-                                <td className="status-started">Shortlist interior designers near me<br/><div className="status-title">Estimated to complete in few mins</div></td>
-                              </tr>
-                              <tr>
-                                <td><img id="iconStatus2" className="icon-status" src="../../../img/images/ic_upnext.png"/></td>
-                                <td className="status-notstarted">Check reviews & customer references</td>
-                              </tr>
-                              <tr>
-                                <td><img id="iconStatus3" className="icon-status" src="../../../img/images/ic_upnext.png"/></td>
-                                <td className="status-notstarted">Filter out fake agencies & companies with complaints</td>
-                              </tr>
-                              <tr>
-                                <td><img id="iconStatus4" className="icon-status" src="../../../img/images/ic_upnext.png"/></td>
-                                <td className="status-notstarted">Get quotes & review with me</td>
-                              </tr>
-                              <tr>
-                                <td><img id="iconStatus5" className="icon-status last" src="../../../img/images/ic_finish.png"/></td>
-                                <td className="status-notstarted">Finalize & start project</td>
-                              </tr>
-                            </table>
-                            <div className="green-btn cancel-stint-btn" onClick={this.cancelStint}>Cancel Stint</div>
-                        </div>
+
                     </div>
-                <div className="desc copyright" style={{textAlign: 'center',fontSize: '14px'}}>Copyright © 2019 Stint.do</div><br/>
+                <br/>
                 </div>)
     }
 }
