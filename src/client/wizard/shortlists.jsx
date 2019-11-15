@@ -65,7 +65,7 @@ class Card extends Component {
                         <div className="icon-lock-small">
                             <img src="../../../img/images/ic_lock.png"/>
                         </div>
-                        <span className="lock-text">Photos to be visible after the quote</span>
+                        <span className="lock-text">Photos will be visible after the quote</span>
                     </div>
                     <div className="top-right">
                         <div className="usp-title">Unique selling points</div>
