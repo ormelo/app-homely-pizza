@@ -16,7 +16,7 @@ body {
     box-shadow: 0px 0px 24px 3px rgba(116, 116, 116, 0.2);
     width: calc(100% - 40px);
     margin: 0 auto;
-    margin-top: 40px;
+    margin-top: 20px;
     border: none !important;
     border-radius: 9px;
     min-height: 340px;
@@ -60,8 +60,75 @@ body {
     line-height: 13px;
 }
 
+.topic-container {
+    overflow: auto;
+    white-space: nowrap;
+    height: 45px;
+    max-width: 80vw;
+    overflow-x: scroll;
+    margin-right: 132px;
+}
+
+.reviews-container {
+    margin-top: 10px;
+}
+
+.opinions {
+    margin-right: 132px;
+    height: 154px;
+    display: flex;
+    max-width: 76vw;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    margin-top: 7px;
+}
+
+.opinion {
+    display: inline-block;
+    width: 200px;
+    flex: 0 0 auto;
+    overflow: scroll;
+    margin-right: 23px;
+    border-left: 3px solid #f1f1f1;
+    padding-left: 16px;
+    color: #666;
+    font-size: 13px;
+    line-height: 19px;
+    height: 132px;
+    padding-top: 8px;
+}
+
+.opinion-detail {
+    margin-top: 12px;
+}
+
+.review-topic{
+    font-family: Quicksand;
+    font-weight: bold;
+    font-size: 13px;
+    background: #ededed;
+    color: #575757;
+    padding-left: 14px;
+    padding-right: 14px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    border-radius: 40px;
+    text-align: center;
+    margin-top: 4px;
+    margin-right: 8px;
+    display: inline-block;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.review-topic.active {
+    background: #26cf96;
+    color: #fff;
+}
+
 .img-overlay{
-    background: radial-gradient(circle, rgba(255, 255, 255, 0) 0%, rgb(89, 89, 89) 100%);
+    background: radial-gradient(circle, rgba(255, 255, 255, 0) 0%, rgb(87, 73, 73) 100%);
     min-width: 118px;
     min-height: 82px;
     z-index: 0;
@@ -91,9 +158,8 @@ body {
 }
 
 .section-one .top-right .usp-title {
-    font-weight: bold;
     font-size: 14px;
-    color: #666;
+    color: #484848;
     margin-bottom: 2px;
     padding-top: 8px;
 }
@@ -120,15 +186,37 @@ body {
     margin-bottom: -10px;
 }
 
+.section-two .top {
+    display: table;
+    padding: 6px;
+    margin-top: -10px;
+}
+
+.section-two .top .title{
+    color: #8a8a8a;
+    font-size: 15px;
+}
+
+.section-two .top-left, .section-two .top-right  {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.section-two .top-left {
+    width: 118px;
+    margin: 20px;
+    overflow: hidden;
+}
+
 .icon-lock-small {
     position: absolute;
-    margin-top: -56px;
-    margin-left: 50px;
-    width: 21px;
+    margin-top: -54px;
+    margin-left: 51px;
+    width: 18px;
 }
 
 .MuiTypography-body1 {
-    margin-top: -16px !important;
+    margin-top: 0px !important;
     font-family: 'Source Sans Pro', sans-serif !important;
 }
 
@@ -727,6 +815,7 @@ td:last-child {
 .line {
     border-top: dashed 1px #c2c2c2;
     margin-top: 10px;
+    margin-bottom: 12px;
 }
 
 .line.thick {

@@ -60,6 +60,73 @@ body {
     line-height: 13px;
 }
 
+.topic-container {
+    overflow: auto;
+    white-space: nowrap;
+    height: 45px;
+    max-width: 80vw;
+    overflow-x: scroll;
+    margin-right: 132px;
+}
+
+.reviews-container {
+    margin-top: 10px;
+}
+
+.opinions {
+    margin-right: 132px;
+    height: 154px;
+    display: flex;
+    max-width: 76vw;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    margin-top: 7px;
+}
+
+.opinion {
+    display: inline-block;
+    width: 200px;
+    flex: 0 0 auto;
+    overflow: scroll;
+    margin-right: 23px;
+    border-left: 3px solid #f1f1f1;
+    padding-left: 16px;
+    color: #666;
+    font-size: 13px;
+    line-height: 19px;
+    height: 132px;
+    padding-top: 8px;
+}
+
+.opinion-detail {
+    margin-top: 12px;
+}
+
+.review-topic{
+    font-family: Quicksand;
+    font-weight: bold;
+    font-size: 13px;
+    background: #ededed;
+    color: #575757;
+    padding-left: 14px;
+    padding-right: 14px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    border-radius: 40px;
+    text-align: center;
+    margin-top: 4px;
+    margin-right: 8px;
+    display: inline-block;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.review-topic.active {
+    background: #26cf96;
+    color: #fff;
+}
+
 .img-overlay{
     background: radial-gradient(circle, rgba(255, 255, 255, 0) 0%, rgb(87, 73, 73) 100%);
     min-width: 118px;

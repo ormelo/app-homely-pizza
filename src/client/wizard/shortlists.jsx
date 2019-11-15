@@ -36,10 +36,83 @@ function TabPanel(props) {
   );
 }
 
+class ReviewContainer extends Component {
+
+    constructor(props) {
+        super(props);
+        this.state = {activeIndex: 0, activeOptions: []};
+        this.setActiveTopic = this.setActiveTopic.bind(this);
+    }
+    componentDidMount() {
+        console.log('this.props.reviews: ', this.props.reviews);
+    }
+    setOpinionArray(topicName) {
+        let reviewTopics = this.props.reviewTopics;
+        let activeOpinions = [];
+        reviewTopics.forEach((reviewTopic)=> {
+            if(reviewTopic.topic == topicName) {
+                activeOpinions = reviewTopic.opinions;
+            }
+        });
+        this.setState({activeOpinions: activeOpinions});
+
+    }
+    setActiveTopic(item, index) {
+        console.log('index: ', index);
+        this.setState({activeIndex: index});
+        this.setOpinionArray(item.topic);
+    }
+
+    render() {
+        let {reviewTopics} = this.props;
+        let {activeIndex, activeOpinions} = this.state;
+        let activeDefaultOpinions = [];
+        console.log('reviewTopics[0]:', reviewTopics[0]);
+        activeDefaultOpinions = reviewTopics[0].opinions;
+
+        return (
+          <div className="reviews-container">
+              <div className="topic-container">
+                {reviewTopics && reviewTopics.map((review, index) => {
+                    return (
+                        <React.Fragment>
+                            <div className={activeIndex===index ? 'review-topic active': 'review-topic'} onClick={()=>{this.setActiveTopic(review, index)}}>
+                                {review.topic}
+                            </div>
+                        </React.Fragment>
+                    );
+                })}
+
+              </div>
+
+              <div className="opinions">
+                  {
+
+                      activeOpinions && activeOpinions.length > 0 ?
+
+                          activeOpinions && activeOpinions.map((opinion, index) => {
+                            return (
+                                  <div className="opinion"><div className="author-detail"><b style={{color: '#4a4a4a'}}>{opinion.text.author}</b>, {opinion.text.createdAt} via <b style={{color: '#4a4a4a'}}>{opinion.text.reviewedAt}</b></div><div className="opinion-detail">{opinion.text.content}</div></div>
+                          );
+                          })
+                     :
+                          activeDefaultOpinions && activeDefaultOpinions.map((opinion, index) => {
+                            return (
+                                  <div className="opinion"><div className="author-detail"><b style={{color: '#4a4a4a'}}>{opinion.text.author}</b>, {opinion.text.createdAt} via <b style={{color: '#4a4a4a'}}>{opinion.text.reviewedAt}</b></div><div className="opinion-detail">{opinion.text.content}</div></div>
+                          );
+                          })
+
+                  }
+              </div>
+          </div>
+        );
+    }
+}
+
 class Card extends Component {
 
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
         this.state = {};
     }
     componentDidMount() {
@@ -77,7 +150,7 @@ class Card extends Component {
             <div className="section-two">
                 <div className="top">
                     <div className="title">How we know they're authentic:</div>
-
+                    <ReviewContainer reviewTopics={data.qna[0].responses} />
                 </div>
             </div>
         </div>)
