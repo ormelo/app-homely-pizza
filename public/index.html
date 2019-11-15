@@ -48,16 +48,29 @@ body {
     line-height: 20px;
 }
 
+.lock-text {
+    position: absolute;
+    margin-top: -24px;
+    color: #fff;
+    font-size: 11px;
+    width: 100px;
+    text-align: center;
+    margin-left: 10px;
+    margin-top: -29px;
+    line-height: 13px;
+}
+
 .img-overlay{
-    background: radial-gradient(circle, rgba(140,140,140,0.1) 0%, rgba(0,0,0,1) 100%);
+    background: radial-gradient(circle, rgba(255, 255, 255, 0) 0%, rgb(89, 89, 89) 100%);
     min-width: 118px;
-    min-height: 83px;
-    z-index: 4;
-    margin-top: -71px;
+    min-height: 82px;
+    z-index: 0;
+    margin-top: -70px;
     margin-left: 0px;
     position: absolute;
     border-radius: 4px;
-    opacity: 0.3;
+    opacity: 0.9;
+    border-radius: 8px;
 }
 
 .section-one .top {
@@ -81,7 +94,7 @@ body {
     font-weight: bold;
     font-size: 14px;
     color: #666;
-    margin-bottom: 4px;
+    margin-bottom: 2px;
     padding-top: 8px;
 }
 
@@ -94,15 +107,24 @@ body {
     padding: 14px;
 }
 
-.section-one .top-left img {
+.section-one .top-left img.blurred {
     border-radius: 6px;
-    filter: blur(3px);
-    -webkit-filter: blur(4px);
-    -moz-filter: blur(3px);
-    -o-filter: blur(3px);
-    -ms-filter: blur(3px);
+    filter: blur(2px);
+    -webkit-filter: blur(2.5px);
+    -moz-filter: blur(2.5px);
+    -o-filter: blur(2.5px);
+    -ms-filter: blur(2.5px);
     margin: 0px 0px -10px -2px;
     margin-left: 1px;
+    border-radius: 17px;
+    margin-bottom: -10px;
+}
+
+.icon-lock-small {
+    position: absolute;
+    margin-top: -56px;
+    margin-left: 50px;
+    width: 21px;
 }
 
 .MuiTypography-body1 {
@@ -704,7 +726,7 @@ td:last-child {
 
 .line {
     border-top: dashed 1px #c2c2c2;
-    margin-top: 14px;
+    margin-top: 10px;
 }
 
 .line.thick {

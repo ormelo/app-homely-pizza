@@ -94,8 +94,8 @@ class Shortlists extends Component {
         };
     }
     componentDidMount() {
-        setTimeout(function(){document.getElementById('logoHeading').style.opacity = '1';},50);
-        setTimeout(function(){document.getElementById('iconArrow').style.opacity = '1';},500);
+        setTimeout(function(){if(document.getElementById('logoHeading'))document.getElementById('logoHeading').style.opacity = '1';},50);
+        setTimeout(function(){if(document.getElementById('iconArrow'))document.getElementById('iconArrow').style.opacity = '1';},500);
         debugger;
         this.fetchJson();
     }
