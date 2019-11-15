@@ -72,8 +72,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/shortlists.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="438">
-              <caret line="118" column="24" selection-start-line="118" selection-start-column="24" selection-end-line="118" selection-end-column="24" />
+            <state relative-caret-position="453">
+              <caret line="72" column="24" selection-start-line="72" selection-start-column="24" selection-end-line="72" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -109,7 +109,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>.MuiTab-textColorPrimary</find>
       <find>.a-ti</find>
       <find>a-ti</find>
       <find>get</find>
@@ -139,6 +138,7 @@
       <find>logo</find>
       <find>.logo {</find>
       <find>photos</find>
+      <find>blur(</find>
     </findStrings>
     <replaceStrings>
       <replace>./img/anim1/</replace>
@@ -596,8 +596,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/shortlists.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="438">
-          <caret line="118" column="24" selection-start-line="118" selection-start-column="24" selection-end-line="118" selection-end-column="24" />
+        <state relative-caret-position="453">
+          <caret line="72" column="24" selection-start-line="72" selection-start-column="24" selection-end-line="72" selection-end-column="24" />
         </state>
       </provider>
     </entry>
