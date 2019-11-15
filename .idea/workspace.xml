@@ -18,8 +18,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/client/wizard/shortlists.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="461">
-              <caret line="100" column="205" selection-start-line="100" selection-start-column="205" selection-end-line="100" selection-end-column="205" />
+            <state relative-caret-position="738">
+              <caret line="286" column="39" lean-forward="true" selection-start-line="286" selection-start-column="39" selection-end-line="286" selection-end-column="39" />
             </state>
           </provider>
         </entry>
@@ -125,7 +125,6 @@
       <find>.icon</find>
       <find>.line</find>
       <find>.img-ov</find>
-      <find>shortlists</find>
       <find>ReviewContainer</find>
       <find>setOpinionArray</find>
       <find>activeOptions</find>
@@ -139,6 +138,7 @@
       <find>.logo</find>
       <find>.opinion</find>
       <find>.opinio</find>
+      <find>shortlists</find>
     </findStrings>
     <replaceStrings>
       <replace>./img/anim1/</replace>
@@ -583,8 +583,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/client/wizard/shortlists.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="461">
-          <caret line="100" column="205" selection-start-line="100" selection-start-column="205" selection-end-line="100" selection-end-column="205" />
+        <state relative-caret-position="738">
+          <caret line="286" column="39" lean-forward="true" selection-start-line="286" selection-start-column="39" selection-end-line="286" selection-end-column="39" />
         </state>
       </provider>
     </entry>

@@ -281,7 +281,11 @@ class Shortlists extends Component {
 
                               </TabPanel>
                               <TabPanel value={this.state.value} index={1}>
-                                Item Two
+
+                                    {results && results.map((resultItem, index) => {
+                                        return (<Card index={index} data={resultItem} />);
+                                    })}
+
                               </TabPanel>
                             </Paper>
 
