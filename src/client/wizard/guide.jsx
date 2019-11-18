@@ -193,10 +193,11 @@ class Guide extends React.Component {
 
 
                 <div className={`banner${Math.floor(Math.random() * 4) + 1}`}/>
+                <div className="banner-overlay" />
                 <div className="main">
                     <div>
 
-                        <div className="header">Make some time for life<br/><div className="sub-head">Stint eases urban life by offloading stressful local errands</div></div>
+                        <div className="header">Find authentic local services<br/><div className="sub-head">Stint makes booking local services transparent & affordable.</div></div>
                         <img className="curve" src="./img/images/curve.png"/>
                         <div className="scroll-arrow">
                             <span/><span/><span/>
