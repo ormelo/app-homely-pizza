@@ -73,6 +73,22 @@ body {
     margin-top: 10px;
 }
 
+.reviewed-at {
+    width: 46px;
+    margin: -2px 0px 0px 2px;
+}
+
+.read-more-review {
+    position: relative;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 3px;
+    border-radius: 6px;
+    color: #666;
+    text-decoration: underline;
+    bottom: -64px;
+    left: -3px;
+}
+
 .opinions {
     margin-right: 132px;
     height: 154px;
@@ -83,11 +99,15 @@ body {
     margin-top: 7px;
 }
 
+.scrollable {
+    overflow: scroll !important;
+}
+
 .opinion {
     display: inline-block;
     width: 200px;
     flex: 0 0 auto;
-    overflow: scroll;
+    overflow: hidden;
     margin-right: 23px;
     border-left: 3px solid #f1f1f1;
     padding-left: 16px;
@@ -99,7 +119,7 @@ body {
 }
 
 .opinion-detail {
-    margin-top: 12px;
+    margin-top: -18px;
 }
 
 .review-topic{

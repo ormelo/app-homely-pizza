@@ -62,6 +62,11 @@ class ReviewContainer extends Component {
         this.setState({activeIndex: index});
         this.setOpinionArray(item.topic);
     }
+    showMore(e) {
+        e.target.parentNode.classList.add('scrollable');
+        e.target.style.display = 'none';
+        e.target.parentNode.children[e.target.parentNode.children.length - 1].style.marginTop = '7px';
+    }
 
     render() {
         let {reviewTopics} = this.props;
@@ -92,13 +97,13 @@ class ReviewContainer extends Component {
 
                           activeOpinions && activeOpinions.map((opinion, index) => {
                             return (
-                                  <div className="opinion"><div className="author-detail"><b style={{color: '#4a4a4a'}}>{opinion.text.author}</b><b style={{color: '#4a4a4a'}}>, {opinion.text.createdAt}</b> via <b style={{color: '#4a4a4a'}}>{opinion.text.reviewedAt}</b></div><div className="opinion-detail">{opinion.text.content}</div></div>
+                                  <div className="opinion"><div className="author-detail"><b style={{color: '#4a4a4a'}}>{opinion.text.author}</b><b style={{color: '#4a4a4a'}}>, {opinion.text.createdAt}</b> via <img className="reviewed-at" src="../../../img/images/ic_g.png"/></div><div className="read-more-review" onClick={(e)=>{this.showMore(e)}}>Read more</div><div className="opinion-detail">{opinion.text.content}</div></div>
                           );
                           })
                      :
                           activeDefaultOpinions && activeDefaultOpinions.map((opinion, index) => {
                             return (
-                                  <div className="opinion"><div className="author-detail"><b style={{color: '#4a4a4a'}}>{opinion.text.author}</b><b style={{color: '#4a4a4a'}}>, {opinion.text.createdAt}</b> via <b style={{color: '#4a4a4a'}}>{opinion.text.reviewedAt}</b></div><div className="opinion-detail">{opinion.text.content}</div></div>
+                                  <div className="opinion"><div className="author-detail"><b style={{color: '#4a4a4a'}}>{opinion.text.author}</b><b style={{color: '#4a4a4a'}}>, {opinion.text.createdAt}</b> via <img className="reviewed-at" src="../../../img/images/ic_g.png"/></div><div className="read-more-review" onClick={(e)=>{this.showMore(e)}}>Read more</div><div className="opinion-detail">{opinion.text.content}</div></div>
                           );
                           })
 
