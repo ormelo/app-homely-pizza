@@ -220,7 +220,7 @@ class Guide extends React.Component {
                                                 <div className="info" style={{marginTop: '10px'}}>
                                                     <div className="para" style={{marginTop: '0px'}}>
                                                        <div className="main-desc">
-                                                       How often have we booked a service &amp; realized... well that’s not what I wanted!<br/><br/> Stint shortlists credible service providers by learning your specific needs.
+                                                       How often have we availed a service in Bangalore &amp; realized, well that’s not what I expected!<br/><br/> Stint shortlists authentic services by learning your specific needs, like your personal assistant!
 
                                                         </div><br/>
                                                     </div>
@@ -254,7 +254,7 @@ class Guide extends React.Component {
                                                         <div className="para" style={{marginTop: '14px'}}>
                                                             <div className="title"></div>
                                                            <div className="title">Screening & shortlisting</div>
-                                                           <div className="desc" style={{marginTop: '10px'}}>Stint shortlists authentic service providers that fit your needs & have a great track record</div>
+                                                           <div className="desc" style={{marginTop: '10px'}}>Stint shortlists authentic service providers & checks with you to see if they fit your needs & budget</div>
                                                     </div>
                                                 </div>
                                              </div>
