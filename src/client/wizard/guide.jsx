@@ -220,7 +220,7 @@ class Guide extends React.Component {
                                                 <div className="info" style={{marginTop: '10px'}}>
                                                     <div className="para" style={{marginTop: '0px'}}>
                                                        <div className="main-desc">
-                                                       How often have we booked a service &amp; realized... well that’s not what I wanted!<br/><br/> Stint shortlists service providers based on your own individual needs and their proven credibility at the best market price.
+                                                       How often have we booked a service &amp; realized... well that’s not what I wanted!<br/><br/> Stint shortlists credible service providers by learning your specific needs.
 
                                                         </div><br/>
                                                     </div>
@@ -238,8 +238,8 @@ class Guide extends React.Component {
                                                     <img src="./img/images/ic_num_1.png" className="ic-num"/>
                                                     <img className="curve small" src="./img/images/curve.png"/>
                                                     <div className="para" style={{marginTop: '14px'}}>
-                                                       <div className="title">Create your task list</div>
-                                                       <div className="desc" style={{marginTop: '10px'}}>Create your personal task list by answering quick questions.</div>
+                                                       <div className="title">Stint learns your needs</div>
+                                                       <div className="desc" style={{marginTop: '10px'}}>Answer quick questions to share your specific needs</div>
                                                     </div>
 
                                                 </div>
@@ -253,8 +253,8 @@ class Guide extends React.Component {
                                                         <img className="curve small" src="./img/images/curve.png" style={{top: '180px'}}/>
                                                         <div className="para" style={{marginTop: '14px'}}>
                                                             <div className="title"></div>
-                                                           <div className="title">Qualified stintlers bid</div>
-                                                           <div className="desc" style={{marginTop: '10px'}}>By letting service providers bid against your task, stint helps you get the best price.</div>
+                                                           <div className="title">Screening & shortlisting</div>
+                                                           <div className="desc" style={{marginTop: '10px'}}>Stint shortlists authentic service providers that fit your needs & have a great track record</div>
                                                     </div>
                                                 </div>
                                              </div>
@@ -269,7 +269,7 @@ class Guide extends React.Component {
                                                              <div className="title"></div>
                                                             <div className="title">Book a stint </div>
                                                             <div className="desc" style={{marginTop: '16px'}}>Stint compares USP of each service provider and cautions you when their quote is above market.
-                                                            <br/><br/><span style={{fontWeight:'bold', fontColor: '#08b587'}}>"Quotes from stintlers are usually 20% less than market average!"</span></div><br/>
+                                                            <br/><br/><span style={{color: '#000', fontWeight:'bold', fontColor: '#08b587'}}>Quotes from stintlers are usually 20% less than market average due to the commissionless model.</span></div><br/>
                                                      </div>
                                                  </div>
                                               </div>

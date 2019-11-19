@@ -2,17 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2100fea9-fa34-466f-9140-289133e88515" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/guide.bundle.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/guide.bundle.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/images/banner-interior.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/images/banner-interior.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/mytasks.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/mytasks.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/picks.bundle.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/picks.bundle.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/shortlists.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/shortlists.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/wiz.bundle.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/wiz.bundle.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/wizard/book.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/wizard/book.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/client/wizard/guide.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/wizard/guide.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/wizard/mytasks.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/wizard/mytasks.jsx" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -104,11 +95,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/client/wizard/guide.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="314">
-              <caret line="190" column="163" selection-start-line="190" selection-start-column="155" selection-end-line="190" selection-end-column="163" />
+            <state relative-caret-position="287">
+              <caret line="271" column="99" selection-start-line="271" selection-start-column="99" selection-end-line="271" selection-end-column="99" />
             </state>
           </provider>
         </entry>
@@ -131,11 +122,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/client/wizard/mytasks.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="311">
-              <caret line="170" column="150" selection-start-line="170" selection-start-column="150" selection-end-line="170" selection-end-column="150" />
+            <state relative-caret-position="131">
+              <caret line="158" column="50" lean-forward="true" selection-start-line="158" selection-start-column="50" selection-end-line="158" selection-end-column="50" />
             </state>
           </provider>
         </entry>
@@ -144,7 +135,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>getOpinionsArray</find>
       <find>activeOpinions</find>
       <find>review</find>
       <find>shortlis</find>
@@ -174,6 +164,7 @@
       <find>book</find>
       <find>my servi</find>
       <find>.header</find>
+      <find>my se</find>
     </findStrings>
     <replaceStrings>
       <replace>./img/anim1/</replace>
@@ -216,17 +207,16 @@
         <option value="$PROJECT_DIR$/public/index.html" />
         <option value="$PROJECT_DIR$/public/mytasks.html" />
         <option value="$PROJECT_DIR$/public/shortlists.html" />
-        <option value="$PROJECT_DIR$/src/client/wizard/guide.jsx" />
         <option value="$PROJECT_DIR$/src/client/wizard/book.jsx" />
         <option value="$PROJECT_DIR$/src/client/wizard/mytasks.jsx" />
+        <option value="$PROJECT_DIR$/src/client/wizard/guide.jsx" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="196" />
-    <option name="y" value="23" />
-    <option name="width" value="1724" />
-    <option name="height" value="1110" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="y" value="24" />
+    <option name="width" value="798" />
+    <option name="height" value="1108" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -349,10 +339,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="196" y="23" width="1724" height="1110" extended-state="0" />
+    <frame x="0" y="23" width="1920" height="1108" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1902497" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17039403" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
@@ -365,7 +355,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32907662" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32907662" />
-      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.029469548" />
+      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.02952756" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="10" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -609,13 +599,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/client/wizard/guide.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="314">
-          <caret line="190" column="163" selection-start-line="190" selection-start-column="155" selection-end-line="190" selection-end-column="163" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/mytasks.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="499">
@@ -625,8 +608,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/client/wizard/mytasks.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="311">
-          <caret line="170" column="150" selection-start-line="170" selection-start-column="150" selection-end-line="170" selection-end-column="150" />
+        <state relative-caret-position="131">
+          <caret line="158" column="50" lean-forward="true" selection-start-line="158" selection-start-column="50" selection-end-line="158" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/wizard/guide.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="287">
+          <caret line="271" column="99" selection-start-line="271" selection-start-column="99" selection-end-line="271" selection-end-column="99" />
         </state>
       </provider>
     </entry>
