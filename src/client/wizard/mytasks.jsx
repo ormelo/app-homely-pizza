@@ -20,6 +20,7 @@ class MyTasks extends Component {
         this.hideNotifySection();
         this.setTimeElapsed();
         window.tasksInterval =  setInterval(function(){this.setTimeElapsed()}.bind(this), 10000);
+        scrollTo(document.body, 0, 100);
     }
     cancelStint() {
         localStorage.removeItem('primary-task');
@@ -167,7 +168,7 @@ class MyTasks extends Component {
         return (<div>
                     <div className="logo" id="logoWrapper" style={{top: '0px'}}>
                         <Link to="/?navigatingBack=true"><img id="logo" className="logo-img" style={{width: '40px'}} src="../img/images/logo_ic.png" /></Link>
-                        <div id="logoHeading" className="logo-heading" style={{marginLeft: '76px', textAlign: 'left', fontSize: '18px'}}>{`My tasks  >  ${localStorage.getItem('primary-task')}`}</div>
+                        <div id="logoHeading" className="logo-heading" style={{marginLeft: '76px', textAlign: 'left', fontSize: '18px'}}>{`My Services  >  ${localStorage.getItem('primary-task')}`}</div>
                     </div>
                     <div><i className="loading" id="myTasksLoader" style={{top: '28px'}}></i></div>
                     <div className="main fadeInBottom">

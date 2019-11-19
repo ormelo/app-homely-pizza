@@ -81,6 +81,7 @@ class Book extends Component {
             selectedSentiment: detailView.sentiments && Object.keys(detailView.sentiments)[0] || {}
         })
         setTimeout(function(){this.setState({showLoader: false})}.bind(this),400);
+        scrollTo(document.body, 0, 100);
     }
     getSearchQuery() {
         let searchQuery = window.location.search;

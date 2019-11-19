@@ -118,6 +118,7 @@ class Guide extends React.Component {
         window.addEventListener('scroll', this.handleScroll);
         window.onRecommenderClick = this.handleRecommenderClick;
         this.showMyTasksBtn();
+        scrollTo(document.body, 0, 100);
     }
 
     showMyTasksBtn() {
@@ -187,17 +188,16 @@ class Guide extends React.Component {
             <div className="logo" id="logoWrapper">
                 <img id="logo" className="logo-img" src="../img/images/logo.png" />
                 <div id="logoHeading" className="logo-heading"></div>
-                <Link to="/mytasks"><div id="myTasksBtn" className="green-btn right-btn"><img className="icon-btn" src="../img/images/ic_user.png" /><span>My Tasks</span></div></Link>
+                <Link to="/mytasks"><div id="myTasksBtn" className="green-btn right-btn"><img className="icon-btn" src="../img/images/ic_user.png" /><span>My Services</span></div></Link>
             </div>
             <div><i className="loading"></i></div>
 
 
                 <div className={`banner${Math.floor(Math.random() * 4) + 1}`}/>
-                <div className="banner-overlay" />
                 <div className="main">
                     <div>
 
-                        <div className="header">Find authentic local services<br/><div className="sub-head">Stint makes booking local services transparent & affordable.</div></div>
+                        <div className="header">Discover services authentic to you<br/><div className="sub-head">Stint makes booking personalized services easy & affordable</div></div>
                         <img className="curve" src="./img/images/curve.png"/>
                         <div className="scroll-arrow">
                             <span/><span/><span/>
@@ -216,10 +216,11 @@ class Guide extends React.Component {
                     <hr className="line"/>
                                         <div className="section">
                                             <div className="post-heading">
-                                                <div className="title" style={{paddingLeft:'12px', paddingRight:'12px'}}>Your personal multi-tasker</div>
+                                                <div className="title" style={{paddingLeft:'12px', paddingRight:'12px'}}>Why Stint?</div>
                                                 <div className="info" style={{marginTop: '10px'}}>
                                                     <div className="para" style={{marginTop: '0px'}}>
-                                                       <div className="main-desc">Stint ticks off variety of tasks on your to-do list to free up time for family & fun.
+                                                       <div className="main-desc">
+                                                       How often have we booked a service &amp; realized... well that’s not what I wanted!<br/><br/> Stint shortlists service providers based on your own individual needs and their proven credibility at the best market price.
 
                                                         </div><br/>
                                                     </div>
@@ -427,7 +428,7 @@ export class ResultsList extends React.Component {
             questionList: questions.results,
             shortlistText: searchResults.shortlistText,
             shortlistCount: searchResults.shortlistCount
-        })
+        });
     }
 
     opinionClick() {
