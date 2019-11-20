@@ -220,7 +220,9 @@ class Guide extends React.Component {
                                                 <div className="info" style={{marginTop: '10px'}}>
                                                     <div className="para" style={{marginTop: '0px'}}>
                                                        <div className="main-desc">
-                                                       How often have we availed a service in Bangalore &amp; realized, well that’s not what I expected!<br/><br/> Stint shortlists authentic services by learning your specific needs, like your personal assistant!
+                                                       How often have we availed a service in Bangalore &amp; realized, well that’s not what we expected.
+                                                       <br/><br/>
+                                                       Stint helps you shortlist & book authentic services to suit your exact needs.
 
                                                         </div><br/>
                                                     </div>
