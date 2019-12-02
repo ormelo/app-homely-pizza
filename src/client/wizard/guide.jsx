@@ -197,13 +197,13 @@ class Guide extends React.Component {
                 <div className="main">
                     <div>
 
-                        <div className="header">Interior designers handpicked for you<br/><div className="sub-head">Authentic recommendations for your unique preferences</div></div>
+                        <div className="header">Interior designers you'll love<br/><div className="sub-head">Authentic recommendations for your unique preferences</div></div>
                         <img className="curve" src="./img/images/curve.png"/>
                         <div className="scroll-arrow">
                             <span/><span/><span/>
                         </div>
                     </div>
-                    <div className="overview">Browse authentic matches in a few clicks!</div>
+                    <div className="overview">Browse matches in a few clicks!</div>
 
                     <div className="section">
                         <div className="post-heading icon-container">
