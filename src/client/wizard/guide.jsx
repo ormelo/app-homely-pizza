@@ -197,13 +197,13 @@ class Guide extends React.Component {
                 <div className="main">
                     <div>
 
-                        <div className="header">Discover services authentic to you<br/><div className="sub-head">Stint makes booking personalized services easy & affordable</div></div>
+                        <div className="header">Community curated interior designers<br/><div className="sub-head">Find genuine interior designers for your specific needs</div></div>
                         <img className="curve" src="./img/images/curve.png"/>
                         <div className="scroll-arrow">
                             <span/><span/><span/>
                         </div>
                     </div>
-                    <div className="overview">What do you want to get done?</div>
+                    <div className="overview">What are you looking for?</div>
 
                     <div className="section">
                         <div className="post-heading icon-container">
@@ -216,13 +216,13 @@ class Guide extends React.Component {
                     <hr className="line"/>
                                         <div className="section">
                                             <div className="post-heading">
-                                                <div className="title" style={{paddingLeft:'12px', paddingRight:'12px'}}>Why Stint?</div>
+                                                <div className="title" style={{paddingLeft:'12px', paddingRight:'12px'}}>Why authentist?</div>
                                                 <div className="info" style={{marginTop: '10px'}}>
                                                     <div className="para" style={{marginTop: '0px'}}>
                                                        <div className="main-desc">
-                                                       How often have we availed a service in Bangalore &amp; realized, well that’s not what we expected.
+                                                       How often have we availed a service &amp; realized, well that’s not what we expected.
                                                        <br/><br/>
-                                                       Stint helps you shortlist & book authentic services to suit your exact needs.
+                                                       Authentist helps you shortlist & book services to suit your exact needs.
 
                                                         </div><br/>
                                                     </div>
@@ -240,8 +240,8 @@ class Guide extends React.Component {
                                                     <img src="./img/images/ic_num_1.png" className="ic-num"/>
                                                     <img className="curve small" src="./img/images/curve.png"/>
                                                     <div className="para" style={{marginTop: '14px'}}>
-                                                       <div className="title">Stint learns your needs</div>
-                                                       <div className="desc" style={{marginTop: '10px'}}>Answer quick questions to share your specific needs</div>
+                                                       <div className="title">Share your likes</div>
+                                                       <div className="desc" style={{marginTop: '10px'}}>Like or dislike what to see to refine your search</div>
                                                     </div>
 
                                                 </div>
@@ -256,7 +256,7 @@ class Guide extends React.Component {
                                                         <div className="para" style={{marginTop: '14px'}}>
                                                             <div className="title"></div>
                                                            <div className="title">Screening & shortlisting</div>
-                                                           <div className="desc" style={{marginTop: '10px'}}>Stint shortlists authentic service providers & checks with you to see if they fit your needs & budget</div>
+                                                           <div className="desc" style={{marginTop: '10px'}}>Authentist shortlists service providers & checks with you to see if they fit your needs & budget</div>
                                                     </div>
                                                 </div>
                                              </div>
@@ -269,15 +269,15 @@ class Guide extends React.Component {
                                                          <img className="curve small" src="./img/images/curve.png" style={{top: '180px'}}/>
                                                          <div className="para" style={{marginTop: '14px'}}>
                                                              <div className="title"></div>
-                                                            <div className="title">Book a stint </div>
-                                                            <div className="desc" style={{marginTop: '16px'}}>Stint compares USP of each service provider and cautions you when their quote is above market.
-                                                            <br/><br/><span style={{color: '#000', fontWeight:'bold', fontColor: '#08b587'}}>Quotes from stintlers are usually 20% less than market average due to the commissionless model.</span></div><br/>
+                                                            <div className="title">Book with confidence</div>
+                                                            <div className="desc" style={{marginTop: '16px'}}>Authentist compares USP of each service provider and cautions you when their quote is above market.
+                                                            <br/><br/><span style={{color: '#000', fontWeight:'bold', fontColor: '#08b587'}}>Quotes from authentist are usually 20% less than market average due to the commissionless model.</span></div><br/>
                                                      </div>
                                                  </div>
                                               </div>
                                           </div>
 
-                                          <div className="overview" style={{background: '#f7f7f7', paddingTop: '20px'}}>So what do you want to get done?</div>
+                                          <div className="overview" style={{background: '#f7f7f7', paddingTop: '20px'}}>What are you looking for?</div>
 
                                                               <div className="section" style={{background: '#f7f7f7'}}>
                                                                   <div className="post-heading icon-container">
@@ -290,7 +290,7 @@ class Guide extends React.Component {
                                                               <br/>
 
 
-                                        <div className="desc" style={{textAlign: 'center',fontSize: '14px'}}>Copyright © 2019 Stint.do</div><br/>
+                                        <div className="desc" style={{textAlign: 'center',fontSize: '14px'}}>copyright © 2019 authentist.in</div><br/>
                 </div>
 
 
