@@ -2,14 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2100fea9-fa34-466f-9140-289133e88515" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/guide.bundle.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/guide.bundle.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/images/ic_eventsi.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/images/ic_eventsi.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/images/ic_homei.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/images/ic_homei.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/images/ic_local_enquiriesi.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/images/ic_local_enquiriesi.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/images/ic_num_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/images/ic_num_1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/images/ic_num_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/images/ic_num_2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/images/ic_num_3.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/images/ic_num_3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/client/wizard/guide.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/wizard/guide.jsx" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -44,8 +38,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="292" lean-forward="true" selection-start-line="292" selection-end-line="292" />
+            <state relative-caret-position="285">
+              <caret line="300" selection-start-line="300" selection-end-line="300" />
             </state>
           </provider>
         </entry>
@@ -106,7 +100,7 @@
         <entry file="file://$PROJECT_DIR$/src/client/wizard/guide.jsx">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="313">
-              <caret line="292" column="126" selection-start-line="292" selection-start-column="126" selection-end-line="292" selection-end-column="126" />
+              <caret line="199" column="163" selection-start-line="199" selection-start-column="163" selection-end-line="199" selection-end-column="163" />
             </state>
           </provider>
         </entry>
@@ -142,7 +136,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>.logo</find>
       <find>.opinio</find>
       <find>shortlists</find>
       <find>src</find>
@@ -172,6 +165,7 @@
       <find>logo</find>
       <find>logo-i</find>
       <find>.logo-im</find>
+      <find>stint.do</find>
     </findStrings>
     <replaceStrings>
       <replace>./img/anim1/</replace>
@@ -220,11 +214,11 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="608" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="40" />
     <option name="y" value="23" />
-    <option name="width" value="1312" />
-    <option name="height" value="1110" />
+    <option name="width" value="1880" />
+    <option name="height" value="1114" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -303,10 +297,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1920" height="1114" extended-state="6" />
+    <frame x="40" y="23" width="1880" height="1114" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17518637" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17899892" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
@@ -572,15 +566,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="292" lean-forward="true" selection-start-line="292" selection-end-line="292" />
+        <state relative-caret-position="285">
+          <caret line="300" selection-start-line="300" selection-end-line="300" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/client/wizard/guide.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="313">
-          <caret line="292" column="126" selection-start-line="292" selection-start-column="126" selection-end-line="292" selection-end-column="126" />
+          <caret line="199" column="163" selection-start-line="199" selection-start-column="163" selection-end-line="199" selection-end-column="163" />
         </state>
       </provider>
     </entry>
