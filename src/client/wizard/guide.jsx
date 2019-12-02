@@ -186,7 +186,7 @@ class Guide extends React.Component {
             return (<div>
 
             <div className="logo" id="logoWrapper">
-                <img id="logo" className="logo-img" src="../img/images/logo_at.png" />
+                <img id="logo" className="logo-img" src="../img/images/logo_at3.png" />
                 <div id="logoHeading" className="logo-heading"></div>
                 <Link to="/mytasks"><div id="myTasksBtn" className="green-btn right-btn"><img className="icon-btn" src="../img/images/ic_user.png" /><span>My Services</span></div></Link>
             </div>
