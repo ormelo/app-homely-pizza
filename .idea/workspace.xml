@@ -2,18 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2100fea9-fa34-466f-9140-289133e88515" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/public/assets/mystyles.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/mystyles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/pink.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/pink.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/guide.bundle.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/guide.bundle.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/images/ic_24h.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/images/ic_24h.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/images/logo_ic.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/images/logo_ic.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/picks.bundle.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/picks.bundle.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/shortlists.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/shortlists.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/wiz.bundle.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/wiz.bundle.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/wizard/book.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/wizard/book.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/client/wizard/guide.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/wizard/guide.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/wizard/shortlists.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/wizard/shortlists.jsx" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -53,11 +44,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="305">
-              <caret line="158" column="23" selection-start-line="158" selection-start-column="23" selection-end-line="158" selection-end-column="23" />
+            <state relative-caret-position="320">
+              <caret line="294" column="17" selection-start-line="294" selection-start-column="17" selection-end-line="294" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -71,11 +62,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/client/wizard/guide.jsx">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="313">
-              <caret line="119" column="10" selection-start-line="119" selection-start-column="10" selection-end-line="119" selection-end-column="10" />
+              <caret line="199" column="161" selection-start-line="199" selection-start-column="161" selection-end-line="199" selection-end-column="161" />
             </state>
           </provider>
         </entry>
@@ -120,7 +111,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>banner</find>
       <find>.banne</find>
       <find>.header</find>
       <find>Shubham Gupta</find>
@@ -142,14 +132,15 @@
       <find>/mytask</find>
       <find>&quot;answer&quot;</find>
       <find>/hom</find>
-      <find>26cf96</find>
       <find>QuizWithRouter</find>
-      <find>#26cf96</find>
       <find>/myta</find>
       <find>find m</find>
       <find>logoHeading</find>
       <find>/mytasks</find>
       <find>showMyTasksBtn</find>
+      <find>#26cf96</find>
+      <find>26cf96</find>
+      <find>recommends</find>
     </findStrings>
     <replaceStrings>
       <replace>./img/anim1/</replace>
@@ -190,12 +181,12 @@
         <option value="$PROJECT_DIR$/public/mytasks.html" />
         <option value="$PROJECT_DIR$/src/data-source/interior/blr/east/mockDataQnA.json" />
         <option value="$PROJECT_DIR$/public/assets/pink.css" />
-        <option value="$PROJECT_DIR$/public/index.html" />
         <option value="$PROJECT_DIR$/public/assets/mystyles.css" />
         <option value="$PROJECT_DIR$/public/shortlists.html" />
         <option value="$PROJECT_DIR$/src/client/wizard/book.jsx" />
         <option value="$PROJECT_DIR$/src/client/wizard/shortlists.jsx" />
         <option value="$PROJECT_DIR$/src/client/wizard/guide.jsx" />
+        <option value="$PROJECT_DIR$/public/index.html" />
       </list>
     </option>
   </component>
@@ -535,20 +526,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="305">
-          <caret line="158" column="23" selection-start-line="158" selection-start-column="23" selection-end-line="158" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/shortlists.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="132" column="21" selection-start-line="132" selection-start-column="21" selection-end-line="132" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/client/wizard/book.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="128">
@@ -563,10 +540,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/public/shortlists.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="132" column="21" selection-start-line="132" selection-start-column="21" selection-end-line="132" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/client/wizard/guide.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="313">
-          <caret line="119" column="10" selection-start-line="119" selection-start-column="10" selection-end-line="119" selection-end-column="10" />
+          <caret line="199" column="161" selection-start-line="199" selection-start-column="161" selection-end-line="199" selection-end-column="161" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="294" column="17" selection-start-line="294" selection-start-column="17" selection-end-line="294" selection-end-column="17" />
         </state>
       </provider>
     </entry>
