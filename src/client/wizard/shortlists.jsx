@@ -249,43 +249,16 @@ class Shortlists extends Component {
         return (<div>
                     <div className="logo" id="logoWrapper" style={{top: '0px', marginLeft: '-10px'}}>
                         <img className="icon-back" src="../../../img/images/ic_back.png" onClick={()=>{history.back(-1);}} />
-                        <Link to="/?navigatingBack=true" style={{marginLeft: '34px'}}><img id="logo" className="logo-img" style={{width: '40px'}} src="../../../img/images/logo_ic.png" /></Link>
-                        <div id="logoHeading" className="logo-heading" style={{marginLeft: '108px', textAlign: 'left', fontSize: '18px'}}>{`Shortlists  >  ${localStorage.getItem('primary-task')}`}</div>
+                        <Link to="/" style={{marginLeft: '34px'}}><img id="logo" className="logo-img" style={{width: '40px'}} src="../../../img/images/logo_ic.png" /></Link>
+                        <div id="logoHeading" className="logo-heading" style={{marginLeft: '108px', marginTop: '-26px', textAlign: 'left', fontSize: '18px'}}>{`Shortlists  >  ${localStorage.getItem('primary-task')}`}</div>
                     </div>
                     <div><i className="loading" id="myTasksLoader" style={{top: '28px'}}></i></div>
                     <div className="main fadeInBottom">
                         <hr className="line-tasks"/>
-                        <div id="notifyMsg" className="alert-msg">
-                            <div className="alert-icon"><img src="../../../img/images/ic_24h.png" className="shake" style={{width: '44px'}}/></div>
-                            <div className="alert-message">
-                                <div id="tasksTitle" className="a-title" style={{fontSize: '16px'}}>
-                                    Stint has shortlisted your matches
-                                </div>
-                                <div className="a-desc">
-                                    Give it upto <b style={{color: '#444444'}}>24 hrs</b> to get the best quotes.
-                                </div>
-                            </div>
-                        </div>
                         <img className="icon-tick" id="myTasksSuccess" src="../../../img/images/ic_tick.png"/>
                         <Paper style={{marginTop: '14px'}}>
-                              <Tabs
-                                value={this.state.value}
-                                onChange={this.handleTabChange}
-                                indicatorColor="primary"
-                                textColor="primary"
-                                centered
-                              >
-                                <Tab label="&nbsp;&nbsp;&nbsp;Shortlists&nbsp;&nbsp;&nbsp;" />
-                                <Tab label="&nbsp;&nbsp;&nbsp;Rejects&nbsp;&nbsp;&nbsp;" />
-                              </Tabs>
+
                               <TabPanel value={this.state.value} index={0}>
-
-                                    {results && results.map((resultItem, index) => {
-                                        return (<Card index={index} data={resultItem} />);
-                                    })}
-
-                              </TabPanel>
-                              <TabPanel value={this.state.value} index={1}>
 
                                     {results && results.map((resultItem, index) => {
                                         return (<Card index={index} data={resultItem} />);

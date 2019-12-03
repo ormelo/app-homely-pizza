@@ -23,7 +23,7 @@ textarea:focus {
 }
 a.main-button,
 input[type="submit"] {
-      background: linear-gradient(180deg,  #fd6e5b 0%, #fe4737 80%, #fe4737 100%);
+      background: linear-gradient(180deg,  #fd7880 0%, #ea2639 80%, #ea2639 100%);
       border: 0;
       letter-spacing: 1px;
       text-transform: none;

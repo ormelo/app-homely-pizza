@@ -117,7 +117,7 @@ class Guide extends React.Component {
     componentDidMount() {
         window.addEventListener('scroll', this.handleScroll);
         window.onRecommenderClick = this.handleRecommenderClick;
-        this.showMyTasksBtn();
+        //this.showMyTasksBtn();
         scrollTo(document.body, 0, 100);
     }
 
@@ -197,7 +197,7 @@ class Guide extends React.Component {
                 <div className="main">
                     <div>
 
-                        <div className="header">Interior designers you'll love<br/><div className="sub-head">Authentic recommendations for your unique preferences</div></div>
+                        <div className="header">Interior designers you'll love<br/><div className="sub-head">Authentist recommends the best based on your unique preferences</div></div>
                         <img className="curve" src="./img/images/curve.png"/>
                         <div className="scroll-arrow">
                             <span/><span/><span/>
@@ -213,6 +213,30 @@ class Guide extends React.Component {
                         </div>
                     </div>
                     <br/>
+
+
+
+                    <div class="panel-center mob-only" style={{position: 'fixed',bottom: '0px',background: 'linear-gradient(rgba(216, 216, 216, 0.05) 0%, rgb(214, 214, 214) 100%)',left: '0px', zIndex: '9999'}}>
+
+
+                                            <div id="div_id_submit" className="form-group">
+                                                <div className="controls">
+                                                    <Link to="/home">
+                                                        <input type="submit" className="submit form-control" id="id_submit" value="Find Matches" dcvalue="Find trusted providers" />
+                                                    </Link>
+                                                </div>
+                                            </div>
+                                            <div className="form-group">
+                                                <div className="controls ">
+                                                    <p style={{color: '#000', fontSize: '9px', textAlign: 'center'}}></p>
+
+                                                </div>
+                                            </div>
+
+                                    </div>
+
+
+
                     <hr className="line"/>
                                         <div className="section">
                                             <div className="post-heading">
