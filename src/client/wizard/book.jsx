@@ -72,7 +72,7 @@ class Book extends Component {
     }
     componentDidMount() {
         const { params } = this.props.match;
-        setTimeout(function(){document.getElementById('logoHeading').style.opacity = '1';},0);
+        setTimeout(function(){document.getElementById('logoHeading').style.opacity = '1';},200);
         localStorage.removeItem('primary-task');
         localStorage.removeItem('secondary-task');
         this.setState({
