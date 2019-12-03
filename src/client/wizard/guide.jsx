@@ -197,13 +197,13 @@ class Guide extends React.Component {
                 <div className="main">
                     <div>
 
-                        <div className="header">Interior designers you'll love<br/><div className="sub-head">Authentist recommends the best sensing your personal preferences</div></div>
+                        <div className="header">Discover new year events you'll love<br/><div className="sub-head">Authentist recommends the best sensing your personal preferences</div></div>
                         <img className="curve" src="./img/images/curve.png"/>
                         <div className="scroll-arrow">
                             <span/><span/><span/>
                         </div>
                     </div>
-                    <div className="overview">Browse matches in a few clicks!</div>
+                    <div className="overview">Browse matches in a few swipes!</div>
 
                     <div className="section">
                         <div className="post-heading icon-container">
@@ -222,7 +222,7 @@ class Guide extends React.Component {
                                             <div id="div_id_submit" className="form-group">
                                                 <div className="controls">
                                                     <Link to="/home">
-                                                        <input type="submit" className="submit form-control" id="id_submit" value="Find Matches" dcvalue="Find trusted providers" />
+                                                        <input type="submit" className="submit form-control" id="id_submit" value="Swipe-Find" dcvalue="Find trusted providers" />
                                                     </Link>
                                                 </div>
                                             </div>
