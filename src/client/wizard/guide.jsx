@@ -197,7 +197,7 @@ class Guide extends React.Component {
                 <div className="main">
                     <div>
 
-                        <div className="header">Discover new year events you'll love<br/><div className="sub-head">Authentist senses your personal preferences to recommend the best!</div></div>
+                        <div className="header">Discover new year events you'll love<br/><div className="sub-head">authentist senses your personal preferences to recommend the best</div></div>
                         <img className="curve" src="./img/images/curve.png"/>
                         <div className="scroll-arrow">
                             <span/><span/><span/>
