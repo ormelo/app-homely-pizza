@@ -1,6 +1,7 @@
 let particles = [];
 let count = false;
 let img;
+let alpha_img;
 let countScale = 1;
 let scaleKoef = 0.01;
 let countScaleMin = 0.9;
@@ -9,6 +10,7 @@ let countScaleMax = 1.1;
 function setup() {
   createCanvas(320,200);
   img = loadImage("/img/images/heart.png");
+  alpha_img = loadImage("/img/images/hearta.png");
   smooth(8)
 }
 
@@ -135,7 +137,7 @@ class Particle {
     push()
     scale(this.scale);
     rotate(this.rotation);
-    image(img,this.x - 36,this.y -33,72,66);
+    image(alpha_img,this.x - 36,this.y -33,72,66);
     pop()
   }
 }
