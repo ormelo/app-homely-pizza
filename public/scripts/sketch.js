@@ -21,7 +21,7 @@ function draw() {
 
   touchEnded = () =>
     count = false
-    
+
 
   touchStarted = () => {
     count = true
@@ -31,10 +31,7 @@ function draw() {
 
   if (count == true){
     if (!(frameCount % 8)) {
-      if(Math.round(Math.random() * (1 - 0) + 0) == 0) {
-          let p = new Particle();
-          particles.push(p);
-      }
+          setTimeout(function(){let p = new Particle();particles.push(p);},500);
     }
   }
 
