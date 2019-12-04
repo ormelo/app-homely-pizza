@@ -28,11 +28,9 @@ function draw() {
     }
 
   touchStarted = () => {
-    if(keyCode === 76) {
     count = true
     console.log(count)
     scaleKoef = 0.01;
-    }
   }
 
   if (count == true){
