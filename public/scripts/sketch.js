@@ -21,11 +21,7 @@ function draw() {
 
   touchEnded = () =>
     count = false
-    if (!count) {
-      title.show("Press L for love");
-    } else {
-      title.show("Thank you!");
-    }
+    
 
   touchStarted = () => {
     count = true
