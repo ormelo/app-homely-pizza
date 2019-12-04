@@ -7,7 +7,7 @@ let countScaleMin = 0.9;
 let countScaleMax = 1.1;
 
 function setup() {
-  createCanvas(800,600);
+  createCanvas(320,200);
   img = loadImage("/img/images/heart.png");
   smooth(8)
 }
