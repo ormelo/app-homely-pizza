@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2100fea9-fa34-466f-9140-289133e88515" name="Default Changelist" comment="" />
+    <list default="true" id="2100fea9-fa34-466f-9140-289133e88515" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,6 +51,15 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="585">
+              <caret line="742" column="60" selection-start-line="742" selection-start-column="60" selection-end-line="742" selection-end-column="60" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/mytasks.html">
           <provider selected="true" editor-type-id="text-editor">
@@ -79,11 +90,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/scripts/sketch.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="21" column="12" selection-start-line="21" selection-start-column="12" selection-end-line="21" selection-end-column="12" />
+            <state relative-caret-position="304">
+              <caret line="29" column="12" selection-start-line="29" selection-start-column="12" selection-end-line="29" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -97,20 +108,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/assets/pink.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="347">
-              <caret line="25" column="82" selection-start-line="25" selection-start-column="82" selection-end-line="25" selection-end-column="82" />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>logo</find>
       <find>at.</find>
       <find>authentic</find>
       <find>panel-center</find>
@@ -140,6 +141,7 @@
       <find>.header</find>
       <find>browse m</find>
       <find>hea</find>
+      <find>start io</find>
     </findStrings>
     <replaceStrings>
       <replace>./img/anim1/</replace>
@@ -175,7 +177,6 @@
         <option value="$PROJECT_DIR$/public/home.html" />
         <option value="$PROJECT_DIR$/src/data-source/interior/blr/east/mockDataQnA.js" />
         <option value="$PROJECT_DIR$/.babelrc" />
-        <option value="$PROJECT_DIR$/index.js" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/src/client/wizard/mytasks.jsx" />
         <option value="$PROJECT_DIR$/public/mytasks.html" />
@@ -189,6 +190,7 @@
         <option value="$PROJECT_DIR$/public/index.html" />
         <option value="$PROJECT_DIR$/public/heart.html" />
         <option value="$PROJECT_DIR$/public/scripts/sketch.js" />
+        <option value="$PROJECT_DIR$/index.js" />
       </list>
     </option>
   </component>
@@ -216,12 +218,6 @@
               <item name="epigram-web" type="b2602c69:ProjectViewProjectNode" />
               <item name="epigram-web" type="462c0819:PsiDirectoryNode" />
               <item name="public" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="epigram-web" type="b2602c69:ProjectViewProjectNode" />
-              <item name="epigram-web" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="scripts" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="epigram-web" type="b2602c69:ProjectViewProjectNode" />
@@ -479,13 +475,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="11250">
-          <caret line="750" column="22" selection-start-line="750" selection-start-column="22" selection-end-line="750" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/client/wizard/createFitProfile.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4170">
@@ -568,8 +557,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/scripts/sketch.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="21" column="12" selection-start-line="21" selection-start-column="12" selection-end-line="21" selection-end-column="12" />
+        <state relative-caret-position="304">
+          <caret line="29" column="12" selection-start-line="29" selection-start-column="12" selection-end-line="29" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="585">
+          <caret line="742" column="60" selection-start-line="742" selection-start-column="60" selection-end-line="742" selection-end-column="60" />
         </state>
       </provider>
     </entry>
