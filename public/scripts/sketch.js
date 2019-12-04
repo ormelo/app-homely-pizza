@@ -31,7 +31,8 @@ function draw() {
 
   if (count == true){
     if (!(frameCount % 8)) {
-          setTimeout(function(){let p = new Particle();particles.push(p);},500);
+          let p = new Particle();
+          particles.push(p);
     }
   }
 
@@ -132,7 +133,6 @@ class Particle {
   show() {
     noStroke();
     push()
-    tint(255,this.alpha);
     scale(this.scale);
     rotate(this.rotation);
     image(img,this.x - 36,this.y -33,72,66);
