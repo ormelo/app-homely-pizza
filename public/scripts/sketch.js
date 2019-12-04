@@ -21,6 +21,7 @@ function draw() {
 
   touchEnded = () =>
     count = false
+    
 
   touchStarted = () => {
     count = true
