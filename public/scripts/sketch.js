@@ -34,7 +34,7 @@ function draw() {
   }
 
   if (count == true){
-    if (!(frameCount % 4)) {
+    if (!(frameCount % 8)) {
       let p = new Particle();
       particles.push(p);
     }
