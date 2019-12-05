@@ -203,12 +203,12 @@ class Guide extends React.Component {
                             <span/><span/><span/>
                         </div>
                     </div>
-                    <div className="overview">Browse matches in a few swipes!</div>
+                    <div className="overview">Browse matches in a few taps!</div>
 
                     <div className="section">
                         <div className="post-heading icon-container">
-                            <Link to="/home"><img className="ic" src="./img/images/ic_homei.png" style={{width: '72px'}} /></Link>
-                            <Link to="/home"><img className="ic" src="./img/images/ic_eventsi.png" style={{width: '72px'}} /></Link>
+                            <img className="ic" src="./img/images/ic_homei.png" style={{width: '72px'}} />
+                            <img className="ic" src="./img/images/ic_eventsi.png" style={{width: '72px'}} />
                             <img className="ic" src="./img/images/ic_local_enquiriesi.png" style={{width: '72px'}} />
                         </div>
                     </div>
@@ -221,9 +221,9 @@ class Guide extends React.Component {
 
                                             <div id="div_id_submit" className="form-group">
                                                 <div className="controls">
-                                                    <Link to="/home">
-                                                        <input type="submit" className="submit form-control" id="id_submit" value="Swipe-Find" dcvalue="Find trusted providers" />
-                                                    </Link>
+
+                                                        <input type="submit" className="submit form-control" id="id_submit" value="Find authentic matches" dcvalue="Find trusted providers" />
+
                                                 </div>
                                             </div>
                                             <div className="form-group">
@@ -238,80 +238,7 @@ class Guide extends React.Component {
 
 
                     <hr className="line"/>
-                                        <div className="section">
-                                            <div className="post-heading">
-                                                <div className="title" style={{paddingLeft:'12px', paddingRight:'12px'}}>Why authentist?</div>
-                                                <div className="info" style={{marginTop: '10px'}}>
-                                                    <div className="para" style={{marginTop: '0px'}}>
-                                                       <div className="main-desc">
-                                                       How often have we availed a service &amp; realized, well that’s not what we expected.
-                                                       <br/><br/>
-                                                       Authentist helps you shortlist & book services to suit your exact needs.
 
-                                                        </div><br/>
-                                                    </div>
-
-                                                    <hr class="line"/>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className="section no-padding">
-                                            <div className="post-heading">
-                                                <div className="title">How it works</div>
-                                                <div className="info" style={{marginTop: '12px'}}>
-                                                    <br/><br/>
-                                                    <div className="step1"/>
-                                                    <img src="./img/images/ic_num_1.png" className="ic-num"/>
-                                                    <img className="curve small" src="./img/images/curve.png"/>
-                                                    <div className="para" style={{marginTop: '14px'}}>
-                                                       <div className="title">Share your likes</div>
-                                                       <div className="desc" style={{marginTop: '10px'}}>Like or dislike what to see to refine your search</div>
-                                                    </div>
-
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className="section no-padding" style={{marginTop: '40px'}}>
-                                             <div className="post-heading">
-                                                <div className="info">
-                                                    <div className="step2"/>
-                                                        <img src="./img/images/ic_num_2.png" className="ic-num"/>
-                                                        <img className="curve small" src="./img/images/curve.png" style={{top: '180px'}}/>
-                                                        <div className="para" style={{marginTop: '14px'}}>
-                                                            <div className="title"></div>
-                                                           <div className="title">Screening & shortlisting</div>
-                                                           <div className="desc" style={{marginTop: '10px'}}>Authentist shortlists service providers & checks with you to see if they fit your needs & budget</div>
-                                                    </div>
-                                                </div>
-                                             </div>
-                                         </div>
-                                         <div className="section no-padding" style={{marginTop: '40px'}}>
-                                              <div className="post-heading">
-                                                 <div className="info">
-                                                     <div className="step3"/>
-                                                         <img src="./img/images/ic_num_3.png" className="ic-num"/>
-                                                         <img className="curve small" src="./img/images/curve.png" style={{top: '180px'}}/>
-                                                         <div className="para" style={{marginTop: '14px'}}>
-                                                             <div className="title"></div>
-                                                            <div className="title">Book with confidence</div>
-                                                            <div className="desc" style={{marginTop: '16px'}}>Authentist compares USP of each service provider and cautions you when their quote is above market.
-                                                            <br/><br/><span style={{color: '#000', fontWeight:'bold', fontColor: '#08b587'}}>Quotes from authentist are usually 20% less than market average due to the commissionless model.</span></div><br/>
-                                                     </div>
-                                                 </div>
-                                              </div>
-                                          </div>
-
-                                          <div className="overview" style={{background: '#f7f7f7', paddingTop: '20px'}}>What are you looking for?</div>
-
-                                                              <div className="section" style={{background: '#f7f7f7'}}>
-                                                                  <div className="post-heading icon-container">
-                                                                      <Link to="/home"><img className="ic" src="./img/images/ic_homei.png" style={{width: '72px'}} /></Link>
-                                                                      <img className="ic" src="./img/images/ic_eventsi.png" style={{width: '72px'}} />
-                                                                      <img className="ic" src="./img/images/ic_local_enquiriesi.png" style={{width: '72px'}} />
-                                                                  </div>
-                                                                  <br/>
-                                                              </div>
-                                                              <br/>
 
 
                                         <div className="desc" style={{textAlign: 'center',fontSize: '14px'}}>copyright © 2019 authentist.in</div><br/>
