@@ -119,7 +119,7 @@ class Guide extends React.Component {
         window.addEventListener('scroll', this.handleScroll);
         window.onRecommenderClick = this.handleRecommenderClick;
         //this.showMyTasksBtn();
-        this.injestBtn();
+        this.showInjestBtn();
         scrollTo(document.body, 0, 100);
     }
 
@@ -199,7 +199,7 @@ class Guide extends React.Component {
                 <img id="logo" className="logo-img" src="../img/images/logo_ath1.png" />
                 <div id="logoHeading" className="logo-heading"></div>
                 <Link to="/mytasks"><div id="myTasksBtn" className="green-btn right-btn"><img className="icon-btn" src="../img/images/ic_user.png" /><span>My Services</span></div></Link>
-                <Link to="/injest"><div id="injestBtn" className="green-btn right-btn"><img className="icon-btn" src="../img/images/ic_user.png" /><span>Save an event</span></div></Link>
+                <Link to="/injest"><div id="injestBtn" className="green-btn right-btn" style={{width: '120px'}}><img className="icon-btn" src="../img/images/ic_user.png" /><span>Add event</span></div></Link>
             </div>
             <div><i className="loading"></i></div>
 
