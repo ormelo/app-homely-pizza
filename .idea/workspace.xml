@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="2100fea9-fa34-466f-9140-289133e88515" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/public/guide.bundle.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/guide.bundle.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/injest.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/injest.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/client/wizard/injest.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/wizard/injest.jsx" afterDir="false" />
     </list>
@@ -17,11 +18,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="74" column="27" selection-start-line="74" selection-start-column="27" selection-end-line="74" selection-end-column="27" />
+            <state relative-caret-position="255">
+              <caret line="17" column="22" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -35,11 +36,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/injest.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="137">
-              <caret line="16" column="4" lean-forward="true" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="4" />
+            <state relative-caret-position="255">
+              <caret line="17" column="22" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -56,8 +57,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/client/wizard/injest.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="637">
-              <caret line="78" column="148" selection-start-line="78" selection-start-column="148" selection-end-line="78" selection-end-column="148" />
+            <state relative-caret-position="298">
+              <caret line="135" selection-start-line="135" selection-end-line="135" />
             </state>
           </provider>
         </entry>
@@ -107,15 +108,11 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>this.elt.style.width</find>
-      <find>hea</find>
-      <find>meta</find>
       <find>frameCount</find>
       <find>show</find>
       <find>img</find>
       <find>createCanvas =</find>
       <find>createCanvas</find>
-      <find>canvas</find>
       <find>sense</find>
       <find>.header</find>
       <find>onClick</find>
@@ -135,8 +132,12 @@
       <find>injestBtn</find>
       <find>saveEvent</find>
       <find>save</find>
-      <find>save an e</find>
       <find>&lt;input</find>
+      <find>save an e</find>
+      <find>rgb</find>
+      <find>canvas</find>
+      <find>alert</find>
+      <find>height: 79px;</find>
     </findStrings>
     <replaceStrings>
       <replace>./img/anim1/</replace>
@@ -185,10 +186,10 @@
         <option value="$PROJECT_DIR$/public/heart.html" />
         <option value="$PROJECT_DIR$/public/scripts/sketch.js" />
         <option value="$PROJECT_DIR$/index.js" />
-        <option value="$PROJECT_DIR$/public/index.html" />
         <option value="$PROJECT_DIR$/src/client/wizard/guide.jsx" />
         <option value="$PROJECT_DIR$/src/client/wizard/injest.jsx" />
         <option value="$PROJECT_DIR$/public/injest.html" />
+        <option value="$PROJECT_DIR$/public/index.html" />
       </list>
     </option>
   </component>
@@ -583,13 +584,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="74" column="27" selection-start-line="74" selection-start-column="27" selection-end-line="74" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/client/wizard/guide.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="493">
@@ -599,15 +593,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/client/wizard/injest.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="637">
-          <caret line="78" column="148" selection-start-line="78" selection-start-column="148" selection-end-line="78" selection-end-column="148" />
+        <state relative-caret-position="298">
+          <caret line="135" selection-start-line="135" selection-end-line="135" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/injest.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="137">
-          <caret line="16" column="4" lean-forward="true" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="4" />
+        <state relative-caret-position="255">
+          <caret line="17" column="22" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="22" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
         </state>
       </provider>
     </entry>
