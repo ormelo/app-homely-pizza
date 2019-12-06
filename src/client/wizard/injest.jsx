@@ -172,8 +172,12 @@ class Injest extends Component {
         setTimeout(function(){if(document.getElementById('logoHeading'))document.getElementById('logoHeading').style.opacity = '1';},50);
         setTimeout(function(){if(document.getElementById('iconArrow'))document.getElementById('iconArrow').style.opacity = '1';},500);
     }
+    showAnim() {
+        document.getElementById('canvas').style.display='block';
+        setTimeout("document.getElementById('newYearMsg').style.display='block'",1000);
+    }
     saveEvent() {
-
+        this.showAnim();
         //alert(document.getElementById('name').value);
         //alert(document.getElementById('desc').value);
         //alert(document.getElementById('date').value);
@@ -190,7 +194,7 @@ class Injest extends Component {
                         <div id="logoHeading" className="logo-heading" style={{marginLeft: '108px', marginTop: '-26px', textAlign: 'left', fontSize: '20px'}}>Save an event</div>
                     </div>
                     <canvas id="canvas"></canvas>
-                    <div className="new-year-msg">Thanks for making someone's new year special!</div>
+                    <div id="newYearMsg" className="new-year-msg">Thanks for making someone's new year special! <br/><br/><br/><span style={{fontSize:'24px'}}>Happy new year in advance!</span></div>
                     <div><i className="loading" id="myTasksLoader" style={{top: '28px'}}></i></div>
                     <div className="main fadeInBottom">
                         <hr className="line-tasks"/>
