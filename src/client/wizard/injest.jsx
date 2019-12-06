@@ -49,7 +49,8 @@ class Injest extends Component {
     saveEvent() {
         alert(document.getElementById('name').value);
         alert(document.getElementById('desc').value);
-        alert(document.getElementById('dateVal').value);
+        alert(document.getElementById('date').value);
+        alert(document.getElementById('time').value);
         alert(document.getElementById('price').value);
         alert(document.getElementById('remarks').value);
     }
@@ -69,7 +70,11 @@ class Injest extends Component {
                                 <form>
                                     <input id="name" type="text" className="text-input" placeholder="Event Name"/>
                                     <textarea id="desc" className="text-area" placeholder="Add a description"/>
-                                    <input id="dateVal" type="date" className="text-date" placeholder="Date"/>
+                                    <div className="datetimepicker">
+                                    	<input className="text-input" type="date" id="date" value="2019-12-31" style={{width: '130px'}}/>
+                                    	<span></span>
+                                    	<input className="text-input" type="time" id="time" value="20:00" style={{width: '100px'}}/>
+                                    </div>
                                     <input id="price" type="text" className="text-input" placeholder="Price in INR"/>
                                     <input id="remarks" type="text" className="text-input" placeholder="Add remarks eg. Kid friendly, No alcohol served etc"/>
                                 </form>
