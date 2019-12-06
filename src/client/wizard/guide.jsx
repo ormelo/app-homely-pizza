@@ -119,8 +119,17 @@ class Guide extends React.Component {
         window.addEventListener('scroll', this.handleScroll);
         window.onRecommenderClick = this.handleRecommenderClick;
         //this.showMyTasksBtn();
+        this.injestBtn();
         scrollTo(document.body, 0, 100);
     }
+
+     showInjestBtn() {
+            if(location.href.indexOf('injest') != -1) {
+                document.getElementById('injestBtn').style.display = 'block';
+            } else {
+                document.getElementById('injestBtn').style.display = 'none';
+            }
+        }
 
     showMyTasksBtn() {
         if(localStorage.getItem('primary-task') != null && localStorage.getItem('secondary-task') != null
@@ -190,6 +199,7 @@ class Guide extends React.Component {
                 <img id="logo" className="logo-img" src="../img/images/logo_ath1.png" />
                 <div id="logoHeading" className="logo-heading"></div>
                 <Link to="/mytasks"><div id="myTasksBtn" className="green-btn right-btn"><img className="icon-btn" src="../img/images/ic_user.png" /><span>My Services</span></div></Link>
+                <Link to="/injest"><div id="injestBtn" className="green-btn right-btn"><img className="icon-btn" src="../img/images/ic_user.png" /><span>Save an event</span></div></Link>
             </div>
             <div><i className="loading"></i></div>
 

@@ -40,14 +40,19 @@ class Injest extends Component {
             value: 0,
             results: []
         };
+        this.saveEvent = this.saveEvent.bind(this);
     }
     componentDidMount() {
         setTimeout(function(){if(document.getElementById('logoHeading'))document.getElementById('logoHeading').style.opacity = '1';},50);
         setTimeout(function(){if(document.getElementById('iconArrow'))document.getElementById('iconArrow').style.opacity = '1';},500);
     }
-
-
-
+    saveEvent() {
+        alert(document.getElementById('name').value);
+        alert(document.getElementById('desc').value);
+        alert(document.getElementById('dateVal').value);
+        alert(document.getElementById('price').value);
+        alert(document.getElementById('remarks').value);
+    }
     render() {
         const {showLoader, results} = this.state;
         return (<div>
@@ -62,10 +67,11 @@ class Injest extends Component {
                         <img className="icon-tick" id="myTasksSuccess" src="../../../img/images/ic_tick.png"/>
                         <Paper style={{marginTop: '14px',padding:'0 20px'}}>
                                 <form>
-                                    <input type="text" className="text-input" placeholder="Event Name"/>
-                                    <textarea className="text-area" placeholder="Add a description"/>
-                                    <textarea className="text-area" placeholder="Add reviews"/>
-                                    <input type="text" className="text-input" placeholder="Add remarks eg. Kid friendly, No alcohol served etc"/>
+                                    <input id="name" type="text" className="text-input" placeholder="Event Name"/>
+                                    <textarea id="desc" className="text-area" placeholder="Add a description"/>
+                                    <input id="dateVal" type="date" className="text-date" placeholder="Date"/>
+                                    <input id="price" type="text" className="text-input" placeholder="Price in INR"/>
+                                    <input id="remarks" type="text" className="text-input" placeholder="Add remarks eg. Kid friendly, No alcohol served etc"/>
                                 </form>
                             </Paper>
 
@@ -77,7 +83,7 @@ class Injest extends Component {
                             <div id="div_id_submit" className="form-group">
                                 <div className="controls">
 
-                                        <input type="submit" className="submit form-control" id="id_submit" value="Save event" />
+                                        <input type="submit" className="submit form-control" id="id_submit" value="Save" onClick={this.saveEvent}/>
 
                                 </div>
                             </div>
