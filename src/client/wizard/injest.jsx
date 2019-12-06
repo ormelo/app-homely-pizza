@@ -173,13 +173,23 @@ class Injest extends Component {
         setTimeout(function(){if(document.getElementById('iconArrow'))document.getElementById('iconArrow').style.opacity = '1';},500);
     }
     showAnim() {
+        this.hideLoader();
         document.getElementById('canvas').style.display='block';
         setTimeout("document.getElementById('newYearMsg').style.display='block'",1000);
         document.querySelector('.add-another').style.display = 'inline';
         document.querySelector('#id_submit').style.display = 'none';
     }
+    showLoader() {
+        document.getElementById('loaderBg').classList.add('loader-bg');
+        document.getElementById('myTasksLoader').style.display = 'inline';
+    }
+    hideLoader() {
+        document.getElementById('loaderBg').classList.remove('loader-bg');
+        document.getElementById('myTasksLoader').style.display = 'none';
+    }
     saveEvent() {
-        this.showAnim();
+        this.showLoader();
+        setTimeout(function(){this.showAnim();}.bind(this),3000);
         //alert(document.getElementById('name').value);
         //alert(document.getElementById('desc').value);
         //alert(document.getElementById('date').value);
@@ -197,7 +207,7 @@ class Injest extends Component {
                     </div>
                     <canvas id="canvas"></canvas>
                     <div id="newYearMsg" className="new-year-msg">Thanks for making someone's new year special! <br/><br/><br/><span style={{fontSize:'24px'}}>Happy new year in advance!</span></div>
-                    <div><i className="loading" id="myTasksLoader" style={{top: '28px'}}></i></div>
+                    <div id="loaderBg"><i className="loading" id="myTasksLoader" style={{top: '28px'}}></i></div>
                     <div className="main fadeInBottom">
                         <hr className="line-tasks"/>
                         <img className="icon-tick" id="myTasksSuccess" src="../../../img/images/ic_tick.png"/>
