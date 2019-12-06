@@ -69,14 +69,14 @@ class Injest extends Component {
                         <Paper style={{marginTop: '14px',padding:'0 20px'}}>
                                 <form>
                                     <input id="name" type="text" className="text-input" placeholder="Event Name"/>
-                                    <textarea id="desc" className="text-area" placeholder="Add a description"/>
+                                    <textarea id="desc" className="text-area" placeholder="Description"/>
                                     <div className="datetimepicker">
                                     	<input className="text-input" type="date" id="date" style={{width: '130px'}}/>
                                     	<span></span>
                                     	<input className="text-input" type="time" id="time" style={{width: '100px'}}/>
                                     </div>
                                     <input id="price" type="text" className="text-input" placeholder="Price in INR"/>
-                                    <input id="remarks" type="text" className="text-input" placeholder="Add remarks eg. Kid friendly, No alcohol served etc"/>
+                                    <input id="remarks" type="text" className="text-input" placeholder="Remarks eg. Kid friendly, No alcohol served."/>
                                 </form>
                             </Paper>
 
