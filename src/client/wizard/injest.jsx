@@ -54,7 +54,7 @@ class Injest extends Component {
                     <div className="logo" id="logoWrapper" style={{top: '0px', marginLeft: '-10px'}}>
                         <img className="icon-back" src="../../../img/images/ic_back.png" onClick={()=>{history.back(-1);}} />
                         <Link to="/" style={{marginLeft: '34px'}}><img id="logo" className="logo-img" style={{width: '40px'}} src="../../../img/images/logo_ic.png" /></Link>
-                        <div id="logoHeading" className="logo-heading" style={{marginLeft: '108px', marginTop: '-26px', textAlign: 'left', fontSize: '18px'}}>Save an event</div>
+                        <div id="logoHeading" className="logo-heading" style={{marginLeft: '108px', marginTop: '-26px', textAlign: 'left', fontSize: '20px'}}>Save an event</div>
                     </div>
                     <div><i className="loading" id="myTasksLoader" style={{top: '28px'}}></i></div>
                     <div className="main fadeInBottom">
@@ -62,9 +62,31 @@ class Injest extends Component {
                         <img className="icon-tick" id="myTasksSuccess" src="../../../img/images/ic_tick.png"/>
                         <Paper style={{marginTop: '14px',padding:'0 20px'}}>
                                 <form>
-                                    <input type="text" width="250px" placeholder="Event Name"/>
+                                    <input type="text" className="text-input" placeholder="Event Name"/>
+                                    <textarea className="text-area" placeholder="Add a description"/>
+                                    <textarea className="text-area" placeholder="Add reviews"/>
+                                    <input type="text" className="text-input" placeholder="Add remarks eg. Kid friendly, No alcohol served etc"/>
                                 </form>
                             </Paper>
+
+                    </div>
+
+                     <div class="panel-center mob-only" style={{position: 'fixed',bottom: '0px',background: 'linear-gradient(rgba(216, 216, 216, 0.05) 0%, rgb(214, 214, 214) 100%)',left: '0px', zIndex: '9999'}}>
+
+
+                            <div id="div_id_submit" className="form-group">
+                                <div className="controls">
+
+                                        <input type="submit" className="submit form-control" id="id_submit" value="Save event" />
+
+                                </div>
+                            </div>
+                            <div className="form-group">
+                                <div className="controls ">
+                                    <p style={{color: '#000', fontSize: '9px', textAlign: 'center'}}></p>
+
+                                </div>
+                            </div>
 
                     </div>
                 <br/>

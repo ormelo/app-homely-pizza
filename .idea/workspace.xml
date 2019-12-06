@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2100fea9-fa34-466f-9140-289133e88515" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/guide.bundle.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/guide.bundle.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/wizard/guide.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/wizard/guide.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/injest.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/injest.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/wizard/injest.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/wizard/injest.jsx" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -29,22 +29,26 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="205">
-              <caret line="742" column="61" selection-start-line="742" selection-start-column="61" selection-end-line="742" selection-end-column="61" />
+            <state relative-caret-position="304">
+              <caret line="742" column="61" selection-start-line="742" selection-start-column="55" selection-end-line="742" selection-end-column="61" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/injest.html">
-          <provider selected="true" editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="315">
+              <caret line="21" column="1" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/client/wizard/guide.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="807">
-              <caret line="569" column="71" selection-start-line="569" selection-start-column="71" selection-end-line="569" selection-end-column="71" />
+            <state relative-caret-position="478">
+              <caret line="236" column="42" lean-forward="true" selection-start-line="219" selection-start-column="19" selection-end-line="236" selection-end-column="42" />
             </state>
           </provider>
         </entry>
@@ -52,8 +56,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/client/wizard/injest.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="731">
-              <caret line="64" column="36" selection-start-line="64" selection-start-column="36" selection-end-line="64" selection-end-column="36" />
+            <state relative-caret-position="688">
+              <caret line="79" column="126" selection-start-line="79" selection-start-column="126" selection-end-line="79" selection-end-column="126" />
             </state>
           </provider>
         </entry>
@@ -103,10 +107,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>26cf96</find>
-      <find>recommends</find>
-      <find>sub-head</find>
-      <find>plan you</find>
       <find>banner1</find>
       <find>logoHeading</find>
       <find>find</find>
@@ -133,6 +133,10 @@
       <find>Injest</find>
       <find>TabPanel</find>
       <find>tabpan</find>
+      <find>injest</find>
+      <find>shortlists</find>
+      <find>save an</find>
+      <find>find u</find>
     </findStrings>
     <replaceStrings>
       <replace>./img/anim1/</replace>
@@ -183,6 +187,7 @@
         <option value="$PROJECT_DIR$/public/index.html" />
         <option value="$PROJECT_DIR$/index.js" />
         <option value="$PROJECT_DIR$/src/client/wizard/guide.jsx" />
+        <option value="$PROJECT_DIR$/public/injest.html" />
         <option value="$PROJECT_DIR$/src/client/wizard/injest.jsx" />
       </list>
     </option>
@@ -580,25 +585,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
-          <caret line="742" column="61" selection-start-line="742" selection-start-column="61" selection-end-line="742" selection-end-column="61" />
+        <state relative-caret-position="304">
+          <caret line="742" column="61" selection-start-line="742" selection-start-column="55" selection-end-line="742" selection-end-column="61" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/injest.html">
-      <provider selected="true" editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="1" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/client/wizard/guide.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="807">
-          <caret line="569" column="71" selection-start-line="569" selection-start-column="71" selection-end-line="569" selection-end-column="71" />
+        <state relative-caret-position="478">
+          <caret line="236" column="42" lean-forward="true" selection-start-line="219" selection-start-column="19" selection-end-line="236" selection-end-column="42" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/client/wizard/injest.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="731">
-          <caret line="64" column="36" selection-start-line="64" selection-start-column="36" selection-end-line="64" selection-end-column="36" />
+        <state relative-caret-position="688">
+          <caret line="79" column="126" selection-start-line="79" selection-start-column="126" selection-end-line="79" selection-end-column="126" />
         </state>
       </provider>
     </entry>
