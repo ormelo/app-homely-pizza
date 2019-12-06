@@ -739,6 +739,10 @@ app.get("/", function(request, response) {
   response.sendFile(path.resolve(__dirname, 'public', 'guide.html'));
 });
 
+app.get("/injest", function(request, response) {
+  response.sendFile(path.resolve(__dirname, 'public', 'injest.html'));
+});
+
 app.get("/heart", function(request, response) {
   response.sendFile(path.resolve(__dirname, 'public', 'heart.html'));
 });
