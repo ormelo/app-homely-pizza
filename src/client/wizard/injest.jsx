@@ -175,6 +175,8 @@ class Injest extends Component {
     showAnim() {
         document.getElementById('canvas').style.display='block';
         setTimeout("document.getElementById('newYearMsg').style.display='block'",1000);
+        document.querySelector('.add-another').style.display = 'inline';
+        document.querySelector('#id_submit').style.display = 'none';
     }
     saveEvent() {
         this.showAnim();
@@ -222,6 +224,7 @@ class Injest extends Component {
                                 <div className="controls">
 
                                         <input type="submit" className="submit form-control" id="id_submit" value="Save" onClick={this.saveEvent}/>
+                                        <input type="submit" className="submit form-control add-another" id="id_submit" value="Add another event" style={{display: 'none'}} onClick={()=>{location.reload()}}/>
 
                                 </div>
                             </div>
