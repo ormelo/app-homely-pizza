@@ -71,9 +71,9 @@ class Injest extends Component {
                                     <input id="name" type="text" className="text-input" placeholder="Event Name"/>
                                     <textarea id="desc" className="text-area" placeholder="Add a description"/>
                                     <div className="datetimepicker">
-                                    	<input className="text-input" type="date" id="date" value="2019-12-31" style={{width: '130px'}}/>
+                                    	<input className="text-input" type="date" id="date" style={{width: '130px'}}/>
                                     	<span></span>
-                                    	<input className="text-input" type="time" id="time" value="20:00" style={{width: '100px'}}/>
+                                    	<input className="text-input" type="time" id="time" style={{width: '100px'}}/>
                                     </div>
                                     <input id="price" type="text" className="text-input" placeholder="Price in INR"/>
                                     <input id="remarks" type="text" className="text-input" placeholder="Add remarks eg. Kid friendly, No alcohol served etc"/>
