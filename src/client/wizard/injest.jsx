@@ -197,6 +197,8 @@ class Injest extends Component {
     }
     saveDraft() {
         var payload = {};
+        payload.link = escape(document.getElementById('link').value);
+        payload.img = escape(document.getElementById('img').value);
         payload.name = document.getElementById('name').value;
         payload.nameId = document.getElementById('name').value.replace(/ /,'-');
         payload.desc = escape(document.getElementById('desc').value);
@@ -210,6 +212,8 @@ class Injest extends Component {
         //setTimeout(function(){this.showAnim();}.bind(this),3000);
 
         var payload = {};
+        payload.link = escape(document.getElementById('link').value);
+        payload.img = escape(document.getElementById('img').value);
         payload.name = document.getElementById('name').value;
         payload.nameId = document.getElementById('name').value.replace(/ /,'-');
         payload.desc = escape(document.getElementById('desc').value);
@@ -241,21 +245,23 @@ class Injest extends Component {
                         <img className="icon-tick" id="myTasksSuccess" src="../../../img/images/ic_tick.png"/>
                         <Paper style={{marginTop: '14px',padding:'0 20px'}}>
                                 <form>
+                                    <input onBlur={this.saveDraft} id="link" type="text" className="text-input" placeholder="Link"/>
+                                    <input onBlur={this.saveDraft} id="img" type="text" className="text-input" placeholder="Image URL"/>
                                     <input onBlur={this.saveDraft} id="name" type="text" className="text-input" placeholder="Event Name"/>
                                     <textarea onBlur={this.saveDraft} id="desc" className="text-area" placeholder="Description"/>
-                                    <div className="datetimepicker">
-                                    	<input onBlur={this.saveDraft} className="text-input" type="date" id="date" style={{width: '130px'}}/>
-                                    	<span></span>
-                                    	<input onBlur={this.saveDraft} className="text-input" type="time" id="time" style={{width: '100px'}}/>
-                                    </div>
                                     <input onBlur={this.saveDraft} id="price" type="text" className="text-input" placeholder="Price in INR"/>
                                     <input onBlur={this.saveDraft} id="remarks" type="text" className="text-input" placeholder="Remarks eg. Kid friendly, No alcohol served."/>
+                                    <div className="datetimepicker">
+                                        <input onBlur={this.saveDraft} className="text-input" type="date" id="date" style={{width: '130px'}}/>
+                                        <span></span>
+                                        <input onBlur={this.saveDraft} className="text-input" type="time" id="time" style={{width: '100px'}}/>
+                                    </div>
                                 </form>
                             </Paper>
 
                     </div>
 
-                     <div class="panel-center mob-only" style={{position: 'fixed',bottom: '0px',background: 'linear-gradient(rgba(216, 216, 216, 0.05) 0%, rgb(214, 214, 214) 100%)',left: '0px', zIndex: '9999'}}>
+                     <div class="panel-center mob-only" style={{position: 'absolute',bottom: '0px',background: 'linear-gradient(rgba(216, 216, 216, 0.05) 0%, rgb(214, 214, 214) 100%)',left: '0px', zIndex: '9999'}}>
 
 
                             <div id="div_id_submit" className="form-group">
