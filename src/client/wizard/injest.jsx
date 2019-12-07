@@ -171,6 +171,8 @@ class Injest extends Component {
     componentDidMount() {
         if(localStorage.getItem('draft')!=null){
            var draft = JSON.parse(localStorage.getItem('draft'));
+           document.getElementById('link').value = draft.link;
+           document.getElementById('img').value = draft.img;
            document.getElementById('name').value = draft.name;
            document.getElementById('desc').value = unescape(draft.desc);
            document.getElementById('price').value = draft.price;
@@ -261,7 +263,7 @@ class Injest extends Component {
 
                     </div>
 
-                     <div class="panel-center mob-only" style={{position: 'absolute',bottom: '0px',background: 'linear-gradient(rgba(216, 216, 216, 0.05) 0%, rgb(214, 214, 214) 100%)',left: '0px', zIndex: '9999'}}>
+                     <div class="panel-center mob-only" style={{position: 'relative',bottom: '0px',background: 'linear-gradient(rgba(216, 216, 216, 0.05) 0%, rgb(214, 214, 214) 100%)',left: '0px', zIndex: '9999'}}>
 
 
                             <div id="div_id_submit" className="form-group">
