@@ -289,8 +289,6 @@ class Injest extends Component {
 
                                                 <div id="div_id_submit1" className="form-group">
                                                     <div className="controls">
-
-                                                            <input type="submit" className="submit form-control" id="id_submit" value="Save" onClick={this.saveEvent}/>
                                                             <input type="submit" className="submit form-control add-another" id="id_submit" value="Add another event" style={{display: 'none'}} onClick={()=>{location.reload()}}/>
 
                                                     </div>
