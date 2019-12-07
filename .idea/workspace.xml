@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2100fea9-fa34-466f-9140-289133e88515" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/public/guide.bundle.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/guide.bundle.min.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/client/wizard/injest.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/wizard/injest.jsx" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -68,8 +69,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/client/wizard/injest.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="424">
-              <caret line="191" column="67" lean-forward="true" selection-start-line="191" selection-start-column="67" selection-end-line="191" selection-end-column="67" />
+            <state relative-caret-position="230">
+              <caret line="176" column="43" selection-start-line="176" selection-start-column="43" selection-end-line="176" selection-end-column="43" />
             </state>
           </provider>
         </entry>
@@ -193,7 +194,7 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="140" />
     <option name="y" value="23" />
-    <option name="width" value="1108" />
+    <option name="width" value="1780" />
     <option name="height" value="1116" />
   </component>
   <component name="ProjectView">
@@ -282,10 +283,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="140" y="23" width="1108" height="1116" extended-state="0" />
+    <frame x="140" y="23" width="1780" height="1116" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.3142589" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19275029" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
@@ -606,8 +607,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/client/wizard/injest.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="424">
-          <caret line="191" column="67" lean-forward="true" selection-start-line="191" selection-start-column="67" selection-end-line="191" selection-end-column="67" />
+        <state relative-caret-position="230">
+          <caret line="176" column="43" selection-start-line="176" selection-start-column="43" selection-end-line="176" selection-end-column="43" />
         </state>
       </provider>
     </entry>

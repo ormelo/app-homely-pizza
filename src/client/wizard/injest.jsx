@@ -169,11 +169,19 @@ class Injest extends Component {
         this.saveEvent = this.saveEvent.bind(this);
     }
     componentDidMount() {
+        if(localStorage.getItem('draft')!=null){
+           var draft = JSON.parse(localStorage.getItem('draft'));
+           document.getElementById('name').value = draft.name;
+           document.getElementById('desc').value = unescape(draft.desc);
+           document.getElementById('price').value = draft.price;
+           document.getElementById('remarks').value = draft.remarks;
+        }
         setTimeout(function(){if(document.getElementById('logoHeading'))document.getElementById('logoHeading').style.opacity = '1';},50);
         setTimeout(function(){if(document.getElementById('iconArrow'))document.getElementById('iconArrow').style.opacity = '1';},500);
     }
     showAnim() {
         this.hideLoader();
+        localStorage.removeItem("draft");
         document.getElementById('canvas').style.display='block';
         setTimeout("document.getElementById('newYearMsg').style.display='block'",1000);
         document.querySelector('.add-another').style.display = 'inline';
@@ -186,6 +194,16 @@ class Injest extends Component {
     hideLoader() {
         document.getElementById('loaderBg').classList.remove('loader-bg');
         document.getElementById('myTasksLoader').style.display = 'none';
+    }
+    saveDraft() {
+        var payload = {};
+        payload.name = document.getElementById('name').value;
+        payload.nameId = document.getElementById('name').value.replace(/ /,'-');
+        payload.desc = escape(document.getElementById('desc').value);
+        payload.price = document.getElementById('price').value;
+        payload.remarks = document.getElementById('remarks').value;
+
+        localStorage.setItem('draft',JSON.stringify(payload));
     }
     saveEvent() {
         this.showLoader();
@@ -223,15 +241,15 @@ class Injest extends Component {
                         <img className="icon-tick" id="myTasksSuccess" src="../../../img/images/ic_tick.png"/>
                         <Paper style={{marginTop: '14px',padding:'0 20px'}}>
                                 <form>
-                                    <input id="name" type="text" className="text-input" placeholder="Event Name"/>
-                                    <textarea id="desc" className="text-area" placeholder="Description"/>
+                                    <input onBlur={this.saveDraft} id="name" type="text" className="text-input" placeholder="Event Name"/>
+                                    <textarea onBlur={this.saveDraft} id="desc" className="text-area" placeholder="Description"/>
                                     <div className="datetimepicker">
-                                    	<input className="text-input" type="date" id="date" style={{width: '130px'}}/>
+                                    	<input onBlur={this.saveDraft} className="text-input" type="date" id="date" style={{width: '130px'}}/>
                                     	<span></span>
-                                    	<input className="text-input" type="time" id="time" style={{width: '100px'}}/>
+                                    	<input onBlur={this.saveDraft} className="text-input" type="time" id="time" style={{width: '100px'}}/>
                                     </div>
-                                    <input id="price" type="text" className="text-input" placeholder="Price in INR"/>
-                                    <input id="remarks" type="text" className="text-input" placeholder="Remarks eg. Kid friendly, No alcohol served."/>
+                                    <input onBlur={this.saveDraft} id="price" type="text" className="text-input" placeholder="Price in INR"/>
+                                    <input onBlur={this.saveDraft} id="remarks" type="text" className="text-input" placeholder="Remarks eg. Kid friendly, No alcohol served."/>
                                 </form>
                             </Paper>
 
