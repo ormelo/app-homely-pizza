@@ -189,13 +189,23 @@ class Injest extends Component {
     }
     saveEvent() {
         this.showLoader();
-        setTimeout(function(){this.showAnim();}.bind(this),3000);
-        //alert(document.getElementById('name').value);
-        //alert(document.getElementById('desc').value);
-        //alert(document.getElementById('date').value);
-        //alert(document.getElementById('time').value);
-        //alert(document.getElementById('price').value);
-        //alert(document.getElementById('remarks').value);
+        //setTimeout(function(){this.showAnim();}.bind(this),3000);
+
+        var payload = {};
+        payload.name = document.getElementById('name').value;
+        payload.nameId = document.getElementById('name').value.replace(/ /,'-');
+        payload.desc = document.getElementById('desc').value;
+        payload.date = document.getElementById('date').value+' '+document.getElementById('time').value;
+        payload.price = document.getElementById('price').value;
+        payload.remarks = document.getElementById('remarks').value;
+
+        axios.request({
+                method: 'POST',
+                url: '/saveEvent',
+                responseType: 'json',
+                data: payload
+              }).then((response) => {console.log('response--',response);this.showAnim();})
+                    .catch((error) => {console.log('Error response--',response);Promise.reject(error);});
     }
     render() {
         const {showLoader, results} = this.state;
