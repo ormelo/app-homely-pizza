@@ -196,22 +196,22 @@ class Injest extends Component {
         document.getElementById('myTasksLoader').style.display = 'none';
     }
     saveDraft() {
-        if (localStorage.getItem('link').value != null) {
+        if ( document.getElementById('link').value != null) {
             localStorage.setItem('link', document.getElementById('link').value);
         }
-        if (localStorage.getItem('img').value != null) {
+        if (document.getElementById('img').value != null) {
             localStorage.setItem('img', document.getElementById('img').value);
         }
-        if (localStorage.getItem('name').value != null) {
+        if (document.getElementById('name').value != null) {
             localStorage.setItem('name', document.getElementById('name').value);
         }
-        if (localStorage.getItem('desc').value != null) {
+        if (document.getElementById('desc').value != null) {
             localStorage.setItem('desc', document.getElementById('desc').value);
         }
-        if (localStorage.getItem('price').value != null) {
+        if (document.getElementById('price').value != null) {
             localStorage.setItem('price', document.getElementById('price').value);
         }
-        if (localStorage.getItem('remarks').value != null) {
+        if (document.getElementById('remarks').value != null) {
             localStorage.setItem('remarks', document.getElementById('remarks').value);
         }
     }
