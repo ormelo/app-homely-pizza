@@ -202,7 +202,7 @@ class Injest extends Component {
         payload.link = escape(document.getElementById('link').value);
         payload.img = escape(document.getElementById('img').value);
         payload.name = document.getElementById('name').value;
-        payload.nameId = document.getElementById('name').value.replace(/ /,'-');
+        payload.nameId = document.getElementById('name').value.replace(/ /g,'-');
         payload.desc = escape(document.getElementById('desc').value);
         payload.price = document.getElementById('price').value;
         payload.remarks = document.getElementById('remarks').value;
@@ -284,7 +284,7 @@ class Injest extends Component {
 
                     </div>
 
-                    
+
                 <br/>
                 </div>)
     }
