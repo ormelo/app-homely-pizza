@@ -284,23 +284,7 @@ class Injest extends Component {
 
                     </div>
 
-                    <div class="panel-center mob-only" style={{position: 'fixed',bottom: '0px',background: 'linear-gradient(rgba(216, 216, 216, 0.05) 0%, rgb(214, 214, 214) 100%)',left: '0px', zIndex: '9999'}}>
-
-
-                                                <div id="div_id_submit1" className="form-group">
-                                                    <div className="controls">
-                                                            <input type="submit" className="submit form-control add-another" id="id_submit" value="Add another event" style={{display: 'none'}} onClick={()=>{location.reload()}}/>
-
-                                                    </div>
-                                                </div>
-                                                <div className="form-group">
-                                                    <div className="controls ">
-                                                        <p style={{color: '#000', fontSize: '9px', textAlign: 'center'}}></p>
-
-                                                    </div>
-                                                </div>
-
-                                        </div>
+                    
                 <br/>
                 </div>)
     }
