@@ -194,7 +194,7 @@ class Injest extends Component {
         var payload = {};
         payload.name = document.getElementById('name').value;
         payload.nameId = document.getElementById('name').value.replace(/ /,'-');
-        payload.desc = document.getElementById('desc').value;
+        payload.desc = escape(document.getElementById('desc').value);
         payload.date = document.getElementById('date').value+' '+document.getElementById('time').value;
         payload.price = document.getElementById('price').value;
         payload.remarks = document.getElementById('remarks').value;
