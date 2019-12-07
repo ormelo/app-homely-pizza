@@ -844,7 +844,7 @@ app.post('/saveEvent', function(req, res) {
         remarks = req.body.remarks;
     //res.send(pages.getQuote);*/
 
-    let query = 'Insert into "events" (title, date, desc, tags, price, title-id) values(\''+name+'\',\''+date+'\',\''+desc+'\',\''+remarks+'\',\''+price+'\',\''+nameId+'\')';
+    let query = 'Insert into "events" (title, event_date, event_desc, tags, price, title_id) values(\''+name+'\',\''+date+'\',\''+desc+'\',\''+remarks+'\',\''+price+'\',\''+nameId+'\')';
     console.log('Final query:', query)
     pool.query(query, function(err, result) {console.log('error: ', err);console.log('New event inserted.'); res.send('success');});
 
