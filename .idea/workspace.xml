@@ -68,8 +68,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/client/wizard/injest.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="313">
-              <caret line="204" column="75" selection-start-line="204" selection-start-column="75" selection-end-line="204" selection-end-column="75" />
+            <state relative-caret-position="362">
+              <caret line="177" column="129" selection-start-line="177" selection-start-column="129" selection-end-line="177" selection-end-column="129" />
             </state>
           </provider>
         </entry>
@@ -105,8 +105,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>Shortlists</find>
-      <find>Injest</find>
       <find>TabPanel</find>
       <find>tabpan</find>
       <find>shortlists</find>
@@ -132,9 +130,11 @@
       <find>submit</find>
       <find>post</find>
       <find>axios</find>
-      <find>saveDraft</find>
       <find>pool</find>
       <find>div_id_submit</find>
+      <find>saveDraft</find>
+      <find>escape</find>
+      <find>localStorage.getI</find>
     </findStrings>
     <replaceStrings>
       <replace>./img/anim1/</replace>
@@ -191,9 +191,9 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="808" />
+    <option name="x" value="303" />
     <option name="y" value="23" />
-    <option name="width" value="1111" />
+    <option name="width" value="1617" />
     <option name="height" value="1116" />
   </component>
   <component name="ProjectView">
@@ -606,8 +606,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/client/wizard/injest.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="313">
-          <caret line="204" column="75" selection-start-line="204" selection-start-column="75" selection-end-line="204" selection-end-column="75" />
+        <state relative-caret-position="362">
+          <caret line="177" column="129" selection-start-line="177" selection-start-column="129" selection-end-line="177" selection-end-column="129" />
         </state>
       </provider>
     </entry>

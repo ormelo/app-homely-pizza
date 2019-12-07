@@ -169,17 +169,15 @@ class Injest extends Component {
         this.saveEvent = this.saveEvent.bind(this);
     }
     componentDidMount() {
-        if(localStorage.getItem('draft')!=null){
-           var draft = JSON.parse(localStorage.getItem('draft'));
-           document.getElementById('link').value = draft.link;
-           document.getElementById('img').value = draft.img;
-           document.getElementById('name').value = draft.name;
-           document.getElementById('desc').value = unescape(draft.desc);
-           document.getElementById('price').value = draft.price;
-           document.getElementById('remarks').value = draft.remarks;
-        }
-        setTimeout(function(){if(document.getElementById('logoHeading'))document.getElementById('logoHeading').style.opacity = '1';},50);
-        setTimeout(function(){if(document.getElementById('iconArrow'))document.getElementById('iconArrow').style.opacity = '1';},500);
+
+       document.getElementById('link').value =  localStorage.getItem('link') != null ? localStorage.getItem('link') : '';
+       document.getElementById('img').value = localStorage.getItem('img') != null ? localStorage.getItem('img') : '';
+       document.getElementById('name').value = localStorage.getItem('name') != null ? localStorage.getItem('name') : '';
+       document.getElementById('desc').value = localStorage.getItem('desc') != null ? localStorage.getItem('desc') : '';
+       document.getElementById('price').value = localStorage.getItem('price') != null ? localStorage.getItem('price') : '';
+       document.getElementById('remarks').value = localStorage.getItem('remarks') != null ?  localStorage.getItem('remarks') : '';
+       setTimeout(function(){if(document.getElementById('logoHeading'))document.getElementById('logoHeading').style.opacity = '1';},50);
+       setTimeout(function(){if(document.getElementById('iconArrow'))document.getElementById('iconArrow').style.opacity = '1';},500);
     }
     showAnim() {
         this.hideLoader();
@@ -198,16 +196,24 @@ class Injest extends Component {
         document.getElementById('myTasksLoader').style.display = 'none';
     }
     saveDraft() {
-        var payload = {};
-        payload.link = escape(document.getElementById('link').value);
-        payload.img = escape(document.getElementById('img').value);
-        payload.name = document.getElementById('name').value;
-        payload.nameId = document.getElementById('name').value.replace(/ /g,'-');
-        payload.desc = escape(document.getElementById('desc').value);
-        payload.price = document.getElementById('price').value;
-        payload.remarks = document.getElementById('remarks').value;
-
-        localStorage.setItem('draft',JSON.stringify(payload));
+        if (localStorage.getItem('link').value != null) {
+            localStorage.setItem('link', document.getElementById('link').value);
+        }
+        if (localStorage.getItem('img').value != null) {
+            localStorage.setItem('img', document.getElementById('img').value);
+        }
+        if (localStorage.getItem('name').value != null) {
+            localStorage.setItem('name', document.getElementById('name').value);
+        }
+        if (localStorage.getItem('desc').value != null) {
+            localStorage.setItem('desc', document.getElementById('desc').value);
+        }
+        if (localStorage.getItem('price').value != null) {
+            localStorage.setItem('price', document.getElementById('price').value);
+        }
+        if (localStorage.getItem('remarks').value != null) {
+            localStorage.setItem('remarks', document.getElementById('remarks').value);
+        }
     }
     saveEvent() {
         this.showLoader();
