@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
-import Book from './book.jsx';
+import Discover from './discover.jsx';
 import MyTasks from './mytasks.jsx';
 import Shortlists from './shortlists.jsx';
 import Injest from './injest.jsx';
@@ -232,9 +232,9 @@ class Guide extends React.Component {
 
                                             <div id="div_id_submit" className="form-group">
                                                 <div className="controls">
-
+                                                      <Link to="/home">
                                                         <input type="submit" className="submit form-control" id="id_submit" value="Find authentic matches" dcvalue="Find trusted providers" />
-
+                                                      </Link>
                                                 </div>
                                             </div>
                                             <div className="form-group">
@@ -565,7 +565,8 @@ export class ResultsList extends React.Component {
 
 }
 
-var QuizWithRouter = withRouter(Book);
+//var QuizWithRouter = withRouter(Book);
+var QuizWithRouter = withRouter(Discover);
 var MytasksWithRouter = withRouter(MyTasks);
 var ShortlistsWithRouter = withRouter(Shortlists);
 var InjestWithRouter = withRouter(Injest);
