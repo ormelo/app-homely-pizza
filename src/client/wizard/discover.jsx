@@ -258,7 +258,7 @@ class Discover extends Component {
             }.bind(this),6000);
         }
     initPreference(){
-        //document.querySelectorAll(".card-container").forEach((node)=>{node.style.display='none'});
+        document.querySelectorAll(".card-container").forEach((node)=>{node.style.display='none'});
         document.querySelector(`#card-${Object.keys(this.preferences)[0]}-0`).style.display='block';
         this.initProgress(Object.keys(this.preferences)[0], 0, this.preferences[Object.keys(this.preferences)[0]].cards[0]);
     }
