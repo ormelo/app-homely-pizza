@@ -352,7 +352,7 @@ class Discover extends Component {
          const { activeQuestionIndex, showLoader } = this.state;
         return (<div>
                     <div className="logo" id="logoWrapper" style={{top: '0px'}}>
-                        <Link to="/?navigatingBack=true"><img id="logo" className="logo-img" style={{width: '40px'}} src="../img/images/logo_ic.png" /></Link>
+                        <Link to="/?navigatingBack=true"><img id="logo" className="logo-img" style={{width: '43px'}} src="../img/images/logo_ic.png" /></Link>
                         <div id="logoHeading" className="logo-heading">Your preferences</div>
                     </div>
                     <div><i className="loading" style={{display: showLoader ? 'block' : 'none'}}></i></div>
