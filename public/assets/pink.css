@@ -30,6 +30,8 @@ input[type="submit"] {
       height: 46px;
       font-size: 16px;
       box-shadow: none;
+      font-family: 'Roboto Condensed', sans-serif !important;
+      letter-spacing: 1px;
 }
 .slicknav_btn {
   border-color: #f1505b;
