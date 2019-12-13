@@ -23,13 +23,13 @@ textarea:focus {
 }
 a.main-button,
 input[type="submit"] {
-      background: linear-gradient(180deg,  #fd7880 0%, #ea2639 80%, #ea2639 100%);
+      background: linear-gradient(180deg, #ed6e7e 0%, #ea2639 80%, #e0223c 100%);
       border: 0;
       letter-spacing: 1px;
       text-transform: none;
       height: 46px;
       font-size: 16px;
-      box-shadow: 0px 0px 7px 1px rgba(0, 0, 0, 0.15);
+      box-shadow: none;
 }
 .slicknav_btn {
   border-color: #f1505b;
