@@ -16,7 +16,7 @@ function setup() {
 
 function draw() {
   translate(width/2, height/2-12)
-  background(255,102,102);
+  background(0,0,0);
   countScale += scaleKoef
 
   let title = new Title();
@@ -25,7 +25,19 @@ function draw() {
     count = false
 
 
-  touchStarted = () => {
+  touchStarted = (e) => {
+    console.log('e:', e.target);
+    if(e.target.id == 'id_submit') {
+               count = false;
+               location.href = '/home';
+               return;
+              }
+    if(e.target.id != 'defaultCanvas0' && e.target.id != 'defaultCanvas1') {
+     count = false;
+     return;
+    }
+
+
     count = true
     console.log(count)
     scaleKoef = 0.01;
@@ -79,8 +91,8 @@ function draw() {
 // Static heart
 class Heart {
   constructor() {
-    this.width = 96;
-    this.height = 82;
+    this.width = 56;
+    this.height = 48;
     this.count = true;
   }
   show(img) {

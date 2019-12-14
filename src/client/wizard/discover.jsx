@@ -31,12 +31,9 @@ class PreferenceCard extends Component {
     render() {
         let {index, data, onSetPreference} = this.props;
         return (
-        <div id={`card-${data.preferenceKey}-${index}`} className="card-container">
+        <div id={`card-${data.preferenceKey}-${index}`} className="card-container" style={{backgroundImage: `url(./img/images/${data.img})`}}>
             <div id={`progress-${data.preferenceKey}-${index}`} style={{width: '30px'}} className="progress-line" />
             <div className="section-one">
-                   {`${data.questionPrefix} ${data.preferenceName}`}
-                   <hr className="line"/>
-                   {data.preferenceKeyIndex}
                    {data.img}
                    <br/><br/>
                    <input type="submit" value="Like" onClick={()=>{onSetPreference(index, data, 6)}}/>
@@ -55,16 +52,15 @@ class Discover extends Component {
             activeQuestionIndex: 0,
             showLoader: false
         }
-        this.onSetPreference = this.onSetPreference.bind(this);
+
         this.userPreferences = [];
-        this.initPreference = this.initPreference.bind(this);
         this.preferences = {
                             "interest": {
                                "cards": [
                               {
                                 "preferenceName": "a Karaoke event",
                                 "userPreference": 10,
-                                "img": "/karaoke.png",
+                                "img": "/karaoke.jpg",
                                 "cluster": 7,
                                 "tags": "dj|music",
                                 "questionPrefix": "How much would you be interested in ",
@@ -74,7 +70,7 @@ class Discover extends Component {
                               {
                                 "preferenceName": "Bollywood Music event",
                                 "userPreference": 10,
-                                "img": "/bm.png",
+                                "img": "/bm.jpg",
                                 "cluster": 7,
                                 "tags": "dj|music",
                                 "questionPrefix": "How much would you be interested in ",
@@ -84,7 +80,7 @@ class Discover extends Component {
                               {
                                 "preferenceName": "an Outdoor event",
                                 "userPreference": 10,
-                                "img": "/Outdoor.png",
+                                "img": "/Outdoor.jpg",
                                 "cluster": 5,
                                 "tags": "",
                                 "questionPrefix": "How much would you be interested in ",
@@ -97,7 +93,7 @@ class Discover extends Component {
                               {
                                 "preferenceName": "Parking",
                                 "userPreference": 10,
-                                "img": "/Parking.png",
+                                "img": "/Parking.jpg",
                                 "cluster": 7,
                                 "tags": "",
                                 "questionPrefix": "How much would you prefer ",
@@ -107,7 +103,7 @@ class Discover extends Component {
                               {
                                 "preferenceName": "Unlimited food",
                                 "userPreference": 10,
-                                "img": "/uf.png",
+                                "img": "/uf.jpg",
                                 "cluster": 4,
                                 "tags": "",
                                 "questionPrefix": "How much would you prefer ",
@@ -117,7 +113,7 @@ class Discover extends Component {
                               {
                                 "preferenceName": "Small budget",
                                 "userPreference": 10,
-                                "img": "/sm.png",
+                                "img": "/sb.jpg",
                                 "cluster": 1,
                                 "tags": "",
                                 "questionPrefix": "How much would you prefer ",
@@ -140,7 +136,7 @@ class Discover extends Component {
                               {
                                 "preferenceName": "a DJ",
                                 "userPreference": 10,
-                                "img": "/DJ.png",
+                                "img": "/DJ.jpg",
                                 "cluster": 7,
                                 "tags": "dj|music",
                                 "questionPrefix": "How much would you be interested in ",
@@ -150,7 +146,7 @@ class Discover extends Component {
                               {
                                 "preferenceName": "Rooftop",
                                 "userPreference": 10,
-                                "img": "/rt.png",
+                                "img": "/rt.jpg",
                                 "cluster": 0,
                                 "tags": "",
                                 "questionPrefix": "How much would you be interested in ",
@@ -183,7 +179,7 @@ class Discover extends Component {
                               {
                                 "preferenceName": "a Mall",
                                 "userPreference": 10,
-                                "img": "/mall.png",
+                                "img": "/mall.jpg",
                                 "cluster": 3,
                                 "tags": "",
                                 "questionPrefix": "How much would you be like a place like ",
@@ -193,7 +189,7 @@ class Discover extends Component {
                               {
                                 "preferenceName": "a Homestay",
                                 "userPreference": 10,
-                                "img": "/hs.png",
+                                "img": "/hs.jpg",
                                 "cluster": 5,
                                 "tags": "",
                                 "questionPrefix": "How much would you be like a place like ",
@@ -203,7 +199,7 @@ class Discover extends Component {
                               {
                                 "preferenceName": "a Beach",
                                 "userPreference": 10,
-                                "img": "/bh.png",
+                                "img": "/bh.jpg",
                                 "cluster": 6,
                                 "tags": "",
                                 "questionPrefix": "How much would you be like a place like ",
@@ -217,7 +213,7 @@ class Discover extends Component {
                               {
                                 "preferenceName": "that's Kid friendly",
                                 "userPreference": 10,
-                                "img": "/DJ.png",
+                                "img": "/kf.jpg",
                                 "cluster": 5,
                                 "tags": "dj|music",
                                 "questionPrefix": "How much would you like a place ",
@@ -227,7 +223,7 @@ class Discover extends Component {
                               {
                                 "preferenceName": "that has Camping",
                                 "userPreference": 10,
-                                "img": "/rt.png",
+                                "img": "/cp.jpg",
                                 "cluster": 5,
                                 "tags": "",
                                 "questionPrefix": "How much would you like a place ",
@@ -237,117 +233,12 @@ class Discover extends Component {
                             ]}
                            };
     }
-    componentWillUnmount() {
-    }
     componentDidMount() {
         const { params } = this.props.match;
         setTimeout(function(){document.getElementById('logoHeading').style.opacity = '1';},200);
         setTimeout(function(){this.setState({showLoader: false})}.bind(this),400);
         scrollTo(document.body, 0, 100);
-        this.initPreference();
     }
-    initProgress(preferenceKey, index, data){
-            let progressBarId = 'progress-'+preferenceKey+'-'+index;
-            var progressTimer = setInterval(progress.bind({preferenceKey, index}),21);
-            window.currPrefData = data;
-            setTimeout(function(){
-                clearInterval(window.progressTimer);
-                document.getElementById(progressBarId).style.width = '30px';
-                console.log('data: ', window.currPrefData);
-                this.onSetPreference(index, window.currPrefData, 4, typeof progressTimer === 'undefined' ? false : progressTimer)
-            }.bind(this),6000);
-        }
-    initPreference(){
-        document.querySelectorAll(".card-container").forEach((node)=>{node.style.display='none'});
-        document.querySelector(`#card-${Object.keys(this.preferences)[0]}-0`).style.display='block';
-        this.initProgress(Object.keys(this.preferences)[0], 0, this.preferences[Object.keys(this.preferences)[0]].cards[0]);
-    }
-    onSetPreference(cardIndex, data, value, progressTimer){
-        if(typeof progressTimer!=='undefined') {
-            console.log('clearing');
-            clearInterval(progressTimer);
-        }
-        let preferenceKeyIndex = data.preferenceKeyIndex;
-        let preferenceKey = data.preferenceKey;
-        let preferenceName = data.preferenceName;
-        let cluster = data.cluster;
-        let tags = data.tags;
-        let pref = {};
-        pref.cluster = cluster;
-        pref.tags = tags;
-        pref.value = value;
-        this.userPreferences.push(pref);
-
-        console.log('preferenceKey: ', preferenceKey);
-        console.log('Object.keys(this.preferences) ', Object.keys(this.preferences));
-        console.log('Object.keys(this.preferences)[preferenceKey]: ', Object.keys(this.preferences)[preferenceKey]);
-        if(preferenceKeyIndex === 0) {
-                //not the last card
-            if(cardIndex != this.preferences[preferenceKey]['cards'].length - 1) {
-                console.log('in if', this.preferences[preferenceKey]['cards'][cardIndex+1].cluster - cluster );
-                if((this.preferences[preferenceKey]['cards'][cardIndex+1].cluster - cluster >= 0 && this.preferences[preferenceKey]['cards'][cardIndex+1].cluster - cluster <= 2)  ||
-                    (cluster - this.preferences[preferenceKey]['cards'][cardIndex+1].cluster >= 0 && cluster - this.preferences[preferenceKey]['cards'][cardIndex+1].cluster <= 2)){
-                       document.querySelectorAll(".card-container").forEach((node)=>{node.style.display='none'});
-                       document.querySelector(`#card-${preferenceKey}-${cardIndex+1}`).style.display='block';
-                       this.initProgress(preferenceKey, cardIndex+1, data);
-                }
-            } else {
-                //the last card, move to next pref key
-                preferenceKey = Object.keys(this.preferences)[preferenceKeyIndex+1];
-                if((this.preferences[preferenceKey]['cards'][0].cluster - cluster >= 0 && this.preferences[preferenceKey]['cards'][0].cluster - cluster <= 2)  ||
-                                    (cluster - this.preferences[preferenceKey]['cards'][0].cluster >= 0 && cluster - this.preferences[preferenceKey]['cards'][0].cluster <= 2)){
-                                       document.querySelectorAll(".card-container").forEach((node)=>{node.style.display='none'});
-                                       document.querySelector(`#card-${preferenceKey}-0`).style.display='block';
-                                       this.initProgress(preferenceKey, 0, data);
-                                }
-                else if((this.preferences[preferenceKey]['cards'][1].cluster - cluster >= 0 && this.preferences[preferenceKey]['cards'][1].cluster - cluster <= 2)  ||
-                                                    (cluster - this.preferences[preferenceKey]['cards'][1].cluster >= 0 && cluster - this.preferences[preferenceKey]['cards'][1].cluster <= 2)){
-                                                       document.querySelectorAll(".card-container").forEach((node)=>{node.style.display='none'});
-                                                       document.querySelector(`#card-${preferenceKey}-1`).style.display='block';
-                                                       this.initProgress(preferenceKey, 1, data);
-                                                }
-                else if((this.preferences[preferenceKey]['cards'][2].cluster - cluster >= 0 && this.preferences[preferenceKey]['cards'][2].cluster - cluster <= 2)  ||
-                                                                    (cluster - this.preferences[preferenceKey]['cards'][2].cluster >= 0 && cluster - this.preferences[preferenceKey]['cards'][2].cluster <= 2)){
-                                                                       document.querySelectorAll(".card-container").forEach((node)=>{node.style.display='none'});
-                                                                       document.querySelector(`#card-${preferenceKey}-2`).style.display='block';
-                                                                       this.initProgress(preferenceKey, 2, data);
-                                                                }
-                else if((this.preferences[preferenceKey]['cards'][3].cluster - cluster >= 0 && this.preferences[preferenceKey]['cards'][3].cluster - cluster <= 2)  ||
-                                                                                    (cluster - this.preferences[preferenceKey]['cards'][3].cluster >= 0 && cluster - this.preferences[preferenceKey]['cards'][3].cluster <= 2)){
-                                                                                       document.querySelectorAll(".card-container").forEach((node)=>{node.style.display='none'});
-                                                                                       document.querySelector(`#card-${preferenceKey}-3`).style.display='block';
-                                                                                       this.initProgress(preferenceKey, 3, data);
-                                                                                }
-
-            }
-        } else {
-             //the last card, move to next pref key
-                            preferenceKey = Object.keys(this.preferences)[preferenceKeyIndex+1];
-                            if((this.preferences[preferenceKey]['cards'][0].cluster - cluster >= 0 && this.preferences[preferenceKey]['cards'][0].cluster - cluster <= 2)  ||
-                                                (cluster - this.preferences[preferenceKey]['cards'][0].cluster >= 0 && cluster - this.preferences[preferenceKey]['cards'][0].cluster <= 2)){
-                                                   document.querySelectorAll(".card-container").forEach((node)=>{node.style.display='none'});
-                                                   document.querySelector(`#card-${preferenceKey}-0`).style.display='block';
-                                            }
-                            else if((this.preferences[preferenceKey]['cards'][1].cluster - cluster >= 0 && this.preferences[preferenceKey]['cards'][1].cluster - cluster <= 2)  ||
-                                                                (cluster - this.preferences[preferenceKey]['cards'][1].cluster >= 0 && cluster - this.preferences[preferenceKey]['cards'][1].cluster <= 2)){
-                                                                   document.querySelectorAll(".card-container").forEach((node)=>{node.style.display='none'});
-                                                                   document.querySelector(`#card-${preferenceKey}-1`).style.display='block';
-                                                            }
-                            else if((this.preferences[preferenceKey]['cards'][2].cluster - cluster >= 0 && this.preferences[preferenceKey]['cards'][2].cluster - cluster <= 2)  ||
-                                                                                (cluster - this.preferences[preferenceKey]['cards'][2].cluster >= 0 && cluster - this.preferences[preferenceKey]['cards'][2].cluster <= 2)){
-                                                                                   document.querySelectorAll(".card-container").forEach((node)=>{node.style.display='none'});
-                                                                                   document.querySelector(`#card-${preferenceKey}-2`).style.display='block';
-                                                                            }
-                            else if((this.preferences[preferenceKey]['cards'][3].cluster - cluster >= 0 && this.preferences[preferenceKey]['cards'][3].cluster - cluster <= 2)  ||
-                                                                                                (cluster - this.preferences[preferenceKey]['cards'][3].cluster >= 0 && cluster - this.preferences[preferenceKey]['cards'][3].cluster <= 2)){
-                                                                                                   document.querySelectorAll(".card-container").forEach((node)=>{node.style.display='none'});
-                                                                                                   document.querySelector(`#card-${preferenceKey}-3`).style.display='block';
-                                                                                            }
-        }
-        console.log('preferenceKeyIndex:', preferenceKeyIndex);
-        console.log('this.userPreferences: ', this.userPreferences);
-    }
-
     render() {
          const { activeQuestionIndex, showLoader } = this.state;
         return (<div>
@@ -360,13 +251,17 @@ class Discover extends Component {
 
                         {this.preferences && Object.keys(this.preferences).map((preferenceKey, index) => {
                             let questionPrefix = this.preferences[preferenceKey].questionPrefix;
-                            return this.preferences[preferenceKey].cards.map((preference, i, questionPrefix) => {
-                            return (<PreferenceCard index={i} data={preference} onSetPreference={this.onSetPreference} questionPrefix={questionPrefix} />);
+                            return this.preferences[preferenceKey].cards.map((preference, i, qPrefix) => {
+                            return (<div className="question-card"><span>{`${preference.questionPrefix} ${preference.preferenceName}?`}</span><PreferenceCard index={i} data={preference} onSetPreference={this.onSetPreference} questionPrefix={questionPrefix} /></div>);
 
                             })
                         })}
-
+                        <canvas id="canvas" width="1600" height="1200" style={{width: '800px', height: '600px'}}></canvas>
                     </div>
+                    <script src="./scripts/p5.min.js"></script>
+                    <script src="./scripts/p5.dom.min.js"></script>
+                    <script src="./scripts/p5.sound.min.js"></script>
+                    <script src="./scripts/sketch.js"></script>
                 <div className="desc copyright" style={{textAlign: 'center',fontSize: '14px'}}>Copyright © 2019 Stint.do</div><br/>
                 </div>)
     }
