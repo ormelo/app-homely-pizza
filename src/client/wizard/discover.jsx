@@ -15,21 +15,31 @@ function progress() {
    document.getElementById(progressBarId).style.width = (curWidthVal+1)+'px';
 }
 
-function showNextCard() {
+function showNextCard(count) {
     document.querySelectorAll('.question-card').forEach(function(node){node.style.display = 'none';});
     if (window.selectedPreferences.length == 0) {
         document.getElementById('karaoke').style.display = 'block';
     } else {
-        if(window.selectedPreferences.toString() === 'karaoke') {
+        console.log('count: ', count);
+        if(count == 1 && window.selectedPreferences.toString() === 'karaoke') {
             document.getElementById('bollywood').style.display = 'block';
         }
-        else if(window.selectedPreferences.toString().includes('karaoke') || window.selectedPreferences.toString().includes('parking')) {
+        else if(count == 2 && (window.selectedPreferences.toString().includes('karaoke') || window.selectedPreferences.toString().includes('parking'))) {
             document.getElementById('outdoor').style.display = 'block';
         }
-        else if(window.selectedPreferences.toString().includes('karaoke') || window.selectedPreferences.toString().includes('parking') || window.selectedPreferences.toString().includes('dj')) {
+        else if(count == 3 && (window.selectedPreferences.toString().includes('karaoke')
+            || window.selectedPreferences.toString().includes('bollywood')
+            || window.selectedPreferences.toString().includes('outdoor'))) {
             document.getElementById('parking').style.display = 'block';
         }
+        else if(count == 4 && (window.selectedPreferences.toString().includes('karaoke')
+                || window.selectedPreferences.toString().includes('bollywood')
+                || window.selectedPreferences.toString().includes('outdoor')
+                || window.selectedPreferences.toString().includes('parking'))) {
+            document.getElementById('unlimitedFood').style.display = 'block';
+        }
     }
+    window.nextCardCount++;
 }
 
 class PreferenceCard extends Component {
@@ -48,14 +58,16 @@ class PreferenceCard extends Component {
             this.setState({animated: true});
             elem.classList.add('happy')
             elem.classList.remove('broken');
+            setTimeout(function(){showNextCard(window.nextCardCount);},1500);
           }
           else {
 
             this.setState({animated: false});
             elem.classList.remove('happy')
             elem.classList.add('broken');
+            setTimeout(function(){showNextCard(window.nextCardCount);},1500);
           }
-          setTimeout(function(){showNextCard();},1500);
+
     }
     appendZero(number) {
         if (number > 0 && number < 10) {
@@ -297,7 +309,8 @@ class Discover extends Component {
         setTimeout(function(){document.getElementById('logoHeading').style.opacity = '1';},200);
         setTimeout(function(){this.setState({showLoader: false})}.bind(this),400);
         scrollTo(document.body, 0, 100);
-        showNextCard();
+        window.nextCardCount = 0;
+        showNextCard(0);
     }
     render() {
          const { activeQuestionIndex, showLoader } = this.state;
