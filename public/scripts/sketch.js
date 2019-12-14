@@ -130,7 +130,7 @@ class Particle {
     this.alpha = 100;
     this.vx = random(-2, 2);
     this.vy = random(-8, -2);
-    this.scale = 1.2;
+    this.scale = 0.7;
     this.rotation = 0;
     this.vrotation = random(-0.005, 0.005)
   }
