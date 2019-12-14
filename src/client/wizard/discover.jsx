@@ -18,9 +18,22 @@ class PreferenceCard extends Component {
 
     constructor(props) {
         super(props);
-        this.state = {};
+        this.state = {animated: false};
+        this.likeUnlike = this.likeUnlike.bind(this);
     }
     componentDidMount() {
+    }
+    likeUnlike() {
+        if(!this.state.animated){
+            this.setState({animated: true});
+            document.getElementById('heartLike').classList.add('happy')
+            document.getElementById('heartLike').classList.remove('broken');
+          }
+          else {
+            this.setState({animated: false});
+            document.getElementById('heartLike').classList.remove('happy')
+            document.getElementById('heartLike').classList.add('broken');
+          }
     }
     appendZero(number) {
         if (number > 0 && number < 10) {
@@ -30,13 +43,11 @@ class PreferenceCard extends Component {
     }
 
     render() {
-        let {index, data, onSetPreference} = this.props;
+        let {index, data, onSetPreference, animated} = this.props;
         return (
         <div id={`card-${data.preferenceKey}-${index}`} className="card-container" style={{backgroundImage: `url(./img/images/${data.img})`}}>
             <div className="section-one">
-                   {data.img}
-                   <br/><br/>
-                   <input type="submit" value="Like" onClick={()=>{onSetPreference(index, data, 6)}}/>
+                   <div id="heartLike" className="heart" onClick={this.likeUnlike}>❤</div>
             </div>
         </div>)
     }
