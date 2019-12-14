@@ -91,7 +91,7 @@ class Discover extends Component {
                               {
                                 "preferenceName": "an Outdoor event",
                                 "userPreference": 10,
-                                "img": "/Outdoor.jpg",
+                                "img": "/outdoor.jpg",
                                 "cluster": 5,
                                 "tags": "",
                                 "questionPrefix": "How much would you be interested in ",
@@ -104,7 +104,7 @@ class Discover extends Component {
                               {
                                 "preferenceName": "Parking",
                                 "userPreference": 10,
-                                "img": "/Parking.jpg",
+                                "img": "/psarking.jpg",
                                 "cluster": 7,
                                 "tags": "",
                                 "questionPrefix": "How much would you prefer ",
@@ -147,7 +147,7 @@ class Discover extends Component {
                               {
                                 "preferenceName": "a DJ",
                                 "userPreference": 10,
-                                "img": "/DJ.jpg",
+                                "img": "/dj.jpg",
                                 "cluster": 7,
                                 "tags": "dj|music",
                                 "questionPrefix": "How much would you be interested in ",
