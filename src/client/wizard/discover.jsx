@@ -5,11 +5,12 @@ import { detailView } from '../../data-source/mockData';
 import ModalView from './modalView.jsx';
 
 function progress() {
-    let preferenceKey = this.preferenceKey;
-    let index = this.index;
-    let progressBarId = 'progress-'+preferenceKey+'-'+index;
+    let progressBarId = 'progress';
    var curWidthVal = document.getElementById(progressBarId).style.width;
    curWidthVal = parseInt(curWidthVal.replace(/px/,''),10);
+   if(curWidthVal >= screen.width) {
+        clearInterval(window.pr);
+   }
    document.getElementById(progressBarId).style.width = (curWidthVal+1)+'px';
 }
 
@@ -32,7 +33,6 @@ class PreferenceCard extends Component {
         let {index, data, onSetPreference} = this.props;
         return (
         <div id={`card-${data.preferenceKey}-${index}`} className="card-container" style={{backgroundImage: `url(./img/images/${data.img})`}}>
-            <div id={`progress-${data.preferenceKey}-${index}`} style={{width: '30px'}} className="progress-line" />
             <div className="section-one">
                    {data.img}
                    <br/><br/>
@@ -238,6 +238,7 @@ class Discover extends Component {
         setTimeout(function(){document.getElementById('logoHeading').style.opacity = '1';},200);
         setTimeout(function(){this.setState({showLoader: false})}.bind(this),400);
         scrollTo(document.body, 0, 100);
+        window.pr = setInterval(function(){progress()},35);
     }
     render() {
          const { activeQuestionIndex, showLoader } = this.state;
@@ -248,7 +249,7 @@ class Discover extends Component {
                     </div>
                     <div><i className="loading" style={{display: showLoader ? 'block' : 'none'}}></i></div>
                     <div className="main fadeInBottom" style={{marginTop: '108px'}}>
-
+                        <div id="progress" style={{width: '30px'}} className="progress-line" />
                         {this.preferences && Object.keys(this.preferences).map((preferenceKey, index) => {
                             let questionPrefix = this.preferences[preferenceKey].questionPrefix;
                             return this.preferences[preferenceKey].cards.map((preference, i, qPrefix) => {
@@ -256,7 +257,6 @@ class Discover extends Component {
 
                             })
                         })}
-                        <canvas id="canvas" width="1600" height="1200" style={{width: '800px', height: '600px'}}></canvas>
                     </div>
                     <script src="./scripts/p5.min.js"></script>
                     <script src="./scripts/p5.dom.min.js"></script>
