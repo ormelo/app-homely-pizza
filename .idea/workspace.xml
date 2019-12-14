@@ -6,6 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="2100fea9-fa34-466f-9140-289133e88515" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/public/guide.bundle.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/guide.bundle.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/client/wizard/discover.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/wizard/discover.jsx" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -22,8 +24,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+            <state relative-caret-position="300">
+              <caret line="20" column="17" lean-forward="true" selection-start-line="9" selection-start-column="4" selection-end-line="20" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -58,11 +60,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/home.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" column="13" selection-start-line="9" selection-start-column="4" selection-end-line="19" selection-end-column="13" />
+            <state relative-caret-position="300">
+              <caret line="20" column="17" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="17" />
               <folding>
                 <element signature="n#style#0;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#script#0;n#body#0;n#html#0;n#!!top" />
@@ -80,11 +82,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/client/wizard/discover.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="660">
-              <caret line="149" column="43" selection-start-line="149" selection-start-column="43" selection-end-line="149" selection-end-column="43" />
+            <state relative-caret-position="580">
+              <caret line="51" column="422" selection-start-line="51" selection-start-column="422" selection-end-line="51" selection-end-column="422" />
             </state>
           </provider>
         </entry>
@@ -111,7 +113,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>find a</find>
       <find>../img/images/logo_ic.png</find>
       <find>discover n</find>
       <find>document.getElementById(&quot;canvas&quot;)</find>
@@ -140,6 +141,7 @@
       <find>[type=&quot;checkbox&quot;]</find>
       <find>.MuiTypography-body1</find>
       <find>section-one</find>
+      <find>hear</find>
       <find>.heart</find>
     </findStrings>
     <replaceStrings>
@@ -193,9 +195,9 @@
         <option value="$PROJECT_DIR$/src/client/wizard/guide.jsx" />
         <option value="$PROJECT_DIR$/src/client/wizard/injest.jsx" />
         <option value="$PROJECT_DIR$/public/scripts/sketch.js" />
-        <option value="$PROJECT_DIR$/public/home.html" />
-        <option value="$PROJECT_DIR$/public/index.html" />
         <option value="$PROJECT_DIR$/src/client/wizard/discover.jsx" />
+        <option value="$PROJECT_DIR$/public/index.html" />
+        <option value="$PROJECT_DIR$/public/home.html" />
       </list>
     </option>
   </component>
@@ -638,28 +640,28 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/home.html">
+    <entry file="file://$PROJECT_DIR$/src/client/wizard/discover.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="13" selection-start-line="9" selection-start-column="4" selection-end-line="19" selection-end-column="13" />
-          <folding>
-            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#script#0;n#body#0;n#html#0;n#!!top" />
-          </folding>
+        <state relative-caret-position="580">
+          <caret line="51" column="422" selection-start-line="51" selection-start-column="422" selection-end-line="51" selection-end-column="422" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+        <state relative-caret-position="300">
+          <caret line="20" column="17" lean-forward="true" selection-start-line="9" selection-start-column="4" selection-end-line="20" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/client/wizard/discover.jsx">
+    <entry file="file://$PROJECT_DIR$/public/home.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="660">
-          <caret line="149" column="43" selection-start-line="149" selection-start-column="43" selection-end-line="149" selection-end-column="43" />
+        <state relative-caret-position="300">
+          <caret line="20" column="17" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="17" />
+          <folding>
+            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#script#0;n#body#0;n#html#0;n#!!top" />
+          </folding>
         </state>
       </provider>
     </entry>
