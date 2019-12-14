@@ -9,9 +9,27 @@ function progress() {
    var curWidthVal = document.getElementById(progressBarId).style.width;
    curWidthVal = parseInt(curWidthVal.replace(/px/,''),10);
    if(curWidthVal >= screen.width) {
-        clearInterval(window.pr);
+        clearInterval(window.prg);
+        document.getElementById(progressBarId).style.width = '30px';
    }
    document.getElementById(progressBarId).style.width = (curWidthVal+1)+'px';
+}
+
+function showNextCard() {
+    document.querySelectorAll('.question-card').forEach(function(node){node.style.display = 'none';});
+    if (window.selectedPreferences.length == 0) {
+        document.getElementById('karaoke').style.display = 'block';
+    } else {
+        if(window.selectedPreferences.toString() === 'karaoke') {
+            document.getElementById('bollywood').style.display = 'block';
+        }
+        else if(window.selectedPreferences.toString().includes('karaoke') || window.selectedPreferences.toString().includes('parking')) {
+            document.getElementById('outdoor').style.display = 'block';
+        }
+        else if(window.selectedPreferences.toString().includes('karaoke') || window.selectedPreferences.toString().includes('parking') || window.selectedPreferences.toString().includes('dj')) {
+            document.getElementById('parking').style.display = 'block';
+        }
+    }
 }
 
 class PreferenceCard extends Component {
@@ -23,17 +41,21 @@ class PreferenceCard extends Component {
     }
     componentDidMount() {
     }
-    likeUnlike() {
+    likeUnlike(preferenceId, elem) {
         if(!this.state.animated){
+
+            window.selectedPreferences.push(preferenceId);
             this.setState({animated: true});
-            document.getElementById('heartLike').classList.add('happy')
-            document.getElementById('heartLike').classList.remove('broken');
+            elem.classList.add('happy')
+            elem.classList.remove('broken');
           }
           else {
+
             this.setState({animated: false});
-            document.getElementById('heartLike').classList.remove('happy')
-            document.getElementById('heartLike').classList.add('broken');
+            elem.classList.remove('happy')
+            elem.classList.add('broken');
           }
+          setTimeout(function(){showNextCard();},1500);
     }
     appendZero(number) {
         if (number > 0 && number < 10) {
@@ -45,9 +67,10 @@ class PreferenceCard extends Component {
     render() {
         let {index, data, onSetPreference, animated} = this.props;
         return (
+        data.img == '' ? null :
         <div id={`card-${data.preferenceKey}-${index}`} className="card-container" style={{backgroundImage: `url(./img/images/${data.img})`}}>
             <div className="section-one">
-                   <div id="heartLike" className="heart" onClick={this.likeUnlike}>
+                   <div id="heartLike" className="heart" onClick={(e)=>{this.likeUnlike(data.preferenceId, e.target)}}>
                        <svg enableBackground="new 0 0 512 512" version="1.1" viewBox="0 0 512 512" >
                        <path d="m0 173.51c0-77.535 62.854-140.39 140.39-140.39 34.388 0 65.865 12.383 90.262 32.918 14.664 12.343 36.039 12.343 50.702 0 24.396-20.536 55.873-32.918 90.262-32.918 77.533 0 140.39 62.852 140.39 140.39v-4.129c0 136.15-165.57 258.94-230.41 301.8-15.528 10.265-35.662 10.265-51.189 0-64.831-42.863-230.4-165.66-230.4-301.8" fill="#FFF"/>
                        <g fill="#FFF">
@@ -75,6 +98,7 @@ class Discover extends Component {
         }
 
         this.userPreferences = [];
+        window.selectedPreferences = [];
         this.preferences = {
                             "interest": {
                                "cards": [
@@ -84,9 +108,10 @@ class Discover extends Component {
                                 "img": "/karaoke.jpg",
                                 "cluster": 7,
                                 "tags": "dj|music",
-                                "questionPrefix": "How much would you be interested in ",
+                                "questionPrefix": "Would you be interested in ",
                                 "preferenceKey": "interest",
-                                "preferenceKeyIndex": 0
+                                "preferenceKeyIndex": 0,
+                                "preferenceId": "karaoke"
                               },
                               {
                                 "preferenceName": "Bollywood Music event",
@@ -94,9 +119,10 @@ class Discover extends Component {
                                 "img": "/bm.jpg",
                                 "cluster": 7,
                                 "tags": "dj|music",
-                                "questionPrefix": "How much would you be interested in ",
+                                "questionPrefix": "Would you be interested in ",
                                 "preferenceKey": "interest",
-                                "preferenceKeyIndex": 0
+                                "preferenceKeyIndex": 0,
+                                "preferenceId": "bollywood"
                               },
                               {
                                 "preferenceName": "an Outdoor event",
@@ -104,9 +130,10 @@ class Discover extends Component {
                                 "img": "/outdoor.jpg",
                                 "cluster": 5,
                                 "tags": "",
-                                "questionPrefix": "How much would you be interested in ",
+                                "questionPrefix": "How about ",
                                 "preferenceKey": "interest",
-                                "preferenceKeyIndex": 0
+                                "preferenceKeyIndex": 0,
+                                "preferenceId": "outdoor"
                               }
                             ]},
                             "preference": {
@@ -114,12 +141,13 @@ class Discover extends Component {
                               {
                                 "preferenceName": "Parking",
                                 "userPreference": 10,
-                                "img": "/psarking.jpg",
+                                "img": "/parking.jpg",
                                 "cluster": 7,
                                 "tags": "",
-                                "questionPrefix": "How much would you prefer ",
+                                "questionPrefix": "Would you prefer ",
                                 "preferenceKey": "preference",
-                                "preferenceKeyIndex": 1
+                                "preferenceKeyIndex": 1,
+                                "preferenceId": "parking"
                               },
                               {
                                 "preferenceName": "Unlimited food",
@@ -129,7 +157,8 @@ class Discover extends Component {
                                 "tags": "",
                                 "questionPrefix": "How much would you prefer ",
                                 "preferenceKey": "preference",
-                                "preferenceKeyIndex": 1
+                                "preferenceKeyIndex": 1,
+                                "preferenceId": "unlimitedFood"
                               },
                               {
                                 "preferenceName": "Small budget",
@@ -139,7 +168,8 @@ class Discover extends Component {
                                 "tags": "",
                                 "questionPrefix": "How much would you prefer ",
                                 "preferenceKey": "preference",
-                                "preferenceKeyIndex": 1
+                                "preferenceKeyIndex": 1,
+                                "preferenceId": "smallBudget"
                               },
                               {
                                 "preferenceName": "Unlimited alcohol",
@@ -149,7 +179,8 @@ class Discover extends Component {
                                 "tags": "",
                                 "questionPrefix": "How much would you prefer ",
                                 "preferenceKey": "preference",
-                                "preferenceKeyIndex": 0
+                                "preferenceKeyIndex": 0,
+                                "preferenceId": "unlimitedAlcohol"
                               }
                             ]},
                             "experience": {
@@ -162,7 +193,8 @@ class Discover extends Component {
                                 "tags": "dj|music",
                                 "questionPrefix": "How much would you be interested in ",
                                 "preferenceKey": "experience",
-                                "preferenceKeyIndex": 2
+                                "preferenceKeyIndex": 2,
+                                "preferenceId": "dj"
                               },
                               {
                                 "preferenceName": "Rooftop",
@@ -172,7 +204,8 @@ class Discover extends Component {
                                 "tags": "",
                                 "questionPrefix": "How much would you be interested in ",
                                 "preferenceKey": "experience",
-                                "preferenceKeyIndex": 2
+                                "preferenceKeyIndex": 2,
+                                "preferenceId": "rooftop"
                               },
                               {
                                 "preferenceName": "Skip",
@@ -205,7 +238,8 @@ class Discover extends Component {
                                 "tags": "",
                                 "questionPrefix": "How much would you be like a place like ",
                                 "preferenceKey": "place",
-                                "preferenceKeyIndex": 3
+                                "preferenceKeyIndex": 3,
+                                "preferenceId": "mall"
                               },
                               {
                                 "preferenceName": "a Homestay",
@@ -215,7 +249,8 @@ class Discover extends Component {
                                 "tags": "",
                                 "questionPrefix": "How much would you be like a place like ",
                                 "preferenceKey": "place",
-                                "preferenceKeyIndex": 3
+                                "preferenceKeyIndex": 3,
+                                "preferenceId": "homestay"
                               },
                               {
                                 "preferenceName": "a Beach",
@@ -225,7 +260,8 @@ class Discover extends Component {
                                 "tags": "",
                                 "questionPrefix": "How much would you be like a place like ",
                                 "preferenceKey": "place",
-                                "preferenceKeyIndex": 3
+                                "preferenceKeyIndex": 3,
+                                "preferenceId": "beach"
                               }
                             ]},
                             "activity": {
@@ -239,7 +275,8 @@ class Discover extends Component {
                                 "tags": "dj|music",
                                 "questionPrefix": "How much would you like a place ",
                                 "preferenceKey": "activity",
-                                "preferenceKeyIndex": 4
+                                "preferenceKeyIndex": 4,
+                                "preferenceId": "kidFriendly"
                               },
                               {
                                 "preferenceName": "that has Camping",
@@ -249,7 +286,8 @@ class Discover extends Component {
                                 "tags": "",
                                 "questionPrefix": "How much would you like a place ",
                                 "preferenceKey": "activity",
-                                "preferenceKeyIndex": 4
+                                "preferenceKeyIndex": 4,
+                                "preferenceId": "camping"
                               }
                             ]}
                            };
@@ -259,7 +297,7 @@ class Discover extends Component {
         setTimeout(function(){document.getElementById('logoHeading').style.opacity = '1';},200);
         setTimeout(function(){this.setState({showLoader: false})}.bind(this),400);
         scrollTo(document.body, 0, 100);
-        window.pr = setInterval(function(){progress()},35);
+        showNextCard();
     }
     render() {
          const { activeQuestionIndex, showLoader } = this.state;
@@ -270,11 +308,11 @@ class Discover extends Component {
                     </div>
                     <div><i className="loading" style={{display: showLoader ? 'block' : 'none'}}></i></div>
                     <div className="main fadeInBottom" style={{marginTop: '108px'}}>
-                        <div id="progress" style={{width: '30px'}} className="progress-line" />
+                        <div id="progress" className="progress-line" />
                         {this.preferences && Object.keys(this.preferences).map((preferenceKey, index) => {
                             let questionPrefix = this.preferences[preferenceKey].questionPrefix;
                             return this.preferences[preferenceKey].cards.map((preference, i, qPrefix) => {
-                            return (<div className="question-card"><span>{`${preference.questionPrefix} ${preference.preferenceName}?`}</span><PreferenceCard index={i} data={preference} onSetPreference={this.onSetPreference} questionPrefix={questionPrefix} /></div>);
+                            return (<div id={preference.preferenceId} className="question-card">{preference.img == '' ? null : <span>{`${preference.questionPrefix} ${preference.preferenceName}?`}</span>}<PreferenceCard index={i} data={preference} onSetPreference={this.onSetPreference} questionPrefix={questionPrefix} /></div>);
 
                             })
                         })}
