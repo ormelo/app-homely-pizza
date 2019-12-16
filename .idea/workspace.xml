@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/src/client/wizard/discover.jsx" line="137" mnemonic="4" />
+    <bookmark url="file://$PROJECT_DIR$/src/client/wizard/discover.jsx" line="141" mnemonic="4" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2100fea9-fa34-466f-9140-289133e88515" name="Default Changelist" comment="">
@@ -24,17 +24,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="334">
-              <caret line="133" column="11" lean-forward="true" selection-start-line="133" selection-start-column="11" selection-end-line="133" selection-end-column="11" />
+            <state relative-caret-position="165">
+              <caret line="11" column="1" lean-forward="true" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="11" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/shortlists.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="939" column="14" selection-start-line="939" selection-start-column="2" selection-end-line="939" selection-end-column="14" />
+            <state relative-caret-position="677">
+              <caret line="2518" column="17" selection-start-line="2518" selection-start-column="17" selection-end-line="2518" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -42,8 +42,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/home.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="334">
-              <caret line="133" column="12" selection-start-line="133" selection-start-column="12" selection-end-line="133" selection-end-column="12" />
+            <state relative-caret-position="270">
+              <caret line="18" column="26" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
               <folding>
                 <element signature="n#style#0;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#script#0;n#body#0;n#html#0;n#!!top" />
@@ -52,11 +52,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/client/wizard/discover.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="118">
-              <caret line="23" column="65" selection-start-line="23" selection-start-column="65" selection-end-line="23" selection-end-column="65" />
+            <state relative-caret-position="775">
+              <caret line="141" column="142" selection-start-line="141" selection-start-column="142" selection-end-line="141" selection-end-column="142" />
             </state>
           </provider>
         </entry>
@@ -74,24 +74,13 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>doubeClickTriggered</find>
-      <find>doubleClickTriggered</find>
-      <find>timeDiff</find>
-      <find>handleDoubleClick</find>
-      <find>like</find>
-      <find>like(</find>
-      <find>likeUnlike</find>
-      <find>handleClick</find>
-      <find>lastClickTime</find>
       <find>window.nextCardCount</find>
-      <find>nextCardCount</find>
       <find>showNextCard</find>
       <find>window.selectedPreferences</find>
       <find>how much would you be</find>
       <find>ua.png</find>
       <find>.question-c</find>
       <find>span.q</find>
-      <find>logoHeading</find>
       <find>sm</find>
       <find>90ppx</find>
       <find>content</find>
@@ -104,6 +93,17 @@
       <find>.prog</find>
       <find>.pro</find>
       <find>progress</find>
+      <find>nextCardCount</find>
+      <find>&lt;title</find>
+      <find>&lt;titl</find>
+      <find>prefe</find>
+      <find>logoHeading</find>
+      <find>logoH</find>
+      <find>heading</find>
+      <find>logo-h</find>
+      <find>logo-he</find>
+      <find>handleClick</find>
+      <find>heartLike</find>
     </findStrings>
     <replaceStrings>
       <replace>./img/anim1/</replace>
@@ -157,10 +157,10 @@
         <option value="$PROJECT_DIR$/public/scripts/sketch.js" />
         <option value="$PROJECT_DIR$/public/img/images/h.svg" />
         <option value="$PROJECT_DIR$/src/client/wizard/temp" />
-        <option value="$PROJECT_DIR$/public/shortlists.html" />
         <option value="$PROJECT_DIR$/public/home.html" />
         <option value="$PROJECT_DIR$/public/index.html" />
         <option value="$PROJECT_DIR$/src/client/wizard/discover.jsx" />
+        <option value="$PROJECT_DIR$/public/shortlists.html" />
       </list>
     </option>
   </component>
@@ -588,17 +588,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/shortlists.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="939" column="14" selection-start-line="939" selection-start-column="2" selection-end-line="939" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/home.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="334">
-          <caret line="133" column="12" selection-start-line="133" selection-start-column="12" selection-end-line="133" selection-end-column="12" />
+        <state relative-caret-position="270">
+          <caret line="18" column="26" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
           <folding>
             <element signature="n#style#0;n#body#0;n#html#0;n#!!top" />
             <element signature="n#script#0;n#body#0;n#html#0;n#!!top" />
@@ -608,15 +601,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="334">
-          <caret line="133" column="11" lean-forward="true" selection-start-line="133" selection-start-column="11" selection-end-line="133" selection-end-column="11" />
+        <state relative-caret-position="165">
+          <caret line="11" column="1" lean-forward="true" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="11" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/client/wizard/discover.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="118">
-          <caret line="23" column="65" selection-start-line="23" selection-start-column="65" selection-end-line="23" selection-end-column="65" />
+        <state relative-caret-position="775">
+          <caret line="141" column="142" selection-start-line="141" selection-start-column="142" selection-end-line="141" selection-end-column="142" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/shortlists.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="677">
+          <caret line="2518" column="17" selection-start-line="2518" selection-start-column="17" selection-end-line="2518" selection-end-column="17" />
         </state>
       </provider>
     </entry>

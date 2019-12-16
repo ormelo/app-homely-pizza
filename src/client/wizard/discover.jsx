@@ -8,10 +8,14 @@ function progress() {
     let progressBarId = 'progress';
    var curWidthVal = document.getElementById(progressBarId).style.width;
    curWidthVal = parseInt(curWidthVal.replace(/px/,''),10);
-   if(curWidthVal >= screen.width) {
+
+   var maxWidthVal = screen.width-40;
+   if(curWidthVal >= maxWidthVal) {
         document.getElementById('progress').style.width = '20px';
+        showNextCard(window.nextCardCount);
+   } else {
+        document.getElementById(progressBarId).style.width = (curWidthVal+1)+'px';
    }
-   document.getElementById(progressBarId).style.width = (curWidthVal+1)+'px';
 }
 
 function showNextCard(count) {
@@ -135,7 +139,7 @@ class PreferenceCard extends Component {
         let {index, data, onSetPreference, animated} = this.props;
         return (
         data.img == '' ? null :
-        <div id={`card-${data.preferenceKey}-${index}`} className="card-container" style={{backgroundImage: `url(./img/images/${data.img})`}}>
+        <div id={`card-${data.preferenceKey}-${index}`} className="card-container" style={{backgroundImage: `url(./img/images/${data.img})`}} >
             <div className="section-one">
                    <div id="heartLike" className="heart" onClick={(e)=>{this.handleClick(data.preferenceId, e.target)}}>
                        <svg enableBackground="new 0 0 512 512" version="1.1" viewBox="0 0 512 512" >
@@ -361,7 +365,7 @@ class Discover extends Component {
     }
     componentDidMount() {
         const { params } = this.props.match;
-        document.getElementById('logoHeading').style.opacity = '1';
+        setTimeout(function(){document.getElementById('logoHeading').style.opacity = '1';},300);
         scrollTo(document.body, 0, 100);
         window.nextCardCount = 0;
         showNextCard(0);
@@ -372,7 +376,7 @@ class Discover extends Component {
         return (<div>
                     <div className="logo" id="logoWrapper" style={{top: '0px'}}>
                         <Link to="/?navigatingBack=true"><img id="logo" className="logo-img" style={{width: '43px'}} src="../img/images/logo_ic.png" /></Link>
-                        <div id="logoHeading" className="logo-heading">Your preferences</div>
+                        <div id="logoHeading" className="pref-title" style={{display: 'block'}}>Your preferences</div>
                     </div>
                     <div><i className="loading" style={{display: showLoader ? 'block' : 'none'}}></i></div>
                     <div className="main fadeInBottom" style={{marginTop: '98px'}}>
