@@ -30,7 +30,7 @@ input[type="submit"] {
       height: 46px;
       font-size: 16px;
       box-shadow: none;
-      font-family: 'Roboto Condensed', sans-serif !important;
+      font-family: 'Nunito', sans-serif;
       letter-spacing: 1px;
 }
 .slicknav_btn {

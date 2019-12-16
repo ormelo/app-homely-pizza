@@ -154,7 +154,7 @@ class Card extends Component {
             <hr className="line"/>
             <div className="res-section-two">
                 <div className="top">
-                    <div className="title">How we know they're authentic:</div>
+                    <div className="title">Recommend for you because:</div>
                     <ReviewContainer reviewTopics={data.qna[0].responses} />
                 </div>
             </div>
