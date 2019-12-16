@@ -9,8 +9,7 @@ function progress() {
    var curWidthVal = document.getElementById(progressBarId).style.width;
    curWidthVal = parseInt(curWidthVal.replace(/px/,''),10);
    if(curWidthVal >= screen.width) {
-        clearInterval(window.prg);
-        document.getElementById(progressBarId).style.width = '30px';
+        document.getElementById('progress').style.width = '20px';
    }
    document.getElementById(progressBarId).style.width = (curWidthVal+1)+'px';
 }
@@ -22,6 +21,7 @@ function showNextCard(count) {
         document.getElementById('karaoke').style.display = 'block';
     } else {
         console.log('count: ', count);
+        document.getElementById('progress').style.width = '20px';
         if(count == 1) {
             document.getElementById('bollywood').style.display = 'block';
         }
@@ -365,6 +365,7 @@ class Discover extends Component {
         scrollTo(document.body, 0, 100);
         window.nextCardCount = 0;
         showNextCard(0);
+        window.prg = setInterval(function(){progress()}, 30);
     }
     render() {
          const { activeQuestionIndex, showLoader } = this.state;
@@ -377,6 +378,7 @@ class Discover extends Component {
                     <div className="main fadeInBottom" style={{marginTop: '98px'}}>
                         <div className="pref-msg">Single tap for ❤️ Double tap for 💔</div>
                         <hr class="line-tasks" style={{marginTop: '12px'}}/>
+                        <div id="progress" className="progress-line" style={{width: '20px'}} />
                         {this.preferences && Object.keys(this.preferences).map((preferenceKey, index) => {
                             let questionPrefix = this.preferences[preferenceKey].questionPrefix;
                             return this.preferences[preferenceKey].cards.map((preference, i, qPrefix) => {
