@@ -47,7 +47,11 @@ class PreferenceCard extends Component {
     constructor(props) {
         super(props);
         this.state = {animated: false};
-        this.likeUnlike = this.likeUnlike.bind(this);
+        this.like = this.like.bind(this);
+        this.unlike = this.unlike.bind(this);
+        this.timer = 0;
+        this.delay = 200;
+        this.prevent = false;
     }
     componentDidMount() {
     }
@@ -69,6 +73,19 @@ class PreferenceCard extends Component {
           }
 
     }
+    like(preferenceId, elem){
+        window.selectedPreferences.push(preferenceId);
+        this.setState({animated: true});
+        elem.classList.add('happy')
+        elem.classList.remove('broken');
+        setTimeout(function(){showNextCard(window.nextCardCount);},1500);
+    }
+    unlike(preferenceId, elem){
+        this.setState({animated: false});
+        elem.classList.remove('happy')
+        elem.classList.add('broken');
+        setTimeout(function(){showNextCard(window.nextCardCount);},1500);
+    }
     appendZero(number) {
         if (number > 0 && number < 10) {
             return '0' + number;
@@ -76,13 +93,34 @@ class PreferenceCard extends Component {
         return number;
     }
 
+      doClickAction() {
+        alert(' click');
+      }
+      doDoubleClickAction() {
+        alert('Double Click')
+      }
+      handleClick(e) {
+        let me = this;
+        this.timer = setTimeout(function() {
+          if (!this.prevent) {
+            me.doClickAction();
+          }
+          this.prevent = false;
+        }, this.delay);
+      }
+      handleDoubleClick(e){
+        clearTimeout(this.timer);
+        this.prevent = true;
+        this.doDoubleClickAction();
+      }
+
     render() {
         let {index, data, onSetPreference, animated} = this.props;
         return (
         data.img == '' ? null :
         <div id={`card-${data.preferenceKey}-${index}`} className="card-container" style={{backgroundImage: `url(./img/images/${data.img})`}}>
             <div className="section-one">
-                   <div id="heartLike" className="heart" onClick={(e)=>{this.likeUnlike(data.preferenceId, e.target)}}>
+                   <div id="heartLike" className="heart" onClick={(e)=>{this.handleClick(e)}} onDoubleClick={(e)=>{this.handleDoubleClick(e)}}>
                        <svg enableBackground="new 0 0 512 512" version="1.1" viewBox="0 0 512 512" >
                        <path d="m0 173.51c0-77.535 62.854-140.39 140.39-140.39 34.388 0 65.865 12.383 90.262 32.918 14.664 12.343 36.039 12.343 50.702 0 24.396-20.536 55.873-32.918 90.262-32.918 77.533 0 140.39 62.852 140.39 140.39v-4.129c0 136.15-165.57 258.94-230.41 301.8-15.528 10.265-35.662 10.265-51.189 0-64.831-42.863-230.4-165.66-230.4-301.8" fill="#FFF"/>
                        <g fill="#FFF">
