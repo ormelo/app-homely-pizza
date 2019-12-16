@@ -16,28 +16,66 @@ function progress() {
 }
 
 function showNextCard(count) {
+    console.log('in showNextCard');
     document.querySelectorAll('.question-card').forEach(function(node){node.style.display = 'none';});
-    if (window.selectedPreferences.length == 0) {
+    if (count == 0) {
         document.getElementById('karaoke').style.display = 'block';
     } else {
         console.log('count: ', count);
-        if(count == 1 && window.selectedPreferences.toString() === 'karaoke') {
+        if(count == 1) {
             document.getElementById('bollywood').style.display = 'block';
         }
-        else if(count == 2 && (window.selectedPreferences.toString().includes('karaoke') || window.selectedPreferences.toString().includes('parking'))) {
-            document.getElementById('outdoor').style.display = 'block';
-        }
-        else if(count == 3 && (window.selectedPreferences.toString().includes('karaoke')
-            || window.selectedPreferences.toString().includes('bollywood')
-            || window.selectedPreferences.toString().includes('outdoor'))) {
+        else if(count == 2 && (window.selectedPreferences.toString().includes('karaoke') || window.selectedPreferences.toString().includes('bollywood'))) {
             document.getElementById('parking').style.display = 'block';
         }
-        else if(count == 4 && (window.selectedPreferences.toString().includes('karaoke')
-                || window.selectedPreferences.toString().includes('bollywood')
-                || window.selectedPreferences.toString().includes('outdoor')
-                || window.selectedPreferences.toString().includes('parking'))) {
+        else if(count == 2 && (!window.selectedPreferences.toString().includes('karaoke') && !window.selectedPreferences.toString().includes('bollywood'))) {
+             document.getElementById('outdoor').style.display = 'block';
+        }
+        else if(count == 3 && (window.selectedPreferences.toString().includes('karaoke')
+            || window.selectedPreferences.toString().includes('bollywood'))) {
             document.getElementById('unlimitedFood').style.display = 'block';
         }
+        else if(count == 4 && (window.selectedPreferences.toString().includes('karaoke')
+                || window.selectedPreferences.toString().includes('bollywood'))) {
+            document.getElementById('unlimitedAlcohol').style.display = 'block';
+        }
+        else if(count == 5 && (window.selectedPreferences.toString().includes('karaoke')
+                || window.selectedPreferences.toString().includes('bollywood'))) {
+            document.getElementById('dj').style.display = 'block';
+        }
+        else if(count == 6 && (window.selectedPreferences.toString().includes('karaoke')
+                        || window.selectedPreferences.toString().includes('bollywood'))) {
+            document.getElementById('rooftop').style.display = 'block';
+        }
+        else if(count == 7 && (window.selectedPreferences.toString().includes('karaoke')
+                        || window.selectedPreferences.toString().includes('bollywood'))) {
+            document.getElementById('mall').style.display = 'block';
+        }
+        else if(count == 8 && (window.selectedPreferences.toString().includes('karaoke')
+                                || window.selectedPreferences.toString().includes('bollywood'))) {
+            document.getElementById('kidFriendly').style.display = 'block';
+        }
+        else if(count == 3 && (window.selectedPreferences.toString().includes('outdoor'))) {
+            document.getElementById('smallBudget').style.display = 'block';
+        }
+        else if(count == 3 && (!window.selectedPreferences.toString().includes('outdoor') && !window.selectedPreferences.toString().includes('karaoke') && !window.selectedPreferences.toString().includes('bollywood'))) {
+            document.getElementById('smallBudget').style.display = 'block';
+        }
+        else if(count == 4 && (window.selectedPreferences.toString().includes('outdoor') || window.selectedPreferences.toString().includes('smallBudget'))) {
+           document.getElementById('homestay').style.display = 'block';
+        }
+        else if(count == 5 && (window.selectedPreferences.toString().includes('outdoor') || window.selectedPreferences.toString().includes('smallBudget'))) {
+           document.getElementById('beach').style.display = 'block';
+        }
+        else if(count == 6 && (window.selectedPreferences.toString().includes('outdoor') || window.selectedPreferences.toString().includes('smallBudget'))) {
+           document.getElementById('kidFriendly').style.display = 'block';
+        }
+        else if(count == 7 && (window.selectedPreferences.toString().includes('outdoor') || window.selectedPreferences.toString().includes('smallBudget'))) {
+           document.getElementById('camping').style.display = 'block';
+        } else {
+            location.href = '/shortlists/interior/blr/east';
+        }
+
     }
     window.nextCardCount++;
 }
@@ -49,31 +87,14 @@ class PreferenceCard extends Component {
         this.state = {animated: false};
         this.like = this.like.bind(this);
         this.unlike = this.unlike.bind(this);
-        this.timer = 0;
-        this.delay = 200;
-        this.prevent = false;
+        this.lastClickTime = new Date().getTime();
+        this.doubleClickTriggered = false;
+        this.timeDiff = 0;
     }
     componentDidMount() {
     }
-    likeUnlike(preferenceId, elem) {
-        if(!this.state.animated){
-
-            window.selectedPreferences.push(preferenceId);
-            this.setState({animated: true});
-            elem.classList.add('happy')
-            elem.classList.remove('broken');
-            setTimeout(function(){showNextCard(window.nextCardCount);},1500);
-          }
-          else {
-
-            this.setState({animated: false});
-            elem.classList.remove('happy')
-            elem.classList.add('broken');
-            setTimeout(function(){showNextCard(window.nextCardCount);},1500);
-          }
-
-    }
     like(preferenceId, elem){
+        console.log('like ');
         window.selectedPreferences.push(preferenceId);
         this.setState({animated: true});
         elem.classList.add('happy')
@@ -81,10 +102,11 @@ class PreferenceCard extends Component {
         setTimeout(function(){showNextCard(window.nextCardCount);},1500);
     }
     unlike(preferenceId, elem){
+        console.log('unlike ');
         this.setState({animated: false});
         elem.classList.remove('happy')
         elem.classList.add('broken');
-        setTimeout(function(){showNextCard(window.nextCardCount);},1500);
+        setTimeout(function(){showNextCard(window.nextCardCount);},1000);
     }
     appendZero(number) {
         if (number > 0 && number < 10) {
@@ -92,21 +114,22 @@ class PreferenceCard extends Component {
         }
         return number;
     }
+      handleClick(preferenceId, elem) {
+        let curClickTime = new Date().getTime();
 
-      doClickAction() {
-        alert(' click');
-      }
-      doDoubleClickAction() {
-        alert('Double Click')
-      }
-      handleClick(e) {
-        let me = this;
-        this.timer = setTimeout(function() {
-          if (!this.prevent) {
-            me.doClickAction();
-          }
-          this.prevent = false;
-        }, this.delay);
+
+           this.timeDiff = (curClickTime - this.lastClickTime) / 1000;
+           console.log('timeDiff: ', this.timeDiff);
+           if(this.timeDiff < 0.5) {
+                this.unlike(preferenceId,elem);
+                this.doubleClickTriggered = true;
+                setTimeout(function(){this.doubleClickTriggered = false;}.bind(this),500);
+           } else {
+                setTimeout(function(){console.log('this.doubleClickTriggered: ', this.doubleClickTriggered);if(!this.doubleClickTriggered && this.timeDiff > 0.5){this.like(preferenceId,elem)}}.bind(this),300);
+           }
+
+        this.lastClickTime = new Date().getTime();
+
       }
       handleDoubleClick(e){
         clearTimeout(this.timer);
@@ -120,7 +143,7 @@ class PreferenceCard extends Component {
         data.img == '' ? null :
         <div id={`card-${data.preferenceKey}-${index}`} className="card-container" style={{backgroundImage: `url(./img/images/${data.img})`}}>
             <div className="section-one">
-                   <div id="heartLike" className="heart" onClick={(e)=>{this.handleClick(e)}} onDoubleClick={(e)=>{this.handleDoubleClick(e)}}>
+                   <div id="heartLike" className="heart" onClick={(e)=>{this.handleClick(data.preferenceId, e.target)}}>
                        <svg enableBackground="new 0 0 512 512" version="1.1" viewBox="0 0 512 512" >
                        <path d="m0 173.51c0-77.535 62.854-140.39 140.39-140.39 34.388 0 65.865 12.383 90.262 32.918 14.664 12.343 36.039 12.343 50.702 0 24.396-20.536 55.873-32.918 90.262-32.918 77.533 0 140.39 62.852 140.39 140.39v-4.129c0 136.15-165.57 258.94-230.41 301.8-15.528 10.265-35.662 10.265-51.189 0-64.831-42.863-230.4-165.66-230.4-301.8" fill="#FFF"/>
                        <g fill="#FFF">
@@ -276,7 +299,7 @@ class Discover extends Component {
                                 "img": "",
                                 "cluster": 7,
                                 "tags": "",
-                                "questionPrefix": "How much would you be like a place like ",
+                                "questionPrefix": "How much would you like a",
                                 "preferenceKey": "place",
                                 "preferenceKeyIndex": 3
                               },
@@ -286,7 +309,7 @@ class Discover extends Component {
                                 "img": "/mall.jpg",
                                 "cluster": 3,
                                 "tags": "",
-                                "questionPrefix": "How much would you be like a place like ",
+                                "questionPrefix": "How much would you like a",
                                 "preferenceKey": "place",
                                 "preferenceKeyIndex": 3,
                                 "preferenceId": "mall"
@@ -297,7 +320,7 @@ class Discover extends Component {
                                 "img": "/hs.jpg",
                                 "cluster": 5,
                                 "tags": "",
-                                "questionPrefix": "How much would you be like a place like ",
+                                "questionPrefix": "How much would you like a",
                                 "preferenceKey": "place",
                                 "preferenceKeyIndex": 3,
                                 "preferenceId": "homestay"
@@ -308,7 +331,7 @@ class Discover extends Component {
                                 "img": "/bh.jpg",
                                 "cluster": 6,
                                 "tags": "",
-                                "questionPrefix": "How much would you be like a place like ",
+                                "questionPrefix": "How much would you like a",
                                 "preferenceKey": "place",
                                 "preferenceKeyIndex": 3,
                                 "preferenceId": "beach"

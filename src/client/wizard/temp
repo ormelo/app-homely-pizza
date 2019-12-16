@@ -1,0 +1,192 @@
+ {
+    "interest": {
+       "cards": [
+      {
+        "preferenceName": "a Karaoke event",
+        "userPreference": 10,
+        "img": "/karaoke.jpg",
+        "cluster": 7,
+        "tags": "dj|music",
+        "questionPrefix": "Would you be interested in ",
+        "preferenceKey": "interest",
+        "preferenceKeyIndex": 0,
+        "preferenceId": "karaoke"
+      },
+      {
+        "preferenceName": "Bollywood Music event",
+        "userPreference": 10,
+        "img": "/bm.jpg",
+        "cluster": 7,
+        "tags": "dj|music",
+        "questionPrefix": "Would you be interested in ",
+        "preferenceKey": "interest",
+        "preferenceKeyIndex": 0,
+        "preferenceId": "bollywood"
+      },
+      {
+        "preferenceName": "an Outdoor event",
+        "userPreference": 10,
+        "img": "/outdoor.jpg",
+        "cluster": 5,
+        "tags": "",
+        "questionPrefix": "How about ",
+        "preferenceKey": "interest",
+        "preferenceKeyIndex": 0,
+        "preferenceId": "outdoor"
+      }
+    ]},
+    "preference": {
+    "cards": [
+      {
+        "preferenceName": "Parking",
+        "userPreference": 10,
+        "img": "/parking.jpg",
+        "cluster": 7,
+        "tags": "",
+        "questionPrefix": "Would you prefer ",
+        "preferenceKey": "preference",
+        "preferenceKeyIndex": 1,
+        "preferenceId": "parking"
+      },
+      {
+        "preferenceName": "Unlimited food",
+        "userPreference": 10,
+        "img": "/uf.jpg",
+        "cluster": 4,
+        "tags": "",
+        "questionPrefix": "How much would you prefer ",
+        "preferenceKey": "preference",
+        "preferenceKeyIndex": 1,
+        "preferenceId": "unlimitedFood"
+      },
+      {
+        "preferenceName": "Small budget",
+        "userPreference": 10,
+        "img": "/sb.jpg",
+        "cluster": 1,
+        "tags": "",
+        "questionPrefix": "How much would you prefer ",
+        "preferenceKey": "preference",
+        "preferenceKeyIndex": 1,
+        "preferenceId": "smallBudget"
+      },
+      {
+        "preferenceName": "Unlimited alcohol",
+        "userPreference": 10,
+        "img": "/ua.png",
+        "cluster": 0,
+        "tags": "",
+        "questionPrefix": "How much would you prefer ",
+        "preferenceKey": "preference",
+        "preferenceKeyIndex": 0,
+        "preferenceId": "unlimitedAlcohol"
+      }
+    ]},
+    "experience": {
+     "cards":[
+      {
+        "preferenceName": "a DJ",
+        "userPreference": 10,
+        "img": "/dj.jpg",
+        "cluster": 7,
+        "tags": "dj|music",
+        "questionPrefix": "How much would you be interested in ",
+        "preferenceKey": "experience",
+        "preferenceKeyIndex": 2,
+        "preferenceId": "dj"
+      },
+      {
+        "preferenceName": "Rooftop",
+        "userPreference": 10,
+        "img": "/rt.jpg",
+        "cluster": 0,
+        "tags": "",
+        "questionPrefix": "How much would you be interested in ",
+        "preferenceKey": "experience",
+        "preferenceKeyIndex": 2,
+        "preferenceId": "rooftop"
+      },
+      {
+        "preferenceName": "Skip",
+        "userPreference": 10,
+        "img": "",
+        "cluster": 5,
+        "tags": "",
+        "questionPrefix": "How much would you be interested in ",
+        "preferenceKey": "experience",
+        "preferenceKeyIndex": 2
+      }
+    ]},
+    "place": {
+    "cards":[
+      {
+        "preferenceName": "Skip",
+        "userPreference": 10,
+        "img": "",
+        "cluster": 7,
+        "tags": "",
+        "questionPrefix": "How much would you be like a place like ",
+        "preferenceKey": "place",
+        "preferenceKeyIndex": 3
+      },
+      {
+        "preferenceName": "a Mall",
+        "userPreference": 10,
+        "img": "/mall.jpg",
+        "cluster": 3,
+        "tags": "",
+        "questionPrefix": "How much would you be like a place like ",
+        "preferenceKey": "place",
+        "preferenceKeyIndex": 3,
+        "preferenceId": "mall"
+      },
+      {
+        "preferenceName": "a Homestay",
+        "userPreference": 10,
+        "img": "/hs.jpg",
+        "cluster": 5,
+        "tags": "",
+        "questionPrefix": "How much would you be like a place like ",
+        "preferenceKey": "place",
+        "preferenceKeyIndex": 3,
+        "preferenceId": "homestay"
+      },
+      {
+        "preferenceName": "a Beach",
+        "userPreference": 10,
+        "img": "/bh.jpg",
+        "cluster": 6,
+        "tags": "",
+        "questionPrefix": "How much would you be like a place like ",
+        "preferenceKey": "place",
+        "preferenceKeyIndex": 3,
+        "preferenceId": "beach"
+      }
+    ]},
+    "activity": {
+     "questionPrefix": "How much would you like a place ",
+     "cards":[
+      {
+        "preferenceName": "that's Kid friendly",
+        "userPreference": 10,
+        "img": "/kf.jpg",
+        "cluster": 5,
+        "tags": "dj|music",
+        "questionPrefix": "How much would you like a place ",
+        "preferenceKey": "activity",
+        "preferenceKeyIndex": 4,
+        "preferenceId": "kidFriendly"
+      },
+      {
+        "preferenceName": "that has Camping",
+        "userPreference": 10,
+        "img": "/cp.jpg",
+        "cluster": 5,
+        "tags": "",
+        "questionPrefix": "How much would you like a place ",
+        "preferenceKey": "activity",
+        "preferenceKeyIndex": 4,
+        "preferenceId": "camping"
+      }
+    ]}
+   }

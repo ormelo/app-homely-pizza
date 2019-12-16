@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/src/client/wizard/discover.jsx" line="120" mnemonic="4" />
+    <bookmark url="file://$PROJECT_DIR$/src/client/wizard/discover.jsx" line="143" mnemonic="4" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2100fea9-fa34-466f-9140-289133e88515" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/client/wizard/temp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/guide.bundle.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/guide.bundle.min.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/client/wizard/discover.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/wizard/discover.jsx" afterDir="false" />
     </list>
@@ -32,7 +34,7 @@
         <entry file="file://$PROJECT_DIR$/public/home.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="379">
-              <caret line="126" column="16" lean-forward="true" selection-start-line="126" selection-start-column="4" selection-end-line="126" selection-end-column="16" />
+              <caret line="126" column="16" selection-start-line="126" selection-start-column="4" selection-end-line="126" selection-end-column="16" />
               <folding>
                 <element signature="n#style#0;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#script#0;n#body#0;n#html#0;n#!!top" />
@@ -44,8 +46,17 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/client/wizard/discover.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="341">
-              <caret line="99" column="13" selection-start-line="99" selection-start-column="13" selection-end-line="99" selection-end-column="13" />
+            <state relative-caret-position="453">
+              <caret line="75" column="30" selection-start-line="75" selection-start-column="30" selection-end-line="75" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/client/wizard/temp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-566">
+              <caret line="95" column="26" selection-start-line="95" selection-start-column="26" selection-end-line="95" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -54,21 +65,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>card-co</find>
-      <find>.car</find>
-      <find>.logo-h</find>
-      <find>background</find>
-      <find>robo</find>
-      <find>.logo-heading</find>
-      <find>preferenceKey</find>
-      <find>progre</find>
-      <find>.card</find>
-      <find>.card-co</find>
-      <find>progress-</find>
-      <find>[type=&quot;checkbox&quot;]</find>
-      <find>.MuiTypography-body1</find>
-      <find>hear</find>
-      <find>psa</find>
       <find>&lt;canv</find>
       <find>section-one</find>
       <find>.heart</find>
@@ -81,9 +77,24 @@
       <find>.prog</find>
       <find>progress</find>
       <find>preferenceId</find>
-      <find>likeUnlike</find>
       <find>unlimitedFood</find>
+      <find>delay</find>
+      <find>prevent</find>
+      <find>doDoubleClickAction</find>
+      <find>doubeClickTriggered</find>
+      <find>doubleClickTriggered</find>
+      <find>timeDiff</find>
+      <find>handleDoubleClick</find>
+      <find>like</find>
+      <find>like(</find>
+      <find>likeUnlike</find>
+      <find>handleClick</find>
+      <find>lastClickTime</find>
+      <find>window.nextCardCount</find>
+      <find>nextCardCount</find>
       <find>showNextCard</find>
+      <find>window.selectedPreferences</find>
+      <find>how much would you be</find>
     </findStrings>
     <replaceStrings>
       <replace>./img/anim1/</replace>
@@ -139,6 +150,7 @@
         <option value="$PROJECT_DIR$/public/img/images/h.svg" />
         <option value="$PROJECT_DIR$/public/home.html" />
         <option value="$PROJECT_DIR$/public/index.html" />
+        <option value="$PROJECT_DIR$/src/client/wizard/temp" />
         <option value="$PROJECT_DIR$/src/client/wizard/discover.jsx" />
       </list>
     </option>
@@ -569,7 +581,7 @@
     <entry file="file://$PROJECT_DIR$/public/home.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="379">
-          <caret line="126" column="16" lean-forward="true" selection-start-line="126" selection-start-column="4" selection-end-line="126" selection-end-column="16" />
+          <caret line="126" column="16" selection-start-line="126" selection-start-column="4" selection-end-line="126" selection-end-column="16" />
           <folding>
             <element signature="n#style#0;n#body#0;n#html#0;n#!!top" />
             <element signature="n#script#0;n#body#0;n#html#0;n#!!top" />
@@ -584,10 +596,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/wizard/temp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-566">
+          <caret line="95" column="26" selection-start-line="95" selection-start-column="26" selection-end-line="95" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/client/wizard/discover.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="341">
-          <caret line="99" column="13" selection-start-line="99" selection-start-column="13" selection-end-line="99" selection-end-column="13" />
+        <state relative-caret-position="453">
+          <caret line="75" column="30" selection-start-line="75" selection-start-column="30" selection-end-line="75" selection-end-column="30" />
         </state>
       </provider>
     </entry>
