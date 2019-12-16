@@ -386,7 +386,7 @@ class Discover extends Component {
                         {this.preferences && Object.keys(this.preferences).map((preferenceKey, index) => {
                             let questionPrefix = this.preferences[preferenceKey].questionPrefix;
                             return this.preferences[preferenceKey].cards.map((preference, i, qPrefix) => {
-                            return (<div id={preference.preferenceId} className="question-card">{preference.img == '' ? null : <span>{`${preference.questionPrefix} ${preference.preferenceName}?`}</span>}<PreferenceCard index={i} data={preference} onSetPreference={this.onSetPreference} questionPrefix={questionPrefix} /></div>);
+                            return (<div id={preference.preferenceId} className="question-card">{preference.img == '' ? null : <span className="question">{`${preference.questionPrefix} ${preference.preferenceName}?`}</span>}<PreferenceCard index={i} data={preference} onSetPreference={this.onSetPreference} questionPrefix={questionPrefix} /></div>);
 
                             })
                         })}
