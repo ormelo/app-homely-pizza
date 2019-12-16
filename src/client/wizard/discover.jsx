@@ -174,7 +174,7 @@ class Discover extends Component {
                             "interest": {
                                "cards": [
                               {
-                                "preferenceName": "a Karaoke event",
+                                "preferenceName": "a karaoke event",
                                 "userPreference": 10,
                                 "img": "/karaoke.jpg",
                                 "cluster": 7,
@@ -185,7 +185,7 @@ class Discover extends Component {
                                 "preferenceId": "karaoke"
                               },
                               {
-                                "preferenceName": "Bollywood Music event",
+                                "preferenceName": " bollywood music event",
                                 "userPreference": 10,
                                 "img": "/bm.jpg",
                                 "cluster": 7,
@@ -196,7 +196,7 @@ class Discover extends Component {
                                 "preferenceId": "bollywood"
                               },
                               {
-                                "preferenceName": "an Outdoor event",
+                                "preferenceName": "an outdoor event",
                                 "userPreference": 10,
                                 "img": "/outdoor.jpg",
                                 "cluster": 5,
@@ -210,7 +210,7 @@ class Discover extends Component {
                             "preference": {
                             "cards": [
                               {
-                                "preferenceName": "Parking",
+                                "preferenceName": "parking",
                                 "userPreference": 10,
                                 "img": "/parking.jpg",
                                 "cluster": 7,
@@ -226,7 +226,7 @@ class Discover extends Component {
                                 "img": "/uf.jpg",
                                 "cluster": 4,
                                 "tags": "",
-                                "questionPrefix": "How much would you prefer ",
+                                "questionPrefix": "Would you prefer ",
                                 "preferenceKey": "preference",
                                 "preferenceKeyIndex": 1,
                                 "preferenceId": "unlimitedFood"
@@ -237,18 +237,18 @@ class Discover extends Component {
                                 "img": "/sb.jpg",
                                 "cluster": 1,
                                 "tags": "",
-                                "questionPrefix": "How much would you prefer ",
+                                "questionPrefix": "Would you prefer ",
                                 "preferenceKey": "preference",
                                 "preferenceKeyIndex": 1,
                                 "preferenceId": "smallBudget"
                               },
                               {
-                                "preferenceName": "Unlimited alcohol",
+                                "preferenceName": "unlimited alcohol",
                                 "userPreference": 10,
                                 "img": "/ua.jpg",
                                 "cluster": 0,
                                 "tags": "",
-                                "questionPrefix": "How much would you prefer ",
+                                "questionPrefix": "How about ",
                                 "preferenceKey": "preference",
                                 "preferenceKeyIndex": 0,
                                 "preferenceId": "unlimitedAlcohol"
@@ -262,18 +262,18 @@ class Discover extends Component {
                                 "img": "/dj.jpg",
                                 "cluster": 7,
                                 "tags": "dj|music",
-                                "questionPrefix": "How much would you be interested in ",
+                                "questionPrefix": "Would you be interested in ",
                                 "preferenceKey": "experience",
                                 "preferenceKeyIndex": 2,
                                 "preferenceId": "dj"
                               },
                               {
-                                "preferenceName": "Rooftop",
+                                "preferenceName": "a rooftop location",
                                 "userPreference": 10,
                                 "img": "/rt.jpg",
                                 "cluster": 0,
                                 "tags": "",
-                                "questionPrefix": "How much would you be interested in ",
+                                "questionPrefix": "How about ",
                                 "preferenceKey": "experience",
                                 "preferenceKeyIndex": 2,
                                 "preferenceId": "rooftop"
@@ -302,12 +302,12 @@ class Discover extends Component {
                                 "preferenceKeyIndex": 3
                               },
                               {
-                                "preferenceName": "a Mall",
+                                "preferenceName": "event at a shopping mall?",
                                 "userPreference": 10,
                                 "img": "/mall.jpg",
                                 "cluster": 3,
                                 "tags": "",
-                                "questionPrefix": "How much would you like a",
+                                "questionPrefix": "Would you like ",
                                 "preferenceKey": "place",
                                 "preferenceKeyIndex": 3,
                                 "preferenceId": "mall"
@@ -318,7 +318,7 @@ class Discover extends Component {
                                 "img": "/hs.jpg",
                                 "cluster": 5,
                                 "tags": "",
-                                "questionPrefix": "How much would you like a",
+                                "questionPrefix": "How about ",
                                 "preferenceKey": "place",
                                 "preferenceKeyIndex": 3,
                                 "preferenceId": "homestay"
@@ -329,7 +329,7 @@ class Discover extends Component {
                                 "img": "/bh.jpg",
                                 "cluster": 6,
                                 "tags": "",
-                                "questionPrefix": "How much would you like a",
+                                "questionPrefix": "How about ",
                                 "preferenceKey": "place",
                                 "preferenceKeyIndex": 3,
                                 "preferenceId": "beach"
@@ -339,23 +339,23 @@ class Discover extends Component {
                              "questionPrefix": "How much would you like a place ",
                              "cards":[
                               {
-                                "preferenceName": "that's Kid friendly",
+                                "preferenceName": "that's kid friendly",
                                 "userPreference": 10,
                                 "img": "/kf.jpg",
                                 "cluster": 5,
                                 "tags": "dj|music",
-                                "questionPrefix": "How much would you like a place ",
+                                "questionPrefix": "Wuld you prefer a place ",
                                 "preferenceKey": "activity",
                                 "preferenceKeyIndex": 4,
                                 "preferenceId": "kidFriendly"
                               },
                               {
-                                "preferenceName": "that has Camping",
+                                "preferenceName": " camping",
                                 "userPreference": 10,
                                 "img": "/cp.jpg",
                                 "cluster": 5,
                                 "tags": "",
-                                "questionPrefix": "How much would you like a place ",
+                                "questionPrefix": "How about ",
                                 "preferenceKey": "activity",
                                 "preferenceKeyIndex": 4,
                                 "preferenceId": "camping"
