@@ -765,7 +765,7 @@ app.get("/mytasks", function(request, response) {
   response.sendFile(path.resolve(__dirname, 'public', 'mytasks.html'));
 });
 
-app.get("/shortlists/:task/:loc/:zone", function(request, response) {
+app.get("/matches", function(request, response) {
   response.sendFile(path.resolve(__dirname, 'public', 'shortlists.html'));
 });
 

@@ -132,8 +132,8 @@ class Card extends Component {
     render() {
         let {index, data} = this.props;
         return (
-        <div className="card-container">
-            <div className="section-one">
+        <div className="card-res-container">
+            <div className="res-section-one">
                 <span className="index">{this.appendZero(index+1)}</span>
                 <span className="title">{data.title}</span>
                 <div className="top">
@@ -152,7 +152,7 @@ class Card extends Component {
                 </div>
             </div>
             <hr className="line"/>
-            <div className="section-two">
+            <div className="res-section-two">
                 <div className="top">
                     <div className="title">How we know they're authentic:</div>
                     <ReviewContainer reviewTopics={data.qna[0].responses} />
@@ -187,7 +187,7 @@ class Shortlists extends Component {
         let loc = this.props.match.params.loc;
         let zone = this.props.match.params.zone;
 
-        axios.get(`/data/${task}/${loc}/${zone}`)
+        axios.get(`/data/interior/blr/east`)
           .then(function (response) {
             console.log(response.data);
             this.setState({results: response.data.results});
@@ -250,7 +250,7 @@ class Shortlists extends Component {
                     <div className="logo" id="logoWrapper" style={{top: '0px', marginLeft: '-10px'}}>
                         <img className="icon-back" src="../../../img/images/ic_back.png" onClick={()=>{history.back(-1);}} />
                         <Link to="/" style={{marginLeft: '34px'}}><img id="logo" className="logo-img" style={{width: '40px'}} src="../../../img/images/logo_ic.png" /></Link>
-                        <div id="logoHeading" className="logo-heading" style={{marginLeft: '108px', marginTop: '-27px', color: '#000', textAlign: 'left', fontSize: '23px'}}>Handpicked for you</div>
+                        <div id="logoHeading" className="logo-heading" style={{display:'block', marginLeft: '84px'}}>Handpicked for you</div>
                     </div>
                     <div><i className="loading" id="myTasksLoader" style={{top: '28px'}}></i></div>
                     <div className="main fadeInBottom">

@@ -579,7 +579,7 @@ render(<Router>
                 <Route exact path="/home" component={QuizWithRouter} />
                 <Route exact path="/mytasks" component={MytasksWithRouter} />
                 <Route exact path="/injest" component={InjestWithRouter} />
-                <Route path="/shortlists/:task/:loc/:zone" component={ShortlistsWithRouter} />
+                <Route path="/matches" component={ShortlistsWithRouter} />
             </div>)} />
     </div>
 </Router>, document.getElementById('containerWiz'));

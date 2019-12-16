@@ -71,7 +71,7 @@ function showNextCard(count) {
         else if(count == 6 && (window.selectedPreferences.toString().includes('outdoor') || window.selectedPreferences.toString().includes('smallBudget'))) {
            document.getElementById('camping').style.display = 'block';
         } else {
-            location.href = '/shortlists/interior/blr/east';
+            document.getElementById('matches').click();
         }
 
     }
@@ -344,7 +344,7 @@ class Discover extends Component {
                                 "img": "/kf.jpg",
                                 "cluster": 5,
                                 "tags": "dj|music",
-                                "questionPrefix": "Wuld you prefer a place ",
+                                "questionPrefix": "Would you prefer a place ",
                                 "preferenceKey": "activity",
                                 "preferenceKeyIndex": 4,
                                 "preferenceId": "kidFriendly"
@@ -374,6 +374,7 @@ class Discover extends Component {
     render() {
          const { activeQuestionIndex, showLoader } = this.state;
         return (<div>
+                    <Link to="/matches" id="matches" style={{position: 'absolute'}}>Matches</Link>
                     <div className="logo" id="logoWrapper" style={{top: '0px'}}>
                         <Link to="/?navigatingBack=true"><img id="logo" className="logo-img" style={{width: '43px'}} src="../img/images/logo_ic.png" /></Link>
                         <div id="logoHeading" className="pref-title" style={{display: 'block'}}>Your preferences</div>
