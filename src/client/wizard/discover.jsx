@@ -55,22 +55,16 @@ function showNextCard(count) {
                                 || window.selectedPreferences.toString().includes('bollywood'))) {
             document.getElementById('kidFriendly').style.display = 'block';
         }
-        else if(count == 3 && (window.selectedPreferences.toString().includes('outdoor'))) {
-            document.getElementById('smallBudget').style.display = 'block';
-        }
-        else if(count == 3 && (!window.selectedPreferences.toString().includes('outdoor') && !window.selectedPreferences.toString().includes('karaoke') && !window.selectedPreferences.toString().includes('bollywood'))) {
-            document.getElementById('smallBudget').style.display = 'block';
-        }
-        else if(count == 4 && (window.selectedPreferences.toString().includes('outdoor') || window.selectedPreferences.toString().includes('smallBudget'))) {
+        else if(count == 3 && (window.selectedPreferences.toString().includes('outdoor') || window.selectedPreferences.toString().includes('smallBudget'))) {
            document.getElementById('homestay').style.display = 'block';
         }
-        else if(count == 5 && (window.selectedPreferences.toString().includes('outdoor') || window.selectedPreferences.toString().includes('smallBudget'))) {
+        else if(count == 4 && (window.selectedPreferences.toString().includes('outdoor') || window.selectedPreferences.toString().includes('smallBudget'))) {
            document.getElementById('beach').style.display = 'block';
         }
-        else if(count == 6 && (window.selectedPreferences.toString().includes('outdoor') || window.selectedPreferences.toString().includes('smallBudget'))) {
+        else if(count == 5 && (window.selectedPreferences.toString().includes('outdoor') || window.selectedPreferences.toString().includes('smallBudget'))) {
            document.getElementById('kidFriendly').style.display = 'block';
         }
-        else if(count == 7 && (window.selectedPreferences.toString().includes('outdoor') || window.selectedPreferences.toString().includes('smallBudget'))) {
+        else if(count == 6 && (window.selectedPreferences.toString().includes('outdoor') || window.selectedPreferences.toString().includes('smallBudget'))) {
            document.getElementById('camping').style.display = 'block';
         } else {
             location.href = '/shortlists/interior/blr/east';
@@ -99,7 +93,7 @@ class PreferenceCard extends Component {
         this.setState({animated: true});
         elem.classList.add('happy')
         elem.classList.remove('broken');
-        setTimeout(function(){showNextCard(window.nextCardCount);},1500);
+        setTimeout(function(){showNextCard(window.nextCardCount);},1000);
     }
     unlike(preferenceId, elem){
         console.log('unlike ');
@@ -367,8 +361,7 @@ class Discover extends Component {
     }
     componentDidMount() {
         const { params } = this.props.match;
-        setTimeout(function(){document.getElementById('logoHeading').style.opacity = '1';},200);
-        setTimeout(function(){this.setState({showLoader: false})}.bind(this),400);
+        document.getElementById('logoHeading').style.opacity = '1';
         scrollTo(document.body, 0, 100);
         window.nextCardCount = 0;
         showNextCard(0);
@@ -381,8 +374,9 @@ class Discover extends Component {
                         <div id="logoHeading" className="logo-heading">Your preferences</div>
                     </div>
                     <div><i className="loading" style={{display: showLoader ? 'block' : 'none'}}></i></div>
-                    <div className="main fadeInBottom" style={{marginTop: '108px'}}>
-                        <div id="progress" className="progress-line" />
+                    <div className="main fadeInBottom" style={{marginTop: '98px'}}>
+                        <div className="pref-msg">Single tap for ❤️ Double tap for 💔</div>
+                        <hr class="line-tasks" style={{marginTop: '12px'}}/>
                         {this.preferences && Object.keys(this.preferences).map((preferenceKey, index) => {
                             let questionPrefix = this.preferences[preferenceKey].questionPrefix;
                             return this.preferences[preferenceKey].cards.map((preference, i, qPrefix) => {
@@ -391,11 +385,7 @@ class Discover extends Component {
                             })
                         })}
                     </div>
-                    <script src="./scripts/p5.min.js"></script>
-                    <script src="./scripts/p5.dom.min.js"></script>
-                    <script src="./scripts/p5.sound.min.js"></script>
-                    <script src="./scripts/sketch.js"></script>
-                <div className="desc copyright" style={{textAlign: 'center',fontSize: '14px'}}>Copyright © 2019 Stint.do</div><br/>
+
                 </div>)
     }
 }
