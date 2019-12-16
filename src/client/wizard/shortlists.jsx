@@ -250,7 +250,7 @@ class Shortlists extends Component {
                     <div className="logo" id="logoWrapper" style={{top: '0px', marginLeft: '-10px'}}>
                         <img className="icon-back" src="../../../img/images/ic_back.png" onClick={()=>{history.back(-1);}} />
                         <Link to="/" style={{marginLeft: '34px'}}><img id="logo" className="logo-img" style={{width: '40px'}} src="../../../img/images/logo_ic.png" /></Link>
-                        <div id="logoHeading" className="logo-heading" style={{marginLeft: '108px', marginTop: '-26px', textAlign: 'left', fontSize: '18px'}}>{`Shortlists  >  ${localStorage.getItem('primary-task')}`}</div>
+                        <div id="logoHeading" className="logo-heading" style={{marginLeft: '108px', marginTop: '-27px', color: '#000', textAlign: 'left', fontSize: '23px'}}>Handpicked for you</div>
                     </div>
                     <div><i className="loading" id="myTasksLoader" style={{top: '28px'}}></i></div>
                     <div className="main fadeInBottom">
