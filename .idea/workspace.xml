@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2100fea9-fa34-466f-9140-289133e88515" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/client/wizard/guide.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/wizard/guide.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/wizard/discover.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/wizard/discover.jsx" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -36,11 +36,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/client/wizard/guide.jsx">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="312">
-              <caret line="210" column="155" selection-start-line="210" selection-start-column="155" selection-end-line="210" selection-end-column="155" />
+              <caret line="210" column="132" selection-start-line="210" selection-start-column="128" selection-end-line="210" selection-end-column="132" />
             </state>
           </provider>
         </entry>
@@ -76,11 +76,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/client/wizard/discover.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="312">
-              <caret line="109" column="11" selection-start-line="109" selection-start-column="11" selection-end-line="109" selection-end-column="11" />
+            <state relative-caret-position="501">
+              <caret line="376" column="84" selection-start-line="376" selection-start-column="84" selection-end-line="376" selection-end-column="84" />
             </state>
           </provider>
         </entry>
@@ -107,8 +107,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>slide</find>
-      <find>.logo .logo-img</find>
       <find>mystyles.css</find>
       <find>params.</find>
       <find>card-con</find>
@@ -137,6 +135,8 @@
       <find>.sub-he</find>
       <find>how we k</find>
       <find>if it</find>
+      <find>if its</find>
+      <find>matches</find>
     </findStrings>
     <replaceStrings>
       <replace>./img/anim1/</replace>
@@ -188,12 +188,12 @@
         <option value="$PROJECT_DIR$/src/client/wizard/temp" />
         <option value="$PROJECT_DIR$/public/shortlists.html" />
         <option value="$PROJECT_DIR$/index.js" />
-        <option value="$PROJECT_DIR$/src/client/wizard/discover.jsx" />
         <option value="$PROJECT_DIR$/public/assets/pink.css" />
         <option value="$PROJECT_DIR$/src/client/wizard/shortlists.jsx" />
         <option value="$PROJECT_DIR$/public/home.html" />
         <option value="$PROJECT_DIR$/public/index.html" />
         <option value="$PROJECT_DIR$/src/client/wizard/guide.jsx" />
+        <option value="$PROJECT_DIR$/src/client/wizard/discover.jsx" />
       </list>
     </option>
   </component>
@@ -661,17 +661,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/client/wizard/discover.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="109" column="11" selection-start-line="109" selection-start-column="11" selection-end-line="109" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/client/wizard/guide.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="312">
-          <caret line="210" column="155" selection-start-line="210" selection-start-column="155" selection-end-line="210" selection-end-column="155" />
+          <caret line="210" column="132" selection-start-line="210" selection-start-column="128" selection-end-line="210" selection-end-column="132" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/wizard/discover.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="501">
+          <caret line="376" column="84" selection-start-line="376" selection-start-column="84" selection-end-line="376" selection-end-column="84" />
         </state>
       </provider>
     </entry>
