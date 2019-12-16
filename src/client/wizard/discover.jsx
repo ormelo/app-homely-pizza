@@ -247,7 +247,7 @@ class Discover extends Component {
                               {
                                 "preferenceName": "Unlimited alcohol",
                                 "userPreference": 10,
-                                "img": "/ua.png",
+                                "img": "/ua.jpg",
                                 "cluster": 0,
                                 "tags": "",
                                 "questionPrefix": "How much would you prefer ",
