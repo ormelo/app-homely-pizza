@@ -20,16 +20,6 @@ var shoppingCriteriaUUIDMap = {};
 var userCriteriaSelection = {};
 var resultsQuery = '';
 
-const { Pool, Client } = require('pg');
-
-var pool = new Pool({
-  user: 'nrgkzvyxpdfhkb',
-  host: 'ec2-54-247-188-247.eu-west-1.compute.amazonaws.com',
-  database: 'dcrgs2nbc0i5vf',
-  password: '39798783ada15727c8bd9f24bb6c5808d313ab686991c4aca62e3db947cb016c',
-  port: 5432
-})
-
 var goToValKeywords = ["5cbecf1bf96720080791819c", "5cbecf92f96720df8f9181b2", "5cbecfe0dd2e6e8a776f9ee8", "5cbecfe6dd2e6e34916f9eef", "5cbecfeadd2e6e2a0f6f9ef1", "5cbecfeedd2e6e73a56f9ef3", "5cbecff5dd2e6eb3646f9ef6", "5cbecff9f96720ad639181c6"];
 var goToValBudgets = ["5cbed205f967203cf9918240", "5cbed20af9672091f0918242", "5cbed20fdd2e6e7eb56f9f60", "5cbed214f96720ea24918248"];
 //questionCriteraNameMap
@@ -749,14 +739,6 @@ app.get("/", function(request, response) {
   response.sendFile(path.resolve(__dirname, 'public', 'guide.html'));
 });
 
-app.get("/injest", function(request, response) {
-  response.sendFile(path.resolve(__dirname, 'public', 'injest.html'));
-});
-
-app.get("/heart", function(request, response) {
-  response.sendFile(path.resolve(__dirname, 'public', 'heart.html'));
-});
-
 app.get("/home", function(request, response) {
   response.redirect('/');
 });
@@ -765,7 +747,7 @@ app.get("/mytasks", function(request, response) {
   response.sendFile(path.resolve(__dirname, 'public', 'mytasks.html'));
 });
 
-app.get("/matches", function(request, response) {
+app.get("/shortlists/:task/:loc/:zone", function(request, response) {
   response.sendFile(path.resolve(__dirname, 'public', 'shortlists.html'));
 });
 
@@ -832,25 +814,6 @@ app.post('/submitGetQuote', function(req, res) {
         client.set(email, members);
     //res.send(pages.getQuote);*/
     res.redirect('/quoteChecker');
-});
-
-app.post('/saveEvent', function(req, res) {
-    console.log('req.body: ', req.body);
-    var name = req.body.name,
-        link = req.body.link,
-        img = req.body.img,
-        nameId = req.body.nameId,
-        desc = req.body.desc,
-        date = req.body.date;
-        price = req.body.price;
-        remarks = req.body.remarks;
-    //res.send(pages.getQuote);*/
-
-    let query = 'Insert into "events" (title, link, img, event_date, event_desc, tags, price, title_id) values(\''+name+'\',\''+link+'\',\''+img+'\',\''+date+'\',\''+desc+'\',\''+remarks+'\',\''+price+'\',\''+nameId+'\')';
-    console.log('Final query:', query)
-    pool.query(query, function(err, result) {console.log('error: ', err);console.log('New event inserted.'); res.send('success');});
-
-    //res.send('success');
 });
 
 app.get("/search", function(request, response) {

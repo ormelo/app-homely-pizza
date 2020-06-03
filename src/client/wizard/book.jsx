@@ -36,7 +36,7 @@ class QuestionAnswer extends Component {
                             {this.props.answers.map((answer) => {
                                 return (<div key={Math.random()} className={true ? "answer" : "answer active-ans"}
                                     onClick={() => this.props.onSelect(answer)}>
-                                    {this.props.activeIndex == 4 ? <Link to="/shortlists/interior/blr/east" style={{color: '#ea2639'}}><span className="ans-text" >{answer.title}</span></Link>
+                                    {this.props.activeIndex == 4 ? <Link to="/mytasks" style={{color: '#17bc85'}}><span className="ans-text" >{answer.title}</span></Link>
                                         : <span className="ans-text" >{answer.title}</span>}
                                 </div>)
                             })}
@@ -72,7 +72,7 @@ class Book extends Component {
     }
     componentDidMount() {
         const { params } = this.props.match;
-        setTimeout(function(){document.getElementById('logoHeading').style.opacity = '1';},200);
+        setTimeout(function(){document.getElementById('logoHeading').style.opacity = '1';},0);
         localStorage.removeItem('primary-task');
         localStorage.removeItem('secondary-task');
         this.setState({

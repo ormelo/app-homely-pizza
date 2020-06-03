@@ -52,6 +52,8 @@ class MyTasks extends Component {
     }
     setTimeElapsed(){
         let elapsed = localStorage.getItem('elapsed');
+        
+
         if(elapsed != null) {
             elapsed = parseInt(localStorage.getItem('elapsed'),10);
             let timeElapsed = new Date() - elapsed;

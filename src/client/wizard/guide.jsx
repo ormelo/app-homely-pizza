@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
-import Discover from './discover.jsx';
+import Book from './book.jsx';
 import MyTasks from './mytasks.jsx';
 import Shortlists from './shortlists.jsx';
-import Injest from './injest.jsx';
 import { BrowserRouter as Router, Route, Link, withRouter } from 'react-router-dom';
 import { END_POINTS } from '../../common/constant';
 import { searchResults, questions } from '../../data-source/mockDataQnA';
@@ -118,18 +117,9 @@ class Guide extends React.Component {
     componentDidMount() {
         window.addEventListener('scroll', this.handleScroll);
         window.onRecommenderClick = this.handleRecommenderClick;
-        //this.showMyTasksBtn();
-        this.showInjestBtn();
+        this.showMyTasksBtn();
         scrollTo(document.body, 0, 100);
     }
-
-     showInjestBtn() {
-            if(location.href.indexOf('injest') != -1) {
-                document.getElementById('injestBtn').style.display = 'block';
-            } else {
-                document.getElementById('injestBtn').style.display = 'none';
-            }
-        }
 
     showMyTasksBtn() {
         if(localStorage.getItem('primary-task') != null && localStorage.getItem('secondary-task') != null
@@ -196,10 +186,9 @@ class Guide extends React.Component {
             return (<div>
 
             <div className="logo" id="logoWrapper">
-                <img id="logo" className="logo-img" src="../img/images/logo_a2.jpg" />
+                <img id="logo" className="logo-img" src="../img/images/logo.png" />
                 <div id="logoHeading" className="logo-heading"></div>
                 <Link to="/mytasks"><div id="myTasksBtn" className="green-btn right-btn"><img className="icon-btn" src="../img/images/ic_user.png" /><span>My Services</span></div></Link>
-                <Link to="/injest"><div id="injestBtn" className="green-btn right-btn" style={{width: '120px'}}><img className="icon-btn" src="../img/images/ic_user.png" /><span>Add event</span></div></Link>
             </div>
             <div><i className="loading"></i></div>
 
@@ -208,51 +197,100 @@ class Guide extends React.Component {
                 <div className="main">
                     <div>
 
-                        <div className="header glow">Discover new year events you'll love<br/><div className="sub-head">If it's rare, credible & worth, it's on authentist</div></div>
+                        <div className="header">Discover services authentic to you<br/><div className="sub-head">Stint makes booking personalized services easy & affordable</div></div>
                         <img className="curve" src="./img/images/curve.png"/>
                         <div className="scroll-arrow">
                             <span/><span/><span/>
                         </div>
                     </div>
-                    <div className="overview">Browse matches in a few taps!</div>
+                    <div className="overview">What do you want to get done?</div>
 
                     <div className="section">
                         <div className="post-heading icon-container">
-                            <img className="ic" src="./img/images/ic_homei.png" style={{width: '72px'}} />
-                            <img className="ic" src="./img/images/ic_eventsi.png" style={{width: '72px'}} />
+                            <Link to="/home"><img className="ic" src="./img/images/ic_homei.png" style={{width: '72px'}} /></Link>
+                            <Link to="/home"><img className="ic" src="./img/images/ic_eventsi.png" style={{width: '72px'}} /></Link>
                             <img className="ic" src="./img/images/ic_local_enquiriesi.png" style={{width: '72px'}} />
                         </div>
                     </div>
                     <br/>
-
-
-
-                    <div class="panel-center mob-only" style={{position: 'fixed',bottom: '0px',background: 'linear-gradient(rgba(216, 216, 216, 0.05) 0%, rgb(214, 214, 214) 100%)',left: '0px', zIndex: '9999'}}>
-
-
-                                            <div id="div_id_submit" className="form-group">
-                                                <div className="controls">
-                                                      <Link to="/home">
-                                                        <input type="submit" className="submit form-control" id="id_submit" value="Find authentic matches" dcvalue="Find trusted providers" />
-                                                      </Link>
-                                                </div>
-                                            </div>
-                                            <div className="form-group">
-                                                <div className="controls ">
-                                                    <p style={{color: '#000', fontSize: '9px', textAlign: 'center'}}></p>
-
-                                                </div>
-                                            </div>
-
-                                    </div>
-
-
-
                     <hr className="line"/>
+                                        <div className="section">
+                                            <div className="post-heading">
+                                                <div className="title" style={{paddingLeft:'12px', paddingRight:'12px'}}>Why Stint?</div>
+                                                <div className="info" style={{marginTop: '10px'}}>
+                                                    <div className="para" style={{marginTop: '0px'}}>
+                                                       <div className="main-desc">
+                                                       How often have we availed a service in Bangalore &amp; realized, well that’s not what we expected.
+                                                       <br/><br/>
+                                                       Stint helps you shortlist & book authentic services to suit your exact needs.
+
+                                                        </div><br/>
+                                                    </div>
+
+                                                    <hr class="line"/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className="section no-padding">
+                                            <div className="post-heading">
+                                                <div className="title">How it works</div>
+                                                <div className="info" style={{marginTop: '12px'}}>
+                                                    <br/><br/>
+                                                    <div className="step1"/>
+                                                    <img src="./img/images/ic_num_1.png" className="ic-num"/>
+                                                    <img className="curve small" src="./img/images/curve.png"/>
+                                                    <div className="para" style={{marginTop: '14px'}}>
+                                                       <div className="title">Stint learns your needs</div>
+                                                       <div className="desc" style={{marginTop: '10px'}}>Answer quick questions to share your specific needs</div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className="section no-padding" style={{marginTop: '40px'}}>
+                                             <div className="post-heading">
+                                                <div className="info">
+                                                    <div className="step2"/>
+                                                        <img src="./img/images/ic_num_2.png" className="ic-num"/>
+                                                        <img className="curve small" src="./img/images/curve.png" style={{top: '180px'}}/>
+                                                        <div className="para" style={{marginTop: '14px'}}>
+                                                            <div className="title"></div>
+                                                           <div className="title">Screening & shortlisting</div>
+                                                           <div className="desc" style={{marginTop: '10px'}}>Stint shortlists authentic service providers & checks with you to see if they fit your needs & budget</div>
+                                                    </div>
+                                                </div>
+                                             </div>
+                                         </div>
+                                         <div className="section no-padding" style={{marginTop: '40px'}}>
+                                              <div className="post-heading">
+                                                 <div className="info">
+                                                     <div className="step3"/>
+                                                         <img src="./img/images/ic_num_3.png" className="ic-num"/>
+                                                         <img className="curve small" src="./img/images/curve.png" style={{top: '180px'}}/>
+                                                         <div className="para" style={{marginTop: '14px'}}>
+                                                             <div className="title"></div>
+                                                            <div className="title">Book a stint </div>
+                                                            <div className="desc" style={{marginTop: '16px'}}>Stint compares USP of each service provider and cautions you when their quote is above market.
+                                                            <br/><br/><span style={{color: '#000', fontWeight:'bold', fontColor: '#08b587'}}>Quotes from stintlers are usually 20% less than market average due to the commissionless model.</span></div><br/>
+                                                     </div>
+                                                 </div>
+                                              </div>
+                                          </div>
+
+                                          <div className="overview" style={{background: '#f7f7f7', paddingTop: '20px'}}>So what do you want to get done?</div>
+
+                                                              <div className="section" style={{background: '#f7f7f7'}}>
+                                                                  <div className="post-heading icon-container">
+                                                                      <Link to="/home"><img className="ic" src="./img/images/ic_homei.png" style={{width: '72px'}} /></Link>
+                                                                      <img className="ic" src="./img/images/ic_eventsi.png" style={{width: '72px'}} />
+                                                                      <img className="ic" src="./img/images/ic_local_enquiriesi.png" style={{width: '72px'}} />
+                                                                  </div>
+                                                                  <br/>
+                                                              </div>
+                                                              <br/>
 
 
-
-                                        <div className="desc" style={{textAlign: 'center',fontSize: '14px'}}>copyright © 2019 authentist.in</div><br/>
+                                        <div className="desc" style={{textAlign: 'center',fontSize: '14px'}}>Copyright © 2019 Stint.do</div><br/>
                 </div>
 
 
@@ -565,11 +603,9 @@ export class ResultsList extends React.Component {
 
 }
 
-//var QuizWithRouter = withRouter(Book);
-var QuizWithRouter = withRouter(Discover);
+var QuizWithRouter = withRouter(Book);
 var MytasksWithRouter = withRouter(MyTasks);
 var ShortlistsWithRouter = withRouter(Shortlists);
-var InjestWithRouter = withRouter(Injest);
 
 render(<Router>
     <div>
@@ -578,8 +614,7 @@ render(<Router>
                     <Route exact path="/" component={Guide} />
                 <Route exact path="/home" component={QuizWithRouter} />
                 <Route exact path="/mytasks" component={MytasksWithRouter} />
-                <Route exact path="/injest" component={InjestWithRouter} />
-                <Route path="/matches" component={ShortlistsWithRouter} />
+                <Route path="/shortlists/:task/:loc/:zone" component={ShortlistsWithRouter} />
             </div>)} />
     </div>
 </Router>, document.getElementById('containerWiz'));

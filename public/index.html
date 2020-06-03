@@ -1,198 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-<link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Bree+Serif&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Quicksand:300,400" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">
 <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="theme-color" content="#fff">
     <style type="text/css">.pac-container{background-color:#fff;position:absolute!important;z-index:1000;border-radius:2px;border-top:1px solid #d9d9d9;font-family:Arial,sans-serif;box-shadow:0 2px 6px rgba(0,0,0,0.3);-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box;overflow:hidden}.pac-logo:after{content:"";padding:1px 1px 1px 0;height:16px;text-align:right;display:block;background-image:url(https://maps.gstatic.com/mapfiles/api-3/images/powered-by-google-on-white3.png);background-position:right;background-repeat:no-repeat;background-size:120px 14px}.hdpi.pac-logo:after{background-image:url(https://maps.gstatic.com/mapfiles/api-3/images/powered-by-google-on-white3_hdpi.png)}.pac-item{cursor:default;padding:0 4px;text-overflow:ellipsis;overflow:hidden;white-space:nowrap;line-height:30px;text-align:left;border-top:1px solid #e6e6e6;font-size:11px;color:#999}.pac-item:hover{background-color:#fafafa}.pac-item-selected,.pac-item-selected:hover{background-color:#ebf2fe}.pac-matched{font-weight:700}.pac-item-query{font-size:13px;padding-right:3px;color:#000}.pac-icon{width:15px;height:20px;margin-right:7px;margin-top:6px;display:inline-block;vertical-align:top;background-image:url(https://maps.gstatic.com/mapfiles/api-3/images/autocomplete-icons.png);background-size:34px}.hdpi .pac-icon{background-image:url(https://maps.gstatic.com/mapfiles/api-3/images/autocomplete-icons_hdpi.png)}.pac-icon-search{background-position:-1px -1px}.pac-item-selected .pac-icon-search{background-position:-18px -1px}.pac-icon-marker{background-position:-1px -161px}.pac-item-selected .pac-icon-marker{background-position:-18px -161px}.pac-placeholder{color:gray}
 </style><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}
-html{
-opacity: 1;
-}
-.pref-title {
-    top: 30px;
-    display: block;
-    position: absolute;
-    left: 90px;
-    font-size: 23px;
-    color: #000;
-    font-family: 'Nunito', sans-serif;
-}
-.pref-msg{
-    text-align: center;
-    font-size: 18px;
-    margin-bottom: 16px;
-    color: #c7c7c7;
-}
-.heart {
-    width: 48px;
-    height: 20px;
-    margin: 0 auto;
-    left: 7px;
-    right: 0;
-    color: rgba(255, 255, 255, 0.14);
-    font-size: 70px;
-    cursor: pointer;
-    position: relative;
-    transition: all .3s ease;
-    top: 0px;
-    opacity: 0.6;
-}
-.heart:hover {
-  animation: pulse .6s linear;
-}
-.heart:before {
-  content: "♥";
-  position: absolute;
-  color: #A12B2B;
-  opacity: 0;
-}
-.heart.happy {
-  color: #A12B2B;
-}
-.heart.happy:before {
-  opacity: 0;
-  transform: translateY(-30px) rotateZ(5deg);
-  animation: fly 1s ease;
-}
-.heart.broken {
-  color: #aaa;
-  position: relative;
-  transition: all .3s ease;
-}
-.heart.broken:before, .heart.broken:after {
-  content: "♥";
-  opacity: 1;
-  color: #ccc;
-  position: absolute;
-  top: -150px;
-  transform: scale(3) rotateZ(0);
-}
-.heart.broken:before {
-  clip: rect(0, 20px, 200px, 0);
-  animation: break-left 1s ease forwards;
-}
-.heart.broken:after {
-  clip: rect(0, 50px, 200px, 25px);
-  animation: break-right 1s ease forwards;
-}
 
-@keyframes pulse {
-  50% {
-    transform: scale(1.1);
-  }
-}
-@keyframes fly {
-  0% {
-    opacity: 0;
-    transform: translateY(-20px) rotateZ(15deg);
-  }
-  50% {
-    opacity: .75;
-    transform: scale(4) translateY(-30px) rotateZ(-15deg);
-  }
-  100% {
-    opacity: 0;
-    transform: scale(4) translateY(-50px) rotateZ(15deg);
-  }
-}
-@keyframes break-left {
-  0% {
-    opacity: 1;
-    transform: scale(3) rotateZ(0);
-  }
-  20% {
-    opacity: .5;
-    transform: scale(3) translateX(-10px) rotateZ(-20deg) translateY(0);
-  }
-  50% {
-    opacity: .5;
-    transform: scale(3) translateX(-10px) rotateZ(-20deg) translateY(0);
-  }
-  100% {
-    opacity: 0;
-    transform: scale(3) translateX(-30px) rotateZ(-25deg) translateY(50px);
-  }
-}
-@keyframes break-right {
-  0% {
-    opacity: 1;
-    transform: scale(3) rotateZ(0);
-  }
-  20% {
-    opacity: .5;
-    transform: scale(3) translateX(10px) rotateZ(20deg) translateY(0);
-  }
-  50% {
-    opacity: .5;
-    transform: scale(3) translateX(10px) rotateZ(20deg) translateY(0);
-  }
-  100% {
-    opacity: 0;
-    transform: scale(3) translateX(30px) rotateZ(25deg) translateY(50px);
-  }
-}
-
-.question-card {
-    text-align: center;
-    font-size: 18px;
-    padding: 20px;
-}
-.progress-line {
-    position: relative;
-    top: -1px;
-    min-height: 1px;
-    background: #ea263a;
-    width: 30px;
-    margin-left: 21px;
-}
-.loader-bg{
-    position: relative;
-    min-width: 100vw;
-    min-height: 100vh;
-    margin-top: 89px;
-}
-#canvas{
-    display: none;
-}
-.new-year-msg {
-    display: none;
-    position: absolute;
-    top: 100px;
-    color: #fff;
-    font-size: 27px;
-    line-height: 40px;
-    text-align: center;
-    padding: 0 20px;
-    margin-top: 120px;
-}
-input.text-date {
-    padding: 5px;
-    margin-bottom: 5px;
-    width: 100%;
-    font-size: 15px;
-    color: #666;
-}
-
-input.text-input {
-    width: 100%;
-    font-size: 16px;
-    padding: 10px;
-    margin-bottom: 5px;
-    color: #666;
-}
-
-textarea.text-area {
-    width: 100%;
-    font-size: 16px;
-    padding: 10px 10px;
-    display: block;
-    margin: 0px;
-    min-height: 100px;
-    margin-bottom: 5px;
-    color: #666;
-}
 .banner-overlay {
     background: radial-gradient(circle, rgba(136, 136, 136, 0.7) 0%, rgba(0, 0, 0, 0.4) 100%);
     min-width: 100%;
@@ -212,22 +26,6 @@ body {
 
 .card-container {
     background: #fff;
-    box-shadow: 0px 0px 20px 3px rgba(116, 116, 116, 0.4);
-    width: calc(100% - 40px);
-    margin: 0 auto;
-    margin-top: 20px;
-    border: none !important;
-    border-radius: 9px;
-    height: 360px;
-    padding: 0px 16px 0px 16px;
-    background-position-x: 50%;
-    background-position-y: 100%;
-    background-size: cover;
-    object-fit: contain;
-}
-
-.card-res-container {
-    background: #fff;
     box-shadow: 0px 0px 24px 3px rgba(116, 116, 116, 0.2);
     width: calc(100% - 40px);
     margin: 0 auto;
@@ -236,16 +34,11 @@ body {
     border-radius: 9px;
     min-height: 340px;
     padding: 0px 16px 0px 16px;
-    font-family: 'Nunito', sans-serif;
 }
 
 .section-one {
     min-height: 132px;
-    bottom: 110px;
-    position: absolute;
-    margin: 0 auto;
-    left: 0;
-    right: 0;
+    padding-top: 8px;
 }
 
 .section-two {
@@ -254,7 +47,7 @@ body {
 
 .section-one .index {
     font-size: 36px;
-    font-family: 'Roboto Condensed', sans-serif;
+    font-family: 'Source Sans Pro';
     color: #e6e6e6;
 }
 
@@ -266,32 +59,6 @@ body {
     margin-left: 16px;
     width: calc( 100% - 138px);
     line-height: 20px;
-}
-
-.res-section-one {
-    min-height: 132px;
-    padding-top: 8px;
-}
-
-.res-section-two {
-    min-height: 208px;
-}
-
-.res-section-one .index {
-    font-size: 36px;
-    font-family: 'Roboto Condensed', sans-serif;
-    color: #e6e6e6;
-}
-
-.res-section-one .title {
-    position: absolute;
-    margin-top: 8px;
-    font-size: 15px;
-    color: #666;
-    margin-left: 16px;
-    width: calc( 100% - 138px);
-    line-height: 20px;
-    font-family: 'Nunito', sans-serif;
 }
 
 .lock-text {
@@ -369,7 +136,7 @@ body {
 }
 
 .review-topic{
-    font-family: 'Nunito', sans-serif;
+    font-family: Quicksand;
     font-weight: bold;
     font-size: 13px;
     background: #ededed;
@@ -389,7 +156,7 @@ body {
 }
 
 .review-topic.active {
-    background: #ea2639;
+    background: #26cf96;
     color: #fff;
 }
 
@@ -406,35 +173,40 @@ body {
     border-radius: 8px;
 }
 
+.section-one .top {
+    display: table;
+    padding: 6px;
+    margin-top: -10px;
+}
 
-.res-section-one .top-left, .res-section-one .top-right  {
+.section-one .top-left, .section-one .top-right  {
     display: table-cell;
     vertical-align: middle;
 }
 
-.res-section-one .top-left {
+.section-one .top-left {
     width: 118px;
     margin: 20px;
     overflow: hidden;
 }
 
-.res-section-one .top-right .usp-title {
+.section-one .top-right .usp-title {
     font-size: 14px;
     color: #484848;
     margin-bottom: 2px;
     padding-top: 8px;
 }
 
-.res-section-one .top-right .usp-desc {
+.section-one .top-right .usp-desc {
     font-size: 13px;
     color: #a1a1a1;
 }
 
-.res-section-one .top-right {
+.section-one .top-right {
     padding: 14px;
 }
 
-.res-section-one .top-left img.blurred {
+.section-one .top-left img.blurred {
     border-radius: 6px;
     filter: blur(2px);
     -webkit-filter: blur(2.5px);
@@ -469,28 +241,6 @@ body {
     overflow: hidden;
 }
 
-.res-section-two .top {
-    display: table;
-    padding: 6px;
-    margin-top: -10px;
-}
-
-.res-section-two .top .title{
-    color: #8a8a8a;
-    font-size: 15px;
-}
-
-.res-section-two .top-left, .section-two .top-right  {
-    display: table-cell;
-    vertical-align: middle;
-}
-
-.res-section-two .top-left {
-    width: 118px;
-    margin: 20px;
-    overflow: hidden;
-}
-
 .icon-lock-small {
     position: absolute;
     margin-top: -54px;
@@ -500,6 +250,7 @@ body {
 
 .MuiTypography-body1 {
     margin-top: 0px !important;
+    font-family: 'Source Sans Pro', sans-serif !important;
 }
 
 .MuiPaper-elevation1{
@@ -526,57 +277,52 @@ body {
 
 .header {
     text-align: center;
-    font-family: 'Bree Serif', sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
     color: #fff;
     padding: 0px;
     margin: 0 auto;
     top: 174px;
     position: absolute;
     font-size: 34px;
-    font-weight: normal;
+    font-weight: bold;
     line-height: 42px;
-    padding: 0px 24px;
-    letter-spacing: 1px;
+    padding: 0px 30px;
     text-shadow: 0px 2px 2px #26262687;
+    letter-spacing: 1px;
 }
 
 .sub-head {
-    font-size: 18px;
-    letter-spacing: 0px;
+    font-size: 20px;
+    letter-spacing: 1px;
     line-height: 27px;
     margin-top: 20px;
-    padding: 0 20px;
-    font-weight: normal;
-    color: #fff;
-    text-shadow: 0px 2px 2px #26262687;
-    font-family: 'Nunito', sans-serif;
 }
 
 .banner1 {
     margin-top: 18px;
     height: 396px;
-    background-image: url(../../../img/images/banner-events.jpeg);
+    background-image: url(../../../img/images/banner-interior1.jpg);
     background-size: cover;
 }
 
 .banner2 {
     margin-top: 18px;
     height: 396px;
-    background-image: url(../../../img/images/banner-events.jpeg);
+    background-image: url(../../../img/images/banner-interior1.jpg);
     background-size: cover;
 }
 
 .banner3 {
     margin-top: 18px;
     height: 396px;
-    background-image: url(../../../img/images/banner-events.jpeg);
+    background-image: url(../../../img/images/banner-interior1.jpg);
     background-size: cover;
 }
 
 .banner4 {
     margin-top: 18px;
     height: 396px;
-    background-image: url(../../../img/images/banner-events.jpeg);
+    background-image: url(../../../img/images/banner-interior1.jpg);
     background-size: cover;
 }
 
@@ -602,13 +348,13 @@ ul.wstep li {
 }
 
 ul.wstep li.active {
-    background: #ea2639;
+    background: #26cf96;
 }
 
 .green-btn {
     padding-left: 20px;
     padding-right: 20px;
-    background: #f23042;
+    background: #26cf96;
     text-align: center;
     padding: 9px;
     color: #fff;
@@ -634,11 +380,11 @@ ul.wstep li.active {
 }
 
 .MuiTab-textColorPrimary {
-    color: #ea2639 !important;
+    color: #26cf96 !important;
 }
 
 .jss63, .jss53, .jss183, .MuiTabs-indicator {
-    background-color: #ea2639 !important;
+    background-color: #26cf96 !important;
     height: 3px !important;
 }
 
@@ -857,15 +603,18 @@ td:last-child {
 }
 
 .logo-heading{
-    display: none;
-    margin-top: -28px;
-    padding-left: 12px;
+    opacity:0;
+    margin-top: -30px;
+    padding-left: 14px;
     text-align: center;
-    font-size: 20px;
+    font-size: 22px;
     padding-right: 50px;
-    color: #000;
-    font-family: 'Nunito', sans-serif;
-    white-space: nowrap;
+    color: #424242;
+    font-family: 'Source Sans Pro', sans-serif;
+    transition: opacity .25s ease-in-out;
+   -moz-transition: opacity .25s ease-in-out;
+   -webkit-transition: opacity .25s ease-in-out;
+   white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
 }
@@ -972,7 +721,7 @@ td:last-child {
     font-size: 20px;
     padding-right: 50px;
     color: #000;
-    font-family: 'Nunito', sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
 }
 
 .scroll-arrow{
@@ -1077,7 +826,7 @@ td:last-child {
     text-align: center;
     font-size: 24px;
     line-height: 38px;
-    font-family: 'Roboto Condensed', sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
     color: #000;
     margin-top: 2px;
     padding-left: 0px;
@@ -1145,7 +894,7 @@ text-size-adjust:none;
 
 </style>
     <!-- Basic -->
-    <title>authentist - discover new year events you'll love</title>
+    <title>Stint - authentic local services</title>
 
     <!-- Define Charset -->
 
@@ -1153,8 +902,8 @@ text-size-adjust:none;
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
     <meta name="description" content="Trusted local recommendations based on community knowledge.">
-    <meta property="og:description" content="Trouble deciding what to do this new year? Authentist senses your personal preferences to recommend the best events & more">
-    <meta property="og:keywords" content="Trouble deciding what to do this new year? Aauthentist senses your personal preferences to recommend the best events & more">
+    <meta property="og:description" content="Best catering services for your party at affordable prices. We serve everything fresh & hot right infront of your home, thanks to our food trucks.">
+    <meta property="og:keywords" content="Birthday Party, Office party, Corporate events, Catering, Small Party, Caterers, Small Home Parties,  Caterers in bangalore, house parties">
     <meta name="keywords" content="Birthday Party, Office party, Corporate events, Catering, Small Party, Caterers, Small Home Parties,  Caterers in bangalore, house parties">
 
 
@@ -1249,8 +998,6 @@ text-size-adjust:none;
        #id_submit {
             width: calc(100% - 20px);
             margin-left: 10px;
-            padding-top: 4px;
-            border-radius: 8px;
        }
        #stickyHeader{
             display: none;
@@ -1967,7 +1714,7 @@ ul li{
     margin-top: 45%;
     -webkit-animation: rotation 1s infinite linear;
     animation: rotation 1s infinite linear;
-    border: 1px solid #f65a64;
+    border: 1px solid #03d39c;
     border-radius: 50%;
     border-top-color: rgba(195, 208, 228, 0.7);
     height: 50px;
@@ -2678,7 +2425,7 @@ p img.right { float: right; margin-left: 1em; }
       background-position-y: -15px;
     }
     .logo {
-        width: 104%;
+        width: 100%;
         height: 79px;
         margin: 0 auto;
         top: 0px;
@@ -2714,8 +2461,8 @@ p img.right { float: right; margin-left: 1em; }
         margin-top: -3px;
     }
     .logo .logo-img {
-        width: 140px;
-        margin-left: 40px;
+        width: 90px;
+        margin-left: 38px;
         margin-top: 20px;
     }
     .headline {
