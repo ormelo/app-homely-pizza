@@ -19,7 +19,6 @@ class MyTasks extends Component {
         setTimeout(function(){document.getElementById('iconArrow').style.opacity = '1';},500);
         this.hideNotifySection();
         this.setTimeElapsed();
-        window.tasksInterval =  setInterval(function(){this.setTimeElapsed()}.bind(this), 10000);
         scrollTo(document.body, 0, 100);
     }
     cancelStint() {
@@ -51,71 +50,13 @@ class MyTasks extends Component {
         return baseUrl;
     }
     setTimeElapsed(){
-        let elapsed = localStorage.getItem('elapsed');
-        
 
-        if(elapsed != null) {
-            elapsed = parseInt(localStorage.getItem('elapsed'),10);
-            let timeElapsed = new Date() - elapsed;
-            timeElapsed = timeElapsed / 1000;
-            timeElapsed = Math.round(timeElapsed/60);
-            console.log('timeElapsed: ', timeElapsed);
-            if(timeElapsed < 1) {//2
-               //do nothing
-            } else if(timeElapsed >= 1 && timeElapsed < 3) {//2
-                document.getElementById('tasksTable').firstElementChild.classList.add('no-blink');
-                document.getElementById('tasksTable').children[0].classList.add('no-blink');
-                document.getElementById('tasksTable').children[1].classList.add('blink-text');
-                document.getElementById('iconStatus1').src = '../img/images/ic_tick.png';
-                document.getElementById('iconStatus1').style.width = '30px';
-                document.getElementById('iconStatus2').src = '../img/images/ic_started.png';
-            } else if(timeElapsed >= 3 && timeElapsed < 4) {//3
-                document.getElementById('tasksTable').firstElementChild.classList.add('no-blink');
-                document.getElementById('tasksTable').children[0].classList.add('no-blink');
-                document.getElementById('tasksTable').children[1].classList.add('no-blink');
-                document.getElementById('tasksTable').children[2].classList.add('blink-text');
-                document.getElementById('iconStatus1').src = '../img/images/ic_tick.png';
-                document.getElementById('iconStatus1').style.width = '30px';
-                document.getElementById('iconStatus2').src = '../img/images/ic_tick.png';
-                document.getElementById('iconStatus2').style.width = '30px';
-                document.getElementById('iconStatus3').src = '../img/images/ic_started.png';
-            } else {//4 expand 4th row
-                console.log('in else');
-                document.getElementById('tasksTable').firstElementChild.classList.add('no-blink');
-                document.getElementById('tasksTable').children[0].classList.add('no-blink');
-                document.getElementById('tasksTable').children[1].classList.add('no-blink');
-                document.getElementById('tasksTable').children[2].classList.add('no-blink');
-                document.getElementById('iconStatus1').src = '../img/images/ic_tick.png';
-                document.getElementById('iconStatus1').style.width = '30px';
-                document.getElementById('iconStatus2').src = '../img/images/ic_tick.png';
-                document.getElementById('iconStatus2').style.width = '30px';
-                document.getElementById('iconStatus3').src = '../img/images/ic_tick.png';
-                document.getElementById('iconStatus3').style.width = '30px';
-                document.getElementById('iconStatus4').src = '../img/images/ic_started.png';
-                document.getElementById('tasksTable').children[2].classList.add('no-blink');
-
-                //clear interval
-                clearInterval(window.tasksInterval);
                 //show shortlists button
 
                 this.getShortlistsUrl();
                 if(!this.state.showShortlistsBtn) {
                     this.setState({showShortlistsBtn: true});
                 }
-                /*if(document.getElementById('viewShortlists') == null) {
-                    var anc = document.createElement('a');
-                    anc.href=this.getShortlistsUrl();
-
-                    var btn = document.createElement('div');
-                    btn.id = 'viewShortlists';
-                    btn.classList.add('green-btn');
-                    btn.classList.add('left-task-btn');
-                    btn.innerHTML = 'View shortlists';
-                    anc.appendChild(btn);
-                    document.getElementById('tasksTable').children[2].children[1].appendChild(anc);
-                }*/
-            }
-        }
     }
     hideNotifySection() {
         if(localStorage.getItem('subsrcibed') != null) {
