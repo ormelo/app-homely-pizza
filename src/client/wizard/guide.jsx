@@ -186,26 +186,27 @@ class Guide extends React.Component {
             return (<div>
 
             <div className="logo" id="logoWrapper">
-                <img id="logo" className="logo-img" src="../img/images/logo.png" />
+                <img id="logo" className="logo-img" src="../img/images/logohp3.png" />
                 <div id="logoHeading" className="logo-heading"></div>
                 <Link to="/mytasks"><div id="myTasksBtn" className="green-btn right-btn"><img className="icon-btn" src="../img/images/ic_user.png" /><span>My Services</span></div></Link>
             </div>
             <div><i className="loading"></i></div>
 
 
-                <div className={`banner${Math.floor(Math.random() * 4) + 1}`}/>
+                <div className="banner2"/>
                 <div className="main">
                     <div>
 
-                        <div className="header">Discover services authentic to you<br/><div className="sub-head">Stint makes booking personalized services easy & affordable</div></div>
+                        <div className="header">Craving a pizza straight out of the pan?<br/></div>
+                        <div className="pizza-main-img"><img src="../img/images/fresh_pizz01.png" className="pizza-img" /></div>
                         <img className="curve" src="./img/images/curve.png"/>
                         <div className="scroll-arrow">
                             <span/><span/><span/>
                         </div>
                     </div>
-                    <div className="overview">What do you want to get done?</div>
+                    <div className="overview">What if you could make it in your own kitchen, instantly?</div>
 
-                    <div className="section">
+                    <div className="section" style={{visibility:'hidden'}}>
                         <div className="post-heading icon-container">
                             <Link to="/home"><img className="ic" src="./img/images/ic_homei.png" style={{width: '72px'}} /></Link>
                             <Link to="/home"><img className="ic" src="./img/images/ic_eventsi.png" style={{width: '72px'}} /></Link>
