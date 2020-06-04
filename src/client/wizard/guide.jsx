@@ -226,12 +226,11 @@ class Guide extends React.Component {
                               <div className="c"></div>
                             </div>
                         </div>
-                        <img className="curve" src="./img/images/curve.png"/>
                         <div className="scroll-arrow">
                             <span/><span/><span/>
                         </div>
                     </div>
-                    <div className="overview">What if you could make it in your own kitchen, instantly?</div>
+                    <div className="overview">What if you could bake it instantly in your own kitchen?</div>
 
                     <div className="section" style={{visibility:'hidden'}}>
                         <div className="post-heading icon-container">

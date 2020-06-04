@@ -20,8 +20,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="421">
-              <caret line="639" column="17" selection-start-line="639" selection-start-column="17" selection-end-line="639" selection-end-column="17" />
+            <state relative-caret-position="387">
+              <caret line="637" column="12" selection-start-line="637" selection-start-column="12" selection-end-line="637" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -56,8 +56,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/client/wizard/guide.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3281">
-              <caret line="193" lean-forward="true" selection-start-line="193" selection-end-line="193" />
+            <state relative-caret-position="309">
+              <caret line="76" column="42" selection-start-line="76" selection-start-column="42" selection-end-line="76" selection-end-column="42" />
             </state>
           </provider>
         </entry>
@@ -106,9 +106,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>.sub-h</find>
-      <find>.sub-he</find>
-      <find>how we k</find>
       <find>if it</find>
       <find>if its</find>
       <find>matches</find>
@@ -118,13 +115,11 @@
       <find>setTimeEl</find>
       <find>setTimeElapsed</find>
       <find>banner</find>
-      <find>.logo</find>
       <find>logo-img</find>
       <find>logo</find>
       <find>.logo .logo-img</find>
       <find>.banner2</find>
       <find>.main</find>
-      <find>.header</find>
       <find>media</find>
       <find>.overview</find>
       <find>logohhp</find>
@@ -136,6 +131,11 @@
       <find>.pizza-im</find>
       <find>.smoke-m</find>
       <find>craving</find>
+      <find>what if</find>
+      <find>what id</find>
+      <find>.logo</find>
+      <find>curve</find>
+      <find>.header</find>
     </findStrings>
     <replaceStrings>
       <replace>./img/anim1/</replace>
@@ -609,15 +609,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/client/wizard/guide.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3281">
-          <caret line="193" lean-forward="true" selection-start-line="193" selection-end-line="193" />
+        <state relative-caret-position="309">
+          <caret line="76" column="42" selection-start-line="76" selection-start-column="42" selection-end-line="76" selection-end-column="42" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="421">
-          <caret line="639" column="17" selection-start-line="639" selection-start-column="17" selection-end-line="639" selection-end-column="17" />
+        <state relative-caret-position="387">
+          <caret line="637" column="12" selection-start-line="637" selection-start-column="12" selection-end-line="637" selection-end-column="12" />
         </state>
       </provider>
     </entry>
