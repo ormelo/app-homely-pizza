@@ -199,6 +199,33 @@ class Guide extends React.Component {
 
                         <div className="header">Craving a pizza straight out of the pan?<br/></div>
                         <div className="pizza-main-img"><img src="../img/images/fresh_pizz01.png" className="pizza-img" /></div>
+                        <div className="smoke-main">
+                            <svg version='1.1' xmlns='http://www.w3.org/2000/svg'>
+                              <filter id='blur'>
+                                <fegaussianblur stddeviation='10'></fegaussianblur>
+                              </filter>
+                            </svg>
+                            <div className="h">
+                              <div className="c"></div>
+                              <div className="c"></div>
+                              <div className="c"></div>
+                              <div className="c"></div>
+                              <div className="c"></div>
+                              <div className="c"></div>
+                              <div className="c"></div>
+                              <div className="c"></div>
+                              <div className="c"></div>
+                              <div className="c"></div>
+                              <div className="c"></div>
+                              <div className="c"></div>
+                              <div className="c"></div>
+                              <div className="c"></div>
+                              <div className="c"></div>
+                              <div className="c"></div>
+                              <div className="c"></div>
+                              <div className="c"></div>
+                            </div>
+                        </div>
                         <img className="curve" src="./img/images/curve.png"/>
                         <div className="scroll-arrow">
                             <span/><span/><span/>
