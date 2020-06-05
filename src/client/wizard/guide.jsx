@@ -230,45 +230,36 @@ class Guide extends React.Component {
                             <span/><span/><span/>
                         </div>
                     </div>
-                    <div className="overview">What if you could bake it instantly in your own kitchen?</div>
-
-                    <div className="section" style={{visibility:'hidden'}}>
-                        <div className="post-heading icon-container">
-                            <Link to="/home"><img className="ic" src="./img/images/ic_homei.png" style={{width: '72px'}} /></Link>
-                            <Link to="/home"><img className="ic" src="./img/images/ic_eventsi.png" style={{width: '72px'}} /></Link>
-                            <img className="ic" src="./img/images/ic_local_enquiriesi.png" style={{width: '72px'}} />
-                        </div>
-                    </div>
-                    <br/>
-                    <hr className="line"/>
+                    <div className="overview">What if you could bake it instantly at home?</div>
+<br/><br/>
                                         <div className="section">
                                             <div className="post-heading">
-                                                <div className="title" style={{paddingLeft:'12px', paddingRight:'12px'}}>Why Stint?</div>
-                                                <div className="info" style={{marginTop: '10px'}}>
-                                                    <div className="para" style={{marginTop: '0px'}}>
-                                                       <div className="main-desc">
-                                                       How often have we availed a service in Bangalore &amp; realized, well that’s not what we expected.
-                                                       <br/><br/>
-                                                       Stint helps you shortlist & book authentic services to suit your exact needs.
 
-                                                        </div><br/>
+                                                <div className="info" style={{marginTop: '10px'}}>
+                                                    <div className="para" style={{marginTop: '-80px'}}>
+                                                       <div className="main-desc">
+                                                       Homely delivers freshly prepped pizza kits on demand, for instant cooking.
+
+                                                        </div>
                                                     </div>
 
-                                                    <hr class="line"/>
+
                                                 </div>
                                             </div>
                                         </div>
                                         <div className="section no-padding">
                                             <div className="post-heading">
-                                                <div className="title">How it works</div>
-                                                <div className="info" style={{marginTop: '12px'}}>
-                                                    <br/><br/>
-                                                    <div className="step1"/>
+                                                <div className="info" style={{marginTop: '-12px'}}>
+                                                    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+                                                    <div className="logo" id="logoWrapper"></div>
+                                                    <img src="https://images.unsplash.com/photo-1568765429356-858c2b5182a3?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=2255&amp;q=80" style={{marginTop: '20px'}}/>
+                                                    <img src="./img/images/pizzabox.png"  className="pizza-box"/>
+                                                    <img src="./img/images/confetti.png"  className="confetti"/>
                                                     <img src="./img/images/ic_num_1.png" className="ic-num"/>
                                                     <img className="curve small" src="./img/images/curve.png"/>
-                                                    <div className="para" style={{marginTop: '14px'}}>
-                                                       <div className="title">Stint learns your needs</div>
-                                                       <div className="desc" style={{marginTop: '10px'}}>Answer quick questions to share your specific needs</div>
+                                                    <div className="para section leaves">
+
+                                                       <div className="main-desc" style={{marginTop: '10px',color:'#000',paddingTop:'150px'}}>With zero preservatives, all the ingredients are freshly prepped just on receiving your order.</div>
                                                     </div>
 
                                                 </div>

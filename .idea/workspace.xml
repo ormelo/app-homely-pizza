@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2100fea9-fa34-466f-9140-289133e88515" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/main.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/main.min.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/guide.bundle.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/guide.bundle.min.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/client/wizard/guide.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/wizard/guide.jsx" afterDir="false" />
@@ -20,8 +22,26 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="319">
-              <caret line="2827" column="17" selection-start-line="2827" selection-start-column="17" selection-end-line="2827" selection-end-column="17" />
+            <state relative-caret-position="710">
+              <caret line="1050" column="34" selection-start-line="1050" selection-start-column="34" selection-end-line="1050" selection-end-column="34" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/assets/main.min.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="1863" selection-start-column="1863" selection-end-column="1863" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/client/wizard/guide.jsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="205">
+              <caret line="238" column="96" selection-start-line="238" selection-start-column="96" selection-end-line="238" selection-end-column="96" />
             </state>
           </provider>
         </entry>
@@ -49,15 +69,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="3842">
               <caret line="226" column="1" selection-start-line="226" selection-start-column="1" selection-end-line="226" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/client/wizard/guide.jsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="241">
-              <caret line="184" column="69" selection-start-line="184" selection-start-column="69" selection-end-line="184" selection-end-column="69" />
             </state>
           </provider>
         </entry>
@@ -106,17 +117,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>if it</find>
-      <find>if its</find>
-      <find>matches</find>
-      <find>section-one .top-</find>
-      <find>Khula</find>
-      <find>roboto</find>
-      <find>setTimeEl</find>
-      <find>setTimeElapsed</find>
-      <find>banner</find>
-      <find>logo-img</find>
-      <find>logo</find>
       <find>.banner2</find>
       <find>.main</find>
       <find>media</find>
@@ -136,6 +136,17 @@
       <find>curve</find>
       <find>.header</find>
       <find>.logo .logo-img</find>
+      <find>&lt;title&gt;</find>
+      <find>what</find>
+      <find>.main-de</find>
+      <find>.ic-nu</find>
+      <find>main-de</find>
+      <find>homely del</find>
+      <find>para s</find>
+      <find>.section</find>
+      <find>leaves</find>
+      <find>illus-delivery</find>
+      <find>logo</find>
     </findStrings>
     <replaceStrings>
       <replace>./img/anim1/</replace>
@@ -162,7 +173,6 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/data-source/mockData.js" />
-        <option value="$PROJECT_DIR$/public/assets/main.min.css" />
         <option value="$PROJECT_DIR$/public/search.html" />
         <option value="$PROJECT_DIR$/public/guide.html" />
         <option value="$PROJECT_DIR$/webpack.config.js" />
@@ -193,14 +203,15 @@
         <option value="$PROJECT_DIR$/public/home.html" />
         <option value="$PROJECT_DIR$/src/client/wizard/discover.jsx" />
         <option value="$PROJECT_DIR$/src/client/wizard/mytasks.jsx" />
+        <option value="$PROJECT_DIR$/public/assets/main.min.css" />
         <option value="$PROJECT_DIR$/src/client/wizard/guide.jsx" />
         <option value="$PROJECT_DIR$/public/index.html" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="y" value="24" />
-    <option name="width" value="1867" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="y" value="23" />
+    <option name="width" value="1870" />
     <option name="height" value="1104" />
   </component>
   <component name="ProjectView">
@@ -208,6 +219,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -224,6 +236,19 @@
             <path>
               <item name="epigram-web" type="b2602c69:ProjectViewProjectNode" />
               <item name="epigram-web" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="img" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="epigram-web" type="b2602c69:ProjectViewProjectNode" />
+              <item name="epigram-web" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="img" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="epigram-web" type="b2602c69:ProjectViewProjectNode" />
+              <item name="epigram-web" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -231,13 +256,6 @@
               <item name="epigram-web" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="client" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="epigram-web" type="b2602c69:ProjectViewProjectNode" />
-              <item name="epigram-web" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="client" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="epigram-web" type="b2602c69:ProjectViewProjectNode" />
@@ -277,7 +295,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -326,10 +343,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="24" width="1867" height="1104" extended-state="0" />
+    <frame x="0" y="23" width="1920" height="1104" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19945206" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19808307" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
@@ -373,13 +390,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/assets/responsive.min.css">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/main.min.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="1422" selection-start-column="1422" selection-end-column="1422" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app.json">
       <provider selected="true" editor-type-id="text-editor" />
@@ -554,6 +564,13 @@
     <entry file="file://$PROJECT_DIR$/public/img/images/h.svg" />
     <entry file="file://$PROJECT_DIR$/src/client/wizard/discover.jsx" />
     <entry file="file://$PROJECT_DIR$/src/client/wizard/temp" />
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="29" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/client/wizard/mytasks.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1309">
@@ -600,24 +617,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
+    <entry file="file://$PROJECT_DIR$/public/assets/main.min.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="29" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="29" />
+        <state>
+          <caret column="1863" selection-start-column="1863" selection-end-column="1863" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/client/wizard/guide.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="241">
-          <caret line="184" column="69" selection-start-line="184" selection-start-column="69" selection-end-line="184" selection-end-column="69" />
+        <state relative-caret-position="205">
+          <caret line="238" column="96" selection-start-line="238" selection-start-column="96" selection-end-line="238" selection-end-column="96" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="319">
-          <caret line="2827" column="17" selection-start-line="2827" selection-start-column="17" selection-end-line="2827" selection-end-column="17" />
+        <state relative-caret-position="710">
+          <caret line="1050" column="34" selection-start-line="1050" selection-start-column="34" selection-end-line="1050" selection-end-column="34" />
         </state>
       </provider>
     </entry>
