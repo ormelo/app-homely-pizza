@@ -455,13 +455,13 @@ class Guide extends React.Component {
                                       <div className="overview bg-text" style={{marginTop: '25px', display: 'inline-block'}} id="overviewBgMain">
                                            What's more, your pizza is pre-assembled so it's ready for instant cooking!
                                       </div>
-                                      <div class="images-wrapper" style={{marginTop: '500px'}}>
-                                          <img class="section_3_06" src="https://www.dropbox.com/s/cggf61ebt5glkdm/section_3_06.webp?raw=1" />
-                                          <img class="section_3_05" src="https://www.dropbox.com/s/y9v16yvcpcogt5h/section_3_05.webp?raw=1" />
-                                          <img class="section_3_04" src="https://www.dropbox.com/s/epb4iwra19fc7np/section_3_04.webp?raw=1" />
-                                          <img class="section_3_03" src="https://www.dropbox.com/s/bcuykp1rf8c672f/section_3_03.webp?raw=1" />
-                                          <img class="section_3_02" src="https://www.dropbox.com/s/rhkmo56qrrjsnwn/section_3_02.webp?raw=1" />
-                                          <img class="section_3_01" src="https://www.dropbox.com/s/7f6qkl52a6jiy08/section_3_01.webp?raw=1" style={{width: '40%'}} />
+                                      <div class="images-wrapper" style={{marginTop: '480px'}}>
+                                          <img class="section_3_06" src="./img/images/section_3_06.webp?raw=1" />
+                                          <img class="section_3_05" src="./img/images/section_3_05.webp?raw=1" />
+                                          <img class="section_3_04" src="./img/images/section_3_04.webp?raw=1" />
+                                          <img class="section_3_03" src="./img/images/section_3_03.webp?raw=1" />
+                                          <img class="section_3_02" src="./img/images/section_3_02.webp?raw=1" />
+                                          <img class="section_3_01" src="./img/images/section_3_01.webp?raw=1" style={{width: '40%'}} />
                                       </div>
                                   </section>
                          </div>
