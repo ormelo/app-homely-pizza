@@ -408,36 +408,36 @@ class Guide extends React.Component {
                               <section className="second-section">
                                                                                   <div className="images-wrapper bottom">
                                                                                       <div className="image-container">
-                                                                                          <img className="section_2_06" src="https://www.dropbox.com/s/kb9fxs2l7y7obvp/section_2_06.webp?raw=1" />
+                                                                                          <img className="section_2_06" src="./img/images/section_2_06.png?raw=1" />
                                                                                       </div>
                                                                                       <div className="image-container">
-                                                                                          <img className="section_2_07" src="https://www.dropbox.com/s/ebywdet3cjr0670/section_2_07.webp?raw=1" />
+                                                                                          <img className="section_2_07" src="./img/images/section_2_07.png?raw=1" />
                                                                                       </div>
                                                                                       <div className="image-container">
-                                                                                          <img className="section_2_08" src="https://www.dropbox.com/s/slm1nqwrsuv34x8/section_2_08.webp?raw=1" />
+                                                                                          <img className="section_2_08" src="./img/images/section_2_08.png?raw=1" />
                                                                                       </div>
                                                                                       <div className="image-container">
-                                                                                          <img className="section_2_09" src="https://www.dropbox.com/s/kywqj06sz972r7g/section_2_09.webp?raw=1" />
+                                                                                          <img className="section_2_09" src="./img/images/section_2_09.png?raw=1" />
                                                                                       </div>
                                                                                       <div className="image-container">
-                                                                                          <img className="section_2_10" src="https://www.dropbox.com/s/0msebcd4otsahqe/section_2_10.webp?raw=1" />
+                                                                                          <img className="section_2_10" src="./img/images/section_2_10.png?raw=1" />
                                                                                       </div>
                                                                                   </div>
                                                                                   <div className="images-wrapper top">
                                                                                       <div className="image-container">
-                                                                                          <img className="section_2_01"           src="https://www.dropbox.com/s/fbdaroubtk7ctb2/section_2_01.webp?raw=1" />
+                                                                                          <img className="section_2_01" src="./img/images/section_2_01.png?raw=1" />
                                                                                       </div>
                                                                                       <div className="image-container">
-                                                                                          <img className="section_2_02" src="https://www.dropbox.com/s/4724yf637hh0z1t/section_2_02.webp?raw=1" />
+                                                                                          <img className="section_2_02" src="./img/images/section_2_02.png?raw=1" />
                                                                                       </div>
                                                                                       <div className="image-container">
-                                                                                          <img className="section_2_03" src="https://www.dropbox.com/s/5iquebsptt1gf4m/section_2_03.webp?raw=1" />
+                                                                                          <img className="section_2_03" src="./img/images/section_2_03.png?raw=1" />
                                                                                       </div>
                                                                                       <div className="image-container">
-                                                                                          <img className="section_2_04" src="https://www.dropbox.com/s/49ebf38ycede0yb/section_2_04.webp?raw=1" />
+                                                                                          <img className="section_2_04" src="./img/images/section_2_04.png?raw=1" />
                                                                                       </div>
                                                                                       <div className="image-container">
-                                                                                          <img className="section_2_05" src="https://www.dropbox.com/s/7th16qwis8v1vnq/section_2_05.webp?raw=1" />
+                                                                                          <img className="section_2_05" src="./img/images/section_2_05.png?raw=1" />
                                                                                       </div>
                                                                                   </div>
                                                                               </section>
