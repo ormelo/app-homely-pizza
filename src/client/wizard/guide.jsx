@@ -321,6 +321,11 @@ class Guide extends React.Component {
             if(window.scrollY >= 500 & window.scrollY <= 700) {
                 document.querySelector('.confetti').style.opacity = '1';
             }
+            if(window.scrollY >= 1837) {
+                document.querySelector('.second-section').style.opacity = '0';
+            } else {
+                document.querySelector('.second-section').style.opacity = '1';
+            }
         }
     }
 
@@ -443,7 +448,7 @@ class Guide extends React.Component {
                                                                               </section>
                               <section class="third-section">
                                       <div className="overview bg-text" style={{marginTop: '25px', display: 'inline-block'}} id="overviewBgMain">
-                                           What's more, your pizza is pre-assembled so it's ready for instant cooking.
+                                           What's more, your pizza is pre-assembled so it's ready for instant cooking!
                                       </div>
                                       <div class="images-wrapper" style={{marginTop: '400px'}}>
                                           <img class="section_3_06" src="https://www.dropbox.com/s/cggf61ebt5glkdm/section_3_06.webp?raw=1" />

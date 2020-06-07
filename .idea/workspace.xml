@@ -17,11 +17,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="302">
-              <caret line="2979" column="22" selection-start-line="2979" selection-start-column="22" selection-end-line="2979" selection-end-column="22" />
+            <state relative-caret-position="421">
+              <caret line="1382" column="35" selection-start-line="1382" selection-start-column="35" selection-end-line="1382" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -35,11 +35,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/client/wizard/guide.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="522">
-              <caret line="447" column="88" selection-start-line="447" selection-start-column="88" selection-end-line="447" selection-end-column="88" />
+            <state relative-caret-position="666">
+              <caret line="326" column="76" selection-start-line="326" selection-start-column="76" selection-end-line="326" selection-end-column="76" />
             </state>
           </provider>
         </entry>
@@ -115,7 +115,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>.ic-nu</find>
       <find>main-de</find>
       <find>homely del</find>
       <find>para s</find>
@@ -139,12 +138,13 @@
       <find>mg/image</find>
       <find>freshly prep</find>
       <find>&lt;til</find>
-      <find>handleScroll</find>
       <find>second-section</find>
       <find>.second-section .images-wrapper</find>
       <find>third-section</find>
       <find>draw atten</find>
       <find>3000</find>
+      <find>handleScroll</find>
+      <find>transi</find>
     </findStrings>
     <replaceStrings>
       <replace>./img/anim1/</replace>
@@ -203,8 +203,8 @@
         <option value="$PROJECT_DIR$/src/client/wizard/discover.jsx" />
         <option value="$PROJECT_DIR$/src/client/wizard/mytasks.jsx" />
         <option value="$PROJECT_DIR$/public/assets/main.min.css" />
-        <option value="$PROJECT_DIR$/public/index.html" />
         <option value="$PROJECT_DIR$/src/client/wizard/guide.jsx" />
+        <option value="$PROJECT_DIR$/public/index.html" />
       </list>
     </option>
   </component>
@@ -617,17 +617,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/index.html">
+    <entry file="file://$PROJECT_DIR$/src/client/wizard/guide.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="302">
-          <caret line="2979" column="22" selection-start-line="2979" selection-start-column="22" selection-end-line="2979" selection-end-column="22" />
+        <state relative-caret-position="666">
+          <caret line="326" column="76" selection-start-line="326" selection-start-column="76" selection-end-line="326" selection-end-column="76" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/client/wizard/guide.jsx">
+    <entry file="file://$PROJECT_DIR$/public/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="522">
-          <caret line="447" column="88" selection-start-line="447" selection-start-column="88" selection-end-line="447" selection-end-column="88" />
+        <state relative-caret-position="421">
+          <caret line="1382" column="35" selection-start-line="1382" selection-start-column="35" selection-end-line="1382" selection-end-column="35" />
         </state>
       </provider>
     </entry>
