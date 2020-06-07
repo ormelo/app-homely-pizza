@@ -480,7 +480,7 @@ class Guide extends React.Component {
 
                              <section class="forth-section" style={{height: '100px'}}>
                                                               <div className="overview bg-text" style={{marginTop: '-380px', display: 'inline-block'}} id="overviewBgMain">
-                                                                 Choose from 15+ mouth-watering varieties & customize your own!
+                                                                 Choose from 15+ mouth-watering varieties or customize your own!
                                                               </div>
                                 <div class="btn">Order Now&nbsp;→
                                   <div class="btn2"></div>
