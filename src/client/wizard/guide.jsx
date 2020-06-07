@@ -461,7 +461,27 @@ class Guide extends React.Component {
                                   </section>
                          </div>
 
+                         <section class="forth-section">
+                                 <div className="overview bg-text" style={{marginTop: '-20px', display: 'inline-block'}} id="overviewBgMain">
+                                    Simply bake it in an oven or place in a cooker in low flame without weight. Your pizza's usually ready in 12 mins!
+                                 </div>
+                                 <div class="images-wrapper">
+                                     <img class="section_4_01" src="./img/images/section_4_01.png?raw=1" />
+                                     <img class="section_4_02" src="./img/images/section_4_02.png?raw=1" />
+                                     <img class="section_4_03" src="./img/images/section_4_03.png?raw=1" />
+                                     <img class="section_4_04" src="./img/images/section_4_04.png?raw=1" />
+                                 </div>
+                             </section>
 
+                             <section class="forth-section" style={{height: '100px'}}>
+                                                              <div className="overview bg-text" style={{marginTop: '-380px', display: 'inline-block'}} id="overviewBgMain">
+                                                                 Choose from 15+ mouth-watering varieties & customize your own pizza
+                                                              </div>
+                                <div class="btn">Start ordering
+                                  <div class="btn2"></div>
+                                </div>
+                                                          </section>
+                             <div className="desc" style={{textAlign: 'center',fontSize: '14px'}}>Copyright © 2020 homely.pizza</div>
 
                         </div>
                     </div>
@@ -469,12 +489,7 @@ class Guide extends React.Component {
 
                 </div>
 
-
-
-                                      <br/>
-
-
-                <div className="desc" style={{textAlign: 'center',fontSize: '14px'}}>Copyright © 2020 homely.pizza</div><br/>
+                <br/>
                 </div>
 
 

@@ -2492,7 +2492,42 @@ body {
   background-size: contain;
   background-position-y: 0px;
   font-family: 'Source Sans Pro', sans-serif;
+  height: 5500px;
+
 }
+body .btn,
+body .btn2 {
+    width: 300px;
+    height: 59px;
+    font-size: 19px;
+    text-align: center;
+    color: rgba(255,255,255,0.9);
+    border-radius: 10px;
+    background: linear-gradient(-45deg, #ffaea5, #eca79f, #ecbc72, rgba(255,27,0,0.98));
+    background-size: 600%;
+    -webkit-animation: anime 16s linear infinite;
+    animation: anime 16s linear infinite;
+    font-weight: bold;
+    font-family: Quicksand;
+    letter-spacing: 1px;
+    padding: 15px;
+    -webkit-box-shadow: 0px 0px 46px 0px rgba(0,0,0,0.27);
+    -moz-box-shadow: 0px 0px 46px 0px rgba(0,0,0,0.27);
+    box-shadow: 0px 0px 46px 0px rgba(0,0,0,0.27);
+}
+.btn:hover {
+    background: #fa5932;
+    color: #fff;
+}
+body .btn2 {
+  position: absolute;
+  margin-top: -70px;
+  z-index: -1;
+  -webkit-filter: blur(30px);
+          filter: blur(30px);
+  opacity: 0.8;
+}
+
 #tabs {
 background: transparent;z-index: 1;
 }
@@ -2978,7 +3013,7 @@ p img.right { float: right; margin-left: 1em; }
     }
     .logo {
         width: 100%;
-        min-height: 4500px;
+        min-height: 5500px;
         margin: 0 auto;
         top: 0px;
         position: absolute;
