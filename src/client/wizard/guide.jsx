@@ -390,7 +390,7 @@ class Guide extends React.Component {
                         </div>
                         <div className="info" style={{marginTop: '10px',minHeight:'300px'}}>
                             <div className="overview bg-text" style={{marginTop: '130px'}} id="overviewBgMain">
-                                Freshly prepped pizza ingredients in a box, delivered for instant cooking
+                                Freshly prepped pizza ingredients in a box. Home delivered for instant cooking!
                             </div>
                         </div>
                     </div>
@@ -475,13 +475,13 @@ class Guide extends React.Component {
 
                              <section class="forth-section" style={{height: '100px'}}>
                                                               <div className="overview bg-text" style={{marginTop: '-380px', display: 'inline-block'}} id="overviewBgMain">
-                                                                 Choose from 15+ mouth-watering varieties & customize your own pizza
+                                                                 Choose from 15+ mouth-watering varieties & customize your own pizza!
                                                               </div>
-                                <div class="btn">Start ordering
+                                <div class="btn">Order Now&nbsp;→
                                   <div class="btn2"></div>
                                 </div>
                                                           </section>
-                             <div className="desc" style={{textAlign: 'center',fontSize: '14px'}}>Copyright © 2020 homely.pizza</div>
+                             <div className="desc" style={{textAlign: 'center',fontSize: '14px'}}>Copyright © 2020 <b style={{color:'#000'}}>homely.pizza</b></div>
 
                         </div>
                     </div>
