@@ -313,6 +313,7 @@ class Guide extends React.Component {
             document.querySelector('#overviewMain').innerHTML = 'What if you could bake it instantly at home?'
             document.querySelector('#overviewMain').classList.remove('line-typed');
             document.querySelector('#overviewMain').classList.remove('anim-typewriter');
+            document.querySelector('.confetti').style.opacity = '0';
         } else {
             document.querySelector('.scroll-arrow').style.display = 'none';
             document.querySelector('#overviewBgMain').style.display = 'inline-block';
@@ -399,7 +400,7 @@ class Guide extends React.Component {
                         </div>
                     </div>
                 </div>
-                <div className="section no-padding">
+                <div className="section no-padding" style={{marginTop: '-70px'}}>
                     <div className="post-heading">
                         <div className="info" style={{marginTop: '-12px'}}>
                             <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
@@ -410,7 +411,7 @@ class Guide extends React.Component {
                             <div className="para section leaves">
                          </div>
 
-                         <div className="info" style={{marginTop: '10px',minHeight:'300px'}}>
+                         <div className="info" style={{marginTop: '40px',minHeight:'300px'}}>
                              <div className="overview bg-text" style={{marginTop: '415px', display: 'inline-block'}} id="overviewBgMain">
                                  With zero preservatives, all the ingredients are freshly prepped just on receiving your order
                              </div>
