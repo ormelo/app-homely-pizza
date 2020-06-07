@@ -189,7 +189,7 @@ class Guide extends React.Component {
                             triggerElement: '.second-section',
                             duration: '100%',
                             triggerHook: 0,
-                            offset: '100'
+                            offset: '10'
                         })
                             .setTween(t2)
                             .setPin('.second-section')
