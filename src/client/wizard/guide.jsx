@@ -311,6 +311,8 @@ class Guide extends React.Component {
             document.querySelector('.scroll-arrow').style.display = 'inline';
             document.querySelector('#overviewMain').style.fontSize = '22px';
             document.querySelector('#overviewMain').innerHTML = 'What if you could bake it instantly at home?'
+            document.querySelector('#overviewMain').classList.remove('line-typed');
+            document.querySelector('#overviewMain').classList.remove('anim-typewriter');
         } else {
             document.querySelector('.scroll-arrow').style.display = 'none';
             document.querySelector('#overviewBgMain').style.display = 'inline-block';
@@ -386,13 +388,13 @@ class Guide extends React.Component {
                     <div className="post-heading">
 
                         <div className="info" style={{marginTop: '10px'}}>
-                            <div className="overview" style={{marginTop: '30px', padding:'0px'}} id="overviewMain">
+                            <div className="overview" style={{marginTop: '30px'}} id="overviewMain">
                                 What if you could bake it instantly at home?
                             </div>
                         </div>
                         <div className="info" style={{marginTop: '10px',minHeight:'300px'}}>
                             <div className="overview bg-text" style={{marginTop: '130px'}} id="overviewBgMain">
-                                Freshly prepped pizza ingredients in a box. Home delivered for instant cooking!
+                                Freshly prepped pizza ingredients in a box, delivered for instant cooking!
                             </div>
                         </div>
                     </div>
@@ -477,7 +479,7 @@ class Guide extends React.Component {
 
                              <section class="forth-section" style={{height: '100px'}}>
                                                               <div className="overview bg-text" style={{marginTop: '-380px', display: 'inline-block'}} id="overviewBgMain">
-                                                                 Choose from 15+ mouth-watering varieties & customize your own pizza!
+                                                                 Choose from 15+ mouth-watering varieties & customize your own!
                                                               </div>
                                 <div class="btn">Order Now&nbsp;→
                                   <div class="btn2"></div>
