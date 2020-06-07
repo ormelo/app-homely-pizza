@@ -263,6 +263,12 @@ class Guide extends React.Component {
                             <div className="para section leaves">
                          </div>
 
+                         <div className="info" style={{marginTop: '10px',minHeight:'300px'}}>
+                             <div className="overview bg-text" style={{marginTop: '415px', display: 'inline-block'}} id="overviewBgMain">
+                                 With zero preservatives, all the ingredients are freshly prepped just on receiving your order.
+                             </div>
+                         </div>
+
                         </div>
                     </div>
                 </div>
