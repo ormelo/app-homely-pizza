@@ -15,11 +15,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="438">
-              <caret line="1036" column="26" selection-start-line="1036" selection-start-column="26" selection-end-line="1036" selection-end-column="26" />
+            <state relative-caret-position="302">
+              <caret line="1309" column="46" selection-start-line="1309" selection-start-column="46" selection-end-line="1309" selection-end-column="46" />
             </state>
           </provider>
         </entry>
@@ -33,11 +33,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/client/wizard/guide.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="445">
-              <caret line="267" column="126" lean-forward="true" selection-start-line="267" selection-start-column="126" selection-end-line="267" selection-end-column="126" />
+            <state relative-caret-position="673">
+              <caret line="280" column="114" selection-start-line="280" selection-start-column="114" selection-end-line="280" selection-end-column="114" />
             </state>
           </provider>
         </entry>
@@ -614,17 +614,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/index.html">
+    <entry file="file://$PROJECT_DIR$/src/client/wizard/guide.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="438">
-          <caret line="1036" column="26" selection-start-line="1036" selection-start-column="26" selection-end-line="1036" selection-end-column="26" />
+        <state relative-caret-position="673">
+          <caret line="280" column="114" selection-start-line="280" selection-start-column="114" selection-end-line="280" selection-end-column="114" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/client/wizard/guide.jsx">
+    <entry file="file://$PROJECT_DIR$/public/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="445">
-          <caret line="267" column="126" lean-forward="true" selection-start-line="267" selection-start-column="126" selection-end-line="267" selection-end-column="126" />
+        <state relative-caret-position="302">
+          <caret line="1309" column="46" selection-start-line="1309" selection-start-column="46" selection-end-line="1309" selection-end-column="46" />
         </state>
       </provider>
     </entry>

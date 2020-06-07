@@ -272,41 +272,13 @@ class Guide extends React.Component {
                         </div>
                     </div>
                 </div>
-                <div className="section no-padding" style={{marginTop: '40px'}}>
-                     <div className="post-heading">
-                        <div className="info">
-                            <div className="step2"/>
-                                <img src="./img/images/ic_num_2.png" className="ic-num"/>
-                                <img className="curve small" src="./img/images/curve.png" style={{top: '180px'}}/>
-                                <div className="para" style={{marginTop: '14px'}}>
-                                    <div className="title"></div>
-                                   <div className="title">Screening & shortlisting</div>
-                                   <div className="desc" style={{marginTop: '10px'}}>Stint shortlists authentic service providers & checks with you to see if they fit your needs & budget</div>
-                            </div>
-                        </div>
-                     </div>
-                 </div>
-                 <div className="section no-padding" style={{marginTop: '40px'}}>
-                      <div className="post-heading">
-                         <div className="info">
-                             <div className="step3"/>
-                                 <img src="./img/images/ic_num_3.png" className="ic-num"/>
-                                 <img className="curve small" src="./img/images/curve.png" style={{top: '180px'}}/>
-                                 <div className="para" style={{marginTop: '14px'}}>
-                                     <div className="title"></div>
-                                    <div className="title">Book a stint </div>
-                                    <div className="desc" style={{marginTop: '16px'}}>Stint compares USP of each service provider and cautions you when their quote is above market.
-                                    <br/><br/><span style={{color: '#000', fontWeight:'bold', fontColor: '#08b587'}}>Quotes from stintlers are usually 20% less than market average due to the commissionless model.</span></div><br/>
-                             </div>
-                         </div>
-                      </div>
-                  </div>
+
 
 
                                       <br/>
 
 
-                <div className="desc" style={{textAlign: 'center',fontSize: '14px'}}>Copyright © 2019 Stint.do</div><br/>
+                <div className="desc" style={{textAlign: 'center',fontSize: '14px'}}>Copyright © 2020 homely.pizza</div><br/>
                 </div>
 
 
