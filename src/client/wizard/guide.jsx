@@ -412,7 +412,7 @@ class Guide extends React.Component {
                          </div>
 
                          <div className="info" style={{marginTop: '40px',minHeight:'300px'}}>
-                             <div className="overview bg-text" style={{marginTop: '415px', display: 'inline-block'}} id="overviewBgMain">
+                             <div className="overview bg-text" style={{marginTop: '425px', display: 'inline-block'}} id="overviewBgMain">
                                  With zero preservatives, all the ingredients are freshly prepped just on receiving your order
                              </div>
                               <section className="second-section">
