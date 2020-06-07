@@ -119,6 +119,144 @@ class Guide extends React.Component {
         window.onRecommenderClick = this.handleRecommenderClick;
         this.showMyTasksBtn();
         scrollTo(document.body, 0, 100);
+        document.addEventListener('DOMContentLoaded', () => {
+                        let controller = new ScrollMagic.Controller();
+
+                      let t1 = gsap.timeline();
+                            t1.from(".section_1_01", 4, {
+                                y: -100,
+                                x: -150,
+                                ease: Power3.easeInOut
+                            })
+                            t1.from(".section_1_02", 4, {
+                                y: -150,
+                                x: -250,
+                                ease: Power3.easeInOut
+                            }, '-=4')
+                            .from(".section_1_03", 4, {
+                                y: -80,
+                                x: -100,
+                                ease: Power3.easeInOut
+                            }, '-=4')
+                            .from(".section_1_04", 4, {
+                                y: -100,
+                                x: -150,
+                                ease: Power3.easeInOut
+                            }, '-=4')
+                            .from(".section_1_05", 4, {
+                                y: -80,
+                                x: -200,
+                                ease: Power3.easeInOut
+                            }, '-=4')
+                            .from(".section_1_06", 4, {
+                                y: -100,
+                                x: -350,
+                                ease: Power3.easeInOut
+                            }, '-=4')
+                            .from(".section_1_07", 4, {
+                                y: -50,
+                                x: -150,
+                                ease: Power3.easeInOut
+                            }, '-=4')
+                            .from(".section_1_08", 4, {
+                                y: 50,
+                                x: -350,
+                                ease: Power3.easeInOut
+                            }, '-=4')
+                            .from(".section_1_09", 4, {
+                                y: 100,
+                                x: -200,
+                                ease: Power3.easeInOut
+                            }, '-=4')
+
+                        let scene = new ScrollMagic.Scene({
+                            triggerElement: '.first-section',
+                            duration: '100%',
+                            triggerHook: 0,
+                            offset: '300'
+                        })
+                            .setTween(t1)
+                            .setPin('.first-section')
+                            .addTo(controller);
+
+                        let t2 = gsap.timeline();
+                        t2
+                            .to('.top .image-container', 4, {
+                                height: 0
+                            });
+
+                        let scene2 = new ScrollMagic.Scene({
+                            triggerElement: '.second-section',
+                            duration: '100%',
+                            triggerHook: 0,
+                            offset: '100'
+                        })
+                            .setTween(t2)
+                            .setPin('.second-section')
+                            .addTo(controller);
+
+                        let t3 = gsap.timeline();
+                        t3
+                            .to('.section_3_01', 4, {
+                                y: -250,
+                                ease: Power3.easeInOut
+                            })
+                            .to('.section_3_02', 4, {
+                                y: -200,
+                                ease: Power3.easeInOut
+                            }, '-=4')
+                            .to('.section_3_03', 4, {
+                                y: -100,
+                                ease: Power3.easeInOut
+                            }, '-=4')
+                            .to('.section_3_04', 4, {
+                                y: 0,
+                                ease: Power3.easeInOut
+                            }, '-=4')
+                            .to('.section_3_05', 4, {
+                                y: 150,
+                                ease: Power3.easeInOut
+                            }, '-=4')
+                            .to('.section_3_06', 4, {
+                                y: 250,
+                                ease: Power3.easeInOut
+                            }, '-=4')
+
+                        let scene3 = new ScrollMagic.Scene({
+                            triggerElement: '.third-section',
+                            duration: '100%',
+                            triggerHook: 0,
+                            offset: '200'
+                        })
+                            .setTween(t3)
+                            .setPin('.third-section')
+                            .addTo(controller);
+
+                        let t4 = gsap.timeline();
+                        t4
+                            .to('.section_4_01', 4, {
+                                autoAlpha: 0
+                            })
+                            .from('.section_4_02', 4, {
+                                autoAlpha: 0
+                            }, '-=4')
+                            .from('.section_4_03', 4, {
+                                autoAlpha: 0
+                            })
+                            .from('.section_4_04', 4, {
+                                autoAlpha: 0
+                            })
+
+                        let scene4 = new ScrollMagic.Scene({
+                            triggerElement: '.forth-section',
+                            duration: '100%',
+                            triggerHook: 0,
+                            offset: '200'
+                        })
+                            .setTween(t4)
+                            .setPin('.forth-section')
+                            .addTo(controller);
+                    });
     }
 
     showMyTasksBtn() {
@@ -247,7 +385,7 @@ class Guide extends React.Component {
                         </div>
                         <div className="info" style={{marginTop: '10px',minHeight:'300px'}}>
                             <div className="overview bg-text" style={{marginTop: '130px'}} id="overviewBgMain">
-                                Freshly prepped pizza ingredients in a box, delivered for instant cooking.
+                                Freshly prepped pizza ingredients in a box, delivered for instant cooking
                             </div>
                         </div>
                     </div>
@@ -267,10 +405,50 @@ class Guide extends React.Component {
                              <div className="overview bg-text" style={{marginTop: '415px', display: 'inline-block'}} id="overviewBgMain">
                                  With zero preservatives, all the ingredients are freshly prepped just on receiving your order
                              </div>
+                              <section className="second-section">
+                                                                                  <div className="images-wrapper bottom">
+                                                                                      <div className="image-container">
+                                                                                          <img className="section_2_06" src="https://www.dropbox.com/s/kb9fxs2l7y7obvp/section_2_06.webp?raw=1" />
+                                                                                      </div>
+                                                                                      <div className="image-container">
+                                                                                          <img className="section_2_07" src="https://www.dropbox.com/s/ebywdet3cjr0670/section_2_07.webp?raw=1" />
+                                                                                      </div>
+                                                                                      <div className="image-container">
+                                                                                          <img className="section_2_08" src="https://www.dropbox.com/s/slm1nqwrsuv34x8/section_2_08.webp?raw=1" />
+                                                                                      </div>
+                                                                                      <div className="image-container">
+                                                                                          <img className="section_2_09" src="https://www.dropbox.com/s/kywqj06sz972r7g/section_2_09.webp?raw=1" />
+                                                                                      </div>
+                                                                                      <div className="image-container">
+                                                                                          <img className="section_2_10" src="https://www.dropbox.com/s/0msebcd4otsahqe/section_2_10.webp?raw=1" />
+                                                                                      </div>
+                                                                                  </div>
+                                                                                  <div className="images-wrapper top">
+                                                                                      <div className="image-container">
+                                                                                          <img className="section_2_01"           src="https://www.dropbox.com/s/fbdaroubtk7ctb2/section_2_01.webp?raw=1" />
+                                                                                      </div>
+                                                                                      <div className="image-container">
+                                                                                          <img className="section_2_02" src="https://www.dropbox.com/s/4724yf637hh0z1t/section_2_02.webp?raw=1" />
+                                                                                      </div>
+                                                                                      <div className="image-container">
+                                                                                          <img className="section_2_03" src="https://www.dropbox.com/s/5iquebsptt1gf4m/section_2_03.webp?raw=1" />
+                                                                                      </div>
+                                                                                      <div className="image-container">
+                                                                                          <img className="section_2_04" src="https://www.dropbox.com/s/49ebf38ycede0yb/section_2_04.webp?raw=1" />
+                                                                                      </div>
+                                                                                      <div className="image-container">
+                                                                                          <img className="section_2_05" src="https://www.dropbox.com/s/7th16qwis8v1vnq/section_2_05.webp?raw=1" />
+                                                                                      </div>
+                                                                                  </div>
+                                                                              </section>
                          </div>
+
+
 
                         </div>
                     </div>
+
+
                 </div>
 
 
@@ -406,7 +584,7 @@ export class ResultsList extends React.Component {
 
 
     componentDidMount() {
-        this.handleScroll = this.handleScroll.bind(this);
+        //this.handleScroll = this.handleScroll.bind(this);
         window.lastScrollTop = 0;
         window.positiveOpinionClickCount = new Array();
         window.addEventListener('scroll', this.handleScroll);
@@ -478,7 +656,7 @@ export class ResultsList extends React.Component {
 
     render() {
         const { questionList, activeQuestionIndex, shortlistCount, shortlistText, resultList, searchRequestPayLoad = [], resultType } = this.state;
-        return (<div class="search-results-container">
+        return (<div className="search-results-container">
             {questionList && questionList.length > 0 &&
                 <QuestionAnswer selectedAns={searchRequestPayLoad.questions || []} question={questionList[activeQuestionIndex].question} answers={questionList[activeQuestionIndex].responses} onSelect={this.onQuestionSelect} />}
             <div className="row" style={{marginTop:'90px'}}>
@@ -493,7 +671,7 @@ export class ResultsList extends React.Component {
                 <form action="/search" method="get" className="landing_page">
                  <div id="div_id_submit" className="form-group">
                         <div className="controls">
-                            <input type="submit" class="submit form-control" id="id_submit" value="Explore offers" />
+                            <input type="submit" className="submit form-control" id="id_submit" value="Explore offers" />
                         </div>
                     </div>
                 </form>
