@@ -166,34 +166,40 @@ class Guide extends React.Component {
         }
 
     handleScroll() {
-        /*if(window.scrollY == 0) {
-            document.querySelector('.logo').style.borderBottom = '0px solid';
+        if(window.scrollY == 0) {
+            document.querySelector('#overviewMain').style.color = '#8d8d8d';
+            document.querySelector('#overviewMain').style.textShadow = 'none';
+            document.querySelector('#overviewBgMain').style.display = 'none';
+            document.querySelector('.scroll-arrow').style.display = 'inline';
+            document.querySelector('#overviewMain').style.fontSize = '22px';
+            document.querySelector('#overviewMain').innerHTML = 'What if you could bake it instantly at home?'
         } else {
-            document.querySelector('.logo').style.borderBottom = '1px solid #eeeeee';
-            if(window.scrollY >= 600) {
-                document.querySelector('.recommender').style.opacity = '1';
-                document.querySelector('.logo').style.display = 'none';
-                document.querySelector('.recommender').style.minHeight = '220px';
-            } else {
-                document.querySelector('.logo').style.display = 'block';
+            document.querySelector('.scroll-arrow').style.display = 'none';
+            document.querySelector('#overviewBgMain').style.display = 'inline-block';
+            document.querySelector('#overviewMain').style.color = '#fff';
+            document.querySelector('#overviewMain').style.textShadow = '0px 1px 2px #00000075';
+            document.querySelector('#overviewMain').style.fontSize = '26px';
+            document.querySelector('#overviewMain').innerHTML = 'Say hello to Homely!'
+            if(window.scrollY >= 500 & window.scrollY <= 700) {
+                document.querySelector('.confetti').style.opacity = '1';
             }
         }
-        window.removeEventListener('scroll', this.handleScroll);*/
     }
 
     render() {
             const { questionList, activeQuestionIndex, searchRequestPayLoad = [], displayQuestions } = this.state;
             return (<div>
 
+            <img id="logo" className="logo-img" src="../img/images/logohp4.png" />
+            <div className="banner2"/>
             <div className="logo" id="logoWrapper">
-                <img id="logo" className="logo-img" src="../img/images/logohp4.png" />
                 <div id="logoHeading" className="logo-heading"></div>
                 <Link to="/mytasks"><div id="myTasksBtn" className="green-btn right-btn"><img className="icon-btn" src="../img/images/ic_user.png" /><span>My Services</span></div></Link>
             </div>
             <div><i className="loading"></i></div>
 
 
-                <div className="banner2"/>
+
                 <div className="main">
                     <div>
 
@@ -230,85 +236,71 @@ class Guide extends React.Component {
                             <span/><span/><span/>
                         </div>
                     </div>
-                    <div className="overview">What if you could bake it instantly at home?</div>
-<br/><br/>
-                                        <div className="section">
-                                            <div className="post-heading">
+                    <br/><br/>
+                <div className="section" style={{marginTop: '400px', minHeight: '190px'}}>
+                    <div className="post-heading">
 
-                                                <div className="info" style={{marginTop: '10px'}}>
-                                                    <div className="para" style={{marginTop: '-80px'}}>
-                                                       <div className="main-desc">
-                                                       Homely delivers freshly prepped pizza kits on demand, for instant cooking.
+                        <div className="info" style={{marginTop: '10px'}}>
+                            <div className="overview" style={{marginTop: '30px'}} id="overviewMain">
+                                What if you could bake it instantly at home?
+                            </div>
+                        </div>
+                        <div className="info" style={{marginTop: '10px',minHeight:'300px'}}>
+                            <div className="overview bg-text" style={{marginTop: '130px'}} id="overviewBgMain">
+                                Freshly prepped pizza ingredients in a box, delivered for instant cooking.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div className="section no-padding">
+                    <div className="post-heading">
+                        <div className="info" style={{marginTop: '-12px'}}>
+                            <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+                            <img src="./img/images/pizzabox.png"  className="pizza-box"/>
+                            <img src="./img/images/confetti.png"  className="confetti"/>
+                            <img src="./img/images/ic_num_1.png" className="ic-num"/>
+                            <img className="curve small" src="./img/images/curve.png"/>
+                            <div className="para section leaves">
+                         </div>
 
-                                                        </div>
-                                                    </div>
-
-
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className="section no-padding">
-                                            <div className="post-heading">
-                                                <div className="info" style={{marginTop: '-12px'}}>
-                                                    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-                                                    <div className="logo" id="logoWrapper"></div>
-                                                    <img src="https://images.unsplash.com/photo-1568765429356-858c2b5182a3?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=2255&amp;q=80" style={{marginTop: '20px'}}/>
-                                                    <img src="./img/images/pizzabox.png"  className="pizza-box"/>
-                                                    <img src="./img/images/confetti.png"  className="confetti"/>
-                                                    <img src="./img/images/ic_num_1.png" className="ic-num"/>
-                                                    <img className="curve small" src="./img/images/curve.png"/>
-                                                    <div className="para section leaves">
-
-                                                       <div className="main-desc" style={{marginTop: '10px',color:'#000',paddingTop:'150px'}}>With zero preservatives, all the ingredients are freshly prepped just on receiving your order.</div>
-                                                    </div>
-
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className="section no-padding" style={{marginTop: '40px'}}>
-                                             <div className="post-heading">
-                                                <div className="info">
-                                                    <div className="step2"/>
-                                                        <img src="./img/images/ic_num_2.png" className="ic-num"/>
-                                                        <img className="curve small" src="./img/images/curve.png" style={{top: '180px'}}/>
-                                                        <div className="para" style={{marginTop: '14px'}}>
-                                                            <div className="title"></div>
-                                                           <div className="title">Screening & shortlisting</div>
-                                                           <div className="desc" style={{marginTop: '10px'}}>Stint shortlists authentic service providers & checks with you to see if they fit your needs & budget</div>
-                                                    </div>
-                                                </div>
-                                             </div>
-                                         </div>
-                                         <div className="section no-padding" style={{marginTop: '40px'}}>
-                                              <div className="post-heading">
-                                                 <div className="info">
-                                                     <div className="step3"/>
-                                                         <img src="./img/images/ic_num_3.png" className="ic-num"/>
-                                                         <img className="curve small" src="./img/images/curve.png" style={{top: '180px'}}/>
-                                                         <div className="para" style={{marginTop: '14px'}}>
-                                                             <div className="title"></div>
-                                                            <div className="title">Book a stint </div>
-                                                            <div className="desc" style={{marginTop: '16px'}}>Stint compares USP of each service provider and cautions you when their quote is above market.
-                                                            <br/><br/><span style={{color: '#000', fontWeight:'bold', fontColor: '#08b587'}}>Quotes from stintlers are usually 20% less than market average due to the commissionless model.</span></div><br/>
-                                                     </div>
-                                                 </div>
-                                              </div>
-                                          </div>
-
-                                          <div className="overview" style={{background: '#f7f7f7', paddingTop: '20px'}}>So what do you want to get done?</div>
-
-                                                              <div className="section" style={{background: '#f7f7f7'}}>
-                                                                  <div className="post-heading icon-container">
-                                                                      <Link to="/home"><img className="ic" src="./img/images/ic_homei.png" style={{width: '72px'}} /></Link>
-                                                                      <img className="ic" src="./img/images/ic_eventsi.png" style={{width: '72px'}} />
-                                                                      <img className="ic" src="./img/images/ic_local_enquiriesi.png" style={{width: '72px'}} />
-                                                                  </div>
-                                                                  <br/>
-                                                              </div>
-                                                              <br/>
+                        </div>
+                    </div>
+                </div>
+                <div className="section no-padding" style={{marginTop: '40px'}}>
+                     <div className="post-heading">
+                        <div className="info">
+                            <div className="step2"/>
+                                <img src="./img/images/ic_num_2.png" className="ic-num"/>
+                                <img className="curve small" src="./img/images/curve.png" style={{top: '180px'}}/>
+                                <div className="para" style={{marginTop: '14px'}}>
+                                    <div className="title"></div>
+                                   <div className="title">Screening & shortlisting</div>
+                                   <div className="desc" style={{marginTop: '10px'}}>Stint shortlists authentic service providers & checks with you to see if they fit your needs & budget</div>
+                            </div>
+                        </div>
+                     </div>
+                 </div>
+                 <div className="section no-padding" style={{marginTop: '40px'}}>
+                      <div className="post-heading">
+                         <div className="info">
+                             <div className="step3"/>
+                                 <img src="./img/images/ic_num_3.png" className="ic-num"/>
+                                 <img className="curve small" src="./img/images/curve.png" style={{top: '180px'}}/>
+                                 <div className="para" style={{marginTop: '14px'}}>
+                                     <div className="title"></div>
+                                    <div className="title">Book a stint </div>
+                                    <div className="desc" style={{marginTop: '16px'}}>Stint compares USP of each service provider and cautions you when their quote is above market.
+                                    <br/><br/><span style={{color: '#000', fontWeight:'bold', fontColor: '#08b587'}}>Quotes from stintlers are usually 20% less than market average due to the commissionless model.</span></div><br/>
+                             </div>
+                         </div>
+                      </div>
+                  </div>
 
 
-                                        <div className="desc" style={{textAlign: 'center',fontSize: '14px'}}>Copyright © 2019 Stint.do</div><br/>
+                                      <br/>
+
+
+                <div className="desc" style={{textAlign: 'center',fontSize: '14px'}}>Copyright © 2019 Stint.do</div><br/>
                 </div>
 
 

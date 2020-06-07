@@ -661,10 +661,12 @@ body {
 }
 
 .banner2 {
-    margin-top: 18px;
+    margin-top: -14px;
     height: 406px;
     background-image: url(https://images.unsplash.com/photo-1520201163981-8cc95007dd2a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80);
     background-size: cover;
+    position: fixed;
+    width: 100%;
 }
 
 .banner3 {
@@ -1029,8 +1031,10 @@ td:last-child {
     top: 70px;
     width: 300px;
     left: 0px;
-    right: 0px;s
+    right: 0px;
     margin: 0 auto;
+    opacity: 0;
+    transition: opacity .5s linear;
 }
 
 .illus-delivery {
@@ -1103,23 +1107,38 @@ td:last-child {
 }
 
 .overview {
-    padding-left: 34px;
     text-align: center;
     font-size: 22px;
-    padding-right: 34px;
-    color: #312e2d;
+    color: #8d8d8d;
     font-family: 'Quicksand', sans-serif;
+    margin: 0 auto;
+    top: 18px;
+    position: absolute;
     font-weight: bold;
-    line-height: 30px;
-    margin-top: 101px;
-    padding-top: 33px;
+    line-height: 31px;
+    letter-spacing: 0px;
+    left: 0;
+    right: 0;
+    padding: 20px;
+}
+
+.bg-text {
+    display: none;
+    font-weight: normal;
+    background: #7f4e2f2e;
+    color: #fff;
+    margin: 41px;
+    margin-top: 115px;
+    border-radius: 12px;
+    line-height: 32px;
+    text-shadow: rgba(0, 0, 0, 0.46) 0px 0px 2px
 }
 
 .scroll-arrow{
     position: absolute;
     left: 50%;
     transform: translate(-50%,-50%);
-    margin-top: -42px;
+    top: 470px;
     opacity: 0.6;
 }
 .scroll-arrow span{
@@ -1195,8 +1214,11 @@ td:last-child {
 
 .logo-img {
     display: inline-block;
-    width: 72px;
-    margin-top: -4px;
+    width: 132px;
+    top: 20px;
+    position: fixed;
+    z-index: 9999;
+    left: 20px;
 }
 
 .quote-text {
@@ -1285,7 +1307,7 @@ text-size-adjust:none;
 
 </style>
     <!-- Basic -->
-    <title>Homely.pizaa - fresh pizza kits for instant cooking</title>
+    <title>Homely.pizza - fresh pizza kits for instant cooking</title>
 
     <!-- Define Charset -->
 
@@ -2817,7 +2839,7 @@ p img.right { float: right; margin-left: 1em; }
     }
     .logo {
         width: 100%;
-        min-height: 539px;
+        min-height: 3000px;
         margin: 0 auto;
         top: 0px;
         position: absolute;
