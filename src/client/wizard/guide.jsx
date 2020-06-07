@@ -352,7 +352,6 @@ class Guide extends React.Component {
                     <div>
 
                         <div className="header">Craving a hot pizza straight out of the pan?<br/></div>
-                        <div className="pizza-main-img"><img src="../img/images/fresh_pizz01.png" className="pizza-img" /></div>
                         <div className="smoke-main">
                             <svg version='1.1' xmlns='http://www.w3.org/2000/svg'>
                               <filter id='blur'>
@@ -380,6 +379,7 @@ class Guide extends React.Component {
                               <div className="c"></div>
                             </div>
                         </div>
+                        <div className="pizza-main-img"><img src="../img/images/fresh_pizz01.png" className="pizza-img" /></div>
                         <div className="scroll-arrow">
                             <span/><span/><span/>
                         </div>
