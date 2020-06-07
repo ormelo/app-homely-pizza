@@ -315,6 +315,8 @@ class Guide extends React.Component {
             document.querySelector('.scroll-arrow').style.display = 'none';
             document.querySelector('#overviewBgMain').style.display = 'inline-block';
             document.querySelector('#overviewMain').style.color = '#fff';
+            document.querySelector('#overviewMain').classList.add('line-typed');
+            document.querySelector('#overviewMain').classList.add('anim-typewriter');
             document.querySelector('#overviewMain').style.textShadow = '0px 1px 2px #00000075';
             document.querySelector('#overviewMain').style.fontSize = '26px';
             document.querySelector('#overviewMain').innerHTML = 'Say hello to Homely!'
@@ -384,7 +386,7 @@ class Guide extends React.Component {
                     <div className="post-heading">
 
                         <div className="info" style={{marginTop: '10px'}}>
-                            <div className="overview" style={{marginTop: '30px'}} id="overviewMain">
+                            <div className="overview" style={{marginTop: '30px', padding:'0px'}} id="overviewMain">
                                 What if you could bake it instantly at home?
                             </div>
                         </div>
