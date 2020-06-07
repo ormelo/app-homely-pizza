@@ -467,7 +467,7 @@ class Guide extends React.Component {
                          </div>
 
                          <section class="forth-section">
-                                 <div className="overview bg-text" style={{marginTop: '-20px', display: 'inline-block'}} id="overviewBgMain">
+                                 <div className="overview bg-text" style={{marginTop: '-70px', display: 'inline-block'}} id="overviewBgMain">
                                     Simply bake it in an oven or place in a cooker in low flame without weight. Your pizza's usually ready in 12 mins!
                                  </div>
                                  <div class="images-wrapper">
