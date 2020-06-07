@@ -455,7 +455,7 @@ class Guide extends React.Component {
                                       <div className="overview bg-text" style={{marginTop: '25px', display: 'inline-block'}} id="overviewBgMain">
                                            What's more, your pizza is pre-assembled so it's ready for instant cooking!
                                       </div>
-                                      <div class="images-wrapper" style={{marginTop: '400px'}}>
+                                      <div class="images-wrapper" style={{marginTop: '500px'}}>
                                           <img class="section_3_06" src="https://www.dropbox.com/s/cggf61ebt5glkdm/section_3_06.webp?raw=1" />
                                           <img class="section_3_05" src="https://www.dropbox.com/s/y9v16yvcpcogt5h/section_3_05.webp?raw=1" />
                                           <img class="section_3_04" src="https://www.dropbox.com/s/epb4iwra19fc7np/section_3_04.webp?raw=1" />
