@@ -321,7 +321,7 @@ class Guide extends React.Component {
             if(window.scrollY >= 500 & window.scrollY <= 700) {
                 document.querySelector('.confetti').style.opacity = '1';
             }
-            if(window.scrollY >= 1837) {
+            if(window.scrollY >= 1807) {
                 document.querySelector('.second-section').style.opacity = '0';
             } else {
                 document.querySelector('.second-section').style.opacity = '1';
@@ -456,7 +456,7 @@ class Guide extends React.Component {
                                           <img class="section_3_04" src="https://www.dropbox.com/s/epb4iwra19fc7np/section_3_04.webp?raw=1" />
                                           <img class="section_3_03" src="https://www.dropbox.com/s/bcuykp1rf8c672f/section_3_03.webp?raw=1" />
                                           <img class="section_3_02" src="https://www.dropbox.com/s/rhkmo56qrrjsnwn/section_3_02.webp?raw=1" />
-                                          <img class="section_3_01" src="https://www.dropbox.com/s/7f6qkl52a6jiy08/section_3_01.webp?raw=1" />
+                                          <img class="section_3_01" src="https://www.dropbox.com/s/7f6qkl52a6jiy08/section_3_01.webp?raw=1" style={{width: '40%'}} />
                                       </div>
                                   </section>
                          </div>
