@@ -249,7 +249,7 @@ class Guide extends React.Component {
 
                         let scene4 = new ScrollMagic.Scene({
                             triggerElement: '.forth-section',
-                            duration: '100%',
+                            duration: '10%',
                             triggerHook: 0,
                             offset: '0'
                         })
@@ -331,7 +331,7 @@ class Guide extends React.Component {
             } else {
                 document.querySelector('.second-section').style.opacity = '1';
             }
-            if(window.scrollY >= 4500) {
+            if(window.scrollY >= 4070) {
                 document.querySelector('#ctaSection').style.position = 'fixed';
                 document.querySelector('#ctaSection').style.bottom = '0px';
             } else {
