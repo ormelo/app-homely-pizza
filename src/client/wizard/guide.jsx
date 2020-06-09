@@ -331,6 +331,13 @@ class Guide extends React.Component {
             } else {
                 document.querySelector('.second-section').style.opacity = '1';
             }
+            if(window.scrollY >= 4600) {
+                document.querySelector('#ctaSection').style.position = 'fixed';
+                document.querySelector('#ctaSection').style.bottom = '0px';
+            } else {
+                document.querySelector('#ctaSection').style.position = 'relative';
+                document.querySelector('#ctaSection').style.bottom = 'none';
+            }
         }
     }
 
@@ -482,17 +489,17 @@ class Guide extends React.Component {
                                                               <div className="overview bg-text" style={{marginTop: '-380px', display: 'inline-block'}} id="overviewBgMain">
                                                                  Choose from 15+ mouth-watering varieties or customize your own!
                                                               </div>
-                                <div class="btn">Order Now&nbsp;→
-                                  <div class="btn2"></div>
-                                </div>
-                                                          </section>
-                             <div className="desc" style={{textAlign: 'center',fontSize: '14px'}}>Copyright © 2020 <b style={{color:'#000'}}>homely.pizza</b></div>
-
+                             </section>
+                             <section id="ctaSection" class="forth-section" style={{height: '100px'}}>
+                                     <div class="btn">Order Now&nbsp;→
+                                       <div class="btn2"></div>
+                                     </div>
+                             </section>
                         </div>
                     </div>
 
 
-                </div>
+                </div>DGD
 
                 <br/>
                 </div>
