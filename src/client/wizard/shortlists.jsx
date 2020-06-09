@@ -89,25 +89,14 @@ class ReviewContainer extends Component {
 
               </div>
 
-              <div className="opinions">
-                  {
+                <div onClick={()=>{location.href = '/order/';}} class="card-btn" style={{marginTop: '10px'}}>Add to basket&nbsp;→
+                    <div class=""></div>
+                                                     </div>
 
-                      activeOpinions && activeOpinions.length > 0 ?
 
-                          activeOpinions && activeOpinions.map((opinion, index) => {
-                            return (
-                                  <div className="opinion"><div className="author-detail"><b style={{color: '#4a4a4a'}}>{opinion.text.author}</b><b style={{color: '#4a4a4a'}}>, {opinion.text.createdAt}</b> via <img className="reviewed-at" src="../../../img/images/ic_g.png"/></div><div className="read-more-review" onClick={(e)=>{this.showMore(e)}}>Read more</div><div className="opinion-detail">{opinion.text.content}</div></div>
-                          );
-                          })
-                     :
-                          activeDefaultOpinions && activeDefaultOpinions.map((opinion, index) => {
-                            return (
-                                  <div className="opinion"><div className="author-detail"><b style={{color: '#4a4a4a'}}>{opinion.text.author}</b><b style={{color: '#4a4a4a'}}>, {opinion.text.createdAt}</b> via <img className="reviewed-at" src="../../../img/images/ic_g.png"/></div><div className="read-more-review" onClick={(e)=>{this.showMore(e)}}>Read more</div><div className="opinion-detail">{opinion.text.content}</div></div>
-                          );
-                          })
-
-                  }
-              </div>
+                 <div onClick={()=>{location.href = '/order/';}} class="card-btn secondary" style={{marginTop: '60px'}}>Customize&nbsp;→
+                                     <div class=""></div>
+                                                                      </div>
           </div>
         );
     }
@@ -133,19 +122,13 @@ class Card extends Component {
         return (
         <div className="card-container">
             <div className="section-one">
-                <span className="index">{this.appendZero(index+1)}</span>
-                <span className="title">{data.title}</span>
+                <br/><br/>
                 <div className="top">
                     <div className="top-left">
-                        <img className="blurred" src={data.images.primary} />
-                        <div className="img-overlay" />
-                        <div className="icon-lock-small">
-                            <img src="../../../img/images/ic_lock.png"/>
-                        </div>
-                        <span className="lock-text">Photos will be visible after the quote</span>
+                        <img className="primary-img" src={`../../../img/images/p${index+1}.png`} />
                     </div>
                     <div className="top-right">
-                        <div className="usp-title">Unique selling points</div>
+                        <div className="usp-title"></div>
                         <div className="usp-desc">{data.usp[0]}</div>
                     </div>
                 </div>
@@ -153,7 +136,7 @@ class Card extends Component {
             <hr className="line"/>
             <div className="section-two">
                 <div className="top">
-                    <div className="title">How we know they're authentic:</div>
+                    <div className="title">{data.title}</div>
                     <ReviewContainer reviewTopics={data.qna[0].responses} />
                 </div>
             </div>
@@ -243,27 +226,18 @@ class Shortlists extends Component {
     render() {
         const {showLoader, results} = this.state;
         return (<div>
-                    <div className="logo" id="logoWrapper" style={{top: '0px', marginLeft: '-10px'}}>
-                        <img className="icon-back" src="../../../img/images/ic_back.png" onClick={()=>{history.back(-1);}} />
-                        <Link to="/?navigatingBack=true" style={{marginLeft: '34px'}}><img id="logo" className="logo-img" style={{width: '40px'}} src="../../../img/images/logo_ic.png" /></Link>
-                        <div id="logoHeading" className="logo-heading" style={{marginLeft: '108px', textAlign: 'left', fontSize: '18px'}}>{`Shortlists  >  ${localStorage.getItem('primary-task')}`}</div>
+                    <img className="icon-back" src="../../../img/images/ic_back.png" onClick={()=>{history.back(-1);}} />
+                    <img id="logo" className="logo-img" src="../img/images/logohp4.png" />
+                    <div className="banner2"/>
+                    <div className="logo" id="logoWrapper">
+                        <div id="logoHeading" className="logo-heading"></div>
+                        <Link to="/mytasks"><div id="myTasksBtn" className="green-btn right-btn"><img className="icon-btn" src="../img/images/ic_user.png" /><span>My Services</span></div></Link>
                     </div>
+
                     <div><i className="loading" id="myTasksLoader" style={{top: '28px'}}></i></div>
                     <div className="main fadeInBottom">
                         <hr className="line-tasks"/>
-                        <div id="notifyMsg" className="alert-msg">
-                            <div className="alert-icon"><img src="../../../img/images/ic_24h.png" className="shake" style={{width: '44px'}}/></div>
-                            <div className="alert-message">
-                                <div id="tasksTitle" className="a-title" style={{fontSize: '16px'}}>
-                                    Stint has shortlisted your matches
-                                </div>
-                                <div className="a-desc">
-                                    Give it upto <b style={{color: '#444444'}}>24 hrs</b> to get the best quotes.
-                                </div>
-                            </div>
-                        </div>
-                        <img className="icon-tick" id="myTasksSuccess" src="../../../img/images/ic_tick.png"/>
-                        <Paper style={{marginTop: '14px'}}>
+                        <Paper>
                               <Tabs
                                 value={this.state.value}
                                 onChange={this.handleTabChange}
@@ -271,8 +245,8 @@ class Shortlists extends Component {
                                 textColor="primary"
                                 centered
                               >
-                                <Tab label="&nbsp;&nbsp;&nbsp;Shortlists&nbsp;&nbsp;&nbsp;" />
-                                <Tab label="&nbsp;&nbsp;&nbsp;Rejects&nbsp;&nbsp;&nbsp;" />
+                                <Tab label="&nbsp;&nbsp;&nbsp;All&nbsp;&nbsp;&nbsp;" />
+                                <Tab label="&nbsp;&nbsp;&nbsp;Wishlist&nbsp;&nbsp;&nbsp;" />
                               </Tabs>
                               <TabPanel value={this.state.value} index={0}>
 
