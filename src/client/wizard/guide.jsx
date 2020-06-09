@@ -488,7 +488,7 @@ class Guide extends React.Component {
                                                               </div>
                              </section>
                              <section id="ctaSection" class="forth-section" style={{height: '100px'}}>
-                                     <div onClick={()=>{location.href = '/shortlists/interior/blr/east';}} class="btn">Order Now&nbsp;→
+                                     <div onClick={()=>{location.href = '/order/';}} class="btn">Order Now&nbsp;→
                                        <div class="btn2"></div>
                                      </div>
                              </section>
@@ -822,7 +822,7 @@ render(<Router>
                     <Route exact path="/" component={Guide} />
                 <Route exact path="/home" component={QuizWithRouter} />
                 <Route exact path="/mytasks" component={MytasksWithRouter} />
-                <Route path="/shortlists/:task/:loc/:zone" component={ShortlistsWithRouter} />
+                <Route path="/order/" component={ShortlistsWithRouter} />
             </div>)} />
     </div>
 </Router>, document.getElementById('containerWiz'));

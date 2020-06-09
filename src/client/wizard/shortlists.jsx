@@ -179,9 +179,9 @@ class Shortlists extends Component {
     }
     fetchJson() {
         console.log('this.props.match: ', this.props.match);
-        let task = this.props.match.params.task;
-        let loc = this.props.match.params.loc;
-        let zone = this.props.match.params.zone;
+        let task = 'interior';
+        let loc = 'blr';
+        let zone = 'east';
 
         axios.get(`/data/${task}/${loc}/${zone}`)
           .then(function (response) {
