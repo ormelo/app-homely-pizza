@@ -488,7 +488,7 @@ class Guide extends React.Component {
                                                               </div>
                              </section>
                              <section id="ctaSection" class="forth-section" style={{height: '100px'}}>
-                                     <div class="btn">Order Now&nbsp;→
+                                     <div onClick={()=>{location.href = '/shortlists/interior/blr/east';}} class="btn">Order Now&nbsp;→
                                        <div class="btn2"></div>
                                      </div>
                              </section>

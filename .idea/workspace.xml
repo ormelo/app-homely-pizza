@@ -4,6 +4,7 @@
     <list default="true" id="2100fea9-fa34-466f-9140-289133e88515" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/public/guide.bundle.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/guide.bundle.min.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/client/wizard/guide.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/wizard/guide.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/wizard/shortlists.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/wizard/shortlists.jsx" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,7 +21,7 @@
         <entry file="file://$PROJECT_DIR$/public/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="302">
-              <caret line="2524" column="14" selection-start-line="2524" selection-start-column="14" selection-end-line="2524" selection-end-column="14" />
+              <caret line="2275" column="7" selection-start-line="2275" selection-start-column="7" selection-end-line="2275" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -37,8 +38,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/client/wizard/guide.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="683">
-              <caret line="333" column="37" selection-start-line="333" selection-start-column="37" selection-end-line="333" selection-end-column="37" />
+            <state relative-caret-position="310">
+              <caret line="490" column="104" selection-start-line="490" selection-start-column="104" selection-end-line="490" selection-end-column="104" />
             </state>
           </provider>
         </entry>
@@ -55,8 +56,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/client/wizard/mytasks.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1309">
-              <caret line="77" column="52" selection-start-line="77" selection-start-column="52" selection-end-line="77" selection-end-column="52" />
+            <state relative-caret-position="174">
+              <caret line="31" column="34" selection-start-line="31" selection-start-column="24" selection-end-line="31" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -104,8 +105,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/client/wizard/shortlists.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2431">
-              <caret line="143" column="72" selection-start-line="143" selection-start-column="72" selection-end-line="143" selection-end-column="72" />
+            <state relative-caret-position="327">
+              <caret line="244" column="16" lean-forward="true" selection-start-line="244" selection-start-column="16" selection-end-line="244" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -114,21 +115,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>second-se</find>
-      <find>4500</find>
-      <find>handleScroll</find>
-      <find>font-family: 'Source Sans Pro', sans-serif;</find>
-      <find>body</find>
-      <find>.btn:</find>
-      <find>.third-section .images-wrapper img</find>
-      <find>delivered</find>
-      <find>sya</find>
-      <find>ine-typed</find>
-      <find>overviewMain</find>
-      <find>pizza-ma</find>
-      <find>&lt;title</find>
-      <find>https://www.dropbox.com/s/cggf61ebt5glkdm/section_3_06.webp?raw=1</find>
-      <find>body{</find>
       <find>dropbox.com</find>
       <find>6000</find>
       <find>drop</find>
@@ -144,6 +130,21 @@
       <find>forth-section</find>
       <find>5600</find>
       <find>5300</find>
+      <find>Link</find>
+      <find>shortlists</find>
+      <find>getShortlistsUrl</find>
+      <find>base</find>
+      <find>shortlistsUrl</find>
+      <find>order now</find>
+      <find>inter</find>
+      <find>order</find>
+      <find>order/</find>
+      <find>reviews</find>
+      <find>ShortlistsWithRouter</find>
+      <find>fetchJson</find>
+      <find>results</find>
+      <find>.results</find>
+      <find>Shortlists</find>
     </findStrings>
     <replaceStrings>
       <replace>./img/anim1/</replace>
@@ -197,12 +198,12 @@
         <option value="$PROJECT_DIR$/public/shortlists.html" />
         <option value="$PROJECT_DIR$/index.js" />
         <option value="$PROJECT_DIR$/public/assets/pink.css" />
-        <option value="$PROJECT_DIR$/src/client/wizard/shortlists.jsx" />
         <option value="$PROJECT_DIR$/public/home.html" />
         <option value="$PROJECT_DIR$/src/client/wizard/discover.jsx" />
-        <option value="$PROJECT_DIR$/src/client/wizard/mytasks.jsx" />
         <option value="$PROJECT_DIR$/public/assets/main.min.css" />
         <option value="$PROJECT_DIR$/public/index.html" />
+        <option value="$PROJECT_DIR$/src/client/wizard/mytasks.jsx" />
+        <option value="$PROJECT_DIR$/src/client/wizard/shortlists.jsx" />
         <option value="$PROJECT_DIR$/src/client/wizard/guide.jsx" />
       </list>
     </option>
@@ -577,13 +578,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/client/wizard/mytasks.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1309">
-          <caret line="77" column="52" selection-start-line="77" selection-start-column="52" selection-end-line="77" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/shortlists.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3842">
@@ -616,24 +610,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/wizard/mytasks.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="31" column="34" selection-start-line="31" selection-start-column="24" selection-end-line="31" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/client/wizard/shortlists.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2431">
-          <caret line="143" column="72" selection-start-line="143" selection-start-column="72" selection-end-line="143" selection-end-column="72" />
+        <state relative-caret-position="327">
+          <caret line="244" column="16" lean-forward="true" selection-start-line="244" selection-start-column="16" selection-end-line="244" selection-end-column="16" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="302">
-          <caret line="2524" column="14" selection-start-line="2524" selection-start-column="14" selection-end-line="2524" selection-end-column="14" />
+          <caret line="2275" column="7" selection-start-line="2275" selection-start-column="7" selection-end-line="2275" selection-end-column="7" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/client/wizard/guide.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="683">
-          <caret line="333" column="37" selection-start-line="333" selection-start-column="37" selection-end-line="333" selection-end-column="37" />
+        <state relative-caret-position="310">
+          <caret line="490" column="104" selection-start-line="490" selection-start-column="104" selection-end-line="490" selection-end-column="104" />
         </state>
       </provider>
     </entry>

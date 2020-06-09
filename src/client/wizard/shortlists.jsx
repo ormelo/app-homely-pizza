@@ -44,7 +44,6 @@ class ReviewContainer extends Component {
         this.setActiveTopic = this.setActiveTopic.bind(this);
     }
     componentDidMount() {
-        console.log('this.props.reviews: ', this.props.reviews);
     }
     setOpinionArray(topicName) {
         let reviewTopics = this.props.reviewTopics;
@@ -176,9 +175,6 @@ class Shortlists extends Component {
         };
     }
     componentDidMount() {
-        setTimeout(function(){if(document.getElementById('logoHeading'))document.getElementById('logoHeading').style.opacity = '1';},50);
-        setTimeout(function(){if(document.getElementById('iconArrow'))document.getElementById('iconArrow').style.opacity = '1';},500);
-        debugger;
         this.fetchJson();
     }
     fetchJson() {
