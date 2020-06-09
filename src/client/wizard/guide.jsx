@@ -251,7 +251,7 @@ class Guide extends React.Component {
                             triggerElement: '.forth-section',
                             duration: '100%',
                             triggerHook: 0,
-                            offset: '200'
+                            offset: '0'
                         })
                             .setTween(t4)
                             .setPin('.forth-section')
@@ -331,7 +331,7 @@ class Guide extends React.Component {
             } else {
                 document.querySelector('.second-section').style.opacity = '1';
             }
-            if(window.scrollY >= 4600) {
+            if(window.scrollY >= 4500) {
                 document.querySelector('#ctaSection').style.position = 'fixed';
                 document.querySelector('#ctaSection').style.bottom = '0px';
             } else {
@@ -478,10 +478,7 @@ class Guide extends React.Component {
                                     Simply bake it in an oven or place in a cooker in low flame without weight. Your pizza's usually ready in 12 mins!
                                  </div>
                                  <div class="images-wrapper">
-                                     <img class="section_4_01" src="./img/images/section_4_01.png?raw=1" />
-                                     <img class="section_4_02" src="./img/images/section_4_02.png?raw=1" />
-                                     <img class="section_4_03" src="./img/images/section_4_03.png?raw=1" />
-                                     <img class="section_4_04" src="./img/images/section_4_04.png?raw=1" />
+                                     <img src="./img/images/protate.gif" style={{width: '250px'}}/>
                                  </div>
                              </section>
 
