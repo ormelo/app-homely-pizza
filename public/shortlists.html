@@ -168,9 +168,9 @@
 
 .card-btn.secondary {
     background: transparent;
-    color: #fe2c0f;
+    color: #ffffff63;
     box-shadow: none;
-    border: 1px solid #f76845;
+    border: 1px solid #ffffff57;
 }
 
 .btn2 {
@@ -200,7 +200,7 @@
 }
 
 .review-topic.active {
-    background: #c268007a;
+    background: #FF5722;
     color: #fff;
 }
 
@@ -264,6 +264,13 @@
     display: table;
     padding: 6px;
     margin-top: -10px;
+}
+
+.title{
+    color: #fff;
+    font-size: 24px;
+    font-family: Quicksand;
+    text-shadow: rgba(0, 0, 0, 0.46) 0px 0px 2px;
 }
 
 .section-two .top .title{
@@ -338,8 +345,8 @@
 
 .banner2 {
     margin-top: -64px;
-    height: 406px;
-    background-image: url(https://images.unsplash.com/photo-1520201163981-8cc95007dd2a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80);
+    height: 87vh;
+    background-image: url(../img/images/bg21.jpg);
     background-size: cover;
     position: fixed;
     width: 100%;
@@ -864,10 +871,22 @@ td:last-child {
 }
 
 .line {
-    border-top: dashed 1px #c2c2c2;
+    border-top: solid 1px #ffffff29;
     margin-top: 10px;
     margin-bottom: 12px;
 }
+
+.rotatable {
+    -webkit-transition: -webkit-transform 500ms ease-in-out;
+    -ms-transition: -ms-transform 500ms ease-in-out;
+    transition: transform 500ms ease-in-out;
+}
+.rotate {
+    transform:rotate(360deg);
+    -ms-transform:rotate(360deg);
+    -webkit-transform:rotate(360deg);
+}
+
 
 .line.thick {
     border-top: solid 4px #ff7067;

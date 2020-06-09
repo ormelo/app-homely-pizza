@@ -60,6 +60,19 @@ class ReviewContainer extends Component {
         console.log('index: ', index);
         this.setState({activeIndex: index});
         this.setOpinionArray(item.topic);
+
+        if(document.querySelector('#primaryImg'+this.props.itemId).className.indexOf('rotate') != -1) {
+            document.querySelector('#primaryImg'+this.props.itemId).classList.remove('rotate');
+        } else {
+            document.querySelector('#primaryImg'+this.props.itemId).classList.add('rotate');
+        }
+        if (index == 1) {
+             document.querySelector('#primaryImg'+this.props.itemId).style.width = '85%';
+        } else if (index == 2) {
+             document.querySelector('#primaryImg'+this.props.itemId).style.width = '75%';
+        } else if (index == 0) {
+             document.querySelector('#primaryImg'+this.props.itemId).style.width = '100%';
+        }
     }
     showMore(e) {
         e.target.parentNode.classList.add('scrollable');
@@ -80,7 +93,7 @@ class ReviewContainer extends Component {
                 {reviewTopics && reviewTopics.map((review, index) => {
                     return (
                         <React.Fragment>
-                            <div className={activeIndex===index ? 'review-topic active': 'review-topic'} onClick={()=>{this.setActiveTopic(review, index)}}>
+                            <div className={activeIndex===index ? 'review-topic active': 'review-topic'} onClick={()=>{this.setActiveTopic(review, index); }}>
                                 {review.topic}
                             </div>
                         </React.Fragment>
@@ -94,7 +107,7 @@ class ReviewContainer extends Component {
                                                      </div>
 
 
-                 <div onClick={()=>{location.href = '/order/';}} class="card-btn secondary" style={{marginTop: '60px'}}>Customize&nbsp;→
+                 <div class="card-btn secondary" style={{marginTop: '60px'}}>Customize (coming soon)
                                      <div class=""></div>
                                                                       </div>
           </div>
@@ -122,10 +135,10 @@ class Card extends Component {
         return (
         <div className="card-container">
             <div className="section-one">
-                <br/><br/>
+                <br/>
                 <div className="top">
                     <div className="top-left">
-                        <img className="primary-img" src={`../../../img/images/p${index+1}.png`} />
+                        <img id={`primaryImg${index}`} className="primary-img rotatable" src={`../../../img/images/p${index+1}.png`} />
                     </div>
                     <div className="top-right">
                         <div className="usp-title"></div>
@@ -133,11 +146,11 @@ class Card extends Component {
                     </div>
                 </div>
             </div>
+            <div className="title">{data.title}</div>
             <hr className="line"/>
             <div className="section-two">
                 <div className="top">
-                    <div className="title">{data.title}</div>
-                    <ReviewContainer reviewTopics={data.qna[0].responses} />
+                    <ReviewContainer reviewTopics={data.qna[0].responses} itemId={index} />
                 </div>
             </div>
         </div>)
