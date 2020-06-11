@@ -121,7 +121,7 @@ class ReviewContainer extends Component {
                 <div className="incrementer">
                     <div class="card-mini-title" style={{marginBottom: '6px'}}>Quantity:</div>
                     <div class="quantity">
-                        <a href="#" className="quantity__minus"><span onClick={()=>{if(this.state.qty>1){this.setState({qty: this.state.qty - 1});}}} style={{fontSize: '25px', lineHeight: '0px', marginLeft: '2px'}}>-</span></a>
+                        <a className="quantity__minus"><span onClick={()=>{if(this.state.qty>1){this.setState({qty: this.state.qty - 1});}}} style={{fontSize: '25px', lineHeight: '0px', marginLeft: '2px'}}>-</span></a>
                         <input name="quantity" type="text" className="quantity__input" value={this.state.qty} />
                         <a className="quantity__plus"><span onClick={()=>{this.setState({qty: this.state.qty + 1});}}>+</span></a>
                       </div>
