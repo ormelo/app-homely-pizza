@@ -40,7 +40,7 @@ class ReviewContainer extends Component {
 
     constructor(props) {
         super(props);
-        this.state = {activeIndex: 0, activeOptions: []};
+        this.state = {activeIndex: 0, activeOptions: [], activeCrustIndex: 0, qty: 1};
         this.setActiveTopic = this.setActiveTopic.bind(this);
     }
     componentDidMount() {
@@ -56,24 +56,29 @@ class ReviewContainer extends Component {
         this.setState({activeOpinions: activeOpinions});
 
     }
-    setActiveTopic(item, index) {
-        console.log('index: ', index);
-        this.setState({activeIndex: index});
+    setActiveCrust(item, indexCrust) {
+        console.log('index: ', indexCrust);
+        this.setState({activeCrustIndex: indexCrust});
         this.setOpinionArray(item.topic);
-
-        if(document.querySelector('#primaryImg'+this.props.itemId).className.indexOf('rotate') != -1) {
-            document.querySelector('#primaryImg'+this.props.itemId).classList.remove('rotate');
-        } else {
-            document.querySelector('#primaryImg'+this.props.itemId).classList.add('rotate');
-        }
-        if (index == 1) {
-             document.querySelector('#primaryImg'+this.props.itemId).style.width = '85%';
-        } else if (index == 2) {
-             document.querySelector('#primaryImg'+this.props.itemId).style.width = '75%';
-        } else if (index == 0) {
-             document.querySelector('#primaryImg'+this.props.itemId).style.width = '100%';
-        }
     }
+    setActiveTopic(item, index) {
+            console.log('index: ', index);
+            this.setState({activeIndex: index});
+            this.setOpinionArray(item.topic);
+
+            if(document.querySelector('#primaryImg'+this.props.itemId).className.indexOf('rotate') != -1) {
+                document.querySelector('#primaryImg'+this.props.itemId).classList.remove('rotate');
+            } else {
+                document.querySelector('#primaryImg'+this.props.itemId).classList.add('rotate');
+            }
+            if (index == 1) {
+                 document.querySelector('#primaryImg'+this.props.itemId).style.padding = '12px';
+            } else if (index == 2) {
+                 document.querySelector('#primaryImg'+this.props.itemId).style.padding = '21px';
+            } else if (index == 0) {
+                 document.querySelector('#primaryImg'+this.props.itemId).style.padding = '0px';
+            }
+        }
     showMore(e) {
         e.target.parentNode.classList.add('scrollable');
         e.target.style.display = 'none';
@@ -81,8 +86,8 @@ class ReviewContainer extends Component {
     }
 
     render() {
-        let {reviewTopics} = this.props;
-        let {activeIndex, activeOpinions} = this.state;
+        let {reviewTopics, crustOptions} = this.props;
+        let {activeIndex, activeCrustIndex, activeOpinions, qty} = this.state;
         let activeDefaultOpinions = [];
         console.log('reviewTopics[0]:', reviewTopics[0]);
         activeDefaultOpinions = reviewTopics[0].opinions;
@@ -99,17 +104,35 @@ class ReviewContainer extends Component {
                         </React.Fragment>
                     );
                 })}
+                </div>
 
-              </div>
+                <div className="topic-container" style={{height: '76px'}}>
+                    <div className="card-mini-title">Select your crust:</div>
+                    {crustOptions && crustOptions.map((crust, indexCrust) => {
+                        return (
+                            <React.Fragment>
+                                <div className={activeCrustIndex===indexCrust ? 'review-topic active-crust': 'review-topic'} onClick={()=>{this.setActiveCrust(crust, indexCrust); }}>
+                                    {crust.topic}
+                                </div>
+                            </React.Fragment>
+                        );
+                    })}
+                </div>
+                <div className="incrementer">
+                    <div class="card-mini-title" style={{marginBottom: '6px'}}>Quantity:</div>
+                    <div class="quantity">
+                        <a href="#" className="quantity__minus"><span onClick={()=>{if(this.state.qty>1){this.setState({qty: this.state.qty - 1});}}} style={{fontSize: '25px', lineHeight: '0px', marginLeft: '2px'}}>-</span></a>
+                        <input name="quantity" type="text" className="quantity__input" value={this.state.qty} />
+                        <a className="quantity__plus"><span onClick={()=>{this.setState({qty: this.state.qty + 1});}}>+</span></a>
+                      </div>
+                </div>
 
                 <div onClick={()=>{location.href = '/order/';}} class="card-btn" style={{marginTop: '10px'}}>Add to basket&nbsp;→
                     <div class=""></div>
                                                      </div>
 
 
-                 <div class="card-btn secondary" style={{marginTop: '60px'}}>Customize (coming soon)
-                                     <div class=""></div>
-                                                                      </div>
+
           </div>
         );
     }
@@ -149,8 +172,9 @@ class Card extends Component {
             <div className="title">{data.title}</div>
             <hr className="line"/>
             <div className="section-two">
+                <div className="pricing"><label className="price">₹670</label></div>
                 <div className="top">
-                    <ReviewContainer reviewTopics={data.qna[0].responses} itemId={index} />
+                    <ReviewContainer reviewTopics={data.qna[0].responses} crustOptions={data.qna[0].crust} itemId={index} />
                 </div>
             </div>
         </div>)
