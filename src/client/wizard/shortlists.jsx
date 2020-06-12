@@ -172,7 +172,7 @@ class Card extends Component {
             <div className="title">{data.title}</div>
             <hr className="line"/>
             <div className="section-two">
-                <div className="pricing"><label className="price">₹670</label></div>
+                <div className="pricing"><label className="price"><span className="rupee">₹</span>670</label></div>
                 <div className="top">
                     <ReviewContainer reviewTopics={data.qna[0].responses} crustOptions={data.qna[0].crust} itemId={index} />
                 </div>
