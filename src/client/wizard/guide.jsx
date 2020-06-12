@@ -391,7 +391,7 @@ class Guide extends React.Component {
                 <div className="section" style={{marginTop: '400px', minHeight: '190px'}}>
                     <div className="post-heading">
 
-                        <div className="info" style={{marginTop: '10px'}}>
+                        <div className="info" style={{marginTop: '70px'}}>
                             <div className="overview" style={{marginTop: '30px'}} id="overviewMain">
                                 What if you could bake it instantly at home?
                             </div>
@@ -471,10 +471,39 @@ class Guide extends React.Component {
 
                          <section class="forth-section">
                                  <div className="overview bg-text" style={{marginTop: '-110px', display: 'inline-block'}} id="overviewBgMain">
-                                    Simply bake it in an oven or place in a cooker in low flame without weight. Your pizza's usually ready in 12 mins!
+                                    Simply bake it in an oven or place in a cooker in low flame without weight.
+                                    <br/><br/>
+                                    Your piping <b>HOT</b> pizza is usually ready in 12 mins!
                                  </div>
                                  <div class="images-wrapper">
                                      <img src="./img/images/protate.gif" style={{width: '250px'}}/>
+                                 </div>
+                                 <div className="smoke-sec" >
+                                     <svg version='1.1' xmlns='http://www.w3.org/2000/svg'>
+                                       <filter id='blur'>
+                                         <fegaussianblur stddeviation='10'></fegaussianblur>
+                                       </filter>
+                                     </svg>
+                                     <div className="h">
+                                       <div className="c"></div>
+                                       <div className="c"></div>
+                                       <div className="c"></div>
+                                       <div className="c"></div>
+                                       <div className="c"></div>
+                                       <div className="c"></div>
+                                       <div className="c"></div>
+                                       <div className="c"></div>
+                                       <div className="c"></div>
+                                       <div className="c"></div>
+                                       <div className="c"></div>
+                                       <div className="c"></div>
+                                       <div className="c"></div>
+                                       <div className="c"></div>
+                                       <div className="c"></div>
+                                       <div className="c"></div>
+                                       <div className="c"></div>
+                                       <div className="c"></div>
+                                     </div>
                                  </div>
                              </section>
 
