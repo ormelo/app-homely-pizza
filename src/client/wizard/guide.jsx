@@ -305,8 +305,6 @@ class Guide extends React.Component {
 
     handleScroll() {
         if(window.scrollY == 0) {
-            document.querySelector('#overviewMain').style.color = '#8d8d8d';
-            document.querySelector('#overviewMain').style.textShadow = 'none';
             document.querySelector('#overviewBgMain').style.display = 'none';
             document.querySelector('.scroll-arrow').style.display = 'inline';
             document.querySelector('#overviewMain').style.fontSize = '22px';
@@ -317,10 +315,8 @@ class Guide extends React.Component {
         } else {
             document.querySelector('.scroll-arrow').style.display = 'none';
             document.querySelector('#overviewBgMain').style.display = 'inline-block';
-            document.querySelector('#overviewMain').style.color = '#fff';
             document.querySelector('#overviewMain').classList.add('line-typed');
             document.querySelector('#overviewMain').classList.add('anim-typewriter');
-            document.querySelector('#overviewMain').style.textShadow = '0px 1px 2px #00000075';
             document.querySelector('#overviewMain').style.fontSize = '26px';
             document.querySelector('#overviewMain').innerHTML = 'Say hello to Homely!'
             if(window.scrollY >= 500 & window.scrollY <= 700) {

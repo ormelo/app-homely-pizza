@@ -6,7 +6,362 @@
     <meta name="theme-color" content="#fff">
     <style type="text/css">.pac-container{background-color:#fff;position:absolute!important;z-index:1000;border-radius:2px;border-top:1px solid #d9d9d9;font-family:Arial,sans-serif;box-shadow:0 2px 6px rgba(0,0,0,0.3);-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box;overflow:hidden}.pac-logo:after{content:"";padding:1px 1px 1px 0;height:16px;text-align:right;display:block;background-image:url(https://maps.gstatic.com/mapfiles/api-3/images/powered-by-google-on-white3.png);background-position:right;background-repeat:no-repeat;background-size:120px 14px}.hdpi.pac-logo:after{background-image:url(https://maps.gstatic.com/mapfiles/api-3/images/powered-by-google-on-white3_hdpi.png)}.pac-item{cursor:default;padding:0 4px;text-overflow:ellipsis;overflow:hidden;white-space:nowrap;line-height:30px;text-align:left;border-top:1px solid #e6e6e6;font-size:11px;color:#999}.pac-item:hover{background-color:#fafafa}.pac-item-selected,.pac-item-selected:hover{background-color:#ebf2fe}.pac-matched{font-weight:700}.pac-item-query{font-size:13px;padding-right:3px;color:#000}.pac-icon{width:15px;height:20px;margin-right:7px;margin-top:6px;display:inline-block;vertical-align:top;background-image:url(https://maps.gstatic.com/mapfiles/api-3/images/autocomplete-icons.png);background-size:34px}.hdpi .pac-icon{background-image:url(https://maps.gstatic.com/mapfiles/api-3/images/autocomplete-icons_hdpi.png)}.pac-icon-search{background-position:-1px -1px}.pac-item-selected .pac-icon-search{background-position:-18px -1px}.pac-icon-marker{background-position:-1px -161px}.pac-item-selected .pac-icon-marker{background-position:-18px -161px}.pac-placeholder{color:gray}
 </style><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}
+.smoke-main {
+    position: absolute;
+    top: -98px;
+    left: 41px;
+    width: 147px;
+}
+.h {
+    height: 300px;
+    position: absolute;
+    right: 0;
+    margin: auto;
+    top: 0px;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-10%);
+    z-index: 1;
+}
+.h h1, .h h2 {
+  position: absolute;
+  z-index: 3;
+  text-transform: uppercase;
+  text-shadow: 0px 10px rgba(0, 0, 0, 0.15);
+  left: 0;
+  right: 0;
+  margin: auto;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  font-family: lato;
+  font-weight: 300;
+  color: white;
+}
+.h h1 {
+  letter-spacing: 28px;
+  font-size: 14px;
+  top: 50%;
+}
+.h h2 {
+  letter-spacing: 10px;
+  font-size: 10px;
+  top: 60%;
+}
+.h .c {
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius: 400px;
+  position: absolute;
+  margin: auto;
+}
+.h .c:nth-of-type(1) {
+  box-shadow: 3px 0px rgba(255, 255, 255, 0), 6px -5px rgba(10, 0, 0, 0);
+  width: 6px;
+  height: 1px;
+  right: 10px;
+  bottom: 10px;
+  -webkit-filter: blur(8.3333333333px);
+  -moz-filter: blur(8.3333333333px);
+  -o-filter: blur(8.3333333333px);
+  -ms-filter: blur(8.3333333333px);
+  -webkit-transform-origin: 4px 2px;
+          transform-origin: 4px 2px;
+  -webkit-animation: spin 3s 0.1s linear infinite;
+          animation: spin 3s 0.1s linear infinite;
+  background: #ffffff8f;
+}
+.h .c:nth-of-type(2) {
+  box-shadow: 3px 0px rgba(255, 255, 255, 0), 6px -5px rgba(10, 0, 0, 0);
+  width: 12px;
+  height: 2px;
+  right: 20px;
+  bottom: 20px;
+  -webkit-filter: blur(8.6666666667px);
+  -moz-filter: blur(8.6666666667px);
+  -o-filter: blur(8.6666666667px);
+  -ms-filter: blur(8.6666666667px);
+  -webkit-transform-origin: 8px 4px;
+          transform-origin: 8px 4px;
+  -webkit-animation: spin 3s 0.2s linear infinite;
+          animation: spin 3s 0.2s linear infinite;
+  background: #ffffff8f;
+}
+.h .c:nth-of-type(3) {
+  box-shadow: 3px 0px rgba(255, 255, 255, 0), 6px -5px rgba(10, 0, 0, 0);
+  width: 18px;
+  height: 3px;
+  right: 30px;
+  bottom: 30px;
+  -webkit-filter: blur(9px);
+  -moz-filter: blur(9px);
+  -o-filter: blur(9px);
+  -ms-filter: blur(9px);
+  -webkit-transform-origin: 12px 6px;
+          transform-origin: 12px 6px;
+  -webkit-animation: spin 3s 0.3s linear infinite;
+          animation: spin 3s 0.3s linear infinite;
+  background: #ffffff8f;
+}
+.h .c:nth-of-type(4) {
+  box-shadow: 3px 0px rgba(255, 255, 255, 0), 6px -5px rgba(10, 0, 0, 0);
+  width: 24px;
+  height: 4px;
+  right: 40px;
+  bottom: 40px;
+  -webkit-filter: blur(9.3333333333px);
+  -moz-filter: blur(9.3333333333px);
+  -o-filter: blur(9.3333333333px);
+  -ms-filter: blur(9.3333333333px);
+  -webkit-transform-origin: 16px 8px;
+          transform-origin: 16px 8px;
+  -webkit-animation: spin 3s 0.4s linear infinite;
+          animation: spin 3s 0.4s linear infinite;
+  background: #ffffff8f;
+}
+.h .c:nth-of-type(5) {
+  box-shadow: 3px 0px rgba(255, 255, 255, 0), 6px -5px rgba(10, 0, 0, 0);
+  width: 30px;
+  height: 5px;
+  right: 50px;
+  bottom: 50px;
+  -webkit-filter: blur(9.6666666667px);
+  -moz-filter: blur(9.6666666667px);
+  -o-filter: blur(9.6666666667px);
+  -ms-filter: blur(9.6666666667px);
+  -webkit-transform-origin: 20px 10px;
+          transform-origin: 20px 10px;
+  -webkit-animation: spin 3s 0.5s linear infinite;
+          animation: spin 3s 0.5s linear infinite;
+  background: #ffffff8f;
+}
+.h .c:nth-of-type(6) {
+  box-shadow: 3px 0px rgba(255, 255, 255, 0), 6px -5px rgba(10, 0, 0, 0);
+  width: 36px;
+  height: 6px;
+  right: 60px;
+  bottom: 60px;
+  -webkit-filter: blur(10px);
+  -moz-filter: blur(10px);
+  -o-filter: blur(10px);
+  -ms-filter: blur(10px);
+  -webkit-transform-origin: 24px 12px;
+          transform-origin: 24px 12px;
+  -webkit-animation: spin 3s 0.6s linear infinite;
+          animation: spin 3s 0.6s linear infinite;
+  background: #ffffff8f;
+}
+.h .c:nth-of-type(7) {
+  box-shadow: 3px 0px rgba(255, 255, 255, 0), 6px -5px rgba(10, 0, 0, 0);
+  width: 42px;
+  height: 7px;
+  right: 70px;
+  bottom: 70px;
+  -webkit-filter: blur(10.3333333333px);
+  -moz-filter: blur(10.3333333333px);
+  -o-filter: blur(10.3333333333px);
+  -ms-filter: blur(10.3333333333px);
+  -webkit-transform-origin: 28px 14px;
+          transform-origin: 28px 14px;
+  -webkit-animation: spin 3s 0.7s linear infinite;
+          animation: spin 3s 0.7s linear infinite;
+  background: #ffffff8f;
+}
+.h .c:nth-of-type(8) {
+  box-shadow: 3px 0px rgba(255, 255, 255, 0), 6px -5px rgba(10, 0, 0, 0);
+  width: 48px;
+  height: 8px;
+  right: 80px;
+  bottom: 80px;
+  -webkit-filter: blur(10.6666666667px);
+  -moz-filter: blur(10.6666666667px);
+  -o-filter: blur(10.6666666667px);
+  -ms-filter: blur(10.6666666667px);
+  -webkit-transform-origin: 32px 16px;
+          transform-origin: 32px 16px;
+  -webkit-animation: spin 3s 0.8s linear infinite;
+          animation: spin 3s 0.8s linear infinite;
+  background: #ffffff8f;
+}
+.h .c:nth-of-type(9) {
+  box-shadow: 3px 0px rgba(255, 255, 255, 0), 6px -5px rgba(10, 0, 0, 0);
+  width: 54px;
+  height: 9px;
+  right: 90px;
+  bottom: 90px;
+  -webkit-filter: blur(11px);
+  -moz-filter: blur(11px);
+  -o-filter: blur(11px);
+  -ms-filter: blur(11px);
+  -webkit-transform-origin: 36px 18px;
+          transform-origin: 36px 18px;
+  -webkit-animation: spin 3s 0.9s linear infinite;
+          animation: spin 3s 0.9s linear infinite;
+  background: #ffffff8f;
+}
+.h .c:nth-of-type(10) {
+  box-shadow: 3px 0px rgba(255, 255, 255, 0), 6px -5px rgba(10, 0, 0, 0);
+  width: 60px;
+  height: 10px;
+  right: 100px;
+  bottom: 100px;
+  -webkit-filter: blur(11.3333333333px);
+  -moz-filter: blur(11.3333333333px);
+  -o-filter: blur(11.3333333333px);
+  -ms-filter: blur(11.3333333333px);
+  -webkit-transform-origin: 40px 20px;
+          transform-origin: 40px 20px;
+  -webkit-animation: spin 3s 1s linear infinite;
+          animation: spin 3s 1s linear infinite;
+  background: #ffffff8f;
+}
+.h .c:nth-of-type(11) {
+  box-shadow: 3px 0px rgba(255, 255, 255, 0), 6px -5px rgba(10, 0, 0, 0);
+  width: 66px;
+  height: 11px;
+  right: 110px;
+  bottom: 110px;
+  -webkit-filter: blur(11.6666666667px);
+  -moz-filter: blur(11.6666666667px);
+  -o-filter: blur(11.6666666667px);
+  -ms-filter: blur(11.6666666667px);
+  -webkit-transform-origin: 44px 22px;
+          transform-origin: 44px 22px;
+  -webkit-animation: spin 3s 1.1s linear infinite;
+          animation: spin 3s 1.1s linear infinite;
+  background: #ffffff8f;
+}
+.h .c:nth-of-type(12) {
+  box-shadow: 3px 0px rgba(255, 255, 255, 0), 6px -5px rgba(10, 0, 0, 0);
+  width: 72px;
+  height: 12px;
+  right: 120px;
+  bottom: 120px;
+  -webkit-filter: blur(12px);
+  -moz-filter: blur(12px);
+  -o-filter: blur(12px);
+  -ms-filter: blur(12px);
+  -webkit-transform-origin: 48px 24px;
+          transform-origin: 48px 24px;
+  -webkit-animation: spin 3s 1.2s linear infinite;
+          animation: spin 3s 1.2s linear infinite;
+  background: #ffffff8f;
+}
+.h .c:nth-of-type(13) {
+  box-shadow: 3px 0px rgba(255, 255, 255, 0), 6px -5px rgba(10, 0, 0, 0);
+  width: 78px;
+  height: 13px;
+  right: 130px;
+  bottom: 130px;
+  -webkit-filter: blur(12.3333333333px);
+  -moz-filter: blur(12.3333333333px);
+  -o-filter: blur(12.3333333333px);
+  -ms-filter: blur(12.3333333333px);
+  -webkit-transform-origin: 52px 26px;
+          transform-origin: 52px 26px;
+  -webkit-animation: spin 3s 1.3s linear infinite;
+          animation: spin 3s 1.3s linear infinite;
+  background: #ffffff8f;
+}
+.h .c:nth-of-type(14) {
+  box-shadow: 3px 0px rgba(255, 255, 255, 0), 6px -5px rgba(10, 0, 0, 0);
+  width: 84px;
+  height: 14px;
+  right: 140px;
+  bottom: 140px;
+  -webkit-filter: blur(12.6666666667px);
+  -moz-filter: blur(12.6666666667px);
+  -o-filter: blur(12.6666666667px);
+  -ms-filter: blur(12.6666666667px);
+  -webkit-transform-origin: 56px 28px;
+          transform-origin: 56px 28px;
+  -webkit-animation: spin 3s 1.4s linear infinite;
+          animation: spin 3s 1.4s linear infinite;
+  background: #ffffff8f;
+}
+.h .c:nth-of-type(15) {
+  box-shadow: 3px 0px rgba(255, 255, 255, 0), 6px -5px rgba(10, 0, 0, 0);
+  width: 90px;
+  height: 15px;
+  right: 150px;
+  bottom: 150px;
+  -webkit-filter: blur(13px);
+  -moz-filter: blur(13px);
+  -o-filter: blur(13px);
+  -ms-filter: blur(13px);
+  -webkit-transform-origin: 60px 30px;
+          transform-origin: 60px 30px;
+  -webkit-animation: spin 3s 1.5s linear infinite;
+          animation: spin 3s 1.5s linear infinite;
+  background: #ffffff8f;
+}
+.h .c:nth-of-type(16) {
+  box-shadow: 3px 0px rgba(255, 255, 255, 0), 6px -5px rgba(10, 0, 0, 0);
+  width: 96px;
+  height: 16px;
+  right: 160px;
+  bottom: 160px;
+  -webkit-filter: blur(13.3333333333px);
+  -moz-filter: blur(13.3333333333px);
+  -o-filter: blur(13.3333333333px);
+  -ms-filter: blur(13.3333333333px);
+  -webkit-transform-origin: 64px 32px;
+          transform-origin: 64px 32px;
+  -webkit-animation: spin 3s 1.6s linear infinite;
+          animation: spin 3s 1.6s linear infinite;
+  background: #ffffff8f;
+}
+.h .c:nth-of-type(17) {
+  box-shadow: 3px 0px rgba(255, 255, 255, 0), 6px -5px rgba(10, 0, 0, 0);
+  width: 102px;
+  height: 17px;
+  right: 170px;
+  bottom: 170px;
+  -webkit-filter: blur(13.6666666667px);
+  -moz-filter: blur(13.6666666667px);
+  -o-filter: blur(13.6666666667px);
+  -ms-filter: blur(13.6666666667px);
+  -webkit-transform-origin: 68px 34px;
+          transform-origin: 68px 34px;
+  -webkit-animation: spin 3s 1.7s linear infinite;
+          animation: spin 3s 1.7s linear infinite;
+  background: #ffffff8f;
+}
+.h .c:nth-of-type(18) {
+  box-shadow: 3px 0px rgba(255, 255, 255, 0), 6px -5px rgba(10, 0, 0, 0);
+  width: 108px;
+  height: 18px;
+  right: 180px;
+  bottom: 180px;
+  -webkit-filter: blur(14px);
+  -moz-filter: blur(14px);
+  -o-filter: blur(14px);
+  -ms-filter: blur(14px);
+  -webkit-transform-origin: 72px 36px;
+          transform-origin: 72px 36px;
+  -webkit-animation: spin 3s 1.8s linear infinite;
+          animation: spin 3s 1.8s linear infinite;
+  background: #ffffff8f;
+}
 
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
 .card-container {
     background: #cda28438;
     box-shadow: 0px 0px 44px 3px rgba(142, 89, 56, 0.67);
