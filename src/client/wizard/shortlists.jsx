@@ -164,27 +164,6 @@ class Card extends Component {
                     <div className="top-left">
                         <img id={`primaryImg${index}`} className="primary-img rotatable" src={`../../../img/images/p${index+1}.png`} />
                     </div>
-                    <div className="smoke-main">
-                        <svg version='1.1' xmlns='http://www.w3.org/2000/svg'>
-                          <filter id='blur'>
-                            <fegaussianblur stddeviation='10'></fegaussianblur>
-                          </filter>
-                        </svg>
-                        <div className="h">
-                          <div className="c"></div>
-                          <div className="c"></div>
-                          <div className="c"></div>
-                          <div className="c"></div>
-                          <div className="c"></div>
-                          <div className="c"></div>
-                          <div className="c"></div>
-                          <div className="c"></div>
-                          <div className="c"></div>
-                          <div className="c"></div>
-                          <div className="c"></div>
-                          <div className="c"></div>
-                        </div>
-                    </div>
                     <div className="top-right">
                         <div className="usp-title"></div>
                         <div className="usp-desc">{data.usp[0]}</div>
