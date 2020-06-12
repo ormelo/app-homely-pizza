@@ -182,12 +182,6 @@ class Card extends Component {
                           <div className="c"></div>
                           <div className="c"></div>
                           <div className="c"></div>
-                          <div className="c"></div>
-                          <div className="c"></div>
-                          <div className="c"></div>
-                          <div className="c"></div>
-                          <div className="c"></div>
-                          <div className="c"></div>
                         </div>
                     </div>
                     <div className="top-right">
