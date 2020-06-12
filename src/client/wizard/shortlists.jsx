@@ -13,6 +13,7 @@ import { detailView } from '../../data-source/mockData';
 import { questions, conditionalQuestions } from '../../data-source/mockDataQnA';
 import ModalView from './modalView.jsx';
 import { useHistory } from "react-router-dom";
+import $ from 'jquery';
 
 const useStyles = makeStyles({
   root: {
@@ -218,6 +219,19 @@ class Shortlists extends Component {
     }
     componentDidMount() {
         this.fetchJson();
+        $(document).ready(function () {
+
+            var winHeight = $(window).height();
+
+            $(window).scroll(function () {
+                if($(window).scrollTop() <= 120) {
+                    $("#checkoutHeader").css("top", "0px");
+                } else {
+                    $("#checkoutHeader").css("top", (80+$(window).scrollTop())+"px");
+                }
+            });
+
+        });
     }
     fetchJson() {
         console.log('this.props.match: ', this.props.match);
@@ -287,9 +301,11 @@ class Shortlists extends Component {
         return (<div>
                     <img className="icon-back" src="../../../img/images/ic_back.png" onClick={()=>{history.back(-1);}} />
                     <img id="logo" className="logo-img" src="../img/images/logohp4.png" />
-                    <div id="checkoutBtn" className="card-btn checkout" >Checkout&nbsp;→
-                        <div className=""></div>
-                        <div id="checkoutCount" class="c-count">5</div>
+                    <div id="checkoutHeader">
+                        <div id="checkoutBtn" className="card-btn checkout" >Checkout&nbsp;→
+                            <div className=""></div>
+                            <div id="checkoutCount" class="c-count">5</div>
+                        </div>
                     </div>
                     <div className="banner2"/>
                     <div className="logo" id="logoWrapper">
@@ -307,6 +323,7 @@ class Shortlists extends Component {
                                 indicatorColor="primary"
                                 textColor="primary"
                                 centered
+                                style={{display: 'none'}}
                               >
                                 <Tab label="&nbsp;&nbsp;&nbsp;All&nbsp;&nbsp;&nbsp;" />
                                 <Tab label="&nbsp;&nbsp;&nbsp;Wishlist&nbsp;&nbsp;&nbsp;" />
