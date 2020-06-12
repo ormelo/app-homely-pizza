@@ -40,7 +40,7 @@ class ReviewContainer extends Component {
 
     constructor(props) {
         super(props);
-        this.state = {activeIndex: 0, activeOptions: [], activeCrustIndex: 0, qty: 1};
+        this.state = {activeIndex: 0, activeOptions: [], activeCrustIndex: 0, qty: 0};
         this.setActiveTopic = this.setActiveTopic.bind(this);
     }
     componentDidMount() {
@@ -130,6 +130,7 @@ class ReviewContainer extends Component {
                 <div onClick={()=>{location.href = '/order/';}} class="card-btn" style={{marginTop: '10px'}}>Add to basket&nbsp;→
                     <div class=""></div>
                                                      </div>
+                {this.state.qty > 0 && <div className="c-count">{this.state.qty}</div>}
 
 
 
@@ -286,6 +287,10 @@ class Shortlists extends Component {
         return (<div>
                     <img className="icon-back" src="../../../img/images/ic_back.png" onClick={()=>{history.back(-1);}} />
                     <img id="logo" className="logo-img" src="../img/images/logohp4.png" />
+                    <div id="checkoutBtn" className="card-btn checkout" >Checkout&nbsp;→
+                        <div className=""></div>
+                        <div id="checkoutCount" class="c-count">5</div>
+                    </div>
                     <div className="banner2"/>
                     <div className="logo" id="logoWrapper">
                         <div id="logoHeading" className="logo-heading"></div>
