@@ -3,10 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="2100fea9-fa34-466f-9140-289133e88515" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/guide.bundle.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/guide.bundle.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/shortlists.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/shortlists.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/client/wizard/shortlists.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/wizard/shortlists.jsx" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -32,8 +28,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/shortlists.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="217">
-              <caret line="1446" column="10" selection-start-line="1446" selection-start-column="10" selection-end-line="1446" selection-end-column="10" />
+            <state relative-caret-position="581">
+              <caret line="1447" column="17" selection-start-line="1447" selection-start-column="17" selection-end-line="1447" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -50,8 +46,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/client/wizard/shortlists.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="310">
-              <caret line="227" column="56" selection-start-line="227" selection-start-column="56" selection-end-line="227" selection-end-column="56" />
+            <state relative-caret-position="293">
+              <caret line="132" column="59" selection-start-line="132" selection-start-column="59" selection-end-line="132" selection-end-column="59" />
             </state>
           </provider>
         </entry>
@@ -78,7 +74,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>label.price</find>
       <find>.section-one .top-right .usp-desc</find>
       <find>super cre</find>
       <find>.line</find>
@@ -108,6 +103,7 @@
       <find>checkoutHeader</find>
       <find>checkoutH</find>
       <find>#checkoutHeader</find>
+      <find>c-count</find>
     </findStrings>
     <replaceStrings>
       <replace>./img/anim1/</replace>
@@ -392,7 +388,21 @@
       <option name="project" value="LOCAL" />
       <updated>1591985603423</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="homepage">
+      <created>1591988496592</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1591988496592</updated>
+    </task>
+    <task id="LOCAL-00019" summary="homepage">
+      <created>1591988712164</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1591988712164</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TodoView">
@@ -689,15 +699,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/shortlists.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="217">
-          <caret line="1446" column="10" selection-start-line="1446" selection-start-column="10" selection-end-line="1446" selection-end-column="10" />
+        <state relative-caret-position="581">
+          <caret line="1447" column="17" selection-start-line="1447" selection-start-column="17" selection-end-line="1447" selection-end-column="17" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/client/wizard/shortlists.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="310">
-          <caret line="227" column="56" selection-start-line="227" selection-start-column="56" selection-end-line="227" selection-end-column="56" />
+        <state relative-caret-position="293">
+          <caret line="132" column="59" selection-start-line="132" selection-start-column="59" selection-end-line="132" selection-end-column="59" />
         </state>
       </provider>
     </entry>

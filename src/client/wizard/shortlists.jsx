@@ -131,7 +131,6 @@ class ReviewContainer extends Component {
                 <div onClick={()=>{location.href = '/order/';}} class="card-btn" style={{marginTop: '10px'}}>Add to basket&nbsp;→
                     <div class=""></div>
                                                      </div>
-                {this.state.qty > 0 && <div className="c-count">{this.state.qty}</div>}
 
 
 
