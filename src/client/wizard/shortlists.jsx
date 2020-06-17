@@ -87,7 +87,7 @@ class ReviewContainer extends Component {
     }
 
     render() {
-        let {reviewTopics, crustOptions} = this.props;
+        let {reviewTopics, crustOptions, item, itemId} = this.props;
         let {activeIndex, activeCrustIndex, activeOpinions, qty} = this.state;
         let activeDefaultOpinions = [];
         console.log('reviewTopics[0]:', reviewTopics[0]);
@@ -99,7 +99,7 @@ class ReviewContainer extends Component {
                 {reviewTopics && reviewTopics.map((review, index) => {
                     return (
                         <React.Fragment>
-                            <div className={activeIndex===index ? 'review-topic active': 'review-topic'} onClick={()=>{this.setActiveTopic(review, index); }}>
+                            <div className={activeIndex===index ? 'review-topic active': 'review-topic'} onClick={()=>{this.setActiveTopic(review, index); if(this.state.qty > 0){var event = new CustomEvent('basket-updated', { detail: {name: item.title, crust: crustOptions[this.state.activeCrustIndex].topic, size: reviewTopics[index].topic, qty: this.state.qty, itemId: itemId}});document.dispatchEvent(event);} }}>
                                 {review.topic}
                             </div>
                         </React.Fragment>
@@ -112,7 +112,7 @@ class ReviewContainer extends Component {
                     {crustOptions && crustOptions.map((crust, indexCrust) => {
                         return (
                             <React.Fragment>
-                                <div className={activeCrustIndex===indexCrust ? 'review-topic active-crust': 'review-topic'} onClick={()=>{this.setActiveCrust(crust, indexCrust); }}>
+                                <div className={activeCrustIndex===indexCrust ? 'review-topic active-crust': 'review-topic'} onClick={()=>{this.setActiveCrust(crust, indexCrust); if(this.state.qty > 0){var event = new CustomEvent('basket-updated', { detail: {name: item.title, crust: crustOptions[indexCrust].topic, size: reviewTopics[this.state.activeIndex].topic, qty: this.state.qty, itemId: itemId}});document.dispatchEvent(event);} }}>
                                     {crust.topic}
                                 </div>
                             </React.Fragment>
@@ -120,20 +120,13 @@ class ReviewContainer extends Component {
                     })}
                 </div>
                 <div className="incrementer">
-                    <div class="card-mini-title" style={{marginBottom: '6px'}}>Quantity:</div>
+                    <div class="card-mini-title" >Quantity:</div>
                     <div class="quantity">
-                        <a className="quantity__minus"><span onClick={()=>{if(this.state.qty>1){this.setState({qty: this.state.qty - 1});}}} style={{fontSize: '25px', lineHeight: '0px', marginLeft: '2px'}}>-</span></a>
+                        <a className="quantity__minus"><span onClick={()=>{if(this.state.qty>0){this.setState({qty: this.state.qty - 1});}}} style={{fontSize: '25px', lineHeight: '0px', marginLeft: '2px'}}>-</span></a>
                         <input name="quantity" type="text" disabled className="quantity__input" value={this.state.qty} />
-                        <a className="quantity__plus"><span onClick={()=>{this.setState({qty: this.state.qty + 1});}}>+</span></a>
+                        <a className="quantity__plus"><span onClick={()=>{this.setState({qty: this.state.qty + 1});console.log('item:',item);var event = new CustomEvent('basket-updated', { detail: {name: item.title, crust: crustOptions[this.state.activeCrustIndex].topic, size: reviewTopics[this.state.activeIndex].topic, qty: this.state.qty + 1, itemId: itemId}});document.dispatchEvent(event);}}>+</span></a>
                       </div>
                 </div>
-
-                <div onClick={()=>{location.href = '/order/';}} class="card-btn" style={{marginTop: '10px'}}>Add to basket&nbsp;→
-                    <div class=""></div>
-                                                     </div>
-
-
-
           </div>
         );
     }
@@ -175,7 +168,7 @@ class Card extends Component {
             <div className="section-two">
                 <div className="pricing"><label className="price"><span className="rupee">₹</span>670</label></div>
                 <div className="top">
-                    <ReviewContainer reviewTopics={data.qna[0].responses} crustOptions={data.qna[0].crust} itemId={index} />
+                    <ReviewContainer reviewTopics={data.qna[0].responses} crustOptions={data.qna[0].crust} itemId={index} item={data} />
                 </div>
             </div>
         </div>)
@@ -205,10 +198,32 @@ class Shortlists extends Component {
                 if($(window).scrollTop() <= 120) {
                     $("#checkoutHeader").css("top", "0px");
                 } else {
-                    $("#checkoutHeader").css("top", (80+$(window).scrollTop())+"px");
+                    $("#checkoutHeader").css("top", (0+$(window).scrollTop())+"px");
                 }
             });
 
+        });
+
+        document.addEventListener('basket-updated', function(e) {
+            console.log('basket-updated event', e.detail);
+            var currBasketData = localStorage.getItem("basket");
+            var basketData;
+            if(currBasketData == null) {
+                 basketData = new Object();
+            } else {
+                basketData = JSON.parse(currBasketData);
+            }
+            if(e.detail != null) {
+                console.log('e.detail.itemId: ', e.detail.itemId);
+                basketData[e.detail.itemId] = e.detail;
+            }
+
+            if(Object.keys(basketData).length >= 1) {
+                document.getElementById('checkoutHeader').style.display = 'inline';
+                document.getElementById('checkoutCount').innerHTML = Object.keys(basketData).length;
+            }
+            var basketStr = JSON.stringify(basketData);
+            localStorage.setItem("basket",basketStr)
         });
     }
     fetchJson() {
@@ -282,7 +297,7 @@ class Shortlists extends Component {
                     <div id="checkoutHeader">
                         <div id="checkoutBtn" className="card-btn checkout" >Checkout&nbsp;→
                             <div className=""></div>
-                            <div id="checkoutCount" class="c-count">5</div>
+                            <div id="checkoutCount" class="c-count">0</div>
                         </div>
                     </div>
                     <div className="banner2"/>

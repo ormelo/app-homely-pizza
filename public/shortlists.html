@@ -372,15 +372,12 @@
     min-height: 340px;
     padding: 0px 16px 0px 16px;
     backdrop-filter: saturate(100%) blur(15px);
+    min-height: 330px;
 }
 
 .section-one {
     min-height: 132px;
     padding-top: 8px;
-}
-
-.section-two {
-    min-height: 208px;
 }
 
 .section-one .index {
@@ -417,13 +414,13 @@
     height: 45px;
     max-width: 80vw;
     overflow-x: scroll;
-    margin-right: 132px;
     opacity: 0.75;
 }
 
 .reviews-container {
     margin-top: 10px;
     max-width: 370px;
+    height: 144px;
     overflow: hidden;
 }
 
@@ -575,12 +572,13 @@
   align-items: center;
   justify-content: center;
   padding: 0;
+    margin-top: 9px;
 }
 .quantity__minus,
 .quantity__plus {
     isplay: block;
     width: 27px;
-    height: 28px;
+    height: 33px;
     margin: 0;
     background: #ee9d7d;
     text-decoration: none;
@@ -588,6 +586,7 @@
     line-height: 28px;
     color: #fff;
     font-size: 19px;
+    padding: 2px 15px 4px 9px;
 }
 .quantity__minus:hover,
 .quantity__plus:hover {
@@ -602,7 +601,7 @@
 }
 .quantity__input {
     width: 32px;
-    height: 28px;
+    height: 33px;
     margin: 0;
     padding: 0;
     text-align: center;
@@ -622,10 +621,10 @@
   color: #fff;
 }
 .incrementer {
-    position: relative;
-    top: -75px;
+    position: absolute;
+    bottom: 25px;
     float: right;
-    right: 100px;
+    right: 61px;
     opacity: 0.75;
 }
 .pricing {
@@ -659,9 +658,10 @@
 }
 
 .section-one .top-left {
-    width: 172px;
+    width: 176px;
     margin: 0px;
     overflow: hidden;
+    padding: 4px;
 }
 
 .section-one .top-right .usp-title {
@@ -696,7 +696,6 @@
 
 .section-two .top {
     display: table;
-    padding: 6px;
     margin-top: -10px;
 }
 
@@ -1328,6 +1327,7 @@ td:last-child {
     font-family: Quicksand;
     font-size: 16px;
     margin-top: 8px;
+    margin-bottom: 5px;
 }
 
 label.price {
@@ -1446,6 +1446,7 @@ div#containerWiz {
     background: #333;
     border-radius: 30px;
     height: 50px;
+    background: linear-gradient(-45deg, #fa6037, #f57556,#fd5531, rgba(255,27,0,0.98));
 }
 #checkoutHeader {
     top: 0px;
@@ -1453,6 +1454,7 @@ div#containerWiz {
     height: 82px;
     position: absolute;
     z-index: 1;
+    display: none;
 }
 
 -webkit-text-size-adjust:none;
