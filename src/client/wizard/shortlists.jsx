@@ -58,7 +58,6 @@ class ReviewContainer extends Component {
 
     }
     setCrustPrice(crustIndex) {
-        debugger;
         let crust = this.props.crustOptions[crustIndex].topic;
         let item = this.props.item;
         console.log('::Size::', this.props.reviewTopics[this.state.activeIndex].topic);
@@ -71,7 +70,6 @@ class ReviewContainer extends Component {
         }
     }
     setSizePrice(activeIndex) {
-        debugger;
         let size = this.props.reviewTopics[activeIndex].topic;
         let item = this.props.item;
         console.log('::Size::', size);
@@ -79,7 +77,6 @@ class ReviewContainer extends Component {
         console.log('::Price::', this.props.crustOptions[this.state.activeCrustIndex]["pricing"][size]);
         document.getElementById('price'+this.props.itemId).innerHTML = this.props.crustOptions[this.state.activeCrustIndex]["pricing"][size] * (this.state.qty > 0 ? this.state.qty : 1);
         if(this.state.qty > 0){
-            debugger;
             var event = new CustomEvent('basket-updated', { detail: {name: item.title, crust: this.props.crustOptions[this.state.activeCrustIndex].topic, size: this.props.reviewTopics[activeIndex].topic, qty: this.state.qty, price: this.props.crustOptions[this.state.activeCrustIndex]["pricing"][size] * this.state.qty, itemId: this.props.itemId}});
             document.dispatchEvent(event);
         }
@@ -332,7 +329,7 @@ class Shortlists extends Component {
                     <img className="icon-back" src="../../../img/images/ic_back.png" onClick={()=>{history.back(-1);}} />
                     <img id="logo" className="logo-img" src="../img/images/logohp4.png" />
                     <div id="checkoutHeader">
-                        <div id="checkoutBtn" className="card-btn checkout" >Checkout&nbsp;→
+                        <div id="checkoutBtn" className="card-btn checkout" onClick={()=>{document.getElementById('checkoutModal').style.top='120px';}}>Checkout&nbsp;→
                             <div className=""></div>
                             <div id="checkoutCount" class="c-count">0</div>
                         </div>
@@ -346,6 +343,7 @@ class Shortlists extends Component {
                     <div><i className="loading" id="myTasksLoader" style={{top: '28px'}}></i></div>
                     <div className="main fadeInBottom">
                         <hr className="line-tasks"/>
+                        <div id="checkoutModal" className="card-container checkout-modal modal-show" />
                         <Paper>
                               <Tabs
                                 value={this.state.value}
