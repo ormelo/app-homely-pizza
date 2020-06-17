@@ -57,6 +57,33 @@ class ReviewContainer extends Component {
         this.setState({activeOpinions: activeOpinions});
 
     }
+    setCrustPrice(crustIndex) {
+        debugger;
+        let crust = this.props.crustOptions[crustIndex].topic;
+        let item = this.props.item;
+        console.log('::Size::', this.props.reviewTopics[this.state.activeIndex].topic);
+        console.log('::Crust::', crust);
+        console.log('::Price::', this.props.reviewTopics[this.state.activeIndex]["pricing"][crust]);
+        document.getElementById('price'+this.props.itemId).innerHTML = this.props.reviewTopics[this.state.activeIndex]["pricing"][crust] * (this.state.qty > 0 ? this.state.qty : 1);
+        if(this.state.qty > 0){
+            var event = new CustomEvent('basket-updated', { detail: {name: item.title, crust: this.props.crustOptions[crustIndex].topic, size: this.props.reviewTopics[this.state.activeIndex].topic, qty: this.state.qty, price: this.props.reviewTopics[this.state.activeIndex]["pricing"][crust] * this.state.qty, itemId: this.props.itemId}});
+            document.dispatchEvent(event);
+        }
+    }
+    setSizePrice(activeIndex) {
+        debugger;
+        let size = this.props.reviewTopics[activeIndex].topic;
+        let item = this.props.item;
+        console.log('::Size::', size);
+        console.log('::Crust::', this.props.crustOptions[this.state.activeCrustIndex].topic);
+        console.log('::Price::', this.props.crustOptions[this.state.activeCrustIndex]["pricing"][size]);
+        document.getElementById('price'+this.props.itemId).innerHTML = this.props.crustOptions[this.state.activeCrustIndex]["pricing"][size] * (this.state.qty > 0 ? this.state.qty : 1);
+        if(this.state.qty > 0){
+            debugger;
+            var event = new CustomEvent('basket-updated', { detail: {name: item.title, crust: this.props.crustOptions[this.state.activeCrustIndex].topic, size: this.props.reviewTopics[activeIndex].topic, qty: this.state.qty, price: this.props.crustOptions[this.state.activeCrustIndex]["pricing"][size] * this.state.qty, itemId: this.props.itemId}});
+            document.dispatchEvent(event);
+        }
+    }
     setActiveCrust(item, indexCrust) {
         console.log('index: ', indexCrust);
         this.setState({activeCrustIndex: indexCrust});
@@ -85,6 +112,16 @@ class ReviewContainer extends Component {
         e.target.style.display = 'none';
         e.target.parentNode.children[e.target.parentNode.children.length - 1].style.marginTop = '7px';
     }
+    updatePrice(qty) {
+        if(qty >= 1) {
+            let size = this.props.reviewTopics[this.state.activeIndex].topic;
+            document.getElementById('price'+this.props.itemId).innerHTML = this.props.crustOptions[this.state.activeCrustIndex]["pricing"][size] * qty;
+        }
+    }
+    getPrice(qty) {
+        let size = this.props.reviewTopics[this.state.activeIndex].topic;
+        return this.props.crustOptions[this.state.activeCrustIndex]["pricing"][size] * qty;
+    }
 
     render() {
         let {reviewTopics, crustOptions, item, itemId} = this.props;
@@ -99,7 +136,7 @@ class ReviewContainer extends Component {
                 {reviewTopics && reviewTopics.map((review, index) => {
                     return (
                         <React.Fragment>
-                            <div className={activeIndex===index ? 'review-topic active': 'review-topic'} onClick={()=>{this.setActiveTopic(review, index); if(this.state.qty > 0){var event = new CustomEvent('basket-updated', { detail: {name: item.title, crust: crustOptions[this.state.activeCrustIndex].topic, size: reviewTopics[index].topic, qty: this.state.qty, itemId: itemId}});document.dispatchEvent(event);} }}>
+                            <div className={activeIndex===index ? 'review-topic active': 'review-topic'} onClick={()=>{this.setActiveTopic(review, index);  this.setSizePrice(index); }}>
                                 {review.topic}
                             </div>
                         </React.Fragment>
@@ -112,7 +149,7 @@ class ReviewContainer extends Component {
                     {crustOptions && crustOptions.map((crust, indexCrust) => {
                         return (
                             <React.Fragment>
-                                <div className={activeCrustIndex===indexCrust ? 'review-topic active-crust': 'review-topic'} onClick={()=>{this.setActiveCrust(crust, indexCrust); if(this.state.qty > 0){var event = new CustomEvent('basket-updated', { detail: {name: item.title, crust: crustOptions[indexCrust].topic, size: reviewTopics[this.state.activeIndex].topic, qty: this.state.qty, itemId: itemId}});document.dispatchEvent(event);} }}>
+                                <div className={activeCrustIndex===indexCrust ? 'review-topic active-crust': 'review-topic'} onClick={()=>{this.setActiveCrust(crust, indexCrust); this.setCrustPrice(indexCrust); }}>
                                     {crust.topic}
                                 </div>
                             </React.Fragment>
@@ -122,9 +159,9 @@ class ReviewContainer extends Component {
                 <div className="incrementer">
                     <div class="card-mini-title" >Quantity:</div>
                     <div class="quantity">
-                        <a className="quantity__minus"><span onClick={()=>{if(this.state.qty>0){this.setState({qty: this.state.qty - 1});}}} style={{fontSize: '25px', lineHeight: '0px', marginLeft: '2px'}}>-</span></a>
+                        <a className="quantity__minus"><span onClick={()=>{if(this.state.qty>0){this.setState({qty: this.state.qty - 1});}this.updatePrice(this.state.qty - 1);var event = new CustomEvent('basket-updated', { detail: {name: item.title, crust: crustOptions[this.state.activeCrustIndex].topic, size: reviewTopics[this.state.activeIndex].topic, qty: this.state.qty - 1, price: this.getPrice(this.state.qty - 1), itemId: itemId}});document.dispatchEvent(event);}} style={{fontSize: '25px', lineHeight: '0px', marginLeft: '2px'}}>-</span></a>
                         <input name="quantity" type="text" disabled className="quantity__input" value={this.state.qty} />
-                        <a className="quantity__plus"><span onClick={()=>{this.setState({qty: this.state.qty + 1});console.log('item:',item);var event = new CustomEvent('basket-updated', { detail: {name: item.title, crust: crustOptions[this.state.activeCrustIndex].topic, size: reviewTopics[this.state.activeIndex].topic, qty: this.state.qty + 1, itemId: itemId}});document.dispatchEvent(event);}}>+</span></a>
+                        <a className="quantity__plus"><span onClick={()=>{this.setState({qty: this.state.qty + 1});console.log('item:',item);var event = new CustomEvent('basket-updated', { detail: {name: item.title, crust: crustOptions[this.state.activeCrustIndex].topic, size: reviewTopics[this.state.activeIndex].topic, qty: this.state.qty + 1, price: this.getPrice(this.state.qty + 1), itemId: itemId}});document.dispatchEvent(event);this.updatePrice(this.state.qty + 1)}}>+</span></a>
                       </div>
                 </div>
           </div>
@@ -166,7 +203,7 @@ class Card extends Component {
             <div className="title">{data.title}</div>
             <hr className="line"/>
             <div className="section-two">
-                <div className="pricing"><label className="price"><span className="rupee">₹</span>670</label></div>
+                <div className="pricing"><label className="price"><span className="rupee">₹</span><span id={`price${index}`}>{data.qna[0].defaultPrice}</span></label></div>
                 <div className="top">
                     <ReviewContainer reviewTopics={data.qna[0].responses} crustOptions={data.qna[0].crust} itemId={index} item={data} />
                 </div>
@@ -191,7 +228,7 @@ class Shortlists extends Component {
     componentDidMount() {
         this.fetchJson();
         $(document).ready(function () {
-
+            localStorage.removeItem("basket");
             var winHeight = $(window).height();
 
             $(window).scroll(function () {

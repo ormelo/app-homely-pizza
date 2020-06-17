@@ -10,23 +10,29 @@
      "address": "129, Siddapura, Whitefield, Bengaluru, Karnataka, India, Varthur Main Road, Bengaluru",
      "qna": [
        {
+         "defaultPrice": 370,
          "responses": [
            {
-             "topic": "Large"
+             "topic": "Large",
+             "pricing": {"Thin":  370, "Thick":  480}
            },
            {
-             "topic": "Medium"
+             "topic": "Medium",
+             "pricing": {"Thin":  350, "Thick":  420}
            },
            {
-             "topic": "Small"
+             "topic": "Small",
+             "pricing": {"Thin":  320, "Thick":  400}
            }
          ],
          "crust": [
            {
-             "topic": "Thin"
+             "topic": "Thin",
+             "pricing": {"Large":  370, "Medium":  350, "Small":  320}
            },
            {
-             "topic": "Thick"
+             "topic": "Thick",
+             "pricing": {"Large":  480, "Medium":  420, "Small":  400}
            }
          ]
        }
@@ -46,23 +52,29 @@
      "address": "129, Siddapura, Whitefield, Bengaluru, Karnataka, India, Varthur Main Road, Bengaluru",
      "qna": [
        {
+         "defaultPrice": 400,
          "responses": [
            {
-             "topic": "Large"
+             "topic": "Large",
+             "pricing": {"Thin":  400, "Thick":  450}
            },
            {
-             "topic": "Medium"
+             "topic": "Medium",
+             "pricing": {"Thin":  350, "Thick":  400}
            },
            {
-             "topic": "Small"
+             "topic": "Small",
+             "pricing": {"Thin":  320, "Thick":  360}
            }
          ],
          "crust": [
            {
-             "topic": "Thin"
+             "topic": "Thin",
+             "pricing": {"Large":  400, "Medium":  350, "Small":  320}
            },
            {
-             "topic": "Thick"
+             "topic": "Thick",
+             "pricing": {"Large":  450, "Medium":  400, "Small":  360}
            }
          ]
        }
@@ -82,23 +94,29 @@
      "address": "129, Siddapura, Whitefield, Bengaluru, Karnataka, India, Varthur Main Road, Bengaluru",
      "qna": [
        {
+         "defaultPrice": "370",
          "responses": [
            {
-             "topic": "Large"
+             "topic": "Large",
+             "pricing": {"Thin":  370, "Thick":  480}
            },
            {
-             "topic": "Medium"
+             "topic": "Medium",
+             "pricing": {"Thin":  350, "Thick":  420}
            },
            {
-             "topic": "Small"
+             "topic": "Small",
+             "pricing": {"Thin":  320, "Thick":  400}
            }
          ],
          "crust": [
            {
-             "topic": "Thin"
+             "topic": "Thin",
+             "pricing": {"Large":  370, "Medium":  350, "Small":  320}
            },
            {
-             "topic": "Thick"
+             "topic": "Thick",
+             "pricing": {"Large":  480, "Medium":  420, "Small":  400}
            }
          ]
        }
@@ -118,23 +136,29 @@
      "address": "129, Siddapura, Whitefield, Bengaluru, Karnataka, India, Varthur Main Road, Bengaluru",
      "qna": [
        {
+         "defaultPrice": "370",
          "responses": [
            {
-             "topic": "Large"
+             "topic": "Large",
+             "pricing": {"Thin":  370, "Thick":  480}
            },
            {
-             "topic": "Medium"
+             "topic": "Medium",
+             "pricing": {"Thin":  350, "Thick":  420}
            },
            {
-             "topic": "Small"
+             "topic": "Small",
+             "pricing": {"Thin":  320, "Thick":  400}
            }
          ],
          "crust": [
            {
-             "topic": "Thin"
+             "topic": "Thin",
+             "pricing": {"Large":  370, "Medium":  350, "Small":  320}
            },
            {
-             "topic": "Thick"
+             "topic": "Thick",
+             "pricing": {"Large":  480, "Medium":  420, "Small":  400}
            }
          ]
        }
@@ -154,23 +178,29 @@
      "address": "129, Siddapura, Whitefield, Bengaluru, Karnataka, India, Varthur Main Road, Bengaluru",
      "qna": [
        {
+         "defaultPrice": "370",
          "responses": [
            {
-             "topic": "Large"
+             "topic": "Large",
+             "pricing": {"Thin":  370, "Thick":  480}
            },
            {
-             "topic": "Medium"
+             "topic": "Medium",
+             "pricing": {"Thin":  350, "Thick":  420}
            },
            {
-             "topic": "Small"
+             "topic": "Small",
+             "pricing": {"Thin":  320, "Thick":  400}
            }
          ],
          "crust": [
            {
-             "topic": "Thin"
+             "topic": "Thin",
+             "pricing": {"Large":  370, "Medium":  350, "Small":  320}
            },
            {
-             "topic": "Thick"
+             "topic": "Thick",
+             "pricing": {"Large":  480, "Medium":  420, "Small":  400}
            }
          ]
        }
@@ -190,23 +220,29 @@
      "address": "129, Siddapura, Whitefield, Bengaluru, Karnataka, India, Varthur Main Road, Bengaluru",
      "qna": [
        {
+         "defaultPrice": "370",
          "responses": [
            {
-             "topic": "Large"
+             "topic": "Large",
+             "pricing": {"Thin":  370, "Thick":  480}
            },
            {
-             "topic": "Medium"
+             "topic": "Medium",
+             "pricing": {"Thin":  350, "Thick":  420}
            },
            {
-             "topic": "Small"
+             "topic": "Small",
+             "pricing": {"Thin":  320, "Thick":  400}
            }
          ],
          "crust": [
            {
-             "topic": "Thin"
+             "topic": "Thin",
+             "pricing": {"Large":  370, "Medium":  350, "Small":  320}
            },
            {
-             "topic": "Thick"
+             "topic": "Thick",
+             "pricing": {"Large":  480, "Medium":  420, "Small":  400}
            }
          ]
        }
@@ -226,23 +262,29 @@
      "address": "129, Siddapura, Whitefield, Bengaluru, Karnataka, India, Varthur Main Road, Bengaluru",
      "qna": [
        {
+         "defaultPrice": "370",
          "responses": [
            {
-             "topic": "Large"
+             "topic": "Large",
+             "pricing": {"Thin":  370, "Thick":  480}
            },
            {
-             "topic": "Medium"
+             "topic": "Medium",
+             "pricing": {"Thin":  350, "Thick":  420}
            },
            {
-             "topic": "Small"
+             "topic": "Small",
+             "pricing": {"Thin":  320, "Thick":  400}
            }
          ],
          "crust": [
            {
-             "topic": "Thin"
+             "topic": "Thin",
+             "pricing": {"Large":  370, "Medium":  350, "Small":  320}
            },
            {
-             "topic": "Thick"
+             "topic": "Thick",
+             "pricing": {"Large":  480, "Medium":  420, "Small":  400}
            }
          ]
        }
@@ -262,23 +304,29 @@
      "address": "129, Siddapura, Whitefield, Bengaluru, Karnataka, India, Varthur Main Road, Bengaluru",
      "qna": [
        {
+         "defaultPrice": "370",
          "responses": [
            {
-             "topic": "Large"
+             "topic": "Large",
+             "pricing": {"Thin":  370, "Thick":  480}
            },
            {
-             "topic": "Medium"
+             "topic": "Medium",
+             "pricing": {"Thin":  350, "Thick":  420}
            },
            {
-             "topic": "Small"
+             "topic": "Small",
+             "pricing": {"Thin":  320, "Thick":  400}
            }
          ],
          "crust": [
            {
-             "topic": "Thin"
+             "topic": "Thin",
+             "pricing": {"Large":  370, "Medium":  350, "Small":  320}
            },
            {
-             "topic": "Thick"
+             "topic": "Thick",
+             "pricing": {"Large":  480, "Medium":  420, "Small":  400}
            }
          ]
        }
@@ -298,23 +346,29 @@
      "address": "129, Siddapura, Whitefield, Bengaluru, Karnataka, India, Varthur Main Road, Bengaluru",
      "qna": [
        {
+         "defaultPrice": "370",
          "responses": [
            {
-             "topic": "Large"
+             "topic": "Large",
+             "pricing": {"Thin":  370, "Thick":  480}
            },
            {
-             "topic": "Medium"
+             "topic": "Medium",
+             "pricing": {"Thin":  350, "Thick":  420}
            },
            {
-             "topic": "Small"
+             "topic": "Small",
+             "pricing": {"Thin":  320, "Thick":  400}
            }
          ],
          "crust": [
            {
-             "topic": "Thin"
+             "topic": "Thin",
+             "pricing": {"Large":  370, "Medium":  350, "Small":  320}
            },
            {
-             "topic": "Thick"
+             "topic": "Thick",
+             "pricing": {"Large":  480, "Medium":  420, "Small":  400}
            }
          ]
        }
