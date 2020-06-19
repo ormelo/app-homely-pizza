@@ -37,6 +37,7 @@
     "babel-preset-env": "^1.7.0",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
+    "compression-webpack-plugin": "^4.0.0",
     "ddg": "0.0.3",
     "flipkart-affiliate": "^1.1.0",
     "flipkart-api-affiliate-client": "1.1.0",

@@ -1,41 +1,10 @@
 import React, { Component } from 'react';
-import { render } from 'react-dom';
 import axios from 'axios';
-import { BrowserRouter as Router, Route, Link, withRouter } from 'react-router-dom';
-import { makeStyles } from '@material-ui/core/styles';
-import Paper from '@material-ui/core/Paper';
-import Tabs from '@material-ui/core/Tabs';
-import Tab from '@material-ui/core/Tab';
-import Typography from '@material-ui/core/Typography';
-import Box from '@material-ui/core/Box';
+import { render } from 'react-dom';
+import { Link, withRouter } from 'react-router-dom';
 
-import { detailView } from '../../data-source/mockData';
 import { questions, conditionalQuestions } from '../../data-source/mockDataQnA';
-import ModalView from './modalView.jsx';
 import { useHistory } from "react-router-dom";
-import $ from 'jquery';
-
-const useStyles = makeStyles({
-  root: {
-    flexGrow: 1,
-  },
-});
-
-function TabPanel(props) {
-  const { children, value, index } = props;
-
-  return (
-    <Typography
-      component="div"
-      role="tabpanel"
-      hidden={value !== index}
-      id={`full-width-tabpanel-${index}`}
-      aria-labelledby={`full-width-tab-${index}`}
-    >
-      <Box p={3}>{children}</Box>
-    </Typography>
-  );
-}
 
 class ReviewContainer extends Component {
 
@@ -214,9 +183,6 @@ class Shortlists extends Component {
 
     constructor() {
         super();
-        this.notifyMeClick = this.notifyMeClick.bind(this);
-        this.cancelStint = this.cancelStint.bind(this);
-        this.handleTabChange = this.handleTabChange.bind(this);
         this.state = {
             value: 0,
             results: []
@@ -224,18 +190,15 @@ class Shortlists extends Component {
     }
     componentDidMount() {
         this.fetchJson();
-        $(document).ready(function () {
-            localStorage.removeItem("basket");
-            var winHeight = $(window).height();
+        localStorage.removeItem("basket");
+        var winHeight = window.innerHeight;
 
-            $(window).scroll(function () {
-                if($(window).scrollTop() <= 120) {
-                    $("#checkoutHeader").css("top", "0px");
-                } else {
-                    $("#checkoutHeader").css("top", (0+$(window).scrollTop())+"px");
-                }
-            });
-
+        window.addEventListener("scroll",function () {
+            if(window.scrollY <= 120) {
+                document.querySelector("#checkoutHeader").style.top = "0px";
+            } else {
+                document.querySelector("#checkoutHeader").style.top = window.scrollY+"px";
+            }
         });
 
         document.addEventListener('basket-updated', function(e) {
@@ -272,57 +235,6 @@ class Shortlists extends Component {
             this.setState({results: response.data.results});
           }.bind(this));
     }
-    handleTabChange(event, newValue) {
-        console.log('neValue: ', newValue);
-        this.setState({value: newValue});
-    }
-    cancelStint() {
-        localStorage.removeItem('primary-task');
-        localStorage.removeItem('secondary-task');
-        localStorage.removeItem('subsrcibed');
-        localStorage.removeItem('elapsed');
-        setTimeout("location.href='/'", 800);
-    }
-
-    loadNotifyScript(cb) {
-        var script = '//cdn.pushalert.co/integrate_330e438e9b44f62593c1ae84de8aa777.js';
-        var el = document.createElement('script');
-        el.onload = function(script){
-            console.log('pushalert script loaded');
-            setTimeout(function(){cb();},14000);
-        };
-        el.src = script;
-        var initialScriptElement = document.getElementsByTagName('script')[0];
-        initialScriptElement.parentNode.insertBefore(el, initialScriptElement);
-    }
-    notifyEvent() {
-        window.primaryTaskName = localStorage.getItem('primary-task');
-        if(primaryTaskName == 'Interior design') {
-            (pushalertbyiw = window.pushalertbyiw || []).push(['trackEvent', 'task', 'interiorDesign', 'trigger', 1]); //alert('notifiying for interior design');
-        } else if(primaryTaskName == 'Event planning') {
-            (pushalertbyiw = window.pushalertbyiw || []).push(['trackEvent', 'task', 'eventPlanning', 'trigger', 1]); //alert('notifiying for event planning');
-        }
-        document.getElementById('myTasksLoader').style.display = 'none';
-        document.getElementById('myTasksSuccess').style.display = 'block';
-        document.getElementById('tasksTitle').innerHTML = 'You will get a push notification!';
-        document.getElementById('tasksTitle').style.color = '#0bba7f';
-        document.getElementById('tasksTitle').classList.add('shake');
-    }
-    notifyMeClick() {
-        document.getElementById('myTasksLoader').style.display = 'block';
-        document.getElementById('greenBtn').style.visibility = 'hidden';
-        document.getElementById('iconArrow').style.display = 'none';
-        localStorage.setItem('subsrcibed', 'true');
-        localStorage.setItem('elapsed', new Date().getTime());
-        if(!window.pushScriptLoadTriggered) {
-            this.loadNotifyScript(this.notifyEvent);
-            window.pushScriptLoadTriggered = true;
-        } else {
-            this.notifyEvent();
-        }
-    }
-
-
     render() {
         const {showLoader, results} = this.state;
         return (<div>
@@ -344,33 +256,12 @@ class Shortlists extends Component {
                     <div className="main fadeInBottom">
                         <hr className="line-tasks"/>
                         <div id="checkoutModal" className="card-container checkout-modal modal-show" />
-                        <Paper>
-                              <Tabs
-                                value={this.state.value}
-                                onChange={this.handleTabChange}
-                                indicatorColor="primary"
-                                textColor="primary"
-                                centered
-                                style={{display: 'none'}}
-                              >
-                                <Tab label="&nbsp;&nbsp;&nbsp;All&nbsp;&nbsp;&nbsp;" />
-                                <Tab label="&nbsp;&nbsp;&nbsp;Wishlist&nbsp;&nbsp;&nbsp;" />
-                              </Tabs>
-                              <TabPanel value={this.state.value} index={0}>
+
 
                                     {results && results.map((resultItem, index) => {
                                         return (<Card index={index} data={resultItem} />);
                                     })}
 
-                              </TabPanel>
-                              <TabPanel value={this.state.value} index={1}>
-
-                                    {results && results.map((resultItem, index) => {
-                                        return (<Card index={index} data={resultItem} />);
-                                    })}
-
-                              </TabPanel>
-                            </Paper>
 
                     </div>
                 <br/>
