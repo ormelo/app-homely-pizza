@@ -241,7 +241,7 @@ class Shortlists extends Component {
                     <img className="icon-back" src="../../../img/images/ic_back.png" onClick={()=>{history.back(-1);}} />
                     <img id="logo" className="logo-img" src="../img/images/logohp4.png" />
                     <div id="checkoutHeader">
-                        <div id="checkoutBtn" className="card-btn checkout" onClick={()=>{document.getElementById('checkoutModal').style.top='120px';}}>Checkout&nbsp;→
+                        <div id="checkoutBtn" className="card-btn checkout" onClick={()=>{document.getElementById('checkoutModal').style.top='-20px';}}>Checkout&nbsp;→
                             <div className=""></div>
                             <div id="checkoutCount" class="c-count">0</div>
                         </div>
@@ -255,7 +255,33 @@ class Shortlists extends Component {
                     <div><i className="loading" id="myTasksLoader" style={{top: '28px'}}></i></div>
                     <div className="main fadeInBottom">
                         <hr className="line-tasks"/>
-                        <div id="checkoutModal" className="card-container checkout-modal modal-show" />
+                        <div id="checkoutModal" className="card-container checkout-modal modal-show">
+                            <div className="modal-heading">
+                                <div className="right" onClick={()=>{document.getElementById('checkoutModal').style.top='1200px';}}>
+                                    <img src="../../../img/images/ic_close.png" />
+                                </div>
+                            </div>
+                            <div className="md-stepper-horizontal orange">
+                                <div className="md-step done">
+                                  <div className="md-step-circle"><span>1</span></div>
+                                  <div className="md-step-title">Confirm Order</div>
+                                  <div className="md-step-bar-left"></div>
+                                  <div className="md-step-bar-right"></div>
+                                </div>
+                                <div className="md-step">
+                                  <div className="md-step-circle"><span>2</span></div>
+                                  <div className="md-step-title">Delivery Address</div>
+                                  <div className="md-step-bar-left"></div>
+                                  <div className="md-step-bar-right"></div>
+                                </div>
+                                <div className="md-step">
+                                  <div className="md-step-circle"><span>3</span></div>
+                                  <div className="md-step-title">Make Payment</div>
+                                  <div className="md-step-bar-left"></div>
+                                  <div className="md-step-bar-right"></div>
+                                </div>
+                              </div>
+                        </div>
 
 
                                     {results && results.map((resultItem, index) => {

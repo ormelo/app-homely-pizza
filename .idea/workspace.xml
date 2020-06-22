@@ -3,7 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="2100fea9-fa34-466f-9140-289133e88515" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/guide.bundle.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/guide.bundle.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/shortlists.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/shortlists.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/wizard/shortlists.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/wizard/shortlists.jsx" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -34,11 +36,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="431">
-              <caret line="2538" column="27" lean-forward="true" selection-start-line="2538" selection-start-column="27" selection-end-line="2538" selection-end-column="27" />
+            <state relative-caret-position="403">
+              <caret line="2538" column="27" selection-start-line="2538" selection-start-column="27" selection-end-line="2538" selection-end-column="27" />
             </state>
           </provider>
         </entry>
@@ -46,17 +48,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/client/wizard/shortlists.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3383">
-              <caret line="199" column="89" selection-start-line="199" selection-start-column="89" selection-end-line="199" selection-end-column="89" />
+            <state relative-caret-position="421">
+              <caret line="259" column="124" selection-start-line="259" selection-start-column="124" selection-end-line="259" selection-end-column="124" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/shortlists.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="329">
-              <caret line="1333" column="16" selection-start-line="1333" selection-start-column="16" selection-end-line="1333" selection-end-column="16" />
+            <state relative-caret-position="380">
+              <caret line="1523" column="84" selection-start-line="1523" selection-start-column="84" selection-end-line="1523" selection-end-column="84" />
             </state>
           </provider>
         </entry>
@@ -65,12 +67,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>mytasks</find>
-      <find>book</find>
-      <find>end</find>
-      <find>end_</find>
-      <find>searchResults</find>
-      <find>modalView.</find>
       <find>useSty</find>
       <find>plugin</find>
       <find>ResultsList</find>
@@ -91,7 +87,20 @@
       <find>Router</find>
       <find>font-awe</find>
       <find>questions</find>
+      <find>img/</find>
+      <find>checkoutModal</find>
+      <find>checkout-modal</find>
+      <find>class</find>
+      <find>md-step-ti</find>
+      <find>.md-stepper-horizontal</find>
+      <find>done</find>
+      <find>.md-stepper-horizontal .md-step .md-step-title</find>
+      <find>.modal-heading .right</find>
+      <find>.md-stepper-horizontal .md-step .md-step-circle</find>
     </findStrings>
+    <replaceStrings>
+      <replace>className</replace>
+    </replaceStrings>
   </component>
   <component name="GOROOT" path="/usr/local/Cellar/go/1.14/libexec" />
   <component name="Git.Settings">
@@ -101,10 +110,10 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/webpack.config.js" />
-        <option value="$PROJECT_DIR$/src/client/wizard/shortlists.jsx" />
-        <option value="$PROJECT_DIR$/public/shortlists.html" />
         <option value="$PROJECT_DIR$/src/client/wizard/guide.jsx" />
         <option value="$PROJECT_DIR$/public/index.html" />
+        <option value="$PROJECT_DIR$/src/client/wizard/shortlists.jsx" />
+        <option value="$PROJECT_DIR$/public/shortlists.html" />
       </list>
     </option>
   </component>
@@ -120,6 +129,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -181,7 +191,6 @@
         </subPane>
       </pane>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="ProjectViewState">
@@ -387,7 +396,14 @@
       <option name="project" value="LOCAL" />
       <updated>1592592381085</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="homepage">
+      <created>1592593301744</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1592593301744</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TodoView">
@@ -400,10 +416,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1922" height="1104" extended-state="6" />
+    <frame x="0" y="23" width="1920" height="1104" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2611702" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26357827" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
@@ -446,38 +462,16 @@
     <state x="549" y="326" key="Vcs.Push.Dialog.v2/0.23.1920.1107@0.23.1920.1107" timestamp="1592426087851" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/client/wizard/modalView.jsx">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/wizard/modalView.jsx" />
     <entry file="file://$PROJECT_DIR$/src/common/constant.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/client/wizard/book.jsx">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/client/wizard/createFitProfile.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-6013" />
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/wizard/book.jsx" />
+    <entry file="file://$PROJECT_DIR$/src/client/wizard/createFitProfile.jsx" />
     <entry file="file://$PROJECT_DIR$/webpack.config.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="714">
           <caret line="42" column="7" selection-start-line="42" selection-start-column="7" selection-end-line="42" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/shortlists.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="329">
-          <caret line="1333" column="16" selection-start-line="1333" selection-start-column="16" selection-end-line="1333" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/client/wizard/shortlists.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3383">
-          <caret line="199" column="89" selection-start-line="199" selection-start-column="89" selection-end-line="199" selection-end-column="89" />
         </state>
       </provider>
     </entry>
@@ -490,8 +484,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="431">
-          <caret line="2538" column="27" lean-forward="true" selection-start-line="2538" selection-start-column="27" selection-end-line="2538" selection-end-column="27" />
+        <state relative-caret-position="403">
+          <caret line="2538" column="27" selection-start-line="2538" selection-start-column="27" selection-end-line="2538" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/wizard/shortlists.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="421">
+          <caret line="259" column="124" selection-start-line="259" selection-start-column="124" selection-end-line="259" selection-end-column="124" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/shortlists.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="1523" column="84" selection-start-line="1523" selection-start-column="84" selection-end-line="1523" selection-end-column="84" />
         </state>
       </provider>
     </entry>
