@@ -262,7 +262,7 @@ class Shortlists extends Component {
                                 </div>
                             </div>
                             <div className="md-stepper-horizontal orange">
-                                <div className="md-step done">
+                                <div className="md-step">
                                   <div className="md-step-circle"><span>1</span></div>
                                   <div className="md-step-title">Confirm Order</div>
                                   <div className="md-step-bar-left"></div>
