@@ -345,7 +345,7 @@ class Shortlists extends Component {
                                 <div className="summary-total">Total:  <span className="rupee">₹</span><span id="price">{this.getTotal()}</span>
                                     <div style={{fontSize: '14px', marginTop: '5px', marginLeft: '2px'}}>(incl GST at 4%)</div>
                                 </div>
-                                <div id="checkoutBtn" className="card-btn checkout" style={{top: 'calc(100vh - 82px)'}} onClick={()=>{}}>Next&nbsp;→
+                                <div id="checkoutBtn" className="card-btn checkout" style={{bottom: '20px', marginTop: 'auto'}} onClick={()=>{}}>Next&nbsp;→
                                     <div className=""></div>
                                 </div>
                               </div> : null}
