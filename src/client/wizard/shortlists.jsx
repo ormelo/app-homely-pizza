@@ -295,7 +295,7 @@ class Shortlists extends Component {
                     <img className="icon-back" src="../../../img/images/ic_back.png" onClick={()=>{history.back(-1);}} />
                     <img id="logo" className="logo-img" src="../img/images/logohp4.png" />
                     <div id="checkoutHeader">
-                        <div id="checkoutBtn" className="card-btn checkout" onClick={()=>{document.getElementById('checkoutModal').style.top='-20px';setTimeout("document.getElementById('checkoutModal').classList.add('card-container');",700);this.setState({orderSummary: localStorage.getItem('basket') != null ? JSON.parse(localStorage.getItem('basket')) : []});}}>Checkout&nbsp;→
+                        <div id="checkoutBtn" className="card-btn checkout" onClick={()=>{document.getElementById('checkoutModal').style.top='-20px';this.setState({orderSummary: localStorage.getItem('basket') != null ? JSON.parse(localStorage.getItem('basket')) : []});}}>Checkout&nbsp;→
                             <div className=""></div>
                             <div id="checkoutCount" class="c-count">0</div>
                         </div>
@@ -309,9 +309,9 @@ class Shortlists extends Component {
                     <div><i className="loading" id="myTasksLoader" style={{top: '28px'}}></i></div>
                     <div className="main fadeInBottom">
                         <hr className="line-tasks"/>
-                        <div id="checkoutModal" className="checkout-modal modal-show">
+                        <div id="checkoutModal" className="card-container checkout-modal modal-show">
                             <div className="modal-heading">
-                                <div className="right" onClick={()=>{document.getElementById('checkoutModal').style.top='1200px';setTimeout("document.getElementById('checkoutModal').classList.remove('card-container');",700);}}>
+                                <div className="right" onClick={()=>{document.getElementById('checkoutModal').style.top='1200px';}}>
                                     <img src="../../../img/images/ic_close.png" />
                                 </div>
                             </div>
