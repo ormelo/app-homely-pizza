@@ -178,6 +178,46 @@ class Card extends Component {
     }
 }
 
+class SummaryCard extends Component {
+
+    constructor(props) {
+        super(props);
+        this.state = {};
+    }
+    componentDidMount() {
+    }
+    appendZero(number) {
+        if (number > 0 && number < 10) {
+            return '0' + number;
+        }
+        return number;
+    }
+
+    render() {
+        let {index, data} = this.props;
+        return (
+        <div className="card-container small" style={{padding: '0px 12px 0px 12px'}}>
+            <div className="section-one">
+                <div className="top">
+                    <div className="top-left">
+                        <img id={`primaryImg${index}`} className="primary-img rotatable" src={`../../../img/images/p${data.itemId+1}.png`} style={{width: '72px',paddingTop: '0px'}} />
+                    </div>
+                    <div className="top-right">
+                        <div className="usp-title"><div className="title">{data.name}</div></div>
+                        <div className="usp-desc">{data.qty} {data.size} pizzas</div>
+                    </div>
+                </div>
+            </div>
+
+            <div className="section-two small">
+                <div className="pricing"><label className="price"><span className="rupee">₹</span><span id={`price${index}`}>{data.price}</span></label></div>
+                <div className="top">
+                </div>
+            </div>
+        </div>)
+    }
+}
+
 
 class Shortlists extends Component {
 
@@ -185,7 +225,9 @@ class Shortlists extends Component {
         super();
         this.state = {
             value: 0,
-            results: []
+            results: [],
+            activeStep: 1,
+            orderSummary: localStorage.getItem('basket') != null ? JSON.parse(localStorage.getItem('basket')) : []
         };
     }
     componentDidMount() {
@@ -235,13 +277,25 @@ class Shortlists extends Component {
             this.setState({results: response.data.results});
           }.bind(this));
     }
+    getTotal() {
+        let orderSummary = this.state.orderSummary;
+        let total = 0;
+        orderSummary && Object.keys(orderSummary).map((index) => {
+            if(typeof index !== 'undefined') {
+                total += orderSummary[index].price;
+            }
+        });
+        total = total + (0.04*total);
+        return Math.round(total);
+    }
     render() {
-        const {showLoader, results} = this.state;
+        const {showLoader, results, orderSummary} = this.state;
+        console.log('orderSummary: ', orderSummary);
         return (<div>
                     <img className="icon-back" src="../../../img/images/ic_back.png" onClick={()=>{history.back(-1);}} />
                     <img id="logo" className="logo-img" src="../img/images/logohp4.png" />
                     <div id="checkoutHeader">
-                        <div id="checkoutBtn" className="card-btn checkout" onClick={()=>{document.getElementById('checkoutModal').style.top='-20px';}}>Checkout&nbsp;→
+                        <div id="checkoutBtn" className="card-btn checkout" onClick={()=>{document.getElementById('checkoutModal').style.top='-20px';this.setState({orderSummary: localStorage.getItem('basket') != null ? JSON.parse(localStorage.getItem('basket')) : []});}}>Checkout&nbsp;→
                             <div className=""></div>
                             <div id="checkoutCount" class="c-count">0</div>
                         </div>
@@ -263,7 +317,7 @@ class Shortlists extends Component {
                             </div>
                             <div className="md-stepper-horizontal orange">
                                 <div className="md-step">
-                                  <div className="md-step-circle"><span>1</span></div>
+                                  <div className="md-step-circle active"><span>1</span></div>
                                   <div className="md-step-title">Order Summary</div>
                                   <div className="md-step-bar-left"></div>
                                   <div className="md-step-bar-right"></div>
@@ -281,6 +335,20 @@ class Shortlists extends Component {
                                   <div className="md-step-bar-right"></div>
                                 </div>
                               </div>
+                              {this.state.activeStep == 1 ?
+                              <div className="checkout-content">
+                                {orderSummary && Object.keys(orderSummary).map((index) => {
+                                    if(typeof index !== 'undefined') {
+                                        return (<SummaryCard index={index} data={orderSummary[index]} />);
+                                    }
+                                })}
+                                <div className="summary-total">Total:  <span className="rupee">₹</span><span id="price">{this.getTotal()}</span>
+                                    <div style={{fontSize: '14px', marginTop: '5px', marginLeft: '2px'}}>(incl GST at 4%)</div>
+                                </div>
+                                <div id="checkoutBtn" className="card-btn checkout" style={{top: 'calc(100vh - 82px)'}} onClick={()=>{}}>Next&nbsp;→
+                                    <div className=""></div>
+                                </div>
+                              </div> : null}
                         </div>
 
 

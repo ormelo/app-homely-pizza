@@ -374,6 +374,48 @@
     backdrop-filter: saturate(100%) blur(15px);
     min-height: 330px;
 }
+.card-container.small {
+    min-height: 130px;
+}
+.card-container.small .top {
+    margin-top: 6px;
+}
+.card-container.small .usp-title {
+    position: absolute;
+    left: 100px;
+    top: 20px;
+}
+.card-container.small .usp-desc {
+    top: 135px;
+    left: 21px;
+    color: #fff;
+    font-size: 14px;
+    font-family: Quicksand;
+    width: 240px !important;
+}
+.card-container.small .title {
+    color: #fff;
+    font-size: 18px;
+    width: 165px;
+}
+.checkout-content {
+    height: calc(100vh - 300px);
+    overflow: scroll;
+}
+.summary-total {
+    position: absolute;
+    top: calc(100vh - 62px);
+    color: #fff;
+    font-size: 24px;
+    left: 34px;
+    text-shadow: 0px 1px 2px #00000075;
+}
+.section-two.small .pricing{
+    top: -16px;
+}
+.section-two.small .price span{
+    font-size: 20px;
+}
 
 .section-one {
     min-height: 132px;
@@ -559,6 +601,7 @@
 }
 
 .rupee {
+    opacity: 0.7;
     font-family:'Source Sans Pro', sans-serif;
 }
 
@@ -1529,6 +1572,10 @@ div#containerWiz {
 	font-weight: 600;
 	color:#FFFFFF;
     text-shadow: 0px 1px 2px #00000075;
+    opacity: 0.5;
+}
+.md-stepper-horizontal .md-step .md-step-circle.active {
+    opacity: 1;
 }
 .md-stepper-horizontal.green .md-step.active .md-step-circle {
 	background-color:#00AE4D;
