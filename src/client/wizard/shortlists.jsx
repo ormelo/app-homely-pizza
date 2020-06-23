@@ -204,7 +204,7 @@ class SummaryCard extends Component {
                     </div>
                     <div className="top-right">
                         <div className="usp-title"><div className="title">{data.name}</div></div>
-                        <div className="usp-desc">{data.qty} {data.size} pizzas</div>
+                        <div className="usp-desc">{data.qty} {data.size} pizza(s)</div>
                     </div>
                 </div>
             </div>
