@@ -48,8 +48,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/client/wizard/shortlists.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="257">
-              <caret line="288" column="32" selection-start-line="288" selection-start-column="32" selection-end-line="288" selection-end-column="32" />
+            <state relative-caret-position="670">
+              <caret line="347" column="102" selection-start-line="347" selection-start-column="102" selection-end-line="347" selection-end-column="102" />
             </state>
           </provider>
         </entry>
@@ -58,7 +58,7 @@
         <entry file="file://$PROJECT_DIR$/public/shortlists.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="330">
-              <caret line="603" column="17" selection-start-line="603" selection-start-column="17" selection-end-line="603" selection-end-column="17" />
+              <caret line="401" column="26" selection-start-line="401" selection-start-column="26" selection-end-line="401" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -67,8 +67,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>QuestionAnswer</find>
-      <find>handleRecommenderClick</find>
       <find>getSearchQuery</find>
       <find>&lt;Link</find>
       <find>Router</find>
@@ -96,6 +94,8 @@
       <find>primary-img</find>
       <find>price</find>
       <find>checkout-content</find>
+      <find>.rupee</find>
+      <find>.checkout-con</find>
       <find>getTotal</find>
     </findStrings>
     <replaceStrings>
@@ -423,7 +423,21 @@
       <option name="project" value="LOCAL" />
       <updated>1592805065859</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="homepage">
+      <created>1592907968356</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1592907968356</updated>
+    </task>
+    <task id="LOCAL-00028" summary="homepage">
+      <created>1592909621740</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1592909621740</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TodoView">
@@ -511,15 +525,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/client/wizard/shortlists.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="257">
-          <caret line="288" column="32" selection-start-line="288" selection-start-column="32" selection-end-line="288" selection-end-column="32" />
+        <state relative-caret-position="670">
+          <caret line="347" column="102" selection-start-line="347" selection-start-column="102" selection-end-line="347" selection-end-column="102" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/shortlists.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
-          <caret line="603" column="17" selection-start-line="603" selection-start-column="17" selection-end-line="603" selection-end-column="17" />
+          <caret line="401" column="26" selection-start-line="401" selection-start-column="26" selection-end-line="401" selection-end-column="26" />
         </state>
       </provider>
     </entry>
