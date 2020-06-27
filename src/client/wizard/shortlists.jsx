@@ -288,6 +288,14 @@ class Shortlists extends Component {
         total = total + (0.04*total);
         return Math.round(total);
     }
+    captureAddress() {
+        let pincode = document.getElementById('dPincode').innerHTML;
+        let address = document.getElementById('dAddress').innerHTML;
+        let mobile = document.getElementById('dMobile').innerHTML;
+        localStorage.setItem('dPincode',pincode);
+        localStorage.setItem('dAddress',address);
+        localStorage.setItem('dMobile',mobile);
+    }
     render() {
         const {showLoader, results, orderSummary} = this.state;
         console.log('orderSummary: ', orderSummary);
@@ -316,26 +324,26 @@ class Shortlists extends Component {
                                 </div>
                             </div>
                             <div className="md-stepper-horizontal orange">
-                                <div className="md-step">
+                                <div id="step1" className="md-step">
                                   <div className="md-step-circle active"><span>1</span></div>
                                   <div className="md-step-title">Order Summary</div>
                                   <div className="md-step-bar-left"></div>
                                   <div className="md-step-bar-right"></div>
                                 </div>
-                                <div className="md-step">
-                                  <div className="md-step-circle"><span>2</span></div>
+                                <div id="step2" className="md-step">
+                                  <div className="md-step-circle" id="step2Circle"><span>2</span></div>
                                   <div className="md-step-title">Delivery Address</div>
                                   <div className="md-step-bar-left"></div>
                                   <div className="md-step-bar-right"></div>
                                 </div>
-                                <div className="md-step">
-                                  <div className="md-step-circle"><span>3</span></div>
+                                <div id="step3" className="md-step">
+                                  <div className="md-step-circle" id="step3Circle"><span>3</span></div>
                                   <div className="md-step-title">Make Payment</div>
                                   <div className="md-step-bar-left"></div>
                                   <div className="md-step-bar-right"></div>
                                 </div>
                               </div>
-                              {this.state.activeStep == 1 ?
+                              {this.state.activeStep == 1 &&
                               <div className="checkout-content">
                                 {orderSummary && Object.keys(orderSummary).map((index) => {
                                     if(typeof index !== 'undefined') {
@@ -345,10 +353,33 @@ class Shortlists extends Component {
                                 <div className="summary-total">Total:  <span className="rupee">₹</span><span id="price">{this.getTotal()}</span>
                                     <div style={{fontSize: '14px', marginTop: '5px', marginLeft: '2px'}}>(incl GST at 4%)</div>
                                 </div>
-                                <div id="checkoutBtn" className="card-btn checkout" style={{bottom: '60px', marginTop: 'auto'}} onClick={()=>{}}>Next&nbsp;→
+                                <div id="checkoutBtn" className="card-btn checkout" style={{bottom: '60px', marginTop: 'auto'}} onClick={()=>{document.getElementById('step1').classList.add('done');document.getElementById('step2').classList.add('active');document.getElementById('step2Circle').classList.add('active');this.setState({activeStep: 2});}}>Next&nbsp;→
                                     <div className=""></div>
                                 </div>
-                              </div> : null}
+                              </div>}
+                              {this.state.activeStep == 2 &&
+                                <div className="checkout-content">
+
+                                <div className="card-container" style={{padding: '0px 12px 0px 12px'}}>
+                                            <div className="section-one">
+                                                <div className="top">
+                                                    <div className="top-right">
+                                                        <div className="usp-title">
+                                                            <input id="dPincode" type="text" className="step-input" placeholder="Your pincode"/>
+                                                            <textarea id="dAddress" className="step-input" className="step-input step-textarea" placeholder="Delivery address (with landmark)" />
+                                                            <input id="dMobile" type="text" className="step-input" placeholder="Mobile number" style={{top:'198px'}}/>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+                                        </div>
+
+                                <div id="checkoutBtnStep2" className="card-btn checkout" style={{bottom: '60px', marginTop: 'auto'}} onClick={()=>{document.getElementById('step2').classList.add('done');this.captureAddress();document.getElementById('step3Circle').classList.add('active');this.setState({activeStep: 3});}}>Next&nbsp;→
+                                    <div className=""></div>
+                                </div>
+                              </div>}
                         </div>
 
 

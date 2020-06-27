@@ -3,7 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="2100fea9-fa34-466f-9140-289133e88515" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/guide.bundle.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/guide.bundle.min.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/shortlists.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/shortlists.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/wizard/shortlists.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/wizard/shortlists.jsx" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -43,20 +45,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/client/wizard/shortlists.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="320">
-              <caret line="311" column="88" selection-start-line="311" selection-start-column="74" selection-end-line="311" selection-end-column="88" />
+            <state relative-caret-position="421">
+              <caret line="339" column="81" selection-start-line="339" selection-start-column="81" selection-end-line="339" selection-end-column="81" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/shortlists.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="449">
-              <caret line="1531" column="21" selection-start-line="1531" selection-start-column="21" selection-end-line="1531" selection-end-column="21" />
+            <state relative-caret-position="516">
+              <caret line="767" column="20" selection-start-line="767" selection-start-column="20" selection-end-line="767" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -65,19 +67,8 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>checkoutModal</find>
-      <find>class</find>
-      <find>md-step-ti</find>
-      <find>.md-stepper-horizontal</find>
-      <find>done</find>
-      <find>.md-stepper-horizontal .md-step .md-step-title</find>
-      <find>.modal-heading .right</find>
-      <find>.md-stepper-horizontal .md-step .md-step-circle</find>
-      <find>md-step-circle</find>
-      <find>card-con</find>
       <find>card</find>
       <find>&lt;card</find>
-      <find>SummaryCard</find>
       <find>activeStep</find>
       <find>this.state.activeStep</find>
       <find>orderSummary</find>
@@ -95,6 +86,17 @@
       <find>.md-stepper-horizontal .md-step .md-step-title,</find>
       <find>summaryca</find>
       <find>checkout-modal</find>
+      <find>checkoutBtn</find>
+      <find>md-step-circle</find>
+      <find>.done</find>
+      <find>.section-one .top-right</find>
+      <find>.small</find>
+      <find>SummaryCard</find>
+      <find>.title</find>
+      <find>step-textarea</find>
+      <find>.step-input</find>
+      <find>captureAddress</find>
+      <find>step2C</find>
     </findStrings>
     <replaceStrings>
       <replace>className</replace>
@@ -110,8 +112,8 @@
         <option value="$PROJECT_DIR$/webpack.config.js" />
         <option value="$PROJECT_DIR$/src/client/wizard/guide.jsx" />
         <option value="$PROJECT_DIR$/public/index.html" />
-        <option value="$PROJECT_DIR$/src/client/wizard/shortlists.jsx" />
         <option value="$PROJECT_DIR$/public/shortlists.html" />
+        <option value="$PROJECT_DIR$/src/client/wizard/shortlists.jsx" />
       </list>
     </option>
   </component>
@@ -127,7 +129,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -145,13 +146,6 @@
               <item name="epigram-web" type="462c0819:PsiDirectoryNode" />
               <item name="public" type="462c0819:PsiDirectoryNode" />
               <item name="img" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="epigram-web" type="b2602c69:ProjectViewProjectNode" />
-              <item name="epigram-web" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="img" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="epigram-web" type="b2602c69:ProjectViewProjectNode" />
@@ -189,6 +183,7 @@
         </subPane>
       </pane>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="ProjectViewState">
@@ -471,7 +466,14 @@
       <option name="project" value="LOCAL" />
       <updated>1592912676429</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="homepage">
+      <created>1592920104812</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1592920104812</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TodoView">
@@ -484,10 +486,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1920" height="1107" extended-state="6" />
+    <frame x="0" y="23" width="1920" height="1104" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18477103" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18796591" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
@@ -557,17 +559,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/client/wizard/shortlists.jsx">
+    <entry file="file://$PROJECT_DIR$/public/shortlists.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="311" column="88" selection-start-line="311" selection-start-column="74" selection-end-line="311" selection-end-column="88" />
+        <state relative-caret-position="516">
+          <caret line="767" column="20" selection-start-line="767" selection-start-column="20" selection-end-line="767" selection-end-column="20" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/shortlists.html">
+    <entry file="file://$PROJECT_DIR$/src/client/wizard/shortlists.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="449">
-          <caret line="1531" column="21" selection-start-line="1531" selection-start-column="21" selection-end-line="1531" selection-end-column="21" />
+        <state relative-caret-position="421">
+          <caret line="339" column="81" selection-start-line="339" selection-start-column="81" selection-end-line="339" selection-end-column="81" />
         </state>
       </provider>
     </entry>
