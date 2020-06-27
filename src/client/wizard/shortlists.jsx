@@ -289,9 +289,9 @@ class Shortlists extends Component {
         return Math.round(total);
     }
     captureAddress() {
-        let pincode = document.getElementById('dPincode').innerHTML;
-        let address = document.getElementById('dAddress').innerHTML;
-        let mobile = document.getElementById('dMobile').innerHTML;
+        let pincode = document.getElementById('dPincode').value;
+        let address = document.getElementById('dAddress').value;
+        let mobile = document.getElementById('dMobile').value;
         localStorage.setItem('dPincode',pincode);
         localStorage.setItem('dAddress',address);
         localStorage.setItem('dMobile',mobile);
