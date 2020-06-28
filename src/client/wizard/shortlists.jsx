@@ -313,7 +313,7 @@ class Shortlists extends Component {
                   */
         var http = new XMLHttpRequest();
         var url = '/paymentRequest';
-        var params = 'amount='+localStorage.getItem('dPrice')+'&phone='+localStorage.getItem('dMobile')+'&name='+localStorage.getItem('dName');
+        var params = 'amount=1&phone='+localStorage.getItem('dMobile')+'&name='+localStorage.getItem('dName');
         http.open('POST', url, true);
 
         //Send the proper header information along with the request
