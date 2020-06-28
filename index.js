@@ -812,7 +812,7 @@ app.post('/paymentRequest', function(req, res) {
     var headers = { 'X-Api-Key': 'b442e3b63d6c01b2e7fdb49e14e8a069', 'X-Auth-Token': '96650eeefedf39e2bbdb32d8496f0ca2'}
     var payload = {
       purpose: 'Pizza order',
-      amount: req.body.amount,
+      amount: 1,
       phone: req.body.phone,
       name: req.body.phone,
       redirect_url: 'http://www.homely.pizza/redirect/',
