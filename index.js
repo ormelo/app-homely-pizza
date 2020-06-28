@@ -6,6 +6,7 @@ var fs = require('fs');
 var url = require('url');
 var redis = require('redis');
 var loggr = require("loggr");
+var request= require('request');
 var redisURLVal = process.env.REDISCLOUD_URL || 'redis://rediscloud:vWISiXr6xai89eidZYXjM0OK3KeXfkPU@redis-16431.c10.us-east-1-2.ec2.cloud.redislabs.com:16431';
 redisURL = url.parse(redisURLVal);
 var bodyParser = require('body-parser');
@@ -806,6 +807,26 @@ app.post('/franchiseEnquiry', function(req, res) {
         client.set(members, email);
  res.sendFile(path.resolve(__dirname, 'public', 'franchiseEnquiry.html'));
 });
+
+app.post('/paymentRequest', function(req, res) {
+    var headers = { 'X-Api-Key': 'b442e3b63d6c01b2e7fdb49e14e8a069', 'X-Auth-Token': '96650eeefedf39e2bbdb32d8496f0ca2'}
+    var payload = {
+      purpose: 'Pizza order',
+      amount: req.body.amount,
+      phone: req.body.phone,
+      name: req.body.phone,
+      redirect_url: 'http://www.homely.pizza/redirect/',
+      send_email: false,
+      send_sms: true,
+      allow_repeated_payments: false}
+
+    request.post('https://www.instamojo.com/api/1.1/payment-requests/', {form: payload,  headers: headers}, function(error, response, body){
+      if(!error && response.statusCode == 201){
+        console.log('-----im response body: ', body);
+        res.send(body);
+      }
+    })
+})
 
 app.post('/submitGetQuote', function(req, res) {
     var email = req.body.email,

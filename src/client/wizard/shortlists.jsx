@@ -286,15 +286,48 @@ class Shortlists extends Component {
             }
         });
         total = total + (0.04*total);
+        localStorage.setItem('dPrice', Math.round(total));
         return Math.round(total);
     }
     captureAddress() {
         let pincode = document.getElementById('dPincode').value;
         let address = document.getElementById('dAddress').value;
         let mobile = document.getElementById('dMobile').value;
+        let name = document.getElementById('dName').value;
         localStorage.setItem('dPincode',pincode);
         localStorage.setItem('dAddress',address);
         localStorage.setItem('dMobile',mobile);
+        localStorage.setItem('dName',name);
+    }
+    makePaymentRequest() {
+        /*
+            var payload = {
+                  purpose: 'Pizza order',
+                  amount: localStorage.getItem('dPrice'),
+                  phone: localStorage.getItem('dMobile'),
+                  buyer_name: localStorage.getItem('dName'),
+                  redirect_url: 'http://www.homely.pizza/redirect/',
+                  send_email: false,
+                  send_sms: true,
+                  allow_repeated_payments: false}
+                  */
+        var http = new XMLHttpRequest();
+        var url = '/paymentRequest';
+        var params = 'amount='+localStorage.getItem('dPrice')+'&phone='+localStorage.getItem('dMobile')+'&name='+localStorage.getItem('dName');
+        http.open('POST', url, true);
+
+        //Send the proper header information along with the request
+        http.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+
+        http.onreadystatechange = function() {//Call a function when the state changes.
+            if(http.readyState == 4 && http.status == 200) {
+                console.log('post response:', http.responseText);
+                var res = http.responseText;
+                res = JSON.parse(res);
+                location.href = res.payment_request.longurl;
+            }
+        }
+        http.send(params);
     }
     render() {
         const {showLoader, results, orderSummary} = this.state;
@@ -368,6 +401,7 @@ class Shortlists extends Component {
                                                             <input id="dPincode" type="text" className="step-input" placeholder="Your pincode"/>
                                                             <textarea id="dAddress" className="step-input" className="step-input step-textarea" placeholder="Delivery address (with landmark)" />
                                                             <input id="dMobile" type="text" className="step-input" placeholder="Mobile number" style={{top:'198px'}}/>
+                                                            <input id="dName" type="text" className="step-input" placeholder="Your full name" style={{top:'238px'}}/>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -376,7 +410,7 @@ class Shortlists extends Component {
 
                                         </div>
 
-                                <div id="checkoutBtnStep2" className="card-btn checkout" style={{bottom: '60px', marginTop: 'auto'}} onClick={()=>{document.getElementById('step2').classList.add('done');this.captureAddress();document.getElementById('step3Circle').classList.add('active');this.setState({activeStep: 3});}}>Next&nbsp;→
+                                <div id="checkoutBtnStep2" className="card-btn checkout" style={{bottom: '60px', marginTop: 'auto'}} onClick={()=>{document.getElementById('step2').classList.add('done');this.captureAddress();document.getElementById('step3Circle').classList.add('active');this.setState({activeStep: 3});this.makePaymentRequest()}}>Next&nbsp;→
                                     <div className=""></div>
                                 </div>
                               </div>}
