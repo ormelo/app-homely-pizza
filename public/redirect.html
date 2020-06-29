@@ -566,17 +566,6 @@
     margin-left: -3px;
 }
 
-.card-btn.small {
-    top: 164px;
-    margin-top: auto;
-    float: left;
-    right: 0px;
-    left: 0px;
-    margin: 0 auto;
-    width: 200px;
-    font-size: 16px;
-}
-
 .card-btn.secondary {
     background: transparent;
     color: #ffffff63;
@@ -737,16 +726,6 @@
     height: 122px;
     position: absolute;
     width: 100px;
-}
-
-.label-redirect {
-    font-size: 20px;
-    color: #fff;
-    text-shadow: 0px 1px 2px #00000075;
-    font-weight: normal;
-    text-align: center;
-    line-height: 30px;
-    margin-top: 12px;
 }
 
 .section-one .top-right {
@@ -1746,7 +1725,7 @@ text-size-adjust:none;
     <!-- Css3 Transitions Styles  -->
     <!--<link rel="stylesheet" type="text/css" href="/static/span-template/assets/css/animate.css" media="screen">-->
     <!-- Selected Preset -->
-
+    <link rel="stylesheet" type="text/css" href="../../../assets/pink.css" media="screen">
 
 
     
@@ -3518,229 +3497,6 @@ p img.right { float: right; margin-left: 1em; }
       margin-left: 344px;
       width: 100%;
   }
-}
-
-.status-title {
-    width: 100%;
-    font-size: 22px;
-    color: #fff;
-    text-shadow: 0px 1px 2px #00000075;
-    font-weight: normal;
-    text-align: center;
-    line-height: 28px;
-    padding-top: 22px;
-}
-
-.status-title span {
-    margin-left: 12px;
-}
-
-.status-title span.small-title {
-    font-size: 18px;
-    line-height: 24px;
-    padding: 12px;
-    float: left;
-    text-align: center;
-}
-
-img.status-img {
-    width: 34px;
-    padding: 1px;
-    margin-left: -12px;
-}
-
-img.status-img.error {
-    width: 34px;
-    border: none;
-    padding: 3px;
-    border-radius: 0;
-    margin-left: -20px;
-    margin-top: -5px;
-}
-
-.ic-delivery {
-    width: 110px;
-    margin: 0 auto;
-    left: 0;
-    right: 0;
-    margin-top: 12px;
-    margin-left: -13px;
-}
-
-body .pizza {
-height: 20vmin;
-width: 20vmin;
--webkit-box-align: center;
-align-items: center;
-background: none;
-position: relative;
--webkit-animation: rotate 13s linear infinite;
-animation: rotate 13s linear infinite;
-margin: 0 auto;
-top: 14px;
-}
-@-webkit-keyframes rotate {
-  to {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
-}
-@keyframes rotate {
-  to {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
-}
-body .pizza .slice {
-  z-index: -1;
-  overflow: visible;
-  position: absolute;
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 10vmin 2.75vmin 0 2.75vmin;
-  border-color: #ffdc73 transparent transparent transparent;
-  left: 7.5vmin;
-  top: 0;
-  -webkit-transform-origin: 50% 100%;
-          transform-origin: 50% 100%;
-  -webkit-transform: rotate(0deg);
-          transform: rotate(0deg);
-  -webkit-animation: loading 1.8125s ease-in-out infinite;
-          animation: loading 1.8125s ease-in-out infinite;
-}
-@-webkit-keyframes loading {
-  0% {
-    opacity: 1;
-  }
-  49% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0;
-  }
-  99% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@keyframes loading {
-  0% {
-    opacity: 1;
-  }
-  49% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0;
-  }
-  99% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-body .pizza .slice:nth-of-type(2n):after {
-  box-shadow: 0.5vmin 2.5vmin 0 #cc333f;
-}
-body .pizza .slice:nth-of-type(4n):after {
-  box-shadow: 0.5vmin 2.5vmin 0 #cc333f, 1.5vmin 5vmin 0 #cc333f;
-}
-body .pizza .slice:nth-of-type(1) {
-  -webkit-transform: rotate(-27.75deg);
-          transform: rotate(-27.75deg);
-  -webkit-animation-delay: -0.0625s;
-          animation-delay: -0.0625s;
-}
-body .pizza .slice:nth-of-type(2) {
-  -webkit-transform: rotate(-55.5deg);
-          transform: rotate(-55.5deg);
-  -webkit-animation-delay: -0.125s;
-          animation-delay: -0.125s;
-}
-body .pizza .slice:nth-of-type(3) {
-  -webkit-transform: rotate(-83.25deg);
-          transform: rotate(-83.25deg);
-  -webkit-animation-delay: -0.1875s;
-          animation-delay: -0.1875s;
-}
-body .pizza .slice:nth-of-type(4) {
-  -webkit-transform: rotate(-111deg);
-          transform: rotate(-111deg);
-  -webkit-animation-delay: -0.25s;
-          animation-delay: -0.25s;
-}
-body .pizza .slice:nth-of-type(5) {
-  -webkit-transform: rotate(-138.75deg);
-          transform: rotate(-138.75deg);
-  -webkit-animation-delay: -0.3125s;
-          animation-delay: -0.3125s;
-}
-body .pizza .slice:nth-of-type(6) {
-  -webkit-transform: rotate(-166.5deg);
-          transform: rotate(-166.5deg);
-  -webkit-animation-delay: -0.375s;
-          animation-delay: -0.375s;
-}
-body .pizza .slice:nth-of-type(7) {
-  -webkit-transform: rotate(-194.25deg);
-          transform: rotate(-194.25deg);
-  -webkit-animation-delay: -0.4375s;
-          animation-delay: -0.4375s;
-}
-body .pizza .slice:nth-of-type(8) {
-  -webkit-transform: rotate(-222deg);
-          transform: rotate(-222deg);
-  -webkit-animation-delay: -0.5s;
-          animation-delay: -0.5s;
-}
-body .pizza .slice:nth-of-type(9) {
-  -webkit-transform: rotate(-249.75deg);
-          transform: rotate(-249.75deg);
-  -webkit-animation-delay: -0.5625s;
-          animation-delay: -0.5625s;
-}
-body .pizza .slice:nth-of-type(10) {
-  -webkit-transform: rotate(-277.5deg);
-          transform: rotate(-277.5deg);
-  -webkit-animation-delay: -0.625s;
-          animation-delay: -0.625s;
-}
-body .pizza .slice:nth-of-type(11) {
-  -webkit-transform: rotate(-305.25deg);
-          transform: rotate(-305.25deg);
-  -webkit-animation-delay: -0.6875s;
-          animation-delay: -0.6875s;
-}
-body .pizza .slice:nth-of-type(12) {
-  -webkit-transform: rotate(-333deg);
-          transform: rotate(-333deg);
-  -webkit-animation-delay: -0.75s;
-          animation-delay: -0.75s;
-}
-body .pizza .slice:before {
-  content: '';
-  position: absolute;
-  height: 1.5vmin;
-  width: 6vmin;
-  background: #bbb083;
-  top: -10.5vmin;
-  left: -3vmin;
-  border-radius: 100vmin 100vmin 0.5vmin 0.5vmin / 50vmin 50vmin;
-}
-body .pizza .slice:after {
-  content: '';
-  border-radius: 100%;
-  position: absolute;
-  width: 1.25vmin;
-  height: 1.25vmin;
-  background: #cc333f;
-  left: -1vmin;
-  top: -7vmin;
-  z-index: 2;
 }
 
 </style>

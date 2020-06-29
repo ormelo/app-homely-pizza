@@ -2,8 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2100fea9-fa34-466f-9140-289133e88515" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/public/img/images/ic_delivery.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/images/ic_error.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/images/ic_tickw.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/redirect.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/guide.bundle.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/guide.bundle.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/shortlists.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/shortlists.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/wizard/guide.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/wizard/guide.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/client/wizard/shortlists.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/wizard/shortlists.jsx" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -29,8 +37,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/client/wizard/guide.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="35" selection-start-line="10" selection-start-column="35" selection-end-line="10" selection-end-column="35" />
+            <state relative-caret-position="-16">
+              <caret line="360" column="42" selection-start-line="360" selection-start-column="42" selection-end-line="361" selection-end-column="42" />
             </state>
           </provider>
         </entry>
@@ -38,8 +46,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="43146">
-              <caret line="2538" column="27" selection-start-line="2538" selection-start-column="27" selection-end-line="2538" selection-end-column="27" />
+            <state relative-caret-position="295">
+              <caret line="1510" column="28" selection-start-line="1510" selection-start-column="28" selection-end-line="1510" selection-end-column="28" />
             </state>
           </provider>
         </entry>
@@ -47,8 +55,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/client/wizard/shortlists.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="370">
-              <caret line="315" column="31" selection-start-line="315" selection-start-column="31" selection-end-line="315" selection-end-column="31" />
+            <state relative-caret-position="222">
+              <caret line="305" column="37" selection-start-line="305" selection-start-column="37" selection-end-line="305" selection-end-column="37" />
             </state>
           </provider>
         </entry>
@@ -56,17 +64,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="595">
-              <caret line="814" column="29" selection-start-line="814" selection-start-column="14" selection-end-line="814" selection-end-column="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/package.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="544">
-              <caret line="32" column="23" selection-start-line="32" selection-start-column="23" selection-end-line="32" selection-end-column="23" />
+            <state relative-caret-position="438">
+              <caret line="821" column="56" selection-start-line="821" selection-start-column="56" selection-end-line="821" selection-end-column="56" />
             </state>
           </provider>
         </entry>
@@ -74,8 +73,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/shortlists.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="516">
-              <caret line="767" column="20" selection-start-line="767" selection-start-column="20" selection-end-line="767" selection-end-column="20" />
+            <state relative-caret-position="329">
+              <caret line="3546" column="4" selection-start-line="3546" selection-start-column="4" selection-end-line="3546" selection-end-column="4" />
             </state>
           </provider>
         </entry>
@@ -84,36 +83,36 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>.card-conta</find>
-      <find>primary-img</find>
-      <find>price</find>
-      <find>checkout-content</find>
-      <find>.rupee</find>
-      <find>.checkout-con</find>
-      <find>.checkout-content</find>
-      <find>checkout-modal modal-show</find>
-      <find>checkout-mo</find>
-      <find>card-container</find>
-      <find>.md-stepper-horizontal .md-step .md-step-title,</find>
-      <find>summaryca</find>
-      <find>checkout-modal</find>
-      <find>checkoutBtn</find>
-      <find>md-step-circle</find>
-      <find>.done</find>
-      <find>.section-one .top-right</find>
-      <find>.small</find>
-      <find>SummaryCard</find>
-      <find>.title</find>
-      <find>step-textarea</find>
-      <find>.step-input</find>
-      <find>step2C</find>
       <find>dPincode</find>
       <find>captureAddress</find>
       <find>request</find>
       <find>post</find>
       <find>getTotal</find>
       <find>app.po</find>
+      <find>withRou</find>
+      <find>.js</find>
+      <find>shortlists</find>
+      <find>min.js</find>
+      <find>short</find>
       <find>params</find>
+      <find>/paymen</find>
+      <find>Shortlists</find>
+      <find>rout</find>
+      <find>route</find>
+      <find>card-container</find>
+      <find>makePaymentRequest</find>
+      <find>usp-</find>
+      <find>body .piz</find>
+      <find>loaderElems</find>
+      <find>order-title</find>
+      <find>/img/images</find>
+      <find>pink.c</find>
+      <find>.card-btn</find>
+      <find>img.status-img</find>
+      <find>your or</find>
+      <find>.card-btn.small</find>
+      <find>pls c</find>
+      <find>img.status</find>
     </findStrings>
     <replaceStrings>
       <replace>className</replace>
@@ -130,11 +129,12 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/webpack.config.js" />
+        <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/src/client/wizard/redirect.jsx" />
+        <option value="$PROJECT_DIR$/index.js" />
         <option value="$PROJECT_DIR$/src/client/wizard/guide.jsx" />
         <option value="$PROJECT_DIR$/public/index.html" />
         <option value="$PROJECT_DIR$/public/shortlists.html" />
-        <option value="$PROJECT_DIR$/package.json" />
-        <option value="$PROJECT_DIR$/index.js" />
         <option value="$PROJECT_DIR$/src/client/wizard/shortlists.jsx" />
       </list>
     </option>
@@ -157,6 +157,24 @@
             <path>
               <item name="epigram-web" type="b2602c69:ProjectViewProjectNode" />
               <item name="epigram-web" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="epigram-web" type="b2602c69:ProjectViewProjectNode" />
+              <item name="epigram-web" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="epigram-web" type="b2602c69:ProjectViewProjectNode" />
+              <item name="epigram-web" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="img" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="epigram-web" type="b2602c69:ProjectViewProjectNode" />
+              <item name="epigram-web" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="img" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="epigram-web" type="b2602c69:ProjectViewProjectNode" />
@@ -193,8 +211,8 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="ProjectViewState">
@@ -221,6 +239,8 @@
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/public/img/images" />
+      <recent name="$PROJECT_DIR$/public" />
+      <recent name="$PROJECT_DIR$/src/client/wizard" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -540,7 +560,14 @@
       <option name="project" value="LOCAL" />
       <updated>1593355824667</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="homepage">
+      <created>1593356077619</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1593356077619</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="TodoView">
@@ -556,7 +583,7 @@
     <frame x="0" y="23" width="1920" height="1104" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18796591" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18956336" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
@@ -605,31 +632,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/client/wizard/book.jsx" />
     <entry file="file://$PROJECT_DIR$/src/client/wizard/createFitProfile.jsx" />
+    <entry file="file://$PROJECT_DIR$/src/client/wizard/redirect.jsx" />
     <entry file="file://$PROJECT_DIR$/webpack.config.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="714">
           <caret line="42" column="7" selection-start-line="42" selection-start-column="7" selection-end-line="42" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/client/wizard/guide.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="35" selection-start-line="10" selection-start-column="35" selection-end-line="10" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="43146">
-          <caret line="2538" column="27" selection-start-line="2538" selection-start-column="27" selection-end-line="2538" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/shortlists.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="516">
-          <caret line="767" column="20" selection-start-line="767" selection-start-column="20" selection-end-line="767" selection-end-column="20" />
         </state>
       </provider>
     </entry>
@@ -640,17 +647,48 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/public/redirect.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="863">
+          <caret line="3684" selection-start-line="3684" selection-end-line="3684" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="814" column="29" selection-start-line="814" selection-start-column="14" selection-end-line="814" selection-end-column="29" />
+        <state relative-caret-position="438">
+          <caret line="821" column="56" selection-start-line="821" selection-start-column="56" selection-end-line="821" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/img/images/ic_tick.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/wizard/guide.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-16">
+          <caret line="360" column="42" selection-start-line="360" selection-start-column="42" selection-end-line="361" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="295">
+          <caret line="1510" column="28" selection-start-line="1510" selection-start-column="28" selection-end-line="1510" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/shortlists.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="329">
+          <caret line="3546" column="4" selection-start-line="3546" selection-start-column="4" selection-end-line="3546" selection-end-column="4" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/client/wizard/shortlists.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="370">
-          <caret line="315" column="31" selection-start-line="315" selection-start-column="31" selection-end-line="315" selection-end-column="31" />
+        <state relative-caret-position="222">
+          <caret line="305" column="37" selection-start-line="305" selection-start-column="37" selection-end-line="305" selection-end-column="37" />
         </state>
       </provider>
     </entry>

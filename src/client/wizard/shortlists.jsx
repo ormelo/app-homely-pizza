@@ -300,23 +300,10 @@ class Shortlists extends Component {
         localStorage.setItem('dName',name);
     }
     makePaymentRequest() {
-        /*
-            var payload = {
-                  purpose: 'Pizza order',
-                  amount: localStorage.getItem('dPrice'),
-                  phone: localStorage.getItem('dMobile'),
-                  buyer_name: localStorage.getItem('dName'),
-                  redirect_url: 'http://www.homely.pizza/redirect/',
-                  send_email: false,
-                  send_sms: true,
-                  allow_repeated_payments: false}
-                  */
         var http = new XMLHttpRequest();
         var url = '/paymentRequest';
         var params = 'amount=10&phone='+localStorage.getItem('dMobile')+'&name='+localStorage.getItem('dName');
         http.open('POST', url, true);
-
-        //Send the proper header information along with the request
         http.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
 
         http.onreadystatechange = function() {//Call a function when the state changes.
@@ -324,6 +311,7 @@ class Shortlists extends Component {
                 console.log('post response:', http.responseText);
                 var res = http.responseText;
                 res = JSON.parse(res);
+                localStorage.setItem('paymentLink',res.payment_request.longurl);
                 location.href = res.payment_request.longurl;
             }
         }
@@ -332,6 +320,11 @@ class Shortlists extends Component {
     render() {
         const {showLoader, results, orderSummary} = this.state;
         console.log('orderSummary: ', orderSummary);
+        let loaderElems = [];
+        for(var i=0; i<14; i++) {
+            loaderElems.push(<div className="slice"></div>)
+        }
+
         return (<div>
                     <img className="icon-back" src="../../../img/images/ic_back.png" onClick={()=>{history.back(-1);}} />
                     <img id="logo" className="logo-img" src="../img/images/logohp4.png" />
@@ -414,12 +407,61 @@ class Shortlists extends Component {
                                     <div className=""></div>
                                 </div>
                               </div>}
+                              {this.state.activeStep == 3 &&
+                                  <div className="checkout-content">
+
+                                  <div className="card-container" style={{padding: '0px 12px 0px 12px',minHeight: '200px'}}>
+                                              <div className="section-one">
+                                                  <div className="top">
+                                                      <div className="top-right">
+                                                          <div className="label-redirect">
+                                                            Redirecting to payment partner... Please wait...
+                                                          </div>
+                                                          <div className="pizza">
+                                                           {loaderElems}
+                                                          </div>
+                                                      </div>
+                                                  </div>
+                                              </div>
+
+
+                                          </div>
+
+
+                                </div>}
                         </div>
 
 
-                                    {results && results.map((resultItem, index) => {
+                                    {results && location.href.indexOf('/redirect/')==-1 && results.map((resultItem, index) => {
                                         return (<Card index={index} data={resultItem} />);
                                     })}
+
+                                    {location.href.indexOf('/redirect/')!=-1 && location.href.indexOf('&payment_status=Credit') !=-1 && <div className="card-container">
+                                            <div className="status-title">
+                                                <img src="../../../img/images/ic_tickw.png" className="status-img" />
+                                                <span>Thanks for ordering your homely pizza!</span>
+                                                <br/>
+                                                <img className="ic-delivery" src="../../../img/images/ic_delivery.png" />
+                                                <span className="small-title">Our delivery executive will get in touch with you as per your chosen delivery slot.</span>
+                                             </div>
+
+                                    </div>}
+
+                                    {location.href.indexOf('/redirect/')!=-1 && location.href.indexOf('&payment_status=Credit') == -1 && <div className="card-container">
+                                            <div className="status-title">
+                                                <img src="../../../img/images/ic_error.png" className="status-img error" />
+                                                <span>Your order is still pending</span>
+                                                <br/><br/>
+                                                <span className="small-title">Payment failed. Please retry by clicking the button below.</span>
+                                                <br/>
+                                                <div className="card-btn checkout small" onClick={()=>{location.href=localStorage.getItem('paymentLink');}}>Retry Payment
+                                                                                    <div className=""></div>
+                                                                                </div>
+                                                <br/>
+                                                <span className="small-title" style={{marginTop: '92px', fontSize: '16px'}}>If you continue to face issues, please call us at <a style={{color: '#ffd355'}} href="tel:+91-7619514999">+91-7619514999</a></span>
+                                             </div>
+
+                                    </div>}
 
 
                     </div>
