@@ -227,6 +227,8 @@ class Shortlists extends Component {
             value: 0,
             results: [],
             activeStep: 1,
+            showCoupon: false,
+            couponApplied: false,
             orderSummary: localStorage.getItem('basket') != null ? JSON.parse(localStorage.getItem('basket')) : []
         };
     }
@@ -286,8 +288,21 @@ class Shortlists extends Component {
             }
         });
         total = total + (0.04*total);
-        localStorage.setItem('dPrice', Math.round(total));
+        if(!this.state.couponApplied) {
+            localStorage.setItem('dPrice', Math.round(total));
+        }
         return Math.round(total);
+    }
+    applyCoupon() {
+        let curPrice = document.getElementById('price').innerHTML;
+        let couponCode = document.getElementById('dCoupon').value;
+        if(!this.state.couponApplied && couponCode != '' && couponCode.toUpperCase() == 'SLICE20') {
+            curPrice = parseInt(curPrice,10);
+            let revPrice = curPrice - curPrice * .2;;
+            document.getElementById('price').innerHTML = revPrice;
+            localStorage.setItem('dPrice', revPrice);
+            this.setState({couponApplied: true});
+        }
     }
     captureAddress() {
         let pincode = document.getElementById('dPincode').value;
@@ -318,7 +333,7 @@ class Shortlists extends Component {
         http.send(params);
     }
     render() {
-        const {showLoader, results, orderSummary} = this.state;
+        const {showLoader, results, orderSummary, showCoupon} = this.state;
         console.log('orderSummary: ', orderSummary);
         let loaderElems = [];
         for(var i=0; i<14; i++) {
@@ -345,7 +360,7 @@ class Shortlists extends Component {
                         <hr className="line-tasks"/>
                         <div id="checkoutModal" className="card-container checkout-modal modal-show">
                             <div className="modal-heading">
-                                <div className="right" onClick={()=>{document.getElementById('checkoutModal').style.top='1200px';}}>
+                                <div className="right" onClick={()=>{document.getElementById('checkoutModal').style.top='1200px';this.setState({activeStep: 1, showCoupon: false, couponApplied: false});}}>
                                     <img src="../../../img/images/ic_close.png" />
                                 </div>
                             </div>
@@ -379,10 +394,37 @@ class Shortlists extends Component {
                                 <div className="summary-total">Total:  <span className="rupee">₹</span><span id="price">{this.getTotal()}</span>
                                     <div style={{fontSize: '14px', marginTop: '5px', marginLeft: '2px'}}>(incl GST at 4%)</div>
                                 </div>
-                                <div id="checkoutBtn" className="card-btn checkout" style={{bottom: '60px', marginTop: 'auto'}} onClick={()=>{document.getElementById('step1').classList.add('done');document.getElementById('step2').classList.add('active');document.getElementById('step2Circle').classList.add('active');this.setState({activeStep: 2});}}>Next&nbsp;→
+                                <div id="checkoutBtn" className="card-btn checkout" style={{bottom: '60px', marginTop: 'auto'}} onClick={()=>{document.getElementById('step1').classList.add('done');this.setState({showCoupon: true, activeStep: 0});}}>Next&nbsp;→
                                     <div className=""></div>
                                 </div>
                               </div>}
+                              {this.state.showCoupon &&
+                                <div className="checkout-content">
+                                    <div className="card-container small" style={{padding: '0px 12px 0px 12px'}}>
+                                        <div className="section-one">
+                                            <div className="top-right">
+                                                <div className="usp-title" style={{left: '0',right: '0',margin: '0 auto'}}>
+                                                    <span className="title-ff" style={{top:'7px'}}>Do you have a coupon code?</span>
+                                                    <input id="dCoupon" type="text" className="step-input" placeholder="Enter coupon code" style={{marginTop: '10px'}}/>
+                                                     <div id="applyCouponBtn" className="card-btn coupon-btn" style={{marginTop: '20px'}} onClick={()=>{this.applyCoupon()}}>Apply
+                                                        <div className=""></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    {this.state.couponApplied == true &&
+                                        <div className="summary-total" style={{bottom: '120px', opacity: '0.5'}}>Total:  <span className="rupee">₹</span><span id="priceOriginal" style={{textDecoration: 'line-through'}}>{this.getTotal()}</span>
+                                        </div>
+                                    }
+                                    <div className="summary-total">Total:  <span className="rupee">₹</span><span id="price">{this.getTotal()}</span>
+                                        <div style={{fontSize: '14px', marginTop: '5px', marginLeft: '2px'}}>(incl GST at 4%)</div>
+                                    </div>
+                                        <div id="checkoutBtnStep11" className="card-btn checkout" style={{bottom: '60px', marginTop: 'auto'}} onClick={()=>{document.getElementById('step2').classList.add('active');document.getElementById('step2Circle').classList.add('active');this.setState({showCoupon: false, activeStep: 2});}}>Next&nbsp;→
+                                            <div className=""></div>
+                                        </div>
+                                </div>
+                              }
                               {this.state.activeStep == 2 &&
                                 <div className="checkout-content">
 
