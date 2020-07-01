@@ -301,6 +301,7 @@ class Shortlists extends Component {
         if(!this.state.couponApplied && couponCode != '' && couponCode.toUpperCase() == 'SLICE20') {
             curPrice = parseInt(curPrice,10);
             let revPrice = curPrice - curPrice * .2;;
+            revPrice = Math.round(revPrice);
             document.getElementById('price').innerHTML = revPrice;
             localStorage.setItem('dPrice', revPrice);
             this.setState({couponApplied: true});
