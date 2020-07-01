@@ -3,8 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="2100fea9-fa34-466f-9140-289133e88515" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/guide.bundle.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/guide.bundle.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/shortlists.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/shortlists.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/client/wizard/shortlists.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/wizard/shortlists.jsx" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -45,20 +47,29 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/client/wizard/shortlists.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="406">
-              <caret line="421" column="124" selection-start-line="421" selection-start-column="124" selection-end-line="421" selection-end-column="124" />
+            <state relative-caret-position="787">
+              <caret line="357" column="76" selection-start-line="357" selection-start-column="61" selection-end-line="357" selection-end-column="76" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="320">
+              <caret line="773" column="51" selection-start-line="773" selection-start-column="51" selection-end-line="773" selection-end-column="51" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.js">
+        <entry file="file://$PROJECT_DIR$/package.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="13957">
-              <caret line="821" column="56" selection-start-line="821" selection-start-column="56" selection-end-line="821" selection-end-column="56" />
+            <state relative-caret-position="578">
+              <caret line="34" column="13" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -76,25 +87,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>min.js</find>
-      <find>short</find>
-      <find>params</find>
-      <find>/paymen</find>
-      <find>Shortlists</find>
-      <find>rout</find>
-      <find>route</find>
-      <find>card-container</find>
-      <find>makePaymentRequest</find>
-      <find>usp-</find>
-      <find>body .piz</find>
-      <find>loaderElems</find>
-      <find>order-title</find>
-      <find>/img/images</find>
-      <find>pink.c</find>
-      <find>.card-btn</find>
-      <find>img.status-img</find>
-      <find>your or</find>
-      <find>.card-btn.small</find>
       <find>pls c</find>
       <find>img.status</find>
       <find>do yu</find>
@@ -106,6 +98,25 @@
       <find>localStorage.setItem('dPrice'</find>
       <find>showCoupon</find>
       <find>When do you want your pizza delivered?</find>
+      <find>this.captureAdd</find>
+      <find>/paymen</find>
+      <find>homelyO</find>
+      <find>PGClient</find>
+      <find>homelyOrd</find>
+      <find>pg</find>
+      <find>orderid.generate</find>
+      <find>orderid</find>
+      <find>Client</find>
+      <find>/homely</find>
+      <find>pgClient</find>
+      <find>/homelyO</find>
+      <find>orderId</find>
+      <find>captureAddre</find>
+      <find>/redi</find>
+      <find>/redie</find>
+      <find>/payment</find>
+      <find>paymentRequest</find>
+      <find>/redirect</find>
     </findStrings>
     <replaceStrings>
       <replace>className</replace>
@@ -122,21 +133,20 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/webpack.config.js" />
-        <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/src/client/wizard/redirect.jsx" />
-        <option value="$PROJECT_DIR$/index.js" />
         <option value="$PROJECT_DIR$/src/client/wizard/guide.jsx" />
         <option value="$PROJECT_DIR$/public/index.html" />
         <option value="$PROJECT_DIR$/public/shortlists.html" />
+        <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/src/client/wizard/shortlists.jsx" />
+        <option value="$PROJECT_DIR$/index.js" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="342" />
+  <component name="ProjectFrameBounds">
     <option name="y" value="23" />
-    <option name="width" value="1608" />
-    <option name="height" value="1107" />
+    <option name="width" value="1549" />
+    <option name="height" value="1105" />
   </component>
   <component name="ProjectId" id="1dLiwnJoEO1OIaa9xhp8loRJQgB" />
   <component name="ProjectView">
@@ -556,7 +566,21 @@
       <option name="project" value="LOCAL" />
       <updated>1593584246806</updated>
     </task>
-    <option name="localTasksCounter" value="46" />
+    <task id="LOCAL-00046" summary="homepage">
+      <created>1593600192187</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1593600192187</updated>
+    </task>
+    <task id="LOCAL-00047" summary="homepage">
+      <created>1593600642833</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1593600642833</updated>
+    </task>
+    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
   <component name="TodoView">
@@ -569,10 +593,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1920" height="1105" extended-state="6" />
+    <frame x="0" y="23" width="1549" height="1105" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19542067" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2435302" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
@@ -622,13 +646,6 @@
     <entry file="file://$PROJECT_DIR$/src/client/wizard/book.jsx" />
     <entry file="file://$PROJECT_DIR$/src/client/wizard/createFitProfile.jsx" />
     <entry file="file://$PROJECT_DIR$/src/client/wizard/redirect.jsx" />
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="32" column="23" selection-start-line="32" selection-start-column="23" selection-end-line="32" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/redirect.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="863">
@@ -660,13 +677,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="13957">
-          <caret line="821" column="56" selection-start-line="821" selection-start-column="56" selection-end-line="821" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/shortlists.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="861">
@@ -674,10 +684,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="34" column="13" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/client/wizard/shortlists.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="406">
-          <caret line="421" column="124" selection-start-line="421" selection-start-column="124" selection-end-line="421" selection-end-column="124" />
+        <state relative-caret-position="787">
+          <caret line="357" column="76" selection-start-line="357" selection-start-column="61" selection-end-line="357" selection-end-column="76" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="773" column="51" selection-start-line="773" selection-start-column="51" selection-end-line="773" selection-end-column="51" />
         </state>
       </provider>
     </entry>

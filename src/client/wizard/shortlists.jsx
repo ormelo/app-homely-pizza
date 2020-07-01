@@ -318,11 +318,34 @@ class Shortlists extends Component {
         localStorage.setItem('dAddress',address);
         localStorage.setItem('dMobile',mobile);
         localStorage.setItem('dName',name);
+        let price = localStorage.getItem('dPrice');
+        let slot = localStorage.getItem('dSlot') != null ? localStorage.getItem('dSlot') : '';
+        let summary = localStorage.getItem('basket');
+        summary = summary != null ? summary : '';
+        //create order
+        var http = new XMLHttpRequest();
+        var url = '/homelyOrder';
+        var params = 'price='+price+'&mobile='+localStorage.getItem('dMobile')+'&name='+localStorage.getItem('dName')+'&slot='+slot+'&summary='+summary;
+        http.open('POST', url, true);
+        http.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+
+        http.onreadystatechange = function() {//Call a function when the state changes.
+            if(http.readyState == 4 && http.status == 200) {
+                console.log('order creation post response:', http.responseText);
+                var res = http.responseText;
+                if(res != 'error') {
+                   localStorage.setItem('orderId', res);
+                }
+            }
+        }
+        http.send(params);
     }
     makePaymentRequest() {
         var http = new XMLHttpRequest();
         var url = '/paymentRequest';
-        var params = 'amount=10&phone='+localStorage.getItem('dMobile')+'&name='+localStorage.getItem('dName');
+        var orderId = 0;
+        orderId = localStorage.getItem('orderId') != null ? localStorage.getItem('orderId') : orderId;
+        var params = 'amount=10&phone='+localStorage.getItem('dMobile')+'&name='+localStorage.getItem('dName')+'&orderId='+orderId;
         http.open('POST', url, true);
         http.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
 
@@ -332,6 +355,8 @@ class Shortlists extends Component {
                 var res = http.responseText;
                 res = JSON.parse(res);
                 localStorage.setItem('paymentLink',res.payment_request.longurl);
+                localStorage.setItem('paymentRequestId', res.payment_request.id);
+
                 location.href = res.payment_request.longurl;
             }
         }

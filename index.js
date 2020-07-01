@@ -7,6 +7,25 @@ var url = require('url');
 var redis = require('redis');
 var loggr = require("loggr");
 var request= require('request');
+var { Client } = require('pg');
+var { Pool } = require('pg');
+const pgClient = new Client({
+      host: 'ec2-54-247-188-247.eu-west-1.compute.amazonaws.com',
+      port: 5432,
+      database: 'dcrgs2nbc0i5vf',
+      user: 'nrgkzvyxpdfhkb',
+      password: '39798783ada15727c8bd9f24bb6c5808d313ab686991c4aca62e3db947cb016c',
+      ssl: true
+    });
+let dbConfig = {
+       database: 'dcrgs2nbc0i5vf',
+       host: 'ec2-54-247-188-247.eu-west-1.compute.amazonaws.com',
+         port: 5432,
+         user: 'nrgkzvyxpdfhkb',
+         password: '39798783ada15727c8bd9f24bb6c5808d313ab686991c4aca62e3db947cb016c',
+         ssl: { rejectUnauthorized: false }
+     }
+const orderid = require('order-id')('randomgenid');
 var redisURLVal = process.env.REDISCLOUD_URL || 'redis://rediscloud:vWISiXr6xai89eidZYXjM0OK3KeXfkPU@redis-16431.c10.us-east-1-2.ec2.cloud.redislabs.com:16431';
 redisURL = url.parse(redisURLVal);
 var bodyParser = require('body-parser');
@@ -753,6 +772,31 @@ app.get("/order/", function(request, response) {
 });
 
 app.get("/redirect/", function(request, response) {
+  let paymentStatus = 'PENDING';
+  let paymentRequestId = request.query.payment_request_id;
+  if(request.query.payment_status == 'Credit') {
+    paymentStatus = 'PAID';
+  } else {
+    paymentStatus = request.query.payment_status;
+  }
+
+  const client = new Client(dbConfig)
+              client.connect(err => {
+                if (err) {
+                  console.error('error connecting', err.stack)
+                } else {
+                  console.log('connected')
+                  client.query("UPDATE \"public\".\"Homely_Order\" set status = $1 WHERE payment_request_id = $2",
+                      [paymentStatus, paymentRequestId], (err, res) => {
+                            if (err) {
+                              console.log(err);
+                            } else {
+                              console.log(response);
+                            }
+
+                          });
+                }
+              })
   response.sendFile(path.resolve(__dirname, 'public', 'shortlists.html'));
 });
 
@@ -813,6 +857,7 @@ app.post('/franchiseEnquiry', function(req, res) {
 });
 
 app.post('/paymentRequest', function(req, res) {
+    const orderId = req.body.orderId;
     var headers = { 'X-Api-Key': 'b442e3b63d6c01b2e7fdb49e14e8a069', 'X-Auth-Token': '96650eeefedf39e2bbdb32d8496f0ca2'}
     var payload = {
       purpose: 'Pizza order',
@@ -827,9 +872,67 @@ app.post('/paymentRequest', function(req, res) {
     request.post('https://www.instamojo.com/api/1.1/payment-requests/', {form: payload,  headers: headers}, function(error, response, body){
       if(!error && response.statusCode == 201){
         console.log('-----im response body: ', body);
-        res.send(body);
+        console.log('-----payment request id: ', JSON.parse(body).payment_request.id);
+
+        let paymentRequestId = JSON.parse(body).payment_request.id;
+        const client = new Client(dbConfig)
+            client.connect(err => {
+              if (err) {
+                console.error('error connecting', err.stack)
+              } else {
+                console.log('connected')
+                client.query("UPDATE \"public\".\"Homely_Order\" set payment_request_id = $1 WHERE order_id = $2",
+                    [paymentRequestId, orderId], (err, response) => {
+                          if (err) {
+                            console.log(err)
+                            res.send(body);
+                          } else {
+                            console.log(response)
+                             res.send(body);
+                          }
+
+                        });
+              }
+            })
+
+
+
       }
     })
+})
+
+
+app.post('/homelyOrder', function(req, res) {
+
+    const mobile = req.body.mobile;
+    const name = req.body.name;
+    const orderId = orderid.generate();
+    const status = 'PENDING';
+    const summary = req.body.summary;
+    const deliverySlot = req.body.slot;
+    const price = req.body.price;
+
+    const client = new Client(dbConfig)
+    client.connect(err => {
+      if (err) {
+        console.error('error connecting', err.stack)
+      } else {
+        console.log('connected')
+        client.query("INSERT INTO \"public\".\"Homely_Order\"(mobile, name, order_id, status, delivery_slot, price, summary) VALUES($1, $2, $3, $4, $5, $6, $7)",
+            [mobile, name, orderId, status, deliverySlot, price, summary], (err, response) => {
+                  if (err) {
+                    console.log(err)
+                     res.send("error");
+                  } else {
+                    console.log(response)
+                     res.send(orderId);
+                  }
+
+                });
+      }
+    })
+
+
 })
 
 app.post('/submitGetQuote', function(req, res) {

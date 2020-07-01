@@ -30,7 +30,9 @@
     "update-json-file": "^1.1.1",
     "uuid-v4": "^0.1.0",
     "web-push": "^3.0.0",
-    "request": "^2.88.2"
+    "request": "^2.88.2",
+    "pg": "8.2.1",
+    "order-id": "1.1.0"
   },
   "devDependencies": {
     "babel-core": "^6.25.0",
