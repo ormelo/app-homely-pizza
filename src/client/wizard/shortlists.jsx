@@ -230,7 +230,7 @@ class Shortlists extends Component {
             showCoupon: false,
             couponApplied: false,
             showSlot: false,
-            slotSelected: false,
+            slotSelected: 'Saturday, 1:30PM - 2.30PM',
             orderSummary: localStorage.getItem('basket') != null ? JSON.parse(localStorage.getItem('basket')) : []
         };
     }
@@ -308,7 +308,9 @@ class Shortlists extends Component {
         }
     }
     selectSlot() {
-
+        var e = document.getElementById("slots");
+        var slot = e.options[e.selectedIndex].value;
+        this.setState({slotSelected: slot});
     }
     captureAddress() {
         let pincode = document.getElementById('dPincode').value;
@@ -346,7 +348,7 @@ class Shortlists extends Component {
         var url = '/paymentRequest';
         var orderId = 0;
         orderId = localStorage.getItem('orderId') != null ? localStorage.getItem('orderId') : orderId;
-        var params = 'amount=10&phone='+localStorage.getItem('dMobile')+'&name='+localStorage.getItem('dName')+'&orderId='+orderId;
+        var params = 'amount=10&phone='+localStorage.getItem('dMobile')+'&name='+localStorage.getItem('dName')+'&orderId='+orderId+'&slot='+this.state.slotSelected;
         http.open('POST', url, true);
         http.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
 

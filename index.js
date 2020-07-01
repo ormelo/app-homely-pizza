@@ -858,6 +858,7 @@ app.post('/franchiseEnquiry', function(req, res) {
 
 app.post('/paymentRequest', function(req, res) {
     const orderId = req.body.orderId;
+    const slot = req.body.slot;
     var headers = { 'X-Api-Key': 'b442e3b63d6c01b2e7fdb49e14e8a069', 'X-Auth-Token': '96650eeefedf39e2bbdb32d8496f0ca2'}
     var payload = {
       purpose: 'Pizza order',
@@ -881,8 +882,8 @@ app.post('/paymentRequest', function(req, res) {
                 console.error('error connecting', err.stack)
               } else {
                 console.log('connected')
-                client.query("UPDATE \"public\".\"Homely_Order\" set payment_request_id = $1 WHERE order_id = $2",
-                    [paymentRequestId, orderId], (err, response) => {
+                client.query("UPDATE \"public\".\"Homely_Order\" set payment_request_id = $1, delivery_slot = $3 WHERE order_id = $2",
+                    [paymentRequestId, orderId, slot], (err, response) => {
                           if (err) {
                             console.log(err)
                             res.send(body);
