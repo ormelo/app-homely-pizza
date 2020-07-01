@@ -470,7 +470,7 @@ class Shortlists extends Component {
                                                       <option value="Saturday, 3:30PM - 4.30PM">Saturday, 3:30PM - 4.30PM</option>
                                                       <option value="Saturday, 4:30PM - 5.30PM">Saturday, 4:30PM - 5.30PM</option>
                                                     </select>
-                                                    <span className="title-ff">*Due to ongoing COVID-19 crisis, we're only able to deliver on weekends and non-curfew days.</span>
+                                                    <span className="title-ff">*Due to ongoing COVID-19 crisis, we're only able to deliver on weekends, with no-curfew days.</span>
                                                   </div>
                                               </div>
                                           </div>
