@@ -229,6 +229,8 @@ class Shortlists extends Component {
             activeStep: 1,
             showCoupon: false,
             couponApplied: false,
+            showSlot: false,
+            slotSelected: false,
             orderSummary: localStorage.getItem('basket') != null ? JSON.parse(localStorage.getItem('basket')) : []
         };
     }
@@ -304,6 +306,9 @@ class Shortlists extends Component {
             this.setState({couponApplied: true});
         }
     }
+    selectSlot() {
+
+    }
     captureAddress() {
         let pincode = document.getElementById('dPincode').value;
         let address = document.getElementById('dAddress').value;
@@ -333,7 +338,7 @@ class Shortlists extends Component {
         http.send(params);
     }
     render() {
-        const {showLoader, results, orderSummary, showCoupon} = this.state;
+        const {showLoader, results, orderSummary, showCoupon, showSlot} = this.state;
         console.log('orderSummary: ', orderSummary);
         let loaderElems = [];
         for(var i=0; i<14; i++) {
@@ -360,7 +365,7 @@ class Shortlists extends Component {
                         <hr className="line-tasks"/>
                         <div id="checkoutModal" className="card-container checkout-modal modal-show">
                             <div className="modal-heading">
-                                <div className="right" onClick={()=>{document.getElementById('checkoutModal').style.top='1200px';this.setState({activeStep: 1, showCoupon: false, couponApplied: false});}}>
+                                <div className="right" onClick={()=>{document.getElementById('checkoutModal').style.top='1200px';this.setState({activeStep: 1, showCoupon: false, showSlot: false, couponApplied: false});}}>
                                     <img src="../../../img/images/ic_close.png" />
                                 </div>
                             </div>
@@ -414,7 +419,8 @@ class Shortlists extends Component {
                                         </div>
                                     </div>
                                     {this.state.couponApplied == true &&
-                                        <div className="summary-total" style={{bottom: '120px', opacity: '0.5'}}>Total:  <span className="rupee">₹</span><span id="priceOriginal" style={{textDecoration: 'line-through'}}>{this.getTotal()}</span>
+                                        <div className="summary-total" style={{bottom: '120px'}}><span style={{opacity: '0.5'}}>Total:  </span><span className="rupee" style={{opacity: '0.5'}}>₹</span><span id="priceOriginal" style={{textDecoration: 'line-through', opacity: '0.5'}}>{this.getTotal()}</span>
+                                        <span><img src="../../../img/images/ic_btick.png" style={{width: '32px', marginLeft: '20px'}}/><span style={{fontSize: '18px',marginLeft: '4px'}}>Coupon applied!</span></span>
                                         </div>
                                     }
                                     <div className="summary-total">Total:  <span className="rupee">₹</span><span id="price">{this.getTotal()}</span>
@@ -445,11 +451,38 @@ class Shortlists extends Component {
 
                                         </div>
 
-                                <div id="checkoutBtnStep2" className="card-btn checkout" style={{bottom: '60px', marginTop: 'auto'}} onClick={()=>{document.getElementById('step2').classList.add('done');this.captureAddress();document.getElementById('step3Circle').classList.add('active');this.setState({activeStep: 3});this.makePaymentRequest()}}>Next&nbsp;→
+                                <div id="checkoutBtnStep2" className="card-btn checkout" style={{bottom: '60px', marginTop: 'auto'}} onClick={()=>{document.getElementById('step2').classList.add('done');this.captureAddress();document.getElementById('step3Circle').classList.add('active');this.setState({showSlot: true, activeStep: 3});}}>Next&nbsp;→
                                     <div className=""></div>
                                 </div>
                               </div>}
-                              {this.state.activeStep == 3 &&
+                              {this.state.showSlot &&
+                              <div className="checkout-content">
+                                  <div className="card-container small" style={{padding: '0px 12px 0px 12px', minHeight: '246px'}}>
+                                      <div className="section-one">
+                                          <div className="top-right">
+                                              <div className="usp-title" style={{left: '0',right: '0',margin: '0 auto'}}>
+                                                  <span className="title-ff" style={{top:'-14px', padding: '20px', lineHeight: '22px'}}>When do you want your pizza delivered?</span>
+                                                  <div className="slot">
+                                                    <label for="slots">Available slots:</label>
+                                                    <select name="slots" id="slots" onChange={()=>{this.selectSlot()}}>
+                                                      <option value="Saturday, 1:30PM - 2.30PM">Saturday, 1:30PM - 2.30PM</option>
+                                                      <option value="Saturday, 2:30PM - 3.30PM">Saturday, 2:30PM - 3.30PM</option>
+                                                      <option value="Saturday, 3:30PM - 4.30PM">Saturday, 3:30PM - 4.30PM</option>
+                                                      <option value="Saturday, 4:30PM - 5.30PM">Saturday, 4:30PM - 5.30PM</option>
+                                                    </select>
+                                                    <span className="title-ff">*Due to ongoing COVID-19 crisis, we're only able to deliver on weekends and non-curfew days.</span>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                      </div>
+                                  </div>
+
+                                      <div id="checkoutBtnStep11" className="card-btn checkout" style={{bottom: '60px', marginTop: 'auto'}} onClick={()=>{document.getElementById('step2').classList.add('active');document.getElementById('step3Circle').classList.add('active');this.setState({showCoupon: false, showSlot: false, activeStep: 3});this.makePaymentRequest();}}>Next&nbsp;→
+                                          <div className=""></div>
+                                      </div>
+                              </div>
+                            }
+                              {!this.state.showSlot && this.state.activeStep == 3 &&
                                   <div className="checkout-content">
 
                                   <div className="card-container" style={{padding: '0px 12px 0px 12px',minHeight: '200px'}}>
