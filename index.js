@@ -800,6 +800,10 @@ app.get("/redirect/", function(request, response) {
   response.sendFile(path.resolve(__dirname, 'public', 'shortlists.html'));
 });
 
+app.get("/credits/", function(request, response) {
+  response.sendFile(path.resolve(__dirname, 'public', 'shortlists.html'));
+});
+
 app.get("/data/:task/:loc/:zone", function(request, response) {
   const fs = require('fs');
   let rawdata = fs.readFileSync('./src/data-source/'+request.params.task+'/'+request.params.loc+'/'+request.params.zone+'/mockDataQnA.json');
@@ -908,6 +912,7 @@ app.post('/homelyOrder', function(req, res) {
     const mobile = req.body.mobile;
     const name = req.body.name;
     const orderId = orderid.generate();
+    let whitelisted = false;
     const status = 'PENDING';
     const summary = req.body.summary;
     const deliverySlot = req.body.slot;
@@ -919,17 +924,32 @@ app.post('/homelyOrder', function(req, res) {
         console.error('error connecting', err.stack)
       } else {
         console.log('connected')
-        client.query("INSERT INTO \"public\".\"Homely_Order\"(mobile, name, order_id, status, delivery_slot, price, summary) VALUES($1, $2, $3, $4, $5, $6, $7)",
-            [mobile, name, orderId, status, deliverySlot, price, summary], (err, response) => {
-                  if (err) {
-                    console.log(err)
-                     res.send("error");
-                  } else {
-                    console.log(response)
-                     res.send(orderId);
-                  }
+        client.query("SELECT id FROM \"public\".\"Homely_Order\" WHERE mobile = $1",
+                    [mobile], (err, response) => {
+                          if (err) {
+                            console.log(err)
+                             res.send("error");
+                          } else {
+                            if(response.rows.length > 0) {
+                                client.query("INSERT INTO \"public\".\"Homely_Order\"(mobile, name, order_id, status, delivery_slot, price, summary) VALUES($1, $2, $3, $4, $5, $6, $7)",
+                                            [mobile, name, orderId, status, deliverySlot, price, summary], (err, response) => {
+                                                  if (err) {
+                                                    console.log(err)
+                                                     res.send("error");
+                                                  } else {
+                                                    console.log(response)
+                                                     res.send('{"orderId":"'+orderId+'", "whitelisted":true}');
+                                                  }
 
-                });
+                                                });
+                            } else {
+                                res.send('{"orderId":0, "whitelisted":false}');
+                            }
+                          }
+
+                        });
+
+
       }
     })
 

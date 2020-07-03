@@ -242,8 +242,12 @@ class Shortlists extends Component {
         window.addEventListener("scroll",function () {
             if(window.scrollY <= 120) {
                 document.querySelector("#checkoutHeader").style.top = "0px";
+                document.querySelector("#logo").style.top = "91px";
+                document.querySelectoe('.announcement').style.display = 'block';
             } else {
-                document.querySelector("#checkoutHeader").style.top = window.scrollY+"px";
+                document.querySelector("#checkoutHeader").style.top = (window.scrollY-65)+"px";
+                document.querySelector("#logo").style.top = "21px";
+                document.querySelectoe('.announcement').style.display = 'none';
             }
         });
 
@@ -336,11 +340,18 @@ class Shortlists extends Component {
             if(http.readyState == 4 && http.status == 200) {
                 console.log('order creation post response:', http.responseText);
                 var res = http.responseText;
-                if(res != 'error') {
-                   localStorage.setItem('orderId', res);
+                if(res != null){
+                    res = JSON.parse(res);
+                    if(res.whitelisted == false) {
+                        alert("Sorry, we're not able to deliver to your location temporarily!");
+                        this.setState({activeStep: 2});
+                    } else {
+                        document.getElementById('step3Circle').classList.add('active');this.setState({showSlot: true, activeStep: 3});
+                        localStorage.setItem('orderId', res.orderId);
+                    }
                 }
             }
-        }
+        }.bind(this);
         http.send(params);
     }
     makePaymentRequest() {
@@ -376,8 +387,9 @@ class Shortlists extends Component {
         return (<div>
                     <img className="icon-back" src="../../../img/images/ic_back.png" onClick={()=>{history.back(-1);}} />
                     <img id="logo" className="logo-img" src="../img/images/logohp4.png" />
+                    <div class="announcement">  Due to ongoing COVID-19 crisis, we're only able to deliver on weekends on non-curfew days.</div>
                     <div id="checkoutHeader">
-                        <div id="checkoutBtn" className="card-btn checkout" onClick={()=>{document.getElementById('checkoutModal').style.top='-20px';this.setState({orderSummary: localStorage.getItem('basket') != null ? JSON.parse(localStorage.getItem('basket')) : []});}}>Checkout&nbsp;→
+                        <div id="checkoutBtn" className="card-btn checkout" onClick={()=>{document.getElementById('checkoutModal').style.top='-20px';this.setState({orderSummary: localStorage.getItem('basket') != null ? JSON.parse(localStorage.getItem('basket')) : []});document.getElementById('logo').style.top='21px';}}>Checkout&nbsp;→
                             <div className=""></div>
                             <div id="checkoutCount" class="c-count">0</div>
                         </div>
@@ -393,7 +405,7 @@ class Shortlists extends Component {
                         <hr className="line-tasks"/>
                         <div id="checkoutModal" className="card-container checkout-modal modal-show">
                             <div className="modal-heading">
-                                <div className="right" onClick={()=>{document.getElementById('checkoutModal').style.top='1200px';this.setState({activeStep: 1, showCoupon: false, showSlot: false, couponApplied: false});}}>
+                                <div className="right" onClick={()=>{document.getElementById('checkoutModal').style.top='1200px';this.setState({activeStep: 1, showCoupon: false, showSlot: false, couponApplied: false});document.getElementById('logo').style.top='91px';}}>
                                     <img src="../../../img/images/ic_close.png" />
                                 </div>
                             </div>
@@ -479,7 +491,7 @@ class Shortlists extends Component {
 
                                         </div>
 
-                                <div id="checkoutBtnStep2" className="card-btn checkout" style={{bottom: '60px', marginTop: 'auto'}} onClick={()=>{document.getElementById('step2').classList.add('done');this.captureAddress();document.getElementById('step3Circle').classList.add('active');this.setState({showSlot: true, activeStep: 3});}}>Next&nbsp;→
+                                <div id="checkoutBtnStep2" className="card-btn checkout" style={{bottom: '60px', marginTop: 'auto'}} onClick={()=>{document.getElementById('step2').classList.add('done');this.captureAddress();}}>Next&nbsp;→
                                     <div className=""></div>
                                 </div>
                               </div>}
@@ -498,7 +510,7 @@ class Shortlists extends Component {
                                                       <option value="Saturday, 3:30PM - 4.30PM">Saturday, 3:30PM - 4.30PM</option>
                                                       <option value="Saturday, 4:30PM - 5.30PM">Saturday, 4:30PM - 5.30PM</option>
                                                     </select>
-                                                    <span className="title-ff">*Due to ongoing COVID-19 crisis, we're only able to deliver on weekends, with no-curfew days.</span>
+                                                    <span className="title-ff">*Due to ongoing COVID-19 crisis, we're only able to deliver on weekends on non-curfew days.</span>
                                                   </div>
                                               </div>
                                           </div>
@@ -535,7 +547,7 @@ class Shortlists extends Component {
                         </div>
 
 
-                                    {results && location.href.indexOf('/redirect/')==-1 && results.map((resultItem, index) => {
+                                    {results && location.href.indexOf('/redirect/')==-1 && location.href.indexOf('/credits/')==-1 && results.map((resultItem, index) => {
                                         return (<Card index={index} data={resultItem} />);
                                     })}
 
@@ -566,8 +578,41 @@ class Shortlists extends Component {
 
                                     </div>}
 
+                                    {location.href.indexOf('/credits/')!=-1 && <div className="card-container">
+                                                                                <div className="status-title">
 
-                    </div>
+                                                                                    <span>Special Credits</span>
+                                                                                    <br/>
+                                                                                    <img className="ic-delivery" src="../../../img/images/medal.png" style={{marginLeft: '0px'}} />
+                                                                                    <span className="small-title" style={{textAlign: 'justify'}}>We take pride in our team, especially our junior artists who strive to craft a memorable experience in their own creative ways.</span>
+
+                                                                                 </div>
+                                                                                 <div className="status-title" style={{marginTop: '140px'}}>
+
+                                                                                     <span style={{fontSize: '20px',marginTop:'14px',fontWeight: 'bold'}}>Akshara, Creative logo & concept</span>
+                                                                                     <div className="ic-delivery avataraks"  style={{marginLeft: '0px'}} />
+
+                                                                                  </div>
+                                                                                  <div className="status-title" style={{marginTop: '10px'}}>
+
+                                                                                   <span style={{fontSize: '20px',marginTop:'14px',fontWeight: 'bold'}}>Antara, Visual design & logo art</span>
+                                                                                   <div className="ic-delivery avatarant"  style={{marginLeft: '0px'}} />
+
+                                                                                </div>
+                                                                                <div className="status-title" style={{marginTop: '10px'}}>
+
+                                                                                   <span style={{fontSize: '20px',marginTop:'14px',fontWeight: 'bold'}}>Srishti, Customer happiness</span>
+                                                                                   <div className="ic-delivery avatarsr"  style={{marginLeft: '0px'}} />
+                                                                                   <br/><br/><br/>
+
+                                                                                </div>
+
+
+
+                                                                        </div>}
+
+
+                    </div><div className="credits"> © 2020 homely.pizza<span style={{marginLeft: '20px',textDecoration: 'underline'}} onClick={()=>{location.href='/credits/'}}>Special Credits</span></div>
                 <br/>
                 </div>)
     }

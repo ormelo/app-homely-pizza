@@ -384,13 +384,15 @@ class Guide extends React.Component {
                                        <div class="btn2"></div>
                                      </div>
                              </section>
+
                         </div>
                     </div>
 
 
-                </div>DGD
+                </div>
 
                 <br/>
+                <div className="credits"> © 2020 homely.pizza<span style={{marginLeft: '20px',textDecoration: 'underline'}} onClick={()=>{location.href='/credits/'}}>Special Credits</span></div>
                 </div>
 
 
@@ -409,6 +411,7 @@ render(<Router>
                     <Route exact path="/" component={Guide} />
                 <Route path="/order/" component={ShortlistsWithRouter} />
                 <Route path="/redirect/" component={ShortlistsWithRouter} />
+                <Route path="/credits/" component={ShortlistsWithRouter} />
             </div>)} />
     </div>
 </Router>, document.getElementById('containerWiz'));
