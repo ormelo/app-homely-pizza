@@ -392,7 +392,7 @@ class Guide extends React.Component {
                 </div>
 
                 <br/>
-                <div className="credits"> © 2020 homely.pizza<span style={{marginLeft: '20px',textDecoration: 'underline'}} onClick={()=>{location.href='/credits/'}}>Special Credits</span></div>
+                <div className="credits"> © 2020 homely.pizza</div>
                 </div>
 
 

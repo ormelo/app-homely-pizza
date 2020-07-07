@@ -10,35 +10,35 @@
      "address": "129, Siddapura, Whitefield, Bengaluru, Karnataka, India, Varthur Main Road, Bengaluru",
      "qna": [
        {
-         "defaultPrice": 370,
+         "defaultPrice": 330,
          "responses": [
            {
              "topic": "Large",
-             "pricing": {"Thin":  370, "Thick":  480}
+             "pricing": {"Thin":  330, "Thick":  340}
            },
            {
              "topic": "Medium",
-             "pricing": {"Thin":  350, "Thick":  420}
+             "pricing": {"Thin":  320, "Thick":  330}
            },
            {
              "topic": "Small",
-             "pricing": {"Thin":  320, "Thick":  400}
+             "pricing": {"Thin":  300, "Thick":  320}
            }
          ],
          "crust": [
            {
              "topic": "Thin",
-             "pricing": {"Large":  370, "Medium":  350, "Small":  320}
+             "pricing": {"Large":  330, "Medium":  320, "Small":  300}
            },
            {
              "topic": "Thick",
-             "pricing": {"Large":  480, "Medium":  420, "Small":  400}
+             "pricing": {"Large":  340, "Medium":  330, "Small":  320}
            }
          ]
        }
      ],
      "usp": [
-       "Mild blend of Back Olives, Onion & Sweet corn"
+       "Mild blend of Black Olives, Onion & Sweet corn"
      ],
      "images": {
        "primary": "https://lh5.googleusercontent.com/p/AF1QipMfveOLCLmjGRfpfzooSICq5nskYbHGIdJVKtud=s870-k-no",
@@ -52,29 +52,29 @@
      "address": "129, Siddapura, Whitefield, Bengaluru, Karnataka, India, Varthur Main Road, Bengaluru",
      "qna": [
        {
-         "defaultPrice": 400,
+         "defaultPrice": 330,
          "responses": [
            {
              "topic": "Large",
-             "pricing": {"Thin":  400, "Thick":  450}
+             "pricing": {"Thin":  330, "Thick":  340}
            },
            {
              "topic": "Medium",
-             "pricing": {"Thin":  350, "Thick":  400}
+             "pricing": {"Thin":  320, "Thick":  330}
            },
            {
              "topic": "Small",
-             "pricing": {"Thin":  320, "Thick":  360}
+             "pricing": {"Thin":  300, "Thick":  320}
            }
          ],
          "crust": [
            {
              "topic": "Thin",
-             "pricing": {"Large":  400, "Medium":  350, "Small":  320}
+             "pricing": {"Large":  330, "Medium":  320, "Small":  300}
            },
            {
              "topic": "Thick",
-             "pricing": {"Large":  450, "Medium":  400, "Small":  360}
+             "pricing": {"Large":  340, "Medium":  330, "Small":  320}
            }
          ]
        }
@@ -94,35 +94,35 @@
      "address": "129, Siddapura, Whitefield, Bengaluru, Karnataka, India, Varthur Main Road, Bengaluru",
      "qna": [
        {
-         "defaultPrice": "370",
+         "defaultPrice": 350,
          "responses": [
            {
              "topic": "Large",
-             "pricing": {"Thin":  370, "Thick":  480}
+             "pricing": {"Thin":  350, "Thick":  350}
            },
            {
              "topic": "Medium",
-             "pricing": {"Thin":  350, "Thick":  420}
+             "pricing": {"Thin":  330, "Thick":  340}
            },
            {
              "topic": "Small",
-             "pricing": {"Thin":  320, "Thick":  400}
+             "pricing": {"Thin":  310, "Thick":  330}
            }
          ],
          "crust": [
            {
              "topic": "Thin",
-             "pricing": {"Large":  370, "Medium":  350, "Small":  320}
+             "pricing": {"Large":  350, "Medium":  330, "Small":  310}
            },
            {
              "topic": "Thick",
-             "pricing": {"Large":  480, "Medium":  420, "Small":  400}
+             "pricing": {"Large":  350, "Medium":  340, "Small":  330}
            }
          ]
        }
      ],
      "usp": [
-       "A creamy mix of red and yellow bell peppers & onion"
+       "A creamy mix of red and green bell peppers with onion"
      ],
      "images": {
        "primary": "https://lh5.googleusercontent.com/p/AF1QipMfveOLCLmjGRfpfzooSICq5nskYbHGIdJVKtud=s870-k-no",
@@ -136,29 +136,29 @@
      "address": "129, Siddapura, Whitefield, Bengaluru, Karnataka, India, Varthur Main Road, Bengaluru",
      "qna": [
        {
-         "defaultPrice": "370",
+         "defaultPrice": 350,
          "responses": [
            {
              "topic": "Large",
-             "pricing": {"Thin":  370, "Thick":  480}
+             "pricing": {"Thin":  350, "Thick":  350}
            },
            {
              "topic": "Medium",
-             "pricing": {"Thin":  350, "Thick":  420}
+             "pricing": {"Thin":  330, "Thick":  340}
            },
            {
              "topic": "Small",
-             "pricing": {"Thin":  320, "Thick":  400}
+             "pricing": {"Thin":  310, "Thick":  330}
            }
          ],
          "crust": [
            {
              "topic": "Thin",
-             "pricing": {"Large":  370, "Medium":  350, "Small":  320}
+             "pricing": {"Large":  350, "Medium":  330, "Small":  310}
            },
            {
              "topic": "Thick",
-             "pricing": {"Large":  480, "Medium":  420, "Small":  400}
+             "pricing": {"Large":  350, "Medium":  340, "Small":  330}
            }
          ]
        }
@@ -172,7 +172,7 @@
      }
    },
    {
-     "title": "Melting Mushroom",
+     "title": "Classic Bell Pepper",
      "shortTitle": "Asense Interior",
      "subTitle": "129, Siddapura",
      "address": "129, Siddapura, Whitefield, Bengaluru, Karnataka, India, Varthur Main Road, Bengaluru",
@@ -206,49 +206,7 @@
        }
      ],
      "usp": [
-       "High on creamy cheese, mushrooms, sweet corn and onions"
-     ],
-     "images": {
-       "primary": "https://lh5.googleusercontent.com/p/AF1QipMfveOLCLmjGRfpfzooSICq5nskYbHGIdJVKtud=s870-k-no",
-       "secondary": []
-     }
-   },
-   {
-     "title": "Healthy Mashup",
-     "shortTitle": "Asense Interior",
-     "subTitle": "129, Siddapura",
-     "address": "129, Siddapura, Whitefield, Bengaluru, Karnataka, India, Varthur Main Road, Bengaluru",
-     "qna": [
-       {
-         "defaultPrice": "370",
-         "responses": [
-           {
-             "topic": "Large",
-             "pricing": {"Thin":  370, "Thick":  480}
-           },
-           {
-             "topic": "Medium",
-             "pricing": {"Thin":  350, "Thick":  420}
-           },
-           {
-             "topic": "Small",
-             "pricing": {"Thin":  320, "Thick":  400}
-           }
-         ],
-         "crust": [
-           {
-             "topic": "Thin",
-             "pricing": {"Large":  370, "Medium":  350, "Small":  320}
-           },
-           {
-             "topic": "Thick",
-             "pricing": {"Large":  480, "Medium":  420, "Small":  400}
-           }
-         ]
-       }
-     ],
-     "usp": [
-       "A great mashup of Brocolli, pineapple and onions with olive extras"
+       "High on creamy cheese, green bell pepper, sweet corn and onions"
      ],
      "images": {
        "primary": "https://lh5.googleusercontent.com/p/AF1QipMfveOLCLmjGRfpfzooSICq5nskYbHGIdJVKtud=s870-k-no",
@@ -290,7 +248,7 @@
        }
      ],
      "usp": [
-       "A spicy mix of bell peppers, paprika and bursting cheese"
+       "A spicy mix of bell peppers, red chili and bursting cheese"
      ],
      "images": {
        "primary": "https://lh5.googleusercontent.com/p/AF1QipMfveOLCLmjGRfpfzooSICq5nskYbHGIdJVKtud=s870-k-no",
@@ -304,29 +262,29 @@
      "address": "129, Siddapura, Whitefield, Bengaluru, Karnataka, India, Varthur Main Road, Bengaluru",
      "qna": [
        {
-         "defaultPrice": "370",
+         "defaultPrice": 330,
          "responses": [
            {
              "topic": "Large",
-             "pricing": {"Thin":  370, "Thick":  480}
+             "pricing": {"Thin":  330, "Thick":  340}
            },
            {
              "topic": "Medium",
-             "pricing": {"Thin":  350, "Thick":  420}
+             "pricing": {"Thin":  320, "Thick":  330}
            },
            {
              "topic": "Small",
-             "pricing": {"Thin":  320, "Thick":  400}
+             "pricing": {"Thin":  300, "Thick":  320}
            }
          ],
          "crust": [
            {
              "topic": "Thin",
-             "pricing": {"Large":  370, "Medium":  350, "Small":  320}
+             "pricing": {"Large":  330, "Medium":  320, "Small":  300}
            },
            {
              "topic": "Thick",
-             "pricing": {"Large":  480, "Medium":  420, "Small":  400}
+             "pricing": {"Large":  340, "Medium":  330, "Small":  320}
            }
          ]
        }
@@ -344,37 +302,35 @@
      "shortTitle": "Asense Interior",
      "subTitle": "129, Siddapura",
      "address": "129, Siddapura, Whitefield, Bengaluru, Karnataka, India, Varthur Main Road, Bengaluru",
-     "qna": [
-       {
-         "defaultPrice": "370",
-         "responses": [
-           {
-             "topic": "Large",
-             "pricing": {"Thin":  370, "Thick":  480}
-           },
-           {
-             "topic": "Medium",
-             "pricing": {"Thin":  350, "Thick":  420}
-           },
-           {
-             "topic": "Small",
-             "pricing": {"Thin":  320, "Thick":  400}
-           }
-         ],
-         "crust": [
-           {
-             "topic": "Thin",
-             "pricing": {"Large":  370, "Medium":  350, "Small":  320}
-           },
-           {
-             "topic": "Thick",
-             "pricing": {"Large":  480, "Medium":  420, "Small":  400}
-           }
-         ]
-       }
-     ],
+     "qna": [{
+       "defaultPrice": 330,
+       "responses": [
+         {
+           "topic": "Large",
+           "pricing": {"Thin":  330, "Thick":  340}
+         },
+         {
+           "topic": "Medium",
+           "pricing": {"Thin":  320, "Thick":  330}
+         },
+         {
+           "topic": "Small",
+           "pricing": {"Thin":  300, "Thick":  320}
+         }
+       ],
+       "crust": [
+         {
+           "topic": "Thin",
+           "pricing": {"Large":  330, "Medium":  320, "Small":  300}
+         },
+         {
+           "topic": "Thick",
+           "pricing": {"Large":  340, "Medium":  330, "Small":  320}
+         }
+       ]
+     }],
      "usp": [
-       "A spicy blend of sun dried tomatoes, paprika and bell peppers"
+       "A spicy blend of fresh tomatoes, red chili and olives"
      ],
      "images": {
        "primary": "https://lh5.googleusercontent.com/p/AF1QipMfveOLCLmjGRfpfzooSICq5nskYbHGIdJVKtud=s870-k-no",
