@@ -265,7 +265,7 @@ class Guide extends React.Component {
                         </div>
                         <div className="info" style={{marginTop: '10px',minHeight:'300px'}}>
                             <div className="overview bg-text" style={{marginTop: '130px'}} id="overviewBgMain">
-                                Freshly prepped pizza ingredients in a box, delivered for instant cooking!
+                                Freshly prepped pizza in a box, delivered for instant cooking!
                             </div>
                         </div>
                     </div>
@@ -338,9 +338,9 @@ class Guide extends React.Component {
 
                          <section class="forth-section">
                                  <div className="overview bg-text" style={{marginTop: '-110px', display: 'inline-block'}} id="overviewBgMain">
-                                    Simply bake it in an oven or place in a cooker in low flame without weight.
+                                    Simply place it in a pan in low flame.
                                     <br/><br/>
-                                    Your piping <b>HOT</b> pizza is usually ready in 12 mins!
+                                    Your piping <b>HOT</b> pizza is usually ready in 8 mins!
                                  </div>
                                  <div class="images-wrapper">
                                      <img src="./img/images/protate.gif" style={{width: '250px'}}/>
