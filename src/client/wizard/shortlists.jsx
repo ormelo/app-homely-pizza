@@ -342,13 +342,13 @@ class Shortlists extends Component {
                 var res = http.responseText;
                 if(res != null){
                     res = JSON.parse(res);
-                    if(res.whitelisted == false) {
+                    /*if(res.whitelisted == false) {
                         alert("Sorry, we're not able to deliver to your location temporarily!");
                         this.setState({activeStep: 2});
-                    } else {
+                    } else {*/
                         document.getElementById('step3Circle').classList.add('active');this.setState({showSlot: true, activeStep: 3});
                         localStorage.setItem('orderId', res.orderId);
-                    }
+                    /*}*/
                 }
             }
         }.bind(this);
@@ -359,7 +359,7 @@ class Shortlists extends Component {
         var url = '/paymentRequest';
         var orderId = 0;
         orderId = localStorage.getItem('orderId') != null ? localStorage.getItem('orderId') : orderId;
-        var params = 'amount=10&phone='+localStorage.getItem('dMobile')+'&name='+localStorage.getItem('dName')+'&orderId='+orderId+'&slot='+this.state.slotSelected;
+        var params = 'amount='+localStorage.getItem('dPrice')+'&phone='+localStorage.getItem('dMobile')+'&name='+localStorage.getItem('dName')+'&orderId='+orderId+'&slot='+this.state.slotSelected;
         http.open('POST', url, true);
         http.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
 
