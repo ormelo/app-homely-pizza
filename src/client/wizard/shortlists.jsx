@@ -318,6 +318,7 @@ class Shortlists extends Component {
     }
     captureAddress() {
         let pincode = document.getElementById('dPincode').value;
+
         let address = document.getElementById('dAddress').value;
         let mobile = document.getElementById('dMobile').value;
         let name = document.getElementById('dName').value;
@@ -332,7 +333,7 @@ class Shortlists extends Component {
         //create order
         var http = new XMLHttpRequest();
         var url = '/homelyOrder';
-        var params = 'price='+price+'&mobile='+localStorage.getItem('dMobile')+'&name='+localStorage.getItem('dName')+'&slot='+slot+'&summary='+summary+'&address='+address;
+        var params = 'price='+price+'&mobile='+localStorage.getItem('dMobile')+'&name='+localStorage.getItem('dName')+'&slot='+slot+'&summary='+summary+'&pincode='+pincode+'&address='+address;
         http.open('POST', url, true);
         http.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
 
@@ -340,6 +341,10 @@ class Shortlists extends Component {
             if(http.readyState == 4 && http.status == 200) {
                 console.log('order creation post response:', http.responseText);
                 var res = http.responseText;
+                if(!pincode.includes('560')) {
+                    alert('Sorry, we do not serve in your location temporarily.');
+                    location.href = '/';
+                }
                 if(res != null){
                     res = JSON.parse(res);
                     /*if(res.whitelisted == false) {
