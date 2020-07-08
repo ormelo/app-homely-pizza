@@ -871,7 +871,7 @@ app.post('/paymentRequest', function(req, res) {
       name: req.body.phone,
       redirect_url: 'http://www.homely.pizza/redirect/',
       send_email: false,
-      send_sms: true,
+      send_sms: false,
       allow_repeated_payments: false}
 
     request.post('https://www.instamojo.com/api/1.1/payment-requests/', {form: payload,  headers: headers}, function(error, response, body){
@@ -917,6 +917,7 @@ app.post('/homelyOrder', function(req, res) {
     const summary = req.body.summary;
     const deliverySlot = req.body.slot;
     const price = req.body.price;
+    const address = req.body.address;
 
     const client = new Client(dbConfig)
     client.connect(err => {
@@ -924,30 +925,19 @@ app.post('/homelyOrder', function(req, res) {
         console.error('error connecting', err.stack)
       } else {
         console.log('connected')
-        client.query("SELECT id FROM \"public\".\"Homely_Order\" WHERE mobile = $1",
-                    [mobile], (err, response) => {
-                          if (err) {
-                            console.log(err)
-                             res.send("error");
-                          } else {
-                            if(response.rows.length > 0) {
-                                client.query("INSERT INTO \"public\".\"Homely_Order\"(mobile, name, order_id, status, delivery_slot, price, summary) VALUES($1, $2, $3, $4, $5, $6, $7)",
-                                            [mobile, name, orderId, status, deliverySlot, price, summary], (err, response) => {
-                                                  if (err) {
-                                                    console.log(err)
-                                                     res.send("error");
-                                                  } else {
-                                                    console.log(response)
-                                                     res.send('{"orderId":"'+orderId+'", "whitelisted":true}');
-                                                  }
 
-                                                });
-                            } else {
-                                res.send('{"orderId":0, "whitelisted":false}');
-                            }
-                          }
 
-                        });
+            client.query("INSERT INTO \"public\".\"Homely_Order\"(mobile, name, order_id, status, delivery_slot, price, summary, address) VALUES($1, $2, $3, $4, $5, $6, $7, $8)",
+                        [mobile, name, orderId, status, deliverySlot, price, summary, address], (err, response) => {
+                              if (err) {
+                                console.log(err)
+                                 res.send("error");
+                              } else {
+                                console.log(response)
+                                 res.send('{"orderId":"'+orderId+'", "whitelisted":true}');
+                              }
+
+                            });
 
 
       }

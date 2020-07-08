@@ -293,7 +293,7 @@ class Shortlists extends Component {
                 total += orderSummary[index].price;
             }
         });
-        total = total + (0.04*total);
+        total = total + (0.04*total) + 45;
         if(!this.state.couponApplied) {
             localStorage.setItem('dPrice', Math.round(total));
         }
@@ -332,7 +332,7 @@ class Shortlists extends Component {
         //create order
         var http = new XMLHttpRequest();
         var url = '/homelyOrder';
-        var params = 'price='+price+'&mobile='+localStorage.getItem('dMobile')+'&name='+localStorage.getItem('dName')+'&slot='+slot+'&summary='+summary;
+        var params = 'price='+price+'&mobile='+localStorage.getItem('dMobile')+'&name='+localStorage.getItem('dName')+'&slot='+slot+'&summary='+summary+'&address='+address;
         http.open('POST', url, true);
         http.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
 
@@ -437,7 +437,7 @@ class Shortlists extends Component {
                                     }
                                 })}
                                 <div className="summary-total">Total:  <span className="rupee">₹</span><span id="price">{this.getTotal()}</span>
-                                    <div style={{fontSize: '14px', marginTop: '5px', marginLeft: '2px'}}>(incl GST at 4%)</div>
+                                    <div style={{fontSize: '14px', marginTop: '5px', marginLeft: '2px'}}>(incl GST + delivery charges)</div>
                                 </div>
                                 <div id="checkoutBtn" className="card-btn checkout" style={{bottom: '60px', marginTop: 'auto'}} onClick={()=>{document.getElementById('step1').classList.add('done');this.setState({showCoupon: true, activeStep: 0});}}>Next&nbsp;→
                                     <div className=""></div>
