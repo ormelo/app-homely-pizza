@@ -194,7 +194,7 @@ class Guide extends React.Component {
             } else {
                 document.querySelector('.second-section').style.opacity = '1';
             }
-            if(window.scrollY >= 4040) {
+            if(window.scrollY >= 100) {
                 document.querySelector('#ctaSection').style.position = 'fixed';
                 document.querySelector('#ctaSection').style.bottom = '0px';
             } else {
