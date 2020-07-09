@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="2100fea9-fa34-466f-9140-289133e88515" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/shortlists.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/shortlists.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/wizard/shortlists.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/wizard/shortlists.jsx" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -25,11 +25,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/client/wizard/shortlists.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="23" column="13" lean-forward="true" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
+            <state relative-caret-position="303">
+              <caret line="511" column="119" selection-start-line="511" selection-start-column="119" selection-end-line="511" selection-end-column="119" />
             </state>
           </provider>
         </entry>
@@ -46,17 +46,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="680">
-              <caret line="1557" column="13" lean-forward="true" selection-start-line="1550" selection-start-column="4" selection-end-line="1557" selection-end-column="13" />
+            <state relative-caret-position="26469">
+              <caret line="1557" column="13" selection-start-line="1550" selection-start-column="4" selection-end-line="1557" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/shortlists.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="758">
-              <caret line="1873" column="13" selection-start-line="1873" selection-start-column="13" selection-end-line="1873" selection-end-column="13" />
+            <state relative-caret-position="-6">
+              <caret line="1828" lean-forward="true" selection-start-line="1828" selection-end-line="1828" />
             </state>
           </provider>
         </entry>
@@ -116,11 +116,11 @@
         <option value="$PROJECT_DIR$/src/client/wizard/redirect.jsx" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/src/data-source/interior/blr/east/mockDataQnA.json" />
-        <option value="$PROJECT_DIR$/src/client/wizard/shortlists.jsx" />
         <option value="$PROJECT_DIR$/index.js" />
         <option value="$PROJECT_DIR$/src/client/wizard/guide.jsx" />
         <option value="$PROJECT_DIR$/public/index.html" />
         <option value="$PROJECT_DIR$/public/shortlists.html" />
+        <option value="$PROJECT_DIR$/src/client/wizard/shortlists.jsx" />
       </list>
     </option>
   </component>
@@ -128,7 +128,7 @@
     <option name="x" value="252" />
     <option name="y" value="23" />
     <option name="width" value="1668" />
-    <option name="height" value="1107" />
+    <option name="height" value="1105" />
   </component>
   <component name="ProjectId" id="1dLiwnJoEO1OIaa9xhp8loRJQgB" />
   <component name="ProjectView">
@@ -136,7 +136,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -185,6 +184,7 @@
         </subPane>
       </pane>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="ProjectViewState">
@@ -237,13 +237,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1564376751969</updated>
-    </task>
-    <task id="LOCAL-00012" summary="homepage">
-      <created>1591939385101</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1591939385101</updated>
     </task>
     <task id="LOCAL-00013" summary="homepage">
       <created>1591940605068</created>
@@ -581,7 +574,14 @@
       <option name="project" value="LOCAL" />
       <updated>1594220834332</updated>
     </task>
-    <option name="localTasksCounter" value="61" />
+    <task id="LOCAL-00061" summary="homepage">
+      <created>1594220874015</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1594220874015</updated>
+    </task>
+    <option name="localTasksCounter" value="62" />
     <servers />
   </component>
   <component name="TodoView">
@@ -594,10 +594,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="252" y="23" width="1668" height="1107" extended-state="0" />
+    <frame x="252" y="23" width="1668" height="1105" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24600247" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24907748" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
@@ -726,24 +726,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/client/wizard/shortlists.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" column="13" lean-forward="true" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="680">
-          <caret line="1557" column="13" lean-forward="true" selection-start-line="1550" selection-start-column="4" selection-end-line="1557" selection-end-column="13" />
+        <state relative-caret-position="26469">
+          <caret line="1557" column="13" selection-start-line="1550" selection-start-column="4" selection-end-line="1557" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/shortlists.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="758">
-          <caret line="1873" column="13" selection-start-line="1873" selection-start-column="13" selection-end-line="1873" selection-end-column="13" />
+        <state relative-caret-position="-6">
+          <caret line="1828" lean-forward="true" selection-start-line="1828" selection-end-line="1828" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/wizard/shortlists.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="303">
+          <caret line="511" column="119" selection-start-line="511" selection-start-column="119" selection-end-line="511" selection-end-column="119" />
         </state>
       </provider>
     </entry>

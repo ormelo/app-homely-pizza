@@ -510,7 +510,6 @@ class Shortlists extends Component {
                                                   <div className="slot">
                                                     <label for="slots">Available slots:</label>
                                                     <select name="slots" id="slots" onChange={()=>{this.selectSlot()}}>
-                                                      <option value="Saturday, 1:30PM - 2.30PM">Saturday, 1:30PM - 2.30PM</option>
                                                       <option value="Saturday, 2:30PM - 3.30PM">Saturday, 2:30PM - 3.30PM</option>
                                                       <option value="Saturday, 3:30PM - 4.30PM">Saturday, 3:30PM - 4.30PM</option>
                                                       <option value="Saturday, 4:30PM - 5.30PM">Saturday, 4:30PM - 5.30PM</option>
