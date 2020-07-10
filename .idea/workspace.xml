@@ -2,8 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2100fea9-fa34-466f-9140-289133e88515" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/wizard/shortlists.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/wizard/shortlists.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/guide.bundle.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/guide.bundle.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/images/sbg.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/images/sbg.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/memory.bundle.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/memory.bundle.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/memory.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/memory.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/wizard/memory.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/wizard/memory.jsx" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,26 +23,26 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/client/wizard/memory.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4675">
-              <caret line="275" column="14" selection-start-line="275" selection-start-column="14" selection-end-line="275" selection-end-column="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/client/wizard/shortlists.jsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="321">
-              <caret line="512" column="90" selection-start-line="512" selection-start-column="90" selection-end-line="512" selection-end-column="90" />
+            <state relative-caret-position="216">
+              <caret line="273" column="16" selection-start-line="273" selection-start-column="16" selection-end-line="273" selection-end-column="16" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/client/wizard/shortlists.jsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="440">
+              <caret line="519" column="52" selection-start-line="519" selection-start-column="52" selection-end-line="519" selection-end-column="52" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" column="41" selection-start-line="13" selection-start-column="35" selection-end-line="13" selection-end-column="41" />
+            <state relative-caret-position="744">
+              <caret line="1192" column="160" selection-start-line="1192" selection-start-column="160" selection-end-line="1192" selection-end-column="160" />
             </state>
           </provider>
         </entry>
@@ -69,8 +73,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/memory.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="28135">
-              <caret line="1655" column="17" selection-start-line="1655" selection-start-column="17" selection-end-line="1655" selection-end-column="17" />
+            <state relative-caret-position="886">
+              <caret line="1680" column="13" selection-start-line="1680" selection-start-column="13" selection-end-line="1680" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -79,20 +83,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>checkout-modal</find>
-      <find>checkou</find>
-      <find>.logo-img</find>
-      <find>.banner2</find>
-      <find>total</find>
-      <find>../</find>
-      <find>checkout-mo</find>
-      <find>onSelfieUpload</find>
-      <find>readFile</find>
-      <find>processFile</find>
-      <find>xml</find>
-      <find>xmlht</find>
-      <find>sendF</find>
-      <find>/homel</find>
       <find>bodyP</find>
       <find>fs</find>
       <find>&quot;fs&quot;</find>
@@ -109,6 +99,20 @@
       <find>canvas</find>
       <find>getT</find>
       <find>delive</find>
+      <find>checkoutBtn</find>
+      <find>selfie</find>
+      <find>processFile</find>
+      <find>selfie1</find>
+      <find>onSelfieUpload</find>
+      <find>pizzaPhoto</find>
+      <find>this.setState({ activeStep: 2});</find>
+      <find>this.setState({ activeStep: 2})</find>
+      <find>this.setState({ activeStep</find>
+      <find>2:30</find>
+      <find>sendFile(</find>
+      <find>closeUpPhotoDataURL</find>
+      <find>closeUpPhoto</find>
+      <find>selfie1DataUrl</find>
     </findStrings>
     <replaceStrings>
       <replace>className</replace>
@@ -132,11 +136,11 @@
         <option value="$PROJECT_DIR$/public/shortlists.html" />
         <option value="$PROJECT_DIR$/webpack.config.js" />
         <option value="$PROJECT_DIR$/src/client/wizard/guide.jsx" />
+        <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/src/client/wizard/shortlists.jsx" />
         <option value="$PROJECT_DIR$/public/memory.html" />
         <option value="$PROJECT_DIR$/src/client/wizard/memory.jsx" />
         <option value="$PROJECT_DIR$/index.js" />
-        <option value="$PROJECT_DIR$/package.json" />
-        <option value="$PROJECT_DIR$/src/client/wizard/shortlists.jsx" />
       </list>
     </option>
   </component>
@@ -253,13 +257,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1564376751969</updated>
-    </task>
-    <task id="LOCAL-00020" summary="homepage">
-      <created>1591988799053</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1591988799053</updated>
     </task>
     <task id="LOCAL-00021" summary="homepage">
       <created>1591989145630</created>
@@ -597,7 +594,14 @@
       <option name="project" value="LOCAL" />
       <updated>1594370002016</updated>
     </task>
-    <option name="localTasksCounter" value="69" />
+    <task id="LOCAL-00069" summary="homepage">
+      <created>1594370192783</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1594370192783</updated>
+    </task>
+    <option name="localTasksCounter" value="70" />
     <servers />
   </component>
   <component name="TodoView">
@@ -749,13 +753,6 @@
     <entry file="file://$PROJECT_DIR$/1594354405310selfie.jpeg" />
     <entry file="file://$PROJECT_DIR$/1594355678014selfie.png" />
     <entry file="file://$PROJECT_DIR$/1594355751170selfie.png" />
-    <entry file="file://$PROJECT_DIR$/src/client/wizard/memory.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4675">
-          <caret line="275" column="14" selection-start-line="275" selection-start-column="14" selection-end-line="275" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/merge-images/dist/index.es2015.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1258">
@@ -766,20 +763,6 @@
     <entry file="file://$PROJECT_DIR$/node_modules/merge-images/dist/index.umd.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/memory.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="28135">
-          <caret line="1655" column="17" selection-start-line="1655" selection-start-column="17" selection-end-line="1655" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="41" selection-start-line="13" selection-start-column="35" selection-end-line="13" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="465">
@@ -787,10 +770,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/public/memory.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="886">
+          <caret line="1680" column="13" selection-start-line="1680" selection-start-column="13" selection-end-line="1680" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/client/wizard/shortlists.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="321">
-          <caret line="512" column="90" selection-start-line="512" selection-start-column="90" selection-end-line="512" selection-end-column="90" />
+        <state relative-caret-position="440">
+          <caret line="519" column="52" selection-start-line="519" selection-start-column="52" selection-end-line="519" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/wizard/memory.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="273" column="16" selection-start-line="273" selection-start-column="16" selection-end-line="273" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="744">
+          <caret line="1192" column="160" selection-start-line="1192" selection-start-column="160" selection-end-line="1192" selection-end-column="160" />
         </state>
       </provider>
     </entry>

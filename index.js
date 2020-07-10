@@ -957,129 +957,258 @@ app.post('/homelyOrder', function(req, res) {
 
 app.post('/selfie', function(req, res) {
 
-    const selfie = req.body.dataURL;
-    //console.log('---selfie---', selfie);
-    let fileExtensionArr = selfie.split('base64,');
+       const selfie = req.body.dataURL;
+       console.log('---selfie---', selfie);
+       let fileExtensionArr = selfie.split('base64,');
 
-    let fileExtension = fileExtensionArr[0].split('data:image/')[1].replace(';','');
-    //decode base64 image
-      var matches = selfie.match(/^data:([A-Za-z-+\/]+);base64,(.+)$/),
-        response = {};
+       let fileExtension = fileExtensionArr[0].split('data:image/')[1].replace(';','');
+       //decode base64 image
+         var matches = selfie.match(/^data:([A-Za-z-+\/]+);base64,(.+)$/),
+           response = {};
 
-      if (matches.length !== 3) {
-        return new Error('Invalid input string');
-      }
+         if (matches.length !== 3) {
+           return new Error('Invalid input string');
+         }
 
-      response.data = selfie.split(",")[1];
+         response.data = selfie.split(",")[1];
 
-      /*var base64String = response.data;
-      let ts = Date.now();
-      base64.decode(selfie, ts+"selfie."+fileExtension, function(err, output) {
-        console.log('success');
-        console.log('output: ', output);
-      });*/
+         /*var base64String = response.data;
+         let ts = Date.now();
+         base64.decode(selfie, ts+"selfie."+fileExtension, function(err, output) {
+           console.log('success');
+           console.log('output: ', output);
+         });*/
 
 
 
-      // Defaults
-      var defaultOptions = {
-      	format: 'image/png',
-      	quality: 0.92,
-      	width: undefined,
-      	height: undefined,
-      	Canvas: undefined,
-      	crossOrigin: undefined
-      };
+         // Defaults
+         var defaultOptions = {
+         	format: 'image/png',
+         	quality: 0.92,
+         	width: undefined,
+         	height: undefined,
+         	Canvas: undefined,
+         	crossOrigin: undefined
+         };
 
-      // Return Promise
-      var mergeImages = function (sources, options) {
-      	if ( sources === void 0 ) sources = [];
-      	if ( options === void 0 ) options = {};
+         // Return Promise
+         var mergeImages = function (sources, options) {
+         	if ( sources === void 0 ) sources = [];
+         	if ( options === void 0 ) options = {};
 
-      	return new Promise(function (resolve) {
-      	options = Object.assign({}, defaultOptions, options);
+         	return new Promise(function (resolve) {
+         	options = Object.assign({}, defaultOptions, options);
 
-      	// Setup browser/Node.js specific variables
-      	var canvas = options.Canvas ? new options.Canvas() : window.document.createElement('canvas');
-      	var Image = options.Image || window.Image;
+         	// Setup browser/Node.js specific variables
+         	var canvas = options.Canvas ? new options.Canvas() : window.document.createElement('canvas');
+         	var Image = options.Image || window.Image;
 
-      	// Load sources
-      	var images = sources.map(function (source) { return new Promise(function (resolve, reject) {
+         	// Load sources
+         	var images = sources.map(function (source) { return new Promise(function (resolve, reject) {
 
-      	    console.log('--source--', source);
-      		// Convert sources to objects
-      		if (source.constructor.name !== 'Object') {
-      			source = { src: source };
-      		}
+         	    console.log('--source--', source);
+         		// Convert sources to objects
+         		if (source.constructor.name !== 'Object') {
+         			source = { src: source };
+         		}
 
-      		// Resolve source and img when loaded
-      		var img = new Image();
-      		img.crossOrigin = options.crossOrigin;
-      		img.onerror = function () { return reject(new Error('Couldn\'t load image')); };
-      		img.onload = function () { return resolve(Object.assign({}, source, { img: img })); };
-      		img.src = source.src;
-      	}); });
+         		// Resolve source and img when loaded
+         		var img = new Image();
+         		img.crossOrigin = options.crossOrigin;
+         		img.onerror = function () { return reject(new Error('Couldn\'t load image')); };
+         		img.onload = function () { return resolve(Object.assign({}, source, { img: img })); };
+         		img.src = source.src;
+         	}); });
 
-      	// Get canvas context
-      	var ctx = canvas.getContext('2d');
+         	// Get canvas context
+         	var ctx = canvas.getContext('2d');
 
-      	// When sources have loaded
-      	resolve(Promise.all(images)
-      		.then(function (images) {
-      			// Set canvas dimensions
-      			var getSize = function (dim) { return options[dim] || Math.max.apply(Math, images.map(function (image) { return image.img[dim]; })); };
-      			canvas.width = getSize('width');
-      			canvas.height = getSize('height');
+         	// When sources have loaded
+         	resolve(Promise.all(images)
+         		.then(function (images) {
+         			// Set canvas dimensions
+         			var getSize = function (dim) { return options[dim] || Math.max.apply(Math, images.map(function (image) { return image.img[dim]; })); };
+         			canvas.width = getSize('width');
+         			canvas.height = getSize('height');
 
-      			// Draw images to canvas
-      			images.forEach(function (image) {
-      				ctx.globalAlpha = image.opacity ? image.opacity : 1;
-      				return ctx.drawImage(image.img, image.x || 0, image.y || 0);
-      			});
+         			// Draw images to canvas
+         			images.forEach(function (image) {
+         				ctx.globalAlpha = image.opacity ? image.opacity : 1;
+         				return ctx.drawImage(image.img, image.x || 0, image.y || 0);
+         			});
 
-      			if (options.Canvas && options.format === 'image/jpeg') {
-      				// Resolve data URI for node-canvas jpeg async
-      				return new Promise(function (resolve, reject) {
-      					canvas.toDataURL(options.format, {
-      						quality: options.quality,
-      						progressive: false
-      					}, function (err, jpeg) {
-      						if (err) {
-      							reject(err);
-      							return;
-      						}
-      						resolve(jpeg);
-      					});
-      				});
-      			}
+         			if (options.Canvas && options.format === 'image/jpeg') {
+         				// Resolve data URI for node-canvas jpeg async
+         				return new Promise(function (resolve, reject) {
+         					canvas.toDataURL(options.format, {
+         						quality: options.quality,
+         						progressive: false
+         					}, function (err, jpeg) {
+         						if (err) {
+         							reject(err);
+         							return;
+         						}
+         						resolve(jpeg);
+         					});
+         				});
+         			}
 
-      			// Resolve all other data URIs sync
-      			return canvas.toDataURL(options.format, options.quality);
-      		}));
+         			// Resolve all other data URIs sync
+         			return canvas.toDataURL(options.format, options.quality);
+         		}));
+         });
+         };
+
+
+
+         mergeImages(['public/img/images/sbg.jpg',{ src: selfie.replace(/ /g, "+"), x: 630, y: 540 }],
+         {
+           Canvas: Canvas,
+           Image: Image
+         })
+           .then((b64) => {console.log('merged');console.log('merged image: ', b64);res.send(b64);});
+
+
+         /*require("fs").writeFile(ts+"selfie."+fileExtension, response.data, 'base64',
+             function(err, data) {
+                if (err) {
+                       console.log('err', err);
+                  } else {
+                       console.log("selfie image: ",data);
+                   }
+             });*/
+
+
+   });
+
+
+
+   app.post('/closeUpPhoto', function(req, res) {
+
+          const selfie = req.body.dataURL;
+          const closeUpPhoto = req.body.closeUpPhotoDataURL;
+          console.log('---selfie---', selfie);
+          let fileExtensionArr = selfie.split('base64,');
+
+          let fileExtension = fileExtensionArr[0].split('data:image/')[1].replace(';','');
+          //decode base64 image
+            var matches = selfie.match(/^data:([A-Za-z-+\/]+);base64,(.+)$/),
+              response = {};
+
+            if (matches.length !== 3) {
+              return new Error('Invalid input string');
+            }
+
+            response.data = selfie.split(",")[1];
+
+            /*var base64String = response.data;
+            let ts = Date.now();
+            base64.decode(selfie, ts+"selfie."+fileExtension, function(err, output) {
+              console.log('success');
+              console.log('output: ', output);
+            });*/
+
+
+
+            // Defaults
+            var defaultOptions = {
+            	format: 'image/png',
+            	quality: 0.92,
+            	width: undefined,
+            	height: undefined,
+            	Canvas: undefined,
+            	crossOrigin: undefined
+            };
+
+            // Return Promise
+            var mergeImages = function (sources, options) {
+            	if ( sources === void 0 ) sources = [];
+            	if ( options === void 0 ) options = {};
+
+            	return new Promise(function (resolve) {
+            	options = Object.assign({}, defaultOptions, options);
+
+            	// Setup browser/Node.js specific variables
+            	var canvas = options.Canvas ? new options.Canvas() : window.document.createElement('canvas');
+            	var Image = options.Image || window.Image;
+
+            	// Load sources
+            	var images = sources.map(function (source) { return new Promise(function (resolve, reject) {
+
+            	    console.log('--source--', source);
+            		// Convert sources to objects
+            		if (source.constructor.name !== 'Object') {
+            			source = { src: source };
+            		}
+
+            		// Resolve source and img when loaded
+            		var img = new Image();
+            		img.crossOrigin = options.crossOrigin;
+            		img.onerror = function () { return reject(new Error('Couldn\'t load image')); };
+            		img.onload = function () { return resolve(Object.assign({}, source, { img: img })); };
+            		img.src = source.src;
+            	}); });
+
+            	// Get canvas context
+            	var ctx = canvas.getContext('2d');
+
+            	// When sources have loaded
+            	resolve(Promise.all(images)
+            		.then(function (images) {
+            			// Set canvas dimensions
+            			var getSize = function (dim) { return options[dim] || Math.max.apply(Math, images.map(function (image) { return image.img[dim]; })); };
+            			canvas.width = getSize('width');
+            			canvas.height = getSize('height');
+
+            			// Draw images to canvas
+            			images.forEach(function (image) {
+            				ctx.globalAlpha = image.opacity ? image.opacity : 1;
+            				return ctx.drawImage(image.img, image.x || 0, image.y || 0);
+            			});
+
+            			if (options.Canvas && options.format === 'image/jpeg') {
+            				// Resolve data URI for node-canvas jpeg async
+            				return new Promise(function (resolve, reject) {
+            					canvas.toDataURL(options.format, {
+            						quality: options.quality,
+            						progressive: false
+            					}, function (err, jpeg) {
+            						if (err) {
+            							reject(err);
+            							return;
+            						}
+            						resolve(jpeg);
+            					});
+            				});
+            			}
+
+            			// Resolve all other data URIs sync
+            			return canvas.toDataURL(options.format, options.quality);
+            		}));
+            });
+            };
+
+
+
+            mergeImages(['public/img/images/sbg.jpg',{ src: closeUpPhoto.replace(/ /g, "+"), x: 930, y: 440 }, { src: selfie.replace(/ /g, "+"), x:430, y: 520 }],
+            {
+              Canvas: Canvas,
+              Image: Image
+            })
+              .then((b64) => {console.log('merged');console.log('merged image: ', b64);res.send(b64);});
+
+
+            /*require("fs").writeFile(ts+"selfie."+fileExtension, response.data, 'base64',
+                function(err, data) {
+                   if (err) {
+                          console.log('err', err);
+                     } else {
+                          console.log("selfie image: ",data);
+                      }
+                });*/
+
+
       });
-      };
-
-
-
-      mergeImages(['public/img/images/sbg.jpg',{ src: selfie.replace(/ /g, "+"), x: 630, y: 540 }],
-      {
-        Canvas: Canvas,
-        Image: Image
-      })
-        .then((b64) => {console.log('merged');console.log('merged image: ', b64);res.send(b64);});
-
-
-      /*require("fs").writeFile(ts+"selfie."+fileExtension, response.data, 'base64',
-          function(err, data) {
-             if (err) {
-                    console.log('err', err);
-               } else {
-                    console.log("selfie image: ",data);
-                }
-          });*/
-
-
-});
 
 app.post('/submitGetQuote', function(req, res) {
     var email = req.body.email,

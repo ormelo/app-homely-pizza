@@ -231,7 +231,7 @@ class Memory extends Component {
         console.log('mounted');
     }
 
-    processFile(dataURL, fileType) {
+    processFile(dataURL, fileType, currentStep) {
     	var maxWidth = 800;
     	var maxHeight = 800;
 
@@ -244,7 +244,7 @@ class Memory extends Component {
     		var shouldResize = (width > maxWidth) || (height > maxHeight);
 
     		if (!shouldResize) {
-    			this.sendFile(dataURL);
+    			this.sendFile(dataURL, currentStep);
     			return;
     		}
 
@@ -270,7 +270,10 @@ class Memory extends Component {
 
     		dataURL = canvas.toDataURL(fileType);
 
-    		this.sendFile(dataURL);
+            if(currentStep == 1) {
+                this.selfie1DataUrl = dataURL;
+            }
+    		this.sendFile(dataURL, currentStep);
     	}.bind(this);
 
     	image.onerror = function () {
@@ -278,13 +281,17 @@ class Memory extends Component {
     	};
     }
 
-    sendFile(dataURL) {
-        console.log('--sending---', dataURL);
+    sendFile(dataURL, currentStep) {
+        console.log('--sending photo---', dataURL);
         //var formData = new FormData();
         //formData.append('imageData', dataURL);
         var http = new XMLHttpRequest();
                 var url = '/selfie';
                 var params = 'dataURL='+dataURL;
+                if (currentStep == 2) {
+                    url = 'closeUpPhoto';
+                    params = 'dataURL='+this.selfie1DataUrl+'&closeUpPhotoDataURL='+dataURL;
+                }
                 http.open('POST', url, true);
                 http.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
 
@@ -293,7 +300,13 @@ class Memory extends Component {
                         console.log('order creation post response:', http.responseText);
                         var res = http.responseText;
                         console.log('-----res-----', res);
-                        document.getElementById('selfie1').src = res;
+
+                        if (currentStep == 2) {
+                            document.getElementById('pizzaPhoto').src = res;
+                        } else {
+                            document.getElementById('selfie1').src = res;
+                        }
+                        document.getElementById('checkoutBtnSelfie').style.display = 'block';
                     }
                 }.bind(this);
                 http.send(params);
@@ -303,7 +316,7 @@ class Memory extends Component {
         var reader = new FileReader();
 
         reader.onloadend = function () {
-            this.processFile(reader.result, file.type);
+            this.processFile(reader.result, file.type, this.state.activeStep);
         }.bind(this);
 
         reader.onerror = function () {
@@ -323,6 +336,19 @@ class Memory extends Component {
         				alert('Not a valid image!');
         			}
         		}
+    }
+
+    onPizzaPhotoUpload(e) {
+        var file = e.target.files[0];
+
+        if (file) {
+            if (/^image\//i.test(file.type)) {
+                this.readFile(file);
+            } else {
+                alert('Not a valid image!');
+            }
+        }
+
     }
 
     render() {
@@ -358,7 +384,7 @@ class Memory extends Component {
                             <div className="md-stepper-horizontal orange">
                                 <div id="step1" className="md-step">
                                   <div className="md-step-circle active"><span>1</span></div>
-                                  <div className="md-step-title">Take selfie</div>
+                                  <div className="md-step-title">Take a selfie</div>
                                   <div className="md-step-bar-left"></div>
                                   <div className="md-step-bar-right"></div>
                                 </div>
@@ -382,10 +408,10 @@ class Memory extends Component {
                                     <label for="fileinput"><img src="./../../img/images/ic_selfie.png"/></label>
                                     <br/>
                                     <span>Capture a selfie or a groupfie with those giving you company!</span>
-                                    <img id="selfie1" />
+                                    <img id="selfie1" className="selfie" />
                                 </div>
 
-                                <div id="checkoutBtn" className="card-btn checkout" style={{display:'none', bottom: '60px', marginTop: 'auto'}} onClick={()=>{document.getElementById('step1').classList.add('done');this.setState({showCoupon: true, activeStep: 0});}}>Next&nbsp;→
+                                <div id="checkoutBtnSelfie" className="card-btn checkout" style={{display:'none', bottom: '60px', marginTop: 'auto'}} onClick={()=>{document.getElementById('step1').classList.add('done');document.getElementById('step2Circle').classList.add('active');this.setState({ activeStep: 2});}}>Next&nbsp;→
                                     <div className=""></div>
                                 </div>
                               </div>}
@@ -412,23 +438,13 @@ class Memory extends Component {
                               }
                               {this.state.activeStep == 2 &&
                                 <div className="checkout-content">
-
-                                <div className="card-container" style={{padding: '0px 12px 0px 12px'}}>
-                                            <div className="section-one">
-                                                <div className="top">
-                                                    <div className="top-right">
-                                                        <div className="usp-title">
-                                                            <input id="dPincode" type="text" className="step-input" placeholder="Your pincode"/>
-                                                            <textarea id="dAddress" className="step-input" className="step-input step-textarea" placeholder="Delivery address (with landmark)" />
-                                                            <input id="dMobile" type="text" className="step-input" placeholder="Mobile number" style={{top:'198px'}}/>
-                                                            <input id="dName" type="text" className="step-input" placeholder="Your full name" style={{top:'238px'}}/>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-
-                                        </div>
+                                    <div className="icon-camera">
+                                        <input type="file" accept="image/*" capture="camera" class="img" id="fileinput" onChange={(e)=>{this.onPizzaPhotoUpload(e)}} />
+                                        <label for="fileinput"><img src="./../../img/images/ic_selfie.png"/></label>
+                                        <br/>
+                                        <span>Now, capture a close up shot of the pizza!</span>
+                                        <img id="pizzaPhoto" className="selfie" />
+                                    </div>
 
                                 <div id="checkoutBtnStep2" className="card-btn checkout" style={{bottom: '60px', marginTop: 'auto'}} onClick={()=>{document.getElementById('step2').classList.add('done');this.captureAddress();}}>Next&nbsp;→
                                     <div className=""></div>
