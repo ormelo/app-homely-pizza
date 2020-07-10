@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2100fea9-fa34-466f-9140-289133e88515" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/guide.bundle.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/guide.bundle.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/img/images/sbg.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/images/sbg.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/memory.bundle.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/memory.bundle.min.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/memory.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/memory.html" afterDir="false" />
@@ -23,8 +22,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/client/wizard/memory.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="273" column="16" selection-start-line="273" selection-start-column="16" selection-end-line="273" selection-end-column="16" />
+            <state relative-caret-position="321">
+              <caret line="456" column="72" lean-forward="true" selection-start-line="456" selection-start-column="72" selection-end-line="456" selection-end-column="72" />
             </state>
           </provider>
         </entry>
@@ -38,11 +37,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="744">
-              <caret line="1192" column="160" selection-start-line="1192" selection-start-column="160" selection-end-line="1192" selection-end-column="160" />
+            <state relative-caret-position="-1439">
+              <caret line="1176" column="47" selection-start-line="1176" selection-start-column="47" selection-end-line="1176" selection-end-column="47" />
             </state>
           </provider>
         </entry>
@@ -70,11 +69,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/memory.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="886">
-              <caret line="1680" column="13" selection-start-line="1680" selection-start-column="13" selection-end-line="1680" selection-end-column="13" />
+            <state relative-caret-position="495">
+              <caret line="1657" column="18" selection-start-line="1657" selection-start-column="18" selection-end-line="1657" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -83,8 +82,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>bodyP</find>
-      <find>fs</find>
       <find>&quot;fs&quot;</find>
       <find>---selfie---</find>
       <find>/selfie</find>
@@ -104,15 +101,17 @@
       <find>processFile</find>
       <find>selfie1</find>
       <find>onSelfieUpload</find>
-      <find>pizzaPhoto</find>
       <find>this.setState({ activeStep: 2});</find>
       <find>this.setState({ activeStep: 2})</find>
       <find>this.setState({ activeStep</find>
       <find>2:30</find>
       <find>sendFile(</find>
       <find>closeUpPhotoDataURL</find>
-      <find>closeUpPhoto</find>
       <find>selfie1DataUrl</find>
+      <find>closeUpPhoto</find>
+      <find>pizzaPhoto</find>
+      <find>press an</find>
+      <find>checkoutBtnStep2</find>
     </findStrings>
     <replaceStrings>
       <replace>className</replace>
@@ -138,9 +137,9 @@
         <option value="$PROJECT_DIR$/src/client/wizard/guide.jsx" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/src/client/wizard/shortlists.jsx" />
-        <option value="$PROJECT_DIR$/public/memory.html" />
-        <option value="$PROJECT_DIR$/src/client/wizard/memory.jsx" />
         <option value="$PROJECT_DIR$/index.js" />
+        <option value="$PROJECT_DIR$/src/client/wizard/memory.jsx" />
+        <option value="$PROJECT_DIR$/public/memory.html" />
       </list>
     </option>
   </component>
@@ -257,20 +256,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1564376751969</updated>
-    </task>
-    <task id="LOCAL-00021" summary="homepage">
-      <created>1591989145630</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1591989145630</updated>
-    </task>
-    <task id="LOCAL-00022" summary="homepage">
-      <created>1592592381084</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1592592381085</updated>
     </task>
     <task id="LOCAL-00023" summary="homepage">
       <created>1592593301744</created>
@@ -601,7 +586,21 @@
       <option name="project" value="LOCAL" />
       <updated>1594370192783</updated>
     </task>
-    <option name="localTasksCounter" value="70" />
+    <task id="LOCAL-00070" summary="homepage">
+      <created>1594376217645</created>
+      <option name="number" value="00070" />
+      <option name="presentableId" value="LOCAL-00070" />
+      <option name="project" value="LOCAL" />
+      <updated>1594376217645</updated>
+    </task>
+    <task id="LOCAL-00071" summary="homepage">
+      <created>1594377454395</created>
+      <option name="number" value="00071" />
+      <option name="presentableId" value="LOCAL-00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1594377454395</updated>
+    </task>
+    <option name="localTasksCounter" value="72" />
     <servers />
   </component>
   <component name="TodoView">
@@ -770,13 +769,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/memory.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="886">
-          <caret line="1680" column="13" selection-start-line="1680" selection-start-column="13" selection-end-line="1680" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/client/wizard/shortlists.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="440">
@@ -784,17 +776,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/client/wizard/memory.jsx">
+    <entry file="file://$PROJECT_DIR$/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="273" column="16" selection-start-line="273" selection-start-column="16" selection-end-line="273" selection-end-column="16" />
+        <state relative-caret-position="-1439">
+          <caret line="1176" column="47" selection-start-line="1176" selection-start-column="47" selection-end-line="1176" selection-end-column="47" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.js">
+    <entry file="file://$PROJECT_DIR$/src/client/wizard/memory.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="744">
-          <caret line="1192" column="160" selection-start-line="1192" selection-start-column="160" selection-end-line="1192" selection-end-column="160" />
+        <state relative-caret-position="321">
+          <caret line="456" column="72" lean-forward="true" selection-start-line="456" selection-start-column="72" selection-end-line="456" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/memory.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="1657" column="18" selection-start-line="1657" selection-start-column="18" selection-end-line="1657" selection-end-column="18" />
         </state>
       </provider>
     </entry>

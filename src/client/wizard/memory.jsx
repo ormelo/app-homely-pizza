@@ -333,6 +333,7 @@ class Memory extends Component {
     }
 
     onSelfieUpload(e) {
+        document.getElementById('msg1').innerHTML = 'Processing photo, please wait...';
         var file = e.target.files[0];
 
         		if (file) {
@@ -345,6 +346,7 @@ class Memory extends Component {
     }
 
     onPizzaPhotoUpload(e) {
+        document.getElementById('msg2').innerHTML = 'Processing photo, please wait...';
         var file = e.target.files[0];
 
         if (file) {
@@ -413,7 +415,7 @@ class Memory extends Component {
                                     <input type="file" accept="image/*" capture="camera" class="img" id="fileinput" onChange={(e)=>{this.onSelfieUpload(e)}} />
                                     <label for="fileinput"><img src="./../../img/images/ic_selfie.png"/></label>
                                     <br/>
-                                    <span>Capture a selfie or a groupfie with those giving you company!</span>
+                                    <span id="msg1">Capture a selfie or a groupfie with those giving you company!</span>
                                     <img id="selfie1" className="selfie" />
                                 </div>
 
@@ -448,13 +450,13 @@ class Memory extends Component {
                                         <input type="file" accept="image/*" capture="camera" class="img" id="fileinput" onChange={(e)=>{this.onPizzaPhotoUpload(e)}} />
                                         <label for="fileinput"><img src="./../../img/images/ic_selfie.png"/></label>
                                         <br/>
-                                        <span>Now, capture a close up shot of the pizza!</span>
+                                        <span id="msg2">Now, capture a close up shot of the pizza!</span>
                                         <img id="pizzaPhoto" className="selfie" />
                                     </div>
 
-                                <a id="checkoutBtnStep2" className="card-btn checkout" style={{bottom: '60px', marginTop: 'auto', display: 'none', width: '178px'}} >Download Photo&nbsp;→
-                                    <div className=""></div>
-                                </a>
+                                <span id="checkoutBtnStep2" className="title download-msg" >Press and hold the photo for the option to download it.
+
+                                </span>
                               </div>}
                               {this.state.showSlot &&
                               <div className="checkout-content">
