@@ -35,7 +35,8 @@
     "order-id": "1.1.0",
     "fs": "0.0.1-security",
     "merge-images": "^2.0.0",
-    "canvas": "^2.6.1"
+    "canvas": "^2.6.1",
+    "file-base64": "1.0.0"
   },
   "devDependencies": {
     "babel-core": "^6.25.0",
