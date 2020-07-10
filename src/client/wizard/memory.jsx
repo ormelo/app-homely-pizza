@@ -450,7 +450,7 @@ class Memory extends Component {
                                         <input type="file" accept="image/*" capture="camera" class="img" id="fileinput" onChange={(e)=>{this.onPizzaPhotoUpload(e)}} />
                                         <label for="fileinput"><img src="./../../img/images/ic_selfie.png"/></label>
                                         <br/>
-                                        <span id="msg2">Now, tilt your phone to the left to capture a close up shot of the pizza in LANDSCAPE mode!</span>
+                                        <span id="msg2">Now, capture a close up shot of the pizza in LANDSCAPE mode!</span>
                                         <img id="pizzaPhoto" className="selfie" />
                                     </div>
 
