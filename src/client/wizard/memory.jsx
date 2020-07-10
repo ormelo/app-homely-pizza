@@ -303,6 +303,12 @@ class Memory extends Component {
 
                         if (currentStep == 2) {
                             document.getElementById('pizzaPhoto').src = res;
+                            document.getElementById('step2').classList.add('done');
+                            document.getElementById('step3').classList.add('done');
+                            document.getElementById('step3Circle').classList.add('active');
+                            document.getElementById('checkoutBtnStep2').style.display = 'block';
+                            document.getElementById('checkoutBtnStep2').download = document.getElementById('pizzaPhoto').src;
+                            document.getElementById('checkoutBtnStep2').href = document.getElementById('pizzaPhoto').src;
                         } else {
                             document.getElementById('selfie1').src = res;
                         }
@@ -446,9 +452,9 @@ class Memory extends Component {
                                         <img id="pizzaPhoto" className="selfie" />
                                     </div>
 
-                                <div id="checkoutBtnStep2" className="card-btn checkout" style={{bottom: '60px', marginTop: 'auto'}} onClick={()=>{document.getElementById('step2').classList.add('done');this.captureAddress();}}>Next&nbsp;→
+                                <a id="checkoutBtnStep2" className="card-btn checkout" style={{bottom: '60px', marginTop: 'auto', display: 'none', width: '178px'}} >Download Photo&nbsp;→
                                     <div className=""></div>
-                                </div>
+                                </a>
                               </div>}
                               {this.state.showSlot &&
                               <div className="checkout-content">
