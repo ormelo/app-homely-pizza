@@ -293,7 +293,7 @@ class Shortlists extends Component {
                 total += orderSummary[index].price;
             }
         });
-        total = total + (0.04*total) + 45;
+        total = total + (0.04*total) + 75;
         if(!this.state.couponApplied) {
             localStorage.setItem('dPrice', Math.round(total));
         }
@@ -510,6 +510,7 @@ class Shortlists extends Component {
                                                   <div className="slot">
                                                     <label for="slots">Available slots:</label>
                                                     <select name="slots" id="slots" onChange={()=>{this.selectSlot()}}>
+                                                      <option value="Saturday, 1:30PM - 2.30PM">Saturday, 2:30PM - 3.30PM</option>
                                                       <option value="Saturday, 2:30PM - 3.30PM">Saturday, 2:30PM - 3.30PM</option>
                                                       <option value="Saturday, 3:30PM - 4.30PM">Saturday, 3:30PM - 4.30PM</option>
                                                       <option value="Saturday, 4:30PM - 5.30PM">Saturday, 4:30PM - 5.30PM</option>
