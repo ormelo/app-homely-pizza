@@ -775,8 +775,12 @@ app.get("/order/", function(request, response) {
   response.sendFile(path.resolve(__dirname, 'public', 'shortlists.html'));
 });
 
-app.get("/memory/", function(request, response) {
+app.get("/memory", function(request, response) {
   response.sendFile(path.resolve(__dirname, 'public', 'memory.html'));
+});
+
+app.get("/bake", function(request, response) {
+  response.sendFile(path.resolve(__dirname, 'public', 'bake.html'));
 });
 
 app.get("/redirect/", function(request, response) {

@@ -219,7 +219,7 @@ class SummaryCard extends Component {
 }
 
 
-class Memory extends Component {
+class Bake extends Component {
 
     constructor() {
         super();
@@ -389,153 +389,41 @@ class Memory extends Component {
                             <div className="modal-heading">
 
                             </div>
-                            <div className="md-stepper-horizontal orange">
-                                <div id="step1" className="md-step">
-                                  <div className="md-step-circle active"><span>1</span></div>
-                                  <div className="md-step-title">Take a selfie</div>
-                                  <div className="md-step-bar-left"></div>
-                                  <div className="md-step-bar-right"></div>
-                                </div>
-                                <div id="step2" className="md-step">
-                                  <div className="md-step-circle" id="step2Circle"><span>2</span></div>
-                                  <div className="md-step-title">Take pizza photo</div>
-                                  <div className="md-step-bar-left"></div>
-                                  <div className="md-step-bar-right"></div>
-                                </div>
-                                <div id="step3" className="md-step">
-                                  <div className="md-step-circle" id="step3Circle"><span>3</span></div>
-                                  <div className="md-step-title">Your pizza memory</div>
-                                  <div className="md-step-bar-left"></div>
-                                  <div className="md-step-bar-right"></div>
-                                </div>
-                              </div>
+
                               {this.state.activeStep == 1 &&
                               <div className="checkout-content">
                                 <div className="icon-camera">
-                                    <input type="file" accept="image/*" capture="camera" class="img" id="fileinput" onChange={(e)=>{this.onSelfieUpload(e)}} />
-                                    <label for="fileinput"><img src="./../../img/images/ic_selfie.png"/></label>
+                                    <label><img src="./../../img/images/ic_bake.png"/></label>
                                     <br/>
-                                    <span id="msg1">Capture a selfie or a groupfie with those giving you company!</span>
-                                    <img id="selfie1" className="selfie" />
+                                    <span id="msg1" style={{fontWeight: 'bold', fontSize: '22px', width: '300px'}}>Easy baking instructions</span>
+
+                                    <span style={{fontWeight: 'bold',top: '120px'}}>Step 1: Preheat your non-stick pan on low flame for 5 minutes</span>
+                                    <span style={{fontWeight: 'bold',top: '220px'}}>Step 2: Slide the pizza from the packaging smoothly into the pan</span>
+                                    <span style={{fontWeight: 'bold',top: '320px'}}>Final Step: Cook in low flame for 5 to 8 minutes until the crust is golden brown!</span>
+
                                 </div>
 
-                                <div id="checkoutBtnSelfie" className="card-btn checkout" style={{display:'none', bottom: '60px', marginTop: 'auto'}} onClick={()=>{document.getElementById('step1').classList.add('done');document.getElementById('step2Circle').classList.add('active');this.setState({ activeStep: 2});}}>Next&nbsp;→
-                                    <div className=""></div>
-                                </div>
                               </div>}
-                              {this.state.showCoupon &&
-                                <div className="checkout-content">
-                                    <div className="card-container small" style={{padding: '0px 12px 0px 12px'}}>
-                                        <div className="section-one">
-                                            <div className="top-right">
-                                                <div className="usp-title" style={{left: '0',right: '0',margin: '0 auto'}}>
-                                                    <span className="title-ff" style={{top:'7px'}}>Do you have a coupon code?</span>
-                                                    <input id="dCoupon" type="text" className="step-input" placeholder="Enter coupon code" style={{marginTop: '10px'}}/>
-                                                     <div id="applyCouponBtn" className="card-btn coupon-btn" style={{marginTop: '20px'}} onClick={()=>{this.applyCoupon()}}>Apply
-                                                        <div className=""></div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                        <div id="checkoutBtnStep11" className="card-btn checkout" style={{bottom: '60px', marginTop: 'auto'}} onClick={()=>{document.getElementById('step2').classList.add('active');document.getElementById('step2Circle').classList.add('active');this.setState({showCoupon: false, activeStep: 2});}}>Next&nbsp;→
-                                            <div className=""></div>
-                                        </div>
-                                </div>
-                              }
-                              {this.state.activeStep == 2 &&
-                                <div className="checkout-content">
-                                    <div className="icon-camera">
-                                        <input type="file" accept="image/*" capture="camera" class="img" id="fileinput" onChange={(e)=>{this.onPizzaPhotoUpload(e)}} />
-                                        <label for="fileinput"><img src="./../../img/images/ic_selfie.png"/></label>
-                                        <br/>
-                                        <span id="msg2">Now, capture a close up shot of the pizza in LANDSCAPE mode!</span>
-                                        <img id="pizzaPhoto" className="selfie" />
-                                    </div>
-
-                                <span id="checkoutBtnStep2" className="title download-msg" >Press and hold the photo for the option to download it.
-
-                                </span>
-                              </div>}
-                              {this.state.showSlot &&
-                              <div className="checkout-content">
-                                  <div className="card-container small" style={{padding: '0px 12px 0px 12px', minHeight: '246px'}}>
-                                      <div className="section-one">
-                                          <div className="top-right">
-                                              <div className="usp-title" style={{left: '0',right: '0',margin: '0 auto'}}>
-                                                  <span className="title-ff" style={{top:'-14px', padding: '20px', lineHeight: '22px'}}>When do you want your pizza delivered?</span>
-                                                  <div className="slot">
-                                                    <label for="slots">Available slots:</label>
-                                                    <select name="slots" id="slots" onChange={()=>{this.selectSlot()}}>
-                                                      <option value="Saturday, 2:30PM - 3.30PM">Saturday, 2:30PM - 3.30PM</option>
-                                                      <option value="Saturday, 3:30PM - 4.30PM">Saturday, 3:30PM - 4.30PM</option>
-                                                      <option value="Saturday, 4:30PM - 5.30PM">Saturday, 4:30PM - 5.30PM</option>
-                                                    </select>
-                                                    <span className="title-ff">*Due to ongoing COVID-19 crisis, we're only able to deliver on weekends on non-curfew days.</span>
-                                                  </div>
-                                              </div>
-                                          </div>
-                                      </div>
-                                  </div>
-
-                                      <div id="checkoutBtnStep11" className="card-btn checkout" style={{bottom: '60px', marginTop: 'auto'}} onClick={()=>{document.getElementById('step2').classList.add('active');document.getElementById('step3Circle').classList.add('active');this.setState({showCoupon: false, showSlot: false, activeStep: 3});this.makePaymentRequest();}}>Next&nbsp;→
-                                          <div className=""></div>
-                                      </div>
-                              </div>
-                            }
-                              {!this.state.showSlot && this.state.activeStep == 3 &&
-                                  <div className="checkout-content">
-
-                                  <div className="card-container" style={{padding: '0px 12px 0px 12px',minHeight: '200px'}}>
-                                              <div className="section-one">
-                                                  <div className="top">
-                                                      <div className="top-right">
-                                                          <div className="label-redirect">
-                                                            Redirecting to payment partner... Please wait...
-                                                          </div>
-                                                          <div className="pizza">
-                                                           {loaderElems}
-                                                          </div>
-                                                      </div>
-                                                  </div>
-                                              </div>
 
 
-                                          </div>
 
-
-                                </div>}
                         </div>
 
 
 
-
-                                    {location.href.indexOf('/redirect/')!=-1 && location.href.indexOf('&payment_status=Credit') !=-1 && <div className="card-container">
-                                            <div className="status-title">
-                                                <img src="../../../img/images/ic_tickw.png" className="status-img" />
-                                                <span>Thanks for ordering your homely pizza!</span>
-                                                <br/>
-                                                <img className="ic-delivery" src="../../../img/images/ic_delivery.png" />
-                                                <span className="small-title">Our delivery executive will get in touch with you as per your chosen delivery slot.</span>
-                                             </div>
-
-                                    </div>}
-
-
-                    </div><div className="credits"> © 2020 homely.pizza<span style={{marginLeft: '20px',textDecoration: 'underline'}} onClick={()=>{location.href='/credits/'}}>Special Credits</span></div>
+                    </div><div className="credits"> © 2020 homely.pizza</div>
                 <br/>
                 </div>)
     }
 }
 
-var MemorysWithRouter = withRouter(Memory);
+var BakeWithRouter = withRouter(Bake);
 
 render(<Router>
     <div>
-        <Route path="/memory" render={() => (
+        <Route path="/bake" render={() => (
             <div className="results">
-                <Route path="/memory/" component={MemorysWithRouter} />
+                <Route path="/bake" component={BakeWithRouter} />
             </div>)} />
     </div>
 </Router>, document.getElementById('containerWiz'));
