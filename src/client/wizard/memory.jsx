@@ -232,7 +232,7 @@ class Memory extends Component {
     }
 
     processFile(dataURL, fileType, currentStep) {
-    	var maxWidth = 800;
+    	var maxWidth = 1200;
     	var maxHeight = 800;
 
     	var image = new Image();
