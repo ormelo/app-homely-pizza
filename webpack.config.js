@@ -8,6 +8,7 @@ var UglifyJSPlugin = require('uglifyjs-webpack-plugin')
 var config = {
   entry: {
     guide: WIZ_DIR + '/guide.jsx',
+    memory: WIZ_DIR + '/memory.jsx'
   },
   output: {
     path: BUILD_DIR,
