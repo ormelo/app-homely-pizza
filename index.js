@@ -1005,7 +1005,7 @@ app.post('/selfie', function(req, res) {
 
       	// Load sources
       	var images = sources.map(function (source) { return new Promise(function (resolve, reject) {
-            source = source.replace(/ /g, "+");
+
       	    console.log('--source--', source);
       		// Convert sources to objects
       		if (source.constructor.name !== 'Object') {
@@ -1061,7 +1061,7 @@ app.post('/selfie', function(req, res) {
 
 
 
-      mergeImages(['public/img/images/sbg.jpg', selfie],
+      mergeImages(['public/img/images/sbg.jpg',{ src: selfie.replace(/ /g, "+"), x: 630, y: 540 }],
       {
         Canvas: Canvas,
         Image: Image

@@ -341,10 +341,10 @@ class Shortlists extends Component {
             if(http.readyState == 4 && http.status == 200) {
                 console.log('order creation post response:', http.responseText);
                 var res = http.responseText;
-                //if(!pincode.includes('560')) {
+                if(!pincode.includes('560')) {
                     alert('Sorry, our slots are full for this Saturday. Pls check back again on Sunday for upcoming week!');
                     location.href = '/';
-                //}
+                }
                 if(res != null){
                     res = JSON.parse(res);
                     /*if(res.whitelisted == false) {
