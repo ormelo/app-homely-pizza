@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2100fea9-fa34-466f-9140-289133e88515" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/memory.bundle.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/memory.bundle.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/wizard/memory.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/wizard/memory.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/images/sbg.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/images/sbg.jpg" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -254,27 +252,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1564376751969</updated>
-    </task>
-    <task id="LOCAL-00028" summary="homepage">
-      <created>1592909621740</created>
-      <option name="number" value="00028" />
-      <option name="presentableId" value="LOCAL-00028" />
-      <option name="project" value="LOCAL" />
-      <updated>1592909621740</updated>
-    </task>
-    <task id="LOCAL-00029" summary="homepage">
-      <created>1592910010314</created>
-      <option name="number" value="00029" />
-      <option name="presentableId" value="LOCAL-00029" />
-      <option name="project" value="LOCAL" />
-      <updated>1592910010314</updated>
-    </task>
-    <task id="LOCAL-00030" summary="homepage">
-      <created>1592910505172</created>
-      <option name="number" value="00030" />
-      <option name="presentableId" value="LOCAL-00030" />
-      <option name="project" value="LOCAL" />
-      <updated>1592910505172</updated>
     </task>
     <task id="LOCAL-00031" summary="homepage">
       <created>1592911312972</created>
@@ -598,7 +575,28 @@
       <option name="project" value="LOCAL" />
       <updated>1594380552520</updated>
     </task>
-    <option name="localTasksCounter" value="77" />
+    <task id="LOCAL-00077" summary="homepage">
+      <created>1594380884850</created>
+      <option name="number" value="00077" />
+      <option name="presentableId" value="LOCAL-00077" />
+      <option name="project" value="LOCAL" />
+      <updated>1594380884850</updated>
+    </task>
+    <task id="LOCAL-00078" summary="homepage">
+      <created>1594381058915</created>
+      <option name="number" value="00078" />
+      <option name="presentableId" value="LOCAL-00078" />
+      <option name="project" value="LOCAL" />
+      <updated>1594381058915</updated>
+    </task>
+    <task id="LOCAL-00079" summary="homepage">
+      <created>1594381087262</created>
+      <option name="number" value="00079" />
+      <option name="presentableId" value="LOCAL-00079" />
+      <option name="project" value="LOCAL" />
+      <updated>1594381087262</updated>
+    </task>
+    <option name="localTasksCounter" value="80" />
     <servers />
   </component>
   <component name="TodoView">
@@ -612,7 +610,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1920" height="1108" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22470714" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
