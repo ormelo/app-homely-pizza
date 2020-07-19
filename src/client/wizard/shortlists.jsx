@@ -80,7 +80,6 @@ class ReviewContainer extends Component {
     }
     updatePrice(qty) {
         if(qty >= 1) {
-            debugger;
             let size = this.props.reviewTopics[this.state.activeIndex].topic;
             document.getElementById('price'+this.props.itemId).innerHTML = this.props.crustOptions[this.state.activeCrustIndex]["pricing"][size] * qty;
         }
@@ -506,7 +505,7 @@ class Shortlists extends Component {
 
                                         </div>
 
-                                <div id="checkoutBtnStep2" className="card-btn checkout" style={{bottom: '60px', marginTop: 'auto'}} onClick={()=>{document.getElementById('step2').classList.add('done');this.captureAddress();}}>Next&nbsp;→
+                                <div id="checkoutBtnStep2" className="card-btn checkout" style={{top: '532px', marginTop: 'auto'}} onClick={()=>{document.getElementById('step2').classList.add('done');this.captureAddress();}}>Next&nbsp;→
                                     <div className=""></div>
                                 </div>
                               </div>}
