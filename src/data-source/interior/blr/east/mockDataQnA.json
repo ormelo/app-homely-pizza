@@ -178,19 +178,19 @@
      "address": "129, Siddapura, Whitefield, Bengaluru, Karnataka, India, Varthur Main Road, Bengaluru",
      "qna": [
        {
-         "defaultPrice": "370",
+         "defaultPrice": 370,
          "responses": [
            {
              "topic": "Large",
-             "pricing": {"Thin":  370, "Thick":  480}
+             "pricing": {"Thin":  370, "Thick":  390}
            },
            {
              "topic": "Medium",
-             "pricing": {"Thin":  350, "Thick":  420}
+             "pricing": {"Thin":  350, "Thick":  370}
            },
            {
              "topic": "Small",
-             "pricing": {"Thin":  320, "Thick":  400}
+             "pricing": {"Thin":  320, "Thick":  340}
            }
          ],
          "crust": [
@@ -200,7 +200,7 @@
            },
            {
              "topic": "Thick",
-             "pricing": {"Large":  480, "Medium":  420, "Small":  400}
+             "pricing": {"Large":  390, "Medium":  370, "Small":  340}
            }
          ]
        }
@@ -220,19 +220,19 @@
      "address": "129, Siddapura, Whitefield, Bengaluru, Karnataka, India, Varthur Main Road, Bengaluru",
      "qna": [
        {
-         "defaultPrice": "370",
+         "defaultPrice": 370,
          "responses": [
            {
              "topic": "Large",
-             "pricing": {"Thin":  370, "Thick":  480}
+             "pricing": {"Thin":  370, "Thick":  390}
            },
            {
              "topic": "Medium",
-             "pricing": {"Thin":  350, "Thick":  420}
+             "pricing": {"Thin":  350, "Thick":  370}
            },
            {
              "topic": "Small",
-             "pricing": {"Thin":  320, "Thick":  400}
+             "pricing": {"Thin":  320, "Thick":  340}
            }
          ],
          "crust": [
@@ -242,7 +242,7 @@
            },
            {
              "topic": "Thick",
-             "pricing": {"Large":  480, "Medium":  420, "Small":  400}
+             "pricing": {"Large":  390, "Medium":  370, "Small":  340}
            }
          ]
        }

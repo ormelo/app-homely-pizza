@@ -80,6 +80,7 @@ class ReviewContainer extends Component {
     }
     updatePrice(qty) {
         if(qty >= 1) {
+            debugger;
             let size = this.props.reviewTopics[this.state.activeIndex].topic;
             document.getElementById('price'+this.props.itemId).innerHTML = this.props.crustOptions[this.state.activeCrustIndex]["pricing"][size] * qty;
         }
@@ -262,7 +263,16 @@ class Shortlists extends Component {
             }
             if(e.detail != null) {
                 console.log('e.detail.itemId: ', e.detail.itemId);
-                basketData[e.detail.itemId] = e.detail;
+                console.log('e.detail.qty: ', e.detail.qty);
+                if (e.detail.qty <=0 && basketData[e.detail.itemId] != null) {
+                    delete basketData[e.detail.itemId];
+                    document.getElementById('checkoutCount').innerHTML = Object.keys(basketData).length;
+                    if (Object.keys(basketData).length == 0) {
+                        document.getElementById('checkoutHeader').style.display = 'none';
+                    }
+                } else {
+                    basketData[e.detail.itemId] = e.detail;
+                }
             }
 
             if(Object.keys(basketData).length >= 1) {
