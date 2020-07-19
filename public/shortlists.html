@@ -373,6 +373,7 @@
     padding: 0px 16px 0px 16px;
     backdrop-filter: saturate(100%) blur(15px);
     min-height: 330px;
+    -webkit-backdrop-filter: saturate(100%) blur(15px);
 }
 .card-container.small {
     min-height: 130px;
@@ -385,6 +386,12 @@
     position: absolute;
     left: 100px;
     top: 20px;
+}
+.starter {
+    width: 136px;
+}
+.starter-height {
+    height: 74px !important;
 }
 .card-container.small .usp-desc {
     top: 135px;
@@ -739,6 +746,7 @@
     border-right: 2px solid #dbc2b48f;
     background: #fe4a28;
     color: #ffffff;
+    pointer-events: none;
 }
 .quantity__minus:link,
 .quantity__plus:link {
@@ -749,11 +757,11 @@
   color: #fff;
 }
 .incrementer {
-    position: absolute;
-    bottom: 25px;
+    position: relative;
+    bottom: 74px;
     float: right;
-    right: 61px;
     opacity: 0.75;
+    margin-left: 198px;
 }
 .pricing {
     position: relative;
@@ -2167,6 +2175,15 @@ text-size-adjust:none;
             margin-top: 20px;
         }
 
+        @media screen and (-webkit-min-device-pixel-ratio:0) {
+        { @media {
+            .sf-img {
+                position: absolute;
+                width: 138px;
+                margin-top: -29px;
+            }
+        }}
+
         @media (max-width: 768px){
                 #banner {
                   display: none;
@@ -3408,6 +3425,7 @@ p img.right { float: right; margin-left: 1em; }
         background-color: #ffffff00;
         z-index: 0;
         backdrop-filter: saturate(180%) blur(25px);
+        -webkit-backdrop-filter: saturate(180%) blur(25px);
     }
     .logo img {
         width: 40px;

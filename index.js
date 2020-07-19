@@ -822,6 +822,12 @@ app.get("/data/:task/:loc/:zone", function(request, response) {
   response.send(rawdata);
 });
 
+app.get("/data/:task/:loc/:zone/starter", function(request, response) {
+  const fs = require('fs');
+  let rawdata = fs.readFileSync('./src/data-source/'+request.params.task+'/'+request.params.loc+'/'+request.params.zone+'/mockDataStarter.json');
+  response.send(rawdata);
+});
+
 app.get("/products", function(request, response) {
   //Todo: comment above n uncomment below
   response.send(pages.products);

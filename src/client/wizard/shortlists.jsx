@@ -3,8 +3,37 @@ import axios from 'axios';
 import { render } from 'react-dom';
 import { Link, withRouter } from 'react-router-dom';
 
+import { makeStyles } from '@material-ui/core/styles';
+import Paper from '@material-ui/core/Paper';
+import Tabs from '@material-ui/core/Tabs';
+import Tab from '@material-ui/core/Tab';
+import Typography from '@material-ui/core/Typography';
+import Box from '@material-ui/core/Box';
+
 import { questions, conditionalQuestions } from '../../data-source/mockDataQnA';
 import { useHistory } from "react-router-dom";
+
+const useStyles = makeStyles({
+  root: {
+    flexGrow: 1,
+  },
+});
+
+function TabPanel(props) {
+  const { children, value, index } = props;
+
+  return (
+    <Typography
+      component="div"
+      role="tabpanel"
+      hidden={value !== index}
+      id={`full-width-tabpanel-${index}`}
+      aria-labelledby={`full-width-tab-${index}`}
+    >
+      <Box p={3}>{children}</Box>
+    </Typography>
+  );
+}
 
 class ReviewContainer extends Component {
 
@@ -90,16 +119,21 @@ class ReviewContainer extends Component {
     }
 
     render() {
-        let {reviewTopics, crustOptions, item, itemId} = this.props;
+        let {reviewTopics, crustOptions, item, itemId, type} = this.props;
         let {activeIndex, activeCrustIndex, activeOpinions, qty} = this.state;
         let activeDefaultOpinions = [];
         console.log('reviewTopics[0]:', reviewTopics[0]);
         activeDefaultOpinions = reviewTopics[0].opinions;
 
+        let extraClasses = '';
+        if(type == 'starters') {
+            extraClasses = 'starter-height';
+        }
+
         return (
-          <div className="reviews-container">
+          <div className={`reviews-container ${extraClasses}`}>
               <div className="topic-container">
-                {reviewTopics && reviewTopics.map((review, index) => {
+                {type != 'starters' && reviewTopics && reviewTopics.map((review, index) => {
                     return (
                         <React.Fragment>
                             <div className={activeIndex===index ? 'review-topic active': 'review-topic'} onClick={()=>{this.setActiveTopic(review, index);  this.setSizePrice(index); }}>
@@ -110,7 +144,8 @@ class ReviewContainer extends Component {
                 })}
                 </div>
 
-                <div className="topic-container" style={{height: '76px'}}>
+
+                {type != 'starters' && <div className="topic-container" style={{height: '76px'}}>
                     <div className="card-mini-title">Select your crust:</div>
                     {crustOptions && crustOptions.map((crust, indexCrust) => {
                         return (
@@ -121,12 +156,12 @@ class ReviewContainer extends Component {
                             </React.Fragment>
                         );
                     })}
-                </div>
-                <div className="incrementer">
+                </div>}
+                <div className="incrementer sf-inc">
                     <div class="card-mini-title" >Quantity:</div>
                     <div class="quantity">
                         <a className="quantity__minus"><span onClick={()=>{if(this.state.qty>0){this.setState({qty: this.state.qty - 1});}this.updatePrice(this.state.qty - 1);var event = new CustomEvent('basket-updated', { detail: {name: item.title, crust: crustOptions[this.state.activeCrustIndex].topic, size: reviewTopics[this.state.activeIndex].topic, qty: this.state.qty - 1, price: this.getPrice(this.state.qty - 1), itemId: itemId}});document.dispatchEvent(event);}} style={{fontSize: '25px', lineHeight: '0px', marginLeft: '2px'}}>-</span></a>
-                        <input name="quantity" type="text" disabled className="quantity__input" value={this.state.qty} />
+                        <input name="quantity" type="text" className="quantity__input" value={this.state.qty} />
                         <a className="quantity__plus"><span onClick={()=>{this.setState({qty: this.state.qty + 1});console.log('item:',item);var event = new CustomEvent('basket-updated', { detail: {name: item.title, crust: crustOptions[this.state.activeCrustIndex].topic, size: reviewTopics[this.state.activeIndex].topic, qty: this.state.qty + 1, price: this.getPrice(this.state.qty + 1), itemId: itemId}});document.dispatchEvent(event);this.updatePrice(this.state.qty + 1)}}>+</span></a>
                       </div>
                 </div>
@@ -152,13 +187,19 @@ class Card extends Component {
 
     render() {
         let {index, data} = this.props;
+        let prefix = 'p';
+        let extraClasses = '';
+        if(this.props.type && this.props.type == 'starters') {
+         prefix = 'g';
+         extraClasses = 'starter';
+        }
         return (
         <div className="card-container">
             <div className="section-one">
                 <br/>
                 <div className="top">
                     <div className="top-left">
-                        <img id={`primaryImg${index}`} className="primary-img rotatable" src={`../../../img/images/p${index+1}.png`} />
+                        <img id={`primaryImg${index}`} className={`primary-img rotatable sf-img ${extraClasses}`} src={`../../../img/images/${prefix}${index+1}.png`} />
                     </div>
                     <div className="top-right">
                         <div className="usp-title"></div>
@@ -171,7 +212,7 @@ class Card extends Component {
             <div className="section-two">
                 <div className="pricing"><label className="price"><span className="rupee">₹</span><span id={`price${index}`}>{data.qna[0].defaultPrice}</span></label></div>
                 <div className="top">
-                    <ReviewContainer reviewTopics={data.qna[0].responses} crustOptions={data.qna[0].crust} itemId={index} item={data} />
+                    <ReviewContainer reviewTopics={data.qna[0].responses} crustOptions={data.qna[0].crust} itemId={index} item={data} type={this.props.type} />
                 </div>
             </div>
         </div>)
@@ -226,6 +267,7 @@ class Shortlists extends Component {
         this.state = {
             value: 0,
             results: [],
+            starters: [],
             activeStep: 1,
             showCoupon: false,
             couponApplied: false,
@@ -233,6 +275,7 @@ class Shortlists extends Component {
             slotSelected: 'Saturday, 1:30PM - 2.30PM',
             orderSummary: localStorage.getItem('basket') != null ? JSON.parse(localStorage.getItem('basket')) : []
         };
+        this.handleTabChange = this.handleTabChange.bind(this);
     }
     componentDidMount() {
         this.fetchJson();
@@ -293,6 +336,14 @@ class Shortlists extends Component {
             console.log(response.data);
             this.setState({results: response.data.results});
           }.bind(this));
+        axios.get(`/data/${task}/${loc}/${zone}/starter`)
+                  .then(function (response) {
+                    this.setState({starters: response.data.results});
+                  }.bind(this));
+    }
+    handleTabChange(event, newValue) {
+        console.log('neValue: ', newValue);
+        this.setState({value: newValue});
     }
     getTotal() {
         let orderSummary = this.state.orderSummary;
@@ -391,7 +442,7 @@ class Shortlists extends Component {
         http.send(params);
     }
     render() {
-        const {showLoader, results, orderSummary, showCoupon, showSlot} = this.state;
+        const {showLoader, results, starters, orderSummary, showCoupon, showSlot} = this.state;
         console.log('orderSummary: ', orderSummary);
         let loaderElems = [];
         for(var i=0; i<14; i++) {
@@ -561,72 +612,163 @@ class Shortlists extends Component {
                         </div>
 
 
-                                    {results && location.href.indexOf('/redirect/')==-1 && location.href.indexOf('/credits/')==-1 && results.map((resultItem, index) => {
-                                        return (<Card index={index} data={resultItem} />);
-                                    })}
-
-                                    {location.href.indexOf('/redirect/')!=-1 && location.href.indexOf('&payment_status=Credit') !=-1 && <div className="card-container">
-                                            <div className="status-title">
-                                                <img src="../../../img/images/ic_tickw.png" className="status-img" />
-                                                <span>Thanks for ordering your homely pizza!</span>
-                                                <br/>
-                                                <img className="ic-delivery" src="../../../img/images/ic_delivery.png" />
-                                                <span className="small-title">Our delivery executive will get in touch with you as per your chosen delivery slot.</span>
-                                             </div>
-
-                                    </div>}
-
-                                    {location.href.indexOf('/redirect/')!=-1 && location.href.indexOf('&payment_status=Credit') == -1 && <div className="card-container">
-                                            <div className="status-title">
-                                                <img src="../../../img/images/ic_error.png" className="status-img error" />
-                                                <span>Your order is still pending</span>
-                                                <br/><br/>
-                                                <span className="small-title">Payment failed. Please retry by clicking the button below.</span>
-                                                <br/>
-                                                <div className="card-btn checkout small" onClick={()=>{location.href=localStorage.getItem('paymentLink');}}>Retry Payment
-                                                                                    <div className=""></div>
-                                                                                </div>
-                                                <br/>
-                                                <span className="small-title" style={{marginTop: '92px', fontSize: '16px'}}>If you continue to face issues, please call us at <a style={{color: '#ffd355'}} href="tel:+91-7619514999">+91-7619514999</a></span>
-                                             </div>
-
-                                    </div>}
-
-                                    {location.href.indexOf('/credits/')!=-1 && <div className="card-container">
-                                                                                <div className="status-title">
-
-                                                                                    <span>Special Credits</span>
-                                                                                    <br/>
-                                                                                    <img className="ic-delivery" src="../../../img/images/medal.png" style={{marginLeft: '0px'}} />
-                                                                                    <span className="small-title" style={{textAlign: 'justify'}}>We take pride in our team, especially our junior artists who strive to craft a memorable experience in their own creative ways.</span>
-
-                                                                                 </div>
-                                                                                 <div className="status-title" style={{marginTop: '140px'}}>
-
-                                                                                     <span style={{fontSize: '20px',marginTop:'14px',fontWeight: 'bold'}}>Akshara, Creative logo & concept</span>
-                                                                                     <div className="ic-delivery avataraks"  style={{marginLeft: '0px'}} />
-
-                                                                                  </div>
-                                                                                  <div className="status-title" style={{marginTop: '10px'}}>
-
-                                                                                   <span style={{fontSize: '20px',marginTop:'14px',fontWeight: 'bold'}}>Antara, Visual design & logo art</span>
-                                                                                   <div className="ic-delivery avatarant"  style={{marginLeft: '0px'}} />
-
-                                                                                </div>
-                                                                                <div className="status-title" style={{marginTop: '10px'}}>
-
-                                                                                   <span style={{fontSize: '20px',marginTop:'14px',fontWeight: 'bold'}}>Srishti, Customer happiness</span>
-                                                                                   <div className="ic-delivery avatarsr"  style={{marginLeft: '0px'}} />
-                                                                                   <br/><br/><br/>
-
-                                                                                </div>
 
 
 
-                                                                        </div>}
+                        <Paper>
+                          <Tabs
+                            value={this.state.value}
+                            onChange={this.handleTabChange}
+                            indicatorColor="primary"
+                            textColor="primary"
+                            centered
+                            style={{marginTop: '20px    '}}
+                          >
+                            <Tab label="&nbsp;&nbsp;&nbsp;Pizzas&nbsp;&nbsp;&nbsp;" />
+                            <Tab label="&nbsp;&nbsp;&nbsp;Starters&nbsp;&nbsp;&nbsp;" />
+                          </Tabs>
+                          <TabPanel value={this.state.value} index={0}>
+
+                               {results && location.href.indexOf('/redirect/')==-1 && location.href.indexOf('/credits/')==-1 && results.map((resultItem, index) => {
+                                                                       return (<Card index={index} data={resultItem} type="pizzas" />);
+                                                                   })}
+
+                               {location.href.indexOf('/redirect/')!=-1 && location.href.indexOf('&payment_status=Credit') !=-1 && <div className="card-container">
+                                       <div className="status-title">
+                                           <img src="../../../img/images/ic_tickw.png" className="status-img" />
+                                           <span>Thanks for ordering your homely pizza!</span>
+                                           <br/>
+                                           <img className="ic-delivery" src="../../../img/images/ic_delivery.png" />
+                                           <span className="small-title">Our delivery executive will get in touch with you as per your chosen delivery slot.</span>
+                                        </div>
+
+                               </div>}
+
+                               {location.href.indexOf('/redirect/')!=-1 && location.href.indexOf('&payment_status=Credit') == -1 && <div className="card-container">
+                                       <div className="status-title">
+                                           <img src="../../../img/images/ic_error.png" className="status-img error" />
+                                           <span>Your order is still pending</span>
+                                           <br/><br/>
+                                           <span className="small-title">Payment failed. Please retry by clicking the button below.</span>
+                                           <br/>
+                                           <div className="card-btn checkout small" onClick={()=>{location.href=localStorage.getItem('paymentLink');}}>Retry Payment
+                                                                               <div className=""></div>
+                                                                           </div>
+                                           <br/>
+                                           <span className="small-title" style={{marginTop: '92px', fontSize: '16px'}}>If you continue to face issues, please call us at <a style={{color: '#ffd355'}} href="tel:+91-7619514999">+91-7619514999</a></span>
+                                        </div>
+
+                               </div>}
+
+                               {location.href.indexOf('/credits/')!=-1 && <div className="card-container">
+                                                                           <div className="status-title">
+
+                                                                               <span>Special Credits</span>
+                                                                               <br/>
+                                                                               <img className="ic-delivery" src="../../../img/images/medal.png" style={{marginLeft: '0px'}} />
+                                                                               <span className="small-title" style={{textAlign: 'justify'}}>We take pride in our team, especially our junior artists who strive to craft a memorable experience in their own creative ways.</span>
+
+                                                                            </div>
+                                                                            <div className="status-title" style={{marginTop: '140px'}}>
+
+                                                                                <span style={{fontSize: '20px',marginTop:'14px',fontWeight: 'bold'}}>Akshara, Creative logo & concept</span>
+                                                                                <div className="ic-delivery avataraks"  style={{marginLeft: '0px'}} />
+
+                                                                             </div>
+                                                                             <div className="status-title" style={{marginTop: '10px'}}>
+
+                                                                              <span style={{fontSize: '20px',marginTop:'14px',fontWeight: 'bold'}}>Antara, Visual design & logo art</span>
+                                                                              <div className="ic-delivery avatarant"  style={{marginLeft: '0px'}} />
+
+                                                                           </div>
+                                                                           <div className="status-title" style={{marginTop: '10px'}}>
+
+                                                                              <span style={{fontSize: '20px',marginTop:'14px',fontWeight: 'bold'}}>Srishti, Customer happiness</span>
+                                                                              <div className="ic-delivery avatarsr"  style={{marginLeft: '0px'}} />
+                                                                              <br/><br/><br/>
+
+                                                                           </div>
+
+                                <div className="credits"> © 2020 homely.pizza<span style={{marginLeft: '20px',textDecoration: 'underline'}} onClick={()=>{location.href='/credits/'}}>Special Credits</span></div>
+
+                                                                   </div>}
+                          </TabPanel>
+                          <TabPanel value={this.state.value} index={1}>
+
+                                {starters && location.href.indexOf('/redirect/')==-1 && location.href.indexOf('/credits/')==-1 && starters.map((resultItem, index) => {
+                                                                        return (<Card index={index} data={resultItem} type="starters" />);
+                                                                    })}
+
+                                {location.href.indexOf('/redirect/')!=-1 && location.href.indexOf('&payment_status=Credit') !=-1 && <div className="card-container">
+                                        <div className="status-title">
+                                            <img src="../../../img/images/ic_tickw.png" className="status-img" />
+                                            <span>Thanks for ordering your homely pizza!</span>
+                                            <br/>
+                                            <img className="ic-delivery" src="../../../img/images/ic_delivery.png" />
+                                            <span className="small-title">Our delivery executive will get in touch with you as per your chosen delivery slot.</span>
+                                         </div>
+
+                                </div>}
+
+                                {location.href.indexOf('/redirect/')!=-1 && location.href.indexOf('&payment_status=Credit') == -1 && <div className="card-container">
+                                        <div className="status-title">
+                                            <img src="../../../img/images/ic_error.png" className="status-img error" />
+                                            <span>Your order is still pending</span>
+                                            <br/><br/>
+                                            <span className="small-title">Payment failed. Please retry by clicking the button below.</span>
+                                            <br/>
+                                            <div className="card-btn checkout small" onClick={()=>{location.href=localStorage.getItem('paymentLink');}}>Retry Payment
+                                                                                <div className=""></div>
+                                                                            </div>
+                                            <br/>
+                                            <span className="small-title" style={{marginTop: '92px', fontSize: '16px'}}>If you continue to face issues, please call us at <a style={{color: '#ffd355'}} href="tel:+91-7619514999">+91-7619514999</a></span>
+                                         </div>
+
+                                </div>}
+
+                                {location.href.indexOf('/credits/')!=-1 && <div className="card-container">
+                                                                            <div className="status-title">
+
+                                                                                <span>Special Credits</span>
+                                                                                <br/>
+                                                                                <img className="ic-delivery" src="../../../img/images/medal.png" style={{marginLeft: '0px'}} />
+                                                                                <span className="small-title" style={{textAlign: 'justify'}}>We take pride in our team, especially our junior artists who strive to craft a memorable experience in their own creative ways.</span>
+
+                                                                             </div>
+                                                                             <div className="status-title" style={{marginTop: '140px'}}>
+
+                                                                                 <span style={{fontSize: '20px',marginTop:'14px',fontWeight: 'bold'}}>Akshara, Creative logo & concept</span>
+                                                                                 <div className="ic-delivery avataraks"  style={{marginLeft: '0px'}} />
+
+                                                                              </div>
+                                                                              <div className="status-title" style={{marginTop: '10px'}}>
+
+                                                                               <span style={{fontSize: '20px',marginTop:'14px',fontWeight: 'bold'}}>Antara, Visual design & logo art</span>
+                                                                               <div className="ic-delivery avatarant"  style={{marginLeft: '0px'}} />
+
+                                                                            </div>
+                                                                            <div className="status-title" style={{marginTop: '10px'}}>
+
+                                                                               <span style={{fontSize: '20px',marginTop:'14px',fontWeight: 'bold'}}>Srishti, Customer happiness</span>
+                                                                               <div className="ic-delivery avatarsr"  style={{marginLeft: '0px'}} />
+                                                                               <br/><br/><br/>
+
+                                                                            </div>
 
 
-                    </div><div className="credits"> © 2020 homely.pizza<span style={{marginLeft: '20px',textDecoration: 'underline'}} onClick={()=>{location.href='/credits/'}}>Special Credits</span></div>
+                                <div className="credits"> © 2020 homely.pizza<span style={{marginLeft: '20px',textDecoration: 'underline'}} onClick={()=>{location.href='/credits/'}}>Special Credits</span></div>
+                                                                    </div>}
+
+                          </TabPanel>
+                        </Paper>
+
+
+
+
+
+
+
+                    </div>
                 <br/>
                 </div>)
     }
