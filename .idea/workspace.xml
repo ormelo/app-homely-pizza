@@ -3,17 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="2100fea9-fa34-466f-9140-289133e88515" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/bake.bundle.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/bake.bundle.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/guide.bundle.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/guide.bundle.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/images/g1.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/images/g1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/images/g2.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/images/g2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/memory.bundle.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/memory.bundle.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/shortlists.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/shortlists.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/wizard/guide.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/wizard/guide.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/wizard/shortlists.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/wizard/shortlists.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data-source/interior/blr/east/mockDataQnA.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/data-source/interior/blr/east/mockDataQnA.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/data-source/interior/blr/east/mockDataStarter.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/data-source/interior/blr/east/mockDataStarter.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -68,11 +57,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/data-source/interior/blr/east/mockDataStarter.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="337">
-              <caret line="61" column="13" selection-start-line="61" selection-start-column="13" selection-end-line="61" selection-end-column="13" />
+            <state relative-caret-position="701">
+              <caret line="84" column="14" selection-start-line="84" selection-start-column="14" selection-end-line="84" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -86,7 +75,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/shortlists.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="431">
@@ -136,8 +125,8 @@
       <find>Tabs</find>
       <find>@material-ui</find>
       <find>topic-container</find>
-      <find>starter-height</find>
       <find>incrementerClass</find>
+      <find>starter-height</find>
     </findStrings>
     <replaceStrings>
       <replace>className</replace>
@@ -165,10 +154,10 @@
         <option value="$PROJECT_DIR$/index.js" />
         <option value="$PROJECT_DIR$/src/client/wizard/guide.jsx" />
         <option value="$PROJECT_DIR$/src/data-source/interior/blr/east/mockDataQnA.json" />
-        <option value="$PROJECT_DIR$/src/data-source/interior/blr/east/mockDataStarter.json" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/src/client/wizard/shortlists.jsx" />
         <option value="$PROJECT_DIR$/public/shortlists.html" />
+        <option value="$PROJECT_DIR$/src/data-source/interior/blr/east/mockDataStarter.json" />
       </list>
     </option>
   </component>
@@ -304,20 +293,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1564376751969</updated>
-    </task>
-    <task id="LOCAL-00040" summary="homepage">
-      <created>1593355470666</created>
-      <option name="number" value="00040" />
-      <option name="presentableId" value="LOCAL-00040" />
-      <option name="project" value="LOCAL" />
-      <updated>1593355470666</updated>
-    </task>
-    <task id="LOCAL-00041" summary="homepage">
-      <created>1593355610922</created>
-      <option name="number" value="00041" />
-      <option name="presentableId" value="LOCAL-00041" />
-      <option name="project" value="LOCAL" />
-      <updated>1593355610922</updated>
     </task>
     <task id="LOCAL-00042" summary="homepage">
       <created>1593355824667</created>
@@ -648,7 +623,21 @@
       <option name="project" value="LOCAL" />
       <updated>1595163192927</updated>
     </task>
-    <option name="localTasksCounter" value="89" />
+    <task id="LOCAL-00089" summary="homepage">
+      <created>1595246477433</created>
+      <option name="number" value="00089" />
+      <option name="presentableId" value="LOCAL-00089" />
+      <option name="project" value="LOCAL" />
+      <updated>1595246477436</updated>
+    </task>
+    <task id="LOCAL-00090" summary="homepage">
+      <created>1595246630154</created>
+      <option name="number" value="00090" />
+      <option name="presentableId" value="LOCAL-00090" />
+      <option name="project" value="LOCAL" />
+      <updated>1595246630155</updated>
+    </task>
+    <option name="localTasksCounter" value="91" />
     <servers />
   </component>
   <component name="TodoView">
@@ -844,13 +833,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/data-source/interior/blr/east/mockDataStarter.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="337">
-          <caret line="61" column="13" selection-start-line="61" selection-start-column="13" selection-end-line="61" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
@@ -869,6 +851,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="431">
           <caret line="399" column="17" selection-start-line="399" selection-start-column="17" selection-end-line="399" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/data-source/interior/blr/east/mockDataStarter.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="701">
+          <caret line="84" column="14" selection-start-line="84" selection-start-column="14" selection-end-line="84" selection-end-column="14" />
         </state>
       </provider>
     </entry>
