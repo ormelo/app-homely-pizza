@@ -10,6 +10,9 @@ import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 
+import LocalPizzaIcon from '@material-ui/icons/LocalPizza';
+import RestaurantIcon from '@material-ui/icons/Restaurant';
+
 import { questions, conditionalQuestions } from '../../data-source/mockDataQnA';
 import { useHistory } from "react-router-dom";
 
@@ -63,7 +66,7 @@ class ReviewContainer extends Component {
         console.log('::Price::', this.props.reviewTopics[this.state.activeIndex]["pricing"][crust]);
         document.getElementById('price'+this.props.itemId).innerHTML = this.props.reviewTopics[this.state.activeIndex]["pricing"][crust] * (this.state.qty > 0 ? this.state.qty : 1);
         if(this.state.qty > 0){
-            var event = new CustomEvent('basket-updated', { detail: {name: item.title, crust: this.props.crustOptions[crustIndex].topic, size: this.props.reviewTopics[this.state.activeIndex].topic, qty: this.state.qty, price: this.props.reviewTopics[this.state.activeIndex]["pricing"][crust] * this.state.qty, itemId: this.props.itemId}});
+            var event = new CustomEvent('basket-updated', { detail: {type: item.type, name: item.title, crust: this.props.crustOptions[crustIndex].topic, size: this.props.reviewTopics[this.state.activeIndex].topic, qty: this.state.qty, price: this.props.reviewTopics[this.state.activeIndex]["pricing"][crust] * this.state.qty, itemId: this.props.itemId}});
             document.dispatchEvent(event);
         }
     }
@@ -75,7 +78,7 @@ class ReviewContainer extends Component {
         console.log('::Price::', this.props.crustOptions[this.state.activeCrustIndex]["pricing"][size]);
         document.getElementById('price'+this.props.itemId).innerHTML = this.props.crustOptions[this.state.activeCrustIndex]["pricing"][size] * (this.state.qty > 0 ? this.state.qty : 1);
         if(this.state.qty > 0){
-            var event = new CustomEvent('basket-updated', { detail: {name: item.title, crust: this.props.crustOptions[this.state.activeCrustIndex].topic, size: this.props.reviewTopics[activeIndex].topic, qty: this.state.qty, price: this.props.crustOptions[this.state.activeCrustIndex]["pricing"][size] * this.state.qty, itemId: this.props.itemId}});
+            var event = new CustomEvent('basket-updated', { detail: {type: item.type, name: item.title, crust: this.props.crustOptions[this.state.activeCrustIndex].topic, size: this.props.reviewTopics[activeIndex].topic, qty: this.state.qty, price: this.props.crustOptions[this.state.activeCrustIndex]["pricing"][size] * this.state.qty, itemId: this.props.itemId}});
             document.dispatchEvent(event);
         }
     }
@@ -125,9 +128,10 @@ class ReviewContainer extends Component {
         console.log('reviewTopics[0]:', reviewTopics[0]);
         activeDefaultOpinions = reviewTopics[0].opinions;
 
-        let extraClasses = '';
+        let extraClasses = '', incrementerClass = '';
         if(type == 'starters') {
             extraClasses = 'starter-height';
+            incrementerClass = 'starter-bottom-inc';
         }
 
         return (
@@ -157,12 +161,17 @@ class ReviewContainer extends Component {
                         );
                     })}
                 </div>}
-                <div className="incrementer sf-inc">
+
+                {type == 'starters' && <div>
+                    <div class="title starter-title">Freshly baked on arrival of your order</div>
+                </div>}
+
+                <div className={`incrementer sf-inc ${incrementerClass}`}>
                     <div class="card-mini-title" >Quantity:</div>
                     <div class="quantity">
-                        <a className="quantity__minus"><span onClick={()=>{if(this.state.qty>0){this.setState({qty: this.state.qty - 1});}this.updatePrice(this.state.qty - 1);var event = new CustomEvent('basket-updated', { detail: {name: item.title, crust: crustOptions[this.state.activeCrustIndex].topic, size: reviewTopics[this.state.activeIndex].topic, qty: this.state.qty - 1, price: this.getPrice(this.state.qty - 1), itemId: itemId}});document.dispatchEvent(event);}} style={{fontSize: '25px', lineHeight: '0px', marginLeft: '2px'}}>-</span></a>
+                        <a className="quantity__minus"><span onClick={()=>{if(this.state.qty>0){this.setState({qty: this.state.qty - 1});}this.updatePrice(this.state.qty - 1);var event = new CustomEvent('basket-updated', { detail: {type: item.type, name: item.title, crust: crustOptions[this.state.activeCrustIndex].topic, size: reviewTopics[this.state.activeIndex].topic, qty: this.state.qty - 1, price: this.getPrice(this.state.qty - 1), itemId: itemId}});document.dispatchEvent(event);}} style={{fontSize: '25px', lineHeight: '0px', marginLeft: '2px'}}>-</span></a>
                         <input name="quantity" type="text" className="quantity__input" value={this.state.qty} />
-                        <a className="quantity__plus"><span onClick={()=>{this.setState({qty: this.state.qty + 1});console.log('item:',item);var event = new CustomEvent('basket-updated', { detail: {name: item.title, crust: crustOptions[this.state.activeCrustIndex].topic, size: reviewTopics[this.state.activeIndex].topic, qty: this.state.qty + 1, price: this.getPrice(this.state.qty + 1), itemId: itemId}});document.dispatchEvent(event);this.updatePrice(this.state.qty + 1)}}>+</span></a>
+                        <a className="quantity__plus"><span onClick={()=>{this.setState({qty: this.state.qty + 1});console.log('item:',item);var event = new CustomEvent('basket-updated', { detail: {type: item.type, name: item.title, crust: crustOptions[this.state.activeCrustIndex].topic, size: reviewTopics[this.state.activeIndex].topic, qty: this.state.qty + 1, price: this.getPrice(this.state.qty + 1), itemId: itemId}});document.dispatchEvent(event);this.updatePrice(this.state.qty + 1)}}>+</span></a>
                       </div>
                 </div>
           </div>
@@ -236,16 +245,20 @@ class SummaryCard extends Component {
 
     render() {
         let {index, data} = this.props;
+        let prefix = 'p';
+        if(data.type == 'starter') {
+            prefix = 'g';
+        }
         return (
         <div className="card-container small" style={{padding: '0px 12px 0px 12px'}}>
             <div className="section-one">
                 <div className="top">
                     <div className="top-left">
-                        <img id={`primaryImg${index}`} className="primary-img rotatable" src={`../../../img/images/p${data.itemId+1}.png`} style={{width: '72px',paddingTop: '0px'}} />
+                        <img id={`primaryImg${index}`} className="primary-img rotatable" src={`../../../img/images/${prefix}${data.itemId+1}.png`} style={{width: '72px',paddingTop: '0px'}} />
                     </div>
                     <div className="top-right">
                         <div className="usp-title"><div className="title">{data.name}</div></div>
-                        <div className="usp-desc">{data.qty} {data.size} pizza(s)</div>
+                        {data.type == 'starter' ? <div className="usp-desc">{data.qty} single starter(s)</div> : <div className="usp-desc">{data.qty} {data.size} pizza(s)</div>}
                     </div>
                 </div>
             </div>
@@ -286,11 +299,11 @@ class Shortlists extends Component {
             if(window.scrollY <= 120) {
                 document.querySelector("#checkoutHeader").style.top = "0px";
                 document.querySelector("#logo").style.top = "91px";
-                document.querySelectoe('.announcement').style.display = 'block';
+                document.querySelector('.announcement').style.display = 'block';
             } else {
                 document.querySelector("#checkoutHeader").style.top = (window.scrollY-65)+"px";
                 document.querySelector("#logo").style.top = "21px";
-                document.querySelectoe('.announcement').style.display = 'none';
+                document.querySelector('.announcement').style.display = 'none';
             }
         });
 
@@ -333,7 +346,7 @@ class Shortlists extends Component {
 
         axios.get(`/data/${task}/${loc}/${zone}`)
           .then(function (response) {
-            console.log(response.data);
+            console.log('response data-----', response.data);
             this.setState({results: response.data.results});
           }.bind(this));
         axios.get(`/data/${task}/${loc}/${zone}/starter`)
@@ -445,6 +458,7 @@ class Shortlists extends Component {
         const {showLoader, results, starters, orderSummary, showCoupon, showSlot} = this.state;
         console.log('orderSummary: ', orderSummary);
         let loaderElems = [];
+        console.log('::results::', results);
         for(var i=0; i<14; i++) {
             loaderElems.push(<div className="slice"></div>)
         }
@@ -624,8 +638,8 @@ class Shortlists extends Component {
                             centered
                             style={{marginTop: '20px    '}}
                           >
-                            <Tab label="&nbsp;&nbsp;&nbsp;Pizzas&nbsp;&nbsp;&nbsp;" />
-                            <Tab label="&nbsp;&nbsp;&nbsp;Starters&nbsp;&nbsp;&nbsp;" />
+                            <Tab icon={<LocalPizzaIcon />} label="&nbsp;&nbsp;&nbsp;Pizzas&nbsp;&nbsp;&nbsp;" />
+                            <Tab icon={<RestaurantIcon />} label="&nbsp;&nbsp;&nbsp;Starters&nbsp;&nbsp;&nbsp;" />
                           </Tabs>
                           <TabPanel value={this.state.value} index={0}>
 

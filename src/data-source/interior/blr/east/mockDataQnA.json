@@ -5,6 +5,7 @@
  "results": [
    {
      "title": "Mediterranean Feast",
+     "type": "pizza",
      "shortTitle": "Asense Interior",
      "subTitle": "129, Siddapura",
      "address": "129, Siddapura, Whitefield, Bengaluru, Karnataka, India, Varthur Main Road, Bengaluru",
@@ -47,6 +48,7 @@
    },
    {
      "title": "Virgin Tomato",
+     "type": "pizza",
      "shortTitle": "Asense Interior",
      "subTitle": "129, Siddapura",
      "address": "129, Siddapura, Whitefield, Bengaluru, Karnataka, India, Varthur Main Road, Bengaluru",
@@ -89,6 +91,7 @@
    },
    {
      "title": "Bell Pepper Blast",
+     "type": "pizza",
      "shortTitle": "Asense Interior",
      "subTitle": "129, Siddapura",
      "address": "129, Siddapura, Whitefield, Bengaluru, Karnataka, India, Varthur Main Road, Bengaluru",
@@ -131,6 +134,7 @@
    },
    {
      "title": "Pineapple Mist",
+     "type": "pizza",
      "shortTitle": "Asense Interior",
      "subTitle": "129, Siddapura",
      "address": "129, Siddapura, Whitefield, Bengaluru, Karnataka, India, Varthur Main Road, Bengaluru",
@@ -173,6 +177,7 @@
    },
    {
      "title": "Classic Bell Pepper",
+     "type": "pizza",
      "shortTitle": "Asense Interior",
      "subTitle": "129, Siddapura",
      "address": "129, Siddapura, Whitefield, Bengaluru, Karnataka, India, Varthur Main Road, Bengaluru",
@@ -215,6 +220,7 @@
    },
    {
      "title": "Red hot celebration",
+     "type": "pizza",
      "shortTitle": "Asense Interior",
      "subTitle": "129, Siddapura",
      "address": "129, Siddapura, Whitefield, Bengaluru, Karnataka, India, Varthur Main Road, Bengaluru",
@@ -257,6 +263,7 @@
    },
    {
      "title": "Classic Corn",
+     "type": "pizza",
      "shortTitle": "Asense Interior",
      "subTitle": "129, Siddapura",
      "address": "129, Siddapura, Whitefield, Bengaluru, Karnataka, India, Varthur Main Road, Bengaluru",
@@ -299,6 +306,7 @@
    },
    {
      "title": "Tinge of Tomato",
+     "type": "pizza",
      "shortTitle": "Asense Interior",
      "subTitle": "129, Siddapura",
      "address": "129, Siddapura, Whitefield, Bengaluru, Karnataka, India, Varthur Main Road, Bengaluru",

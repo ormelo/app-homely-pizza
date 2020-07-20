@@ -5,6 +5,7 @@
  "results": [
    {
      "title": "Garlic breadsticks",
+     "type": "starter",
      "shortTitle": "Asense Interior",
      "subTitle": "129, Siddapura",
      "address": "129, Siddapura, Whitefield, Bengaluru, Karnataka, India, Varthur Main Road, Bengaluru",
@@ -14,25 +15,25 @@
          "responses": [
            {
              "topic": "Large",
-             "pricing": {"Thin":  330, "Thick":  340}
+             "pricing": {"Thin":  120, "Thick":  120}
            },
            {
              "topic": "Medium",
-             "pricing": {"Thin":  320, "Thick":  330}
+             "pricing": {"Thin":  120, "Thick":  120}
            },
            {
              "topic": "Small",
-             "pricing": {"Thin":  300, "Thick":  320}
+             "pricing": {"Thin":  120, "Thick":  120}
            }
          ],
          "crust": [
            {
              "topic": "Thin",
-             "pricing": {"Large":  330, "Medium":  320, "Small":  300}
+             "pricing": {"Large":  120, "Medium":  120, "Small":  120}
            },
            {
              "topic": "Thick",
-             "pricing": {"Large":  340, "Medium":  330, "Small":  320}
+             "pricing": {"Large":  120, "Medium":  120, "Small":  120}
            }
          ]
        }
@@ -47,6 +48,7 @@
    },
    {
      "title": "Cheesy Garlic breadsticks",
+     "type": "starter",
      "shortTitle": "Asense Interior",
      "subTitle": "129, Siddapura",
      "address": "129, Siddapura, Whitefield, Bengaluru, Karnataka, India, Varthur Main Road, Bengaluru",
@@ -56,25 +58,25 @@
          "responses": [
            {
              "topic": "Large",
-             "pricing": {"Thin":  330, "Thick":  340}
+             "pricing": {"Thin":  150, "Thick":  150}
            },
            {
              "topic": "Medium",
-             "pricing": {"Thin":  320, "Thick":  330}
+             "pricing": {"Thin":  150, "Thick":  150}
            },
            {
              "topic": "Small",
-             "pricing": {"Thin":  300, "Thick":  320}
+             "pricing": {"Thin":  150, "Thick":  150}
            }
          ],
          "crust": [
            {
              "topic": "Thin",
-             "pricing": {"Large":  330, "Medium":  320, "Small":  300}
+             "pricing": {"Large":  150, "Medium":  150, "Small":  150}
            },
            {
              "topic": "Thick",
-             "pricing": {"Large":  340, "Medium":  330, "Small":  320}
+             "pricing": {"Large":  150, "Medium":  150, "Small":  150}
            }
          ]
        }
