@@ -414,8 +414,8 @@ class Shortlists extends Component {
             if(http.readyState == 4 && http.status == 200) {
                 console.log('order creation post response:', http.responseText);
                 var res = http.responseText;
-                if(!pincode.includes('560')) {
-                    alert('Sorry, our slots are full for this Saturday. Pls check back again on Sunday for upcoming week!');
+                if(!pincode.includes('560') || !this.slotsAvailable) {
+                    alert('Sorry, our slots are full. Pls check back again later!');
                     location.href = '/';
                 }
                 if(res != null){
@@ -456,6 +456,8 @@ class Shortlists extends Component {
     }
     render() {
         const {showLoader, results, starters, orderSummary, showCoupon, showSlot} = this.state;
+        this.slotsAvailable = true;
+
         console.log('orderSummary: ', orderSummary);
         let loaderElems = [];
         console.log('::results::', results);
@@ -463,10 +465,33 @@ class Shortlists extends Component {
             loaderElems.push(<div className="slice"></div>)
         }
 
+        let slots = [];
+        let currentHour = new Date().getHours();
+        let currentMin = new Date().getMinutes();
+
+        if(currentHour >= 18 && currentHour <= 23) { //beyond 6PM slots close
+           slots = [];
+           this.slotsAvailable = false;
+        } else if(currentHour == 17 && currentMin <= 30) { //5PM to 5.30
+           slots = ["Tonight 7:00PM - 8:00PM"];
+        } else if(currentHour >= 17 && currentHour < 18 && currentMin < 30) { //5.30PM to 6
+           slots = ["Tonight 7:00PM - 8:00PM"];
+        } else if(currentHour == 13 && currentMin < 30) { //1PM to 1.30PM
+           slots = ["Today 3:00PM - 4:00PM"];
+        } else if(currentHour == 17 && currentMin >= 30 && currentMin <= 59) { //1PM to 1.30PM
+           slots = ["Tonight 7:00PM - 8:00PM"];
+        } else if((currentHour == 13 && currentMin > 30) || (currentHour >= 13 && currentHour <= 17 && currentHour < 18)) { //1.30PM to 5.30PM
+           slots = ["Tonight 6:00PM - 7:00PM", "Tonight 7:00PM - 8:00PM"];
+        } else if(currentHour == 13 && currentMin < 30) { //1PM to 1.30PM
+           slots = ["Today 3:00PM - 4:00PM"];
+        } else if(currentHour < 13 && currentMin >= 0) { //8AM to 1.30PM
+           slots = ["Today 2:00PM - 3:00PM", "Today 3:00PM - 4:00PM"];
+        }
+
+
         return (<div>
                     <img className="icon-back" src="../../../img/images/ic_back.png" onClick={()=>{history.back(-1);}} />
                     <img id="logo" className="logo-img" src="../img/images/logohp4.png" />
-                    <div class="announcement">  Due to ongoing COVID-19 crisis, we're only able to deliver on weekends on non-curfew days.</div>
                     <div id="checkoutHeader">
                         <div id="checkoutBtn" className="card-btn checkout" onClick={()=>{document.getElementById('checkoutModal').style.top='-20px';this.setState({orderSummary: localStorage.getItem('basket') != null ? JSON.parse(localStorage.getItem('basket')) : []});document.getElementById('logo').style.top='21px';}}>Checkout&nbsp;→
                             <div className=""></div>
@@ -584,12 +609,12 @@ class Shortlists extends Component {
                                                   <div className="slot">
                                                     <label for="slots">Available slots:</label>
                                                     <select name="slots" id="slots" onChange={()=>{this.selectSlot()}}>
-                                                      <option value="Saturday, 1:30PM - 2.30PM">Saturday, 2:30PM - 3.30PM</option>
-                                                      <option value="Saturday, 2:30PM - 3.30PM">Saturday, 2:30PM - 3.30PM</option>
-                                                      <option value="Saturday, 3:30PM - 4.30PM">Saturday, 3:30PM - 4.30PM</option>
-                                                      <option value="Saturday, 4:30PM - 5.30PM">Saturday, 4:30PM - 5.30PM</option>
+                                                      {
+                                                        slots && slots.map((slot) => {
+                                                            return (<option value={slot}>{slot}</option>)
+                                                        })
+                                                      }
                                                     </select>
-                                                    <span className="title-ff">*Due to ongoing COVID-19 crisis, we're only able to deliver on weekends on non-curfew days.</span>
                                                   </div>
                                               </div>
                                           </div>
