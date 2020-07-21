@@ -469,9 +469,6 @@ class Shortlists extends Component {
         let currentHour = new Date().getHours();
         let currentMin = new Date().getMinutes();
 
-        alert(currentHour);
-        alert(currentMin);
-
         if(currentHour >= 18 && currentHour <= 23) { //beyond 6PM slots close
            slots = [];
            this.slotsAvailable = false;
