@@ -221,7 +221,7 @@ class Card extends Component {
             <div className="section-two">
                 <div className="pricing"><label className="price"><span className="rupee">₹</span><span id={`price${index}`}>{data.qna[0].defaultPrice}</span></label></div>
                 <div className="top">
-                    <ReviewContainer reviewTopics={data.qna[0].responses} crustOptions={data.qna[0].crust} itemId={index} item={data} type={this.props.type} />
+                    <ReviewContainer reviewTopics={data.qna[0].responses} crustOptions={data.qna[0].crust} itemId={`${prefix}${index}`} item={data} type={this.props.type} />
                 </div>
             </div>
         </div>)
@@ -244,9 +244,9 @@ class SummaryCard extends Component {
     }
 
     render() {
-        let {index, data} = this.props;
+        let {index, data, summaryId} = this.props;
         let prefix = 'p';
-        if(data.type == 'starter') {
+        if(data.type && data.type == 'starter') {
             prefix = 'g';
         }
         return (
@@ -254,7 +254,7 @@ class SummaryCard extends Component {
             <div className="section-one">
                 <div className="top">
                     <div className="top-left">
-                        <img id={`primaryImg${index}`} className="primary-img rotatable" src={`../../../img/images/${prefix}${data.itemId+1}.png`} style={{width: '72px',paddingTop: '0px'}} />
+                            <img id={`primaryImg${index}`} className="primary-img rotatable" src={`../../../img/images/${prefix}${summaryId}.png`} style={{width: '72px',paddingTop: '0px'}} />
                     </div>
                     <div className="top-right">
                         <div className="usp-title"><div className="title">{data.name}</div></div>
@@ -292,18 +292,13 @@ class Shortlists extends Component {
     }
     componentDidMount() {
         this.fetchJson();
-        localStorage.removeItem("basket");
         var winHeight = window.innerHeight;
 
         window.addEventListener("scroll",function () {
             if(window.scrollY <= 120) {
                 document.querySelector("#checkoutHeader").style.top = "0px";
-                document.querySelector("#logo").style.top = "91px";
-                document.querySelector('.announcement').style.display = 'block';
             } else {
-                document.querySelector("#checkoutHeader").style.top = (window.scrollY-65)+"px";
-                document.querySelector("#logo").style.top = "21px";
-                document.querySelector('.announcement').style.display = 'none';
+                document.querySelector("#checkoutHeader").style.top = (window.scrollY-2)+"px";
             }
         });
 
@@ -493,7 +488,7 @@ class Shortlists extends Component {
                     <img className="icon-back" src="../../../img/images/ic_back.png" onClick={()=>{history.back(-1);}} />
                     <img id="logo" className="logo-img" src="../img/images/logohp4.png" />
                     <div id="checkoutHeader">
-                        <div id="checkoutBtn" className="card-btn checkout" onClick={()=>{document.getElementById('checkoutModal').style.top='-20px';this.setState({orderSummary: localStorage.getItem('basket') != null ? JSON.parse(localStorage.getItem('basket')) : []});document.getElementById('logo').style.top='21px';}}>Checkout&nbsp;→
+                        <div id="checkoutBtn" className="card-btn checkout" onClick={()=>{document.getElementById('checkoutModal').style.top='-20px';this.setState({orderSummary: localStorage.getItem('basket') != null ? JSON.parse(localStorage.getItem('basket')) : []});}}>Checkout&nbsp;→
                             <div className=""></div>
                             <div id="checkoutCount" class="c-count">0</div>
                         </div>
@@ -509,7 +504,7 @@ class Shortlists extends Component {
                         <hr className="line-tasks"/>
                         <div id="checkoutModal" className="card-container checkout-modal modal-show">
                             <div className="modal-heading">
-                                <div className="right" onClick={()=>{document.getElementById('checkoutModal').style.top='1200px';this.setState({activeStep: 1, showCoupon: false, showSlot: false, couponApplied: false});document.getElementById('logo').style.top='91px';}}>
+                                <div className="right" onClick={()=>{document.getElementById('checkoutModal').style.top='1200px';this.setState({activeStep: 1, showCoupon: false, showSlot: false, couponApplied: false});}}>
                                     <img src="../../../img/images/ic_close.png" />
                                 </div>
                             </div>
@@ -534,10 +529,13 @@ class Shortlists extends Component {
                                 </div>
                               </div>
                               {this.state.activeStep == 1 &&
-                              <div className="checkout-content">
+                              <div className="checkout-content" style={{height: 'calc(100% - 350px)', overflowY: 'scroll'}}>
                                 {orderSummary && Object.keys(orderSummary).map((index) => {
                                     if(typeof index !== 'undefined') {
-                                        return (<SummaryCard index={index} data={orderSummary[index]} />);
+                                        let sumId = index;
+                                        sumId = sumId.replace('p','').replace('g','');
+                                        sumId = parseInt(sumId, 10);
+                                        return (<SummaryCard index={index} data={orderSummary[index]} summaryId={sumId+1} />);
                                     }
                                 })}
                                 <div className="summary-total">Total:  <span className="rupee">₹</span><span id="price">{this.getTotal()}</span>
@@ -661,7 +659,6 @@ class Shortlists extends Component {
                             indicatorColor="primary"
                             textColor="primary"
                             centered
-                            style={{marginTop: '20px    '}}
                           >
                             <Tab icon={<LocalPizzaIcon />} label="&nbsp;&nbsp;&nbsp;Pizzas&nbsp;&nbsp;&nbsp;" />
                             <Tab icon={<RestaurantIcon />} label="&nbsp;&nbsp;&nbsp;Starters&nbsp;&nbsp;&nbsp;" />

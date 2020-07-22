@@ -397,7 +397,7 @@
     top: -50px;
     position: relative;
     width: 200px;
-    font-size: 16px !important;
+    font-size: 16all 0.7s ease 0spx !important;
 }
 .starter-bottom-inc {
     bottom: 114px !important;
@@ -605,6 +605,8 @@
     border-radius: 4px;
     border: 1px solid #f69454;
     background: #fff;
+    display: block;
+    margin: 0 auto;
 }
 
 .card-btn{
@@ -1125,7 +1127,7 @@ td:last-child {
     border-top: 1px solid #eee;
     width: calc(100% - 40px);
     margin: 0 auto;
-    margin-top: 81px;
+    margin-top: 21px;
 }
 
 .alert-msg {
@@ -1441,7 +1443,7 @@ td:last-child {
 .logo-img {
     display: inline-block;
     width: 132px;
-    top: 91px;
+    top: 21px;
     position: fixed;
     z-index: 9999;
     left: 20px;
@@ -1596,7 +1598,7 @@ div#containerWiz {
 }
 
 .main {
-    margin-top: 127px;
+    margin-top: 70px;
 }
 
 .main-icons {
@@ -1632,7 +1634,7 @@ div#containerWiz {
     width: 146px;
     right: 12px;
     line-height: 33px;
-    top: 77px;
+    top: 10px;
     position: absolute;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
@@ -3945,6 +3947,7 @@ body .pizza .slice:after {
 
 
 <script>
+    localStorage.removeItem("basket");
     function navTo(item) {
       var scrollVal = 584;
       switch(item) {
