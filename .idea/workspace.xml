@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2100fea9-fa34-466f-9140-289133e88515" name="Default Changelist" comment="">
+    <list default="true" id="2100fea9-fa34-466f-9140-289133e88515" name="Default Changelist" comment="homepage">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/guide.bundle.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/guide.bundle.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/wizard/shortlists.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/wizard/shortlists.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/shortlists.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/shortlists.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,11 +17,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/client/wizard/shortlists.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="321">
-              <caret line="608" column="86" selection-start-line="608" selection-start-column="86" selection-end-line="608" selection-end-column="86" />
+            <state relative-caret-position="533">
+              <caret line="470" column="9" selection-start-line="470" selection-start-column="9" selection-end-line="470" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/public/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="754">
+              <caret line="3548" column="30" lean-forward="true" selection-start-line="3548" selection-start-column="30" selection-end-line="3548" selection-end-column="30" />
             </state>
           </provider>
         </entry>
@@ -29,8 +38,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/shortlists.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="67133">
-              <caret line="3949" column="38" selection-start-line="3949" selection-start-column="38" selection-end-line="3949" selection-end-column="38" />
+            <state relative-caret-position="228">
+              <caret line="1879" column="28" selection-start-line="1879" selection-start-column="28" selection-end-line="1879" selection-end-column="28" />
             </state>
           </provider>
         </entry>
@@ -48,14 +57,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>prefix</find>
-      <find>Tabs</find>
-      <find>@material-ui</find>
-      <find>topic-container</find>
-      <find>incrementerClass</find>
-      <find>starter-height</find>
-      <find>12</find>
-      <find>slots</find>
       <find>due to</find>
       <find>title-ff</find>
       <find>slotsAv</find>
@@ -76,8 +77,16 @@
       <find>summaryc</find>
       <find>SummaryCard</find>
       <find>&lt;option</find>
-      <find>slotSelected</find>
       <find>selectSlot</find>
+      <find>slotSelected</find>
+      <find>currSlotSelected</find>
+      <find>window.currSlotSelected</find>
+      <find>slots</find>
+      <find>tag</find>
+      <find>A-172005024-1</find>
+      <find>.min.js</find>
+      <find>UA-1720050</find>
+      <find>17200</find>
     </findStrings>
     <replaceStrings>
       <replace>className</replace>
@@ -101,21 +110,20 @@
         <option value="$PROJECT_DIR$/public/bake.html" />
         <option value="$PROJECT_DIR$/webpack.config.js" />
         <option value="$PROJECT_DIR$/src/client/wizard/bake.jsx" />
-        <option value="$PROJECT_DIR$/public/index.html" />
         <option value="$PROJECT_DIR$/index.js" />
         <option value="$PROJECT_DIR$/src/client/wizard/guide.jsx" />
         <option value="$PROJECT_DIR$/src/data-source/interior/blr/east/mockDataQnA.json" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/src/data-source/interior/blr/east/mockDataStarter.json" />
-        <option value="$PROJECT_DIR$/public/shortlists.html" />
         <option value="$PROJECT_DIR$/src/client/wizard/shortlists.jsx" />
+        <option value="$PROJECT_DIR$/public/index.html" />
+        <option value="$PROJECT_DIR$/public/shortlists.html" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="339" />
     <option name="y" value="23" />
-    <option name="width" value="1581" />
+    <option name="width" value="1932" />
     <option name="height" value="1105" />
   </component>
   <component name="ProjectId" id="1dLiwnJoEO1OIaa9xhp8loRJQgB" />
@@ -136,56 +144,7 @@
             <path>
               <item name="epigram-web" type="b2602c69:ProjectViewProjectNode" />
               <item name="epigram-web" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="epigram-web" type="b2602c69:ProjectViewProjectNode" />
-              <item name="epigram-web" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="client" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="epigram-web" type="b2602c69:ProjectViewProjectNode" />
-              <item name="epigram-web" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="client" type="462c0819:PsiDirectoryNode" />
-              <item name="wizard" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="epigram-web" type="b2602c69:ProjectViewProjectNode" />
-              <item name="epigram-web" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="common" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="epigram-web" type="b2602c69:ProjectViewProjectNode" />
-              <item name="epigram-web" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="data-source" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="epigram-web" type="b2602c69:ProjectViewProjectNode" />
-              <item name="epigram-web" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="data-source" type="462c0819:PsiDirectoryNode" />
-              <item name="interior" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="epigram-web" type="b2602c69:ProjectViewProjectNode" />
-              <item name="epigram-web" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="data-source" type="462c0819:PsiDirectoryNode" />
-              <item name="interior" type="462c0819:PsiDirectoryNode" />
-              <item name="blr" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="epigram-web" type="b2602c69:ProjectViewProjectNode" />
-              <item name="epigram-web" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="data-source" type="462c0819:PsiDirectoryNode" />
-              <item name="interior" type="462c0819:PsiDirectoryNode" />
-              <item name="blr" type="462c0819:PsiDirectoryNode" />
-              <item name="east" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -244,20 +203,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1564376751969</updated>
-    </task>
-    <task id="LOCAL-00048" summary="homepage">
-      <created>1593615994366</created>
-      <option name="number" value="00048" />
-      <option name="presentableId" value="LOCAL-00048" />
-      <option name="project" value="LOCAL" />
-      <updated>1593615994366</updated>
-    </task>
-    <task id="LOCAL-00049" summary="homepage">
-      <created>1593616228937</created>
-      <option name="number" value="00049" />
-      <option name="presentableId" value="LOCAL-00049" />
-      <option name="project" value="LOCAL" />
-      <updated>1593616228937</updated>
     </task>
     <task id="LOCAL-00050" summary="homepage">
       <created>1593639417184</created>
@@ -588,7 +533,21 @@
       <option name="project" value="LOCAL" />
       <updated>1595408035947</updated>
     </task>
-    <option name="localTasksCounter" value="97" />
+    <task id="LOCAL-00097" summary="homepage">
+      <created>1595479372230</created>
+      <option name="number" value="00097" />
+      <option name="presentableId" value="LOCAL-00097" />
+      <option name="project" value="LOCAL" />
+      <updated>1595479372231</updated>
+    </task>
+    <task id="LOCAL-00098" summary="homepage">
+      <created>1595479691729</created>
+      <option name="number" value="00098" />
+      <option name="presentableId" value="LOCAL-00098" />
+      <option name="project" value="LOCAL" />
+      <updated>1595479691729</updated>
+    </task>
+    <option name="localTasksCounter" value="99" />
     <servers />
   </component>
   <component name="TodoView">
@@ -604,7 +563,7 @@
     <frame x="0" y="23" width="1920" height="1108" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2683706" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25292864" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
@@ -777,13 +736,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="52632">
-          <caret line="3096" column="16" selection-start-line="3096" selection-start-column="16" selection-end-line="3096" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
@@ -793,15 +745,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/client/wizard/shortlists.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="321">
-          <caret line="608" column="86" selection-start-line="608" selection-start-column="86" selection-end-line="608" selection-end-column="86" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/shortlists.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="67133">
-          <caret line="3949" column="38" selection-start-line="3949" selection-start-column="38" selection-end-line="3949" selection-end-column="38" />
+        <state relative-caret-position="533">
+          <caret line="470" column="9" selection-start-line="470" selection-start-column="9" selection-end-line="470" selection-end-column="9" />
         </state>
       </provider>
     </entry>
@@ -809,6 +754,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1428">
           <caret line="84" column="48" selection-start-line="84" selection-start-column="48" selection-end-line="84" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/shortlists.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="1879" column="28" selection-start-line="1879" selection-start-column="28" selection-end-line="1879" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="754">
+          <caret line="3548" column="30" lean-forward="true" selection-start-line="3548" selection-start-column="30" selection-end-line="3548" selection-end-column="30" />
         </state>
       </provider>
     </entry>
