@@ -288,6 +288,7 @@ class Shortlists extends Component {
             slotSelected: '',
             orderSummary: localStorage.getItem('basket') != null ? JSON.parse(localStorage.getItem('basket')) : []
         };
+        window.currSlotSelected = '';
         this.handleTabChange = this.handleTabChange.bind(this);
     }
     componentDidMount() {
@@ -382,7 +383,7 @@ class Shortlists extends Component {
     selectSlot() {
         var e = document.getElementById("slots");
         var slot = e.options[e.selectedIndex].value;
-        this.setState({slotSelected: slot});
+        window.currSlotSelected = slot;
     }
     captureAddress() {
         let pincode = document.getElementById('dPincode').value;
@@ -432,7 +433,7 @@ class Shortlists extends Component {
         var url = '/paymentRequest';
         var orderId = 0;
         orderId = localStorage.getItem('orderId') != null ? localStorage.getItem('orderId') : orderId;
-        var params = 'amount='+localStorage.getItem('dPrice')+'&phone='+localStorage.getItem('dMobile')+'&name='+localStorage.getItem('dName')+'&orderId='+orderId+'&slot='+this.state.slotSelected;
+        var params = 'amount='+localStorage.getItem('dPrice')+'&phone='+localStorage.getItem('dMobile')+'&name='+localStorage.getItem('dName')+'&orderId='+orderId+'&slot='+window.currSlotSelected;
         http.open('POST', url, true);
         http.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
 
@@ -481,6 +482,10 @@ class Shortlists extends Component {
            slots = ["Today 3:00PM - 4:00PM"];
         } else if(currentHour < 13 && currentMin >= 0) { //8AM to 1.30PM
            slots = ["Today 2:00PM - 3:00PM", "Today 3:00PM - 4:00PM"];
+        }
+
+        if(slots.length > 0) {
+            window.currSlotSelected = slots[0];
         }
 
 
