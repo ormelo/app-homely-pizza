@@ -465,12 +465,12 @@ class Shortlists extends Component {
         let currentHour = new Date().getHours();
         let currentMin = new Date().getMinutes();
 
-        if(currentHour >= 18 && currentHour <= 23) { //beyond 6PM slots close
+        if(currentHour >= 19 && currentHour <= 23) { //beyond 6PM slots close
            slots = [];
            this.slotsAvailable = false;
         } else if(currentHour == 17 && currentMin <= 30) { //5PM to 5.30
            slots = ["Tonight 7:00PM - 8:00PM"];
-        } else if(currentHour >= 17 && currentHour < 18 && currentMin < 30) { //5.30PM to 6
+        } else if(currentHour >= 17 && currentHour < 19 && currentMin < 30) { //5.30PM to 6
            slots = ["Tonight 7:00PM - 8:00PM"];
         } else if(currentHour == 13 && currentMin < 30) { //1PM to 1.30PM
            slots = ["Today 3:00PM - 4:00PM"];
