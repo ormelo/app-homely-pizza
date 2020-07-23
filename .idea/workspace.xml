@@ -20,8 +20,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/client/wizard/shortlists.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="320">
-              <caret line="558" column="130" selection-start-line="558" selection-start-column="130" selection-end-line="558" selection-end-column="130" />
+            <state relative-caret-position="268">
+              <caret line="386" column="52" selection-start-line="386" selection-start-column="52" selection-end-line="386" selection-end-column="52" />
             </state>
           </provider>
         </entry>
@@ -38,8 +38,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="56678">
-              <caret line="3334" column="5" selection-start-line="3334" selection-start-column="5" selection-end-line="3334" selection-end-column="5" />
+            <state relative-caret-position="346">
+              <caret line="3381" selection-start-line="3381" selection-end-line="3395" selection-end-column="13" />
+              <folding>
+                <element signature="n#style#0;n#img#0;n#noscript#0;n#head#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -47,8 +50,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/client/wizard/guide.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="218">
-              <caret line="256" column="30" selection-start-line="256" selection-start-column="30" selection-end-line="256" selection-end-column="30" />
+            <state relative-caret-position="252">
+              <caret line="263" column="34" selection-start-line="263" selection-start-column="34" selection-end-line="263" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -56,8 +59,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/shortlists.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="66147">
-              <caret line="3891" selection-start-line="3891" selection-end-line="3901" selection-end-column="9" />
+            <state relative-caret-position="567">
+              <caret line="3916" column="17" selection-start-line="3916" selection-start-column="17" selection-end-line="3916" selection-end-column="17" />
+              <folding>
+                <element signature="n#style#0;n#img#0;n#noscript#0;n#head#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -75,8 +81,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>marginTop: '20px</find>
-      <find>checkout</find>
       <find>basket-up</find>
       <find>localStorage.</find>
       <find>77px</find>
@@ -105,6 +109,8 @@
       <find>&lt;/head</find>
       <find>craving</find>
       <find>coupon</find>
+      <find>warm</find>
+      <find>&lt;/sc</find>
     </findStrings>
     <replaceStrings>
       <replace>className</replace>
@@ -132,9 +138,9 @@
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/src/data-source/interior/blr/east/mockDataStarter.json" />
         <option value="$PROJECT_DIR$/index.js" />
+        <option value="$PROJECT_DIR$/src/client/wizard/guide.jsx" />
         <option value="$PROJECT_DIR$/public/index.html" />
         <option value="$PROJECT_DIR$/public/shortlists.html" />
-        <option value="$PROJECT_DIR$/src/client/wizard/guide.jsx" />
         <option value="$PROJECT_DIR$/src/client/wizard/shortlists.jsx" />
       </list>
     </option>
@@ -227,20 +233,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1564376751969</updated>
-    </task>
-    <task id="LOCAL-00058" summary="homepage">
-      <created>1594196702997</created>
-      <option name="number" value="00058" />
-      <option name="presentableId" value="LOCAL-00058" />
-      <option name="project" value="LOCAL" />
-      <updated>1594196702997</updated>
-    </task>
-    <task id="LOCAL-00059" summary="homepage">
-      <created>1594209197532</created>
-      <option name="number" value="00059" />
-      <option name="presentableId" value="LOCAL-00059" />
-      <option name="project" value="LOCAL" />
-      <updated>1594209197532</updated>
     </task>
     <task id="LOCAL-00060" summary="homepage">
       <created>1594220834332</created>
@@ -571,7 +563,21 @@
       <option name="project" value="LOCAL" />
       <updated>1595506707525</updated>
     </task>
-    <option name="localTasksCounter" value="107" />
+    <task id="LOCAL-00107" summary="homepage">
+      <created>1595509191478</created>
+      <option name="number" value="00107" />
+      <option name="presentableId" value="LOCAL-00107" />
+      <option name="project" value="LOCAL" />
+      <updated>1595509191478</updated>
+    </task>
+    <task id="LOCAL-00108" summary="homepage">
+      <created>1595512719156</created>
+      <option name="number" value="00108" />
+      <option name="presentableId" value="LOCAL-00108" />
+      <option name="project" value="LOCAL" />
+      <updated>1595512719156</updated>
+    </task>
+    <option name="localTasksCounter" value="109" />
     <servers />
   </component>
   <component name="TodoView">
@@ -760,20 +766,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="56678">
-          <caret line="3334" column="5" selection-start-line="3334" selection-start-column="5" selection-end-line="3334" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/shortlists.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66147">
-          <caret line="3891" selection-start-line="3891" selection-end-line="3901" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/data-source/interior/blr/east/mockDataStarter.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1428">
@@ -783,15 +775,35 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/client/wizard/guide.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="218">
-          <caret line="256" column="30" selection-start-line="256" selection-start-column="30" selection-end-line="256" selection-end-column="30" />
+        <state relative-caret-position="252">
+          <caret line="263" column="34" selection-start-line="263" selection-start-column="34" selection-end-line="263" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="346">
+          <caret line="3381" selection-start-line="3381" selection-end-line="3395" selection-end-column="13" />
+          <folding>
+            <element signature="n#style#0;n#img#0;n#noscript#0;n#head#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/shortlists.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="567">
+          <caret line="3916" column="17" selection-start-line="3916" selection-start-column="17" selection-end-line="3916" selection-end-column="17" />
+          <folding>
+            <element signature="n#style#0;n#img#0;n#noscript#0;n#head#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/client/wizard/shortlists.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="558" column="130" selection-start-line="558" selection-start-column="130" selection-end-line="558" selection-end-column="130" />
+        <state relative-caret-position="268">
+          <caret line="386" column="52" selection-start-line="386" selection-start-column="52" selection-end-line="386" selection-end-column="52" />
         </state>
       </provider>
     </entry>
