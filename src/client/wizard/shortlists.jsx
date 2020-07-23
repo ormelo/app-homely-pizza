@@ -556,7 +556,7 @@ class Shortlists extends Component {
                                         <div className="section-one">
                                             <div className="top-right">
                                                 <div className="usp-title" style={{left: '0',right: '0',margin: '0 auto'}}>
-                                                    <span className="title-ff" style={{top:'7px'}}>Do you have a coupon code?</span>
+                                                    <span className="title-ff" style={{top:'7px'}}>Use slice20 as the coupon code:</span>
                                                     <input id="dCoupon" type="text" className="step-input" placeholder="Enter coupon code" style={{marginTop: '10px'}}/>
                                                      <div id="applyCouponBtn" className="card-btn coupon-btn" style={{marginTop: '20px'}} onClick={()=>{this.applyCoupon()}}>Apply
                                                         <div className=""></div>
