@@ -47,8 +47,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/client/wizard/guide.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="320">
-              <caret line="342" column="76" selection-start-line="342" selection-start-column="76" selection-end-line="342" selection-end-column="76" />
+            <state relative-caret-position="857">
+              <caret line="262" column="76" selection-start-line="262" selection-start-column="76" selection-end-line="262" selection-end-column="76" />
             </state>
           </provider>
         </entry>
@@ -227,20 +227,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1564376751969</updated>
-    </task>
-    <task id="LOCAL-00053" summary="homepage">
-      <created>1594125548852</created>
-      <option name="number" value="00053" />
-      <option name="presentableId" value="LOCAL-00053" />
-      <option name="project" value="LOCAL" />
-      <updated>1594125548852</updated>
-    </task>
-    <task id="LOCAL-00054" summary="homepage">
-      <created>1594127294577</created>
-      <option name="number" value="00054" />
-      <option name="presentableId" value="LOCAL-00054" />
-      <option name="project" value="LOCAL" />
-      <updated>1594127294577</updated>
     </task>
     <task id="LOCAL-00055" summary="homepage">
       <created>1594127698691</created>
@@ -571,7 +557,21 @@
       <option name="project" value="LOCAL" />
       <updated>1595504344779</updated>
     </task>
-    <option name="localTasksCounter" value="102" />
+    <task id="LOCAL-00102" summary="homepage">
+      <created>1595505316703</created>
+      <option name="number" value="00102" />
+      <option name="presentableId" value="LOCAL-00102" />
+      <option name="project" value="LOCAL" />
+      <updated>1595505316703</updated>
+    </task>
+    <task id="LOCAL-00103" summary="homepage">
+      <created>1595505570656</created>
+      <option name="number" value="00103" />
+      <option name="presentableId" value="LOCAL-00103" />
+      <option name="project" value="LOCAL" />
+      <updated>1595505570657</updated>
+    </task>
+    <option name="localTasksCounter" value="104" />
     <servers />
   </component>
   <component name="TodoView">
@@ -790,8 +790,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/client/wizard/guide.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="342" column="76" selection-start-line="342" selection-start-column="76" selection-end-line="342" selection-end-column="76" />
+        <state relative-caret-position="857">
+          <caret line="262" column="76" selection-start-line="262" selection-start-column="76" selection-end-line="262" selection-end-column="76" />
         </state>
       </provider>
     </entry>

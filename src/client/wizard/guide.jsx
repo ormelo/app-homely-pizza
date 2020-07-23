@@ -260,7 +260,7 @@ class Guide extends React.Component {
 
                         <div className="info" style={{marginTop: '70px'}}>
                             <div className="overview" style={{marginTop: '30px'}} id="overviewMain">
-                                Introducing fresh & hot warmable pizzas
+                                Introducing fresh & hot warmable thick crust pizzas
                             </div>
                         </div>
                         <div className="info" style={{marginTop: '10px',minHeight:'300px'}}>
