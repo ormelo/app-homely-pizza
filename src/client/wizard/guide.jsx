@@ -265,7 +265,7 @@ class Guide extends React.Component {
                         </div>
                         <div className="info" style={{marginTop: '10px',minHeight:'300px'}}>
                             <div className="overview bg-text" style={{marginTop: '130px'}} id="overviewBgMain">
-                                Warmable pizza in a box, home delivered!
+                                Warmable pizza in a box, home delivered anywhere in Bangalore
                             </div>
                         </div>
                     </div>
