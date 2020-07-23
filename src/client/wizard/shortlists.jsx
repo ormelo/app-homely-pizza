@@ -285,7 +285,7 @@ class Shortlists extends Component {
             showCoupon: false,
             couponApplied: false,
             showSlot: false,
-            slotSelected: 'Saturday, 1:30PM - 2.30PM',
+            slotSelected: '',
             orderSummary: localStorage.getItem('basket') != null ? JSON.parse(localStorage.getItem('basket')) : []
         };
         this.handleTabChange = this.handleTabChange.bind(this);
