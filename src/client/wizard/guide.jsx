@@ -221,7 +221,7 @@ class Guide extends React.Component {
                 <div className="main">
                     <div>
 
-                        <div className="header">Say No to cold & dull pizzas!<br/></div>
+                        <div className="header" onClick={()=>{location.href='/order';}}>Instant warmable pizza in a box!<br/></div>
                         <div className="smoke-main">
                             <svg version='1.1' xmlns='http://www.w3.org/2000/svg'>
                               <filter id='blur'>
@@ -260,7 +260,7 @@ class Guide extends React.Component {
 
                         <div className="info" style={{marginTop: '70px'}}>
                             <div className="overview" style={{marginTop: '30px'}} id="overviewMain">
-                                Introducing fresh & hot warmable thick crust pizzas
+                                Use coupon SLICE20 for 20% OFF
                             </div>
                         </div>
                         <div className="info" style={{marginTop: '10px',minHeight:'300px'}}>
