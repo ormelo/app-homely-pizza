@@ -260,12 +260,12 @@ class Guide extends React.Component {
 
                         <div className="info" style={{marginTop: '70px'}}>
                             <div className="overview" style={{marginTop: '30px'}} id="overviewMain">
-                                What if you could bake it instantly at home?
+                                Introducing fresh & hot warmable pizzas!
                             </div>
                         </div>
                         <div className="info" style={{marginTop: '10px',minHeight:'300px'}}>
                             <div className="overview bg-text" style={{marginTop: '130px'}} id="overviewBgMain">
-                                Freshly prepped pizza in a box, delivered for instant cooking!
+                                Warmable pizza in a box, delivered in under 90 minutes!
                             </div>
                         </div>
                     </div>
@@ -323,7 +323,7 @@ class Guide extends React.Component {
                                                                               </section>
                               <section class="third-section">
                                       <div className="overview bg-text" style={{marginTop: '25px', display: 'inline-block'}} id="overviewBgMain">
-                                           What's more, your pizza is pre-assembled so it's ready for instant cooking!
+                                           What's more, your pizza is pre-assembled so it's ready for instant warming!
                                       </div>
                                       <div class="images-wrapper" style={{marginTop: '460px'}}>
                                           <img class="section_3_06" src="./img/images/section_3_06.webp?raw=1" />
@@ -340,7 +340,7 @@ class Guide extends React.Component {
                                  <div className="overview bg-text" style={{marginTop: '-110px', display: 'inline-block'}} id="overviewBgMain">
                                     Simply place it in a pan in low flame.
                                     <br/><br/>
-                                    Your piping <b>HOT</b> pizza is usually ready in 8 mins!
+                                    Your super <b>HOT</b> pizza is warmed up in 5 mins!
                                  </div>
                                  <div class="images-wrapper">
                                      <img src="./img/images/protate.gif" style={{width: '250px'}}/>
