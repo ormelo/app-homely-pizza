@@ -384,7 +384,7 @@ class Shortlists extends Component {
         var e = document.getElementById("slots");
         var slot = e.options[e.selectedIndex].value;
         window.currSlotSelected = slot;
-        fbq('track', 'Purchase', {slotSelected: true});
+        fbq('track', 'InitiateCheckout');
     }
     captureAddress() {
         let pincode = document.getElementById('dPincode').value;
