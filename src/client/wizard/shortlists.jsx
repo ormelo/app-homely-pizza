@@ -384,7 +384,6 @@ class Shortlists extends Component {
         var e = document.getElementById("slots");
         var slot = e.options[e.selectedIndex].value;
         window.currSlotSelected = slot;
-        fbq('track', 'InitiateCheckout');
     }
     captureAddress() {
         let pincode = document.getElementById('dPincode').value;
@@ -428,6 +427,7 @@ class Shortlists extends Component {
             }
         }.bind(this);
         http.send(params);
+        fbq('track', 'InitiateCheckout');
     }
     makePaymentRequest() {
         var http = new XMLHttpRequest();
