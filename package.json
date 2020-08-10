@@ -3,6 +3,9 @@
   "version": "0.0.1",
   "description": "A sample Node.js app using Express 4",
   "main": "index.js",
+  "engines": {
+    "node": "8.11.3"
+  },
   "scripts": {
     "start": "node index.js",
     "watch": "webpack -d --watch",
