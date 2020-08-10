@@ -175,17 +175,17 @@ class Guide extends React.Component {
             document.querySelector('#overviewBgMain').style.display = 'none';
             document.querySelector('.scroll-arrow').style.display = 'inline';
             document.querySelector('#overviewMain').style.fontSize = '22px';
-            document.querySelector('#overviewMain').innerHTML = 'What if you could bake it instantly at home?'
+            document.querySelector('#overviewMain').innerHTML = '❤️ Loved by customers for Zero additive preparation';
             document.querySelector('#overviewMain').classList.remove('line-typed');
             document.querySelector('#overviewMain').classList.remove('anim-typewriter');
             document.querySelector('.confetti').style.opacity = '0';
         } else {
             document.querySelector('.scroll-arrow').style.display = 'none';
             document.querySelector('#overviewBgMain').style.display = 'inline-block';
-            document.querySelector('#overviewMain').classList.add('line-typed');
+            /*document.querySelector('#overviewMain').classList.add('line-typed');
             document.querySelector('#overviewMain').classList.add('anim-typewriter');
             document.querySelector('#overviewMain').style.fontSize = '26px';
-            document.querySelector('#overviewMain').innerHTML = 'Say hello to Homely!'
+            document.querySelector('#overviewMain').innerHTML = 'Say hello to Homely!'*/
             if(window.scrollY >= 500 & window.scrollY <= 700) {
                 document.querySelector('.confetti').style.opacity = '1';
             }
@@ -221,7 +221,7 @@ class Guide extends React.Component {
                 <div className="main">
                     <div>
 
-                        <div className="header" onClick={()=>{location.href='/order';}}>Instant warmable pizza in a box!<br/></div>
+                        <div className="header" onClick={()=>{location.href='/order';}}>Authentic pizzas from fresh ingredients<br/></div>
                         <div className="smoke-main">
                             <svg version='1.1' xmlns='http://www.w3.org/2000/svg'>
                               <filter id='blur'>
@@ -260,29 +260,91 @@ class Guide extends React.Component {
 
                         <div className="info" style={{marginTop: '70px'}}>
                             <div className="overview" style={{marginTop: '30px'}} id="overviewMain">
-                                Use coupon SLICE20 for 20% OFF
+                                ❤️ Loved by customers for Zero additive preparation
                             </div>
                         </div>
-                        <div className="info" style={{marginTop: '10px',minHeight:'300px'}}>
-                            <div className="overview bg-text" style={{marginTop: '130px'}} id="overviewBgMain">
-                                Warmable pizza in a box, home delivered anywhere in Bangalore
-                            </div>
+                        <div className="info" style={{marginTop: '80px',minHeight:'400px'}}>
+                             <section className="slider" style={{paddingTop: '20px'}}>
+
+                                                      <input type="radio" name="slider" id="slide-1" className="slider__radio" />
+                                                      <input type="radio" name="slider" id="slide-2" className="slider__radio" />
+                                                      <input
+                                                        type="radio"
+                                                        name="slider"
+                                                        id="slide-3"
+                                                        className="slider__radio"
+                                                        checked
+                                                      />
+
+                                                      <div className="slider__holder">
+
+                                                        <label for="slide-1" className="slider__item slider__item--1 card">
+                                                          <div className="slider__item-content">
+                                                            <img src="./img/images/t1.png" className="testim"/>
+                                                            <p className="heading-3 heading-3--light">Development</p>
+                                                            <p className="heading-3">SCSS Only slider</p>
+                                                            <p className="slider__item-text serif">
+                                                            The name itself sums up aptly...it's homely n yummilicious. we loved every bite of it.
+                                                            I had ordered for pineapple mist with thin crust, large, Bell pepper blast, thick crust and cheesy garlic . It was tasty.l would definitely recommend this to all my near and dear ones,,😊😊
+
+                                                             </p>
+                                                            <a
+                                                              className="heading-3 link"
+                                                              href="https://www.facebook.com/homely.pizza/reviews/?ref=page_internal"
+                                                              >via Facebook Reviews</a
+                                                            >
+                                                          </div>
+                                                        </label>
+
+                                                        <label for="slide-2" className="slider__item slider__item--2 card">
+                                                          <div className="slider__item-content">
+                                                            <img src="./img/images/t1.png" className="testim"/>
+                                                            <p className="slider__item-text serif">
+                                                                The name itself sums up aptly...it's homely n yummilicious. we loved every bite of it.
+                                                                I had ordered for pineapple mist with thin crust, large, Bell pepper blast, thick crust and cheesy garlic . It was tasty.l would definitely recommend this to all my near and dear ones,,😊😊
+
+                                                            </p>
+                                                            <a
+                                                              className="heading-3 link"
+                                                              href="https://www.facebook.com/homely.pizza/reviews/?ref=page_internal"
+                                                              >via Facebook Reviews</a
+                                                            >
+                                                          </div>
+                                                        </label>
+
+                                                        <label for="slide-3" className="slider__item slider__item--3 card">
+                                                          <div className="slider__item-content">
+                                                            <img src="./img/images/t2.jpg" className="testim"/>
+                                                            <p className="slider__item-text serif" style={{paddingTop: '300px'}}>
+                                                                Good quality , true to its name, homely pizza. innovative pineapple pizza.
+                                                            </p>
+                                                            <a
+                                                              className="heading-3 link"
+                                                              href="https://www.facebook.com/homely.pizza/reviews/?ref=page_internal"
+                                                              >via Facebook Reviews</a
+                                                            >
+                                                          </div>
+                                                        </label>
+
+                                                      </div>
+
+                                                      <div className="bullets">
+                                                        <label for="slide-1" className="bullets__item bullets__item--1"></label>
+                                                        <label for="slide-2" className="bullets__item bullets__item--2"></label>
+                                                        <label for="slide-3" className="bullets__item bullets__item--3"></label>
+                                                      </div>
+                                                    </section>
                         </div>
                     </div>
                 </div>
+
                 <div className="section no-padding" style={{marginTop: '-70px'}}>
                     <div className="post-heading">
                         <div className="info" style={{marginTop: '-12px'}}>
-                            <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-                            <img src="./img/images/pizzabox.png"  className="pizza-box"/>
-                            <img src="./img/images/confetti.png"  className="confetti"/>
-                            <img src="./img/images/ic_num_1.png" className="ic-num"/>
-                            <img className="curve small" src="./img/images/curve.png"/>
-                            <div className="para section leaves">
-                         </div>
+
 
                          <div className="info" style={{marginTop: '40px',minHeight:'300px'}}>
-                             <div className="overview bg-text" style={{marginTop: '425px', display: 'inline-block'}} id="overviewBgMain">
+                             <div className="overview bg-text" style={{marginTop: '1025px', display: 'inline-block'}} id="overviewBgMain">
                                  With zero preservatives, all the ingredients are freshly prepped just on receiving your order
                              </div>
                               <section className="second-section">
@@ -322,10 +384,10 @@ class Guide extends React.Component {
                                                                                   </div>
                                                                               </section>
                               <section class="third-section">
-                                      <div className="overview bg-text" style={{marginTop: '25px', display: 'inline-block'}} id="overviewBgMain">
-                                           What's more, your pizza is pre-assembled so it's ready for instant warming!
+                                      <div className="overview bg-text" style={{marginTop: '925px', display: 'inline-block', fontSize: '20px'}} id="overviewBgMain">
+                                           Thanks to our custom baking technique, our customers enjoy a hot pizza by simply warming it on a pan for 3 to 5 mins without the pizza losing any flavor!
                                       </div>
-                                      <div class="images-wrapper" style={{marginTop: '460px'}}>
+                                      <div class="images-wrapper" style={{marginTop: '560px'}}>
                                           <img class="section_3_06" src="./img/images/section_3_06.webp?raw=1" />
                                           <img class="section_3_05" src="./img/images/section_3_05.webp?raw=1" />
                                           <img class="section_3_04" src="./img/images/section_3_04.webp?raw=1" />
@@ -337,11 +399,7 @@ class Guide extends React.Component {
                          </div>
 
                          <section class="forth-section">
-                                 <div className="overview bg-text" style={{marginTop: '-110px', display: 'inline-block'}} id="overviewBgMain">
-                                    Simply place it in a pan in low flame.
-                                    <br/><br/>
-                                    Your super <b>HOT</b> pizza is warmed up in 5 mins!
-                                 </div>
+
                                  <div class="images-wrapper">
                                      <img src="./img/images/protate.gif" style={{width: '250px'}}/>
                                  </div>

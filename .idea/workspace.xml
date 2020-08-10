@@ -2,7 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2100fea9-fa34-466f-9140-289133e88515" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/public/img/images/t1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/images/t2.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/guide.bundle.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/guide.bundle.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/shortlists.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/shortlists.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/wizard/guide.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/wizard/guide.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/client/wizard/shortlists.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/wizard/shortlists.jsx" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -16,11 +22,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/client/wizard/shortlists.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="748">
-              <caret line="428" column="26" selection-start-line="428" selection-start-column="26" selection-end-line="428" selection-end-column="26" />
+            <state relative-caret-position="6749">
+              <caret line="397" column="9" selection-start-line="397" selection-start-column="9" selection-end-line="397" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -28,8 +34,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15759">
-              <caret line="927" column="22" selection-start-line="927" selection-start-column="11" selection-end-line="927" selection-end-column="22" />
+            <state relative-caret-position="15096">
+              <caret line="888" column="27" selection-start-line="888" selection-start-column="27" selection-end-line="888" selection-end-column="27" />
             </state>
           </provider>
         </entry>
@@ -37,8 +43,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="346">
-              <caret line="3381" selection-start-line="3381" selection-end-line="3395" selection-end-column="13" />
+            <state relative-caret-position="363">
+              <caret line="3665" column="20" selection-start-line="3665" selection-start-column="20" selection-end-line="3665" selection-end-column="20" />
               <folding>
                 <element signature="n#style#0;n#img#0;n#noscript#0;n#head#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -46,11 +52,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/client/wizard/guide.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="263" column="34" selection-start-line="263" selection-start-column="34" selection-end-line="263" selection-end-column="34" />
+            <state relative-caret-position="320">
+              <caret line="389" column="87" selection-start-line="389" selection-start-column="87" selection-end-line="389" selection-end-column="87" />
             </state>
           </provider>
         </entry>
@@ -58,8 +64,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/shortlists.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="567">
-              <caret line="3916" column="17" selection-start-line="3916" selection-start-column="17" selection-end-line="3916" selection-end-column="17" />
+            <state relative-caret-position="228">
+              <caret line="453" column="1" selection-start-line="453" selection-start-column="1" selection-end-line="453" selection-end-column="1" />
               <folding>
                 <element signature="n#style#0;n#img#0;n#noscript#0;n#head#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -70,8 +76,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/data-source/interior/blr/east/mockDataStarter.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1428">
-              <caret line="84" column="48" selection-start-line="84" selection-start-column="48" selection-end-line="84" selection-end-column="48" />
+            <state relative-caret-position="442">
+              <caret line="26" column="12" selection-start-line="26" selection-start-column="12" selection-end-line="26" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -80,36 +86,36 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>basket-up</find>
-      <find>localStorage.</find>
-      <find>77px</find>
-      <find>basket-updated</find>
-      <find>&lt;summ</find>
-      <find>summ</find>
-      <find>&lt;SummaryCard</find>
-      <find>summaryId</find>
-      <find>summaryc</find>
-      <find>SummaryCard</find>
-      <find>&lt;option</find>
-      <find>selectSlot</find>
-      <find>slotSelected</find>
-      <find>currSlotSelected</find>
-      <find>window.currSlotSelected</find>
-      <find>slots</find>
-      <find>tag</find>
-      <find>A-172005024-1</find>
-      <find>.min.js</find>
-      <find>UA-1720050</find>
-      <find>17200</find>
-      <find>/hom</find>
-      <find>Homely_Order</find>
-      <find>/homelyOrder</find>
-      <find>captureAddress</find>
-      <find>&lt;/head</find>
-      <find>craving</find>
-      <find>coupon</find>
-      <find>warm</find>
-      <find>&lt;/sc</find>
+      <find>withRouter</find>
+      <find>Shortlists</find>
+      <find>handleTabChange</find>
+      <find>.slashed</find>
+      <find>slashed</find>
+      <find>.orig</find>
+      <find>this.props.itemId</find>
+      <find>'price'+itemId</find>
+      <find>'priceNew'+itemId</find>
+      <find>*0.85</find>
+      <find>Card</find>
+      <find>getTotal</find>
+      <find>card</find>
+      <find>instant</find>
+      <find>what if</find>
+      <find>&lt;!--</find>
+      <find>debugger</find>
+      <find>overviewBgMain</find>
+      <find>development</find>
+      <find>slider__hol</find>
+      <find>.slider</find>
+      <find>width: 80%</find>
+      <find>additio</find>
+      <find>.png</find>
+      <find>slider__item-text</find>
+      <find>testim</find>
+      <find>heading-3</find>
+      <find>This tutorial will teach</find>
+      <find>.slider__item-text</find>
+      <find>slider__</find>
     </findStrings>
     <replaceStrings>
       <replace>className</replace>
@@ -137,14 +143,14 @@
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/src/data-source/interior/blr/east/mockDataStarter.json" />
         <option value="$PROJECT_DIR$/index.js" />
-        <option value="$PROJECT_DIR$/src/client/wizard/guide.jsx" />
-        <option value="$PROJECT_DIR$/public/index.html" />
-        <option value="$PROJECT_DIR$/public/shortlists.html" />
         <option value="$PROJECT_DIR$/src/client/wizard/shortlists.jsx" />
+        <option value="$PROJECT_DIR$/public/shortlists.html" />
+        <option value="$PROJECT_DIR$/public/index.html" />
+        <option value="$PROJECT_DIR$/src/client/wizard/guide.jsx" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="74" />
     <option name="y" value="23" />
     <option name="width" value="1846" />
@@ -156,6 +162,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -171,14 +178,32 @@
             <path>
               <item name="epigram-web" type="b2602c69:ProjectViewProjectNode" />
               <item name="epigram-web" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="img" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="epigram-web" type="b2602c69:ProjectViewProjectNode" />
+              <item name="epigram-web" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="img" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="epigram-web" type="b2602c69:ProjectViewProjectNode" />
+              <item name="epigram-web" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="epigram-web" type="b2602c69:ProjectViewProjectNode" />
+              <item name="epigram-web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="ProjectViewState">
@@ -232,13 +257,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1564376751969</updated>
-    </task>
-    <task id="LOCAL-00062" summary="homepage">
-      <created>1594277792922</created>
-      <option name="number" value="00062" />
-      <option name="presentableId" value="LOCAL-00062" />
-      <option name="project" value="LOCAL" />
-      <updated>1594277792923</updated>
     </task>
     <task id="LOCAL-00063" summary="homepage">
       <created>1594292427601</created>
@@ -576,7 +594,14 @@
       <option name="project" value="LOCAL" />
       <updated>1595513478753</updated>
     </task>
-    <option name="localTasksCounter" value="111" />
+    <task id="LOCAL-00111" summary="homepage">
+      <created>1595513631971</created>
+      <option name="number" value="00111" />
+      <option name="presentableId" value="LOCAL-00111" />
+      <option name="project" value="LOCAL" />
+      <updated>1595513631972</updated>
+    </task>
+    <option name="localTasksCounter" value="112" />
     <servers />
   </component>
   <component name="TodoView">
@@ -589,10 +614,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="74" y="23" width="1846" height="1105" extended-state="0" />
+    <frame x="0" y="23" width="1920" height="1105" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27993348" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27955273" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
@@ -758,31 +783,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/wizard/shortlists.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6749">
+          <caret line="397" column="9" selection-start-line="397" selection-start-column="9" selection-end-line="397" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15759">
-          <caret line="927" column="22" selection-start-line="927" selection-start-column="11" selection-end-line="927" selection-end-column="22" />
+        <state relative-caret-position="15096">
+          <caret line="888" column="27" selection-start-line="888" selection-start-column="27" selection-end-line="888" selection-end-column="27" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/data-source/interior/blr/east/mockDataStarter.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1428">
-          <caret line="84" column="48" selection-start-line="84" selection-start-column="48" selection-end-line="84" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/client/wizard/guide.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="263" column="34" selection-start-line="263" selection-start-column="34" selection-end-line="263" selection-end-column="34" />
+        <state relative-caret-position="442">
+          <caret line="26" column="12" selection-start-line="26" selection-start-column="12" selection-end-line="26" selection-end-column="12" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="346">
-          <caret line="3381" selection-start-line="3381" selection-end-line="3395" selection-end-column="13" />
+        <state relative-caret-position="363">
+          <caret line="3665" column="20" selection-start-line="3665" selection-start-column="20" selection-end-line="3665" selection-end-column="20" />
           <folding>
             <element signature="n#style#0;n#img#0;n#noscript#0;n#head#0;n#html#0;n#!!top" expanded="true" />
           </folding>
@@ -791,18 +816,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/shortlists.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="567">
-          <caret line="3916" column="17" selection-start-line="3916" selection-start-column="17" selection-end-line="3916" selection-end-column="17" />
+        <state relative-caret-position="228">
+          <caret line="453" column="1" selection-start-line="453" selection-start-column="1" selection-end-line="453" selection-end-column="1" />
           <folding>
             <element signature="n#style#0;n#img#0;n#noscript#0;n#head#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/client/wizard/shortlists.jsx">
+    <entry file="file://$PROJECT_DIR$/src/client/wizard/guide.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="748">
-          <caret line="428" column="26" selection-start-line="428" selection-start-column="26" selection-end-line="428" selection-end-column="26" />
+        <state relative-caret-position="320">
+          <caret line="389" column="87" selection-start-line="389" selection-start-column="87" selection-end-line="389" selection-end-column="87" />
         </state>
       </provider>
     </entry>

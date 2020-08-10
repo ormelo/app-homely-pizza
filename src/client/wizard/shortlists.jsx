@@ -59,12 +59,15 @@ class ReviewContainer extends Component {
 
     }
     setCrustPrice(crustIndex) {
+        let itemId = this.props.itemId.replace('p','').replace('g','');
         let crust = this.props.crustOptions[crustIndex].topic;
         let item = this.props.item;
         console.log('::Size::', this.props.reviewTopics[this.state.activeIndex].topic);
         console.log('::Crust::', crust);
         console.log('::Price::', this.props.reviewTopics[this.state.activeIndex]["pricing"][crust]);
-        document.getElementById('price'+this.props.itemId).innerHTML = this.props.reviewTopics[this.state.activeIndex]["pricing"][crust] * (this.state.qty > 0 ? this.state.qty : 1);
+        document.getElementById('price'+itemId).innerHTML = this.props.reviewTopics[this.state.activeIndex]["pricing"][crust] * (this.state.qty > 0 ? this.state.qty : 1);
+        let N = Math.round(this.props.reviewTopics[this.state.activeIndex]["pricing"][crust] * (this.state.qty > 0 ? this.state.qty : 1) * 0.85);
+        document.getElementById('priceNew'+itemId).innerHTML = Math.ceil(N / 10) * 10;
         if(this.state.qty > 0){
             var event = new CustomEvent('basket-updated', { detail: {type: item.type, name: item.title, crust: this.props.crustOptions[crustIndex].topic, size: this.props.reviewTopics[this.state.activeIndex].topic, qty: this.state.qty, price: this.props.reviewTopics[this.state.activeIndex]["pricing"][crust] * this.state.qty, itemId: this.props.itemId}});
             document.dispatchEvent(event);
@@ -73,10 +76,13 @@ class ReviewContainer extends Component {
     setSizePrice(activeIndex) {
         let size = this.props.reviewTopics[activeIndex].topic;
         let item = this.props.item;
+        let itemId = this.props.itemId.replace('p','').replace('g','');
         console.log('::Size::', size);
         console.log('::Crust::', this.props.crustOptions[this.state.activeCrustIndex].topic);
         console.log('::Price::', this.props.crustOptions[this.state.activeCrustIndex]["pricing"][size]);
-        document.getElementById('price'+this.props.itemId).innerHTML = this.props.crustOptions[this.state.activeCrustIndex]["pricing"][size] * (this.state.qty > 0 ? this.state.qty : 1);
+        document.getElementById('price'+itemId).innerHTML = this.props.crustOptions[this.state.activeCrustIndex]["pricing"][size] * (this.state.qty > 0 ? this.state.qty : 1);
+        let N = Math.round(this.props.crustOptions[this.state.activeCrustIndex]["pricing"][size] * (this.state.qty > 0 ? this.state.qty : 1) * 0.85);
+        document.getElementById('priceNew'+itemId).innerHTML = Math.ceil(N / 10) * 10;
         if(this.state.qty > 0){
             var event = new CustomEvent('basket-updated', { detail: {type: item.type, name: item.title, crust: this.props.crustOptions[this.state.activeCrustIndex].topic, size: this.props.reviewTopics[activeIndex].topic, qty: this.state.qty, price: this.props.crustOptions[this.state.activeCrustIndex]["pricing"][size] * this.state.qty, itemId: this.props.itemId}});
             document.dispatchEvent(event);
@@ -91,18 +97,19 @@ class ReviewContainer extends Component {
             console.log('index: ', index);
             this.setState({activeIndex: index});
             this.setOpinionArray(item.topic);
+            let itemId = this.props.itemId.replace('p','').replace('g','');
 
-            if(document.querySelector('#primaryImg'+this.props.itemId).className.indexOf('rotate') != -1) {
-                document.querySelector('#primaryImg'+this.props.itemId).classList.remove('rotate');
+            if(document.querySelector('#primaryImg'+itemId).className.indexOf('rotate') != -1) {
+                document.querySelector('#primaryImg'+itemId).classList.remove('rotate');
             } else {
-                document.querySelector('#primaryImg'+this.props.itemId).classList.add('rotate');
+                document.querySelector('#primaryImg'+itemId).classList.add('rotate');
             }
             if (index == 1) {
-                 document.querySelector('#primaryImg'+this.props.itemId).style.padding = '12px';
+                 document.querySelector('#primaryImg'+itemId).style.padding = '12px';
             } else if (index == 2) {
-                 document.querySelector('#primaryImg'+this.props.itemId).style.padding = '21px';
+                 document.querySelector('#primaryImg'+itemId).style.padding = '21px';
             } else if (index == 0) {
-                 document.querySelector('#primaryImg'+this.props.itemId).style.padding = '0px';
+                 document.querySelector('#primaryImg'+itemId).style.padding = '0px';
             }
         }
     showMore(e) {
@@ -113,7 +120,10 @@ class ReviewContainer extends Component {
     updatePrice(qty) {
         if(qty >= 1) {
             let size = this.props.reviewTopics[this.state.activeIndex].topic;
-            document.getElementById('price'+this.props.itemId).innerHTML = this.props.crustOptions[this.state.activeCrustIndex]["pricing"][size] * qty;
+            let itemId = this.props.itemId.replace('p','').replace('g','');
+            document.getElementById('price'+itemId).innerHTML = this.props.crustOptions[this.state.activeCrustIndex]["pricing"][size] * qty;
+            let N = Math.round(this.props.crustOptions[this.state.activeCrustIndex]["pricing"][size] * qty * 0.85);
+            document.getElementById('priceNew'+itemId).innerHTML = Math.ceil(N / 10) * 10;
         }
     }
     getPrice(qty) {
@@ -219,7 +229,7 @@ class Card extends Component {
             <div className="title">{data.title}</div>
             <hr className="line"/>
             <div className="section-two">
-                <div className="pricing"><label className="price"><span className="rupee">₹</span><span id={`price${index}`}>{data.qna[0].defaultPrice}</span></label></div>
+                <div className="pricing"><label className="price"><span className="slashed" id={`price${index}`}>{data.qna[0].defaultPrice}</span><span className="rupee" style={{marginLeft: '6px'}}>₹</span><span className="orig" id={`priceNew${index}`}>{Math.ceil(Math.round(data.qna[0].defaultPrice*0.85) / 10) * 10}</span></label></div>
                 <div className="top">
                     <ReviewContainer reviewTopics={data.qna[0].responses} crustOptions={data.qna[0].crust} itemId={`${prefix}${index}`} item={data} type={this.props.type} />
                 </div>
@@ -264,7 +274,7 @@ class SummaryCard extends Component {
             </div>
 
             <div className="section-two small">
-                <div className="pricing"><label className="price"><span className="rupee">₹</span><span id={`price${index}`}>{data.price}</span></label></div>
+                <div className="pricing"><label className="price"><span className="slashed" id={`price${index}`}>{data.price}</span><span className="rupee" style={{marginLeft: '6px'}}>₹</span><span className="orig" id={`priceNew${index}`}>{Math.ceil(Math.round(data.price*0.85) / 10) * 10}</span></label></div>
                 <div className="top">
                 </div>
             </div>
@@ -359,9 +369,11 @@ class Shortlists extends Component {
         let total = 0;
         orderSummary && Object.keys(orderSummary).map((index) => {
             if(typeof index !== 'undefined') {
-                total += orderSummary[index].price;
+                //total += orderSummary[index].price;
+                total += Math.ceil(Math.round(orderSummary[index].price*0.85) / 10) * 10
             }
         });
+
         total = total + (0.04*total) + 75;
         if(!this.state.couponApplied) {
             localStorage.setItem('dPrice', Math.round(total));
@@ -544,10 +556,10 @@ class Shortlists extends Component {
                                         return (<SummaryCard index={index} data={orderSummary[index]} summaryId={sumId+1} />);
                                     }
                                 })}
-                                <div className="summary-total">Total:  <span className="rupee">₹</span><span id="price">{this.getTotal()}</span>
+                                <div className="summary-total">Total:  <span className="rupee">₹</span><span id="price">{Math.round(this.getTotal())}</span>
                                     <div style={{fontSize: '14px', marginTop: '5px', marginLeft: '2px'}}>(incl GST + delivery charges)</div>
                                 </div>
-                                <div id="checkoutBtn" className="card-btn checkout" style={{bottom: '60px', marginTop: 'auto'}} onClick={()=>{document.getElementById('step1').classList.add('done');this.setState({showCoupon: true, activeStep: 0});}}>Next&nbsp;→
+                                <div id="checkoutBtn" className="card-btn checkout" style={{bottom: '60px', marginTop: 'auto'}} onClick={()=>{document.getElementById('step1').classList.add('done');this.setState({showCoupon: false, activeStep: 2});document.getElementById('step2Circle').classList.add('active');}}>Next&nbsp;→
                                     <div className=""></div>
                                 </div>
                               </div>}
