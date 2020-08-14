@@ -478,24 +478,7 @@ class Shortlists extends Component {
         let currentHour = new Date().getHours();
         let currentMin = new Date().getMinutes();
 
-        if(currentHour >= 19 && currentHour <= 23) { //beyond 6PM slots close
-           slots = [];
-           this.slotsAvailable = false;
-        } else if(currentHour == 17 && currentMin <= 30) { //5PM to 5.30
-           slots = ["Tonight 7:00PM - 8:00PM"];
-        } else if(currentHour >= 17 && currentHour < 19 && currentMin < 30) { //5.30PM to 6
-           slots = ["Tonight 7:00PM - 8:00PM"];
-        } else if(currentHour == 13 && currentMin < 30) { //1PM to 1.30PM
-           slots = ["Today 3:00PM - 4:00PM"];
-        } else if(currentHour == 17 && currentMin >= 30 && currentMin <= 59) { //1PM to 1.30PM
-           slots = ["Tonight 7:00PM - 8:00PM"];
-        } else if((currentHour == 13 && currentMin > 30) || (currentHour >= 13 && currentHour <= 17 && currentHour < 18)) { //1.30PM to 5.30PM
-           slots = ["Tonight 6:00PM - 7:00PM", "Tonight 7:00PM - 8:00PM"];
-        } else if(currentHour == 13 && currentMin < 30) { //1PM to 1.30PM
-           slots = ["Today 3:00PM - 4:00PM"];
-        } else if(currentHour < 13 && currentMin >= 0) { //8AM to 1.30PM
-           slots = ["Today 2:00PM - 3:00PM", "Today 3:00PM - 4:00PM"];
-        }
+        slots = ["Friday 7:00PM - 8:00PM", "Friday 8:00PM - 9:00PM", "------------------------------" ,"Saturday 11:00AM - 12:00PM", "Saturday 12:00PM - 1:00PM", "Saturday 1:00PM - 2:00PM", "Saturday 2:00PM - 3:00PM", "Saturday 3:00AM - 4:00PM","Saturday 6:00PM - 7:00PM", "Saturday 7:00PM - 8:00PM", "Saturday 8:00PM - 9:00PM", "------------------------------", "Sunday 11:00AM - 12:00PM", "Sunday 12:00PM - 1:00PM", "Sunday 1:00PM - 2:00PM", "Sunday 2:00PM - 3:00PM", "Sunday 3:00AM - 4:00PM","Sunday 6:00PM - 7:00PM", "Sunday 7:00PM - 8:00PM", "Sunday 8:00PM - 9:00PM"];
 
         if(slots.length > 0) {
             window.currSlotSelected = slots[0];
