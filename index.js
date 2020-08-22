@@ -854,6 +854,11 @@ app.get('/franchise', function(request, response) {
  response.sendFile(path.resolve(__dirname, 'public', 'startYourOwn.html'));
 });
 
+app.get('/privacy-policy', function(request, response) {
+ //response.send(pages.startYourOwn);
+ response.sendFile(path.resolve(__dirname, 'public', 'privacy.html'));
+});
+
 app.get('/getIngredients', function(request, response) {
  var uid = request.query.u;
  console.log('--user id--', uid);
