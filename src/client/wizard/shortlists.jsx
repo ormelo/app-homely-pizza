@@ -301,10 +301,13 @@ class Shortlists extends Component {
         window.currSlotSelected = '';
         this.handleTabChange = this.handleTabChange.bind(this);
     }
-
     componentDidMount() {
         this.fetchJson();
         var winHeight = window.innerHeight;
+
+        if(isValidCoupon()) {
+            document.getElementById('discountModal').style.top = '1200px';
+        }
 
         window.addEventListener("scroll",function () {
             if(window.scrollY <= 120) {
@@ -510,6 +513,25 @@ class Shortlists extends Component {
                     <div><i className="loading" id="myTasksLoader" style={{top: '28px'}}></i></div>
                     <div className="main fadeInBottom">
                         <hr className="line-tasks"/>
+                        <div id="discountModal" className="card-container checkout-modal modal-show" style={{top:'74px'}}>
+                            <div className="modal-heading">
+                                <div className="left">
+                                    Coupon Code
+                                </div>
+                                <div className="right" onClick={()=>{document.getElementById('discountModal').style.top='1200px';}}>
+                                    <img src="../../../img/images/ic_close.png" />
+                                </div>
+                                <div className="checkout-content" style={{height: 'calc(100% - 350px)', marginTop:'30px'}}>
+                                    <div class="title">
+                                        <div>Have a coupon code?</div>
+                                        <input id="discountCodeText" type="text" className="step-input" placeholder="Enter coupon code" style={{marginTop: '100px',color: '#000', height: '38px'}}/>
+                                        <div id="applyDiscountBtn" className="card-btn coupon-btn" onClick={()=>{localStorage.setItem('discountCode',document.getElementById('discountCodeText').value);location.reload();}}>Apply
+                                            <div className=""></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         <div id="checkoutModal" className="card-container checkout-modal modal-show">
                             <div className="modal-heading">
                                 <div className="right" onClick={()=>{document.getElementById('checkoutModal').style.top='1200px';this.setState({activeStep: 1, showCoupon: false, showSlot: false, couponApplied: false});}}>
