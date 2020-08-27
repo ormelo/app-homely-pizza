@@ -47,10 +47,6 @@ class ReviewContainer extends Component {
     }
     componentDidMount() {
     }
-    isValidCoupon() {
-       return  localStorage.getItem('discountCode') != null
-        && (localStorage.getItem('discountCode').toUpperCase() == 'RAGEN15' || localStorage.getItem('discountCode').toUpperCase() == 'AMRIT15')
-    }
     setOpinionArray(topicName) {
         let reviewTopics = this.props.reviewTopics;
         let activeOpinions = [];
@@ -71,7 +67,7 @@ class ReviewContainer extends Component {
         console.log('::Price::', this.props.reviewTopics[this.state.activeIndex]["pricing"][crust]);
         document.getElementById('price'+itemId).innerHTML = this.props.reviewTopics[this.state.activeIndex]["pricing"][crust] * (this.state.qty > 0 ? this.state.qty : 1);
         let N = Math.round(this.props.reviewTopics[this.state.activeIndex]["pricing"][crust] * (this.state.qty > 0 ? this.state.qty : 1) * 0.85);
-        document.getElementById('priceNew'+itemId).innerHTML = this.isValidCoupon() ? Math.ceil(N / 10) * 10 : Math.round(this.props.reviewTopics[this.state.activeIndex]["pricing"][crust] * (this.state.qty > 0 ? this.state.qty : 1));
+        document.getElementById('priceNew'+itemId).innerHTML = isValidCoupon() ? Math.ceil(N / 10) * 10 : Math.round(this.props.reviewTopics[this.state.activeIndex]["pricing"][crust] * (this.state.qty > 0 ? this.state.qty : 1));
         if(this.state.qty > 0){
             var event = new CustomEvent('basket-updated', { detail: {type: item.type, name: item.title, crust: this.props.crustOptions[crustIndex].topic, size: this.props.reviewTopics[this.state.activeIndex].topic, qty: this.state.qty, price: this.props.reviewTopics[this.state.activeIndex]["pricing"][crust] * this.state.qty, itemId: this.props.itemId}});
             document.dispatchEvent(event);
@@ -86,7 +82,7 @@ class ReviewContainer extends Component {
         console.log('::Price::', this.props.crustOptions[this.state.activeCrustIndex]["pricing"][size]);
         document.getElementById('price'+itemId).innerHTML = this.props.crustOptions[this.state.activeCrustIndex]["pricing"][size] * (this.state.qty > 0 ? this.state.qty : 1);
         let N = Math.round(this.props.crustOptions[this.state.activeCrustIndex]["pricing"][size] * (this.state.qty > 0 ? this.state.qty : 1) * 0.85);
-        document.getElementById('priceNew'+itemId).innerHTML = this.isValidCoupon() ? Math.ceil(N / 10) * 10 : Math.round(this.props.crustOptions[this.state.activeCrustIndex]["pricing"][size] * (this.state.qty > 0 ? this.state.qty : 1));
+        document.getElementById('priceNew'+itemId).innerHTML = isValidCoupon() ? Math.ceil(N / 10) * 10 : Math.round(this.props.crustOptions[this.state.activeCrustIndex]["pricing"][size] * (this.state.qty > 0 ? this.state.qty : 1));
         if(this.state.qty > 0){
             var event = new CustomEvent('basket-updated', { detail: {type: item.type, name: item.title, crust: this.props.crustOptions[this.state.activeCrustIndex].topic, size: this.props.reviewTopics[activeIndex].topic, qty: this.state.qty, price: this.props.crustOptions[this.state.activeCrustIndex]["pricing"][size] * this.state.qty, itemId: this.props.itemId}});
             document.dispatchEvent(event);
@@ -127,7 +123,7 @@ class ReviewContainer extends Component {
             let itemId = this.props.itemId.replace('p','').replace('g','');
             document.getElementById('price'+itemId).innerHTML = this.props.crustOptions[this.state.activeCrustIndex]["pricing"][size] * qty;
             let N = Math.round(this.props.crustOptions[this.state.activeCrustIndex]["pricing"][size] * qty * 0.85);
-            document.getElementById('priceNew'+itemId).innerHTML = this.isValidCoupon() ? Math.ceil(N / 10) * 10 : Math.round(this.props.crustOptions[this.state.activeCrustIndex]["pricing"][size] * qty);
+            document.getElementById('priceNew'+itemId).innerHTML = isValidCoupon() ? Math.ceil(N / 10) * 10 : Math.round(this.props.crustOptions[this.state.activeCrustIndex]["pricing"][size] * qty);
         }
     }
     getPrice(qty) {
@@ -207,10 +203,6 @@ class Card extends Component {
         }
         return number;
     }
-    isValidCoupon() {
-       return  localStorage.getItem('discountCode') != null
-        && (localStorage.getItem('discountCode').toUpperCase() == 'RAGEN15' || localStorage.getItem('discountCode').toUpperCase() == 'AMRIT15')
-    }
 
     render() {
         let {index, data} = this.props;
@@ -237,7 +229,7 @@ class Card extends Component {
             <div className="title">{data.title}</div>
             <hr className="line"/>
             <div className="section-two">
-                <div className="pricing"><label className="price"><span className="slashed" id={`price${index}`}>{data.qna[0].defaultPrice}</span><span className="rupee" style={{marginLeft: '6px'}}>₹</span><span className="orig" id={`priceNew${index}`}>{this.isValidCoupon() ? Math.ceil(Math.round(data.qna[0].defaultPrice*0.85) / 10) * 10 : data.qna[0].defaultPrice}</span></label></div>
+                <div className="pricing"><label className="price"><span className="slashed" id={`price${index}`}>{data.qna[0].defaultPrice}</span><span className="rupee" style={{marginLeft: '6px'}}>₹</span><span className="orig" id={`priceNew${index}`}>{isValidCoupon() ? Math.ceil(Math.round(data.qna[0].defaultPrice*0.85) / 10) * 10 : data.qna[0].defaultPrice}</span></label></div>
                 <div className="top">
                     <ReviewContainer reviewTopics={data.qna[0].responses} crustOptions={data.qna[0].crust} itemId={`${prefix}${index}`} item={data} type={this.props.type} />
                 </div>
@@ -259,10 +251,6 @@ class SummaryCard extends Component {
             return '0' + number;
         }
         return number;
-    }
-    isValidCoupon() {
-       return  localStorage.getItem('discountCode') != null
-        && (localStorage.getItem('discountCode').toUpperCase() == 'RAGEN15' || localStorage.getItem('discountCode').toUpperCase() == 'AMRIT15')
     }
 
     render() {
@@ -286,7 +274,7 @@ class SummaryCard extends Component {
             </div>
 
             <div className="section-two small">
-                <div className="pricing"><label className="price"><span className="slashed" id={`price${index}`}>{data.price}</span><span className="rupee" style={{marginLeft: '6px'}}>₹</span><span className="orig" id={`priceNew${index}`}>{this.isValidCoupon() ? Math.ceil(Math.round(data.price*0.85) / 10) * 10 : Math.ceil(Math.round(data.price) / 10) * 10}</span></label></div>
+                <div className="pricing"><label className="price"><span className="slashed" id={`price${index}`}>{data.price}</span><span className="rupee" style={{marginLeft: '6px'}}>₹</span><span className="orig" id={`priceNew${index}`}>{isValidCoupon() ? Math.ceil(Math.round(data.price*0.85) / 10) * 10 : Math.ceil(Math.round(data.price) / 10) * 10}</span></label></div>
                 <div className="top">
                 </div>
             </div>
@@ -313,17 +301,10 @@ class Shortlists extends Component {
         window.currSlotSelected = '';
         this.handleTabChange = this.handleTabChange.bind(this);
     }
-    isValidCoupon() {
-           return  localStorage.getItem('discountCode') != null
-            && (localStorage.getItem('discountCode').toUpperCase() == 'RAGEN15' || localStorage.getItem('discountCode').toUpperCase() == 'AMRIT15')
-        }
+
     componentDidMount() {
         this.fetchJson();
         var winHeight = window.innerHeight;
-
-        if(this.isValidCoupon()) {
-            document.getElementById('discountModal').style.top = '1200px';
-        }
 
         window.addEventListener("scroll",function () {
             if(window.scrollY <= 120) {
@@ -384,16 +365,12 @@ class Shortlists extends Component {
         console.log('neValue: ', newValue);
         this.setState({value: newValue});
     }
-    isValidCoupon() {
-       return  localStorage.getItem('discountCode') != null
-        && (localStorage.getItem('discountCode').toUpperCase() == 'RAGEN15' || localStorage.getItem('discountCode').toUpperCase() == 'AMRIT15')
-    }
     getTotal() {
         let orderSummary = this.state.orderSummary;
         let total = 0;
         let discounted = 1;
 
-        if(this.isValidCoupon()) {
+        if(isValidCoupon()) {
             discounted = 0.85;
         }
         orderSummary && Object.keys(orderSummary).map((index) => {
@@ -439,11 +416,12 @@ class Shortlists extends Component {
         let price = localStorage.getItem('dPrice');
         let slot = localStorage.getItem('dSlot') != null ? localStorage.getItem('dSlot') : '';
         let summary = localStorage.getItem('basket');
+        let referralCode = localStorage.getItem('discountCode');
         summary = summary != null ? summary : '';
         //create order
         var http = new XMLHttpRequest();
         var url = '/homelyOrder';
-        var params = 'price='+price+'&mobile='+localStorage.getItem('dMobile')+'&name='+localStorage.getItem('dName')+'&slot='+slot+'&summary='+summary+'&pincode='+pincode+'&address='+address;
+        var params = 'price='+price+'&mobile='+localStorage.getItem('dMobile')+'&name='+localStorage.getItem('dName')+'&slot='+slot+'&summary='+summary+'&pincode='+pincode+'&referralCode='+referralCode+'&address='+address;
         http.open('POST', url, true);
         http.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
 
@@ -507,7 +485,7 @@ class Shortlists extends Component {
         let currentHour = new Date().getHours();
         let currentMin = new Date().getMinutes();
 
-        slots = ["Friday 7:00PM - 8:00PM", "Friday 8:00PM - 9:00PM", "------------------------------" ,"Saturday 11:00AM - 12:00PM", "Saturday 12:00PM - 1:00PM", "Saturday 1:00PM - 2:00PM", "Saturday 2:00PM - 3:00PM", "Saturday 3:00AM - 4:00PM","Saturday 6:00PM - 7:00PM", "Saturday 7:00PM - 8:00PM", "Saturday 8:00PM - 9:00PM", "------------------------------", "Sunday 11:00AM - 12:00PM", "Sunday 12:00PM - 1:00PM", "Sunday 1:00PM - 2:00PM", "Sunday 2:00PM - 3:00PM", "Sunday 3:00AM - 4:00PM","Sunday 6:00PM - 7:00PM", "Sunday 7:00PM - 8:00PM", "Sunday 8:00PM - 9:00PM"];
+        slots = ["Friday 7PM - 8PM", "Friday 8PM - 9PM", "------------------------------" ,"Saturday 11AM - 12PM", "Saturday 12PM - 1PM", "Saturday 1PM - 2PM", "Saturday 2PM - 3PM", "Saturday 3PM - 4PM","Saturday 6PM - 7PM", "Saturday 7PM - 8PM", "Saturday 8PM - 9PM", "------------------------------", "Sunday 11AM - 12PM", "Sunday 12PM - 1PM", "Sunday 1PM - 2PM", "Sunday 2PM - 3PM", "Sunday 3PM - 4PM","Sunday 6PM - 7PM", "Sunday 7PM - 8PM", "Sunday 8PM - 9PM"];
 
         if(slots.length > 0) {
             window.currSlotSelected = slots[0];
@@ -532,25 +510,6 @@ class Shortlists extends Component {
                     <div><i className="loading" id="myTasksLoader" style={{top: '28px'}}></i></div>
                     <div className="main fadeInBottom">
                         <hr className="line-tasks"/>
-                        <div id="discountModal" className="card-container checkout-modal modal-show" style={{top:'74px'}}>
-                            <div className="modal-heading">
-                                <div className="left">
-                                    Coupon Code
-                                </div>
-                                <div className="right" onClick={()=>{document.getElementById('discountModal').style.top='1200px';}}>
-                                    <img src="../../../img/images/ic_close.png" />
-                                </div>
-                                <div className="checkout-content" style={{height: 'calc(100% - 350px)', marginTop:'30px'}}>
-                                    <div class="title">
-                                        <div>Have a coupon code?</div>
-                                        <input id="discountCodeText" type="text" className="step-input" placeholder="Enter coupon code" style={{marginTop: '100px',color: '#000', height: '38px'}}/>
-                                        <div id="applyDiscountBtn" className="card-btn coupon-btn" onClick={()=>{localStorage.setItem('discountCode',document.getElementById('discountCodeText').value);location.reload();}}>Apply
-                                            <div className=""></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
                         <div id="checkoutModal" className="card-container checkout-modal modal-show">
                             <div className="modal-heading">
                                 <div className="right" onClick={()=>{document.getElementById('checkoutModal').style.top='1200px';this.setState({activeStep: 1, showCoupon: false, showSlot: false, couponApplied: false});}}>

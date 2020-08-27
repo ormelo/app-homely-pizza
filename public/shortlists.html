@@ -3994,6 +3994,14 @@ fbq('track', 'PageView');
 
 
 <script>
+
+function isValidCoupon() {
+   return  localStorage.getItem('discountCode') != null
+    && (localStorage.getItem('discountCode').toUpperCase() == 'RAGEN15'
+     || localStorage.getItem('discountCode').toUpperCase() == 'PRATU15'
+     || localStorage.getItem('discountCode').toUpperCase() == 'AMRIT15')
+}
+
     localStorage.removeItem("basket");
     function navTo(item) {
       var scrollVal = 584;

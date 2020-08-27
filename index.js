@@ -944,6 +944,7 @@ app.post('/homelyOrder', function(req, res) {
     const price = req.body.price;
     const address = req.body.address;
     const pincode = req.body.pincode;
+    const referralCode = req.body.referralCode;
 
     const client = new Client(dbConfig)
     client.connect(err => {
@@ -953,8 +954,8 @@ app.post('/homelyOrder', function(req, res) {
         console.log('connected')
 
 
-            client.query("INSERT INTO \"public\".\"Homely_Order\"(mobile, name, order_id, status, delivery_slot, price, summary, address, pincode) VALUES($1, $2, $3, $4, $5, $6, $7, $8, $9)",
-                        [mobile, name, orderId, status, deliverySlot, price, summary, address, pincode], (err, response) => {
+            client.query("INSERT INTO \"public\".\"Homely_Order\"(mobile, name, order_id, status, delivery_slot, price, summary, address, pincode, referral_code) VALUES($1, $2, $3, $4, $5, $6, $7, $8, $9, $10)",
+                        [mobile, name, orderId, status, deliverySlot, price, summary, address, pincode, referralCode], (err, response) => {
                               if (err) {
                                 console.log(err)
                                  res.send("error");

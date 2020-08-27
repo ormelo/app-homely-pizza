@@ -13,10 +13,20 @@ class Guide extends React.Component {
     }
 
     componentDidMount() {
+        localStorage.setItem('discountCode', '');
+        if(location.href.indexOf('amrit15') != -1
+           || location.href.indexOf('pratu15') != -1
+           || location.href.indexOf('srini15') != -1
+           || location.href.indexOf('ragen15') != -1) {
+            var referralCode = location.href.substring(location.href.indexOf('?r=')+3, location.href.length);
+            localStorage.setItem('discountCode', referralCode);
+        }
+
         window.addEventListener('scroll', this.handleScroll);
         window.onRecommenderClick = this.handleRecommenderClick;
         this.showMyTasksBtn();
         scrollTo(document.body, 0, 100);
+
         document.addEventListener('DOMContentLoaded', () => {
                         let controller = new ScrollMagic.Controller();
 
@@ -298,11 +308,9 @@ class Guide extends React.Component {
 
                                                         <label for="slide-2" className="slider__item slider__item--2 card">
                                                           <div className="slider__item-content">
-                                                            <img src="./img/images/t1.png" className="testim"/>
-                                                            <p className="slider__item-text serif">
-                                                                The name itself sums up aptly...it's homely n yummilicious. we loved every bite of it.
-                                                                I had ordered for pineapple mist with thin crust, large, Bell pepper blast, thick crust and cheesy garlic . It was tasty.l would definitely recommend this to all my near and dear ones,,😊😊
-
+                                                            <img src="./img/images/t2.jpg" className="testim"/>
+                                                            <p className="slider__item-text serif" style={{paddingTop: '300px'}}>
+                                                                Good quality , true to its name, homely pizza. innovative pineapple pizza.
                                                             </p>
                                                             <a
                                                               className="heading-3 link"
@@ -314,9 +322,11 @@ class Guide extends React.Component {
 
                                                         <label for="slide-3" className="slider__item slider__item--3 card">
                                                           <div className="slider__item-content">
-                                                            <img src="./img/images/t2.jpg" className="testim"/>
-                                                            <p className="slider__item-text serif" style={{paddingTop: '300px'}}>
-                                                                Good quality , true to its name, homely pizza. innovative pineapple pizza.
+                                                            <img src="./img/images/t1.png" className="testim"/>
+                                                            <p className="slider__item-text serif">
+                                                                The name itself sums up aptly...it's homely n yummilicious. we loved every bite of it.
+                                                                I had ordered for pineapple mist with thin crust, large, Bell pepper blast, thick crust and cheesy garlic . It was tasty.l would definitely recommend this to all my near and dear ones,,😊😊
+
                                                             </p>
                                                             <a
                                                               className="heading-3 link"
