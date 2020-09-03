@@ -3834,6 +3834,9 @@ fbq('track', 'PageView');
 <script>
     if(location.href.indexOf('?r=')!=-1){
         let code = location.href.substring(location.href.indexOf('?r=')+3, location.href.length);
+        if(code.indexOf('&')!=-1) {
+            code = code.substring(0,code.indexOf('&'));
+        }
         localStorage.setItem('discountCode', code);
     }
 
