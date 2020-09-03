@@ -13,7 +13,9 @@ class Guide extends React.Component {
     }
 
     componentDidMount() {
-        localStorage.setItem('discountCode', '');
+        if(!(localStorage.getItem('discountCode') != null && localStorage.getItem('discountCode') == 'slice15')) {
+         localStorage.setItem('discountCode', '');
+        }
         if(location.href.indexOf('amrit15') != -1
            || location.href.indexOf('pratu15') != -1
            || location.href.indexOf('srini15') != -1
