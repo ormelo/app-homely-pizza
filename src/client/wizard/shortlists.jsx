@@ -495,6 +495,8 @@ class Shortlists extends Component {
         }
 
 
+
+
         return (<div>
                     <img className="icon-back" src="../../../img/images/ic_back.png" onClick={()=>{history.back(-1);}} />
                     <img id="logo" className="logo-img" src="../img/images/logohp4.png" />
