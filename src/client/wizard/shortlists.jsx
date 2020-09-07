@@ -488,7 +488,7 @@ class Shortlists extends Component {
         let currentHour = new Date().getHours();
         let currentMin = new Date().getMinutes();
 
-        slots = ["Sunday 3PM - 4PM","Sunday 6PM - 7PM", "Sunday 7PM - 8PM", "Sunday 8PM - 9PM"];
+        slots = ["Today 7PM - 8PM","Sunday 8PM - 9PM"];
 
         if(slots.length > 0) {
             window.currSlotSelected = slots[0];
