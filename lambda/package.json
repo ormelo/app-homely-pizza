@@ -13,7 +13,7 @@
     "body-parser": "^1.18.3",
     "ejs": "2.5.6",
     "express": "4.15.2",
-    "node-fetch": "^1.7.0",
+    "node-fetch": "^2.6.1",
     "flipkart-affiliate": "^1.1.0",
     "flipkart-api-affiliate-client": "^1.1.0",
     "uuid-v4": "^0.1.0",
