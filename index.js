@@ -6,9 +6,33 @@ var fs = require('fs');
 var url = require('url');
 var redis = require('redis');
 var loggr = require("loggr");
+var request= require('request');
+var { Client } = require('pg');
+var { Pool } = require('pg');
+//var mergeImages = require('merge-images');
+var base64 = require('file-base64');
+const { Canvas, Image } = require('canvas');
+const pgClient = new Client({
+      host: 'ec2-54-247-188-247.eu-west-1.compute.amazonaws.com',
+      port: 5432,
+      database: 'dcrgs2nbc0i5vf',
+      user: 'nrgkzvyxpdfhkb',
+      password: '39798783ada15727c8bd9f24bb6c5808d313ab686991c4aca62e3db947cb016c',
+      ssl: true
+    });
+let dbConfig = {
+       database: 'dcrgs2nbc0i5vf',
+       host: 'ec2-54-247-188-247.eu-west-1.compute.amazonaws.com',
+         port: 5432,
+         user: 'nrgkzvyxpdfhkb',
+         password: '39798783ada15727c8bd9f24bb6c5808d313ab686991c4aca62e3db947cb016c',
+         ssl: { rejectUnauthorized: false }
+     }
+const orderid = require('order-id')('randomgenid');
 var redisURLVal = process.env.REDISCLOUD_URL || 'redis://rediscloud:vWISiXr6xai89eidZYXjM0OK3KeXfkPU@redis-16431.c10.us-east-1-2.ec2.cloud.redislabs.com:16431';
 redisURL = url.parse(redisURLVal);
 var bodyParser = require('body-parser');
+app.use(bodyParser.urlencoded({limit: '50mb', extended: true}));
 var client = require('flipkart-api-affiliate-client');
 var uuid = require('uuid-v4');
 var http = require("https");
@@ -23,11 +47,11 @@ var resultsQuery = '';
 var goToValKeywords = ["5cbecf1bf96720080791819c", "5cbecf92f96720df8f9181b2", "5cbecfe0dd2e6e8a776f9ee8", "5cbecfe6dd2e6e34916f9eef", "5cbecfeadd2e6e2a0f6f9ef1", "5cbecfeedd2e6e73a56f9ef3", "5cbecff5dd2e6eb3646f9ef6", "5cbecff9f96720ad639181c6"];
 var goToValBudgets = ["5cbed205f967203cf9918240", "5cbed20af9672091f0918242", "5cbed20fdd2e6e7eb56f9f60", "5cbed214f96720ea24918248"];
 //questionCriteraNameMap
-//answer 1 - Object.keys(k)[1] 
-//answer 2 - Object.keys(k)[2] 
-//answer 3 - Object.keys(k)[3] 
-//answer 4 - Object.keys(k)[0] 
-//answer 5 - Object.keys(k)[4] 
+//answer 1 - Object.keys(k)[1]
+//answer 2 - Object.keys(k)[2]
+//answer 3 - Object.keys(k)[3]
+//answer 4 - Object.keys(k)[0]
+//answer 5 - Object.keys(k)[4]
 
 var recentlyResearchedImgs = ["https://rukminim1.flixcart.com/image/800/800/jt1tq4w0/smart-band-tag/r/d/b/waterproof-smart-m3-band-black-01-mezire-original-imafccx5gsdhxuh5.jpeg?q=90", "https://rukminim1.flixcart.com/image/800/800/jtrjngw0/mobile/2/t/v/realme-3-rmx1825-original-imaferd5uzuyxrsv.jpeg?q=90","https://rukminim1.flixcart.com/image/800/800/jfsknm80/tablet/f/m/c/apple-mrjp2hn-a-original-imaf46khz8vftwnf.jpeg?q=90","https://rukminim1.flixcart.com/image/800/800/j3lwh3k0/power-bank/y/x/t/power-bank-it-pb-20k-poly-intex-original-imaeupg8dfgtsrfw.jpeg?q=90","https://rukminim1.flixcart.com/image/800/800/jfsknm80/smart-assistant/j/q/h/home-mini-ghmini-chalk-google-original-imaf46ev9a8xkahw.jpeg?q=90"];
 
@@ -53,7 +77,7 @@ var bodyParser = require('body-parser')
 app.use( bodyParser.json() );       // to support JSON-encoded bodies
 app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
   extended: true
-})); 
+}));
 //app.use(app.json());       // to support JSON-encoded bodies
 //app.use(app.urlencoded()); // to support URL-encoded bodies
 
@@ -145,7 +169,7 @@ function updateQuestion(uuid, interactionId, num, question, outputStr, resp, got
         res.on("data", function (chunk) {
             console.log('data: ', chunk);
             chunks.push(chunk);
-        });   
+        });
 
         res.on("end", function () {
             var body = Buffer.concat(chunks);
@@ -156,10 +180,10 @@ function updateQuestion(uuid, interactionId, num, question, outputStr, resp, got
                 statusCode: 200,
                 body: storyId,
              };
-            
+
           });
        });
-       
+
        var buttonStr = '';//[{\"type\":\"goto\",\"title\":\"yes\",\"value\":\""+gotoVal+"\"},{\"type\":\"postback\",\"title\":\"Not really\",\"value\":\"\"}]
        var buttons = [];
 
@@ -195,23 +219,23 @@ function updateQuestion(uuid, interactionId, num, question, outputStr, resp, got
            req.write("{\"name\":\"question"+num+"\",\"action\":\"\",\"userSays\":[],\"triggers\":[],\"parameters\":[],\"responses\":[{\"type\":\"quickReplies\",\"title\":\""+question+"?\",\"buttons\":[{\"type\":\"goto\",\"title\":\"yes\",\"value\":\""+gotoVal+"\"},{\"type\":\"goto\",\"title\":\"Not really\",\"value\":\""+nextQuestionInteractionVal+"\"}],\"filters\":[],\"delay\":100}]}");
          }
        }
-       
+
        req.end();
 }
 
 function constructQuestion(questionNum, specObj, quickQuestionTemplates) {
     let specName = specObj.key; //{key: "Display Features", values: Array(6)}
     let suffix = "";
-     
-    console.log('specObj.values.length: ', specObj.values.length); 
+
+    console.log('specObj.values.length: ', specObj.values.length);
     if(specObj.values.length == 1) {
       suffix = specName + ' like ' + specObj.values[0].key;
       shoppingCriteriaMap[specName] = [specObj.values[0].key];
     } else if(specObj.values.length >= 2) {
       suffix = specName + ' like ' + specObj.values[0].key + " and " + specObj.values[1].key;
       shoppingCriteriaMap[specName] = [specObj.values[0].key, specObj.values[1].key];
-    } 
-    
+    }
+
     let question = quickQuestionTemplates[questionNum] + suffix;
 
     if(quickQuestionTemplates[questionNum].indexOf('Lot of online users considered') !== -1) {
@@ -247,16 +271,16 @@ function calculateScore(link) {
   return positiveScore(link) - negativeScore(link);
 }
 
-function getSortOrder(prop) {  
-    return function(a, b) {  
-        if (a[prop] > b[prop]) {  
-            return 1;  
-        } else if (a[prop] < b[prop]) {  
-            return -1;  
-        }  
-        return 0;  
-    }  
-}  
+function getSortOrder(prop) {
+    return function(a, b) {
+        if (a[prop] > b[prop]) {
+            return 1;
+        } else if (a[prop] < b[prop]) {
+            return -1;
+        }
+        return 0;
+    }
+}
 
 function getBuyingGuideSearchLink(htmlContent) {
     let linkScore = [];
@@ -282,14 +306,14 @@ function getBuyingGuideSearchLink(htmlContent) {
       }
     }
     finalLink = finalLink.substr(finalLink.indexOf('url?q=')+6, finalLink.indexOf('&amp')).replace(/&amp;sa/,'');
-    return finalLink; 
+    return finalLink;
 }
 
 function getBrands(q, budgetSuffix, resp) {
 
   let productsByBrand = {};
   let fetchCount = 0;
-  
+
 
 
  var options = {
@@ -304,7 +328,7 @@ function getBrands(q, budgetSuffix, resp) {
         res.on("data", function (chunk) {
             //console.log('data: ', chunk);
             chunks.push(chunk);
-        });   
+        });
 
         var extract = [];
 
@@ -314,7 +338,7 @@ function getBrands(q, budgetSuffix, resp) {
             //resp.send(body.toString());
 
             var summaryText = body.toString();
-            
+
             summaryText = summaryText.substring(summaryText.indexOf('Brand</div>')+11, summaryText.indexOf('MORE</span>'));
             console.log('summaryText: ', summaryText);
             let summaryArr = summaryText.split('<div class="_1GEhLw">');
@@ -343,8 +367,8 @@ function getBrands(q, budgetSuffix, resp) {
                   let productsRanked = [];
                   let products = JSON.parse(value.body).products;
                   for(var i=0;i<products.length;i++) {
-                    let product = {title: products[i].productBaseInfoV1.title, img: products[i].productBaseInfoV1.imageUrls['800x800'], 
-                      mrp: products[i].productBaseInfoV1.maximumRetailPrice.amount, specialPrice: products[i].productBaseInfoV1.flipkartSpecialPrice.amount, 
+                    let product = {title: products[i].productBaseInfoV1.title, img: products[i].productBaseInfoV1.imageUrls['800x800'],
+                      mrp: products[i].productBaseInfoV1.maximumRetailPrice.amount, specialPrice: products[i].productBaseInfoV1.flipkartSpecialPrice.amount,
                       attributes: products[i].productBaseInfoV1.attributes, keySpecs: products[i].categorySpecificInfoV1.keySpecs,
                       detailedSpecs: products[i].categorySpecificInfoV1.detailedSpecs};
                     productsRanked.push(product);
@@ -359,7 +383,7 @@ function getBrands(q, budgetSuffix, resp) {
 
               });
             }
-            
+
           });
        });
 
@@ -367,7 +391,7 @@ function getBrands(q, budgetSuffix, resp) {
         var chunks = [];
         res.on("data", function (chunk) {
             chunks.push(chunk);
-        });   
+        });
 
         res.on("end", function () {
             var body = Buffer.concat(chunks);
@@ -378,7 +402,7 @@ function getBrands(q, budgetSuffix, resp) {
             extract.shift();
             extract = extract.slice(0,6);
             console.log('extract: ', extract);
-            
+
 
             for(var i in extract) {
               var brandName = extract[i];
@@ -395,8 +419,8 @@ function getBrands(q, budgetSuffix, resp) {
                   let productsRanked = [];
                   let products = JSON.parse(value.body).products;
                   for(var i=0;i<products.length;i++) {
-                    let product = {title: products[i].productBaseInfoV1.title, img: products[i].productBaseInfoV1.imageUrls['800x800'], 
-                      mrp: products[i].productBaseInfoV1.maximumRetailPrice.amount, specialPrice: products[i].productBaseInfoV1.flipkartSpecialPrice.amount, 
+                    let product = {title: products[i].productBaseInfoV1.title, img: products[i].productBaseInfoV1.imageUrls['800x800'],
+                      mrp: products[i].productBaseInfoV1.maximumRetailPrice.amount, specialPrice: products[i].productBaseInfoV1.flipkartSpecialPrice.amount,
                       attributes: products[i].productBaseInfoV1.attributes, keySpecs: products[i].categorySpecificInfoV1.keySpecs,
                       detailedSpecs: products[i].categorySpecificInfoV1.detailedSpecs};
                     productsRanked.push(product);
@@ -414,7 +438,7 @@ function getBrands(q, budgetSuffix, resp) {
 
           });
        });*/
-       
+
        req.end();
 }
 
@@ -430,7 +454,7 @@ function getArticle(q, resp, productPrice) {
         res.on("data", function (chunk) {
             console.log('data: ', chunk);
             chunks.push(chunk);
-        });   
+        });
 
         res.on("end", function () {
             var body = Buffer.concat(chunks);
@@ -439,7 +463,7 @@ function getArticle(q, resp, productPrice) {
             let keywords = getKeywords(q, buyingGuideSearchLink, resp, productPrice);
           });
        });
-       
+
        req.end();
 }
 
@@ -474,7 +498,7 @@ function getKeywords(q, url, resp, productPrice) {
         res.on("data", function (chunk) {
             console.log('data: ', chunk);
             chunks.push(chunk);
-        });   
+        });
 
         res.on("end", function () {
             var body = Buffer.concat(chunks);
@@ -491,13 +515,13 @@ function getKeywords(q, url, resp, productPrice) {
                 }
               }
             }
-            
+
             updateQuestion(resp.uuid, '5cbb2b95dd2e6e9ad36eb5b9',4, "Which of these is a must have for you?", '', resp, '5cbb5e27dd2e6e9c5b6ebfb2', keywordsArr);
-            
+
             getBudget(resp, productPrice);
           });
        });
-       
+
        req.end();
 }
 
@@ -520,7 +544,7 @@ app.get('/fetchWishList', function(request, response) {
 
   let criteria = request.query["q"].split(',');
   criteria.pop(); //remove budget criteria*/
-  
+
   /*if(criteria && criteria.length > 1) {
     for(let i in criteria) {
       if(i == 0) {
@@ -534,7 +558,7 @@ app.get('/fetchWishList', function(request, response) {
   }*/
 
   //cut short query if conditions more than two
-  
+
 
 });
 
@@ -563,8 +587,8 @@ app.get('/invokeChat', function(request, resp) {
     shoppingCriteriaMap = {keywords: []};
     console.log('resp.uuid: ',resp.uuid);
     let questionNum = 0;
-    
-    
+
+
     return fkClient.doKeywordSearch(request.query["q"],10).then(function(value){
         productTitle = JSON.parse(value.body).products[0].productBaseInfoV1.title;
         io.emit('product-found', { for: 'everyone', title: productTitle });
@@ -579,13 +603,13 @@ app.get('/invokeChat', function(request, resp) {
             } else {
               recentlyResearchedImgs.push(productImg);
             }
-            
+
           }*/
         }catch(e){
           console.log('Error loading researched images.');
         }
         console.log('Body: ', value.body);
-        
+
         shoppingSearchSpecs = JSON.parse(value.body).products[0].categorySpecificInfoV1.specificationList;
         shoppingSearchSpecs.shift();
         if(shoppingSearchSpecs.length >= 1) {
@@ -620,7 +644,7 @@ app.get('/invokeChat', function(request, resp) {
         //resp.send("success");
 
     });
-            
+
 });
 
 app.post('/captureChatData', (req, res) => {
@@ -697,7 +721,7 @@ app.post('/captureChatData', (req, res) => {
 
 
     console.log('parameters captured: ', userCriteriaSelection);
- 
+
     res.json(data);
 });
 
@@ -747,13 +771,60 @@ app.get("/mytasks", function(request, response) {
   response.sendFile(path.resolve(__dirname, 'public', 'mytasks.html'));
 });
 
-app.get("/shortlists/:task/:loc/:zone", function(request, response) {
+app.get("/order/", function(request, response) {
+  response.sendFile(path.resolve(__dirname, 'public', 'shortlists.html'));
+});
+
+app.get("/memory", function(request, response) {
+  response.sendFile(path.resolve(__dirname, 'public', 'memory.html'));
+});
+
+app.get("/bake", function(request, response) {
+  response.sendFile(path.resolve(__dirname, 'public', 'bake.html'));
+});
+
+app.get("/redirect/", function(request, response) {
+  let paymentStatus = 'PENDING';
+  let paymentRequestId = request.query.payment_request_id;
+  if(request.query.payment_status == 'Credit') {
+    paymentStatus = 'PAID';
+  } else {
+    paymentStatus = request.query.payment_status;
+  }
+
+  const client = new Client(dbConfig)
+              client.connect(err => {
+                if (err) {
+                  console.error('error connecting', err.stack)
+                } else {
+                  console.log('connected')
+                  client.query("UPDATE \"public\".\"Homely_Order\" set status = $1 WHERE payment_request_id = $2",
+                      [paymentStatus, paymentRequestId], (err, res) => {
+                            if (err) {
+                              console.log(err);
+                            } else {
+                              console.log(response);
+                            }
+
+                          });
+                }
+              })
+  response.sendFile(path.resolve(__dirname, 'public', 'shortlists.html'));
+});
+
+app.get("/credits/", function(request, response) {
   response.sendFile(path.resolve(__dirname, 'public', 'shortlists.html'));
 });
 
 app.get("/data/:task/:loc/:zone", function(request, response) {
   const fs = require('fs');
   let rawdata = fs.readFileSync('./src/data-source/'+request.params.task+'/'+request.params.loc+'/'+request.params.zone+'/mockDataQnA.json');
+  response.send(rawdata);
+});
+
+app.get("/data/:task/:loc/:zone/starter", function(request, response) {
+  const fs = require('fs');
+  let rawdata = fs.readFileSync('./src/data-source/'+request.params.task+'/'+request.params.loc+'/'+request.params.zone+'/mockDataStarter.json');
   response.send(rawdata);
 });
 
@@ -783,6 +854,13 @@ app.get('/franchise', function(request, response) {
  response.sendFile(path.resolve(__dirname, 'public', 'startYourOwn.html'));
 });
 
+app.get('/privacy-policy', function(request, response) {
+ //response.send(pages.startYourOwn);
+ response.sendFile(path.resolve(__dirname, 'public', 'privacy.html'));
+});
+
+
+
 app.get('/getIngredients', function(request, response) {
  var uid = request.query.u;
  console.log('--user id--', uid);
@@ -796,7 +874,7 @@ app.get('/getIngredients', function(request, response) {
       response.send("key not found");
     }
   });
- 
+
 });
 
 app.post('/franchiseEnquiry', function(req, res) {
@@ -806,6 +884,349 @@ app.post('/franchiseEnquiry', function(req, res) {
         client.set(members, email);
  res.sendFile(path.resolve(__dirname, 'public', 'franchiseEnquiry.html'));
 });
+
+app.post('/paymentRequest', function(req, res) {
+    const orderId = req.body.orderId;
+    const slot = req.body.slot;
+    var headers = { 'X-Api-Key': 'b442e3b63d6c01b2e7fdb49e14e8a069', 'X-Auth-Token': '96650eeefedf39e2bbdb32d8496f0ca2'}
+    var payload = {
+      purpose: 'Pizza order',
+      amount: req.body.amount,
+      phone: req.body.phone,
+      name: req.body.phone,
+      redirect_url: 'http://www.homely.pizza/redirect/',
+      send_email: false,
+      send_sms: false,
+      allow_repeated_payments: false}
+
+    request.post('https://www.instamojo.com/api/1.1/payment-requests/', {form: payload,  headers: headers}, function(error, response, body){
+      if(!error && response.statusCode == 201){
+        console.log('-----im response body: ', body);
+        console.log('-----payment request id: ', JSON.parse(body).payment_request.id);
+
+        let paymentRequestId = JSON.parse(body).payment_request.id;
+        const client = new Client(dbConfig)
+            client.connect(err => {
+              if (err) {
+                console.error('error connecting', err.stack)
+              } else {
+                console.log('connected')
+                client.query("UPDATE \"public\".\"Homely_Order\" set payment_request_id = $1, delivery_slot = $3 WHERE order_id = $2",
+                    [paymentRequestId, orderId, slot], (err, response) => {
+                          if (err) {
+                            console.log(err)
+                            res.send(body);
+                          } else {
+                            console.log(response)
+                             res.send(body);
+                          }
+
+                        });
+              }
+            })
+
+
+
+      }
+    })
+})
+
+
+app.post('/homelyOrder', function(req, res) {
+
+    const mobile = req.body.mobile;
+    const name = req.body.name;
+    const orderId = orderid.generate();
+    let whitelisted = false;
+    const status = 'PENDING';
+    const summary = req.body.summary;
+    const deliverySlot = req.body.slot;
+    const price = req.body.price;
+    const address = req.body.address;
+    const pincode = req.body.pincode;
+    const referralCode = req.body.referralCode;
+
+    const client = new Client(dbConfig)
+    client.connect(err => {
+      if (err) {
+        console.error('error connecting', err.stack)
+      } else {
+        console.log('connected')
+
+
+            client.query("INSERT INTO \"public\".\"Homely_Order\"(mobile, name, order_id, status, delivery_slot, price, summary, address, pincode, referral_code) VALUES($1, $2, $3, $4, $5, $6, $7, $8, $9, $10)",
+                        [mobile, name, orderId, status, deliverySlot, price, summary, address, pincode, referralCode], (err, response) => {
+                              if (err) {
+                                console.log(err)
+                                 res.send("error");
+                              } else {
+                                console.log(response)
+                                 res.send('{"orderId":"'+orderId+'", "whitelisted":true}');
+                              }
+
+                            });
+
+
+      }
+    })
+
+
+})
+
+app.post('/selfie', function(req, res) {
+
+       const selfie = req.body.dataURL;
+       console.log('---selfie---', selfie);
+       let fileExtensionArr = selfie.split('base64,');
+
+       let fileExtension = fileExtensionArr[0].split('data:image/')[1].replace(';','');
+       //decode base64 image
+         var matches = selfie.match(/^data:([A-Za-z-+\/]+);base64,(.+)$/),
+           response = {};
+
+         if (matches.length !== 3) {
+           return new Error('Invalid input string');
+         }
+
+         response.data = selfie.split(",")[1];
+
+         /*var base64String = response.data;
+         let ts = Date.now();
+         base64.decode(selfie, ts+"selfie."+fileExtension, function(err, output) {
+           console.log('success');
+           console.log('output: ', output);
+         });*/
+
+
+
+         // Defaults
+         var defaultOptions = {
+         	format: 'image/png',
+         	quality: 0.92,
+         	width: undefined,
+         	height: undefined,
+         	Canvas: undefined,
+         	crossOrigin: undefined
+         };
+
+         // Return Promise
+         var mergeImages = function (sources, options) {
+         	if ( sources === void 0 ) sources = [];
+         	if ( options === void 0 ) options = {};
+
+         	return new Promise(function (resolve) {
+         	options = Object.assign({}, defaultOptions, options);
+
+         	// Setup browser/Node.js specific variables
+         	var canvas = options.Canvas ? new options.Canvas() : window.document.createElement('canvas');
+         	var Image = options.Image || window.Image;
+
+         	// Load sources
+         	var images = sources.map(function (source) { return new Promise(function (resolve, reject) {
+
+         	    console.log('--source--', source);
+         		// Convert sources to objects
+         		if (source.constructor.name !== 'Object') {
+         			source = { src: source };
+         		}
+
+         		// Resolve source and img when loaded
+         		var img = new Image();
+         		img.crossOrigin = options.crossOrigin;
+         		img.onerror = function () { return reject(new Error('Couldn\'t load image')); };
+         		img.onload = function () { return resolve(Object.assign({}, source, { img: img })); };
+         		img.src = source.src;
+         	}); });
+
+         	// Get canvas context
+         	var ctx = canvas.getContext('2d');
+
+         	// When sources have loaded
+         	resolve(Promise.all(images)
+         		.then(function (images) {
+         			// Set canvas dimensions
+         			var getSize = function (dim) { return options[dim] || Math.max.apply(Math, images.map(function (image) { return image.img[dim]; })); };
+         			canvas.width = getSize('width');
+         			canvas.height = getSize('height');
+
+         			// Draw images to canvas
+         			images.forEach(function (image) {
+         				ctx.globalAlpha = image.opacity ? image.opacity : 1;
+         				return ctx.drawImage(image.img, image.x || 0, image.y || 0);
+         			});
+
+         			if (options.Canvas && options.format === 'image/jpeg') {
+         				// Resolve data URI for node-canvas jpeg async
+         				return new Promise(function (resolve, reject) {
+         					canvas.toDataURL(options.format, {
+         						quality: options.quality,
+         						progressive: false
+         					}, function (err, jpeg) {
+         						if (err) {
+         							reject(err);
+         							return;
+         						}
+         						resolve(jpeg);
+         					});
+         				});
+         			}
+
+         			// Resolve all other data URIs sync
+         			return canvas.toDataURL(options.format, options.quality);
+         		}));
+         });
+         };
+
+
+
+         mergeImages(['public/img/images/sbg.jpg',{ src: selfie.replace(/ /g, "+"), x: 630, y: 540 }],
+         {
+           Canvas: Canvas,
+           Image: Image
+         })
+           .then((b64) => {console.log('merged');console.log('merged image: ', b64);res.send(b64);});
+
+
+         /*require("fs").writeFile(ts+"selfie."+fileExtension, response.data, 'base64',
+             function(err, data) {
+                if (err) {
+                       console.log('err', err);
+                  } else {
+                       console.log("selfie image: ",data);
+                   }
+             });*/
+
+
+   });
+
+
+
+   app.post('/closeUpPhoto', function(req, res) {
+
+          const selfie = req.body.dataURL;
+          const closeUpPhoto = req.body.closeUpPhotoDataURL;
+          console.log('---selfie---', selfie);
+          let fileExtensionArr = selfie.split('base64,');
+
+          let fileExtension = fileExtensionArr[0].split('data:image/')[1].replace(';','');
+          //decode base64 image
+            var matches = selfie.match(/^data:([A-Za-z-+\/]+);base64,(.+)$/),
+              response = {};
+
+            if (matches.length !== 3) {
+              return new Error('Invalid input string');
+            }
+
+            response.data = selfie.split(",")[1];
+
+            /*var base64String = response.data;
+            let ts = Date.now();
+            base64.decode(selfie, ts+"selfie."+fileExtension, function(err, output) {
+              console.log('success');
+              console.log('output: ', output);
+            });*/
+
+
+
+            // Defaults
+            var defaultOptions = {
+            	format: 'image/png',
+            	quality: 0.92,
+            	width: undefined,
+            	height: undefined,
+            	Canvas: undefined,
+            	crossOrigin: undefined
+            };
+
+            // Return Promise
+            var mergeImages = function (sources, options) {
+            	if ( sources === void 0 ) sources = [];
+            	if ( options === void 0 ) options = {};
+
+            	return new Promise(function (resolve) {
+            	options = Object.assign({}, defaultOptions, options);
+
+            	// Setup browser/Node.js specific variables
+            	var canvas = options.Canvas ? new options.Canvas() : window.document.createElement('canvas');
+            	var Image = options.Image || window.Image;
+
+            	// Load sources
+            	var images = sources.map(function (source) { return new Promise(function (resolve, reject) {
+
+            	    console.log('--source--', source);
+            		// Convert sources to objects
+            		if (source.constructor.name !== 'Object') {
+            			source = { src: source };
+            		}
+
+            		// Resolve source and img when loaded
+            		var img = new Image();
+            		img.crossOrigin = options.crossOrigin;
+            		img.onerror = function () { return reject(new Error('Couldn\'t load image')); };
+            		img.onload = function () { return resolve(Object.assign({}, source, { img: img })); };
+            		img.src = source.src;
+            	}); });
+
+            	// Get canvas context
+            	var ctx = canvas.getContext('2d');
+
+            	// When sources have loaded
+            	resolve(Promise.all(images)
+            		.then(function (images) {
+            			// Set canvas dimensions
+            			var getSize = function (dim) { return options[dim] || Math.max.apply(Math, images.map(function (image) { return image.img[dim]; })); };
+            			canvas.width = getSize('width');
+            			canvas.height = getSize('height');
+
+            			// Draw images to canvas
+            			images.forEach(function (image) {
+            				ctx.globalAlpha = image.opacity ? image.opacity : 1;
+            				return ctx.drawImage(image.img, image.x || 0, image.y || 0);
+            			});
+
+            			if (options.Canvas && options.format === 'image/jpeg') {
+            				// Resolve data URI for node-canvas jpeg async
+            				return new Promise(function (resolve, reject) {
+            					canvas.toDataURL(options.format, {
+            						quality: options.quality,
+            						progressive: false
+            					}, function (err, jpeg) {
+            						if (err) {
+            							reject(err);
+            							return;
+            						}
+            						resolve(jpeg);
+            					});
+            				});
+            			}
+
+            			// Resolve all other data URIs sync
+            			return canvas.toDataURL(options.format, options.quality);
+            		}));
+            });
+            };
+
+
+
+            mergeImages(['public/img/images/sbg.jpg',{ src: closeUpPhoto.replace(/ /g, "+"), x: 930, y: 440 }, { src: selfie.replace(/ /g, "+"), x:430, y: 520 }],
+            {
+              Canvas: Canvas,
+              Image: Image
+            })
+              .then((b64) => {console.log('merged');console.log('merged image: ', b64);res.send(b64);});
+
+
+            /*require("fs").writeFile(ts+"selfie."+fileExtension, response.data, 'base64',
+                function(err, data) {
+                   if (err) {
+                          console.log('err', err);
+                     } else {
+                          console.log("selfie image: ",data);
+                      }
+                });*/
+
+
+      });
 
 app.post('/submitGetQuote', function(req, res) {
     var email = req.body.email,
@@ -829,7 +1250,7 @@ app.post('/submitMealType', function(req, res) {
         orderMeal = req.body.orderMeal,
         email = req.body.email;
         members = req.body.members;
-    var obj = {date:date, mealType:orderMeal, members: members}    
+    var obj = {date:date, mealType:orderMeal, members: members}
         client.set(email, JSON.stringify(obj));
     //res.send(pages.getQuote);*/
     res.send('success');
@@ -896,9 +1317,9 @@ app.get("/redis", function(request, response) {
   response.send('redis test...');
 });
 
-/* app.get('/', function(request, response) {
+app.get('/v2', function(request, response) {
   response.sendFile(path.resolve(__dirname, 'public', 'index.html'));
-});*/
+});
 
 app.get('/onboard/step2', function(request, response) {
   response.writeHead(301,

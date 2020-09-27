@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@material-ui/core": "^4.5.1",
+    "@material-ui/icons": "^4.9.1",
     "axios": "0.18.0",
     "babel-plugin-syntax-dynamic-import": "^6.18.0",
     "body-parser": "^1.18.3",
@@ -31,7 +32,11 @@
     "style-loader": "^1.2.1",
     "update-json-file": "^1.1.1",
     "uuid-v4": "^0.1.0",
-    "web-push": "^3.0.0"
+    "web-push": "^3.0.0",
+    "pg": "8.2.1",
+    "order-id": "1.1.0",
+    "canvas": "^2.6.1",
+    "file-base64": "1.0.0"
   },
   "devDependencies": {
     "babel-core": "^6.25.0",

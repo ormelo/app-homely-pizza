@@ -55,6 +55,7 @@
     padding-bottom: 12px;
     font-weight: normal;
     box-shadow: 0px 0px 14px 6px rgb(156 156 156 / 30%);
+    text-decoration: none;
 }
 
 .caption {
@@ -3049,7 +3050,17 @@ function startReactions(elem) {
 </script>
 <script src="./BeerSlider.js"></script>
 <script>
-  var slider = new BeerSlider( document.getElementById( "beer-slider" ) );
+var slider = new BeerSlider( document.getElementById( "beer-slider" ) );
+if(!(localStorage.getItem('discountCode') != null && localStorage.getItem('discountCode') == 'slice15')) {
+     localStorage.setItem('discountCode', '');
+}
+if(location.href.indexOf('amrit15') != -1
+   || location.href.indexOf('pratu15') != -1
+   || location.href.indexOf('slice15') != -1
+   || location.href.indexOf('ragen15') != -1) {
+    var referralCode = location.href.substring(location.href.indexOf('?r=')+3, location.href.length);
+    localStorage.setItem('discountCode', referralCode);
+}
 </script>
 
 <div>
@@ -3122,7 +3133,7 @@ function startReactions(elem) {
     <div class="info">
         <img src="./img/images/pizza.png" class="ic-num"/>
         <div class="desc caption">Par-baked pizzas</div>
-        <div class="desc" style={{marginTop: '20px'}}>Our custom baking technique ensures you enjoy a hot pizza by simply warming on a pan for 3 mins, without losing any flavor!</div>
+        <div class="desc" style="margin-top: 20px">Our custom baking technique ensures you enjoy a hot pizza by simply warming on a pan for 3 mins, without losing any flavor!</div>
 </div>
 </div>
 </div>
@@ -3140,7 +3151,7 @@ function startReactions(elem) {
     <div class="info">
         <img src="./img/images/deliveryman.png" class="ic-num"/>
         <div class="desc caption">Hygienic packaging</div>
-        <div class="desc" style="margin-top: 20px">COVID-safe packaging with disinfection on upper surface with contactless delivery to ensure the best of safety!</div>
+        <div class="desc" style="margin-top: 20px">COVID-safe packaging with disinfection on outer surface with contactless delivery to ensure the best of safety!</div>
 </div>
 </div>
 </div>
@@ -3159,7 +3170,7 @@ function startReactions(elem) {
     <br/>
 
     <div class="bottom-bar" ></div>
-<div class="button">See Menu</div>
+<a class="button" href="/order/">See Menu</a>
 <br/>
 <div class="desc" style="text-align: center;font-size: 14px">Copyright © 2020 Homely.Pizza</div><br/>
 <br/><br/><br/>
