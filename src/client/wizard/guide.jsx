@@ -191,6 +191,7 @@ class Guide extends React.Component {
                 <div id="logoHeading" className="logo-heading"></div>
                 <Link to="/mytasks"><div id="myTasksBtn" className="green-btn right-btn"><img className="icon-btn" src="../img/images/ic_user.png" /><span>My Services</span></div></Link>
             </div>
+            <div class="bag"><img src="./img/images/bag.jpg" /></div>
             <div><i className="loading"></i></div>
 
 
@@ -289,7 +290,7 @@ class Guide extends React.Component {
 
 
                                             <div className="bottom-bar" />
-                                            <div class="button">Order Now</div>
+                                            <div class="button">See Menu</div>
                                         <br/><br/>
                                         <div className="desc" style={{textAlign: 'center',fontSize: '14px'}}>Copyright © 2020 Homely.Pizza</div><br/>
                                         <br/><br/><br/><br/>
