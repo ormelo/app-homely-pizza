@@ -275,20 +275,24 @@ class Guide extends React.Component {
                                             </div>
                                         </div>
 
-                                          <div className="overview" style={{background: '#f7f7f7', paddingTop: '20px'}}>So what do you want to get done?</div>
-
-                                                              <div className="section" style={{background: '#f7f7f7'}}>
-                                                                  <div className="post-heading icon-container">
-                                                                      <Link to="/home"><img className="ic" src="./img/images/ic_homei.png" style={{width: '72px'}} /></Link>
-                                                                      <img className="ic" src="./img/images/ic_eventsi.png" style={{width: '72px'}} />
-                                                                      <img className="ic" src="./img/images/ic_local_enquiriesi.png" style={{width: '72px'}} />
-                                                                  </div>
-                                                                  <br/>
-                                                              </div>
+                                            <br/><br/>
+                                            <hr class="line"/>
+                                            <div className="overview" style={{marginTop: '-18px'}}>See the difference</div>
                                                               <br/>
 
+                                            <div id="beer-slider" className="beer-slider" data-beer-label="Ordinary Cold Pizza" data-beer-start="25">
+                                              <img src="./img/images/ordinary_pizza03.jpg" alt="Original - Man holding beer"/>
+                                              <div className="beer-reveal" data-beer-label="Homely Pizza">
+                                                <img src="./img/images/homely_pizza.jpg" alt="Processed - Man holding beer"/>
+                                              </div>
+                                            </div>
 
-                                        <div className="desc" style={{textAlign: 'center',fontSize: '14px'}}>Copyright © 2019 Stint.do</div><br/>
+
+                                            <div className="bottom-bar" />
+                                            <div class="button">Order Now</div>
+                                        <br/><br/>
+                                        <div className="desc" style={{textAlign: 'center',fontSize: '14px'}}>Copyright © 2020 Homely.Pizza</div><br/>
+                                        <br/><br/><br/><br/>
                 </div>
 
 

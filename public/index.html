@@ -12,6 +12,37 @@
   src: url("/assets/fonts/StyleFormal.otf");
 }
 
+.bottom-bar {
+    background: linear-gradient(0deg, rgb(255 255 255) 0%, rgb(255 255 255) 35%, rgb(255 255 255 / 0%) 100%);
+    width: 100%;
+    height: 100px;
+    opacity: 1;
+    position: fixed;
+    bottom: 0px;
+}
+
+.button {
+    text-transform: uppercase;
+    position: fixed;
+    bottom: 10px;
+    width: 90%;
+    z-index: 1;
+    text-align: center;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    background: linear-gradient(0deg, #fe1712 0%, rgb(255 57 51) 35%, #ff623a 100%);
+    font-size: 16px;
+    border-radius: 6px;
+    padding: 24px;
+    color: #fff;
+    letter-spacing: 3px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    font-weight: normal;
+    box-shadow: 0px 0px 14px 6px rgb(156 156 156 / 30%);
+}
+
 .caption {
     font-size: 24px !important;
     font-weight: bold !important;
@@ -312,7 +343,7 @@ body {
     color: #454545;
     padding: 0px;
     margin: 0 auto;
-    top: 100px;
+    top: 117px;
     position: absolute;
     font-size: 36px;
     font-weight: normal;
@@ -331,28 +362,28 @@ body {
 }
 
 .banner1 {
-    margin-top: 48px;
+    margin-top: 72px;
     height: 396px;
     background-image: url(../../../img/images/banner-hp-01.jpg);
     background-size: cover;
 }
 
 .banner2 {
-    margin-top: 48px;
+    margin-top: 72px;
     height: 396px;
     background-image: url(../../../img/images/banner-hp-01.jpg);
     background-size: cover;
 }
 
 .banner3 {
-    margin-top: 48px;
+    margin-top: 72px;
     height: 396px;
     background-image: url(../../../img/images/banner-hp-01.jpg);
     background-size: cover;
 }
 
 .banner4 {
-    margin-top: 48px;
+    margin-top: 72px;
     height: 396px;
     background-image: url(../../../img/images/banner-hp-01.jpg);
     background-size: cover;
@@ -361,7 +392,7 @@ body {
 .curve {
     width: 200px;
     margin: 0 auto;
-    top: 420px;
+    top: 436px;
     left: 0;
     right: 0;
     position: absolute;
@@ -755,13 +786,14 @@ td:last-child {
     color: #000;
     letter-spacing: 1px;
     font-family: 'StyleFormal', sans-serif;
+    padding-top: 36px;
 }
 
 .scroll-arrow{
     position: absolute;
     left: 50%;
     transform: translate(-50%,-50%);
-    margin-top: -42px;
+    margin-top: -16px;
     opacity: 0.6;
 }
 .scroll-arrow span{
@@ -880,7 +912,7 @@ td:last-child {
 
 .line {
     border-top: dashed 1px #c2c2c2;
-    margin-top: 10px;
+    margin-top: -2px;
     margin-bottom: 12px;
 }
 
@@ -902,7 +934,8 @@ div#containerWiz {
 }
 
 .main {
-    margin-top: 30px;
+    margin-top: -44px;
+    background: #fff;
 }
 
 .main-icons {
@@ -2748,6 +2781,120 @@ p img.right { float: right; margin-left: 1em; }
   }
 }
 
+.beer-slider {
+  display: inline-block;
+  position: relative;
+  overflow: hidden; }
+  .beer-slider *, .beer-slider:before, .beer-slider:after,
+  .beer-slider *:before,
+  .beer-slider *:after {
+    box-sizing: border-box; }
+  .beer-slider img {
+    vertical-align: bottom; }
+  .beer-slider > img {
+    max-width: 100%;
+    height: auto; }
+
+.beer-reveal {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 50%;
+  overflow: hidden;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.35s; }
+  .beer-reveal > :first-child {
+    width: 200%;
+    max-width: none; }
+  .beer-reveal > img:first-child {
+    height: auto; }
+
+.beer-range {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  margin: 0;
+  left: -1px;
+  width: calc(100% + 2px);
+  cursor: pointer;
+  -webkit-appearance: slider-horizontal !important;
+  -moz-appearance: none;
+  opacity: 0;
+  -ms-touch-action: auto;
+  touch-action: auto; }
+  .beer-range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 300vh; }
+  .beer-range::-moz-range-thumb {
+    -webkit-appearance: none;
+    height: 300vh; }
+  .beer-range::-ms-tooltip {
+    display: none; }
+
+.beer-handle {
+  position: absolute;
+  z-index: 2;
+  pointer-events: none;
+  opacity: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0);
+  color: #000;
+  background: rgba(255, 255, 255, 0.5);
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0);
+  transition: background 0.3s, box-shadow 0.3s, opacity 0.5s 0.25s; }
+  .beer-handle:before, .beer-handle:after {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    top: 50%;
+    border-top: solid 2px;
+    border-left: solid 2px;
+    transform-origin: 0 0; }
+  .beer-handle:before {
+    left: 10px;
+    transform: rotate(-45deg); }
+  .beer-handle:after {
+    right: 0;
+    transform: rotate(135deg); }
+
+.beer-range:focus ~ .beer-handle {
+  background: rgba(255, 255, 255, 0.85);
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.4); }
+
+.beer-slider[data-beer-label]:after,
+.beer-reveal[data-beer-label]:after {
+  content: attr(data-beer-label);
+  position: absolute;
+  top: 1.5rem;
+  line-height: 1;
+  padding: 0.5rem;
+  border-radius: 0.125rem;
+  background: rgba(255, 255, 255, 0.75); }
+
+.beer-slider[data-beer-label]:after {
+  right: 1.5rem; }
+
+.beer-reveal[data-beer-label]:after {
+  left: 1.5rem; }
+
+.beer-slider[data-beer-label=""]:after,
+.beer-reveal[data-beer-label=""]:after {
+  content: none; }
+
+.beer-ready .beer-reveal, .beer-ready .beer-handle {
+  opacity: 1; }
+
+
+
 </style>
     <link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css"/>
     <link rel="stylesheet" href="./assets/mystyles.css" type="text/css" media="screen">
@@ -2930,6 +3077,21 @@ function startReactions(elem) {
 }
 
 </script>
+<script src="./BeerSlider.js"></script>
+<script>
+  var slider = new BeerSlider( document.getElementById( "beer-slider" ) );
+</script>
 
 <script src="./guide.bundle.min.js"></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script>
+
+$.fn.BeerSlider = function ( options ) {
+    options = options || {};
+    return this.each(function() {
+      new BeerSlider(this, options);
+    });
+  };
+  $('.beer-slider').BeerSlider({start: 25});
+</script>
 </body></html>
