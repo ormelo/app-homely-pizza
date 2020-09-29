@@ -4,14 +4,13 @@
   "description": "A sample Node.js app using Express 4",
   "main": "index.js",
   "engines": {
-    "node": "12.7"
+    "node": "12.4"
   },
   "scripts": {
     "start": "node index.js",
     "watch": "webpack -d --watch",
     "webpack": "webpack",
-    "serve": "serve ./public",
-    "heroku-prebuild": "npm install --build-from-source"
+    "serve": "serve ./public"
   },
   "dependencies": {
     "@material-ui/core": "^4.5.1",
