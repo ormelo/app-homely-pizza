@@ -145,12 +145,12 @@
 .active-ans{
     background: blue;
     color: white;
-}   
+}
 .answer:hover{
     background: #26cf96;
     color: #fff;
 }
-  
+
 @-o-keyframes slide-in {
 0% {
     transform: translateX(400px);
@@ -161,7 +161,7 @@
     opacity: 1;
 }
 }
-  
+
 @-moz-keyframes slide-in {
 0% {
     transform: translateX(400px);
@@ -172,7 +172,7 @@
     opacity: 1;
 }
 }
-  
+
 @-webkit-keyframes slide-in {
 0% {
     transform: translateX(400px);
@@ -183,7 +183,7 @@
     opacity: 1;
 }
 }
-  
+
 @keyframes slide-in {
 0% {
     transform: translateX(400px);
@@ -251,13 +251,13 @@
   .question-answers-container .question{
     animation: slide-down 0.6s;
   }
-  
+
   @keyframes slide-down {
     from {
-     opacity: 0; 
+     opacity: 0;
      margin-top: 60px;
     }
-  
+
     to {
       opacity: 1;
       margin-top: 20px;
@@ -327,7 +327,7 @@
       to { background-position: -100px 0; }
   }
 
-    
+
   .image-animation-conatiner .main-image{
     width: 100%;
     height: 250px;
@@ -355,7 +355,7 @@
 	animation-timing-function: ease;
 	-webkit-animation-timing-function: ease;
 
-  }  
+  }
 
   @keyframes slide-bottom {
     0% {
@@ -387,11 +387,11 @@
   }
   @keyframes slide-bottom-left {
     from {
-     opacity: 0; 
+     opacity: 0;
      bottom: 20%;
      left: 20%;
     }
-  
+
     to {
       opacity: 1;
       bottom: 2%;
@@ -415,11 +415,11 @@
 
   @keyframes slide-top-left {
     from {
-     opacity: 0; 
+     opacity: 0;
      top: 20%;
      left: 20%;
     }
-  
+
     to {
       opacity: 1;
       top: 2%;
@@ -437,11 +437,11 @@
   }
   @keyframes slide-top-right {
     from {
-     opacity: 0; 
+     opacity: 0;
      top: 20%;
      right: 20%;
     }
-  
+
     to {
       opacity: 1;
       top: 2%;
@@ -534,7 +534,7 @@
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
   }
-  
+
   /* Modal Content */
   .custom-modal-content {
     background-color: #fefefe;
@@ -543,7 +543,7 @@
     border: 1px solid #888;
     width: 80%;
   }
-  
+
   /* The Close Button */
   .close {
     color: #aaaaaa;
@@ -551,7 +551,7 @@
     font-size: 28px;
     font-weight: bold;
   }
-  
+
   .close:hover,
   .close:focus {
     color: #000;
