@@ -4,14 +4,14 @@
   "description": "A sample Node.js app using Express 4",
   "main": "index.js",
   "engines": {
-    "node": "14.12.0"
+    "node": "8.11.3"
   },
   "scripts": {
     "start": "node index.js",
     "watch": "webpack -d --watch",
     "webpack": "webpack",
     "serve": "serve ./public",
-    "heroku-prebuild": "npm install -g node-gyp"
+    "heroku-prebuild": "rm -rf node_modules && npm --build-from-source install -g node-gyp"
   },
   "dependencies": {
     "@material-ui/core": "^4.5.1",
