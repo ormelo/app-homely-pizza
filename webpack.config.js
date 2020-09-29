@@ -3,7 +3,9 @@ var path = require('path');
 
 var BUILD_DIR = path.resolve(__dirname, 'public');
 var WIZ_DIR = path.resolve(__dirname, 'src/client/wizard');
-var UglifyJSPlugin = require('uglifyjs-webpack-plugin')
+var UglifyJSPlugin = require('uglifyjs-webpack-plugin');
+var CompressionPlugin = require('compression-webpack-plugin');
+var BrotliPlugin = require('brotli-webpack-plugin');
 
 var config = {
   entry: {
@@ -48,7 +50,20 @@ var config = {
       'process.env': {
         NODE_ENV: JSON.stringify('production')
       }
-    })
+    }),
+    new CompressionPlugin({
+     filename: '[path].gz[query]',
+     algorithm: 'gzip',
+     test: /\.js$|\.css$|\.html$/,
+     threshold: 10240,
+     minRatio: 0.8
+     }),
+     new BrotliPlugin({
+     asset: '[path].br[query]',
+     test: /\.js$|\.css$|\.html$/,
+     threshold: 10240,
+     minRatio: 0.8
+     })
   ]
 };
 

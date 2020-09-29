@@ -1,4 +1,5 @@
 var express = require('express');
+var shrinkRay = require('shrink-ray');
 var app = express();
 var path = require('path');
 var webpush = require('web-push');
@@ -11,7 +12,7 @@ var { Client } = require('pg');
 var { Pool } = require('pg');
 //var mergeImages = require('merge-images');
 var base64 = require('file-base64');
-const { Canvas, Image } = require('canvas');
+//const { Canvas, Image } = require('canvas');
 const pgClient = new Client({
       host: 'ec2-54-247-188-247.eu-west-1.compute.amazonaws.com',
       port: 5432,
@@ -125,6 +126,8 @@ io.on('connection', function(socket){
 
 app.set('port', (process.env.PORT || 5000));
 
+
+app.use(shrinkRay());
 app.use(express.static(__dirname + '/public'));
 
 // views is directory for all template files
@@ -759,7 +762,7 @@ app.get('/fit-test', function(request, response) {
   response.sendFile(path.resolve(__dirname, 'public', 'steps.html'));
 });
 
-app.get("/", function(request, response) {
+app.get("/index", function(request, response) {
   response.sendFile(path.resolve(__dirname, 'public', 'guide.html'));
 });
 
@@ -973,7 +976,7 @@ app.post('/homelyOrder', function(req, res) {
 
 })
 
-app.post('/selfie', function(req, res) {
+/*app.post('/selfie', function(req, res) {
 
        const selfie = req.body.dataURL;
        console.log('---selfie---', selfie);
@@ -990,16 +993,10 @@ app.post('/selfie', function(req, res) {
 
          response.data = selfie.split(",")[1];
 
-         /*var base64String = response.data;
-         let ts = Date.now();
-         base64.decode(selfie, ts+"selfie."+fileExtension, function(err, output) {
-           console.log('success');
-           console.log('output: ', output);
-         });*/
 
 
 
-         // Defaults
+
          var defaultOptions = {
          	format: 'image/png',
          	quality: 0.92,
@@ -1087,21 +1084,14 @@ app.post('/selfie', function(req, res) {
            .then((b64) => {console.log('merged');console.log('merged image: ', b64);res.send(b64);});
 
 
-         /*require("fs").writeFile(ts+"selfie."+fileExtension, response.data, 'base64',
-             function(err, data) {
-                if (err) {
-                       console.log('err', err);
-                  } else {
-                       console.log("selfie image: ",data);
-                   }
-             });*/
-
-
-   });
 
 
 
-   app.post('/closeUpPhoto', function(req, res) {
+   });*/
+
+
+
+   /*app.post('/closeUpPhoto', function(req, res) {
 
           const selfie = req.body.dataURL;
           const closeUpPhoto = req.body.closeUpPhotoDataURL;
@@ -1119,12 +1109,6 @@ app.post('/selfie', function(req, res) {
 
             response.data = selfie.split(",")[1];
 
-            /*var base64String = response.data;
-            let ts = Date.now();
-            base64.decode(selfie, ts+"selfie."+fileExtension, function(err, output) {
-              console.log('success');
-              console.log('output: ', output);
-            });*/
 
 
 
@@ -1216,17 +1200,10 @@ app.post('/selfie', function(req, res) {
               .then((b64) => {console.log('merged');console.log('merged image: ', b64);res.send(b64);});
 
 
-            /*require("fs").writeFile(ts+"selfie."+fileExtension, response.data, 'base64',
-                function(err, data) {
-                   if (err) {
-                          console.log('err', err);
-                     } else {
-                          console.log("selfie image: ",data);
-                      }
-                });*/
 
 
-      });
+
+      });*/
 
 app.post('/submitGetQuote', function(req, res) {
     var email = req.body.email,
