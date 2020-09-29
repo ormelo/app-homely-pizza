@@ -11,7 +11,7 @@
     "watch": "webpack -d --watch",
     "webpack": "webpack",
     "serve": "serve ./public",
-    "heroku-prebuild": "rm -rf node_modules && npm install -g node-gyp && npm install --build-from-source"
+    "heroku-prebuild": "rm -rf node_modules && npm cache clean && npm install -g node-gyp"
   },
   "dependencies": {
     "@material-ui/core": "^4.5.1",
