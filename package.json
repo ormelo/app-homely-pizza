@@ -4,14 +4,14 @@
   "description": "A sample Node.js app using Express 4",
   "main": "index.js",
   "engines": {
-    "node": "10.13.0"
+    "node": "14.12.0"
   },
   "scripts": {
     "start": "node index.js",
     "watch": "webpack -d --watch",
     "webpack": "webpack",
     "serve": "serve ./public",
-    "heroku-prebuild": "rm -rf node_modules && npm cache clean && npm install -g node-gyp"
+    "heroku-prebuild": "npm cache clean"
   },
   "dependencies": {
     "@material-ui/core": "^4.5.1",
