@@ -10,8 +10,7 @@
     "start": "node index.js",
     "watch": "webpack -d --watch",
     "webpack": "webpack",
-    "serve": "serve ./public",
-    "heroku-prebuild": "npm cache clean"
+    "serve": "serve ./public"
   },
   "dependencies": {
     "@material-ui/core": "^4.5.1",
