@@ -10,7 +10,8 @@
     "start": "node index.js",
     "watch": "webpack -d --watch",
     "webpack": "webpack",
-    "serve": "serve ./public"
+    "serve": "serve ./public",
+    "heroku-prebuild": "npm install -g node-gyp && npm install --build-from-source"
   },
   "dependencies": {
     "@material-ui/core": "^4.5.1",
