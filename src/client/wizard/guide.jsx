@@ -13,6 +13,7 @@ render(<Router>
             <div className="results">
                     <Route exact path="/" component={ShortlistsWithRouter} />
                 <Route path="/order/" component={ShortlistsWithRouter} />
+                <Route path="/redirect/" component={ShortlistsWithRouter} />
             </div>)} />
     </div>
 </Router>, document.getElementById('containerWiz'));

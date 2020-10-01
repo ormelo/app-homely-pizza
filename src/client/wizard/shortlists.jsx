@@ -473,6 +473,18 @@ class Shortlists extends Component {
         }
         http.send(params);
     }
+    zeroPrefix(min) {
+        return min < 10 ? '0'+min : min;
+    }
+    getDeliveryTime() {
+        var newDateObj = new Date(new Date().getTime() + 90*60000);
+        var lastDateObj = new Date(new Date().getTime() + 120*60000);
+        var startHours = newDateObj.getHours() > 12 ? newDateObj.getHours() % 12 : newDateObj.getHours();
+        var endHours = lastDateObj.getHours() > 12 ? lastDateObj.getHours() % 12 : lastDateObj.getHours();
+        var ampmstart = newDateObj.getHours() >= 12 ? 'PM' : 'AM';
+        var ampmend = lastDateObj.getHours() >= 12 ? 'PM' : 'AM';
+        return startHours+":"+this.zeroPrefix(newDateObj.getMinutes() < 50 ? Math.ceil(newDateObj.getMinutes() / 10) * 10 : 50)+ampmstart+" and "+endHours+":"+this.zeroPrefix(lastDateObj.getMinutes() < 50 ? Math.ceil(lastDateObj.getMinutes() / 10) * 10 : 50)+ampmend;
+    }
     render() {
         const {showLoader, results, starters, orderSummary, showCoupon, showSlot} = this.state;
         this.slotsAvailable = true;
@@ -564,7 +576,7 @@ class Shortlists extends Component {
                                     }
                                 })}
                                 <div className="summary-total">Total:  <span className="rupee">₹</span><span id="price">{Math.round(this.getTotal())}</span>
-                                    <div style={{fontSize: '14px', marginTop: '5px', marginLeft: '2px'}}>(incl GST + delivery charges)</div>
+                                    <div style={{fontSize: '13px', marginTop: '5px', marginLeft: '2px'}}>(incl GST + delivery charges)</div>
                                 </div>
                                 <div id="checkoutBtn" className="card-btn checkout" style={{bottom: '60px', marginTop: 'auto'}} onClick={()=>{document.getElementById('step1').classList.add('done');this.setState({showCoupon: false, activeStep: 2});document.getElementById('step2Circle').classList.add('active');}}>Next&nbsp;→
                                     <div className=""></div>
@@ -628,17 +640,13 @@ class Shortlists extends Component {
                                       <div className="section-one">
                                           <div className="top-right">
                                               <div className="usp-title" style={{left: '0',right: '0',margin: '0 auto'}}>
-                                                  <span className="title-ff" style={{top:'-14px', padding: '20px', lineHeight: '22px'}}>When do you want your pizza delivered?</span>
+                                                  <span className="title-ff" style={{top:'-14px', padding: '20px', lineHeight: '22px'}}>Your pizza will be delivered between <b>{this.getDeliveryTime()}</b></span>
                                                   <div className="slot">
-                                                    <label for="slots">Available slots:</label>
-                                                    <select name="slots" id="slots" onChange={()=>{this.selectSlot()}}>
-                                                      {
-                                                        slots && slots.map((slot) => {
-                                                            return (<option value={slot}>{slot}</option>)
-                                                        })
-                                                      }
-                                                    </select>
+                                                    <img src="../img/images/delivery.png" style={{width: '70px'}} />
                                                   </div>
+                                                  <span className="title-ff" style={{top: '130px', padding: '20px', lineHeight: '22px'}}>If you wish to pay using 'Cash on Delivery' method → <a className="action-link" href="/redirect/?payment_id=MOJO0629U05N96486745&payment_status=Credit&payment_request_id=388ed5d05e75428f9dc74327df7aa314">Click Here</a></span>
+                                                  <br/>
+                                                  <span className="title-ff" style={{top: '210px', padding: '20px', lineHeight: '22px', fontWeight: 'normal', fontSize: '15px'}}>or proceed to next step to make payment.</span>
                                               </div>
                                           </div>
                                       </div>
@@ -696,18 +704,18 @@ class Shortlists extends Component {
 
                                {location.href.indexOf('/redirect/')!=-1 && location.href.indexOf('&payment_status=Credit') !=-1 && <div className="card-container">
                                        <div className="status-title">
-                                           <img src="../../../img/images/ic_tickw.png" className="status-img" />
+                                           <br/>
                                            <span>Thanks for ordering your homely pizza!</span>
                                            <br/>
-                                           <img className="ic-delivery" src="../../../img/images/ic_delivery.png" />
-                                           <span className="small-title">Our delivery executive will get in touch with you as per your chosen delivery slot.</span>
+                                           <img className="ic-delivery" src="../img/images/ic_delivery.png" />
+                                           <br/>
+                                           <div className="small-title">Our delivery executive will get in touch with you once your pizza is dispatched.</div>
                                         </div>
 
                                </div>}
 
                                {location.href.indexOf('/redirect/')!=-1 && location.href.indexOf('&payment_status=Credit') == -1 && <div className="card-container">
-                                       <div className="status-title">
-                                           <img src="../../../img/images/ic_error.png" className="status-img error" />
+                                       <div className="status-title" style={{paddingTop: '38px'}}>
                                            <span>Your order is still pending</span>
                                            <br/><br/>
                                            <span className="small-title">Payment failed. Please retry by clicking the button below.</span>

@@ -1,5 +1,5 @@
 var express = require('express');
-var shrinkRay = require('shrink-ray');
+//var shrinkRay = require('shrink-ray');
 var app = express();
 var path = require('path');
 var webpush = require('web-push');
@@ -12,7 +12,7 @@ var { Client } = require('pg');
 var { Pool } = require('pg');
 //var mergeImages = require('merge-images');
 var base64 = require('file-base64');
-//const { Canvas, Image } = require('canvas');
+const { Canvas, Image } = require('canvas');
 const pgClient = new Client({
       host: 'ec2-54-247-188-247.eu-west-1.compute.amazonaws.com',
       port: 5432,
@@ -127,7 +127,7 @@ io.on('connection', function(socket){
 app.set('port', (process.env.PORT || 5000));
 
 
-app.use(shrinkRay());
+//app.use(shrinkRay());
 app.use(express.static(__dirname + '/public'));
 
 // views is directory for all template files
@@ -935,48 +935,7 @@ app.post('/paymentRequest', function(req, res) {
 })
 
 
-app.post('/homelyOrder', function(req, res) {
-
-    const mobile = req.body.mobile;
-    const name = req.body.name;
-    const orderId = orderid.generate();
-    let whitelisted = false;
-    const status = 'PENDING';
-    const summary = req.body.summary;
-    const deliverySlot = req.body.slot;
-    const price = req.body.price;
-    const address = req.body.address;
-    const pincode = req.body.pincode;
-    const referralCode = req.body.referralCode;
-
-    const client = new Client(dbConfig)
-    client.connect(err => {
-      if (err) {
-        console.error('error connecting', err.stack)
-      } else {
-        console.log('connected')
-
-
-            client.query("INSERT INTO \"public\".\"Homely_Order\"(mobile, name, order_id, status, delivery_slot, price, summary, address, pincode, referral_code) VALUES($1, $2, $3, $4, $5, $6, $7, $8, $9, $10)",
-                        [mobile, name, orderId, status, deliverySlot, price, summary, address, pincode, referralCode], (err, response) => {
-                              if (err) {
-                                console.log(err)
-                                 res.send("error");
-                              } else {
-                                console.log(response)
-                                 res.send('{"orderId":"'+orderId+'", "whitelisted":true}');
-                              }
-
-                            });
-
-
-      }
-    })
-
-
-})
-
-/*app.post('/selfie', function(req, res) {
+app.post('/selfie', function(req, res) {
 
        const selfie = req.body.dataURL;
        console.log('---selfie---', selfie);
@@ -993,10 +952,16 @@ app.post('/homelyOrder', function(req, res) {
 
          response.data = selfie.split(",")[1];
 
+         /*var base64String = response.data;
+         let ts = Date.now();
+         base64.decode(selfie, ts+"selfie."+fileExtension, function(err, output) {
+           console.log('success');
+           console.log('output: ', output);
+         });*/
 
 
 
-
+         // Defaults
          var defaultOptions = {
          	format: 'image/png',
          	quality: 0.92,
@@ -1084,126 +1049,58 @@ app.post('/homelyOrder', function(req, res) {
            .then((b64) => {console.log('merged');console.log('merged image: ', b64);res.send(b64);});
 
 
+         /*require("fs").writeFile(ts+"selfie."+fileExtension, response.data, 'base64',
+             function(err, data) {
+                if (err) {
+                       console.log('err', err);
+                  } else {
+                       console.log("selfie image: ",data);
+                   }
+             });*/
 
 
+   });
 
-   });*/
+app.post('/homelyOrder', function(req, res) {
 
+    const mobile = req.body.mobile;
+    const name = req.body.name;
+    const orderId = orderid.generate();
+    let whitelisted = false;
+    const status = 'PENDING';
+    const summary = req.body.summary;
+    const deliverySlot = req.body.slot;
+    const price = req.body.price;
+    const address = req.body.address;
+    const pincode = req.body.pincode;
+    const referralCode = req.body.referralCode;
 
-
-   /*app.post('/closeUpPhoto', function(req, res) {
-
-          const selfie = req.body.dataURL;
-          const closeUpPhoto = req.body.closeUpPhotoDataURL;
-          console.log('---selfie---', selfie);
-          let fileExtensionArr = selfie.split('base64,');
-
-          let fileExtension = fileExtensionArr[0].split('data:image/')[1].replace(';','');
-          //decode base64 image
-            var matches = selfie.match(/^data:([A-Za-z-+\/]+);base64,(.+)$/),
-              response = {};
-
-            if (matches.length !== 3) {
-              return new Error('Invalid input string');
-            }
-
-            response.data = selfie.split(",")[1];
-
-
+    const client = new Client(dbConfig)
+    client.connect(err => {
+      if (err) {
+        console.error('error connecting', err.stack)
+      } else {
+        console.log('connected')
 
 
-            // Defaults
-            var defaultOptions = {
-            	format: 'image/png',
-            	quality: 0.92,
-            	width: undefined,
-            	height: undefined,
-            	Canvas: undefined,
-            	crossOrigin: undefined
-            };
+            client.query("INSERT INTO \"public\".\"Homely_Order\"(mobile, name, order_id, status, delivery_slot, price, summary, address, pincode, referral_code) VALUES($1, $2, $3, $4, $5, $6, $7, $8, $9, $10)",
+                        [mobile, name, orderId, status, deliverySlot, price, summary, address, pincode, referralCode], (err, response) => {
+                              if (err) {
+                                console.log(err)
+                                 res.send("error");
+                              } else {
+                                console.log(response)
+                                 res.send('{"orderId":"'+orderId+'", "whitelisted":true}');
+                              }
 
-            // Return Promise
-            var mergeImages = function (sources, options) {
-            	if ( sources === void 0 ) sources = [];
-            	if ( options === void 0 ) options = {};
-
-            	return new Promise(function (resolve) {
-            	options = Object.assign({}, defaultOptions, options);
-
-            	// Setup browser/Node.js specific variables
-            	var canvas = options.Canvas ? new options.Canvas() : window.document.createElement('canvas');
-            	var Image = options.Image || window.Image;
-
-            	// Load sources
-            	var images = sources.map(function (source) { return new Promise(function (resolve, reject) {
-
-            	    console.log('--source--', source);
-            		// Convert sources to objects
-            		if (source.constructor.name !== 'Object') {
-            			source = { src: source };
-            		}
-
-            		// Resolve source and img when loaded
-            		var img = new Image();
-            		img.crossOrigin = options.crossOrigin;
-            		img.onerror = function () { return reject(new Error('Couldn\'t load image')); };
-            		img.onload = function () { return resolve(Object.assign({}, source, { img: img })); };
-            		img.src = source.src;
-            	}); });
-
-            	// Get canvas context
-            	var ctx = canvas.getContext('2d');
-
-            	// When sources have loaded
-            	resolve(Promise.all(images)
-            		.then(function (images) {
-            			// Set canvas dimensions
-            			var getSize = function (dim) { return options[dim] || Math.max.apply(Math, images.map(function (image) { return image.img[dim]; })); };
-            			canvas.width = getSize('width');
-            			canvas.height = getSize('height');
-
-            			// Draw images to canvas
-            			images.forEach(function (image) {
-            				ctx.globalAlpha = image.opacity ? image.opacity : 1;
-            				return ctx.drawImage(image.img, image.x || 0, image.y || 0);
-            			});
-
-            			if (options.Canvas && options.format === 'image/jpeg') {
-            				// Resolve data URI for node-canvas jpeg async
-            				return new Promise(function (resolve, reject) {
-            					canvas.toDataURL(options.format, {
-            						quality: options.quality,
-            						progressive: false
-            					}, function (err, jpeg) {
-            						if (err) {
-            							reject(err);
-            							return;
-            						}
-            						resolve(jpeg);
-            					});
-            				});
-            			}
-
-            			// Resolve all other data URIs sync
-            			return canvas.toDataURL(options.format, options.quality);
-            		}));
-            });
-            };
+                            });
 
 
-
-            mergeImages(['public/img/images/sbg.jpg',{ src: closeUpPhoto.replace(/ /g, "+"), x: 930, y: 440 }, { src: selfie.replace(/ /g, "+"), x:430, y: 520 }],
-            {
-              Canvas: Canvas,
-              Image: Image
-            })
-              .then((b64) => {console.log('merged');console.log('merged image: ', b64);res.send(b64);});
+      }
+    })
 
 
-
-
-
-      });*/
+})
 
 app.post('/submitGetQuote', function(req, res) {
     var email = req.body.email,
