@@ -1,5 +1,5 @@
 var express = require('express');
-var shrinkRay = require('shrink-ray');
+//var shrinkRay = require('shrink-ray');
 var app = express();
 var path = require('path');
 var webpush = require('web-push');
@@ -127,7 +127,7 @@ io.on('connection', function(socket){
 app.set('port', (process.env.PORT || 5000));
 
 
-app.use(shrinkRay());
+//app.use(shrinkRay());
 app.use(express.static(__dirname + '/public'));
 
 // views is directory for all template files
