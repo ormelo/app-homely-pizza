@@ -126,7 +126,6 @@ io.on('connection', function(socket){
 
 app.set('port', (process.env.PORT || 5000));
 
-
 app.use(shrinkRay());
 app.use(express.static(__dirname + '/public'));
 
