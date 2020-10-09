@@ -1,6 +1,6 @@
 {
-    "name": "Stint24 Push Notification",
-    "short_name": "stint24",
+    "name": "Homely50 Push Notification",
+    "short_name": "homely50",
     "gcm_sender_id": "539876079581",
     "start_url": "/",
     "display": "standalone",

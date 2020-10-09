@@ -11,29 +11,29 @@
       "address": "129, Siddapura, Whitefield, Bengaluru, Karnataka, India, Varthur Main Road, Bengaluru",
       "qna": [
         {
-          "defaultPrice": 330,
+          "defaultPrice": 305,
           "responses": [
             {
               "topic": "Large",
-              "pricing": {"Thin":  330, "Thick":  340}
+              "pricing": {"Thin":  305, "Thick":  315}
             },
             {
               "topic": "Medium",
-              "pricing": {"Thin":  320, "Thick":  330}
+              "pricing": {"Thin":  295, "Thick":  305}
             },
             {
               "topic": "Small",
-              "pricing": {"Thin":  300, "Thick":  320}
+              "pricing": {"Thin":  275, "Thick":  295}
             }
           ],
           "crust": [
             {
               "topic": "Thin",
-              "pricing": {"Large":  330, "Medium":  320, "Small":  300}
+              "pricing": {"Large":  305, "Medium":  295, "Small":  275}
             },
             {
               "topic": "Thick",
-              "pricing": {"Large":  340, "Medium":  330, "Small":  320}
+              "pricing": {"Large":  315, "Medium":  305, "Small":  295}
             }
           ]
         }

@@ -485,6 +485,24 @@ class Shortlists extends Component {
         var ampmend = lastDateObj.getHours() >= 12 ? 'PM' : 'AM';
         return startHours+":"+this.zeroPrefix(newDateObj.getMinutes() < 50 ? Math.ceil(newDateObj.getMinutes() / 10) * 10 : 50)+ampmstart+" and "+endHours+":"+this.zeroPrefix(lastDateObj.getMinutes() < 50 ? Math.ceil(lastDateObj.getMinutes() / 10) * 10 : 50)+ampmend;
     }
+    setCOD() {
+        var http = new XMLHttpRequest();
+                var url = '/setCOD';
+                var orderId = 0;
+                orderId = localStorage.getItem('orderId') != null ? localStorage.getItem('orderId') : orderId;
+                var params = 'orderId='+orderId;
+                http.open('POST', url, true);
+                http.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+
+                http.onreadystatechange = function() {//Call a function when the state changes.
+                    if(http.readyState == 4 && http.status == 200) {
+                        console.log('post response:', http.responseText);
+                        var res = http.responseText;
+                        location.href = '/redirect/?payment_id=MOJO0629U05N96486745&payment_status=Credit&payment_request_id=388ed5d05e75428f9dc74327df7aa314';
+                    }
+                }
+                http.send(params);
+    }
     render() {
         const {showLoader, results, starters, orderSummary, showCoupon, showSlot} = this.state;
         this.slotsAvailable = true;
@@ -644,7 +662,7 @@ class Shortlists extends Component {
                                                   <div className="slot">
                                                     <img src="../img/images/delivery.png" style={{width: '70px'}} />
                                                   </div>
-                                                  <span className="title-ff" style={{top: '130px', padding: '20px', lineHeight: '22px'}}>If you wish to pay using 'Cash on Delivery' method → <a className="action-link" href="/redirect/?payment_id=MOJO0629U05N96486745&payment_status=Credit&payment_request_id=388ed5d05e75428f9dc74327df7aa314">Click Here</a></span>
+                                                  <span className="title-ff" style={{top: '130px', padding: '20px', lineHeight: '22px'}}>If you wish to pay using 'Cash on Delivery' method → <a className="action-link" onClick={()=>{this.setCOD();}}>Click Here</a></span>
                                                   <br/>
                                                   <span className="title-ff" style={{top: '210px', padding: '20px', lineHeight: '22px', fontWeight: 'normal', fontSize: '15px'}}>or proceed to next step to make payment.</span>
                                               </div>

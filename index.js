@@ -12,7 +12,7 @@ var { Client } = require('pg');
 var { Pool } = require('pg');
 //var mergeImages = require('merge-images');
 var base64 = require('file-base64');
-const { Canvas, Image } = require('canvas');
+//const { Canvas, Image } = require('canvas');
 const pgClient = new Client({
       host: 'ec2-54-247-188-247.eu-west-1.compute.amazonaws.com',
       port: 5432,
@@ -815,6 +815,29 @@ app.get("/redirect/", function(request, response) {
   response.sendFile(path.resolve(__dirname, 'public', 'shortlists.html'));
 });
 
+app.post("/setCOD", function(request, response) {
+  let paymentStatus = 'COD';
+  let orderId = request.body.orderId;
+
+  const client = new Client(dbConfig)
+              client.connect(err => {
+                if (err) {
+                  console.error('error connecting', err.stack)
+                } else {
+                  console.log('connected')
+                  client.query("UPDATE \"public\".\"Homely_Order\" set status = $1 WHERE order_id = $2",
+                      [paymentStatus, orderId], (err, res) => {
+                            if (err) {
+                              console.log(err);
+                            } else {
+                              console.log(response);
+                            }
+                            response.send('success');
+                          });
+                }
+              })
+});
+
 app.get("/credits/", function(request, response) {
   response.sendFile(path.resolve(__dirname, 'public', 'shortlists.html'));
 });
@@ -935,7 +958,7 @@ app.post('/paymentRequest', function(req, res) {
 })
 
 
-app.post('/selfie', function(req, res) {
+/*app.post('/selfie', function(req, res) {
 
        const selfie = req.body.dataURL;
        console.log('---selfie---', selfie);
@@ -951,13 +974,6 @@ app.post('/selfie', function(req, res) {
          }
 
          response.data = selfie.split(",")[1];
-
-         /*var base64String = response.data;
-         let ts = Date.now();
-         base64.decode(selfie, ts+"selfie."+fileExtension, function(err, output) {
-           console.log('success');
-           console.log('output: ', output);
-         });*/
 
 
 
@@ -1049,17 +1065,9 @@ app.post('/selfie', function(req, res) {
            .then((b64) => {console.log('merged');console.log('merged image: ', b64);res.send(b64);});
 
 
-         /*require("fs").writeFile(ts+"selfie."+fileExtension, response.data, 'base64',
-             function(err, data) {
-                if (err) {
-                       console.log('err', err);
-                  } else {
-                       console.log("selfie image: ",data);
-                   }
-             });*/
 
 
-   });
+   });*/
 
 app.post('/homelyOrder', function(req, res) {
 
