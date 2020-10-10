@@ -1099,12 +1099,7 @@ app.post('/homelyOrder', function(req, res) {
                               } else {
                                 console.log(response);
                                 axios
-                                  .post('https://api.pushalert.co/rest/v1/send', {
-                                    title: 'Order Received',
-                                    message: 'New Pizza% Order',
-                                    icon: 'https://www.homely.pizza/rounded.png',
-                                    url: 'https://www.homely.pizza'
-                                  }, {headers: {'Authorization': 'api_key=39bd28ceccf517b11a215263b8111b3b'}})
+                                  .post('https://api.pushalert.co/rest/v1/send', 'title=Order%20Received&message=New%20Pizza%20Order&icon=https://www.homely.pizza/rounded.pngg&url=https://www.homely.pizza', {headers: {'Authorization': 'api_key=39bd28ceccf517b11a215263b8111b3b'}})
                                   .then(res => {
                                     console.log('Pushalert success: ', res);
                                   })
