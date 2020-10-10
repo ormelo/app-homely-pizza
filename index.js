@@ -1104,7 +1104,7 @@ app.post('/homelyOrder', function(req, res) {
                                     message: 'New Pizza% Order',
                                     icon: 'https://www.homely.pizza/rounded.png',
                                     url: 'https://www.homely.pizza'
-                                  }, {headers: {'Authorization': '39bd28ceccf517b11a215263b8111b3b'}})
+                                  }, {headers: {'Authorization': 'api_key=39bd28ceccf517b11a215263b8111b3b'}})
                                   .then(res => {
                                     console.log('Pushalert success: ', res);
                                   })
