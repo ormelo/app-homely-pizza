@@ -61,7 +61,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/client/wizard/shortlists.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="110">
+            <state relative-caret-position="846">
               <caret line="452" column="5" selection-start-line="452" selection-start-column="5" selection-end-line="452" selection-end-column="5" />
             </state>
           </provider>
@@ -70,8 +70,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="320">
-              <caret line="129" selection-start-line="129" selection-end-line="129" />
+            <state relative-caret-position="392">
+              <caret line="1101" column="174" selection-start-line="1101" selection-start-column="174" selection-end-line="1101" selection-end-column="174" />
             </state>
           </provider>
         </entry>
@@ -108,8 +108,8 @@
       <find>homelyOrd</find>
       <find>axios</find>
       <find>homelyO</find>
-      <find>sorry y</find>
       <find>shrinkRay</find>
+      <find>sorry y</find>
     </findStrings>
     <replaceStrings>
       <replace>margin-top</replace>
@@ -516,7 +516,14 @@
       <option name="project" value="LOCAL" />
       <updated>1602309339739</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="initial commit">
+      <created>1602321707356</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1602321707356</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -678,15 +685,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/client/wizard/shortlists.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
+        <state relative-caret-position="846">
           <caret line="452" column="5" selection-start-line="452" selection-start-column="5" selection-end-line="452" selection-end-column="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="129" selection-start-line="129" selection-end-line="129" />
+        <state relative-caret-position="392">
+          <caret line="1101" column="174" selection-start-line="1101" selection-start-column="174" selection-end-line="1101" selection-end-column="174" />
         </state>
       </provider>
     </entry>
