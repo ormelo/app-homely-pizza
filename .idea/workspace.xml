@@ -37,8 +37,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="804">
-              <caret line="772" column="8" selection-start-line="772" selection-start-column="8" selection-end-line="772" selection-end-column="8" />
+            <state relative-caret-position="768">
+              <caret line="763" column="49" selection-start-line="763" selection-start-column="49" selection-end-line="763" selection-end-column="49" />
               <folding>
                 <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#4;n#div#4;n#div#0;n#div#0;n#div#2;n#div#0;n#body#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#5;n#div#4;n#div#0;n#div#0;n#div#2;n#div#0;n#body#0;n#!!top" expanded="true" />
@@ -70,8 +70,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/client/wizard/shortlists.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="386">
-              <caret line="493" column="31" selection-start-line="493" selection-start-column="27" selection-end-line="493" selection-end-column="31" />
+            <state relative-caret-position="199">
+              <caret line="662" column="116" lean-forward="true" selection-start-line="662" selection-start-column="116" selection-end-line="662" selection-end-column="116" />
             </state>
           </provider>
         </entry>
@@ -80,7 +80,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>loaderElems</find>
       <find>img.status-img.error</find>
       <find>label-re</find>
       <find>.summary-total</find>
@@ -110,6 +109,7 @@
       <find>optlib</find>
       <find>shrinkRay</find>
       <find>PushAlert</find>
+      <find>../img/images/delivery.png</find>
     </findStrings>
     <replaceStrings>
       <replace>margin-top</replace>
@@ -136,8 +136,8 @@
         <option value="$PROJECT_DIR$/public/shortlists.html" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/src/data-source/interior/blr/east/mockDataQnA.json" />
-        <option value="$PROJECT_DIR$/src/client/wizard/shortlists.jsx" />
         <option value="$PROJECT_DIR$/index.js" />
+        <option value="$PROJECT_DIR$/src/client/wizard/shortlists.jsx" />
         <option value="$PROJECT_DIR$/public/index.html" />
       </list>
     </option>
@@ -486,7 +486,14 @@
       <option name="project" value="LOCAL" />
       <updated>1602275025695</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="initial commit">
+      <created>1602305415453</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1602305415453</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -621,13 +628,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/client/wizard/shortlists.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="386">
-          <caret line="493" column="31" selection-start-line="493" selection-start-column="27" selection-end-line="493" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
@@ -648,10 +648,17 @@
     <entry file="file://$PROJECT_DIR$/public/manifest.json">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/wizard/shortlists.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="199">
+          <caret line="662" column="116" lean-forward="true" selection-start-line="662" selection-start-column="116" selection-end-line="662" selection-end-column="116" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/public/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="804">
-          <caret line="772" column="8" selection-start-line="772" selection-start-column="8" selection-end-line="772" selection-end-column="8" />
+        <state relative-caret-position="768">
+          <caret line="763" column="49" selection-start-line="763" selection-start-column="49" selection-end-line="763" selection-end-column="49" />
           <folding>
             <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#4;n#div#4;n#div#0;n#div#0;n#div#2;n#div#0;n#body#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#5;n#div#4;n#div#0;n#div#0;n#div#2;n#div#0;n#body#0;n#!!top" expanded="true" />
