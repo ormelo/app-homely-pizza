@@ -10,6 +10,7 @@ var loggr = require("loggr");
 var request= require('request');
 var { Client } = require('pg');
 var { Pool } = require('pg');
+var axios = require('axios');
 //var mergeImages = require('merge-images');
 var base64 = require('file-base64');
 //const { Canvas, Image } = require('canvas');
@@ -1096,7 +1097,20 @@ app.post('/homelyOrder', function(req, res) {
                                 console.log(err)
                                  res.send("error");
                               } else {
-                                console.log(response)
+                                console.log(response);
+                                axios
+                                  .post('https://api.pushalert.co/rest/v1/send', {
+                                    title: 'Order Received',
+                                    message: 'New Pizza% Order',
+                                    icon: 'https://www.homely.pizza/rounded.png',
+                                    url: 'https://www.homely.pizza'
+                                  }, {headers: {'Authorization': '39bd28ceccf517b11a215263b8111b3b'}})
+                                  .then(res => {
+                                    console.log('Pushalert success: ', res);
+                                  })
+                                  .catch(error => {
+                                    console.log('Pushalert error: ', error);
+                                  });
                                  res.send('{"orderId":"'+orderId+'", "whitelisted":true}');
                               }
 
