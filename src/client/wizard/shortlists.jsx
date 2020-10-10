@@ -430,10 +430,11 @@ class Shortlists extends Component {
 
         http.onreadystatechange = function() {//Call a function when the state changes.
             if(http.readyState == 4 && http.status == 200) {
+                this.sendNotification();
                 console.log('order creation post response:', http.responseText);
                 var res = http.responseText;
                 if(!pincode.includes('560') || !this.slotsAvailable) {
-                    alert('Sorry, our slots are full. Pls check back again later!');
+                    alert('Sorry, your area is not serviceable yet..');
                     location.href = '/';
                 }
                 if(res != null){
@@ -450,6 +451,14 @@ class Shortlists extends Component {
         }.bind(this);
         http.send(params);
         fbq('track', 'InitiateCheckout');
+    }
+    sendNotification() {
+        var http = new XMLHttpRequest();
+        var url = 'https://api.pushalert.co/rest/v1/send';
+        var params = 'title=Order%20Received&message=New%20Pizza%20Order&icon=https://www.homely.pizza/rounded.png&url=https://www.homely.pizza';
+        http.open('POST', url, true);
+        http.setRequestHeader('Authorization', 'api_key=39bd28ceccf517b11a215263b8111b3b');
+        http.send(params);
     }
     makePaymentRequest() {
         var http = new XMLHttpRequest();

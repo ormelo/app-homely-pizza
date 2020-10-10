@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2fbbff25-f33b-4a81-aaf6-38e53390f867" name="Default Changelist" comment="">
+    <list default="true" id="2fbbff25-f33b-4a81-aaf6-38e53390f867" name="Default Changelist" comment="initial commit">
+      <change afterPath="$PROJECT_DIR$/public/rounded.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/.gz" beforeDir="false" afterPath="$PROJECT_DIR$/public/.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/guide.bundle.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/guide.bundle.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/guide.bundle.min.js.br" beforeDir="false" afterPath="$PROJECT_DIR$/public/guide.bundle.min.js.br" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/wizard/shortlists.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/wizard/shortlists.jsx" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,11 +20,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="303">
-              <caret line="128" selection-start-line="128" selection-end-line="128" />
+            <state relative-caret-position="17">
+              <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
             </state>
           </provider>
         </entry>
@@ -34,7 +38,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="768">
@@ -70,8 +74,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/client/wizard/shortlists.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="199">
-              <caret line="662" column="116" lean-forward="true" selection-start-line="662" selection-start-column="116" selection-end-line="662" selection-end-column="116" />
+            <state relative-caret-position="682">
+              <caret line="456" column="56" selection-start-line="456" selection-start-column="56" selection-end-line="456" selection-end-column="56" />
             </state>
           </provider>
         </entry>
@@ -80,11 +84,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>img.status-img.error</find>
-      <find>label-re</find>
-      <find>.summary-total</find>
-      <find>(incl GST + delivery charges)</find>
-      <find>/redi</find>
       <find>logo</find>
       <find>.step-input</find>
       <find>file-b</find>
@@ -107,9 +106,14 @@
       <find>paymentRe</find>
       <find>all the</find>
       <find>optlib</find>
-      <find>shrinkRay</find>
       <find>PushAlert</find>
       <find>../img/images/delivery.png</find>
+      <find>paymentReque</find>
+      <find>/ord</find>
+      <find>order</find>
+      <find>sendNotification</find>
+      <find>shrinkRay</find>
+      <find>sorry y</find>
     </findStrings>
     <replaceStrings>
       <replace>margin-top</replace>
@@ -136,15 +140,16 @@
         <option value="$PROJECT_DIR$/public/shortlists.html" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/src/data-source/interior/blr/east/mockDataQnA.json" />
-        <option value="$PROJECT_DIR$/index.js" />
-        <option value="$PROJECT_DIR$/src/client/wizard/shortlists.jsx" />
         <option value="$PROJECT_DIR$/public/index.html" />
+        <option value="$PROJECT_DIR$/src/client/wizard/shortlists.jsx" />
+        <option value="$PROJECT_DIR$/index.js" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="y" value="24" />
-    <option name="width" value="1767" />
+    <option name="x" value="87" />
+    <option name="y" value="23" />
+    <option name="width" value="1833" />
     <option name="height" value="1105" />
   </component>
   <component name="ProjectView">
@@ -493,7 +498,14 @@
       <option name="project" value="LOCAL" />
       <updated>1602305415453</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="initial commit">
+      <created>1602305955233</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1602305955233</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -635,25 +647,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="303">
-          <caret line="128" selection-start-line="128" selection-end-line="128" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/sw.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/public/manifest.json">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/client/wizard/shortlists.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="662" column="116" lean-forward="true" selection-start-line="662" selection-start-column="116" selection-end-line="662" selection-end-column="116" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/index.html">
       <provider selected="true" editor-type-id="text-editor">
@@ -664,6 +662,20 @@
             <element signature="n#style#0;n#div#5;n#div#4;n#div#0;n#div#0;n#div#2;n#div#0;n#body#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#a#0;n#div#4;n#div#0;n#div#0;n#div#2;n#div#0;n#body#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/wizard/shortlists.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="682">
+          <caret line="456" column="56" selection-start-line="456" selection-start-column="56" selection-end-line="456" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
         </state>
       </provider>
     </entry>
