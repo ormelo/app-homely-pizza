@@ -2,7 +2,162 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2fbbff25-f33b-4a81-aaf6-38e53390f867" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/public_homely/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public_homely/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/client/stint/course.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/client/stint/courseList.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/client/stint/list.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/compression-webpack-plugin/content-v2/sha512/11/de/9c6a6e7388da620f4828dcdb213c251827a7f83a8ca0e7780186e5a953deeb0124e5779e2ad4f7770000e428e7cddc75198c9f4ebca31a63c86780646b4f" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/compression-webpack-plugin/content-v2/sha512/12/b4/3cea5ad006a220e31729ec4c186fb63646205e05be09323bb5a407b0fff7442db069a1510314fbd2811e80e5f73c1ed213d6a41cc910ab6d47da1e7fbd17" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/compression-webpack-plugin/content-v2/sha512/13/b5/606689219e2db39a837d202d2ce00fa8325791fbffce4bc679ec1c561165c2b5d92dca4bf92059588696a1ac3b25acda5c1101b3f9a47d57e501cba4b38f" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/compression-webpack-plugin/content-v2/sha512/18/bf/cbae93a55c73c3f1a0e02d98fe075c0c9f21fd8ded5eeded76e6e007b844e0a5ed609d999a9c5525fdc5818727b256d13853c7ec357395d9c2419733330d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/compression-webpack-plugin/content-v2/sha512/35/cf/51a5b44908dbbafb6c4960b2cb508af21191271e432c2f5cc7a4fc015d9a00b09cb5ea039eb64ee79e38aec98c93e4e64b123a58e3d735ac64ddb5e9827d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/compression-webpack-plugin/content-v2/sha512/36/84/1ae0cedad92ed7b0ad002bda3f86c96817078f037732b73feadff649125990ccbd766b1c11fd054d70d01b6961f4e9e8fcf9344619497c26854fa26ff7d6" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/compression-webpack-plugin/content-v2/sha512/3a/46/f147af8d34bd90eb672c38d12e5b4f72ab75ae812894f8168e80753f075575a8b574dbfc302ca0100cb3adfc6094d3b9b02721097ba2786d3a9334ca3ad6" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/compression-webpack-plugin/content-v2/sha512/58/7b/f4106af31e8e25b5ce0747bd8de9427a5227e5232e67dc51719508f4d173ffcad2bbdc325b2aa25593b7cac3122669c8b51366077ffcec81bf588361fda0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/compression-webpack-plugin/content-v2/sha512/70/12/d6323b48a99f2f40fad5893f08ddaa3b7806bae55105247c9c7c04f5e515797c7f9a8d893d4b81dbd08e30d95a76feecc4c80c42136c881e48e1d7d6d0e3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/compression-webpack-plugin/content-v2/sha512/94/c1/7399d61b67422a9fe36bf83c0c23fed8ccef23c9a4fc9748cb8c5d1bf6684b97646f8b49fe406089a328ecd7ddab76093342f5d292e65d965ba6e636d504" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/compression-webpack-plugin/content-v2/sha512/b1/49/4f7284094d9aa8a44f7816e42ff7533952e2a1cbda68ffb6079fd73250b52145c698f34858d7cdc1810eed61a1b75e6709c560ac02ccdc6a0f052e66d0f1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/compression-webpack-plugin/content-v2/sha512/bf/33/3975d47ba1af85c328472a727aab6a8107369d2258eb25583362ddad01a2e3c4ac992a69ad9a0979fea7219c6c6f1a240aa71fa14394806f378f114941d3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/compression-webpack-plugin/content-v2/sha512/ca/51/db78eda61490147591d67fddb29829c57b00fcfc39c99e95c8e3f484346370aaa1cdebbd25c9e354974e17882979b7fd60777d609d48f7bb477bde4cf5a7" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/compression-webpack-plugin/content-v2/sha512/f4/af/64c90d4705fa2e6eff549e37d2040bb32d5d409b944ae7dfc4081afe5f3beb2227a695bf03a634e490f13c8bb4fe06b66688fe1200a126876ce8cde007fd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/compression-webpack-plugin/index-v5/11/6a/076aa5de09f5ef894d2f45b8414c7570ecd59bd674f36be8e2bf7b71eeb5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/compression-webpack-plugin/index-v5/18/f9/58012061fea8348290b528dc4e9d57667154c5153d7c07601dad52f7b284" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/compression-webpack-plugin/index-v5/28/12/a3c11f1e7cae686e7a3b3a77ae22090ad810b0ed33d02ec55500d02ee2a3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/compression-webpack-plugin/index-v5/4d/eb/a0b2a4aa327ec810c7eb11816dfc0569a360a98f3aa9dd0edec79fa58068" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/compression-webpack-plugin/index-v5/75/69/959fe29aaf136b951c8d07613f9cc561f601e0ab348f3347bf780bce0338" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/compression-webpack-plugin/index-v5/83/ef/ceb881932685142ec44d115a88ed640f905544db7b906ec92a9613cd7881" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/compression-webpack-plugin/index-v5/84/50/dbe1669d367d45d74f4d367ebd7f66f372f71e592ea2e4dadaff6c6eec5e" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/compression-webpack-plugin/index-v5/97/8b/50d1c8524d695e9c2f6fa826e4ec41426ea08f84b1897a02a7553dcd1fa1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/compression-webpack-plugin/index-v5/a0/81/f643802434f8ecf66bdea8a7dc1173887c40b81aedf57a8217fa6e564644" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/compression-webpack-plugin/index-v5/ab/b8/0b4de53886a4a009b9cdc8ddd39d2f876adaad8eac5d0a664b43629cf1b9" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/compression-webpack-plugin/index-v5/b3/67/ee2a1e10255c4348296132cac16bc17d7bc45158f90575b69f9561f75f93" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/compression-webpack-plugin/index-v5/ba/89/d3e58cb989748d5149324bcdc4c65abaf4f6ab053fb372c595d1a02d086f" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/compression-webpack-plugin/index-v5/d3/9c/27aa442763e7510995b46a86df9244b74a7759afe0d5f8ca22dfb1885072" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/compression-webpack-plugin/index-v5/f0/49/2bd07620c7f2510b330deb24e0b60b3e722c263f928b3401fc4d9e7640e4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/terser-webpack-plugin/content-v2/sha512/08/ac/23ca19532fe91f6286e92456d3093324679257a4db9f109e6eef98406aff1175693364111601f8f5a9e724f1837c10e2cd58a338f7dec3dd28298ea998e4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/terser-webpack-plugin/content-v2/sha512/0a/27/bc6be95bca3199f581650c671b08c740637557fbc20e9a10bfb2187b241605362da56c69daf77daafdb613f474412e7241b4928b0e0c5250f2e5efc183e8" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/terser-webpack-plugin/content-v2/sha512/11/98/db8341ed405188d816eb5e780742bb372d54654dc98c5c9c602b336813201cdde4304ec771c02fce48142f2e843e7eedcb4ef702c5a955e48fca02bce648" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/terser-webpack-plugin/content-v2/sha512/18/ee/1d08ea521ef52ca93b36268abc7973353e0118b771a9ecb884a6922d17ce35ea7948f04d6c28e3b7aa11e0ede261abd9cb0c23a13fc54ff96e5768c73410" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/terser-webpack-plugin/content-v2/sha512/22/9e/bd56ffd3c55faa7ac9f2f313c65ed44872774c4f7837a9f9ba7d3778be12a26c421bd68008a504ac61aa8e8c87a78185cfa133835f7a0f6bb06a7d3cae67" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/terser-webpack-plugin/content-v2/sha512/2a/e7/454d52be62d62d35542f109bb64c8e85eeccbf9bfba73cbb468691b58917d1b0a20ee8d2483231f11733b04994a77de8b39d5ab73702a5a2914a35599b80" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/terser-webpack-plugin/content-v2/sha512/4c/25/feec88c91be699c31504ff0cf5d6ccaf22b8e3db670e79074857af6077f88272fe0028636bdf5e4b21296456563941a9af90cbb87aa1d91e70a06093a366" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/terser-webpack-plugin/content-v2/sha512/4d/0d/d375fecb668c44a467d52cec42398b908cd4153207eb3035c8b6d589fb01678a2bf36565016f80db375046ffa0c7357e6baf64c5a5ed8d22f1eb510a77b9" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/terser-webpack-plugin/content-v2/sha512/5f/83/02cbf5c77df7726829a0cc14d70c291ccdb5f8a55e7735136d0c71e25310088c99b995a6f11d5d71bac8fd6dd53364807846555433ff6300c57099bb504f" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/terser-webpack-plugin/content-v2/sha512/97/87/4819c48557b9bf2f3a663aad35451ae7e361d24c1b1376b74d44fd88f5db59fc3a08c12b9677f3cd16c609fbfabb428695d736c51dd3618c9666837e1e39" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/terser-webpack-plugin/content-v2/sha512/9e/5c/d0e49ad919e1f58a98a74e750c592401a48066d47eaeaad3f22e15d26d57fdffc5ee39e3e767da954214603fd525962d525b70d9184218855b2ba88a8cf3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/terser-webpack-plugin/content-v2/sha512/a5/d6/676db354a9d739bf5c594b3fc198f459d076277537a80537d84dae3d1a6adc57c090213329d787d3f1338855b0c82fdd9f8cd04bc8a1ad0319cffda517a4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/terser-webpack-plugin/content-v2/sha512/dc/3f/29a5f3826b3c25bf77fbc680e14466f2b3b87c3488f03dca3c6a86034f58d564c58053b56327306f97afe306fc7352bb29299b6382dbcbf030503399aae3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/terser-webpack-plugin/content-v2/sha512/f1/08/22e04478d633f5c669db4e92503f78026ecfb6144d82c9bea7caabad4ff6139eeb21917bdf188e12cdccac7a7629bf6b295407986239211c48bfd4b61f39" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/terser-webpack-plugin/index-v5/00/65/cf732dd68362aa084f4dfca1492cf4ba66ed06aa74bbca5bf8ad15a7b6e0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/terser-webpack-plugin/index-v5/0b/24/a68a5a903feefe43bdfbd4df8b9c9487e39a1aaafac0ae388f6bda28ae87" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/terser-webpack-plugin/index-v5/25/90/1643d135099b094fa350f7092916887e082645dcc19cf9fdefe9e2048d8c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/terser-webpack-plugin/index-v5/2d/b4/464c2496391f08818aaabedf00d04a11050060e105c2640968f971b8b810" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/terser-webpack-plugin/index-v5/2f/16/21a78eb9ed744a7071c2f50525c24f2bd53137e34245e548b6765dc77b6f" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/terser-webpack-plugin/index-v5/57/e0/aa3af25de580606ccf366f4d2cec86b6616d2e091c6e511f6104420b766c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/terser-webpack-plugin/index-v5/67/63/685ab99d833e6315182ec8fc42709f72e05f417724efa0a15f438fb43da7" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/terser-webpack-plugin/index-v5/6d/78/46c65b76f05f37f5fc613d2e4eac7395b56e395bcb164d89ffae6f44663a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/terser-webpack-plugin/index-v5/79/d4/1641446d429f77e3bf6ac63bc980427b3327100426c4c8cdda436eeaf20d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/terser-webpack-plugin/index-v5/b2/02/7f5d56834c663d28ec8b023cc19acae2682ba89f3baa6fb16b04f6da321c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/terser-webpack-plugin/index-v5/c9/78/5fb2095a5da5ac87463ef4d2974f9861461e4dd5e32831fd4b7a879db723" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/terser-webpack-plugin/index-v5/fb/d9/79a64e254e0456425c6661eb154455fb8347b45a5b1ff03105bbd81ca33c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/terser-webpack-plugin/index-v5/fc/18/eb1b37aff5bbcef748beaff0c6236bc1efa0d5fc691412e55705acd873be" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/terser-webpack-plugin/index-v5/ff/3d/fe2c05eda9ca61cac52dc19540fbf461ae946463f1b3b3e4361cb29f39c9" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/clone-deep/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/clone-deep/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/commander/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/commander/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/compressible/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/compressible/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/fs-constants/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/fs-constants/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/github-from-package/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/github-from-package/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/iltorb/build/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/iltorb/build/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/iltorb/build/Release/.deps/Release/iltorb.node.d" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/iltorb/build/Release/.deps/Release/iltorb.node.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/iltorb/build/Release/.deps/Release/obj.target/iltorb/brotli/c/common/dictionary.o.d" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/iltorb/build/Release/.deps/Release/obj.target/iltorb/brotli/c/common/dictionary.o.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/iltorb/build/Release/.deps/Release/obj.target/iltorb/brotli/c/common/transform.o.d" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/iltorb/build/Release/.deps/Release/obj.target/iltorb/brotli/c/common/transform.o.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/iltorb/build/Release/.deps/Release/obj.target/iltorb/brotli/c/dec/bit_reader.o.d" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/iltorb/build/Release/.deps/Release/obj.target/iltorb/brotli/c/dec/bit_reader.o.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/iltorb/build/Release/.deps/Release/obj.target/iltorb/brotli/c/dec/decode.o.d" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/iltorb/build/Release/.deps/Release/obj.target/iltorb/brotli/c/dec/decode.o.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/iltorb/build/Release/.deps/Release/obj.target/iltorb/brotli/c/dec/huffman.o.d" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/iltorb/build/Release/.deps/Release/obj.target/iltorb/brotli/c/dec/huffman.o.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/iltorb/build/Release/.deps/Release/obj.target/iltorb/brotli/c/dec/state.o.d" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/iltorb/build/Release/.deps/Release/obj.target/iltorb/brotli/c/dec/state.o.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/iltorb/build/Release/.deps/Release/obj.target/iltorb/brotli/c/enc/backward_references.o.d" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/iltorb/build/Release/.deps/Release/obj.target/iltorb/brotli/c/enc/backward_references.o.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/iltorb/build/Release/.deps/Release/obj.target/iltorb/brotli/c/enc/backward_references_hq.o.d" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/iltorb/build/Release/.deps/Release/obj.target/iltorb/brotli/c/enc/backward_references_hq.o.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/iltorb/build/Release/.deps/Release/obj.target/iltorb/brotli/c/enc/bit_cost.o.d" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/iltorb/build/Release/.deps/Release/obj.target/iltorb/brotli/c/enc/bit_cost.o.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/iltorb/build/Release/.deps/Release/obj.target/iltorb/brotli/c/enc/block_splitter.o.d" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/iltorb/build/Release/.deps/Release/obj.target/iltorb/brotli/c/enc/block_splitter.o.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/iltorb/build/Release/.deps/Release/obj.target/iltorb/brotli/c/enc/brotli_bit_stream.o.d" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/iltorb/build/Release/.deps/Release/obj.target/iltorb/brotli/c/enc/brotli_bit_stream.o.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/iltorb/build/Release/.deps/Release/obj.target/iltorb/brotli/c/enc/cluster.o.d" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/iltorb/build/Release/.deps/Release/obj.target/iltorb/brotli/c/enc/cluster.o.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/iltorb/build/Release/.deps/Release/obj.target/iltorb/brotli/c/enc/compress_fragment.o.d" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/iltorb/build/Release/.deps/Release/obj.target/iltorb/brotli/c/enc/compress_fragment.o.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/iltorb/build/Release/.deps/Release/obj.target/iltorb/brotli/c/enc/compress_fragment_two_pass.o.d" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/iltorb/build/Release/.deps/Release/obj.target/iltorb/brotli/c/enc/compress_fragment_two_pass.o.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/iltorb/build/Release/.deps/Release/obj.target/iltorb/brotli/c/enc/dictionary_hash.o.d" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/iltorb/build/Release/.deps/Release/obj.target/iltorb/brotli/c/enc/dictionary_hash.o.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/iltorb/build/Release/.deps/Release/obj.target/iltorb/brotli/c/enc/encode.o.d" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/iltorb/build/Release/.deps/Release/obj.target/iltorb/brotli/c/enc/encode.o.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/iltorb/build/Release/.deps/Release/obj.target/iltorb/brotli/c/enc/encoder_dict.o.d" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/iltorb/build/Release/.deps/Release/obj.target/iltorb/brotli/c/enc/encoder_dict.o.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/iltorb/build/Release/.deps/Release/obj.target/iltorb/brotli/c/enc/entropy_encode.o.d" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/iltorb/build/Release/.deps/Release/obj.target/iltorb/brotli/c/enc/entropy_encode.o.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/iltorb/build/Release/.deps/Release/obj.target/iltorb/brotli/c/enc/histogram.o.d" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/iltorb/build/Release/.deps/Release/obj.target/iltorb/brotli/c/enc/histogram.o.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/iltorb/build/Release/.deps/Release/obj.target/iltorb/brotli/c/enc/literal_cost.o.d" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/iltorb/build/Release/.deps/Release/obj.target/iltorb/brotli/c/enc/literal_cost.o.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/iltorb/build/Release/.deps/Release/obj.target/iltorb/brotli/c/enc/memory.o.d" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/iltorb/build/Release/.deps/Release/obj.target/iltorb/brotli/c/enc/memory.o.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/iltorb/build/Release/.deps/Release/obj.target/iltorb/brotli/c/enc/metablock.o.d" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/iltorb/build/Release/.deps/Release/obj.target/iltorb/brotli/c/enc/metablock.o.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/iltorb/build/Release/.deps/Release/obj.target/iltorb/brotli/c/enc/static_dict.o.d" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/iltorb/build/Release/.deps/Release/obj.target/iltorb/brotli/c/enc/static_dict.o.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/iltorb/build/Release/.deps/Release/obj.target/iltorb/brotli/c/enc/utf8_util.o.d" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/iltorb/build/Release/.deps/Release/obj.target/iltorb/brotli/c/enc/utf8_util.o.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/iltorb/build/Release/.deps/Release/obj.target/iltorb/src/common/allocator.o.d" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/iltorb/build/Release/.deps/Release/obj.target/iltorb/src/common/allocator.o.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/iltorb/build/Release/.deps/Release/obj.target/iltorb/src/common/stream_coder.o.d" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/iltorb/build/Release/.deps/Release/obj.target/iltorb/src/common/stream_coder.o.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/iltorb/build/Release/.deps/Release/obj.target/iltorb/src/dec/stream_decode.o.d" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/iltorb/build/Release/.deps/Release/obj.target/iltorb/src/dec/stream_decode.o.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/iltorb/build/Release/.deps/Release/obj.target/iltorb/src/dec/stream_decode_worker.o.d" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/iltorb/build/Release/.deps/Release/obj.target/iltorb/src/dec/stream_decode_worker.o.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/iltorb/build/Release/.deps/Release/obj.target/iltorb/src/enc/stream_encode.o.d" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/iltorb/build/Release/.deps/Release/obj.target/iltorb/src/enc/stream_encode.o.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/iltorb/build/Release/.deps/Release/obj.target/iltorb/src/enc/stream_encode_worker.o.d" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/iltorb/build/Release/.deps/Release/obj.target/iltorb/src/enc/stream_encode_worker.o.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/iltorb/build/Release/.deps/Release/obj.target/iltorb/src/iltorb.o.d" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/iltorb/build/Release/.deps/Release/obj.target/iltorb/src/iltorb.o.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/iltorb/build/Release/iltorb.node" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/iltorb/build/Release/iltorb.node" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/iltorb/build/Release/obj.target/iltorb/brotli/c/common/dictionary.o" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/iltorb/build/Release/obj.target/iltorb/brotli/c/common/dictionary.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/iltorb/build/Release/obj.target/iltorb/brotli/c/common/transform.o" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/iltorb/build/Release/obj.target/iltorb/brotli/c/common/transform.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/iltorb/build/Release/obj.target/iltorb/brotli/c/dec/bit_reader.o" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/iltorb/build/Release/obj.target/iltorb/brotli/c/dec/bit_reader.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/iltorb/build/Release/obj.target/iltorb/brotli/c/dec/decode.o" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/iltorb/build/Release/obj.target/iltorb/brotli/c/dec/decode.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/iltorb/build/Release/obj.target/iltorb/brotli/c/dec/huffman.o" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/iltorb/build/Release/obj.target/iltorb/brotli/c/dec/huffman.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/iltorb/build/Release/obj.target/iltorb/brotli/c/dec/state.o" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/iltorb/build/Release/obj.target/iltorb/brotli/c/dec/state.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/iltorb/build/Release/obj.target/iltorb/brotli/c/enc/backward_references.o" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/iltorb/build/Release/obj.target/iltorb/brotli/c/enc/backward_references.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/iltorb/build/Release/obj.target/iltorb/brotli/c/enc/backward_references_hq.o" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/iltorb/build/Release/obj.target/iltorb/brotli/c/enc/backward_references_hq.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/iltorb/build/Release/obj.target/iltorb/brotli/c/enc/bit_cost.o" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/iltorb/build/Release/obj.target/iltorb/brotli/c/enc/bit_cost.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/iltorb/build/Release/obj.target/iltorb/brotli/c/enc/block_splitter.o" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/iltorb/build/Release/obj.target/iltorb/brotli/c/enc/block_splitter.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/iltorb/build/Release/obj.target/iltorb/brotli/c/enc/brotli_bit_stream.o" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/iltorb/build/Release/obj.target/iltorb/brotli/c/enc/brotli_bit_stream.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/iltorb/build/Release/obj.target/iltorb/brotli/c/enc/cluster.o" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/iltorb/build/Release/obj.target/iltorb/brotli/c/enc/cluster.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/iltorb/build/Release/obj.target/iltorb/brotli/c/enc/compress_fragment.o" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/iltorb/build/Release/obj.target/iltorb/brotli/c/enc/compress_fragment.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/iltorb/build/Release/obj.target/iltorb/brotli/c/enc/compress_fragment_two_pass.o" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/iltorb/build/Release/obj.target/iltorb/brotli/c/enc/compress_fragment_two_pass.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/iltorb/build/Release/obj.target/iltorb/brotli/c/enc/dictionary_hash.o" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/iltorb/build/Release/obj.target/iltorb/brotli/c/enc/dictionary_hash.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/iltorb/build/Release/obj.target/iltorb/brotli/c/enc/encode.o" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/iltorb/build/Release/obj.target/iltorb/brotli/c/enc/encode.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/iltorb/build/Release/obj.target/iltorb/brotli/c/enc/encoder_dict.o" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/iltorb/build/Release/obj.target/iltorb/brotli/c/enc/encoder_dict.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/iltorb/build/Release/obj.target/iltorb/brotli/c/enc/entropy_encode.o" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/iltorb/build/Release/obj.target/iltorb/brotli/c/enc/entropy_encode.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/iltorb/build/Release/obj.target/iltorb/brotli/c/enc/histogram.o" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/iltorb/build/Release/obj.target/iltorb/brotli/c/enc/histogram.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/iltorb/build/Release/obj.target/iltorb/brotli/c/enc/literal_cost.o" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/iltorb/build/Release/obj.target/iltorb/brotli/c/enc/literal_cost.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/iltorb/build/Release/obj.target/iltorb/brotli/c/enc/memory.o" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/iltorb/build/Release/obj.target/iltorb/brotli/c/enc/memory.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/iltorb/build/Release/obj.target/iltorb/brotli/c/enc/metablock.o" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/iltorb/build/Release/obj.target/iltorb/brotli/c/enc/metablock.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/iltorb/build/Release/obj.target/iltorb/brotli/c/enc/static_dict.o" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/iltorb/build/Release/obj.target/iltorb/brotli/c/enc/static_dict.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/iltorb/build/Release/obj.target/iltorb/brotli/c/enc/utf8_util.o" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/iltorb/build/Release/obj.target/iltorb/brotli/c/enc/utf8_util.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/iltorb/build/Release/obj.target/iltorb/src/common/allocator.o" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/iltorb/build/Release/obj.target/iltorb/src/common/allocator.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/iltorb/build/Release/obj.target/iltorb/src/common/stream_coder.o" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/iltorb/build/Release/obj.target/iltorb/src/common/stream_coder.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/iltorb/build/Release/obj.target/iltorb/src/dec/stream_decode.o" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/iltorb/build/Release/obj.target/iltorb/src/dec/stream_decode.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/iltorb/build/Release/obj.target/iltorb/src/dec/stream_decode_worker.o" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/iltorb/build/Release/obj.target/iltorb/src/dec/stream_decode_worker.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/iltorb/build/Release/obj.target/iltorb/src/enc/stream_encode.o" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/iltorb/build/Release/obj.target/iltorb/src/enc/stream_encode.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/iltorb/build/Release/obj.target/iltorb/src/enc/stream_encode_worker.o" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/iltorb/build/Release/obj.target/iltorb/src/enc/stream_encode_worker.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/iltorb/build/Release/obj.target/iltorb/src/iltorb.o" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/iltorb/build/Release/obj.target/iltorb/src/iltorb.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/iltorb/build/bindings/iltorb.node" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/iltorb/build/bindings/iltorb.node" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/iltorb/build/config.gypi" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/iltorb/build/config.gypi" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/iltorb/build/gyp-mac-tool" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/iltorb/build/gyp-mac-tool" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/iltorb/build/iltorb.target.mk" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/iltorb/build/iltorb.target.mk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/isexe/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/isexe/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/node-abi/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/node-abi/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/noop-logger/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/noop-logger/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/normalize-path/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/normalize-path/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/on-headers/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/on-headers/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/picomatch/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/picomatch/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/prebuild-install/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/prebuild-install/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/pseudomap/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/pseudomap/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/sass-loader/node_modules/semver/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/sass-loader/node_modules/semver/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/sass-loader/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/sass-loader/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/shallow-clone/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/shallow-clone/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/watchpack-chokidar2/node_modules/fsevents/build/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/watchpack-chokidar2/node_modules/fsevents/build/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/watchpack-chokidar2/node_modules/fsevents/build/config.gypi" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/watchpack-chokidar2/node_modules/fsevents/build/config.gypi" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/watchpack-chokidar2/node_modules/fsevents/build/fse.target.mk" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/watchpack-chokidar2/node_modules/fsevents/build/fse.target.mk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/which-pm-runs/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/which-pm-runs/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/which/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/which/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.config.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -18,36 +173,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/package.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="18" column="10" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="10" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/public_homely/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="884">
-              <caret line="778" selection-start-line="778" selection-end-line="778" />
-              <folding>
-                <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#4;n#div#4;n#div#0;n#div#0;n#div#2;n#div#0;n#body#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#5;n#div#4;n#div#0;n#div#0;n#div#2;n#div#0;n#body#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#div#4;n#div#0;n#div#0;n#div#2;n#div#0;n#body#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="346">
+              <caret line="40" column="28" selection-start-line="40" selection-start-column="28" selection-end-line="40" selection-end-column="28" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/artemis-assets/logos/artemis-logo.svg">
-          <provider selected="true" editor-type-id="images" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public_homely/shortlists.html">
+        <entry file="file://$PROJECT_DIR$/public/list.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="513">
-              <caret line="2068" column="9" selection-start-line="2068" selection-start-column="9" selection-end-line="2068" selection-end-column="9" />
+            <state relative-caret-position="476">
+              <caret line="28" column="55" selection-start-line="28" selection-start-column="55" selection-end-line="28" selection-end-column="55" />
             </state>
           </provider>
         </entry>
@@ -58,29 +194,52 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public_homely/sw.js">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public_homely/manifest.json">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/data-source/interior/blr/east/mockDataQnA.json">
+        <entry file="file://$PROJECT_DIR$/src/client/wizard/guide.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="9" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="9" />
+            <state>
+              <caret column="41" selection-start-column="41" selection-end-column="41" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/client/stint/list.jsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="16" column="89" selection-start-line="16" selection-start-column="89" selection-end-line="16" selection-end-column="89" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/client/wizard/shortlists.jsx">
+        <entry file="file://$PROJECT_DIR$/src/client/stint/courseList.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="7684">
-              <caret line="452" column="5" selection-start-line="452" selection-start-column="5" selection-end-line="452" selection-end-column="5" />
+            <state relative-caret-position="289">
+              <caret line="17" column="24" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/client/stint/course.jsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="321">
+              <caret line="19" column="54" selection-start-line="19" selection-start-column="28" selection-end-line="19" selection-end-column="54" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/course.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="646">
+              <caret line="477" column="16" selection-start-line="271" selection-start-column="6" selection-end-line="477" selection-end-column="16" />
+              <folding>
+                <element signature="n#section#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#section#1;n#div#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#section#2;n#div#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#section#3;n#div#0;n#body#0;n#html#0;n#!!top" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -88,8 +247,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="29" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
+            <state relative-caret-position="283">
+              <caret line="138" column="59" selection-start-line="138" selection-start-column="59" selection-end-line="138" selection-end-column="59" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="424">
+              <caret line="79" column="184" selection-start-line="79" selection-start-column="184" selection-end-line="79" selection-end-column="184" />
             </state>
           </provider>
         </entry>
@@ -98,26 +266,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>banner-hp-</find>
-      <find>slider-msg</find>
-      <find>.button</find>
-      <find>canvas</find>
-      <find>node-</find>
-      <find>Canvas</find>
-      <find>overview&quot;</find>
-      <find>payment</find>
-      <find>paymentRequest</find>
-      <find>request.</find>
-      <find>orderI</find>
-      <find>orderId</find>
-      <find>/setCOD</find>
-      <find>setCOD</find>
-      <find>paymentRe</find>
-      <find>all the</find>
-      <find>optlib</find>
-      <find>PushAlert</find>
-      <find>../img/images/delivery.png</find>
-      <find>paymentReque</find>
       <find>/ord</find>
       <find>order</find>
       <find>sendNotification</find>
@@ -126,14 +274,36 @@
       <find>axios</find>
       <find>homelyO</find>
       <find>sorry y</find>
-      <find>shrinkRay</find>
       <find>&lt;/head</find>
+      <find>containerW</find>
+      <find>class=</find>
+      <find>WIZ_DIR</find>
+      <find>.js</find>
+      <find>.min.</find>
+      <find>explore co</find>
+      <find>shr</find>
+      <find>shrinkRay</find>
+      <find>Shortlists</find>
+      <find>containerWiz</find>
+      <find>course.html</find>
+      <find>&lt;img</find>
+      <find>list.h</find>
+      <find>style</find>
+      <find>bold'}}&quot;&gt;Rea</find>
+      <find>/course</find>
+      <find>className=&quot;py-8&quot;</find>
+      <find>&lt;Link</find>
+      <find>&lt;section className=&quot;py-2&quot;&gt;</find>
+      <find>&lt;nav className=&quot;relative&quot;&gt;</find>
+      <find>ta-navbar</find>
     </findStrings>
     <replaceStrings>
       <replace>margin-top</replace>
       <replace>banner-hp-01.jpg</replace>
       <replace>class=</replace>
       <replace>'</replace>
+      <replace>className=&quot;</replace>
+      <replace>className=</replace>
     </replaceStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$</dir>
@@ -149,16 +319,20 @@
         <option value="$PROJECT_DIR$/src/data-source/mockDataQnA.js" />
         <option value="$PROJECT_DIR$/src/data-source/interior/blr/east/mockDataStarter.json" />
         <option value="$PROJECT_DIR$/src/compression.js" />
-        <option value="$PROJECT_DIR$/webpack.config.js" />
         <option value="$PROJECT_DIR$/src/client/wizard/guide.jsx" />
-        <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/src/data-source/interior/blr/east/mockDataQnA.json" />
         <option value="$PROJECT_DIR$/src/client/wizard/shortlists.jsx" />
-        <option value="$PROJECT_DIR$/index.js" />
-        <option value="$PROJECT_DIR$/public/index.html" />
         <option value="$PROJECT_DIR$/public/shortlists.html" />
         <option value="$PROJECT_DIR$/public/artemis-assets/logos/artemis-logo.svg" />
         <option value="$PROJECT_DIR$/public_homely/index.html" />
+        <option value="$PROJECT_DIR$/webpack.config.js" />
+        <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/index.js" />
+        <option value="$PROJECT_DIR$/public/index.html" />
+        <option value="$PROJECT_DIR$/public/list.html" />
+        <option value="$PROJECT_DIR$/src/client/stint/course.jsx" />
+        <option value="$PROJECT_DIR$/src/client/stint/courseList.jsx" />
+        <option value="$PROJECT_DIR$/src/client/stint/list.jsx" />
       </list>
     </option>
   </component>
@@ -172,7 +346,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -188,37 +362,54 @@
             <path>
               <item name="app-homely-pizza-v2" type="b2602c69:ProjectViewProjectNode" />
               <item name="app-homely-pizza-v2" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="artemis-assets" type="462c0819:PsiDirectoryNode" />
+              <item name="public_homely" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="app-homely-pizza-v2" type="b2602c69:ProjectViewProjectNode" />
               <item name="app-homely-pizza-v2" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="artemis-assets" type="462c0819:PsiDirectoryNode" />
-              <item name="logos" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="app-homely-pizza-v2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="app-homely-pizza-v2" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="app-homely-pizza-v2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="app-homely-pizza-v2" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+              <item name="stint" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="app-homely-pizza-v2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="app-homely-pizza-v2" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+              <item name="wizard" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="jdk.selected.JAVA_MODULE" value="1.8" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/public" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/client/stint" />
     <property name="settings.editor.selected.configurable" value="settings.github" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/client/stint" />
       <recent name="$PROJECT_DIR$/public" />
       <recent name="$PROJECT_DIR$/public/img/images" />
       <recent name="$PROJECT_DIR$/public/img" />
       <recent name="$PROJECT_DIR$/public/gzipped" />
-      <recent name="$PROJECT_DIR$/src/data-source/interior/blr/east" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -566,7 +757,7 @@
     <frame x="0" y="23" width="1920" height="1108" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2768903" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27955273" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
@@ -626,13 +817,6 @@
     <entry file="file://$PROJECT_DIR$/public_homely/guide.bundle.min.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/webpack.config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1020">
-          <caret line="60" column="23" selection-start-line="60" selection-start-column="23" selection-end-line="60" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public_homely/BeerSlider.js">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -664,13 +848,6 @@
     <entry file="file://$PROJECT_DIR$/public_homely/memory.bundle.min.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/client/wizard/guide.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="38" selection-start-line="15" selection-start-column="38" selection-end-line="15" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Procfile">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -680,12 +857,8 @@
     <entry file="file://$PROJECT_DIR$/public_homely/img/images/p1.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="10" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="10" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/public/artemis-assets/logos/artemis-logo.svg">
+      <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/public_homely/sw.js">
       <provider selected="true" editor-type-id="text-editor" />
@@ -700,42 +873,114 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/api/index.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/wizard/book.jsx">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/client/wizard/shortlists.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7684">
+        <state relative-caret-position="2011">
           <caret line="452" column="5" selection-start-line="452" selection-start-column="5" selection-end-line="452" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.js">
+    <entry file="file://$PROJECT_DIR$/webpack.config.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="29" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
+        <state relative-caret-position="-91">
+          <caret line="12" column="38" selection-start-line="12" selection-start-column="38" selection-end-line="12" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public_homely/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="448">
+          <caret line="755" column="5" selection-start-line="755" selection-start-column="5" selection-end-line="755" selection-end-column="5" />
+          <folding>
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#4;n#div#4;n#div#0;n#div#0;n#div#2;n#div#0;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#5;n#div#4;n#div#0;n#div#0;n#div#2;n#div#0;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#div#4;n#div#0;n#div#0;n#div#2;n#div#0;n#body#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public_homely/shortlists.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="513">
-          <caret line="2068" column="9" selection-start-line="2068" selection-start-column="9" selection-end-line="2068" selection-end-column="9" />
+        <state relative-caret-position="669">
+          <caret line="2088" selection-start-line="2088" selection-end-line="2088" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="346">
+          <caret line="40" column="28" selection-start-line="40" selection-start-column="28" selection-end-line="40" selection-end-column="28" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/server.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/artemis-assets/logos/artemis-logo.svg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public_homely/index.html">
+    <entry file="file://$PROJECT_DIR$/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="884">
-          <caret line="778" selection-start-line="778" selection-end-line="778" />
+        <state relative-caret-position="283">
+          <caret line="138" column="59" selection-start-line="138" selection-start-column="59" selection-end-line="138" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/wizard/guide.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="41" selection-start-column="41" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="28" column="55" selection-start-line="28" selection-start-column="55" selection-end-line="28" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/course.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="646">
+          <caret line="477" column="16" selection-start-line="271" selection-start-column="6" selection-end-line="477" selection-end-column="16" />
           <folding>
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#4;n#div#4;n#div#0;n#div#0;n#div#2;n#div#0;n#body#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#5;n#div#4;n#div#0;n#div#0;n#div#2;n#div#0;n#body#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#div#4;n#div#0;n#div#0;n#div#2;n#div#0;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#section#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#section#1;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#section#2;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#section#3;n#div#0;n#body#0;n#html#0;n#!!top" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="424">
+          <caret line="79" column="184" selection-start-line="79" selection-start-column="184" selection-end-line="79" selection-end-column="184" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/stint/course.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="321">
+          <caret line="19" column="54" selection-start-line="19" selection-start-column="28" selection-end-line="19" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/stint/courseList.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="24" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/stint/list.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="89" selection-start-line="16" selection-start-column="89" selection-end-line="16" selection-end-column="89" />
         </state>
       </provider>
     </entry>

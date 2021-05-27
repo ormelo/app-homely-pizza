@@ -2,16 +2,15 @@ var webpack = require('webpack');
 var path = require('path');
 
 var BUILD_DIR = path.resolve(__dirname, 'public');
-var WIZ_DIR = path.resolve(__dirname, 'src/client/wizard');
+var WIZ_DIR = path.resolve(__dirname, 'src/client/stint');
 var UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 var CompressionPlugin = require('compression-webpack-plugin');
 var BrotliPlugin = require('brotli-webpack-plugin');
 
 var config = {
   entry: {
-    wiz: WIZ_DIR + '/createFitProfile.jsx',
-    guide: WIZ_DIR + '/guide.jsx',
-    picks: WIZ_DIR + '/picks.jsx'
+    wiz: WIZ_DIR + '/list.jsx',
+    guide: WIZ_DIR + '/courseList.jsx'
   },
   output: {
     path: BUILD_DIR,

@@ -1,5 +1,5 @@
 var express = require('express');
-var shrinkRay = require('shrink-ray');
+//var shrinkRay = require('shrink-ray');
 var app = express();
 var path = require('path');
 var webpush = require('web-push');
@@ -127,32 +127,16 @@ io.on('connection', function(socket){
 
 app.set('port', (process.env.PORT || 5000));
 
-app.use(shrinkRay());
+//app.use(shrinkRay());
 app.use(express.static(__dirname + '/public'));
 
 // views is directory for all template files
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
 
-app.get('/get-styled', function(request, response) {
-  response.sendFile(path.resolve(__dirname, 'public', 'getstyled.html'));
-});
 
-app.get('/gen-ingredients', function(request, response) {
-  var IngredientsGenerator = require('./src/client/api/ingredientsGenerator.js');
-  new IngredientsGenerator().init();
-});
-
-app.get('/fit-profile', function(request, response) {
-  response.sendFile(path.resolve(__dirname, 'public', 'steps.html'));
-});
-
-app.get('/shop', function(request, response) {
-  response.redirect('/');
-});
-
-app.get('/home', function(request, response) {
-  response.sendFile(path.resolve(__dirname, 'public', 'home.html'));
+app.get('/courses', function(request, response) {
+  response.sendFile(path.resolve(__dirname, 'public', 'list.html'));
 });
 
 function updateQuestion(uuid, interactionId, num, question, outputStr, resp, gotoVal, keywords, budgetArr, nextQuestionInteractionVal) {
