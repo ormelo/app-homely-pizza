@@ -15,7 +15,7 @@
   "dependencies": {
     "@material-ui/core": "^4.5.1",
     "@material-ui/icons": "^4.9.1",
-    "axios": "0.18.0",
+    "axios": "0.21.1",
     "babel-plugin-syntax-dynamic-import": "^6.18.0",
     "body-parser": "^1.18.3",
     "ejs": "2.5.6",
