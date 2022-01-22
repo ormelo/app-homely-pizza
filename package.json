@@ -24,7 +24,7 @@
     "flipkart-api-affiliate-client": "^1.1.0",
     "jquery": "^3.5.1",
     "loggr": "^1.1.5",
-    "node-fetch": "^1.7.0",
+    "node-fetch": "^3.1.1",
     "node-schedule": "^1.3.0",
     "react": "^16.4.0",
     "react-dom": "^16.2.0",
