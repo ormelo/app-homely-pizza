@@ -1066,7 +1066,7 @@ app.post('/homelyOrder', function(req, res) {
     const address = req.body.address;
     const pincode = req.body.pincode;
     const referralCode = req.body.referralCode;
-    
+
     res.send('{"orderId":"'+orderId+'", "whitelisted":true}');
 
     /*const client = new Client(dbConfig)
