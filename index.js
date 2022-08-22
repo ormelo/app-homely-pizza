@@ -1066,8 +1066,10 @@ app.post('/homelyOrder', function(req, res) {
     const address = req.body.address;
     const pincode = req.body.pincode;
     const referralCode = req.body.referralCode;
+    
+    res.send('{"orderId":"'+orderId+'", "whitelisted":true}');
 
-    const client = new Client(dbConfig)
+    /*const client = new Client(dbConfig)
     client.connect(err => {
       if (err) {
         console.error('error connecting', err.stack)
@@ -1097,7 +1099,7 @@ app.post('/homelyOrder', function(req, res) {
 
 
       }
-    })
+    })*/
 
 
 })
