@@ -63,6 +63,7 @@
 .slider-msg {
     text-align: center;
     margin-top: 6px;
+    color: #b0b0b0;
 }
 
 .button {
@@ -790,10 +791,10 @@ html{
 }
 .testimonial-container p {
 	color: #8c8c90;
-	text-align: center;
-	font-size: 0.9em;
-	line-height: 2em;
-	letter-spacing: 0.05em;
+    text-align: center;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.05em;
 }
 .testimonial-container img {
 	display: block;
@@ -815,7 +816,7 @@ html{
 }
 .wrapper button {
 	font-size: 1.8em;
-	color: #0a69ed;
+	color: #ff0005;
 	height: 2.2em;
 	width: 2.2em;
 	position: absolute;
@@ -996,8 +997,8 @@ if(location.href.indexOf('amrit15') != -1
                         <img src="" />
                     </div>
                 </div>
-                <button id="prev" onclick="prev()">&lt;</button>
-                <button id="next" onclick="next()">&gt;</button>
+                <button id="prev" onclick="prev()">←</button>
+                <button id="next" onclick="next()">→</button>
             </div>
         </div>
         <div class="desc" style="margin-top: 20px">The best pizza crust ever!</div>
@@ -1012,10 +1013,10 @@ if(location.href.indexOf('amrit15') != -1
     <div class="slider-msg">Drag the below arrows left and right</div>
 <br/>
 
-<div id="beer-slider" class="beer-slider" data-beer-label="Ordinary Cold Pizza" data-beer-start="25">
-    <img src="./img/images/ordinary_pizza03.jpg" alt="Original - Man holding beer"/>
-    <div class="beer-reveal" data-beer-label="Homely Pizza">
-        <img src="./img/images/homely_pizza.jpg" alt="Processed - Man holding beer"/>
+<div id="beer-slider" class="beer-slider" data-beer-label="Slimcrust Pizza" data-beer-start="25">
+    <img src="./img/images/homely_pizza.jpg" alt="Original - Man holding beer"/>
+    <div class="beer-reveal" data-beer-label="Ordinary Pizza">
+        <img src="./img/images/ordinary_pizza03.jpg" alt="Processed - Man holding beer"/>
     </div>
 </div>
     <br/>
@@ -1023,7 +1024,7 @@ if(location.href.indexOf('amrit15') != -1
     <div class="bottom-bar" ></div>
 <a class="button" style="font-weight:bold" href="/order/">Order Now</a>
 <br/>
-<div class="desc" style="text-align: center;font-size: 14px">Copyright © 2020 Homely.Pizza</div><br/>
+<div class="desc" style="text-align: center;font-size: 14px">Copyright © 2022 Slimcrust.com</div><br/>
 <br/><br/><br/>
 </div>
 </div>
@@ -1100,18 +1101,18 @@ window.addEventListener("load", function () {
 });
 const testimonials = [
 	{
-		name: "Eva Sawyer",
-		job: "CEO, Fashworks",
-		image: "https://i.postimg.cc/gJDkZrNn/profile-image-1.png",
+		name: "Vinayak",
+		job: "JP Nagar, Bangalore",
+		image: "./img/images/vs.jpeg",
 		testimonial:
-			"Neque volutpat ac tincidunt vitae semper quis lectus nulla at volutpat diam ut venenatis tellus in metus vulputate eu scelerisque felis imperdiet proin fermentum leo vel orci porta non pulvinar neque laoreet suspendisse interdum consectetur"
+			"I ordered pizzas for a house party and was really happy with the service. From the packaging to the serving of hot pizzas, guests were delighted with the experience. Must try in Bangalore!"
 	},
 	{
-		name: "Katey Topaz",
-		job: "Developer, TechCrew",
-		image: "https://i.postimg.cc/8kZzkJ7Y/profile-image-2.png",
+		name: "Rajesh Kumar",
+		job: "Whitefield, Bangalore",
+		image: "./img/images/rj.jpeg",
 		testimonial:
-			"Elementum tempus egestas sed sed risus pretium quam vulputate dignissim suspendisse in est ante in nibh mauris cursus mattis molestie a iaculis at erat pellentesque adipiscing commodo elit at imperdiet dui accumsan sit amet nulla"
+			"It's very yummy and delicious. It's the best pizza I ever tasted."
 	}
 ];
 let i = 0; // current slide
