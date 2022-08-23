@@ -149,7 +149,7 @@ body {
     margin: 0 auto;
     top: 106px;
     position: absolute;
-    font-size: 31px;
+    font-size: 28px;
     font-weight: normal;
     line-height: 42px;
     padding: 0px 30px;
@@ -296,11 +296,9 @@ ul.wstep li.active {
     margin-top: 36px;
     padding-left: 50px;
     text-align: center;
-    font-size: 26px;
+    font-size: 24px;
     padding-right: 50px;
     color: #000;
-    letter-spacing: 1px;
-    font-family: 'StyleFormal', sans-serif;
     padding-top: 36px;
 }
 
@@ -369,16 +367,14 @@ ul.wstep li.active {
 
 .post-heading .title {
     text-align: center;
-    font-size: 29px;
+    font-size: 26px;
     line-height: 38px;
-    font-family: 'StyleFormal', sans-serif;
     color: #000;
     margin-top: 2px;
     padding-left: 0px;
     padding-right: 10px;
     padding-left: 36px;
     padding-right: 36px;
-    letter-spacing: 3px;
 }
 
 .fb-post {
@@ -610,8 +606,116 @@ html{
   opacity: 1; }
 
 
+.first-section .images-wrapper {
+    position:absolute;
+}
+
+.ingredient-images{
+    position: absolute;
+    width:400px;
+    left:calc(50%-400px);
+    height:530px;
+    top:420px;
+}
+
+.section_1_01{
+    position: absolute;
+    top:20px;
+    right:-150px;
+}
+.section_1_02{
+    position: absolute;
+    top:90px;
+    right:-20px;
+}
+.section_1_03{
+    position: absolute;
+    top:110px;
+    right:-150px;
+}
+.section_1_04{
+    position: absolute;
+    top:210px;
+    right:-30px;
+}
+.section_1_05{
+    position: absolute;
+    top:235px;
+    right:0px;
+}
+.section_1_06{
+    position: absolute;
+    top:180px;
+    right:60px;
+}
+.section_1_07{
+    position: absolute;
+    top:260px;
+    right:-140px;
+}
+.section_1_08{
+    position: absolute;
+    top:330px;
+    right:-40px;
+}
+.section_1_09{
+    position: absolute;
+    top:380px;
+    right:-140px;
+}
+
+.second-section{
+    width:100%;
+    height:100vh;
+    display:flex;
+    align-items:center;
+    flex-direction:column;
+    text-align:center;
+    position:relative;
+}
+
+.second-section .images-wrapper{
+    position: absolute;
+    display:flex;
+    padding:200px 0;
+    top:20%;
+    overflow:hidden;
+}
+
+.image-container{
+    overflow:hidden;
+    height:100%;
+}
+
+.third-section{
+    width:100%;
+    height:150vh;
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+    text-align:center;
+    position:relative;
+    margin-top: -200px;
+}
+
+.third-section .images-wrapper{
+    margin-top:300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.third-section .images-wrapper img{
+    position: absolute;
+}
+
 
 </style>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.0.5/gsap.min.js"
+            integrity="sha256-CkQcTxuQyZLqzqWqntH3FDxeDKMV0m7cw0aM5eph4Do=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/ScrollMagic.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/plugins/animation.gsap.min.js"></script>
 
 <!-- Hotjar Tracking Code for https://www.homely.pizza -->
 <script>
@@ -662,7 +766,7 @@ if(location.href.indexOf('amrit15') != -1
 <div class="main">
     <div>
 
-        <div class="header">Guilt-free pizzas, on demand!<br/></div>
+        <div class="header">Guilt-free pizzas, for your party!<br/></div>
         <div class="scroll-arrow">
             <span></span><span></span><span></span>
         </div>
@@ -676,9 +780,9 @@ if(location.href.indexOf('amrit15') != -1
         <div class="post-heading">
             <div class="info" style="margin-top: -19px">
             <div class="para" style="margin-top: 0px'">
-                <div class="main-desc">Micro pizzeria on wheels! Serving hot, yum &amp; healthy pizzas for your next party! <br><br>
+                <div class="main-desc">Micro pizzeria on wheels! Serving hot, yum &amp; healthy pizzas for <b style="text-decoration:underline">your next party!</b> <br><br>
                     <p style="background: #f9f4ef;border-radius: 6px;padding: 9px;">Affordably priced, starting
-                        <b style="text-decoration:underline">199 per 11'inch</b> large pizza!</p><br><br>
+                        <b style="text-decoration:underline">₹199 per 11'inch</b> large pizza!</p><br><br>
 
 
                 </div>
@@ -691,21 +795,17 @@ if(location.href.indexOf('amrit15') != -1
 </div>
 <div class="section no-padding">
     <div class="post-heading">
-        <div class="title">Rated 5⭐️ by customers</div>
-        <div class="info" style="margin-top: 34px">
-        <div class="aslider">
-            <div class="aslide"><div class="fb-post" data-width="350" data-href="https://www.facebook.com/vinayakshenoyk/posts/3426876977372979" data-show-text="true" data-width=""><blockquote cite="https://www.facebook.com/vinayakshenoyk/posts/3426876977372979" class="fb-xfbml-parse-ignore"><p>After coming across Homely pizza on Instagram, decided to give it a try. Was not disappointed.
-                I ordered medium sized...</p>Posted by <a href="#" role="button">Vinayak Shenoy K</a> on&nbsp;<a href="https://www.facebook.com/vinayakshenoyk/posts/3426876977372979">Wednesday, 23 September 2020</a></blockquote></div></div>
-            <br/>
-            <div class="aslide"><div class="fb-post" data-href="https://www.facebook.com/rajesh.ign/posts/10207037166683988" data-show-text="true" data-width=""><blockquote cite="https://www.facebook.com/rajesh.ign/posts/10207037166683988" class="fb-xfbml-parse-ignore"><p>It is very yummy and delicious. It is the best pizza I ever ate.</p>Posted by <a href="#" role="button">Rajesh Kumar</a> on&nbsp;<a href="https://www.facebook.com/rajesh.ign/posts/10207037166683988">Saturday, 19 September 2020</a></blockquote></div></div>
-
-        </div>
-
-        <br/><br/>
+        <div class="info" style="margin-top: -20px">
         <img class="curve small" src="./img/images/curve.png"/>
         <hr class="line"/>
         <div class="para" style="marginTop: 14px">
-        <div class="title">Why Homely Pizza?</div>
+        <div class="title">Pizza live-counter</div>
+            <br/><br/>
+            <img src="./img/images/poven.png" style="width:240px;margin-right: 16px;" />
+            <img src="./img/images/panim.gif" style="width:130px" />
+        <br/><br/>
+        <div class="desc">Serve hot and healthy pizzas to your guests right at your venue.
+            <br/><br/>Our chef arrives with a portable cart as per your booking & serves oven-cooked hot pizzas instantly!</div>
     </div>
 
 </div>
@@ -714,30 +814,35 @@ if(location.href.indexOf('amrit15') != -1
 <div class="section no-padding" style="margin-top: 40px">
 <div class="post-heading">
     <div class="info">
-        <img src="./img/images/pizza.png" class="ic-num"/>
-        <div class="desc caption">Par-baked pizzas</div>
-        <div class="desc" style="margin-top: 20px">Our custom baking technique ensures you enjoy a hot pizza by simply warming on a pan for 3 mins, without losing any flavor!</div>
+        <div class="desc caption">Healthiest pizza ever</div>
+        <section class="third-section">
+            <div class="images-wrapper">
+                <img class="section_3_06" src="https://www.dropbox.com/s/cggf61ebt5glkdm/section_3_06.webp?raw=1" />
+                <img class="section_3_05" src="https://www.dropbox.com/s/y9v16yvcpcogt5h/section_3_05.webp?raw=1" />
+                <img class="section_3_04" src="https://www.dropbox.com/s/epb4iwra19fc7np/section_3_04.webp?raw=1" />
+                <img class="section_3_03" src="https://www.dropbox.com/s/bcuykp1rf8c672f/section_3_03.webp?raw=1" />
+                <img class="section_3_02" src="https://www.dropbox.com/s/rhkmo56qrrjsnwn/section_3_02.webp?raw=1" />
+                <img class="section_3_01" src="https://www.dropbox.com/s/7f6qkl52a6jiy08/section_3_01.webp?raw=1" />
+            </div>
+        </section>
+        <br/><br/><br/><br/><br/><br/>
+
+
+        <div class="desc" style="margin-top: -320px">Our crust is made of 0% Maida/refined flour.
+            <br/><br/>It's filled with rich natural grains which are high in fiber that's not just healthy,
+            but also mouth-wateringly delicious!</div>
 </div>
 </div>
 </div>
 <div class="section no-padding" style="margin-top: 40px">
 <div class="post-heading">
     <div class="info">
-        <img src="./img/images/pineapple.png" class="ic-num"/>
-        <div class="desc caption">Premium yet affordable</div>
-        <div class="desc" style="margin-top: 20px">With zero preservatives, high quality ingredients are freshly prepped just on receiving your order!</div>
+        <div class="desc caption">What customers say</div>
+        <div class="desc" style="margin-top: 20px">The best pizza crust ever!</div>
 </div>
 </div>
 </div>
-<div class="section no-padding" style="margin-top: 40px">
-<div class="post-heading">
-    <div class="info">
-        <img src="./img/images/deliveryman.png" class="ic-num"/>
-        <div class="desc caption">Hygienic packaging</div>
-        <div class="desc" style="margin-top: 20px">COVID-safe packaging with disinfection on outer surface and contactless delivery to ensure the best of safety!</div>
-</div>
-</div>
-</div>
+
 
 <br/><br/>
 <hr class="line"/>
@@ -764,6 +869,7 @@ if(location.href.indexOf('amrit15') != -1
 </div>
     <div class="largevp">Please use your smartphone in portrait mode to order a Homely pizza. Currently, we're only supported on smartphone platforms. </div>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+
     <script>
 
 $.fn.BeerSlider = function ( options ) {
@@ -774,6 +880,150 @@ $.fn.BeerSlider = function ( options ) {
   };
   $('.beer-slider').BeerSlider({start: 25});
   localStorage.setItem('discountCode','slice15');
+
+
+
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    let controller = new ScrollMagic.Controller();
+
+  let t1 = gsap.timeline();
+        t1.from(".section_1_01", 4, {
+            y: -100,
+            x: -150,
+            ease: Power3.easeInOut
+        })
+        t1.from(".section_1_02", 4, {
+            y: -150,
+            x: -250,
+            ease: Power3.easeInOut
+        }, '-=4')
+        .from(".section_1_03", 4, {
+            y: -80,
+            x: -100,
+            ease: Power3.easeInOut
+        }, '-=4')
+        .from(".section_1_04", 4, {
+            y: -100,
+            x: -150,
+            ease: Power3.easeInOut
+        }, '-=4')
+        .from(".section_1_05", 4, {
+            y: -80,
+            x: -200,
+            ease: Power3.easeInOut
+        }, '-=4')
+        .from(".section_1_06", 4, {
+            y: -100,
+            x: -350,
+            ease: Power3.easeInOut
+        }, '-=4')
+        .from(".section_1_07", 4, {
+            y: -50,
+            x: -150,
+            ease: Power3.easeInOut
+        }, '-=4')
+        .from(".section_1_08", 4, {
+            y: 50,
+            x: -350,
+            ease: Power3.easeInOut
+        }, '-=4')
+        .from(".section_1_09", 4, {
+            y: 100,
+            x: -200,
+            ease: Power3.easeInOut
+        }, '-=4')
+
+    let scene = new ScrollMagic.Scene({
+        triggerElement: '.first-section',
+        duration: '100%',
+        triggerHook: 0,
+        offset: '300'
+    })
+        .setTween(t1)
+        .setPin('.first-section')
+        .addTo(controller);
+
+    let t2 = gsap.timeline();
+    t2
+        .to('.top .image-container', 4, {
+            height: 0
+        });
+
+    let scene2 = new ScrollMagic.Scene({
+        triggerElement: '.second-section',
+        duration: '100%',
+        triggerHook: 0,
+        offset: '100'
+    })
+        .setTween(t2)
+        .setPin('.second-section')
+        .addTo(controller);
+
+    let t3 = gsap.timeline();
+    t3
+        .to('.section_3_01', 4, {
+            y: -250,
+            ease: Power3.easeInOut
+        })
+        .to('.section_3_02', 4, {
+            y: -200,
+            ease: Power3.easeInOut
+        }, '-=4')
+        .to('.section_3_03', 4, {
+            y: -100,
+            ease: Power3.easeInOut
+        }, '-=4')
+        .to('.section_3_04', 4, {
+            y: 0,
+            ease: Power3.easeInOut
+        }, '-=4')
+        .to('.section_3_05', 4, {
+            y: 150,
+            ease: Power3.easeInOut
+        }, '-=4')
+        .to('.section_3_06', 4, {
+            y: 250,
+            ease: Power3.easeInOut
+        }, '-=4')
+
+    let scene3 = new ScrollMagic.Scene({
+        triggerElement: '.third-section',
+        duration: '100%',
+        triggerHook: 0,
+        offset: '200'
+    })
+        .setTween(t3)
+        .setPin('.third-section')
+        .addTo(controller);
+
+    let t4 = gsap.timeline();
+    t4
+        .to('.section_4_01', 4, {
+            autoAlpha: 0
+        })
+        .from('.section_4_02', 4, {
+            autoAlpha: 0
+        }, '-=4')
+        .from('.section_4_03', 4, {
+            autoAlpha: 0
+        })
+        .from('.section_4_04', 4, {
+            autoAlpha: 0
+        })
+
+    let scene4 = new ScrollMagic.Scene({
+        triggerElement: '.forth-section',
+        duration: '100%',
+        triggerHook: 0,
+        offset: '200'
+    })
+        .setTween(t4)
+        .setPin('.forth-section')
+        .addTo(controller);
+})
 
 </script>
 </body></html>
