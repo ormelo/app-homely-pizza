@@ -9,8 +9,8 @@
 </style><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}
 
 @font-face {
-  font-family: "StyleFormal";
-  src: url("/assets/fonts/StyleFormal.otf");
+  font-family: "Sottel";
+  src: url("/assets/fonts/SottelRegular/font.woff2");
 }
 
 .largevp {
@@ -81,7 +81,6 @@
     border-radius: 6px;
     padding: 24px;
     color: #fff;
-    letter-spacing: 3px;
     padding-top: 12px;
     padding-bottom: 12px;
     font-weight: normal;
@@ -369,6 +368,7 @@ ul.wstep li.active {
 .post-heading .title {
     text-align: center;
     font-size: 26px;
+    font-weight: bold;
     line-height: 38px;
     color: #000;
     margin-top: 2px;
@@ -909,7 +909,7 @@ if(location.href.indexOf('amrit15') != -1
 <div class="main">
     <div>
 
-        <div class="header">Guilt-free pizzas, for your party!<br/></div>
+        <div class="header">Guilt-free pizzas, for your <span id="rotated" style="font-family:Sottel;letter-spacing:2px;">next</span> party!<br/></div>
         <div class="scroll-arrow">
             <span></span><span></span><span></span>
         </div>
@@ -923,9 +923,9 @@ if(location.href.indexOf('amrit15') != -1
         <div class="post-heading">
             <div class="info" style="margin-top: -19px">
             <div class="para" style="margin-top: 0px'">
-                <div class="main-desc">Micro pizzeria on wheels! Serving hot, yum &amp; healthy pizzas for <b style="text-decoration:underline">your next party!</b> <br><br>
-                    <p style="background: #f9f4ef;border-radius: 6px;padding: 9px;">Affordably priced, starting
-                        <b style="text-decoration:underline">₹199 per 11'inch</b> large pizza!</p><br><br>
+                <div class="main-desc">Pizza live counters for your next party!</b> <br><br>
+                    <p style="background: #f9f4ef;border-radius: 6px;padding: 9px;">Starting
+                        <b style="text-decoration:underline">₹199</b> per large pizza!</p><br><br>
 
 
                 </div>
@@ -1003,7 +1003,7 @@ if(location.href.indexOf('amrit15') != -1
 
 
 <hr class="line"/>
-<div class="overview" style="margin-top: -150px;font-size: 20px;">Nutrition Facts - Comparison</div>
+<div class="overview" style="margin-top: -150px;font-size: 20px;font-weight:bold">Nutrition Facts - Comparison</div>
     <div class="slider-msg">Drag the below arrows left and right</div>
 <br/>
 
@@ -1016,7 +1016,7 @@ if(location.href.indexOf('amrit15') != -1
     <br/>
 
     <div class="bottom-bar" ></div>
-<a class="button" style="font-weight:bold" href="/order/">Order Now</a>
+<a class="button" style="font-weight:bold" href="/order/">Get a Quote</a>
 <br/>
 <div class="desc" style="text-align: center;font-size: 14px">Copyright © 2022 Slimcrust.com</div><br/>
 <br/><br/><br/>
@@ -1130,6 +1130,14 @@ let displayTestimonial = () => {
         `;
 };
 window.onload = displayTestimonial;
+
+setInterval(function() {
+ var word = document.getElementById('rotated').innerHTML;
+ if(word=='next') document.getElementById('rotated').innerHTML = 'birthday';
+ else if(word=='birthday') document.getElementById('rotated').innerHTML = 'house';
+ else if(word=='house') document.getElementById('rotated').innerHTML = 'office';
+ else document.getElementById('rotated').innerHTML = 'next';
+},2000);
 
 
 </script>
