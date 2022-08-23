@@ -712,7 +712,150 @@ html{
     position: absolute;
 }
 
-
+#loader {
+	background-color: #ffffff;
+    height: 40px;
+    width: 40px;
+    position: relative;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    display: -ms-grid;
+    display: grid;
+    place-items: center;
+    border-radius: 5px;
+}
+#loader:after {
+    content: "";
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    border: 5px solid #a0a0a0;
+    border-top-color: #ff0005;
+    border-radius: 50%;
+    -webkit-animation: spin 1s linear infinite;
+    animation: spin 1s linear infinite;
+}
+@-webkit-keyframes spin {
+	100% {
+		-webkit-transform: rotate(360deg);
+		transform: rotate(360deg);
+	}
+}
+@keyframes spin {
+	100% {
+		-webkit-transform: rotate(360deg);
+		transform: rotate(360deg);
+	}
+}
+#box {
+	position: absolute;
+	-webkit-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	top: 50%;
+	left: 50%;
+	width: 80vw;
+	max-width: 41em;
+	min-height: 26em;
+	display: none;
+}
+.img-con {
+	position: absolute;
+}
+.img-con img {
+	height: 1px;
+	width: 1px;
+}
+.wrapper {
+	    background-color: #ffffff;
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    border-radius: 0.6em;
+    -webkit-box-shadow: 0 1.8em 3em rgb(1 17 39 / 15%);
+    box-shadow: 0 1.8em 3em rgb(1 17 39 / 15%);
+    position: absolute;
+    top: 2618px;
+}
+.testimonial-container {
+	width: 85%;
+	height: 100%;
+	position: relative;
+	margin: auto;
+	padding: 1.8em 1.2em;
+}
+.testimonial-container p {
+	color: #8c8c90;
+	text-align: center;
+	font-size: 0.9em;
+	line-height: 2em;
+	letter-spacing: 0.05em;
+}
+.testimonial-container img {
+	display: block;
+	margin: 1.8em auto 1.25em auto;
+	border-radius: 50%;
+	width: 4.4em;
+}
+.testimonial-container h3 {
+	color: #2d3d67;
+	font-size: 1em;
+	text-align: center;
+}
+.testimonial-container h6 {
+	color: #bcc4da;
+	font-size: 0.9em;
+	letter-spacing: 0.03em;
+	font-weight: 400;
+	text-align: center;
+}
+.wrapper button {
+	font-size: 1.8em;
+	color: #0a69ed;
+	height: 2.2em;
+	width: 2.2em;
+	position: absolute;
+	margin: auto;
+	top: 0;
+	bottom: 0;
+	background-color: #ffffff;
+	border: none;
+	border-radius: 50%;
+	-webkit-box-shadow: 0 0 1em rgba(0, 0, 0, 0.25);
+	box-shadow: 0 0 1em rgba(0, 0, 0, 0.25);
+	cursor: pointer;
+}
+button#next {
+	right: -1.1em;
+}
+button#prev {
+	left: -1.1em;
+}
+a {
+	position: relative;
+	display: block;
+	background-color: #ffffff;
+	color: #0a69ed;
+	text-decoration: none;
+	font-size: 1.2em;
+	font-weight: 600;
+	text-align: center;
+	padding: 0.9em 0;
+	border-radius: 0.3em;
+	margin-top: 30px;
+}
+.fab {
+	color: #ff0000;
+}
+@media screen and (max-width: 650px) {
+	.wrapper {
+		font-size: 14px;
+	}
+}
 </style>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.0.5/gsap.min.js"
@@ -802,7 +945,7 @@ if(location.href.indexOf('amrit15') != -1
         <img class="curve small" src="./img/images/curve.png"/>
         <hr class="line"/>
         <div class="para" style="marginTop: 14px">
-        <div class="title">Pizza live-counter</div>
+        <div class="title">Hot pizzas under 1 minute!</div>
             <br/><br/>
             <img src="./img/images/poven.png" style="width:210px;margin-right: 16px;" />
             <img src="./img/images/panim.gif" style="width:130px" />
@@ -817,22 +960,22 @@ if(location.href.indexOf('amrit15') != -1
 <div class="section no-padding" style="margin-top: 40px">
 <div class="post-heading">
     <div class="info">
-        <div class="desc caption">Healthiest pizza ever</div>
+        <div class="desc caption">Healthiest pizza crust ever</div>
         <section class="third-section" style="margin-top:-100px">
             <div class="images-wrapper">
-                <img class="section_3_06" src="https://www.dropbox.com/s/cggf61ebt5glkdm/section_3_06.webp?raw=1" />
-                <img class="section_3_05" src="https://www.dropbox.com/s/y9v16yvcpcogt5h/section_3_05.webp?raw=1" />
-                <img class="section_3_04" src="https://www.dropbox.com/s/epb4iwra19fc7np/section_3_04.webp?raw=1" />
-                <img class="section_3_03" src="https://www.dropbox.com/s/bcuykp1rf8c672f/section_3_03.webp?raw=1" />
-                <img class="section_3_02" src="https://www.dropbox.com/s/rhkmo56qrrjsnwn/section_3_02.webp?raw=1" />
-                <img class="section_3_01" src="https://www.dropbox.com/s/7f6qkl52a6jiy08/section_3_01.webp?raw=1" />
+                <img id="section_3_06" style="display:none;" class="section_3_06" src="./img/images/section_3_06.png?raw=1" />
+                <img class="section_3_05" src="./img/images/section_3_05.webp?raw=1" />
+                <img class="section_3_04" src="./img/images/section_3_04.png?raw=1" />
+                <img class="section_3_03" src="./img/images/section_3_03.webp?raw=1" />
+                <img class="section_3_02" src="./img/images/section_3_02.webp?raw=1" />
+                <img class="section_3_01" src="./img/images/section_3_01.webp?raw=1" />
             </div>
         </section>
         <br/><br/><br/><br/><br/><br/>
 
 
-        <div class="desc" style="margin-top: -350px">Our crust is made of 0% Maida/refined flour.
-            <br/><br/>It's filled with rich natural grains which are high in fiber that's not just healthy,
+        <div class="desc" style="margin-top: -350px">
+            <br/><br/>Our crust is filled with rich natural grains high in fiber that's not just healthy,
             but also mouth-wateringly delicious!</div>
 </div>
 </div>
@@ -841,6 +984,22 @@ if(location.href.indexOf('amrit15') != -1
 <div class="post-heading">
     <div class="info">
         <div class="desc caption">What customers say</div>
+        <div id="loader"></div>
+        <div id="box">
+            <div class="img-con">
+                <img src="https://i.postimg.cc/gJDkZrNn/profile-image-1.png" />
+                <img src="https://i.postimg.cc/8kZzkJ7Y/profile-image-2.png" />
+            </div>
+            <div class="wrapper">
+                <div class="testimonial-container" id="testimonial-container">
+                    <div id="testimonial1" class="active">
+                        <img src="" />
+                    </div>
+                </div>
+                <button id="prev" onclick="prev()">&lt;</button>
+                <button id="next" onclick="next()">&gt;</button>
+            </div>
+        </div>
         <div class="desc" style="margin-top: 20px">The best pizza crust ever!</div>
 </div>
 </div>
@@ -849,7 +1008,7 @@ if(location.href.indexOf('amrit15') != -1
 
 <br/><br/>
 <hr class="line"/>
-<div class="overview" style="margin-top: -18px">See the difference</div>
+<div class="overview" style="margin-top: 340px">See the difference</div>
     <div class="slider-msg">Drag the below arrows left and right</div>
 <br/>
 
@@ -929,8 +1088,54 @@ document.addEventListener('DOMContentLoaded', () => {
         .setPin('.third-section')
         .addTo(controller);
 
+        document.getElementById('section_3_06').style.display = 'block';
 
 })
+
+
+//testimonial
+window.addEventListener("load", function () {
+	document.getElementById("loader").style.display = "none";
+	document.getElementById("box").style.display = "block";
+});
+const testimonials = [
+	{
+		name: "Eva Sawyer",
+		job: "CEO, Fashworks",
+		image: "https://i.postimg.cc/gJDkZrNn/profile-image-1.png",
+		testimonial:
+			"Neque volutpat ac tincidunt vitae semper quis lectus nulla at volutpat diam ut venenatis tellus in metus vulputate eu scelerisque felis imperdiet proin fermentum leo vel orci porta non pulvinar neque laoreet suspendisse interdum consectetur"
+	},
+	{
+		name: "Katey Topaz",
+		job: "Developer, TechCrew",
+		image: "https://i.postimg.cc/8kZzkJ7Y/profile-image-2.png",
+		testimonial:
+			"Elementum tempus egestas sed sed risus pretium quam vulputate dignissim suspendisse in est ante in nibh mauris cursus mattis molestie a iaculis at erat pellentesque adipiscing commodo elit at imperdiet dui accumsan sit amet nulla"
+	}
+];
+let i = 0; // current slide
+let j = testimonials.length; // total slides
+let testimonialContainer = document.getElementById("testimonial-container");
+function next() {
+	i = (j + i + 1) % j;
+	displayTestimonial();
+}
+
+function prev() {
+	i = (j + i - 1) % j;
+	displayTestimonial();
+}
+let displayTestimonial = () => {
+	testimonialContainer.innerHTML = `
+        <p>${testimonials[i].testimonial}</p>
+         <img src=${testimonials[i].image}></img>
+        <h3>${testimonials[i].name}</h3>
+        <h6>${testimonials[i].job}</h6>
+        `;
+};
+window.onload = displayTestimonial;
+
 
 </script>
 </body></html>
