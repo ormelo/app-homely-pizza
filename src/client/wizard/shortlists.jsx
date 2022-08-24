@@ -304,6 +304,7 @@ class Shortlists extends Component {
             showList: 'hidden',
             showWizard: '',
             numVistors: 0,
+            mobileNum: '',
             curStep: 1,
             eventDate: new Date().toDateInputValue(),
             orderSummary: localStorage.getItem('basket') != null ? JSON.parse(localStorage.getItem('basket')) : []
@@ -579,6 +580,8 @@ class Shortlists extends Component {
                                     <span>Date of Event:</span><input type="date" value={this.state.eventDate} onChange={(e)=>{this.setState({eventDate:e.target.value});sessionStorage.setItem('eventDate',e.target.value);}}/>
                                     <br/>
                                     <span>Venue Pincode:&nbsp;&nbsp;</span><input type="text" className="txt-field" onChange={(e)=>{this.setState({venuePinCode:e.target.value});sessionStorage.setItem('venuePinCode',e.target.value);}}/>
+                                    <br/>
+                                    <span>Mobile Number:&nbsp;&nbsp;</span><input type="text" className="txt-field" onChange={(e)=>{this.setState({mobileNum:e.target.value});sessionStorage.setItem('mobileNum',e.target.value);}}/>
                                 </div>
                                 <div className="bottom-bar" ></div>
                                 <a className="button" onClick={()=>{this.setState({curStep:3,showList:''});}}>Next →</a>
