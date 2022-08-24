@@ -1,6 +1,7 @@
     <!DOCTYPE html>
 <html lang="en">
 <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400" rel="stylesheet">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
 <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="theme-color" content="#fff">
     <style type="text/css">.pac-container{background-color:#fff;position:absolute!important;z-index:1000;border-radius:2px;border-top:1px solid #d9d9d9;font-family:Arial,sans-serif;box-shadow:0 2px 6px rgba(0,0,0,0.3);-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box;overflow:hidden}.pac-logo:after{content:"";padding:1px 1px 1px 0;height:16px;text-align:right;display:block;background-image:url(https://maps.gstatic.com/mapfiles/api-3/images/powered-by-google-on-white3.png);background-position:right;background-repeat:no-repeat;background-size:120px 14px}.hdpi.pac-logo:after{background-image:url(https://maps.gstatic.com/mapfiles/api-3/images/powered-by-google-on-white3_hdpi.png)}.pac-item{cursor:default;padding:0 4px;text-overflow:ellipsis;overflow:hidden;white-space:nowrap;line-height:30px;text-align:left;border-top:1px solid #e6e6e6;font-size:11px;color:#999}.pac-item:hover{background-color:#fafafa}.pac-item-selected,.pac-item-selected:hover{background-color:#ebf2fe}.pac-matched{font-weight:700}.pac-item-query{font-size:13px;padding-right:3px;color:#000}.pac-icon{width:15px;height:20px;margin-right:7px;margin-top:6px;display:inline-block;vertical-align:top;background-image:url(https://maps.gstatic.com/mapfiles/api-3/images/autocomplete-icons.png);background-size:34px}.hdpi .pac-icon{background-image:url(https://maps.gstatic.com/mapfiles/api-3/images/autocomplete-icons_hdpi.png)}.pac-icon-search{background-position:-1px -1px}.pac-item-selected .pac-icon-search{background-position:-18px -1px}.pac-icon-marker{background-position:-1px -161px}.pac-item-selected .pac-icon-marker{background-position:-18px -161px}.pac-placeholder{color:gray}
@@ -2038,8 +2039,118 @@ ul li{
       width: 100%;
   }
 }
-
-
+.wizard-progress {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+  position: relative;
+  font-family: Quicksand;
+}
+.wizard-progress .step {
+  display: table-cell;
+  text-align: center;
+  vertical-align: top;
+  overflow: visible;
+  position: relative;
+  font-size: 14px;
+  color: #fff;
+  font-weight: bold;
+}
+.wizard-progress .step:not(:last-child):before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 37px;
+  background-color: #fff;
+  height: 6px;
+  width: 100%;
+}
+.wizard-progress .step .node {
+  display: inline-block;
+  border: 6px solid #fff;
+  background-color: #fff;
+  border-radius: 18px;
+  height: 32px;
+  width: 32px;
+  position: absolute;
+  top: 25px;
+  left: 50%;
+  margin-left: -18px;
+}
+.wizard-progress .step.complete:before {
+  background-color: red;
+}
+.wizard-progress .step.complete .node {
+  border-color: red;
+  background-color: red;
+}
+.wizard-progress .step.complete .node:before {
+  font-family: FontAwesome;
+  content: "";
+}
+.wizard-progress .step span {
+    color: black;
+    margin-top: 50%;
+    position: absolute;
+    margin-left: -32%;
+    font-size: 15px;
+}
+.wizard-progress .step.in-progress:before {
+  background: red;
+  background: -moz-linear-gradient(left, red 0%, #fff 100%);
+  background: -webkit-linear-gradient(left, red 0%, #fff 100%);
+  background: linear-gradient(to right, red 0%, #fff 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="red", endColorstr="#fff",GradientType=1 );
+}
+.wizard-progress .step.in-progress .node {
+  border-color: red;
+}
+.step-detail {
+    position: absolute;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    width: 320px;
+    text-align: center;
+    margin-top: 200px;
+    font-size: 20px;
+    font-family: Quicksand;
+    color: #000;
+    line-height: 30px;
+}
+.bottom-bar {
+    background: linear-gradient(0deg, rgb(255 255 255) 0%, rgb(255 255 255) 35%, rgb(255 255 255 / 0%) 100%);
+    width: 100%;
+    height: 100px;
+    opacity: 1;
+    position: fixed;
+    bottom: 0px;
+}
+.button {
+    text-transform: uppercase;
+    position: fixed;
+    bottom: 10px;
+    width: 90%;
+    z-index: 1;
+    text-align: center;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    background: linear-gradient(0deg, #fe1712 0%, rgb(255 57 51) 35%, #ff623a 100%);
+    font-size: 16px;
+    border-radius: 6px;
+    padding: 24px;
+    color: #fff;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    font-weight: normal;
+    box-shadow: 0px 0px 14px 6px rgb(156 156 156 / 30%);
+    text-decoration: none;
+}
+.hidden {
+    display: none;
+}
 </style>
     <script>
 !function(f,b,e,v,n,t,s)
@@ -2086,7 +2197,7 @@ function isValidCoupon() {
     localStorage.removeItem("basket");
 </script>
 
-<script src="../../../guide.bundle.min.js"></script>
+<script src="../guide.bundle.min.js"></script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-172005024-1" />
 <script>
       window.dataLayer = window.dataLayer || [];

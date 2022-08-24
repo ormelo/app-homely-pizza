@@ -296,6 +296,8 @@ class Shortlists extends Component {
             couponApplied: false,
             showSlot: false,
             slotSelected: '',
+            showList: 'hidden',
+            showWizard: '',
             orderSummary: localStorage.getItem('basket') != null ? JSON.parse(localStorage.getItem('basket')) : []
         };
         window.currSlotSelected = '';
@@ -504,7 +506,7 @@ class Shortlists extends Component {
                 http.send(params);
     }
     render() {
-        const {showLoader, results, starters, orderSummary, showCoupon, showSlot} = this.state;
+        const {showLoader, results, starters, orderSummary, showCoupon, showSlot, showList, showWizard} = this.state;
         this.slotsAvailable = true;
 
         console.log('orderSummary: ', orderSummary);
@@ -528,7 +530,7 @@ class Shortlists extends Component {
 
 
         return (<div>
-                    <img id="logo" className="logo-img" src="../img/images/logo.png" />
+                    <img id="logo" className="logo-img" src="../img/logo_sc.jpg" style={{width: '142px'}} />
                     <div id="checkoutHeader">
                         <div id="checkoutBtn" className="card-btn checkout" onClick={()=>{document.getElementById('checkoutModal').style.top='-20px';this.setState({orderSummary: localStorage.getItem('basket') != null ? JSON.parse(localStorage.getItem('basket')) : []});}}>Checkout&nbsp;→
                             <div className=""></div>
@@ -537,7 +539,35 @@ class Shortlists extends Component {
                     </div>
 
                     <div><i className="loading" id="myTasksLoader" style={{top: '28px'}}></i></div>
-                    <div className="main fadeInBottom">
+                    <div className={`main fadeInBottom ${this.state.showWizard}`}>
+                        <div className="wizard-progress">
+                          <div className="step complete">
+                            <div className="node"></div>
+                            <span>Visitor Details</span>
+                          </div>
+                          <div className="step in-progress">
+                            <span>Event Details</span>
+                            <div className="node"></div>
+                          </div>
+                          <div className="step in-progress">
+                            <span>Sample Order</span>
+                            <div className="node"></div>
+                          </div>
+                        </div>
+                        <div className="step-detail step-1">
+                            <div>How many visitors are you expecting at your event?</div>
+                            <br/><br/>
+                            <div class="quantity">
+                                <a className="quantity__minus"><span onClick={()=>{if(this.state.qty>0){this.setState({qty: this.state.qty - 1});}this.updatePrice(this.state.qty - 1);var event = new CustomEvent('basket-updated', { detail: {type: item.type, name: item.title, crust: crustOptions[this.state.activeCrustIndex].topic, size: reviewTopics[this.state.activeIndex].topic, qty: this.state.qty - 1, price: this.getPrice(this.state.qty - 1), itemId: itemId}});document.dispatchEvent(event);}} style={{fontSize: '25px', lineHeight: '0px', marginLeft: '2px'}}>-</span></a>
+                                <input name="quantity" type="text" className="quantity__input" value={this.state.qty} />
+                                <a className="quantity__plus"><span onClick={()=>{this.setState({qty: this.state.qty + 1});console.log('item:',item);var event = new CustomEvent('basket-updated', { detail: {type: item.type, name: item.title, crust: crustOptions[this.state.activeCrustIndex].topic, size: reviewTopics[this.state.activeIndex].topic, qty: this.state.qty + 1, price: this.getPrice(this.state.qty + 1), itemId: itemId}});document.dispatchEvent(event);this.updatePrice(this.state.qty + 1)}}>+</span></a>
+                              </div>
+                            <div className="bottom-bar" ></div>
+                            <a className="button" href="/order/">Next →</a>
+                        </div>
+                        <br/><br/><br/><br/>
+                    </div>
+                    <div className={`main fadeInBottom ${this.state.showList}`}>
                         <div id="discountModal" className="card-container checkout-modal modal-show" style={{top:'74px'}}>
                             <div className="modal-heading">
                                 <div className="left">
