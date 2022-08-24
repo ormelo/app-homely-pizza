@@ -287,6 +287,11 @@ class Shortlists extends Component {
 
     constructor() {
         super();
+        Date.prototype.toDateInputValue = (function() {
+                    var local = new Date(this);
+                    local.setMinutes(this.getMinutes() - this.getTimezoneOffset());
+                    return local.toJSON().slice(0,10);
+                });
         this.state = {
             value: 0,
             results: [],
@@ -299,6 +304,8 @@ class Shortlists extends Component {
             showList: 'hidden',
             showWizard: '',
             numVistors: 0,
+            curStep: 1,
+            eventDate: new Date().toDateInputValue(),
             orderSummary: localStorage.getItem('basket') != null ? JSON.parse(localStorage.getItem('basket')) : []
         };
         window.currSlotSelected = '';
@@ -507,7 +514,7 @@ class Shortlists extends Component {
                 http.send(params);
     }
     render() {
-        const {showLoader, results, starters, orderSummary, showCoupon, showSlot, showList, showWizard, numVistors} = this.state;
+        const {showLoader, results, starters, orderSummary, showCoupon, showSlot, showList, showWizard, numVistors, curStep} = this.state;
         this.slotsAvailable = true;
 
         console.log('orderSummary: ', orderSummary);
@@ -527,9 +534,6 @@ class Shortlists extends Component {
             window.currSlotSelected = slots[0];
         }
 
-
-
-
         return (<div>
                     <img id="logo" className="logo-img" src="../img/logo_sc.jpg" style={{width: '142px'}} />
                     <div id="checkoutHeader">
@@ -546,7 +550,7 @@ class Shortlists extends Component {
                             <div className="node"></div>
                             <span>Visitor Details</span>
                           </div>
-                          <div className="step in-progress">
+                          <div className={`step ${curStep>1 ? 'complete' : 'in-progress'}`}>
                             <span>Event Details</span>
                             <div className="node"></div>
                           </div>
@@ -555,7 +559,7 @@ class Shortlists extends Component {
                             <div className="node"></div>
                           </div>
                         </div>
-                        <div className="step-detail step-1">
+                        {curStep == 1 && <div className="step-detail step-1">
                             <div>How many visitors are you expecting at your event?</div>
                             <br/>
                             <div class="quantity">
@@ -564,8 +568,20 @@ class Shortlists extends Component {
                                 <a className="quantity__plus"><span onClick={()=>{this.setState({numVistors: this.state.numVistors + 10});}}>+</span></a>
                               </div>
                             <div className="bottom-bar" ></div>
-                            <a className="button" onClick={()=>{this.setState({showList:'',showWizard:'hidden'});}}>Next →</a>
-                        </div>
+                            <a className="button" onClick={()=>{this.setState({curStep:2});}}>Next →</a>
+                        </div> }
+                        {curStep == 2 && <div className="step-detail step-1">
+
+                                <div>When and where is your event?</div>
+                                <br/>
+                                <div>
+                                    <span>Date of Event:</span><input type="date" value={this.state.eventDate} onChange={(e)=>{this.setState({eventDate:e.target.value});}}/>
+                                    <br/>
+                                    <span>Venue Pincode:&nbsp;&nbsp;</span><input type="text" className="txt-field" onChange={(e)=>{this.setState({venuePinCode:e.target.value});}}/>
+                                </div>
+                                <div className="bottom-bar" ></div>
+                                <a className="button" onClick={()=>{this.setState({showList:'',showWizard:'hidden'});}}>Next →</a>
+                        </div>}
                         <br/><br/><br/><br/>
                     </div>
                     <div className={`main fadeInBottom ${this.state.showList}`}>
