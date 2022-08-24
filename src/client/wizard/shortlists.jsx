@@ -564,7 +564,7 @@ class Shortlists extends Component {
                                 <a className="quantity__plus"><span onClick={()=>{this.setState({numVistors: this.state.numVistors + 10});}}>+</span></a>
                               </div>
                             <div className="bottom-bar" ></div>
-                            <a className="button" href="/order/">Next →</a>
+                            <a className="button" onClick={()=>{this.setState({showList:'',showWizard:'hidden'});}}>Next →</a>
                         </div>
                         <br/><br/><br/><br/>
                     </div>
