@@ -15,25 +15,21 @@
           "responses": [
             {
               "topic": "Large",
-              "pricing": {"Thin":  305, "Thick":  315}
+              "pricing": {"Slim":  305, "Thick":  315}
             },
             {
               "topic": "Medium",
-              "pricing": {"Thin":  295, "Thick":  305}
+              "pricing": {"Slim":  295, "Thick":  305}
             },
             {
               "topic": "Small",
-              "pricing": {"Thin":  275, "Thick":  295}
+              "pricing": {"Slim":  275, "Thick":  295}
             }
           ],
           "crust": [
             {
-              "topic": "Thin",
+              "topic": "Slim",
               "pricing": {"Large":  305, "Medium":  295, "Small":  275}
-            },
-            {
-              "topic": "Thick",
-              "pricing": {"Large":  315, "Medium":  305, "Small":  295}
             }
           ]
         }
@@ -58,25 +54,21 @@
           "responses": [
             {
               "topic": "Large",
-              "pricing": {"Thin":  330, "Thick":  340}
+              "pricing": {"Slim":  330, "Thick":  340}
             },
             {
               "topic": "Medium",
-              "pricing": {"Thin":  320, "Thick":  330}
+              "pricing": {"Slim":  320, "Thick":  330}
             },
             {
               "topic": "Small",
-              "pricing": {"Thin":  300, "Thick":  320}
+              "pricing": {"Slim":  300, "Thick":  320}
             }
           ],
           "crust": [
             {
-              "topic": "Thin",
+              "topic": "Slim",
               "pricing": {"Large":  330, "Medium":  320, "Small":  300}
-            },
-            {
-              "topic": "Thick",
-              "pricing": {"Large":  340, "Medium":  330, "Small":  320}
             }
           ]
         }
@@ -101,25 +93,21 @@
           "responses": [
             {
               "topic": "Large",
-              "pricing": {"Thin":  350, "Thick":  350}
+              "pricing": {"Slim":  350, "Thick":  350}
             },
             {
               "topic": "Medium",
-              "pricing": {"Thin":  330, "Thick":  340}
+              "pricing": {"Slim":  330, "Thick":  340}
             },
             {
               "topic": "Small",
-              "pricing": {"Thin":  310, "Thick":  330}
+              "pricing": {"Slim":  310, "Thick":  330}
             }
           ],
           "crust": [
             {
-              "topic": "Thin",
+              "topic": "Slim",
               "pricing": {"Large":  350, "Medium":  330, "Small":  310}
-            },
-            {
-              "topic": "Thick",
-              "pricing": {"Large":  350, "Medium":  340, "Small":  330}
             }
           ]
         }
@@ -144,25 +132,21 @@
           "responses": [
             {
               "topic": "Large",
-              "pricing": {"Thin":  350, "Thick":  350}
+              "pricing": {"Slim":  350, "Thick":  350}
             },
             {
               "topic": "Medium",
-              "pricing": {"Thin":  330, "Thick":  340}
+              "pricing": {"Slim":  330, "Thick":  340}
             },
             {
               "topic": "Small",
-              "pricing": {"Thin":  310, "Thick":  330}
+              "pricing": {"Slim":  310, "Thick":  330}
             }
           ],
           "crust": [
             {
-              "topic": "Thin",
+              "topic": "Slim",
               "pricing": {"Large":  350, "Medium":  330, "Small":  310}
-            },
-            {
-              "topic": "Thick",
-              "pricing": {"Large":  350, "Medium":  340, "Small":  330}
             }
           ]
         }
@@ -187,25 +171,21 @@
           "responses": [
             {
               "topic": "Large",
-              "pricing": {"Thin":  370, "Thick":  390}
+              "pricing": {"Slim":  370, "Thick":  390}
             },
             {
               "topic": "Medium",
-              "pricing": {"Thin":  350, "Thick":  370}
+              "pricing": {"Slim":  350, "Thick":  370}
             },
             {
               "topic": "Small",
-              "pricing": {"Thin":  320, "Thick":  340}
+              "pricing": {"Slim":  320, "Thick":  340}
             }
           ],
           "crust": [
             {
-              "topic": "Thin",
+              "topic": "Slim",
               "pricing": {"Large":  370, "Medium":  350, "Small":  320}
-            },
-            {
-              "topic": "Thick",
-              "pricing": {"Large":  390, "Medium":  370, "Small":  340}
             }
           ]
         }
@@ -230,25 +210,21 @@
           "responses": [
             {
               "topic": "Large",
-              "pricing": {"Thin":  370, "Thick":  390}
+              "pricing": {"Slim":  370, "Thick":  390}
             },
             {
               "topic": "Medium",
-              "pricing": {"Thin":  350, "Thick":  370}
+              "pricing": {"Slim":  350, "Thick":  370}
             },
             {
               "topic": "Small",
-              "pricing": {"Thin":  320, "Thick":  340}
+              "pricing": {"Slim":  320, "Thick":  340}
             }
           ],
           "crust": [
             {
-              "topic": "Thin",
+              "topic": "Slim",
               "pricing": {"Large":  370, "Medium":  350, "Small":  320}
-            },
-            {
-              "topic": "Thick",
-              "pricing": {"Large":  390, "Medium":  370, "Small":  340}
             }
           ]
         }
@@ -273,25 +249,21 @@
           "responses": [
             {
               "topic": "Large",
-              "pricing": {"Thin":  330, "Thick":  340}
+              "pricing": {"Slim":  330, "Thick":  340}
             },
             {
               "topic": "Medium",
-              "pricing": {"Thin":  320, "Thick":  330}
+              "pricing": {"Slim":  320, "Thick":  330}
             },
             {
               "topic": "Small",
-              "pricing": {"Thin":  300, "Thick":  320}
+              "pricing": {"Slim":  300, "Thick":  320}
             }
           ],
           "crust": [
             {
-              "topic": "Thin",
+              "topic": "Slim",
               "pricing": {"Large":  330, "Medium":  320, "Small":  300}
-            },
-            {
-              "topic": "Thick",
-              "pricing": {"Large":  340, "Medium":  330, "Small":  320}
             }
           ]
         }
@@ -315,25 +287,21 @@
         "responses": [
           {
             "topic": "Large",
-            "pricing": {"Thin":  330, "Thick":  340}
+            "pricing": {"Slim":  330, "Thick":  340}
           },
           {
             "topic": "Medium",
-            "pricing": {"Thin":  320, "Thick":  330}
+            "pricing": {"Slim":  320, "Thick":  330}
           },
           {
             "topic": "Small",
-            "pricing": {"Thin":  300, "Thick":  320}
+            "pricing": {"Slim":  300, "Thick":  320}
           }
         ],
         "crust": [
           {
-            "topic": "Thin",
+            "topic": "Slim",
             "pricing": {"Large":  330, "Medium":  320, "Small":  300}
-          },
-          {
-            "topic": "Thick",
-            "pricing": {"Large":  340, "Medium":  330, "Small":  320}
           }
         ]
       }],

@@ -308,6 +308,7 @@ class Shortlists extends Component {
             eventDate: new Date().toDateInputValue(),
             orderSummary: localStorage.getItem('basket') != null ? JSON.parse(localStorage.getItem('basket')) : []
         };
+        sessionStorage.setItem('eventDate',new Date().toDateInputValue());
         window.currSlotSelected = '';
         this.handleTabChange = this.handleTabChange.bind(this);
     }
@@ -554,7 +555,7 @@ class Shortlists extends Component {
                             <span>Event Details</span>
                             <div className="node"></div>
                           </div>
-                          <div className="step in-progress">
+                          <div className={`step ${curStep>2 ? 'complete' : 'in-progress'}`}>
                             <span>Sample Order</span>
                             <div className="node"></div>
                           </div>
@@ -575,16 +576,17 @@ class Shortlists extends Component {
                                 <div>When and where is your event?</div>
                                 <br/>
                                 <div>
-                                    <span>Date of Event:</span><input type="date" value={this.state.eventDate} onChange={(e)=>{this.setState({eventDate:e.target.value});}}/>
+                                    <span>Date of Event:</span><input type="date" value={this.state.eventDate} onChange={(e)=>{this.setState({eventDate:e.target.value});sessionStorage.setItem('eventDate',e.target.value);}}/>
                                     <br/>
-                                    <span>Venue Pincode:&nbsp;&nbsp;</span><input type="text" className="txt-field" onChange={(e)=>{this.setState({venuePinCode:e.target.value});}}/>
+                                    <span>Venue Pincode:&nbsp;&nbsp;</span><input type="text" className="txt-field" onChange={(e)=>{this.setState({venuePinCode:e.target.value});sessionStorage.setItem('venuePinCode',e.target.value);}}/>
                                 </div>
                                 <div className="bottom-bar" ></div>
-                                <a className="button" onClick={()=>{this.setState({showList:'',showWizard:'hidden'});}}>Next →</a>
+                                <a className="button" onClick={()=>{this.setState({curStep:3,showList:''});}}>Next →</a>
                         </div>}
                         <br/><br/><br/><br/>
                     </div>
                     <div className={`main fadeInBottom ${this.state.showList}`}>
+                        <div className="sample-msg ">Select a pizza to try out as a sample order. You will be charged only for the sample order.</div>
                         <div id="discountModal" className="card-container checkout-modal modal-show" style={{top:'74px'}}>
                             <div className="modal-heading">
                                 <div className="left">
@@ -758,8 +760,7 @@ class Shortlists extends Component {
                             textColor="primary"
                             centered
                           >
-                            <Tab icon={<LocalPizzaIcon />} label="&nbsp;&nbsp;&nbsp;Pizzas&nbsp;&nbsp;&nbsp;" />
-                            <Tab icon={<RestaurantIcon />} label="&nbsp;&nbsp;&nbsp;Starters&nbsp;&nbsp;&nbsp;" />
+
                           </Tabs>
                           <TabPanel value={this.state.value} index={0}>
 
