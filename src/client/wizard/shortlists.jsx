@@ -212,11 +212,12 @@ class QuoteCard extends Component {
          prefix = 'g';
          extraClasses = 'starter';
         }
+        let defaultPrice = 235;
         return (
         <div className="card-container">
             <div className="section-one" style={{display: 'block'}}>
                 <br/>
-                <div className="usp-desc">Toppings of visitor's choice</div>
+                <div className="usp-desc">Toppings of guest's choice</div>
                 <div className="top">
                     <div className="top-left" style={{position:'absolute',margin:'0 auto',left:'0',right:'0'}}>
                         <img id={`primaryImg${index}`} className={`primary-img rotatable sf-img ${extraClasses}`} src={`../../../img/images/${prefix}${index+1}.png`} />
@@ -228,7 +229,7 @@ class QuoteCard extends Component {
                 </div>
             </div>
             <div className="section-two">
-                <div className="pricing" style={{top: '-86px'}}><label className="price"><span className="slashed" id={`price${index}`}>{data.qna[0].defaultPrice * parseInt(sessionStorage.getItem('qty'),10)}</span><span className="rupee" style={{marginLeft: '6px'}}>₹</span><span className="orig" id={`priceNew${index}`}>{Math.ceil(data.qna[0].defaultPrice * parseInt(sessionStorage.getItem('qty'),10) * 0.85)}</span></label></div>
+                <div className="pricing" style={{top: '-86px'}}><label className="price"><span className="slashed" id={`price${index}`}>{defaultPrice * parseInt(sessionStorage.getItem('qty'),10)}</span><span className="rupee" style={{marginLeft: '6px'}}>₹</span><span className="orig" id={`priceNew${index}`}>{Math.ceil(defaultPrice * parseInt(sessionStorage.getItem('qty'),10) * 0.85)}</span></label></div>
                 <div className="top">
                 </div>
             </div>
@@ -354,6 +355,7 @@ class Shortlists extends Component {
             mobileNum: '',
             curStep: 1,
             eventDate: new Date().toDateInputValue(),
+            deliveryDate: new Date().toDateInputValue(),
             orderSummary: localStorage.getItem('basket') != null ? JSON.parse(localStorage.getItem('basket')) : []
         };
         sessionStorage.setItem('eventDate',new Date().toDateInputValue());
@@ -562,6 +564,9 @@ class Shortlists extends Component {
                 }
                 http.send(params);
     }
+    getQuoteString(numVistors) {
+                return <div className="quote-txt" style={{marginTop: '22px'}}>Quote for {numVistors} large pizzas:</div>
+            }
     render() {
         const {showLoader, results, starters, orderSummary, showCoupon, showSlot, showList, showWizard, numVistors, curStep} = this.state;
         this.slotsAvailable = true;
@@ -623,6 +628,8 @@ class Shortlists extends Component {
                   }
                 };
 
+
+
         return (<div>
                     <img id="logo" className="logo-img" src="../img/logo_sc.png" style={{width: '142px'}} />
                     <div id="checkoutHeader">
@@ -662,13 +669,13 @@ class Shortlists extends Component {
                             <a className="button" onClick={()=>{this.setState({curStep:2});}}>Next →</a>
                         </div> }
                         {curStep == 2 && <div className="step-detail step-1">
-                                <div style={{marginTop: '-44px'}}>How many visitors are you expecting at your event?</div>
+                                <div style={{marginTop: '-44px'}}>How many guests are you expecting at your event?</div>
                                 <div class="quantity" style={{marginTop: '22px'}}>
-                                    <a className="quantity__minus"><span onClick={()=>{if(this.state.numVistors>0){this.setState({numVistors: this.state.numVistors - 10});}}} style={{fontSize: '25px', lineHeight: '0px', marginLeft: '2px'}}>-</span></a>
+                                    <a className="quantity__minus"><span onClick={()=>{if(this.state.numVistors>0){this.setState({numVistors: this.state.numVistors - 10});sessionStorage.setItem('qty',this.state.numVistors - 10)}}} style={{fontSize: '25px', lineHeight: '0px', marginLeft: '2px'}}>-</span></a>
                                     <input name="quantity" type="text" className="quantity__input" value={this.state.numVistors} />
                                     <a className="quantity__plus"><span onClick={()=>{this.setState({numVistors: this.state.numVistors + 10});sessionStorage.setItem('qty',this.state.numVistors + 10)}}>+</span></a>
                                   </div>
-                                {this.state.numVistors > 0 && <div className="quote-txt" style={{marginTop: '22px'}}>Quote for large pizza per person:</div>}
+                                {this.state.numVistors > 0 && this.getQuoteString(this.state.numVistors)}
                                 <div className="pkg">
                                 {this.state.numVistors > 0 && <QuoteCard index={4} data={proposedPackage1} type="pizzas" />}
                                 </div>
@@ -678,7 +685,7 @@ class Shortlists extends Component {
                         <br/><br/><br/><br/>
                     </div>
                     <div className={`main fadeInBottom ${this.state.showList}`}>
-                        <div className="sample-msg ">Select a pizza to try out as a sample order. You will be charged only for the sample order.</div>
+                        <div className="sample-msg ">Get a <span className="highlight">sample pizza</span> home delivered for <span className="highlight">tasting</span>. You will only be charged for the sample order now.</div>
                         <div id="discountModal" className="card-container checkout-modal modal-show" style={{top:'74px'}}>
                             <div className="modal-heading">
                                 <div className="left">
@@ -798,14 +805,26 @@ class Shortlists extends Component {
                                   <div className="card-container small" style={{padding: '0px 12px 0px 12px', minHeight: '246px'}}>
                                       <div className="section-one">
                                           <div className="top-right">
+                                              <img src="../img/images/delivery.png" className="delivery-icon" />
                                               <div className="usp-title" style={{left: '0',right: '0',margin: '0 auto'}}>
-                                                  <span className="title-ff" style={{top:'-14px', padding: '20px', lineHeight: '22px'}}>Your pizza will be delivered between <b>{this.getDeliveryTime()}</b></span>
-                                                  <div className="slot">
-                                                    <img src="../img/images/delivery.png" style={{width: '70px'}} />
+                                                  <span className="title-ff" style={{top:'-14px', padding: '20px', lineHeight: '22px'}}>When should we deliver your sample order?</span>
+                                                  <div className="delivery-section">
+                                                      <div className="deliver-cell" style={{marginTop: '60px'}}>
+                                                          <span>Date:</span><input type="date" value={this.state.deliveryDate} onChange={(e)=>{this.setState({deliveryDate:e.target.value});sessionStorage.setItem('deliveryDate',e.target.value);}}/>
+                                                      </div>
+                                                      <div className="deliver-cell" style={{marginTop: '12px'}}>
+                                                        <span>Slot:</span>
+                                                          <select name="slot" id="slot" className="slot-dropdown" onChange={(e)=>{sessionStorage.setItem('deliverySlot',e.target.options[e.target.selectedIndex].value);}}>
+                                                              <option value="evening6">6pm to 7pm</option>
+                                                              <option value="night7">7pm to 8pm</option>
+                                                              <option value="night8">8pm to 9pm</option>
+                                                              <option value="night9">9pm to 10pm</option>
+                                                            </select>
+                                                      </div>
+                                                      <div className="slot"></div>
                                                   </div>
-                                                  <span className="title-ff" style={{top: '130px', padding: '20px', lineHeight: '22px'}}>If you wish to pay using 'Cash on Delivery' method → <a className="action-link" onClick={()=>{this.setCOD();}}>Click Here</a></span>
                                                   <br/>
-                                                  <span className="title-ff" style={{top: '210px', padding: '20px', lineHeight: '22px', fontWeight: 'normal', fontSize: '15px'}}>or proceed to next step to make payment.</span>
+                                                  <span className="title-ff" style={{top: '210px', padding: '20px', lineHeight: '22px', fontWeight: 'normal', fontSize: '15px', marginLeft: '4px'}}>Proceed to next step to make payment.</span>
                                               </div>
                                           </div>
                                       </div>
