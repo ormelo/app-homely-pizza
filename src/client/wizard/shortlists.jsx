@@ -814,7 +814,7 @@ class Shortlists extends Component {
                                                       </div>
                                                       <div className="deliver-cell" style={{marginTop: '12px'}}>
                                                         <span>Slot:</span>
-                                                          <select name="slot" id="slot" className="slot-dropdown" onChange={(e)=>{sessionStorage.setItem('deliverySlot',e.target.options[e.target.selectedIndex].value);}}>
+                                                          <select name="slot" id="slot" className="slot-dropdown" onChange={(e)=>{sessionStorage.setItem('deliverySlot',e.target.options[e.target.selectedIndex].text);}}>
                                                               <option value="evening6">6pm to 7pm</option>
                                                               <option value="night7">7pm to 8pm</option>
                                                               <option value="night8">8pm to 9pm</option>
