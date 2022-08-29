@@ -189,6 +189,53 @@ class ReviewContainer extends Component {
     }
 }
 
+class QuoteCard extends Component {
+
+    constructor(props) {
+        super(props);
+        this.state = {};
+    }
+    componentDidMount() {
+    }
+    appendZero(number) {
+        if (number > 0 && number < 10) {
+            return '0' + number;
+        }
+        return number;
+    }
+
+    render() {
+        let {index, data} = this.props;
+        let prefix = 'p';
+        let extraClasses = '';
+        if(this.props.type && this.props.type == 'starters') {
+         prefix = 'g';
+         extraClasses = 'starter';
+        }
+        return (
+        <div className="card-container">
+            <div className="section-one" style={{display: 'block'}}>
+                <br/>
+                <div className="usp-desc">Toppings of visitor's choice</div>
+                <div className="top">
+                    <div className="top-left" style={{position:'absolute',margin:'0 auto',left:'0',right:'0'}}>
+                        <img id={`primaryImg${index}`} className={`primary-img rotatable sf-img ${extraClasses}`} src={`../../../img/images/${prefix}${index+1}.png`} />
+                    </div>
+                    <div className="top-right">
+                        <div className="usp-title"></div>
+
+                    </div>
+                </div>
+            </div>
+            <div className="section-two">
+                <div className="pricing" style={{top: '-86px'}}><label className="price"><span className="slashed" id={`price${index}`}>{data.qna[0].defaultPrice * parseInt(sessionStorage.getItem('qty'),10)}</span><span className="rupee" style={{marginLeft: '6px'}}>₹</span><span className="orig" id={`priceNew${index}`}>{Math.ceil(data.qna[0].defaultPrice * parseInt(sessionStorage.getItem('qty'),10) * 0.85)}</span></label></div>
+                <div className="top">
+                </div>
+            </div>
+        </div>)
+    }
+}
+
 class Card extends Component {
 
     constructor(props) {
@@ -536,6 +583,46 @@ class Shortlists extends Component {
             window.currSlotSelected = slots[0];
         }
 
+        let proposedPackage1 = {
+                  "title": "Mediterranean Feast",
+                  "type": "pizza",
+                  "shortTitle": "Asense Interior",
+                  "subTitle": "129, Siddapura",
+                  "address": "129, Siddapura, Whitefield, Bengaluru, Karnataka, India, Varthur Main Road, Bengaluru",
+                  "qna": [
+                    {
+                      "defaultPrice": 305,
+                      "responses": [
+                        {
+                          "topic": "Large",
+                          "pricing": {"Slim":  305, "Thick":  315}
+                        },
+                        {
+                          "topic": "Medium",
+                          "pricing": {"Slim":  295, "Thick":  305}
+                        },
+                        {
+                          "topic": "Small",
+                          "pricing": {"Slim":  275, "Thick":  295}
+                        }
+                      ],
+                      "crust": [
+                        {
+                          "topic": "Slim",
+                          "pricing": {"Large":  305, "Medium":  295, "Small":  275}
+                        }
+                      ]
+                    }
+                  ],
+                  "usp": [
+                    "Mild blend of Black Olives, Onion & Sweet corn"
+                  ],
+                  "images": {
+                    "primary": "https://lh5.googleusercontent.com/p/AF1QipMfveOLCLmjGRfpfzooSICq5nskYbHGIdJVKtud=s870-k-no",
+                    "secondary": []
+                  }
+                };
+
         return (<div>
                     <img id="logo" className="logo-img" src="../img/logo_sc.png" style={{width: '142px'}} />
                     <div id="checkoutHeader">
@@ -550,10 +637,10 @@ class Shortlists extends Component {
                         <div className="wizard-progress">
                           <div className="step complete">
                             <div className="node"></div>
-                            <span>Visitor Details</span>
+                            <span>Event Details</span>
                           </div>
                           <div className={`step ${curStep>1 ? 'complete' : 'in-progress'}`}>
-                            <span>Event Details</span>
+                            <span>Visitor Details</span>
                             <div className="node"></div>
                           </div>
                           <div className={`step ${curStep>2 ? 'complete' : 'in-progress'}`}>
@@ -562,26 +649,28 @@ class Shortlists extends Component {
                           </div>
                         </div>
                         {curStep == 1 && <div className="step-detail step-1">
-                            <div>How many visitors are you expecting at your event?</div>
+                            <div>When and where is your event?</div>
                             <br/>
-                            <div class="quantity">
-                                <a className="quantity__minus"><span onClick={()=>{if(this.state.numVistors>0){this.setState({numVistors: this.state.numVistors - 10});}}} style={{fontSize: '25px', lineHeight: '0px', marginLeft: '2px'}}>-</span></a>
-                                <input name="quantity" type="text" className="quantity__input" value={this.state.numVistors} />
-                                <a className="quantity__plus"><span onClick={()=>{this.setState({numVistors: this.state.numVistors + 10});}}>+</span></a>
-                              </div>
+                            <div>
+                                <span>Date of Event:</span><input type="date" value={this.state.eventDate} onChange={(e)=>{this.setState({eventDate:e.target.value});sessionStorage.setItem('eventDate',e.target.value);}}/>
+                                <br/>
+                                <span>Venue Pincode:&nbsp;&nbsp;</span><input type="text" className="txt-field" onChange={(e)=>{this.setState({venuePinCode:e.target.value});sessionStorage.setItem('venuePinCode',e.target.value);}}/>
+                                <br/>
+                                <span>Mobile Number:&nbsp;&nbsp;</span><input type="text" className="txt-field" onChange={(e)=>{this.setState({mobileNum:e.target.value});sessionStorage.setItem('mobileNum',e.target.value);}}/>
+                            </div>
                             <div className="bottom-bar" ></div>
                             <a className="button" onClick={()=>{this.setState({curStep:2});}}>Next →</a>
                         </div> }
                         {curStep == 2 && <div className="step-detail step-1">
-
-                                <div>When and where is your event?</div>
-                                <br/>
-                                <div>
-                                    <span>Date of Event:</span><input type="date" value={this.state.eventDate} onChange={(e)=>{this.setState({eventDate:e.target.value});sessionStorage.setItem('eventDate',e.target.value);}}/>
-                                    <br/>
-                                    <span>Venue Pincode:&nbsp;&nbsp;</span><input type="text" className="txt-field" onChange={(e)=>{this.setState({venuePinCode:e.target.value});sessionStorage.setItem('venuePinCode',e.target.value);}}/>
-                                    <br/>
-                                    <span>Mobile Number:&nbsp;&nbsp;</span><input type="text" className="txt-field" onChange={(e)=>{this.setState({mobileNum:e.target.value});sessionStorage.setItem('mobileNum',e.target.value);}}/>
+                                <div style={{marginTop: '-44px'}}>How many visitors are you expecting at your event?</div>
+                                <div class="quantity" style={{marginTop: '22px'}}>
+                                    <a className="quantity__minus"><span onClick={()=>{if(this.state.numVistors>0){this.setState({numVistors: this.state.numVistors - 10});}}} style={{fontSize: '25px', lineHeight: '0px', marginLeft: '2px'}}>-</span></a>
+                                    <input name="quantity" type="text" className="quantity__input" value={this.state.numVistors} />
+                                    <a className="quantity__plus"><span onClick={()=>{this.setState({numVistors: this.state.numVistors + 10});sessionStorage.setItem('qty',this.state.numVistors + 10)}}>+</span></a>
+                                  </div>
+                                {this.state.numVistors > 0 && <div className="quote-txt" style={{marginTop: '22px'}}>Quote for large pizza per person:</div>}
+                                <div className="pkg">
+                                {this.state.numVistors > 0 && <QuoteCard index={4} data={proposedPackage1} type="pizzas" />}
                                 </div>
                                 <div className="bottom-bar" ></div>
                                 <a className="button" onClick={()=>{this.setState({curStep:3,showList:''});}}>Next →</a>
