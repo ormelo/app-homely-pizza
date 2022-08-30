@@ -1085,7 +1085,7 @@ app.post('/homelyOrder', function(req, res) {
                               } else {
                                 console.log(response);
                                 axios
-                                  .post('https://api.pushalert.co/rest/v1/send', 'title=Order%20Received&message=New%20Pizza%20Order&icon=https://www.slimcrust.com/rounded.png&url=https://www.slimcrust.com', {headers: {'Authorization': 'api_key=39bd28ceccf517b11a215263b8111b3b'}})
+                                  .post('https://api.pushalert.co/rest/v1/send', 'title=Order%20Received&message=New%20Pizza%20Order&icon=https://www.slimcrust.com/rounded.png&url=https://www.slimcrust.com', {headers: {'Authorization': 'api_key=c0a692d5772f7c2b7642013d80439aea'}})
                                   .then(res => {
                                     console.log('Pushalert success: ', res);
                                   })
