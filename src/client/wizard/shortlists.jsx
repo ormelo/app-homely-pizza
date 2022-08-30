@@ -478,14 +478,14 @@ class Shortlists extends Component {
         localStorage.setItem('dMobile',mobile);
         localStorage.setItem('dName',name);
         let price = localStorage.getItem('dPrice');
-        let slot = localStorage.getItem('dSlot') != null ? localStorage.getItem('dSlot') : '';
+        let slot = sessionStorage.getItem('deliverySlot') != null ? sessionStorage.getItem('deliverySlot') : '';
         let summary = localStorage.getItem('basket');
         let referralCode = localStorage.getItem('discountCode');
         summary = summary != null ? summary : '';
         //create order
         var http = new XMLHttpRequest();
         var url = '/homelyOrder';
-        var params = 'price='+price+'&mobile='+localStorage.getItem('dMobile')+'&name='+localStorage.getItem('dName')+'&slot='+slot+'&summary='+summary+'&pincode='+pincode+'&referralCode='+referralCode+'&address='+address;
+        var params = 'dPrice='+price+'&dMobile='+localStorage.getItem('dMobile')+'&dName='+localStorage.getItem('dName')+'&dSlot='+slot+'&dItems='+summary+'&dPincode='+pincode+'&referralCode='+referralCode+'&dAddress='+address;
         http.open('POST', url, true);
         http.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
 
@@ -513,6 +513,8 @@ class Shortlists extends Component {
         fbq('track', 'InitiateCheckout');
     }
     makePaymentRequest() {
+        //uncomment
+        //return;
         var http = new XMLHttpRequest();
         var url = '/paymentRequest';
         var orderId = 0;

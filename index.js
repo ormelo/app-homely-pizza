@@ -23,11 +23,11 @@ const pgClient = new Client({
       ssl: true
     });
 let dbConfig = {
-       database: 'dcrgs2nbc0i5vf',
-       host: 'ec2-54-247-188-247.eu-west-1.compute.amazonaws.com',
+       database: 'slimcrust',
+       host: 'dpg-cc6s37pgp3jupk0q3tu0-a.singapore-postgres.render.com',
          port: 5432,
-         user: 'nrgkzvyxpdfhkb',
-         password: '39798783ada15727c8bd9f24bb6c5808d313ab686991c4aca62e3db947cb016c',
+         user: 'slimcrust',
+         password: '3oXJwFL9ytuMtD7ofv5uhr7LceQVBTsv',
          ssl: { rejectUnauthorized: false }
      }
 const orderid = require('order-id')('randomgenid');
@@ -785,7 +785,7 @@ app.get("/redirect/", function(request, response) {
                   console.error('error connecting', err.stack)
                 } else {
                   console.log('connected')
-                  client.query("UPDATE \"public\".\"Homely_Order\" set status = $1 WHERE payment_request_id = $2",
+                  client.query("UPDATE \"public\".\"sample_order\" set status = $1 WHERE payment_request_id = $2",
                       [paymentStatus, paymentRequestId], (err, res) => {
                             if (err) {
                               console.log(err);
@@ -809,7 +809,7 @@ app.post("/setCOD", function(request, response) {
                   console.error('error connecting', err.stack)
                 } else {
                   console.log('connected')
-                  client.query("UPDATE \"public\".\"Homely_Order\" set status = $1 WHERE order_id = $2",
+                  client.query("UPDATE \"public\".\"sample_order\" set status = $1 WHERE order_id = $2",
                       [paymentStatus, orderId], (err, res) => {
                             if (err) {
                               console.log(err);
@@ -921,7 +921,7 @@ app.post('/paymentRequest', function(req, res) {
                 console.error('error connecting', err.stack)
               } else {
                 console.log('connected')
-                client.query("UPDATE \"public\".\"Homely_Order\" set payment_request_id = $1, delivery_slot = $3 WHERE order_id = $2",
+                client.query("UPDATE \"public\".\"sample_order\" set payment_request_id = $1, delivery_slot = $3 WHERE order_id = $2",
                     [paymentRequestId, orderId, slot], (err, response) => {
                           if (err) {
                             console.log(err)
@@ -1055,21 +1055,21 @@ app.post('/paymentRequest', function(req, res) {
 
 app.post('/homelyOrder', function(req, res) {
 
-    const mobile = req.body.mobile;
-    const name = req.body.name;
+    const mobile = req.body.dMobile;
+    const name = req.body.dName;
     const orderId = orderid.generate();
     let whitelisted = false;
     const status = 'PENDING';
-    const summary = req.body.summary;
-    const deliverySlot = req.body.slot;
-    const price = req.body.price;
-    const address = req.body.address;
-    const pincode = req.body.pincode;
+    const summary = req.body.dItems;
+    const deliverySlot = req.body.dSlot;
+    const price = req.body.dPrice;
+    const address = req.body.dAddress;
+    const pincode = req.body.dPincode;
     const referralCode = req.body.referralCode;
 
-    res.send('{"orderId":"'+orderId+'", "whitelisted":true}');
+    //res.send('{"orderId":"'+orderId+'", "whitelisted":true}');
 
-    /*const client = new Client(dbConfig)
+    const client = new Client(dbConfig)
     client.connect(err => {
       if (err) {
         console.error('error connecting', err.stack)
@@ -1077,15 +1077,15 @@ app.post('/homelyOrder', function(req, res) {
         console.log('connected')
 
 
-            client.query("INSERT INTO \"public\".\"Homely_Order\"(mobile, name, order_id, status, delivery_slot, price, summary, address, pincode, referral_code) VALUES($1, $2, $3, $4, $5, $6, $7, $8, $9, $10)",
-                        [mobile, name, orderId, status, deliverySlot, price, summary, address, pincode, referralCode], (err, response) => {
+            client.query("INSERT INTO \"public\".\"sample_order\"(delivery_mobile, delivery_name, order_id, order_status, delivery_slot, delivery_price, delivery_items, delivery_address, delivery_pincode) VALUES($1, $2, $3, $4, $5, $6, $7, $8, $9)",
+                        [mobile, name, orderId, status, deliverySlot, price, summary, address, pincode], (err, response) => {
                               if (err) {
                                 console.log(err)
                                  res.send("error");
                               } else {
                                 console.log(response);
                                 axios
-                                  .post('https://api.pushalert.co/rest/v1/send', 'title=Order%20Received&message=New%20Pizza%20Order&icon=https://www.homely.pizza/rounded.png&url=https://www.homely.pizza', {headers: {'Authorization': 'api_key=39bd28ceccf517b11a215263b8111b3b'}})
+                                  .post('https://api.pushalert.co/rest/v1/send', 'title=Order%20Received&message=New%20Pizza%20Order&icon=https://www.slimcrust.com/rounded.png&url=https://www.slimcrust.com', {headers: {'Authorization': 'api_key=39bd28ceccf517b11a215263b8111b3b'}})
                                   .then(res => {
                                     console.log('Pushalert success: ', res);
                                   })
@@ -1099,7 +1099,7 @@ app.post('/homelyOrder', function(req, res) {
 
 
       }
-    })*/
+    })
 
 
 })
