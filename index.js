@@ -1066,6 +1066,7 @@ app.post('/homelyOrder', function(req, res) {
     const address = req.body.dAddress;
     const pincode = req.body.dPincode;
     const referralCode = req.body.referralCode;
+    const eOrderId = req.body.eOrderId;
 
     //res.send('{"orderId":"'+orderId+'", "whitelisted":true}');
 
@@ -1077,8 +1078,8 @@ app.post('/homelyOrder', function(req, res) {
         console.log('connected')
 
 
-            client.query("INSERT INTO \"public\".\"sample_order\"(delivery_mobile, delivery_name, order_id, order_status, delivery_slot, delivery_price, delivery_items, delivery_address, delivery_pincode) VALUES($1, $2, $3, $4, $5, $6, $7, $8, $9)",
-                        [mobile, name, orderId, status, deliverySlot, price, summary, address, pincode], (err, response) => {
+            client.query("INSERT INTO \"public\".\"sample_order\"(delivery_mobile, delivery_name, order_id, order_status, delivery_slot, delivery_price, delivery_items, delivery_address, delivery_pincode, event_order_id) VALUES($1, $2, $3, $4, $5, $6, $7, $8, $9, $10)",
+                        [mobile, name, orderId, status, deliverySlot, price, summary, address, pincode, eOrderId], (err, response) => {
                               if (err) {
                                 console.log(err)
                                  res.send("error");
@@ -1098,6 +1099,79 @@ app.post('/homelyOrder', function(req, res) {
                             });
 
 
+      }
+    })
+
+
+})
+
+app.post('/eventOrder', function(req, res) {
+
+    const eDate = req.body.eDate;
+    const ePincode = req.body.ePincode;
+    const orderId = orderid.generate();
+    let whitelisted = false;
+    const status = 'PENDING';
+    const eMobile = req.body.eMobile;
+
+    const client = new Client(dbConfig)
+    client.connect(err => {
+      if (err) {
+        console.error('error connecting', err.stack)
+      } else {
+        console.log('connected')
+
+
+            client.query("INSERT INTO \"public\".\"event_order\"(order_id, event_date, venue_pincode, event_contact_mobile, order_status) VALUES($1, $2, $3, $4, $5)",
+                        [orderId, eDate, ePincode, eMobile, status], (err, response) => {
+                              if (err) {
+                                console.log(err)
+                                 res.send("error");
+                              } else {
+                                console.log(response);
+                                axios
+                                  .post('https://api.pushalert.co/rest/v1/send', 'title=Event Order%20Received&message=New%20Pizza%20Event&icon=https://www.slimcrust.com/rounded.png&url=https://www.slimcrust.com', {headers: {'Authorization': 'api_key=c0a692d5772f7c2b7642013d80439aea'}})
+                                  .then(res => {
+                                    console.log('Pushalert success: ', res);
+                                  })
+                                  .catch(error => {
+                                    console.log('Pushalert error: ', error);
+                                  });
+                                 res.send('{"orderId":"'+orderId+'", "whitelisted":true}');
+                              }
+
+                            });
+
+
+      }
+    })
+
+
+})
+
+app.post('/updateEventOrder', function(req, res) {
+    const eQuantity = req.body.eventQuantity;
+    const orderId = req.body.eventOrderId;
+    let whitelisted = false;
+
+    const client = new Client(dbConfig)
+    client.connect(err => {
+      if (err) {
+        console.error('error connecting', err.stack)
+      } else {
+        console.log('connected')
+
+
+            client.query("UPDATE \"public\".\"event_order\" set quantity = $1 WHERE order_id = $2",
+                        [eQuantity, orderId], (err, response) => {
+                              if (err) {
+                                console.log(err)
+                                 res.send("error");
+                              } else {
+                                 res.send('{"orderId":"'+orderId+'", "whitelisted":true}');
+                              }
+
+                            });
       }
     })
 

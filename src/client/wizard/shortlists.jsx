@@ -481,11 +481,12 @@ class Shortlists extends Component {
         let slot = sessionStorage.getItem('deliverySlot') != null ? sessionStorage.getItem('deliverySlot') : '';
         let summary = localStorage.getItem('basket');
         let referralCode = localStorage.getItem('discountCode');
+        let eOrderId = sessionStorage.getItem('eventOrderId');
         summary = summary != null ? summary : '';
         //create order
         var http = new XMLHttpRequest();
         var url = '/homelyOrder';
-        var params = 'dPrice='+price+'&dMobile='+localStorage.getItem('dMobile')+'&dName='+localStorage.getItem('dName')+'&dSlot='+slot+'&dItems='+summary+'&dPincode='+pincode+'&referralCode='+referralCode+'&dAddress='+address;
+        var params = 'dPrice='+price+'&dMobile='+localStorage.getItem('dMobile')+'&dName='+localStorage.getItem('dName')+'&dSlot='+slot+'&dItems='+summary+'&dPincode='+pincode+'&referralCode='+referralCode+'&dAddress='+address+'&eOrderId='+eOrderId;
         http.open('POST', url, true);
         http.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
 
@@ -569,6 +570,43 @@ class Shortlists extends Component {
     getQuoteString(numVistors) {
                 return <div className="quote-txt" style={{marginTop: '22px'}}>Quote for {numVistors} large pizzas:</div>
             }
+    saveEvent() {
+        //create order
+        var http = new XMLHttpRequest();
+        var url = '/eventOrder';
+        var params = 'eDate='+sessionStorage.getItem('eventDate')+'&ePincode='+sessionStorage.getItem('venuePinCode')+'&eMobile='+sessionStorage.getItem('mobileNum');
+        http.open('POST', url, true);
+        http.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+
+        http.onreadystatechange = function() {//Call a function when the state changes.
+            if(http.readyState == 4 && http.status == 200) {
+                console.log('event order creation post response:', http.responseText);
+                var res = http.responseText;
+                if(res != null){
+                    res = JSON.parse(res);
+                    console.log('--event order id--', res);
+                    sessionStorage.setItem('eventOrderId', res.orderId);
+                }
+            }
+        }.bind(this);
+        http.send(params);
+    }
+    updateQuantity(eventQty) {
+            //create order
+            var http = new XMLHttpRequest();
+            var url = '/updateEventOrder';
+            var params = 'eventOrderId='+sessionStorage.getItem('eventOrderId')+'&eventQuantity='+eventQty;
+            http.open('POST', url, true);
+            http.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+
+            http.onreadystatechange = function() {//Call a function when the state changes.
+                if(http.readyState == 4 && http.status == 200) {
+                    console.log('event order update post response:', http.responseText);
+                    var res = http.responseText;
+                }
+            }.bind(this);
+            http.send(params);
+        }
     render() {
         const {showLoader, results, starters, orderSummary, showCoupon, showSlot, showList, showWizard, numVistors, curStep} = this.state;
         this.slotsAvailable = true;
@@ -668,7 +706,7 @@ class Shortlists extends Component {
                                 <span>Mobile Number:&nbsp;&nbsp;</span><input type="text" className="txt-field" onChange={(e)=>{this.setState({mobileNum:e.target.value});sessionStorage.setItem('mobileNum',e.target.value);}}/>
                             </div>
                             <div className="bottom-bar" ></div>
-                            <a className="button" onClick={()=>{this.setState({curStep:2});}}>Next →</a>
+                            <a className="button" onClick={()=>{this.setState({curStep:2});this.saveEvent();}}>Next →</a>
                         </div> }
                         {curStep == 2 && <div className="step-detail step-1">
                                 <div style={{marginTop: '-44px'}}>How many guests are you expecting at your event?</div>
@@ -682,7 +720,7 @@ class Shortlists extends Component {
                                 {this.state.numVistors > 0 && <QuoteCard index={4} data={proposedPackage1} type="pizzas" />}
                                 </div>
                                 <div className="bottom-bar" ></div>
-                                <a className="button" onClick={()=>{this.setState({curStep:3,showList:''});}}>Next →</a>
+                                <a className="button" onClick={()=>{this.setState({curStep:3,showList:''});this.updateQuantity(this.state.numVistors);}}>Next →</a>
                         </div>}
                         <br/><br/><br/><br/>
                     </div>
